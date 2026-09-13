@@ -1,0 +1,341 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * currency_rate_live
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.saas~18+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-10 17:47+0000\n"
+"PO-Revision-Date: 2026-08-12 22:10+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"currency_rate_live/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: currency_rate_live
+#: model_terms:ir.ui.view,arch_db:currency_rate_live.res_config_settings_view_form
+msgid ""
+"<i title=\"Update now\" role=\"img\" aria-label=\"Update now\" class=\"fa fa-"
+"fw fa-refresh\"/>"
+msgstr ""
+"<i title=\"ອັບເດດຕອນນີ້\" role=\"img\" aria-label=\"Update now\" class=\"fa fa-"
+"fw fa-refresh\"/>"
+
+#. module: currency_rate_live
+#: model:ir.model,name:currency_rate_live.model_res_company
+msgid "Companies"
+msgstr "ບໍລິສັດ"
+
+#. module: currency_rate_live
+#: model:ir.model,name:currency_rate_live.model_res_config_settings
+msgid "Config Settings"
+msgstr "ການຕັ້ງຄ່າລະບົບ"
+
+#. module: currency_rate_live
+#: model:ir.actions.server,name:currency_rate_live.ir_cron_currency_update_ir_actions_server
+msgid "Currency: rate update"
+msgstr "ສະກຸນເງິນ: ອັບເດດອັດຕາແລກປ່ຽນ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_interval_unit__daily
+msgid "Daily"
+msgstr "ລາຍວັນ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_company__display_name
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "ຊື່ສະແດງ"
+
+#. module: currency_rate_live
+#. odoo-python
+#: code:addons/currency_rate_live/models/res_config_settings.py:0
+msgid "Error updating the currency rates from the BCU: %s."
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການອັບເດດອັດຕາແລກປ່ຽນເງິນຕາຈາກ BCU: %s."
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__ecb
+msgid "European Central Bank"
+msgstr "ທະນາຄານກາງເອີຣົບ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_company__id
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_config_settings__id
+msgid "ID"
+msgstr "ໄອດີ"
+
+#. module: currency_rate_live
+#: model_terms:ir.ui.view,arch_db:currency_rate_live.res_config_settings_view_form
+msgid "Interval"
+msgstr "ໄລຍະຫ່າງ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_company__currency_interval_unit
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_config_settings__currency_interval_unit
+msgid "Interval Unit"
+msgstr "ຫົວໜ່ວຍໄລຍະຫ່າງ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_interval_unit__manually
+msgid "Manually"
+msgstr "ດ້ວຍຕົນເອງ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_interval_unit__monthly
+msgid "Monthly"
+msgstr "ລາຍເດືອນ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_company__currency_next_execution_date
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_config_settings__currency_next_execution_date
+msgid "Next Execution Date"
+msgstr "ວັນທີດຳເນີນການຄັ້ງຕໍ່ໄປ"
+
+#. module: currency_rate_live
+#: model_terms:ir.ui.view,arch_db:currency_rate_live.res_config_settings_view_form
+msgid "Next Run"
+msgstr "ການເຮັດວຽກຄັ້ງຕໍ່ໄປ"
+
+#. module: currency_rate_live
+#. odoo-python
+#: code:addons/currency_rate_live/models/res_config_settings.py:0
+msgid "No available currency rate could be updated from the BCU."
+msgstr "ບໍ່ມີອັດຕາແລກປ່ຽນເງິນຕາທີ່ສາມາດອັບເດດໄດ້ຈາກ BCU."
+
+#. module: currency_rate_live
+#: model_terms:ir.ui.view,arch_db:currency_rate_live.res_config_settings_view_form
+msgid "Service"
+msgstr "ບໍລິການ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_company__currency_provider
+#: model:ir.model.fields,field_description:currency_rate_live.field_res_config_settings__currency_provider
+msgid "Service Provider"
+msgstr "ຜູ້ໃຫ້ບໍລິການ"
+
+#. module: currency_rate_live
+#. odoo-python
+#: code:addons/currency_rate_live/models/res_config_settings.py:0
+msgid ""
+"The selected exchange rate provider requires the GTQ and USD currencies to "
+"be active."
+msgstr ""
+"ຜູ້ໃຫ້ບໍລິການອັດຕາແລກປ່ຽນທີ່ເລືອກໄວ້ ຕ້ອງການໃຫ້ສະກຸນເງິນ GTQ ແລະ USD ເປີດໃຊ້ງານຢູ່."
+
+#. module: currency_rate_live
+#. odoo-python
+#: code:addons/currency_rate_live/models/res_config_settings.py:0
+msgid ""
+"Unable to connect to the online exchange rate platform %s. The web service "
+"may be temporarily down. Please try again in a moment."
+msgstr ""
+"ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບແພລດຟອມອັດຕາແລກປ່ຽນອອນລາຍ %s ໄດ້. ການບໍລິການເວັບອາດຈະຢຸດເຮັດວຽກຊົ່ວຄາວ. ກະ"
+"ລຸນາລອງໃໝ່ອີກຄັ້ງໃນຈັກໜ້ອຍ."
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_interval_unit__weekly
+msgid "Weekly"
+msgstr "ລາຍອາທິດ"
+
+#. module: currency_rate_live
+#. odoo-python
+#: code:addons/currency_rate_live/models/res_config_settings.py:0
+msgid ""
+"Your main currency (%s) is not supported by this exchange rate provider. "
+"Please choose another one."
+msgstr ""
+"ສະກຸນເງິນຫຼັກຂອງທ່ານ (%s) ບໍ່ຮອງຮັບໂດຍຜູ້ໃຫ້ບໍລິການອັດຕາແລກປ່ຽນນີ້. ກະລຸນາເລືອກຜູ້ໃຫ້ບໍລິການອື່ນ."
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__cbuae
+msgid "[AE] Central Bank of the UAE"
+msgstr "[AE] ທະນາຄານກາງຂອງ UAE"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__cbar
+msgid "[AZ] Central Bank of Azerbaijan"
+msgstr "[AZ] ທະນາຄານກາງຂອງ ອາເຊີໄບຈານ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bnb
+msgid "[BG] Bulgaria National Bank"
+msgstr "[BG] ທະນາຄານແຫ່ງຊາດ ບູນກາຣີ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bbr
+msgid "[BR] Central Bank of Brazil"
+msgstr "[BR] ທະນາຄານກາງຂອງ ບຣາຊິນ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__boc
+msgid "[CA] Bank of Canada"
+msgstr "[CA] ທະນາຄານແຫ່ງ ການາດາ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__fta
+msgid "[CH] Federal Tax Administration of Switzerland"
+msgstr "[CH] ອົງການບໍລິຫານສ່ວຍສາອາກອນຂອງ ສະວິດເຊີແລນ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__mindicador
+msgid "[CL] Central Bank of Chile via mindicador.cl"
+msgstr "[CL] ທະນາຄານກາງຂອງ ຊີເລ ຜ່ານ mindicador.cl"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__banrepco
+msgid "[CO] Bank of the Republic"
+msgstr "[CO] ທະນາຄານແຫ່ງ ສາທາລະນະລັດ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__cu
+msgid "[CU] Central Bank of Cuba"
+msgstr "[CU] ທະນາຄານກາງຂອງ ກູບາ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__cnb
+msgid "[CZ] Czech National Bank"
+msgstr "[CZ] ທະນາຄານແຫ່ງຊາດ ເຊັກໂກ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__cbegy
+msgid "[EG] Central Bank of Egypt"
+msgstr "[EG] ທະນາຄານກາງຂອງ ເອຢິບ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__nbg
+msgid "[GE] National Bank of Georgia"
+msgstr "[GE] ທະນາຄານແຫ່ງຊາດ ຈໍເຈຍ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__banguat
+msgid "[GT] Bank of Guatemala"
+msgstr "[GT] ທະນາຄານແຫ່ງ ກົວເຕມາລາ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__mnb
+msgid "[HU] Magyar Nemzeti Bank"
+msgstr "[HU] ທະນາຄານແຫ່ງຊາດ ຮົງກາຣີ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bi
+msgid "[ID] Bank Indonesia"
+msgstr "[ID] ທະນາຄານ ອິນໂດເນເຊຍ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__boi
+msgid "[IT] Bank of Italy"
+msgstr "[IT] ທະນາຄານແຫ່ງ ອິຕາລີ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__nbkz
+msgid "[KZ] National Bank of Kazakhstan"
+msgstr "[KZ] ທະນາຄານແຫ່ງຊາດ ຄາຊັກສະຖານ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__banxico
+msgid "[MX] Bank of Mexico"
+msgstr "[MX] ທະນາຄານແຫ່ງ ເມັກຊິໂກ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bnm
+msgid "[MY] Bank Negara Malaysia"
+msgstr "[MY] ທະນາຄານກາງ ມາເລເຊຍ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bcrp
+msgid "[PE] SUNAT (replaces Bank of Peru)"
+msgstr "[PE] SUNAT (ປ່ຽນແທນທະນາຄານແຫ່ງ ເປຣູ)"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__nbp
+msgid "[PL] National Bank of Poland"
+msgstr "[PL] ທະນາຄານແຫ່ງຊາດ ໂປແລນ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bnr
+msgid "[RO] National Bank of Romania"
+msgstr "[RO] ທະນາຄານແຫ່ງຊາດ ໂຣມາເນຍ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__srb
+msgid "[SE] Sveriges Riksbank"
+msgstr "[SE] ທະນາຄານກາງ ສະວີເດັນ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bsi
+msgid "[SI] Bank of Slovenia"
+msgstr "[SI] ທະນາຄານແຫ່ງ ສະໂລເວນີ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bot
+msgid "[TH] Bank of Thailand"
+msgstr "[TH] ທະນາຄານແຫ່ງ ປະເທດໄທ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__tcmb
+msgid "[TR] Central Bank of the Republic of Türkiye"
+msgstr "[TR] ທະນາຄານກາງຂອງ ສາທາລະນະລັດ ຕວກກີ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__hmrc
+msgid "[UK] HM Revenue & Customs"
+msgstr "[UK] ກົມສ່ວຍສາອາກອນ ແລະ ພາສີ ຂອງສະຫະລາດຊະອານາຈັກ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__bcu
+msgid "[UY] Uruguayan Central Bank"
+msgstr "[UY] ທະນາຄານກາງ ອູຣູກວາຍ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__cbu
+msgid "[UZ] Central Bank of Uzbekistan"
+msgstr "[UZ] ທະນາຄານກາງ ອຸດສະເບກິດສະຖານ"
+
+#. module: currency_rate_live
+#: model:ir.model.fields.selection,name:currency_rate_live.selection__res_company__currency_provider__xe_com
+msgid "xe.com"
+msgstr "xe.com"
+
+#~ msgid "Bank Of Canada"
+#~ msgstr "ທະນາຄານແຫ່ງການາດາ"
+
+#~ msgid "Central Bank of Egypt"
+#~ msgstr "ທະນາຄານກາງແຫ່ງອີຢິບ"
+
+#~ msgid "Chilean mindicador.cl"
+#~ msgstr "Chilean mindicador.cl"
+
+#~ msgid "Federal Tax Administration (Switzerland)"
+#~ msgstr "ການບໍລິຫານສ່ວຍສາອາກອນລັດຖະບານກາງ (ສະວິດເຊີແລນ)"
+
+#~ msgid "Mexican Bank"
+#~ msgstr "ທະນາຄານເມັກຊິໂກ"
+
+#~ msgid "National Bank Of Romania"
+#~ msgstr "ທະນາຄານແຫ່ງຊາດໂຣມາເນຍ"
+
+#~ msgid "National Bank of Poland"
+#~ msgstr "ທະນາຄານແຫ່ງຊາດໂປແລນ"
+
+#~ msgid "SUNAT (replaces Bank of Peru)"
+#~ msgstr "SUNAT (ແທນທີ່ທະນາຄານເປຣູ)"
+
+#~ msgid "Türkiye Republic Central Bank"
+#~ msgstr "ທະນາຄານກາງແຫ່ງສາທາລະນະລັດຕູຣີເຄ"
+
+#~ msgid "UAE Central Bank"
+#~ msgstr "ທະນາຄານກາງຢູເອອີ"
+
+#~ msgid ""
+#~ "Unable to connect to the online exchange rate platform. The web service "
+#~ "may be temporary down. Please try again in a moment."
+#~ msgstr ""
+#~ "ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບເວທີອັດຕາແລກປ່ຽນອອນລາຍໄດ້. ເວັບໄຊບໍລິການອາດຈະຢຸດເຮັດວຽກຊົ່ວຄາວ. "
+#~ "ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນພາຍຫຼັງ."

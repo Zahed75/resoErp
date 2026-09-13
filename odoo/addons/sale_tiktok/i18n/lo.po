@@ -1,0 +1,1274 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_tiktok
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-17 17:44+0000\n"
+"PO-Revision-Date: 2026-08-13 00:10+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/sale_tiktok/"
+"lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_shop_create_wizard.py:0
+msgid "(Pending Authorization)"
+msgstr "(ລໍຖ້າການອະນຸຍາດ)"
+
+#. module: sale_tiktok
+#: model:mail.template,body_html:sale_tiktok.order_sync_failure
+msgid ""
+"<div>\n"
+"                <p>\n"
+"                    The synchronization of the TikTok Shop order with reference\n"
+"                    <t t-out=\"ctx.get('tiktok_order_ref') or ''\">REF</t>\n"
+"                    encountered an error and was not completed.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Unless the order is canceled in TikTok Shop, no other synchronization will be attempted.\n"
+"                </p>\n"
+"                <p>\n"
+"                    To schedule a new synchronization attempt, proceed as follows:\n"
+"                    </p><ol>\n"
+"                        <li>Enter the Developer Tools.</li>\n"
+"                        <li>Open the form of the TikTok Shop on which the order was placed.</li>\n"
+"                        <li>Navigate to the Order Follow-up tab.</li>\n"
+"                        <li>\n"
+"                            Set a date for <em>Last Order Synchronization Date</em> that is before the last status update of the order.\n"
+"                        </li>\n"
+"                        <li>Save the changes and click on the <em>SYNC ORDERS</em> button.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>\n"
+"                    If the problem persists, contact\n"
+"                    <a href=\"https://www.odoo.com/help/\">Odoo support</a>.\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"                <p>\n"
+"                    ການຊິງໂຄໄນຂໍ້ມູນຄຳສັ່ງຊື້ຂອງ TikTok Shop ທີ່ມີລະຫັດອ້າງອີງ\n"
+"                    <t t-out=\"ctx.get('tiktok_order_ref') or ''\">REF</t>\n"
+"                    ພົບຂໍ້ຜິດພາດ ແລະ ບໍ່ສຳເລັດ.\n"
+"                </p>\n"
+"                <p>\n"
+"                    ນອກຈາກວ່າຄຳສັ່ງຊື້ຈະຖືກຍົກເລີກໃນ TikTok Shop, ຈະບໍ່ມີການພະຍາຍາມຊິງໂຄໄ"
+"ນຂໍ້ມູນຄືນໃໝ່ອີກ.\n"
+"                </p>\n"
+"                <p>\n"
+"                    ເພື່ອຕັ້ງເວລາການພະຍາຍາມຊິງໂຄໄນໃໝ່, ໃຫ້ປະຕິບັດດັ່ງນີ້:\n"
+"                    </p><ol>\n"
+"                        <li>ເຂົ້າໄປທີ່ ເຄື່ອງມືນັກພັດທະນາ (Developer Tools).</li>\n"
+"                        <li>ເປີດຟອມຂອງ TikTok Shop ທີ່ຄຳສັ່ງຊື່້ນັ້ນຖືກສ້າງຂຶ້ນ.</li>\n"
+"                        <li>ໄປທີ່ແຖບ ການຕິດຕາມຄຳສັ່ງຊື້ (Order Follow-up).</li>\n"
+"                        <li>\n"
+"                            ກຳນົດວັນທີໃນ <em>ວັນທີຊິງໂຄໄນຄຳສັ່ງຊື້ຫຼ້າສຸດ</em> ໃຫ້ເປັນມື້ກ່ອນກາ"
+"ນອັບເດດສະຖານະຫຼ້າສຸດຂອງຄຳສັ່ງຊື້.\n"
+"                        </li>\n"
+"                        <li>ບັນທຶກການປ່ຽນແປງ ແລະ ຄລິກໃສ່ປຸ່ມ <em>ຊິງໂຄໄນຄຳສັ່ງຊື້ (SYNC "
+"ORDERS)</em>.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>\n"
+"                    ຫາກບັນຫາຍັງຄົງມີຢູ່, ກະລຸນາຕິດຕໍ່\n"
+"                    <a href=\"https://www.odoo.com/help/\">ຝ່າຍຊ່ວຍເຫຼືອຂອງ "
+"Odoo</a>.\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid ""
+"<strong>Authorization Failed: </strong>\n"
+"                    An unexpected error occurred during authorization. Please try again."
+msgstr ""
+"<strong>ການອະນຸຍາດບໍ່ສຳເລັດ: </strong>\n"
+"                    ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດໃນລະຫວ່າງການຂໍອະນຸຍາດ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງ."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+msgid ""
+"<strong>Where to find your API credentials:</strong><br/>\n"
+"                    1. Go to TikTok Shop Partner Center<br/>\n"
+"                    2. Navigate to Apps &amp; Service → Create New App or use existing<br/>\n"
+"                    3. Grant the App permissions to access your shop data<br/>\n"
+"                    4. Get your Service ID, App key and App secret<br/>"
+msgstr ""
+"<strong>ບ່ອນຊອກຫາຂໍ້ມູນ API credentials ຂອງທ່ານ:</strong><br/>\n"
+"                    1. ໄປທີ່ TikTok Shop Partner Center<br/>\n"
+"                    2. ໄປທີ່ Apps &amp; Service → ສ້າງແອັບໃໝ່ ຫຼື ໃຊ້ແອັບທີ່ມີຢູ່ແລ້ວ<br/>\n"
+"                    3. ອະນຸຍາດສິດໃຫ້ແອັບເຂົ້າເຖິງຂໍ້ມູນຮ້ານຄ້າຂອງທ່ານ<br/>\n"
+"                    4. ຮັບເອົາ Service ID, App key ແລະ App secret ຂອງທ່ານ<br/>\n"
+
+#. module: sale_tiktok
+#: model:mail.template,body_html:sale_tiktok.inventory_sync_failure
+msgid ""
+"<style>\n"
+"                .tiktok_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th,\n"
+"                .tiktok_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .tiktok_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table tbody th,\n"
+"                .tiktok_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>\n"
+"                    The synchronization of the inventory for TikTok Shop\n"
+"                    <b><t t-out=\"ctx.get('tiktok_shop') or ''\">REF</t></b>\n"
+"                    encountered some errors and was not completed.\n"
+"                </p>\n"
+"                <p>Here are the errors sent by TikTok Shop:</p>\n"
+"                <table class=\"tiktok_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Product Internal Reference(s)</th>\n"
+"                            <th>Message</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-as=\"error\">\n"
+"                            <th>\n"
+"                                <t t-out=\"', '.join(error['default_codes'])\"/>\n"
+"                            </th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">\n"
+"                                    An unknown error occurred during the synchronisation with TikTok Shop.\n"
+"                                    Unfortunately you need to manually check if the available quantity for the product is correct or not.\n"
+"                                    If the problem persists, contact\n"
+"                                    <a href=\"https://www.odoo.com/help/\">Odoo support</a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+msgstr ""
+"<style>\n"
+"                .tiktok_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th,\n"
+"                .tiktok_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .tiktok_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table tbody th,\n"
+"                .tiktok_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>\n"
+"                    ການຊິງໂຄໄນຂໍ້ມູນສາງເຄື່ອງສຳລັບ TikTok Shop\n"
+"                    <b><t t-out=\"ctx.get('tiktok_shop') or ''\">REF</t></b>"
+"\n"
+"                    ພົບຂໍ້ຜິດພາດບາງຢ່າງ ແລະ ບໍ່ສຳເລັດ.\n"
+"                </p>\n"
+"                <p>ນີ້ແມ່ນຂໍ້ຜິດພາດທີ່ສົ່ງມາຈາກ TikTok Shop:</p>\n"
+"                <table class=\"tiktok_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>ຂໍ້ມູນອ້າງອີງພາຍໃນຂອງສິນຄ້າ</th>\n"
+"                            <th>ຂໍ້ຄວາມ</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th>\n"
+"                                <t t-out=\"', '.join(error['default_codes'])"
+"\"/>\n"
+"                            </th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">\n"
+"                                    ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ຈັກໃນລະຫວ່າງການຊິງໂຄໄນກັບ TikTok "
+"Shop.\n"
+"                                    ທ່ານຈຳເປັນຕ້ອງກວດສອບດ້ວຍຕົນເອງວ່າຈຳນວນສິນຄ້າທີ່ມີຢູ່ຖືກ"
+"ຕ້ອງຫຼືບໍ່.\n"
+"                                    ຫາກບັນຫາຍັງຄົງມີຢູ່, ກະລຸນາຕິດຕໍ່\n"
+"                                    <a href=\"https://www.odoo.com/help/\">ຝ່າ"
+"ຍຊ່ວຍເຫຼືອຂອງ Odoo</a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__access_token
+msgid "Access Token"
+msgstr "ໂທເຄັນການເຂົ້າເຖິງ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__access_token_expire_datetime
+msgid "Access Token Expiration"
+msgstr "ວັນໝົດອາຍຸໂທເຄັນການເຂົ້າເຖິງ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__active
+msgid "Active"
+msgstr "ເປີດໃຊ້ງານ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+msgid "An unexpected error occurred during authorization."
+msgstr "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດໃນລະຫວ່າງການຂໍອະນຸຍາດ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__tiktok_cipher
+msgid "An unique identifier as an input parameter in shop related APIs."
+msgstr "ຕົວລະບຸສະເພາະທີ່ໃຊ້ເປັນພາລາມິເຕີຂາເຂົ້າໃນ API ທີ່ກ່ຽວຂ້ອງກັບຮ້ານຄ້າ."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "App Credentials"
+msgstr "ຂໍ້ມູນປະຈຳຕົວແອັບ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__app_key
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__app_key
+msgid "App key"
+msgstr "ຄີແອັບ (App key)"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__app_secret
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__app_secret
+msgid "App secret"
+msgstr "ຄວາມລັບແອັບ (App secret)"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_search
+msgid "Archived"
+msgstr "ເກັບຖາວອນ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__confirmed
+msgid "Awaiting Collection on TikTok Shop"
+msgstr "ລໍຖ້າການເຂົ້າຮັບສິນຄ້າໃນ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__draft
+msgid "Awaiting Shipment on TikTok Shop"
+msgstr "ລໍຖ້າການຈັດສົ່ງໃນ TikTok Shop"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__canceled
+msgid "Canceled on TikTok Shop"
+msgstr "ຖືກຍົກເລີກໃນ TikTok Shop"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+msgid "Collection Period"
+msgstr "ໄລຍະເວລາການເຂົ້າຮັບສິນຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__company_id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__company_id
+msgid "Company"
+msgstr "ບໍລິສັດ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_list
+msgid "Connect New Shop"
+msgstr "ເຊື່ອມຕໍ່ຮ້ານຄ້າໃໝ່"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+msgid "Connect Shop & Authorize"
+msgstr "ເຊື່ອມຕໍ່ຮ້ານຄ້າ ແລະ ອະນຸຍາດສິດ"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_res_partner
+msgid "Contact"
+msgstr "ຜູ້ຕິດຕໍ່"
+
+#. module: sale_tiktok
+#: model:ir.actions.act_window,name:sale_tiktok.action_tiktok_shop_create_wizard
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+msgid "Create TikTok Shop"
+msgstr "ສ້າງ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model,website_form_label:sale_tiktok.model_res_partner
+msgid "Create a Customer"
+msgstr "ສ້າງລູກຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__create_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__create_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__create_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__create_uid
+msgid "Created by"
+msgstr "ສ້າງໂດຍ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__create_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__create_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__create_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__create_date
+msgid "Created on"
+msgstr "ສ້າງເມື່ອ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Credentials"
+msgstr "ຂໍ້ມູນປະຈຳຕົວ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__team_id
+msgid "Default Sales Team"
+msgstr "ທີມຂາຍເລີ່ມຕົ້ນ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__user_id
+msgid "Default Salesperson"
+msgstr "ພະນັກງານຂາຍເລີ່ມຕົ້ນ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__done
+msgid "Delivered on TikTok Shop"
+msgstr "ສົ່ງສຳເລັດແລ້ວໃນ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_product_product__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.stock_picking_form
+msgid "Download TikTok Label"
+msgstr "ດາວໂຫລດໃບປະໜ້າ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__synchronize_inventory
+msgid "Enable Inventory Synchronization"
+msgstr "ເປີດໃຊ້ການຊິງໂຄໄນຂໍ້ມູນສາງເຄື່ອງ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__sync_to_tiktok
+msgid ""
+"Enable this to allow pushing the product inventory quantities from Odoo to "
+"TikTok."
+msgstr "ເປີດໃຊ້ສິ່ງນີ້ເພື່ອອະນຸຍາດໃຫ້ສົ່ງຈຳນວນສິນຄ້າໃນສາງຈາກ Odoo ໄປຫາ TikTok."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__synchronize_inventory
+msgid ""
+"Enable this to keep this shop's product quantities synchronized with TikTok "
+"Shop."
+msgstr ""
+"ເປີດໃຊ້ສິ່ງນີ້ເພື່ອໃຫ້ຈຳນວນສິນຄ້າຂອງຮ້ານຄ້ານີ້ຊິງໂຄໄນກັບ TikTok Shop ຢູ່ສະເໝີ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__fbs_warehouse_id
+msgid "FBS Warehouse"
+msgstr "ສາງເຄື່ອງ FBS"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid ""
+"Failed to download the shipping label. Use the provided link:\n"
+"%(link)s"
+msgstr ""
+"ດາວໂຫລດໃບປະໜ້າການຈັດສົ່ງບໍ່ສຳເລັດ. ກະລຸນາໃຊ້ລິ້ງທີ່ໃຫ້ໄວ້:\n"
+"%(link)s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid "Failed to fetch label. Please wait and try again later. %s"
+msgstr "ດຶງຂໍ້ມູນໃບປະໜ້າບໍ່ສຳເລັດ. ກະລຸນາລໍຖ້າ ແລະ ລອງໃໝ່ອີກຄັ້ງ. %s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid "Failed to ship order: %s"
+msgstr "ສົ່ງຄຳສັ່ງຊື້ບໍ່ສຳເລັດ: %s"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_product_product__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_partner__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__id
+msgid "ID"
+msgstr "ໄອດີ (ID)"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_form
+msgid ""
+"If the sale is locked, you can not modify it anymore. However, you will "
+"still be able to invoice or deliver."
+msgstr ""
+"ຫາກການຂາຍຖືກລັອກ, ທ່ານຈະບໍ່ສາມາດແກ້ໄຂໄດ້ອີກ. ແນວໃດກໍຕາມ, ທ່ານຍັງສາມາດອອກໃບແຈ້ງໜີ້ ຫຼື ຈັດສົ່ງສິນຄ້"
+"າໄດ້."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+msgid ""
+"In TikTok Shop '%(shop_name)s', an error %(error_code)s occurred during the TikTok API operation '%(operation)s' with request ID '%(request_id)s':\n"
+"%(error_message)s"
+msgstr ""
+"ໃນ TikTok Shop '%(shop_name)s', ເກີດຂໍ້ຜິດພາດ %(error_code)s ໃນລະຫວ່າງການເຮັດວຽກຂອ"
+"ງ TikTok API '%(operation)s' ດ້ວຍ Request ID '%(request_id)s':\n"
+"%(error_message)s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+msgid "Invalid JSON response received from TikTok."
+msgstr "ການຕອບກັບ JSON ທີ່ໄດ້ຮັບຈາກ TikTok ບໍ່ຖືກຕ້ອງ."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+msgid "Invalid OAuth state."
+msgstr "ສະຖານະ OAuth ບໍ່ຖືກຕ້ອງ."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid "Invalid TikTok document URL"
+msgstr "URL ເອກະສານ TikTok ບໍ່ຖືກຕ້ອງ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+msgid "Invalid authorization signature"
+msgstr "ລາຍເຊັນການອະນຸຍາດບໍ່ຖືກຕ້ອງ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Inventory Synchronization"
+msgstr "ການຊິງໂຄໄນຂໍ້ມູນສາງເຄື່ອງ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_item_count
+msgid "Item Count"
+msgstr "ຈຳນວນລາຍການ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__tiktok_item_extern_id
+msgid "Item ID"
+msgstr "ໄອດີລາຍການ"
+
+#. module: sale_tiktok
+#: model:ir.model.constraint,message:sale_tiktok.constraint_tiktok_item_unique_tiktok_item_and_sku_external_ids
+msgid "Item and SKU external IDs must be unique for a given shop."
+msgstr "ໄອດີພາຍໃນຂອງລາຍການ ແລະ SKU ຕ້ອງບໍ່ຊ້ຳກັນສຳລັບຮ້ານຄ້ານັ້ນໆ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_item_ids
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Items"
+msgstr "ລາຍການ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__last_product_catalog_sync_date
+msgid "Last Catalog Synchronization"
+msgstr "ການຊິງໂຄໄນແຄັດຕາລັອກຫຼ້າສຸດ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__last_orders_sync_date
+msgid "Last Order Synchronization"
+msgstr "ການຊິງໂຄໄນຄຳສັ່ງຊື້ຫຼ້າສຸດ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__last_inventory_sync_date
+msgid "Last Sync Date"
+msgstr "ວັນທີຊິງໂຄໄນຫຼ້າສຸດ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__write_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__write_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__write_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__write_uid
+msgid "Last Updated by"
+msgstr "ອັບເດດຫຼ້າສຸດໂດຍ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__write_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__write_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__write_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__write_date
+msgid "Last Updated on"
+msgstr "ອັບເດດຫຼ້າສຸດເມື່ອ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_form
+msgid "Lock"
+msgstr "ລັອກ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+msgid "Malformed OAuth state."
+msgstr "ສະຖານະ OAuth ມີຮູບແບບບໍ່ຖືກຕ້ອງ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__manual
+msgid "Manual handling required"
+msgstr "ຈຳເປັນຕ້ອງຈັດການດ້ວຍຕົນເອງ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+msgid "Missing OAuth state."
+msgstr "ບໍ່ພົບສະຖານະ OAuth."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__name
+msgid "Name"
+msgstr "ຊື່"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid "No TikTok shop found for this order."
+msgstr "ບໍ່ພົບຮ້ານຄ້າ TikTok ສຳລັບຄຳສັ່ງຊື່້ນີ້."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+msgid "No authorization code or refresh token found for shop %(shop_name)s."
+msgstr "ບໍ່ພົບລະຫັດອະນຸຍາດ ຫຼື ໂທເຄັນການຟື້ນຟູສຳລັບຮ້ານຄ້າ %(shop_name)s."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__order_count
+msgid "Order Count"
+msgstr "ຈຳນວນຄຳສັ່ງຊື້"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Order Synchronization"
+msgstr "ການຊິງໂຄໄນຄຳສັ່ງຊື້"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__order_ids
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Orders"
+msgstr "ຄຳສັ່ງຊື້"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "Original price: %(price)s"
+msgstr "ລາຄາເດີມ: %(price)s"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__picking_id
+msgid "Picking"
+msgstr "ການເບີກສິນຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__pickup_end
+msgid "Pickup End Time"
+msgstr "ເວລາສິ້ນສຸດການຮັບສິນຄ້າ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+msgid "Pickup End Time must be after Pickup Start Time."
+msgstr "ເວລາສິ້ນສຸດການຮັບສິນຄ້າຕ້ອງຢູ່ຫຼັງເວລາເລີ່ມຕົ້ນການຮັບສິນຄ້າ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__pickup_start
+msgid "Pickup Start Time"
+msgstr "ເວລາເລີ່ມຕົ້ນການຮັບສິນຄ້າ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+msgid "Please provide both Pickup Start and Pickup End times."
+msgstr "ກະລຸນາລະບຸທັງເວລາເລີ່ມຕົ້ນ ແລະ ເວລາສິ້ນສຸດການຮັບສິນຄ້າ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__product_id
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_item_search
+msgid "Product"
+msgstr "ສິນຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__product_tmpl_id
+msgid "Product Template"
+msgstr "ເທັມເພລັດສິນຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_product_product
+msgid "Product Variant"
+msgstr "ຮູບແບບຍ່ອຍຂອງສິນຄ້າ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+msgid "Rate limit reached. Please try again later."
+msgstr "ຮອດຂີດຈຳກັດຂອງອັດຕາການຮ້ອງຂໍແລ້ວ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນພາຍຫຼັງ."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Re-authorize Shop"
+msgstr "ຂໍອະນຸຍາດສິດຮ້ານຄ້າໃໝ່"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__refresh_token
+msgid "Refresh Token"
+msgstr "ໂທເຄັນການຟື້ນຟູ (Refresh Token)"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__refresh_token_expire_datetime
+msgid "Refresh Token Expiration"
+msgstr "ວັນໝົດອາຍຸໂທເຄັນການຟື້ນຟູ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+msgid "Request exception during TikTok Shop API operation"
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການຮ້ອງຂໍລະຫວ່າງການເຮັດວຽກຂອງ TikTok Shop API"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__tiktok_sku_extern_id
+msgid "SKU ID"
+msgstr "ໄອດີ SKU"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "Sale Orders"
+msgstr "ຄຳສັ່ງຂາຍ"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_sale_order
+msgid "Sales Order"
+msgstr "ຄຳສັ່ງຂາຍ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__tiktok_seller_sku
+msgid "Seller SKU"
+msgstr "SKU ຂອງຜູ້ຂາຍ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__service_extern_id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__service_extern_id
+msgid "Service ID"
+msgstr "ໄອດີບໍລິການ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+msgid "Ship Order"
+msgstr "ສົ່ງຄຳສັ່ງຊື້"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+msgid "Ship Orders Result"
+msgstr "ຜົນການສົ່ງຄຳສັ່ງຊື້"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+msgid "Ship TikTok Orders"
+msgstr "ສົ່ງຄຳສັ່ງຊື້ TikTok"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.stock_picking_form
+msgid "Ship on TikTok"
+msgstr "ຈັດສົ່ງໃນ TikTok"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "Shipping: %(carrier)s"
+msgstr "ການຈັດສົ່ງ: %(carrier)s"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__shop_id
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_search
+msgid "Shop"
+msgstr "ຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_shop_ref
+msgid "Shop ID"
+msgstr "ໄອດີຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Shop Information"
+msgstr "ຂໍ້ມູນຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Shop Name"
+msgstr "ຊື່ຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__country_id
+msgid "Shop Region"
+msgstr "ເຂດພື້ນທີ່ຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Shop Settings"
+msgstr "ການຕັ້ງຄ່າຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Shop Tokens"
+msgstr "ໂທເຄັນຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+msgid "Shop not found."
+msgstr "ບໍ່ພົບຮ້ານຄ້າ."
+
+#. module: sale_tiktok
+#: model:ir.ui.menu,name:sale_tiktok.shops_menu
+msgid "Shops"
+msgstr "ຮ້ານຄ້າ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_delivery_status
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_delivery_status
+msgid ""
+"Status of the delivery order on TikTok Shop:\n"
+"- Awaiting Shipment: The order is ready for shipment, but nothing is shipped yet.\n"
+"- Awaiting Collection: The shipment is arranged and awaits carrier pickup.\n"
+"- Delivered: The package has been collected by the carrier and is shipped.\n"
+"- Canceled: The package has been cancelled.\n"
+"- Manual handling required: Shipment must be rearranged and checked again in TikTok Shop."
+msgstr ""
+"ສະຖານະຂອງຄຳສັ່ງຈັດສົ່ງໃນ TikTok Shop:\n"
+"- ລໍຖ້າການຈັດສົ່ງ: ຄຳສັ່ງຊື້ພ້ອມຈັດສົ່ງແລ້ວ, ແຕ່ຍັງບໍ່ທັນມີການຈັດສົ່ງເທື່ອ.\n"
+"- ລໍຖ້າການເຂົ້າຮັບສິນຄ້າ: ການຈັດສົ່ງຖືກຈັດແຈງແລ້ວ ແລະ ກຳລັງລໍຖ້າໃຫ້ບໍລິສັດຂົນສົ່ງມາຮັບ.\n"
+"- ສົ່ງສຳເລັດແລ້ວ: ເຄື່ອງຖືກຮັບໂດຍບໍລິສັດຂົນສົ່ງ ແລະ ຈັດສົ່ງແລ້ວ.\n"
+"- ຖືກຍົກເລີກ: ເຄື່ອງຖືກຍົກເລີກແລ້ວ.\n"
+"- ຈຳເປັນຕ້ອງຈັດການດ້ວຍຕົນເອງ: ການຈັດສົ່ງຕ້ອງຖືກຈັດແຈງໃໝ່ ແລະ ກວດສອບອີກຄັ້ງໃນ TikTok Shop."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+msgid "Successfully shipped orders."
+msgstr "ສົ່ງຄຳສັ່ງຊື້ສຳເລັດແລ້ວ."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Sync Catalog"
+msgstr "ຊິງໂຄໄນແຄັດຕາລັອກ"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Sync Inventory"
+msgstr "ຊິງໂຄໄນສາງເຄື່ອງ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__sync_to_tiktok
+msgid "Sync Inventory to TikTok"
+msgstr "ຊິງໂຄໄນສາງເຄື່ອງໄປຫາ TikTok"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Sync Orders"
+msgstr "ຊິງໂຄໄນຄຳສັ່ງຊື້"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "Synchronization Information"
+msgstr "ຂໍ້ມູນການຊິງໂຄໄນ"
+
+#. module: sale_tiktok
+#: model:mail.template,subject:sale_tiktok.inventory_sync_failure
+msgid "Synchronization of TikTok Shop inventory has failed"
+msgstr "ການຊິງໂຄໄນຂໍ້ມູນສາງເຄື່ອງຂອງ TikTok Shop ບໍ່ສຳເລັດ"
+
+#. module: sale_tiktok
+#: model:mail.template,subject:sale_tiktok.order_sync_failure
+msgid ""
+"Synchronization of TikTok Shop order {{ ctx.get('tiktok_order_ref') }} has "
+"failed"
+msgstr ""
+"ການຊິງໂຄໄນຂໍ້ມູນຄຳສັ່ງຊື້ TikTok Shop {{ ctx.get('tiktok_order_ref') }} ບໍ່ສຳເລັດ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_order_ref
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_order_ref
+msgid "The TikTok Shop-defined order reference."
+msgstr "ລະຫັດອ້າງອີງຄຳສັ່ງຊື້ທີ່ກຳນົດໂດຍ TikTok Shop."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_packing_ref
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_packing_ref
+msgid "The TikTok Shop-defined packing reference."
+msgstr "ລະຫັດອ້າງອີງການຫຸ້ມຫໍ່ທີ່ກຳນົດໂດຍ TikTok Shop."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_shop_id
+msgid "The TikTok shop from which the order was placed."
+msgstr "ຮ້ານຄ້າ TikTok ທີ່ຄຳສັ່ງຊື່້ນັ້ນຖືກສ້າງຂຶ້ນ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__access_token
+msgid ""
+"The access token for the TikTok Shop API. This token expires in 7 days and "
+"needs to be refreshed with the refresh token. You don't have to manage this "
+"field manually."
+msgstr ""
+"ໂທເຄັນການເຂົ້າເຖິງສຳລັບ TikTok Shop API. ໂທເຄັນນີ້ຈະໝົດອາຍຸໃນ 7 ວັນ ແລະ ຕ້ອງໄດ້ຮັບການຟື້ນຟູດ້ວຍ"
+"ໂທເຄັນການຟື້ນຟູ. ທ່ານບໍ່ຈຳເປັນຕ້ອງຈັດການຟິວນີ້ດ້ວຍຕົນເອງ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_label_attachment_id
+msgid "The attachment related to the TikTok shipping label."
+msgstr "ໄຟລ໌ຄັດຕິດທີ່ກ່ຽວຂ້ອງກັບໃບປະໜ້າການຈັດສົ່ງຂອງ TikTok."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid "The collection of this order was already scheduled."
+msgstr "ການເຂົ້າຮັບສິນຄ້າສຳລັບຄຳສັ່ງຊື່້ນີ້ໄດ້ຖືກກຳນົດເວລາໄວ້ແລ້ວ."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+msgid ""
+"The collection period is optional. Leave empty to follow courier pickup "
+"schedule."
+msgstr ""
+"ໄລຍະເວລາການເຂົ້າຮັບສິນຄ້າແມ່ນເລືອກໄດ້. ປ່ອຍຫວ່າງໄວ້ເພື່ອປະຕິບັດຕາມຕາຕະລາງການຮັບຂອງບໍລິສັດຂົນສົ່ງ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__access_token_expire_datetime
+msgid ""
+"The date when the access token expires. Odoo will automatically refresh the "
+"token before it expires."
+msgstr ""
+"ວັນທີທີ່ໂທເຄັນການເຂົ້າເຖິງໝົດອາຍຸ. Odoo ຈະຟື້ນຟູໂທເຄັນໂດຍອັດຕະໂນມັດກ່ອນທີ່ຈະໝົດອາຍຸ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__refresh_token_expire_datetime
+msgid ""
+"The date when the refresh token expires. Odoo will automatically refresh the"
+" token before it expires."
+msgstr ""
+"ວັນທີທີ່ໂທເຄັນການຟື້ນຟູໝົດອາຍຸ. Odoo ຈະຟື້ນຟູໂທເຄັນໂດຍອັດຕະໂນມັດກ່ອນທີ່ຈະໝົດອາຍຸ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__team_id
+msgid "The default Sales Team assigned to TikTok Shop orders for reporting"
+msgstr ""
+"ທີມຂາຍເລີ່ມຕົ້ນທີ່ຖືກມອບໝາຍໃຫ້ກັບຄຳສັ່ງຊື້ TikTok Shop ສຳລັບການເຮັດລາຍງານ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__user_id
+msgid "The default salesperson assigned to TikTok Shop orders"
+msgstr "ພະນັກງານຂາຍເລີ່ມຕົ້ນທີ່ຖືກມອບໝາຍໃຫ້ກັບຄຳສັ່ງຊື້ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__last_orders_sync_date
+msgid ""
+"The last time orders were synchronized with TikTok Shop. Orders whose status"
+" has not changed since this date are not created nor updated in Odoo."
+msgstr ""
+"ຄັ້ງສຸດທ້າຍທີ່ມີການຊິງໂຄໄນຄຳສັ່ງຊື້ກັບ TikTok Shop. ຄຳສັ່ງຊື້ທີ່ສະຖານະບໍ່ມີການປ່ຽນແປງຕັ້ງແຕ່ວັນທີນີ້ຈະບໍ່ຖືກສ້າ"
+"ງ ຫຼື ອັບເດດໃນ Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__last_product_catalog_sync_date
+msgid "The last time the TikTok Shop catalog was synchronized with Odoo."
+msgstr "ຄັ້ງສຸດທ້າຍທີ່ມີການຊິງໂຄໄນແຄັດຕາລັອກ TikTok Shop ກັບ Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__refresh_token
+msgid ""
+"The refresh token for the TikTok Shop API. This token expires in 30 days and"
+" needs to be refreshed with the access token. You don't have to manage this "
+"field manually."
+msgstr ""
+"ໂທເຄັນການຟື້ນຟູສຳລັບ TikTok Shop API. ໂທເຄັນນີ້ຈະໝົດອາຍຸໃນ 30 ວັນ ແລະ ຕ້ອງໄດ້ຮັບການຟື້ນຟູດ້ວຍໂທ"
+"ເຄັນການເຂົ້າເຖິງ. ທ່ານບໍ່ຈຳເປັນຕ້ອງຈັດການຟິວນີ້ດ້ວຍຕົນເອງ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__tiktok_seller_sku
+msgid ""
+"The seller SKU in TikTok. A Seller SKU in TikTok is equivalent to the "
+"product default code in Odoo."
+msgstr ""
+"SKU ຂອງຜູ້ຂາຍໃນ TikTok. SKU ຂອງຜູ້ຂາຍໃນ TikTok ມີຄ່າເທົ່າກັບ ລະຫັດສິນຄ້າ (default code) ໃ"
+"ນ Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__service_extern_id
+msgid ""
+"The service ID for the TikTok Shop API. This ID is used to identify the shop"
+" in the TikTok Shop API. You can find this in your TikTok Partner Center "
+"after creating an application."
+msgstr ""
+"ໄອດີບໍລິການສຳລັບ TikTok Shop API. ໄອດີນີ້ໃຊ້ເພື່ອລະບຸຮ້ານຄ້າໃນ TikTok Shop API. ທ່ານສາມາດຊອ"
+"ກຫາສິ່ງນີ້ໄດ້ໃນ TikTok Partner Center ຂອງທ່ານຫຼັງຈາກສ້າງແອັບພລິເຄຊັນ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__tiktok_sku_extern_id
+msgid ""
+"The unique identifier for a SKU in TikTok. A SKU in TikTok is equivalent to "
+"a product variant in Odoo."
+msgstr ""
+"ຕົວລະບຸສະເພາະສຳລັບ SKU ໃນ TikTok. SKU ໃນ TikTok ມີຄ່າເທົ່າກັບ ຮູບແບບຍ່ອຍຂອງສິນຄ້າ "
+"(product variant) ໃນ Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__tiktok_item_extern_id
+msgid ""
+"The unique identifier for an item in TikTok. An item in TikTok is equivalent"
+" to a product in Odoo."
+msgstr ""
+"ຕົວລະບຸສະເພາະສຳລັບລາຍການໃນ TikTok. ລາຍການໃນ TikTok ມີຄ່າເທົ່າກັບ ສິນຄ້າ (product) ໃນ "
+"Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.constraint,message:sale_tiktok.constraint_sale_order_unique_tiktok_order_ref_tiktok_shop_id
+msgid ""
+"There can only exist one sale order for a given TikTok Shop Order Reference "
+"per Shop."
+msgstr ""
+"ສາມາດມີຄຳສັ່ງຂາຍໄດ້ພຽງໜຶ່ງລາຍການຕໍ່ໜຶ່ງລະຫັດອ້າງອີງຄຳສັ່ງຊື້ TikTok Shop ໃນແຕ່ລະຮ້ານຄ້າ."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.stock_picking_form
+msgid ""
+"This order contains unsupported TikTok Shop delivery status.\n"
+"                    Please process the order manually on TikTok Shop."
+msgstr ""
+"ຄຳສັ່ງຊື່້ນີ້ມີສະຖານະການຈັດສົ່ງຂອງ TikTok Shop ທີ່ບໍ່ຮອງຮັບ.\n"
+"                    ກະລຸນາຈັດການຄຳສັ່ງຊື້ດ້ວຍຕົນເອງໃນ TikTok Shop."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid "This picking is not linked to a TikTok order."
+msgstr "ການເບີກສິນຄ້ານີ້ບໍ່ໄດ້ເຊື່ອມໂຍງກັບຄຳສັ່ງຊື້ TikTok."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "TikTok API rate limit reached. Please try again later."
+msgstr "ຮອດຂີດຈຳກັດຂອງ TikTok API ແລ້ວ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນພາຍຫຼັງ."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#: model:product.template,name:sale_tiktok.default_adjustment_product_product_template
+msgid "TikTok Amount Adjustment"
+msgstr "ການປັບແຕ່ງຈຳນວນເງິນ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_partner__tiktok_buyer_extern_id
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_users__tiktok_buyer_extern_id
+msgid "TikTok Buyer ID"
+msgstr "ໄອດີຜູ້ຊື້ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_packing_ref
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_packing_ref
+msgid "TikTok Packing Reference"
+msgstr "ລະຫັດອ້າງອີງການຫຸ້ມຫໍ່ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_picking_ship_wizard
+msgid "TikTok Picking Ship Wizard"
+msgstr "ວິດຊາດການຈັດສົ່ງ ແລະ ເບີກສິນຄ້າ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_order_ref
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_order_ref
+msgid "TikTok Reference"
+msgstr "ລະຫັດອ້າງອີງ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_shop
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_shop_id
+#: model:ir.ui.menu,name:sale_tiktok.root_menu
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_search
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_item_search
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "TikTok Shop"
+msgstr "ຮ້ານຄ້າ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.actions.act_window,name:sale_tiktok.action_tiktok_shop_authorization_error
+msgid "TikTok Shop Authorization Error"
+msgstr "ຂໍ້ຜິດພາດໃນການອະນຸຍາດສິດ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_shop_create_wizard
+msgid "TikTok Shop Creation Wizard"
+msgstr "ວິດຊາດການສ້າງ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_item
+msgid "TikTok Shop Item"
+msgstr "ລາຍການໃນ TikTok Shop"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_item_list
+msgid "TikTok Shop Items"
+msgstr "ລາຍການຕ່າງໆໃນ TikTok Shop"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+msgid "TikTok Shop Label"
+msgstr "ໃບປະໜ້າ TikTok Shop"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/tests/test_tiktok.py:0
+msgid "TikTok Shop Order %(order)s"
+msgstr "ຄຳສັ່ງຊື້ TikTok Shop %(order)s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "TikTok Shop Order %(tiktok_order_ref)s"
+msgstr "ຄຳສັ່ງຊື້ TikTok Shop %(tiktok_order_ref)s"
+
+#. module: sale_tiktok
+#: model:product.template,name:sale_tiktok.default_sale_product_product_template
+msgid "TikTok Shop Sale"
+msgstr "ການຂາຍຜ່ານ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:product.template,name:sale_tiktok.default_shipping_product_product_template
+msgid "TikTok Shop Shipping"
+msgstr "ການຈັດສົ່ງຂອງ TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.actions.server,name:sale_tiktok.ir_cron_sync_tiktok_inventory_ir_actions_server
+msgid "TikTok Shop: sync inventory"
+msgstr "TikTok Shop: ຊິງໂຄໄນສາງເຄື່ອງ"
+
+#. module: sale_tiktok
+#: model:ir.actions.server,name:sale_tiktok.ir_cron_sync_tiktok_orders_ir_actions_server
+msgid "TikTok Shop: sync orders"
+msgstr "TikTok Shop: ຊິງໂຄໄນຄຳສັ່ງຊື້"
+
+#. module: sale_tiktok
+#: model:ir.actions.act_window,name:sale_tiktok.action_tiktok_shop_list
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_list
+msgid "TikTok Shops"
+msgstr "ຮ້ານຄ້າ TikTok ທັງໝົດ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_delivery_status
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_delivery_status
+msgid "TikTok Status"
+msgstr "ສະຖານະ TikTok"
+
+#. module: sale_tiktok
+#: model:mail.template,name:sale_tiktok.inventory_sync_failure
+msgid "TikTok: Inventory Synchronization Failure"
+msgstr "TikTok: ການຊິງໂຄໄນສາງເຄື່ອງບໍ່ສຳເລັດ"
+
+#. module: sale_tiktok
+#: model:mail.template,name:sale_tiktok.order_sync_failure
+msgid "TikTok: Order Synchronization Failure"
+msgstr "TikTok: ການຊິງໂຄໄນຄຳສັ່ງຊື້ບໍ່ສຳເລັດ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_cipher
+msgid "Tiktok Cipher"
+msgstr "Tiktok Cipher"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_label_attachment_id
+msgid "Tiktok Label Attachment"
+msgstr "ໄຟລ໌ຄັດຕິດໃບປະໜ້າ TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_stock_picking
+msgid "Transfer"
+msgstr "ການໂອນ"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__fbs_warehouse_id
+msgid ""
+"Warehouse synchronized with TikTok Shop under the Fulfilled by Seller (FBS) "
+"program. Select the warehouse where you store products that you ship "
+"directly to customers. If not set, your company's default warehouse will be "
+"used."
+msgstr ""
+"ສາງເຄື່ອງທີ່ຊິງໂຄໄນກັບ TikTok Shop ພາຍໃຕ້ໂປຣແກຣມ Fulfilled by Seller (FBS). ເລືອກສາງເ"
+"ຄື່ອງທີ່ທ່ານເກັບສິນຄ້າເພື່ອຈັດສົ່ງໃຫ້ລູກຄ້າໂດຍກົງ. ຫາກບໍ່ໄດ້ຕັ້ງຄ່າໄວ້, ຈະໃຊ້ສາງເຄື່ອງເລີ່ມຕົ້ນຂອງບໍລິສັດ."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_item.py:0
+msgid ""
+"We do not support syncing services or combo products to TikTok Shop. Only "
+"storable products are supported."
+msgstr ""
+"ພວກເຮົາບໍ່ຮອງຮັບການຊິງໂຄໄນສິນຄ້າປະເພດບໍລິການ ຫຼື ສິນຄ້າຊຸດ (combo) ໄປຫາ TikTok Shop. ຮອງຮັບສ"
+"ະເພາະສິນຄ້າທີ່ຈັດເກັບໃນສາງໄດ້ເທົ່ານັ້ນ."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+msgid "You are not allowed to access this page."
+msgstr "ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ເຂົ້າເຖິງໜ້ານີ້."
+
+#. module: sale_tiktok
+#: model:ir.model.constraint,message:sale_tiktok.constraint_tiktok_shop_unique_active_shop
+msgid ""
+"You cannot connect the same shop twice. Consider archiving the existing shop"
+" first."
+msgstr ""
+"ທ່ານບໍ່ສາມາດເຊື່ອມຕໍ່ຮ້ານຄ້າດຽວກັນສອງຄັ້ງໄດ້. ກະລຸນາເກັບຖາວອນຮ້ານຄ້າທີ່ມີຢູ່ກ່ອນ."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__app_key
+msgid ""
+"Your TikTok Shop application key. You can find this in your TikTok Partner "
+"Center after creating an application. Enter this before authorizing the "
+"connection."
+msgstr ""
+"ຄີແອັບພລິເຄຊັນ TikTok Shop ຂອງທ່ານ. ທ່ານສາມາດຊອກຫາສິ່ງນີ້ໄດ້ໃນ TikTok Partner Center ຫຼັງຈ"
+"າກສ້າງແອັບພລິເຄຊັນ. ກະລຸນາປ້ອນຂໍ້ມູນນີ້ກ່ອນທີ່ຈະອະນຸຍາດການເຊື່ອມຕໍ່."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__app_secret
+msgid ""
+"Your TikTok Shop application secret. You can find this in your TikTok "
+"Partner Center after creating an application. Enter this before authorizing "
+"the connection."
+msgstr ""
+"ຄວາມລັບແອັບພລິເຄຊັນ TikTok Shop ຂອງທ່ານ. ທ່ານສາມາດຊອກຫາສິ່ງນີ້ໄດ້ໃນ TikTok Partner "
+"Center ຫຼັງຈາກສ້າງແອັບພລິເຄຊັນ. ກະລຸນາປ້ອນຂໍ້ມູນນີ້ກ່ອນທີ່ຈະອະນຸຍາດການເຊື່ອມຕໍ່."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop_create_wizard__app_key
+msgid ""
+"Your TikTok application key. You can find this in your TikTok Shop Partner "
+"Center → Apps/Service after creating an application. Enter this before "
+"authorizing the connection."
+msgstr ""
+"ຄີແອັບພລິເຄຊັນ TikTok ຂອງທ່ານ. ທ່ານສາມາດຊອກຫາສິ່ງນີ້ໄດ້ໃນ TikTok Shop Partner Center → ແ"
+"ອັບ/ບໍລິການ ຫຼັງຈາກສ້າງແອັບພລິເຄຊັນ. ກະລຸນາປ້ອນຂໍ້ມູນນີ້ກ່ອນທີ່ຈະອະນຸຍາດການເຊື່ອມຕໍ່."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop_create_wizard__app_secret
+msgid ""
+"Your TikTok application secret. This is provided alongside your App Key in "
+"the TikTok Shop Partner Center → Apps/Service. Keep this confidential and "
+"enter it before authorizing the connection."
+msgstr ""
+"ຄວາມລັບແອັບພລິເຄຊັນ TikTok ຂອງທ່ານ. ຂໍ້ມູນນີ້ຖືກໃຫ້ມາພ້ອມກັບ App Key ໃນ TikTok Shop "
+"Partner Center → ແອັບ/ບໍລິການ. ກະລຸນາເກັບຮັກສາເປັນຄວາມລັບ ແລະ ປ້ອນຂໍ້ມູນນີ້ກ່ອນທີ່ຈະອະນຸຍາດການເ"
+"ຊື່ອມຕໍ່."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop_create_wizard__service_extern_id
+msgid ""
+"Your TikTok service ID. You can find this in your TikTok Shop Partner Center"
+" → Apps/Service at the top of the page called ID. Enter this before "
+"authorizing the connection."
+msgstr ""
+"ໄອດີບໍລິການ TikTok ຂອງທ່ານ. ທ່ານສາມາດຊອກຫາສິ່ງນີ້ໄດ້ໃນ TikTok Shop Partner Center → ແອັ"
+"ບ/ບໍລິການ ຢູ່ສ່ວນເທິງຂອງໜ້າທີ່ຂຽນວ່າ ID. ກະລຸນາປ້ອນຂໍ້ມູນນີ້ກ່ອນທີ່ຈະອະນຸຍາດການເຊື່ອມຕໍ່."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "[%(sku)s] %(product_name)s"
+msgstr "[%(sku)s] %(product_name)s"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+msgid "e.g. Indonesian Shop"
+msgstr "ຕົວຢ່າງ: ຮ້ານຄ້າໃນອິນໂດເນເຊຍ"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "shop_id"
+msgstr "shop_id"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+msgid "tiktok_shop_id"
+msgstr "tiktok_shop_id"

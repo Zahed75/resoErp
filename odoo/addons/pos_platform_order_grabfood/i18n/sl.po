@@ -1,0 +1,491 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_platform_order_grabfood
+#
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-06 18:46+0000\n"
+"PO-Revision-Date: 2026-08-06 10:31+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_platform_order_grabfood/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid ""
+"Are you sure you want to generate new credentials? This action and "
+"discarding current set of credential is irreversible, your existing "
+"connection with provider's stores could be lost and re-configuration would "
+"be needed."
+msgstr ""
+"Ali ste prepričani, da želite ustvariti nove poverilnice? Tega dejanja in "
+"zavrženja trenutnega nabora poverilnic ni mogoče razveljaviti; vaša "
+"obstoječa povezava s ponudnikovimi trgovinami bi se lahko izgubila, zato bi "
+"bila potrebna ponovna konfiguracija."
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Client ID"
+msgstr "ID stranke"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Client Secret"
+msgstr "Odjemalčeva tajna šifra"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__code
+#, fuzzy
+msgid "Code"
+msgstr "Oznaka"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_provider.py:0
+#, fuzzy
+msgid "Connection Failed"
+msgstr "Povezava ni uspela"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_provider.py:0
+#, fuzzy
+msgid "Connection Successful"
+msgstr "Povezava uspešna"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Credentials from GrabFood"
+msgstr "Poverilnice iz GrabFooda"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Credentials to GrabFood"
+msgstr "Poverilnice za GrabFood"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "Cutlery Requested: %s"
+msgstr "Zahtevan pribor: %s"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_entity__display_name
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__display_name
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_pos_order__display_name
+#, fuzzy
+msgid "Display Name"
+msgstr "Prikazni naziv"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "External ID is not set for one or more GrabFood stores: %s"
+msgstr "Zunanji ID ni nastavljen za eno ali več trgovin GrabFood: %s"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "Failed to update menu items on GrabFood: %s"
+msgstr "Posodobitev menijskih postavk v GrabFood ni uspela: %s"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Generate Credentials"
+msgstr "Ustvari poverilnice"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Get Menu Endpoint"
+msgstr "Končna točka za pridobivanje menija"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields.selection,name:pos_platform_order_grabfood.selection__platform_order_provider__code__grabfood
+#, fuzzy
+msgid "GrabFood"
+msgstr "GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_access_token
+#, fuzzy
+msgid "GrabFood Access Token"
+msgstr "Dostopni žeton GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_client_id
+#, fuzzy
+msgid "GrabFood Client ID"
+msgstr "ID odjemalca GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__grabfood_client_id
+#, fuzzy
+msgid "GrabFood Client ID for the account."
+msgstr "ID odjemalca GrabFood za račun."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_client_secret
+#, fuzzy
+msgid "GrabFood Client Secret"
+msgstr "Skrivnost odjemalca GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__grabfood_client_secret
+#, fuzzy
+msgid "GrabFood Client Secret for the account."
+msgstr "Skrivnost odjemalca GrabFood za račun."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_get_menu_endpoint
+#, fuzzy
+msgid "GrabFood Get Menu Endpoint"
+msgstr "Končna točka GrabFood za pridobivanje menija"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_integration_status_endpoint
+#, fuzzy
+msgid "GrabFood Integration Status Endpoint"
+msgstr "Končna točka stanja integracije GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_jwt_secret
+#, fuzzy
+msgid "GrabFood JWT Secret"
+msgstr "Skrivnost JWT za GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_menu_sync_endpoint
+#, fuzzy
+msgid "GrabFood Menu Sync Endpoint"
+msgstr "Končna točka GrabFood za sinhronizacijo menija"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_oauth_token_endpoint
+#, fuzzy
+msgid "GrabFood Oauth Token Endpoint"
+msgstr "Končna točka GrabFood OAuth za pridobivanje žetona"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_partner_client_id
+#, fuzzy
+msgid "GrabFood Partner Client ID"
+msgstr "ID odjemalca partnerja GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__grabfood_partner_client_id
+#, fuzzy
+msgid "GrabFood Partner Client ID for the account."
+msgstr "ID partnerskega odjemalca GrabFood za račun."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_partner_client_secret
+#, fuzzy
+msgid "GrabFood Partner Client Secret"
+msgstr "Skrivnost odjemalca partnerja GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__grabfood_partner_client_secret
+#, fuzzy
+msgid "GrabFood Partner Client Secret for the account."
+msgstr "Skrivnost partnerskega odjemalca GrabFood za račun."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_push_menu_endpoint
+#, fuzzy
+msgid "GrabFood Push Menu Endpoint"
+msgstr "Končna točka GrabFood za pošiljanje menija"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_push_order_state_endpoint
+#, fuzzy
+msgid "GrabFood Push Order State Endpoint"
+msgstr "Končna točka za pošiljanje stanja naročila GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_submit_order_endpoint
+#, fuzzy
+msgid "GrabFood Submit Order Endpoint"
+msgstr "Končna točka za oddajo naročila GrabFood"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__grabfood_token_expiry
+#, fuzzy
+msgid "GrabFood Token Expiry"
+msgstr "Potek veljavnosti žetona GrabFood"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/utils/grabfood_request.py:0
+#, fuzzy
+msgid "GrabFood access token retrieval failed."
+msgstr "Pridobivanje žetona za dostop GrabFood ni uspelo."
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/pos_order.py:0
+#, fuzzy
+msgid "GrabFood: Failed to accept order: %s"
+msgstr "GrabFood: Naročila ni bilo mogoče sprejeti: %s"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/pos_order.py:0
+#, fuzzy
+msgid "GrabFood: Failed to mark food as ready: %s"
+msgstr "GrabFood: Hrane ni bilo mogoče označiti kot pripravljene: %s"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/pos_order.py:0
+#, fuzzy
+msgid "GrabFood: Failed to reject order: %s"
+msgstr "GrabFood: Naročila ni bilo mogoče zavrniti: %s"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/pos_order.py:0
+#, fuzzy
+msgid "GrabFood: No order found matching order ID %s."
+msgstr "GrabFood: Ni najdenega naročila, ki bi ustrezalo ID-ju naročila %s."
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "GrabFood: No store found matching merchant ID %s."
+msgstr "GrabFood: Ni najdene trgovine, ki bi ustrezala ID-ju trgovca %s."
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "GrabFood: Received data with missing merchant ID."
+msgstr "GrabFood: Prejeti podatki z manjkajočim ID-jem trgovca."
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/pos_order.py:0
+#, fuzzy
+msgid "GrabFood: Received data with missing order ID."
+msgstr "GrabFood: Prejeti podatki z manjkajočim ID-jem naročila."
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/pos_order.py:0
+#, fuzzy
+msgid "GrabFood: Received unknown order status '%s'. Ignoring."
+msgstr "GrabFood: Prejet neznan status naročila »%s«. Prezrt."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_entity__id
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_platform_order_provider__id
+#: model:ir.model.fields,field_description:pos_platform_order_grabfood.field_pos_order__id
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Integration Status Endpoint"
+msgstr "Končna točka stanja integracije"
+
+#. module: pos_platform_order_grabfood
+#. odoo-javascript
+#: code:addons/pos_platform_order_grabfood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "Items Unavailable"
+msgstr "Izdelki niso na voljo"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Menu Sync Endpoint"
+msgstr "Končna točka za sinhronizacijo menija"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "No selling times found for this entity."
+msgstr "Za to entiteto niso bili najdeni časi prodaje."
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Oauth"
+msgstr "OAuth"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Oauth Token Endpoint"
+msgstr "Končna točka OAuth za pridobivanje žetona"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "Order not found for notification data."
+msgstr "Naročila za podatke obvestila ni mogoče najti."
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Partner Client ID"
+msgstr "ID odjemalca partnerja"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Partner Client Secret"
+msgstr "Skrivnost odjemalca partnerja"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model,name:pos_platform_order_grabfood.model_platform_order_entity
+#, fuzzy
+msgid "Platform Order Entity"
+msgstr "Entiteta naročila platforme"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model,name:pos_platform_order_grabfood.model_platform_order_provider
+#, fuzzy
+msgid "Platform Order Provider"
+msgstr "Ponudnik naročil platforme"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_provider.py:0
+#, fuzzy
+msgid ""
+"Please provide both GrabFood Client ID and Client Secret before testing the "
+"connection."
+msgstr ""
+"Pred preizkusom povezave navedite ID odjemalca GrabFood in skrivni ključ "
+"odjemalca."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model,name:pos_platform_order_grabfood.model_pos_order
+#, fuzzy
+msgid "Point of Sale Orders"
+msgstr "Naročila POS"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "Product template not found for ID: %s"
+msgstr "Predloge izdelka za ID: %s ni mogoče najti"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Push Menu Endpoint"
+msgstr "Končna točka za pošiljanje menija"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Push Order State Endpoint"
+msgstr "Končna točka za pošiljanje stanja naročila"
+
+#. module: pos_platform_order_grabfood
+#. odoo-javascript
+#: code:addons/pos_platform_order_grabfood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "Shop Closed"
+msgstr "Trgovina je zaprta"
+
+#. module: pos_platform_order_grabfood
+#. odoo-javascript
+#: code:addons/pos_platform_order_grabfood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "Shop Closing Soon"
+msgstr "Trgovina se bo kmalu zaprla"
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Submit Order Endpoint"
+msgstr "Končna točka za oddajo naročila"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_provider.py:0
+#, fuzzy
+msgid "Successfully connected to GrabFood API."
+msgstr "Uspešno vzpostavljena povezava z API-jem GrabFood."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__grabfood_access_token
+#, fuzzy
+msgid "Technical field to store the GrabFood access token."
+msgstr "Tehnično polje za shranjevanje žetona za dostop GrabFood."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__grabfood_token_expiry
+#, fuzzy
+msgid "Technical field to store the GrabFood token expiry date."
+msgstr ""
+"Tehnično polje za shranjevanje datuma poteka veljavnosti žetona GrabFood."
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__grabfood_jwt_secret
+#, fuzzy
+msgid "Technical field to store the JWT secret for GrabFood authentication."
+msgstr ""
+"Tehnično polje za shranjevanje skrivnosti JWT za avtentikacijo GrabFood."
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Test Connection"
+msgstr "Preizkusi povezavo"
+
+#. module: pos_platform_order_grabfood
+#: model:ir.model.fields,help:pos_platform_order_grabfood.field_platform_order_provider__code
+#, fuzzy
+msgid "The technical code of this platform order provider."
+msgstr "Tehnična koda tega ponudnika platformskih naročil."
+
+#. module: pos_platform_order_grabfood
+#. odoo-javascript
+#: code:addons/pos_platform_order_grabfood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "Too Busy"
+msgstr "Preveč zasedeno"
+
+#. module: pos_platform_order_grabfood
+#. odoo-python
+#: code:addons/pos_platform_order_grabfood/models/platform_order_provider.py:0
+#, fuzzy
+msgid "Unknown error occurred."
+msgstr "Prišlo je do neznane napake."
+
+#. module: pos_platform_order_grabfood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_grabfood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Webhook Urls"
+msgstr "URL-ji spletnih kavljev"

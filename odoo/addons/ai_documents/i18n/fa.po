@@ -1,0 +1,375 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * ai_documents
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Aliraza Habibitanha <alireza.habibitanha@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-30 18:45+0000\n"
+"PO-Revision-Date: 2026-08-09 11:34+0000\n"
+"Last-Translator: Aliraza Habibitanha <alireza.habibitanha@gmail.com>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-19/"
+"ai_documents/fa/>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: ai_documents
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid "<strong class=\"mt-3\">What actions can the AI take?</strong>"
+msgstr ""
+"<strong class=\"mt-3\">هوش مصنوعی چه اقداماتی می‌تواند انجام دهد؟</strong>"
+
+#. module: ai_documents
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid ""
+"<strong>\n"
+"                            What do you want the AI to do?\n"
+"                        </strong>"
+msgstr ""
+"<strong>\n"
+"                            می‌خواهید هوش مصنوعی چه کاری انجام دهد؟\n"
+"                        </strong>"
+
+#. module: ai_documents
+#: model:ir.actions.server,name:ai_documents.ir_cron_ai_documents_sort_ir_actions_server
+msgid "AI Documents: Sort documents with AI"
+msgstr "اسناد هوش مصنوعی: مرتب‌سازی اسناد با هوش مصنوعی"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__ai_sort_prompt
+#: model:ir.model.fields,field_description:ai_documents.field_documents_document__ai_sort_prompt
+msgid "AI Folder Sort Prompt"
+msgstr "پرامپت مرتب‌سازی پوشه هوش مصنوعی"
+
+#. module: ai_documents
+#: model:ir.actions.act_window,name:ai_documents.ai_documents_sort_action
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid "AI Sort"
+msgstr "مرتب‌سازی هوش مصنوعی"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_documents_document__ai_sortable
+msgid "AI Sortable"
+msgstr "قابل مرتب‌سازی با هوش مصنوعی"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_documents_document__ai_to_sort
+#: model_terms:ir.ui.view,arch_db:ai_documents.documents_document_view_kanban
+msgid "AI To Sort"
+msgstr "برای مرتب‌سازی با هوش مصنوعی"
+
+#. module: ai_documents
+#: model:ir.actions.server,name:ai_documents.ir_actions_server_add_tags
+msgid "AI: Add Tags"
+msgstr "هوش مصنوعی: افزودن برچسب‌ها"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/ir_actions_server.py:0
+msgid "AI: An error occurred: %s"
+msgstr "هوش مصنوعی: خطایی رخ داد: %s"
+
+#. module: ai_documents
+#: model:ir.actions.server,name:ai_documents.ir_actions_server_move_in_folder
+msgid "AI: Move To Folder"
+msgstr "هوش مصنوعی: انتقال به پوشه"
+
+#. module: ai_documents
+#: model:ir.actions.server,name:ai_documents.ir_actions_server_rename_documents
+msgid "AI: Rename Document"
+msgstr ""
+
+#. module: ai_documents
+#: model:ir.actions.server,ai_tool_description:ai_documents.ir_actions_server_add_tags
+msgid "Add the tags on the document"
+msgstr "افزودن برچسب روی سند"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__ai_tool_ids
+msgid "Additional Tools"
+msgstr "ابزارهای تکمیلی"
+
+#. module: ai_documents
+#: model:ir.model,name:ai_documents.model_ai_documents_sort
+msgid "Ai Documents Sort"
+msgstr ""
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__allowed_tools_ids
+msgid "Allowed Tools"
+msgstr "ابزارهای مجاز"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Auto sorting has been scheduled"
+msgstr "مرتب‌سازی خودکار زمان‌بندی شد"
+
+#. module: ai_documents
+#. odoo-javascript
+#: code:addons/ai_documents/static/src/cog_menu/documents_cog_menu_item_ai_auto_sort.xml:0
+msgid "Auto-sort"
+msgstr "مرتب‌سازی خودکار"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Auto-sort documents in %s"
+msgstr "مرتب‌سازی خودکار اسناد در %s"
+
+#. module: ai_documents
+#: model:ir.model,name:ai_documents.model_base_automation
+msgid "Automation Rule"
+msgstr "قانون خودکارسازی"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Cannot move in a non-folder."
+msgstr "انتقال به مقصدی که پوشه نیست، امکان‌پذیر نیست."
+
+#. module: ai_documents
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid "Close"
+msgstr "بستن"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__create_uid
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__create_date
+msgid "Created on"
+msgstr "ایجادشده در"
+
+#. module: ai_documents
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid "Delete"
+msgstr "حذف"
+
+#. module: ai_documents
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid "Discard"
+msgstr "رها کردن"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__display_name
+#: model:ir.model.fields,field_description:ai_documents.field_base_automation__display_name
+#: model:ir.model.fields,field_description:ai_documents.field_documents_document__display_name
+#: model:ir.model.fields,field_description:ai_documents.field_ir_actions_server__display_name
+#: model:ir.model.fields,field_description:ai_documents.field_ir_http__display_name
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#. module: ai_documents
+#: model:ir.model,name:ai_documents.model_documents_document
+msgid "Document"
+msgstr "سند"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Document Content"
+msgstr "محتوای سند"
+
+#. module: ai_documents
+#: model:ir.model.fields,help:ai_documents.field_documents_document__ai_to_sort
+msgid "Flag to mark the files as to be sorted with AI"
+msgstr "پرچم برای علامت‌گذاری فایل‌هایی که باید با هوش مصنوعی مرتب‌سازی شوند"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__folder_id
+msgid "Folder"
+msgstr "پوشه"
+
+#. module: ai_documents
+#: model:ir.model,name:ai_documents.model_ir_http
+msgid "HTTP Routing"
+msgstr ""
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid ""
+"Here is a document called %(document_name)s and whose content is %(content)s "
+"and tags are %(tags)s. The mimetype of the document is %(mimetype)s."
+msgstr ""
+"نام سند %(document_name)s بوده و محتوای آن %(content)s و برچسب‌های آن %(tags)"
+"s است. نوع mimetype سند %(mimetype)s است."
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__id
+#: model:ir.model.fields,field_description:ai_documents.field_base_automation__id
+#: model:ir.model.fields,field_description:ai_documents.field_documents_document__id
+#: model:ir.model.fields,field_description:ai_documents.field_ir_actions_server__id
+#: model:ir.model.fields,field_description:ai_documents.field_ir_http__id
+msgid "ID"
+msgstr "شناسه"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/wizard/ai_documents_sort.py:0
+msgid "If the document is an invoice, send it to %s"
+msgstr "اگر سند فاکتور است، به %s ارسال شود"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__is_ai_sort_prompt_set
+msgid "Is Prompt Set"
+msgstr "پرامپت تنظیم شده است"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__write_uid
+msgid "Last Updated by"
+msgstr "آخرین تغییر توسط"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__write_date
+msgid "Last Updated on"
+msgstr "آخرین بروز رسانی در"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Mimetype"
+msgstr "نوع Mime"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__model
+msgid "Model"
+msgstr "مدل"
+
+#. module: ai_documents
+#: model:ir.actions.server,ai_tool_description:ai_documents.ir_actions_server_move_in_folder
+msgid "Move the documents in the given folder id"
+msgstr "انتقال اسناد به شناسه پوشه مشخص شده"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Moved to \"%(folder)s\"."
+msgstr "به \"%(folder)s\" منتقل شد."
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Name"
+msgstr "نام"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "No document suitable for AI sorting."
+msgstr "سند قابل مرتب‌سازی با هوش مصنوعی وجود ندارد."
+
+#. module: ai_documents
+#: model:ir.model.constraint,message:ai_documents.constraint_documents_document_check_ai_sort_prompt
+msgid "Only folders can be auto-sorted."
+msgstr "فقط پوشه‌ها را می‌توان به صورت خودکار مرتب‌سازی کرد."
+
+#. module: ai_documents
+#: model:ir.model.constraint,message:ai_documents.constraint_base_automation_unique_ai_autosort_folder_id
+msgid "Only one automation rule can be used to sort with AI a given folder"
+msgstr ""
+"فقط یک قانون اتوماسیون می‌تواند برای مرتب‌سازی یک پوشه مشخص با هوش مصنوعی "
+"استفاده شود"
+
+#. module: ai_documents
+#: model:ir.model.fields,help:ai_documents.field_documents_document__ai_sort_prompt
+msgid "Prompt used to automatically sort files moved in this folder"
+msgstr ""
+"پرامپت مورد استفاده برای مرتب‌سازی خودکار فایل‌های منتقل شده به این پوشه"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_ai_documents_sort__relation
+msgid "Relation"
+msgstr "رابطه"
+
+#. module: ai_documents
+#: model:ir.actions.server,ai_tool_description:ai_documents.ir_actions_server_rename_documents
+msgid "Rename Document"
+msgstr ""
+
+#. module: ai_documents
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid "Save"
+msgstr "ذخیره"
+
+#. module: ai_documents
+#: model:ir.model,name:ai_documents.model_ir_actions_server
+msgid "Server Action"
+msgstr "کنش کارپذیر"
+
+#. module: ai_documents
+#. odoo-javascript
+#: code:addons/ai_documents/static/src/views/documents_controller_mixin.js:0
+msgid "Sort With AI"
+msgstr "مرتب‌سازی با هوش مصنوعی"
+
+#. module: ai_documents
+#: model:ir.model.fields,field_description:ai_documents.field_base_automation__ai_autosort_folder_id
+#: model:ir.model.fields,field_description:ai_documents.field_ir_actions_server__ai_autosort_folder_id
+#: model:ir.model.fields,field_description:ai_documents.field_ir_cron__ai_autosort_folder_id
+msgid "Sorted Folder"
+msgstr "پوشه مرتب شده"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Tag(s) %s added"
+msgstr "برچسب(های) %s اضافه شد"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Tags > Name"
+msgstr "برچسب‌ها > نام"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "Tags not found: %s"
+msgstr "این برچسب‌ها یافت نشدند: %s"
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "This document cannot be auto-sorted."
+msgstr "این سند را نمی‌توان به طور خودکار مرتب کرد."
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/documents_document.py:0
+msgid "This folder isn't specified in the prompt and cannot be used as target."
+msgstr "این پوشه در پرامپت مشخص نشده و نمی‌تواند به عنوان هدف استفاده شود."
+
+#. module: ai_documents
+#. odoo-python
+#: code:addons/ai_documents/models/ir_actions_server.py:0
+msgid "You can move the document in one of those folders:"
+msgstr "می‌توانید سند را به یکی از این پوشه‌ها منتقل کنید:"
+
+#. module: ai_documents
+#: model_terms:ir.ui.view,arch_db:ai_documents.ai_documents_sort_view_form
+msgid ""
+"eg:                                     If the documents is an invoice, move "
+"it to Finance,                                     if it's an image, move it "
+"to Photos,                                     otherwise, create an activity "
+"'Document to sort' for Admin"
+msgstr ""
+"مثال: اگر سند فاکتور است، آن را به امور مالی منتقل کن، اگر تصویر است، آن را "
+"به عکس‌ها منتقل کن، در غیر این صورت، یک فعالیت «سند برای مرتب‌سازی» برای مدیر "
+"سیستم ایجاد کن"
+
+#. module: ai_documents
+#. odoo-javascript
+#: code:addons/ai_documents/static/src/ai_sort_documents_prompt.js:0
+msgid "⚠️ Tell the AI where to sort your documents with /record."
+msgstr "⚠️ با /record به هوش مصنوعی بگویید اسناد شما را کجا مرتب کند."

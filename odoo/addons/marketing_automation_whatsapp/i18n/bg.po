@@ -1,0 +1,501 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * marketing_automation_whatsapp
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:45+0000\n"
+"PO-Revision-Date: 2026-07-25 21:28+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"marketing_automation_whatsapp/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid "\" <strong>doesn't get opened</strong>,"
+msgstr "\" <strong>не бъде отворено</strong>,"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid "\" <strong>doesn't get replied</strong>,"
+msgstr "\" <strong>не получи отговор</strong>,"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid "\" <strong>gets bounced</strong>,"
+msgstr "\" <strong>бъде отказано</strong>,"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_campaign__whatsapp_template_count
+msgid "# Whatsapp"
+msgstr "# Whatsapp"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Bounced after"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Отказано след"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Clicked within"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Кликнато в рамките на"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Not Clicked within"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Не е кликнато в рамките на"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Not Opened after"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Не е отворено след"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Not Replied within"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Без отговор в рамките на"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Opened after"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Отворено след"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-exclamation-circle\"/> Replied within"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Отговорено в рамките на"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "<i class=\"fa fa-pie-chart\"/> Details"
+msgstr "<i class=\"fa fa-pie-chart\"/> Подробности"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid ""
+"<i data-trigger-type=\"whatsapp_read\" class=\"fa fa-check-circle "
+"o_ma_text_read o_add_child_activity text-info\" title=\"Opened\" "
+"role=\"img\" aria-label=\"Opened\"/>\n"
+"                <i data-trigger-type=\"whatsapp_not_read\" class=\"fa fa-"
+"check-circle o_ma_text_read o_add_child_activity text-danger\" title=\"Not "
+"Opened\" role=\"img\" aria-label=\"Not Opened\"/>\n"
+"                <i data-trigger-type=\"whatsapp_replied\" class=\"fa fa-"
+"reply o_ma_text_replied o_add_child_activity text-success\" "
+"title=\"replied\" role=\"img\" aria-label=\"replied\"/>\n"
+"                <i data-trigger-type=\"whatsapp_not_replied\" class=\"fa fa-"
+"reply o_ma_text_replied o_add_child_activity text-danger\" title=\"not "
+"replied\" role=\"img\" aria-label=\"not replied\"/>\n"
+"                <i data-trigger-type=\"whatsapp_click\" class=\"fa fa-hand-"
+"pointer-o o_ma_text_processed o_add_child_activity text-success\" "
+"title=\"Clicked\" role=\"img\" aria-label=\"Clicked\"/>\n"
+"                <i data-trigger-type=\"whatsapp_not_click\" class=\"fa fa-"
+"hand-pointer-o o_ma_text_rejected o_add_child_activity text-danger\" "
+"title=\"Not Clicked\" role=\"img\" aria-label=\"Not Clicked\"/>\n"
+"                <i data-trigger-type=\"whatsapp_bounced\" class=\"fa fa-"
+"exclamation-circle o_ma_text_error o_add_child_activity text-danger\" "
+"title=\"Bounced\" role=\"img\" aria-label=\"Error\"/>"
+msgstr ""
+"<i data-trigger-type=\"whatsapp_read\" class=\"fa fa-check-circle "
+"o_ma_text_read o_add_child_activity text-info\" title=\"Отворено\" "
+"role=\"img\" aria-label=\"Отворено\"/>\n"
+"                <i data-trigger-type=\"whatsapp_not_read\" class=\"fa fa-"
+"check-circle o_ma_text_read o_add_child_activity text-danger\" title=\"Не е "
+"отворено\" role=\"img\" aria-label=\"Не е отворено\"/>\n"
+"                <i data-trigger-type=\"whatsapp_replied\" class=\"fa fa-"
+"reply o_ma_text_replied o_add_child_activity text-success\" "
+"title=\"отговорено\" role=\"img\" aria-label=\"отговорено\"/>\n"
+"                <i data-trigger-type=\"whatsapp_not_replied\" class=\"fa fa-"
+"reply o_ma_text_replied o_add_child_activity text-danger\" title=\"без "
+"отговор\" role=\"img\" aria-label=\"без отговор\"/>\n"
+"                <i data-trigger-type=\"whatsapp_click\" class=\"fa fa-hand-"
+"pointer-o o_ma_text_processed o_add_child_activity text-success\" "
+"title=\"Кликнато\" role=\"img\" aria-label=\"Кликнато\"/>\n"
+"                <i data-trigger-type=\"whatsapp_not_click\" class=\"fa fa-"
+"hand-pointer-o o_ma_text_rejected o_add_child_activity text-danger\" "
+"title=\"Не е кликнато\" role=\"img\" aria-label=\"Не е кликнато\"/>\n"
+"                <i data-trigger-type=\"whatsapp_bounced\" class=\"fa fa-"
+"exclamation-circle o_ma_text_error o_add_child_activity text-danger\" "
+"title=\"Отказано\" role=\"img\" aria-label=\"Грешка\"/>"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_participant_view_form
+msgid ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-check-circle\"/> Not opened yet\n"
+"                    </span>"
+msgstr ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-check-circle\"/> Все още не е "
+"отворено\n"
+"                    </span>"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_participant_view_form
+msgid ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-exclamation-circle\"/> Didn't "
+"bounce yet\n"
+"                    </span>"
+msgstr ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-exclamation-circle\"/> Все още няма "
+"отказ\n"
+"                    </span>"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_participant_view_form
+msgid ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-hand-pointer-o\"/> Not clicked yet\n"
+"                    </span>"
+msgstr ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-hand-pointer-o\"/> Все още не е "
+"кликнато\n"
+"                    </span>"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_participant_view_form
+msgid ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-reply\"/> Not replied\n"
+"                    </span>"
+msgstr ""
+"<span class=\"text-primary\">\n"
+"                        <i class=\"fa fa-reply\"/> Без отговор\n"
+"                    </span>"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_activity__activity_type
+msgid "Activity Type"
+msgstr "Вид дейност"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Clicked"
+msgstr "Кликнато"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_message__links_click_datetime
+msgid "Clicked On"
+msgstr "Кликнато на"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_discuss_channel
+msgid "Discussion Channel"
+msgstr "Дискусионен канал"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_discuss_channel__display_name
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_link_tracker_click__display_name
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_activity__display_name
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_campaign__display_name
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_trace__display_name
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_message__display_name
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_template__display_name
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_template_button__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_activity.py:0
+msgid "Exception in Whatsapp Marketing: %s"
+msgstr "Изключение в WhatsApp маркетинг: %s"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_discuss_channel__id
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_link_tracker_click__id
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_activity__id
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_campaign__id
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_trace__id
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_message__id
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_template__id
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_template_button__id
+msgid "ID"
+msgstr "ID"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_link_tracker_click
+msgid "Link Tracker Click"
+msgstr "Кликване върху проследена връзка"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_view_form
+msgid ""
+"Make sure you select url tracking under buttons option, otherwise those "
+"links won't be tracked"
+msgstr ""
+"Уверете се, че сте избрали проследяване на URL под опцията за бутони, в "
+"противен случай тези връзки няма да бъдат проследявани"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_marketing_activity
+msgid "Marketing Activity"
+msgstr "Маркетингова дейност"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.actions.act_window,name:marketing_automation_whatsapp.whatsapp_template_action_marketing_automation
+msgid "Marketing Automation Whatsapp"
+msgstr "Маркетингова автоматизация WhatsApp"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_marketing_campaign
+msgid "Marketing Campaign"
+msgstr "Маркетингова кампания"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_trace__whatsapp_message_id
+msgid "Marketing Template"
+msgstr "Маркетингов шаблон"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_marketing_trace
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_message__marketing_trace_ids
+msgid "Marketing Trace"
+msgstr "Маркетингова следа"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Message Clicked"
+msgstr "Съобщението е кликнато"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Message Opened"
+msgstr "Съобщението е отворено"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Message Replied"
+msgstr "Отговорено на съобщението"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Message Sent"
+msgstr "Съобщението е изпратено"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Opened"
+msgstr "Отворен"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_trace.py:0
+msgid "Parent Whatsapp message got opened"
+msgstr "Родителското WhatsApp съобщение беше отворено"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_trace.py:0
+msgid "Parent Whatsapp message was clicked"
+msgstr "Родителското WhatsApp съобщение беше кликнато"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_trace.py:0
+msgid "Parent Whatsapp was replied to"
+msgstr "На родителското WhatsApp съобщение беше отговорено"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_trace.py:0
+msgid "Parent whatsapp was bounced"
+msgstr "Родителското WhatsApp съобщение беше отказано"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_activity.py:0
+msgid "Participants of %(name)s (%(filter)s)"
+msgstr "Участници в %(name)s (%(filter)s)"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_view_form
+msgid "Pick a Template..."
+msgstr "Изберете шаблон..."
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Replied"
+msgstr "Отговорени"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+msgid "Sent"
+msgstr "Изпратен"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,help:marketing_automation_whatsapp.field_whatsapp_message__links_click_datetime
+msgid "Stores last click datetime in case of multi clicks."
+msgstr ""
+"Съхранява датата и часа на последното кликване в случай на множество "
+"кликвания."
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__whatsapp_template_button__url_type__tracked
+msgid "Tracked"
+msgstr "Проследено"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_activity__trigger_category
+msgid "Trigger Category"
+msgstr "Категория на тригера"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_activity__trigger_type
+msgid "Trigger Type"
+msgstr "Тип тригер"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_whatsapp_template_button__url_type
+msgid "Url Type"
+msgstr "Тип URL"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_category__whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_campaign_view_form
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_participant_view_form
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_whatsapp_message
+msgid "WhatsApp Messages"
+msgstr "WhatsApp съобщения"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_whatsapp_template
+msgid "WhatsApp Template"
+msgstr "WhatsApp шаблон"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model,name:marketing_automation_whatsapp.model_whatsapp_template_button
+msgid "WhatsApp Template Button"
+msgstr "Бутон на WhatsApp шаблон"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_activity.py:0
+#: code:addons/marketing_automation_whatsapp/models/whatsapp_message.py:0
+msgid "WhatsApp canceled"
+msgstr "WhatsApp отменено"
+
+#. module: marketing_automation_whatsapp
+#. odoo-python
+#: code:addons/marketing_automation_whatsapp/models/marketing_activity.py:0
+msgid "WhatsApp failed"
+msgstr "WhatsApp неуспешно"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_activity__whatsapp_error
+msgid "Whatsapp Error"
+msgstr "Грешка в WhatsApp"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_link_tracker_click__whatsapp_message_id
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__activity_type__whatsapp
+msgid "Whatsapp Message"
+msgstr "WhatsApp съобщение"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields,field_description:marketing_automation_whatsapp.field_marketing_activity__whatsapp_template_id
+msgid "Whatsapp Template"
+msgstr "WhatsApp шаблон"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_type__whatsapp_click
+msgid "Whatsapp: click"
+msgstr "Whatsapp: кликване"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_type__whatsapp_bounced
+msgid "Whatsapp: message bounced"
+msgstr "Whatsapp: отказано съобщение"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_type__whatsapp_not_click
+msgid "Whatsapp: not click"
+msgstr "Whatsapp: без кликване"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_type__whatsapp_not_read
+msgid "Whatsapp: not opened"
+msgstr "Whatsapp: не е отворено"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_type__whatsapp_not_replied
+msgid "Whatsapp: not replied"
+msgstr "Whatsapp: без отговор"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_type__whatsapp_read
+msgid "Whatsapp: opened"
+msgstr "Whatsapp: отворено"
+
+#. module: marketing_automation_whatsapp
+#: model:ir.model.fields.selection,name:marketing_automation_whatsapp.selection__marketing_activity__trigger_type__whatsapp_replied
+msgid "Whatsapp: replied"
+msgstr "Whatsapp: отговорено"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid "after the <strong>Whatsapp message</strong> sent by the Activity \""
+msgstr ""
+"след като <strong>WhatsApp съобщението</strong>, изпратено от дейността \""
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid ""
+"after the Participant <strong>clicks</strong><br/>on any link included in "
+"the <strong>Whatsapp message</strong> sent by the Activity \""
+msgstr ""
+"след като участникът <strong>кликне</strong><br/>върху която и да е връзка, "
+"включена в <strong>WhatsApp съобщението</strong>, изпратено от дейността \""
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid ""
+"after the Participant <strong>opens the Whatsapp message</strong> sent by "
+"the Activity \""
+msgstr ""
+"след като участникът <strong>отвори WhatsApp съобщението</strong>, изпратено "
+"от дейността \""
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid ""
+"after the Participant <strong>replies to the Whatsapp message</strong> sent "
+"by the Activity \""
+msgstr ""
+"след като участникът <strong>отговори на WhatsApp съобщението</strong>, "
+"изпратено от дейността \""
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid "doesn't get clicked,"
+msgstr "не бъде кликнато,"
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid "if <strong>Whatsapp message</strong> sent by the Activity \""
+msgstr "ако <strong>WhatsApp съобщението</strong>, изпратено от дейността \""
+
+#. module: marketing_automation_whatsapp
+#: model_terms:ir.ui.view,arch_db:marketing_automation_whatsapp.marketing_activity_summary_template_whatsapp
+msgid ""
+"if no link included in the <strong>Whatsapp message</strong> sent by the "
+"Activity \""
+msgstr ""
+"ако няма връзка, включена в <strong>WhatsApp съобщението</strong>, изпратено "
+"от дейността \""

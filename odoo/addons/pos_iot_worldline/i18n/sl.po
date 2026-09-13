@@ -1,0 +1,72 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_iot_worldline
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:46+0000\n"
+"PO-Revision-Date: 2026-08-06 11:06+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_iot_worldline/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_iot_worldline
+#: model:ir.model.fields,field_description:pos_iot_worldline.field_pos_payment_method__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: pos_iot_worldline
+#: model:ir.model.fields,field_description:pos_iot_worldline.field_pos_payment_method__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_iot_worldline
+#. odoo-javascript
+#: code:addons/pos_iot_worldline/static/src/payment_worldline.js:0
+#, fuzzy
+msgid "Payment terminal error"
+msgstr "Napaka plačilnega terminala"
+
+#. module: pos_iot_worldline
+#. odoo-javascript
+#: code:addons/pos_iot_worldline/static/src/payment_worldline.js:0
+#, fuzzy
+msgid ""
+"Please check the network connection and then check the status of the last "
+"transaction manually."
+msgstr ""
+"Prosimo, preverite omrežno povezavo in nato ročno preverite stanje zadnje "
+"transakcije."
+
+#. module: pos_iot_worldline
+#: model:ir.model,name:pos_iot_worldline.model_pos_payment_method
+#, fuzzy
+msgid "Point of Sale Payment Methods"
+msgstr "Načini plačila prodajne točke"
+
+#. module: pos_iot_worldline
+#. odoo-javascript
+#: code:addons/pos_iot_worldline/static/src/payment_worldline.js:0
+#, fuzzy
+msgid "Terminal Disconnected"
+msgstr "Terminal ni povezan"
+
+#. module: pos_iot_worldline
+#. odoo-javascript
+#: code:addons/pos_iot_worldline/static/src/payment_worldline.js:0
+#, fuzzy
+msgid "Transaction could not be cancelled"
+msgstr "Transakcije ni bilo mogoče preklicati"

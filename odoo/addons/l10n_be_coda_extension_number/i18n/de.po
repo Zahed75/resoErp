@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * l10n_be_coda_extension_number
+#
+# "Larissa Manderfeld (lman)" <lman@odoo.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:05+0000\n"
+"PO-Revision-Date: 2026-07-24 12:09+0000\n"
+"Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
+"Language-Team: German <https://translate.odoo.com/projects/odoo-19-l10n/"
+"l10n_be_coda_extension_number/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,field_description:l10n_be_coda_extension_number.field_account_journal__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,field_description:l10n_be_coda_extension_number.field_account_journal__extension_number
+msgid "Extension Number"
+msgstr "Erweiterungsnummer"
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,field_description:l10n_be_coda_extension_number.field_account_journal__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model,name:l10n_be_coda_extension_number.model_account_journal
+msgid "Journal"
+msgstr "Journal"
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,help:l10n_be_coda_extension_number.field_account_journal__extension_number
+msgid ""
+"Required if you have multiple accounts sharing the same IBAN and same "
+"currency. It specifies the journal used for processing the corresponding "
+"coda file"
+msgstr ""
+"Erforderlich, wenn Sie mehrere Konten haben, die dieselbe IBAN und dieselbe "
+"Währung teilen. Hier wird das Journal angegeben, das für die Verarbeitung "
+"der entsprechenden Coda-Datei verwendet wird."

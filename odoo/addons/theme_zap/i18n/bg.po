@@ -1,0 +1,672 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * theme_zap
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 17:38+0000\n"
+"PO-Revision-Date: 2026-07-25 13:45+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"theme_zap/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_benefits
+msgid "24/7 Technical Support"
+msgstr "24/7 Техническа поддръжка"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_banner
+msgid "<b>Software innovation</b><br/> at its best."
+msgstr "<b>Софтуерни иновации</b><br/> в най-добрия им вид."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_empowerment
+msgid "<br/>Transforming ideas into impactful digital experiences.<br/><br/>"
+msgstr ""
+"<br/>Превръщаме идеите във впечатляващи дигитални изживявания.<br/><br/>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_masonry_block_default_template
+msgid ""
+"<em class=\"lead\">Maintain a position of constant change<br/> and "
+"evolution, while always aiming<br/> for your success.</em>"
+msgstr ""
+"<em class=\"lead\">Поддържайте позиция на постоянна промяна<br/> и развитие, "
+"винаги стремейки се<br/> към вашия успех.</em>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_numbers
+msgid "<font class=\"text-o-color-1\">Happy customers</font>"
+msgstr "<font class=\"text-o-color-1\">Щастливи клиенти</font>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_numbers
+msgid "<font class=\"text-o-color-1\">Languages</font>"
+msgstr "<font class=\"text-o-color-1\">Езици</font>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_numbers
+msgid "<font class=\"text-o-color-1\">Solutions</font>"
+msgstr "<font class=\"text-o-color-1\">Решения</font>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_cta_card
+msgid ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"presentation\" "
+"contenteditable=\"false\"/> Attractive Salary"
+msgstr ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"presentation\" "
+"contenteditable=\"false\"/> Атрактивно заплащане"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_cta_card
+msgid ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"presentation\" "
+"contenteditable=\"false\"/> Continuous Learning"
+msgstr ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"presentation\" "
+"contenteditable=\"false\"/> Продължаващо обучение"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_cta_card
+msgid ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"presentation\" "
+"contenteditable=\"false\"/> Healthy Environement"
+msgstr ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"presentation\" "
+"contenteditable=\"false\"/> Здравословна околна среда"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_discovery
+msgid ""
+"<i class=\"fa fa-circle text-success\" role=\"presentation\"/>  We're hiring "
+"now!"
+msgstr ""
+"<i class=\"fa fa-circle text-success\" role=\"presentation\"/>  Наемаме сега!"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_empowerment
+msgid ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/"
+">  Innovative solutions"
+msgstr ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/"
+">  Иновативни решения"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_benefits
+msgid ""
+"Access the latest advancements and tools that enhance your digital "
+"experience and keep you ahead in the ever-evolving tech landscape."
+msgstr ""
+"Получете достъп до най-новите постижения и инструменти, които подобряват "
+"дигиталното ви изживяване и ви държат напред в непрекъснато развиващия се "
+"технологичен свят."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid "Agile Approach"
+msgstr "Гъвкав подход"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_features
+msgid "All our data centers <br/>are emission-free."
+msgstr "Всички наши дата центрове <br/>са без вредни емисии."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_features
+msgid "All types of files <br/>are allowed."
+msgstr "Разрешени са <br/>всички видове файлове."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_three_columns
+msgid "Benefits"
+msgstr "Предимства"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid "Book an appointment"
+msgstr "Запазете час"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_quadrant
+msgid ""
+"Boost your brand’s online presence with our expert digital marketing "
+"services. From copywriting to media campaigns, we tailor strategies that "
+"drive results.<br/><br/> Elevate your brand with us."
+msgstr ""
+"Подсилете онлайн присъствието на вашата марка с нашите експертни услуги по "
+"дигитален маркетинг. От копирайтинг до медийни кампании, ние изготвяме "
+"стратегии, които носят резултати.<br/><br/> Издигнете марката си с нас."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_striped_center_top
+msgid ""
+"Boost your brand’s presence with our expert digital marketing services, "
+"tailored to drive engagement and results."
+msgstr ""
+"Подсилете присъствието на вашата марка с нашите експертни услуги по "
+"дигитален маркетинг, създадени да стимулират ангажираност и резултати."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_card_offset
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_freegrid
+msgid ""
+"Boost your brand’s visibility and engagement with our expert digital "
+"marketing services. From copywriting to media strategies, we tailor "
+"solutions to meet your unique needs."
+msgstr ""
+"Подсилете видимостта и ангажираността на вашата марка с нашите експертни "
+"услуги по дигитален маркетинг. От копирайтинг до медийни стратегии, ние "
+"изготвяме решения, съобразени с уникалните ви нужди."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_empowerment
+msgid "Building the future<br/>with NovaDev Solutions"
+msgstr "Изграждаме бъдещето<br/>с NovaDev Solutions"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Business Strategy Consulting"
+msgstr "Консултации по бизнес стратегия"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_comparisons
+msgid ""
+"Check out our flexible pricing plans with no hidden fees. Contact us for a "
+"custom quote."
+msgstr ""
+"Разгледайте нашите гъвкави ценови планове без скрити такси. Свържете се с "
+"нас за индивидуална оферта."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_color_blocks_2
+msgid "Cloud <b>Solution</b>"
+msgstr "Облачно <b>решение</b>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Cloud Computing Solutions"
+msgstr "Решения за изчисления в облак"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid "Coding Excellence"
+msgstr "Съвършенство в програмирането"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid ""
+"Comprehensive financial planning, including risk assessment, investment "
+"strategy, and tax optimization for your business."
+msgstr ""
+"Цялостно финансово планиране, включително оценка на риска, инвестиционна "
+"стратегия и данъчна оптимизация за вашия бизнес."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_discovery
+msgid "Contact Us"
+msgstr "Свържете се с нас"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_cta_box
+msgid "Contact us"
+msgstr "Свържете се с нас"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_cta_box
+msgid "Contact us and get started.<br/><br/>"
+msgstr "Свържете се с нас и започнете.<br/><br/>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_cta_box
+msgid "Curious to know more?"
+msgstr "Любопитни ли сте да научите повече?"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_benefits
+msgid "Customized Digital Solutions"
+msgstr "Персонализирани дигитални решения"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid ""
+"Customized HR solutions, including talent acquisition, employee training, "
+"and performance management to boost productivity."
+msgstr ""
+"Персонализирани HR решения, включително набиране на таланти, обучение на "
+"служители и управление на представянето за повишаване на продуктивността."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_images
+msgid "Customized solutions for your business needs"
+msgstr "Персонализирани решения за нуждите на вашия бизнес"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_benefits
+msgid "Cutting-Edge Technology"
+msgstr "Авангардна технология"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_quadrant
+msgid "Digital Marketing"
+msgstr "Дигитален маркетинг"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Digital Marketing Services"
+msgstr "Услуги за дигитален маркетинг"
+
+#. module: theme_zap
+#: model:ir.model.fields,field_description:theme_zap.field_theme_utils__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_images
+msgid "Driving Success Through Innovation"
+msgstr "Стимулиране на успеха чрез иновации"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_features
+msgid "Eco-Friendly"
+msgstr "Екологично"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_card_offset
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_freegrid
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_striped_center_top
+msgid "Elevate Your Brand with Digital Marketing"
+msgstr "Издигнете марката си с дигитален маркетинг"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_unveil
+msgid "Empower your digital journey"
+msgstr "Подсилете дигиталното си пътуване"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_images
+msgid "Empowering Businesses to Reach New Heights"
+msgstr "Помагаме на бизнеса да достигне нови висоти"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid ""
+"Enhance your business operations with our comprehensive suite of "
+"professional services, tailored to meet your corporate needs."
+msgstr ""
+"Подобрете бизнес операциите си с нашия цялостен набор от професионални "
+"услуги, съобразени с корпоративните ви нужди."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_discovery
+msgid "Experience the real<br/>innovation"
+msgstr "Изживейте истинската<br/>иновация"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_discovery
+msgid ""
+"Experience top-tier software solutions designed to streamline operations,<br/"
+"> boost efficiency, and drive innovation for your business."
+msgstr ""
+"Изживейте първокласни софтуерни решения, създадени да оптимизират "
+"операциите,<br/> повишат ефективността и стимулират иновациите за вашия "
+"бизнес."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid ""
+"Expert advice on business planning, market analysis, and competitive "
+"strategy to help your company achieve its goals."
+msgstr ""
+"Експертни съвети за бизнес планиране, пазарен анализ и конкурентна "
+"стратегия, които помагат на компанията ви да постигне целите си."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_images
+msgid "Expert advice to navigate complex challenges"
+msgstr "Експертни съвети за справяне със сложни предизвикателства"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_three_columns
+msgid "Features"
+msgstr "Функции"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Financial Advisory Services"
+msgstr "Услуги за финансово консултиране"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_discovery
+msgid "Get a Quote"
+msgstr "Получете оферта"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_banner
+msgid ""
+"Harness the power of disruptive technologies to increase<br/> your day-to-"
+"day business operations."
+msgstr ""
+"Впрегнете силата на революционните технологии, за да подобрите<br/> "
+"ежедневните си бизнес операции."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Human Resources Management"
+msgstr "Управление на Човешките Ресурси"
+
+#. module: theme_zap
+#: model:ir.model.fields,field_description:theme_zap.field_theme_utils__id
+msgid "ID"
+msgstr "ID"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "IT Support Services"
+msgstr "Услуги за поддръжка на ИТ"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_color_blocks_2
+msgid ""
+"Keep your files in one place. <br/>Manage documents online with an easy to "
+"use interface. <br/>Rely on an highly secure cloud storage."
+msgstr ""
+"Дръжте файловете си на едно място. <br/>Управлявайте документи онлайн с "
+"лесен за използване интерфейс. <br/>Разчитайте на високо сигурно съхранение "
+"в облак."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_carousel_intro
+msgid "Leading the future with innovation"
+msgstr "Водещи в бъдещето с иновации"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_card_offset
+msgid "Let’s grow your brand together."
+msgstr "Нека развием марката ви заедно."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_striped_center_top
+msgid "Marketing crafted for impact"
+msgstr "Маркетинг, създаден за въздействие"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid "Meet Our Specialists"
+msgstr "Запознайте се с нашите специалисти"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_references_grid
+msgid "Our <strong>References</strong>"
+msgstr "Нашите <strong>препоръки</strong>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Our Corporate Services"
+msgstr "Нашите корпоративни услуги"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_references
+msgid "Our References"
+msgstr "Нашите референции"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_banner
+msgid "Our Solutions"
+msgstr "Нашите решения"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_empowerment
+msgid "Our services"
+msgstr "нашите услуги"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid ""
+"Our specialists bring a wealth of knowledge and experience to deliver top-"
+"quality solutions every time."
+msgstr ""
+"Нашите специалисти носят богати знания и опит, за да предоставят "
+"висококачествени решения всеки път."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_benefits
+msgid ""
+"Our team offers round-the-clock support to ensure your digital platforms run "
+"smoothly and any issues are swiftly addressed."
+msgstr ""
+"Нашият екип предлага денонощна поддръжка, за да гарантира, че дигиталните ви "
+"платформи работят безпроблемно и всеки проблем се решава бързо."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_images
+msgid "Partner with us to unlock your potential"
+msgstr "Партнирайте с нас, за да отключите потенциала си"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_images
+msgid "Proven strategies for sustainable growth"
+msgstr "Доказани стратегии за устойчив растеж"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid ""
+"Reliable IT support, network management, and cybersecurity solutions to "
+"safeguard your business operations and data integrity."
+msgstr ""
+"Надеждна ИТ поддръжка, управление на мрежи и решения за киберсигурност, "
+"които защитават бизнес операциите и целостта на данните ви."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid ""
+"Scalable cloud services to enhance your business’s flexibility and data "
+"accessibility, supporting remote work and collaboration."
+msgstr ""
+"Мащабируеми облачни услуги, които подобряват гъвкавостта на бизнеса ви и "
+"достъпността на данните, поддържайки дистанционна работа и сътрудничество."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_features
+msgid "Security"
+msgstr "Сигурност"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid "Security First"
+msgstr "Сигурността на първо място"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_discovery
+msgid "See more  <i class=\"fa fa-long-arrow-right\" role=\"presentation\"/>"
+msgstr ""
+"Вижте повече  <i class=\"fa fa-long-arrow-right\" role=\"presentation\"/>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_empowerment
+msgid "See our projects   <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+msgstr ""
+"Вижте нашите проекти   <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_three_columns
+msgid "Services"
+msgstr "Услуги"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_quadrant
+msgid "Start Campaign"
+msgstr "Започване на кампанията"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_freegrid
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_striped_center_top
+msgid "Start Your Campaign"
+msgstr "Започнете Вашата кампания"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_empowerment
+msgid "Start a project"
+msgstr "Започнете проект"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Starting at $1,500"
+msgstr "Започва от $1,500"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Starting at $1,800"
+msgstr "Започва от $1,800"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Starting at $2,000"
+msgstr "Започва от $2,000"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Starting at $2,500"
+msgstr "Започва от $2,500"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "Starting at $3,000"
+msgstr "Започва от $3,000"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid ""
+"Strategic online marketing, SEO optimization, and social media management to "
+"boost your brand visibility and customer engagement."
+msgstr ""
+"Стратегически онлайн маркетинг, SEO оптимизация и управление на социални "
+"мрежи за повишаване на видимостта на марката ви и ангажираността на "
+"клиентите."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_masonry_block_default_template
+msgid "Super <b>Easy</b>"
+msgstr "Супер <b>лесно</b>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_masonry_block_default_template
+msgid "Super <b>Fast</b>"
+msgstr "Супер <b>бързо</b>"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_features
+msgid "Support"
+msgstr "Поддръжка"
+
+#. module: theme_zap
+#: model:ir.model,name:theme_zap.model_theme_utils
+msgid "Theme Utils"
+msgstr "Theme Utils"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_unveil
+msgid ""
+"Unlock limitless possibilities with our innovative cloud solutions and agile "
+"technology."
+msgstr ""
+"Отключете безграничните възможности с нашите иновативни облачни решения и "
+"гъвкави технологии."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid ""
+"Using agile methods, we deliver flexible, iterative solutions that adapt "
+"quickly to changing business needs and feedback."
+msgstr ""
+"Чрез гъвкави методи предоставяме адаптивни, итеративни решения, които бързо "
+"се приспособяват към променящите се бизнес нужди и обратна връзка."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_striped
+msgid "We deliver powerful solutions"
+msgstr "Предоставяме мощни решения"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid ""
+"We focus on writing clean, efficient code, ensuring scalable and high-"
+"performance software that meets industry standards."
+msgstr ""
+"Фокусираме се върху писане на чист, ефективен код, осигурявайки мащабируем и "
+"високопроизводителен софтуер, който отговаря на индустриалните стандарти."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_showcase
+msgid ""
+"We integrate strong security measures at every stage, protecting your "
+"software and data from vulnerabilities and threats."
+msgstr ""
+"Интегрираме надеждни мерки за сигурност на всеки етап, защитавайки софтуера "
+"и данните ви от уязвимости и заплахи."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_features
+msgid "We keep you safe <br/>in the cloud."
+msgstr "Пазим ви в безопасност <br/>в облака."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_striped
+msgid ""
+"We provide innovative, tailored strategies that drive results and enhance "
+"business performance effectively."
+msgstr ""
+"Предоставяме иновативни, персонализирани стратегии, които носят резултати и "
+"ефективно подобряват бизнес представянето."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_key_benefits
+msgid ""
+"We provide tailored digital strategies and solutions that align with your "
+"specific goals, driving innovation and efficiency in your online presence."
+msgstr ""
+"Предоставяме персонализирани дигитални стратегии и решения, които "
+"съответстват на конкретните ви цели, стимулирайки иновации и ефективност в "
+"онлайн присъствието ви."
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_references
+msgid ""
+"We're excited to have the opportunity to collaborate with these outstanding "
+"companies!"
+msgstr ""
+"Развълнувани сме, че имаме възможността да си сътрудничим с тези "
+"забележителни компании!"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_cta_card
+msgid "We’re seeking exceptional talent to join our team"
+msgstr "Търсим изключителни таланти, които да се присъединят към екипа ни"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "✽  Consulting Services"
+msgstr "✽ Консултантски услуги"
+
+#. module: theme_zap
+#: model_terms:theme.ir.ui.view,arch:theme_zap.s_pricelist_boxed
+msgid "✽  Technology Solutions"
+msgstr "✽ Технологични решения"
+
+#~ msgid "90%"
+#~ msgstr "90%"
+
+#~ msgid "98%"
+#~ msgstr "98%"

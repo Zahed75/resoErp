@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="demo_property_beach" model="reso.property">
+        <field name="name">Reso Beach Resort</field>
+        <field name="code">BBR</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="phone">+880 1712 345 678</field>
+        <field name="email">reservations@reso.example.com</field>
+        <field name="city">Cox's Bazar</field>
+        <field name="country_id" ref="base.bd"/>
+        <field name="checkin_time">14.0</field>
+        <field name="checkout_time">12.0</field>
+    </record>
+
+    <record id="demo_room_type_deluxe" model="reso.room.type">
+        <field name="name">Deluxe King</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="code">DK</field>
+        <field name="max_guests">2</field>
+        <field name="bed_type">king</field>
+    </record>
+
+    <record id="demo_room_type_villa" model="reso.room.type">
+        <field name="name">Family Villa</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="code">FV</field>
+        <field name="max_guests">4</field>
+        <field name="bed_type">queen</field>
+    </record>
+
+    <record id="demo_room_101" model="reso.room">
+        <field name="name">101</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_deluxe"/>
+        <field name="floor">1</field>
+    </record>
+
+    <record id="demo_room_102" model="reso.room">
+        <field name="name">102</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_deluxe"/>
+        <field name="floor">1</field>
+    </record>
+
+    <record id="demo_room_201" model="reso.room">
+        <field name="name">201</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_villa"/>
+        <field name="floor">2</field>
+    </record>
+
+    <record id="demo_room_202" model="reso.room">
+        <field name="name">202</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_villa"/>
+        <field name="floor">2</field>
+    </record>
+
+    <record id="demo_rate_plan_deluxe_bb" model="reso.rate.plan">
+        <field name="name">Deluxe King - Bed &amp; Breakfast</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_deluxe"/>
+        <field name="base_price">8500.0</field>
+        <field name="min_stay">1</field>
+        <field name="meal_plan">breakfast</field>
+        <field name="cancellation_policy">flexible</field>
+    </record>
+
+    <record id="demo_rate_plan_villa_all" model="reso.rate.plan">
+        <field name="name">Family Villa - All Inclusive</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_villa"/>
+        <field name="base_price">18500.0</field>
+        <field name="min_stay">2</field>
+        <field name="meal_plan">all_inclusive</field>
+        <field name="cancellation_policy">moderate</field>
+        <field name="deposit_required">1</field>
+        <field name="deposit_percent">30.0</field>
+    </record>
+
+    <record id="demo_booking_confirmed" model="reso.booking">
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="partner_id" ref="base.res_partner_2"/>
+        <field name="room_type_id" ref="demo_room_type_deluxe"/>
+        <field name="room_id" ref="demo_room_101"/>
+        <field name="checkin_date" eval="DateTime.today().date() + timedelta(days=7)"/>
+        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=10)"/>
+        <field name="adults">2</field>
+        <field name="source">direct</field>
+        <field name="state">confirmed</field>
+    </record>
+
+    <record id="demo_booking_hold" model="reso.booking">
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="partner_id" ref="base.res_partner_12"/>
+        <field name="room_type_id" ref="demo_room_type_villa"/>
+        <field name="checkin_date" eval="DateTime.today().date() + timedelta(days=14)"/>
+        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=18)"/>
+        <field name="adults">2</field>
+        <field name="children">2</field>
+        <field name="source">website</field>
+        <field name="state">hold</field>
+    </record>
+</odoo>

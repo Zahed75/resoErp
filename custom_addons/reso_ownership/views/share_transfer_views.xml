@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_reso_share_transfer" model="ir.actions.act_window">
+        <field name="name">Share Transfers</field>
+        <field name="res_model">reso.share.transfer</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first share transfer request.
+            </p>
+        </field>
+    </record>
+
+    <record id="view_reso_share_transfer_list" model="ir.ui.view">
+        <field name="name">reso.share.transfer.list</field>
+        <field name="model">reso.share.transfer</field>
+        <field name="arch" type="xml">
+            <list string="Share Transfers">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="from_partner_id"/>
+                <field name="to_partner_id"/>
+                <field name="fraction_percent"/>
+                <field name="transfer_date"/>
+                <field name="state" decoration-info="state == 'draft'"
+                    decoration-warning="state == 'submitted'"
+                    decoration-success="state == 'completed'"
+                    decoration-danger="state == 'rejected'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reso_share_transfer_form" model="ir.ui.view">
+        <field name="name">reso.share.transfer.form</field>
+        <field name="model">reso.share.transfer</field>
+        <field name="arch" type="xml">
+            <form string="Share Transfer">
+                <header>
+                    <button name="action_submit" string="Submit"
+                        type="object" class="btn-primary"
+                        invisible="state != 'draft'"/>
+                    <button name="action_approve" string="Approve"
+                        type="object" class="btn-primary"
+                        invisible="state != 'submitted'"/>
+                    <button name="action_reject" string="Reject"
+                        type="object"
+                        invisible="state != 'submitted'"/>
+                    <button name="action_complete" string="Complete"
+                        type="object" class="btn-primary"
+                        invisible="state != 'approved'"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,submitted,approved,completed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="registry_id"/>
+                            <field name="property_id"/>
+                            <field name="from_partner_id"/>
+                            <field name="to_partner_id"/>
+                        </group>
+                        <group>
+                            <field name="fraction_percent"/>
+                            <field name="transfer_date"/>
+                            <field name="consideration_amount"/>
+                            <field name="company_id"
+                                groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Audit">
+                            <field name="submitted_by"/>
+                            <field name="approved_by"/>
+                            <field name="approval_date"/>
+                        </group>
+                        <group string="Rejection">
+                            <field name="rejection_reason"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_reso_share_transfer_search" model="ir.ui.view">
+        <field name="name">reso.share.transfer.search</field>
+        <field name="model">reso.share.transfer</field>
+        <field name="arch" type="xml">
+            <search string="Share Transfers">
+                <field name="name"/>
+                <field name="registry_id"/>
+                <field name="from_partner_id"/>
+                <field name="to_partner_id"/>
+                <field name="property_id"/>
+                <filter string="Draft" name="draft"
+                    domain="[('state', '=', 'draft')]"/>
+                <filter string="Submitted" name="submitted"
+                    domain="[('state', '=', 'submitted')]"/>
+                <filter string="Approved" name="approved"
+                    domain="[('state', '=', 'approved')]"/>
+                <filter string="Completed" name="completed"
+                    domain="[('state', '=', 'completed')]"/>
+                <filter string="Rejected" name="rejected"
+                    domain="[('state', '=', 'rejected')]"/>
+                <group>
+                    <filter string="Property" name="group_property"
+                        context="{'group_by': 'property_id'}"/>
+                    <filter string="Status" name="group_state"
+                        context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

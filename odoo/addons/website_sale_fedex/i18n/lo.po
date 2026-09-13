@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_sale_fedex
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:49+0000\n"
+"PO-Revision-Date: 2026-06-15 17:45+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"website_sale_fedex/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,help:website_sale_fedex.field_delivery_carrier__fedex_use_locations
+msgid ""
+"Allows the ecommerce user to choose a pick-up point as delivery address."
+msgstr "ອະນຸຍາດໃຫ້ຜູ້ໃຊ້ງານອີຄອມເມີຊສາມາດເລືອກຈຸດຮັບສິນຄ້າເປັນທີ່ຢູ່ຈັດສົ່ງ."
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,field_description:website_sale_fedex.field_delivery_carrier__display_name
+msgid "Display Name"
+msgstr "ຊື່ສະແດງ"
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,field_description:website_sale_fedex.field_delivery_carrier__fedex_locations_radius_value
+msgid "Fedex Locations Radius"
+msgstr "ລັດສະໝີທີ່ຕັ້ງ Fedex"
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,field_description:website_sale_fedex.field_delivery_carrier__fedex_locations_radius_unit
+msgid "Fedex Locations Radius Unit"
+msgstr "ຫົວໜ່ວຍລັດສະໝີທີ່ຕັ້ງ Fedex"
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,field_description:website_sale_fedex.field_delivery_carrier__fedex_locations_radius_unit_name
+msgid "Fedex Radius Unit Name"
+msgstr "ຊື່ຫົວໜ່ວຍລັດສະໝີ Fedex"
+
+#. module: website_sale_fedex
+#. odoo-python
+#: code:addons/website_sale_fedex/models/fedex_locations_request.py:0
+msgid "Fedex Server Not Found"
+msgstr "ບໍ່ພົບເຊີເວີ Fedex"
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,field_description:website_sale_fedex.field_delivery_carrier__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_sale_fedex
+#: model_terms:ir.ui.view,arch_db:website_sale_fedex.view_delivery_carrier_form_with_provider_fedex
+msgid "Locations Radius"
+msgstr "ລັດສະໝີທີ່ຕັ້ງ"
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,help:website_sale_fedex.field_delivery_carrier__fedex_locations_radius_value
+msgid "Maximum locations distance radius."
+msgstr "ລັດສະໝີໄລຍະຫ່າງທີ່ຕັ້ງສູງສຸດ."
+
+#. module: website_sale_fedex
+#. odoo-python
+#: code:addons/website_sale_fedex/models/fedex_locations_request.py:0
+msgid "No Fedex pick-up points available for that shipping address"
+msgstr "ບໍ່ມີຈຸດຮັບສິນຄ້າຂອງ Fedex ສຳລັບທີ່ຢູ່ຈັດສົ່ງນີ້"
+
+#. module: website_sale_fedex
+#: model:ir.model,name:website_sale_fedex.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "ວິທີການຈັດສົ່ງ"
+
+#. module: website_sale_fedex
+#. odoo-python
+#: code:addons/website_sale_fedex/models/fedex_locations_request.py:0
+msgid ""
+"There was an error retrieving Fedex localisations:\n"
+"%s"
+msgstr ""
+"ເກີດຂໍ້ຜິດພາດໃນການດຶງຂໍ້ມູນທີ່ຕັ້ງ Fedex:\n"
+"%s"
+
+#. module: website_sale_fedex
+#: model:ir.model.fields,field_description:website_sale_fedex.field_delivery_carrier__fedex_use_locations
+msgid "Use Fedex Locations"
+msgstr "ນຳໃຊ້ທີ່ຕັ້ງ Fedex"

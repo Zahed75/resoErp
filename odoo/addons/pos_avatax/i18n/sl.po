@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_avatax
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-17 17:49+0000\n"
+"PO-Revision-Date: 2026-08-06 11:29+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_avatax/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_avatax
+#: model:ir.model.fields,field_description:pos_avatax.field_pos_order__avatax_unique_code
+msgid "Avalara Code"
+msgstr "Koda Avalare"
+
+#. module: pos_avatax
+#: model:ir.model.fields,field_description:pos_avatax.field_account_fiscal_position__display_name
+#: model:ir.model.fields,field_description:pos_avatax.field_pos_order__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: pos_avatax
+#. odoo-javascript
+#: code:addons/pos_avatax/static/src/app/services/pos_store.js:0
+#, fuzzy
+msgid "Error while loading Avatax taxes"
+msgstr "Napaka pri nalaganju davkov Avatax"
+
+#. module: pos_avatax
+#: model:ir.model,name:pos_avatax.model_account_fiscal_position
+#, fuzzy
+msgid "Fiscal Position"
+msgstr "Davčno območje"
+
+#. module: pos_avatax
+#: model:ir.model.fields,field_description:pos_avatax.field_account_fiscal_position__id
+#: model:ir.model.fields,field_description:pos_avatax.field_pos_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_avatax
+#: model:ir.model.fields,field_description:pos_avatax.field_pos_order__is_avatax
+msgid "Is Avatax"
+msgstr "Je Avatax"
+
+#. module: pos_avatax
+#: model:ir.model.fields,field_description:pos_avatax.field_pos_order__is_tax_computed_externally
+msgid "Is Tax Computed Externally"
+msgstr "Ali se davek izračuna eksterno"
+
+#. module: pos_avatax
+#: model:ir.model,name:pos_avatax.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Naročila POS"
+
+#. module: pos_avatax
+#: model:ir.model.fields,help:pos_avatax.field_pos_order__is_tax_computed_externally
+msgid ""
+"Technical field to determine if tax is calculated using an external service "
+"instead of Odoo."
+msgstr ""
+"Tehnično polje za določitev, ali se davek izračuna z uporabo zunanje "
+"storitve namesto Odoo."
+
+#. module: pos_avatax
+#. odoo-javascript
+#: code:addons/pos_avatax/static/src/app/services/pos_store.js:0
+#, fuzzy
+msgid "Unable to load Avatax taxes, please verify Avatax API configuration."
+msgstr ""
+"Davkov Avatax ni mogoče naložiti, preverite konfiguracijo API-ja Avatax."
+
+#. module: pos_avatax
+#. odoo-javascript
+#: code:addons/pos_avatax/static/src/app/services/pos_store.js:0
+#, fuzzy
+msgid "Updating Avatax taxes..."
+msgstr "Posodabljanje davkov Avatax..."
+
+#. module: pos_avatax
+#: model:ir.model.fields,help:pos_avatax.field_pos_order__avatax_unique_code
+msgid "Use this code to cross-reference in the Avalara portal."
+msgstr "Uporabite to kodo za navzkrižno sklicevanje na portalu Avalara."

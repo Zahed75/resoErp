@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="partner_demo_owner_1" model="res.partner">
+        <field name="name">Ayesha Rahman</field>
+        <field name="email">ayesha.owner@example.com</field>
+    </record>
+
+    <record id="partner_demo_owner_2" model="res.partner">
+        <field name="name">Kamal Hossain</field>
+        <field name="email">kamal.owner@example.com</field>
+    </record>
+
+    <record id="property_demo_beach_resort" model="reso.property">
+        <field name="name">Reso Beach Resort</field>
+        <field name="code">BBR</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="city">Cox's Bazar</field>
+        <field name="checkin_time">14.0</field>
+        <field name="checkout_time">12.0</field>
+    </record>
+
+    <record id="room_type_demo_deluxe_sea_view" model="reso.room.type">
+        <field name="name">Deluxe Sea View</field>
+        <field name="property_id" ref="property_demo_beach_resort"/>
+        <field name="max_guests">3</field>
+    </record>
+
+    <record id="room_demo_101" model="reso.room">
+        <field name="name">101</field>
+        <field name="property_id" ref="property_demo_beach_resort"/>
+        <field name="room_type_id" ref="room_type_demo_deluxe_sea_view"/>
+    </record>
+
+    <record id="registry_demo_owner_1" model="reso.owner.registry">
+        <field name="certificate_number">SH/00001</field>
+        <field name="property_id" ref="property_demo_beach_resort"/>
+        <field name="partner_id" ref="partner_demo_owner_1"/>
+        <field name="share_class">fraction</field>
+        <field name="fraction_percent">60</field>
+        <field name="acquisition_price">600000</field>
+    </record>
+
+    <record id="registry_demo_owner_2" model="reso.owner.registry">
+        <field name="certificate_number">SH/00002</field>
+        <field name="property_id" ref="property_demo_beach_resort"/>
+        <field name="partner_id" ref="partner_demo_owner_2"/>
+        <field name="share_class">fraction</field>
+        <field name="fraction_percent">40</field>
+        <field name="acquisition_price">400000</field>
+    </record>
+
+    <record id="distribution_run_demo_q1_2026" model="reso.distribution.run">
+        <field name="name">DIST/00001</field>
+        <field name="property_id" ref="property_demo_beach_resort"/>
+        <field name="period_start">2026-01-01</field>
+        <field name="period_end">2026-03-31</field>
+        <field name="total_amount">100000</field>
+    </record>
+
+    <record id="distribution_line_demo_owner_1" model="reso.distribution.line">
+        <field name="run_id" ref="distribution_run_demo_q1_2026"/>
+        <field name="registry_id" ref="registry_demo_owner_1"/>
+        <field name="amount">60000</field>
+    </record>
+
+    <record id="distribution_line_demo_owner_2" model="reso.distribution.line">
+        <field name="run_id" ref="distribution_run_demo_q1_2026"/>
+        <field name="registry_id" ref="registry_demo_owner_2"/>
+        <field name="amount">40000</field>
+    </record>
+</odoo>

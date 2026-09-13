@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mail_mobile
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:45+0000\n"
+"PO-Revision-Date: 2026-06-14 21:55+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/mail_mobile/"
+"lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: mail_mobile
+#: model:ir.model.fields,help:mail_mobile.field_res_config_settings__disable_redirect_firebase_dynamic_link
+msgid ""
+"Check this if dynamic mobile-app detection links cause problems for your "
+"installation. This will stop the automatic wrapping of links inside outbound"
+" emails. The links will always open in a normal browser, even for users who "
+"have the Android/iOS app installed."
+msgstr ""
+"ໝາຍເອົາບ່ອນນີ້ ຫາກລິ້ງກວດສອບແອັບມືຖືແບບໄດນາມິກ ເຮັດໃຫ້ເກີດບັນຫາໃນການຕິດຕັ້ງຂອງທ່ານ. ສິ່ງນີ້ຈະຢຸດການຫໍ່"
+"ລິ້ງແບບອັດຕະໂນມັດ ພາຍໃນອີເມວຂາອອກ. ລິ້ງຈະເປີດຢູ່ໃນບຣາວເຊີທົ່ວໄປສະເໝີ, ເຖິງແມ່ນວ່າຜູ້ໃຊ້ຈະໄດ້ຕິດຕັ້ງແອັ"
+"ບ Android/iOS ແລ້ວກໍຕາມ."
+
+#. module: mail_mobile
+#: model:ir.model,name:mail_mobile.model_res_config_settings
+msgid "Config Settings"
+msgstr "ການຕັ້ງຄ່າການກຳນົດຄ່າ"
+
+#. module: mail_mobile
+#: model:ir.model,name:mail_mobile.model_res_partner
+msgid "Contact"
+msgstr "ຜູ້ຕິດຕໍ່"
+
+#. module: mail_mobile
+#: model:ir.model,website_form_label:mail_mobile.model_res_partner
+msgid "Create a Customer"
+msgstr "ສ້າງລູກຄ້າ"
+
+#. module: mail_mobile
+#: model:ir.model.fields,field_description:mail_mobile.field_res_config_settings__disable_redirect_firebase_dynamic_link
+msgid "Disable link redirection to mobile app"
+msgstr "ປິດການນຳທາງລິ້ງໄປຫາແອັບມືຖື"
+
+#. module: mail_mobile
+#: model:ir.model,name:mail_mobile.model_discuss_channel
+msgid "Discussion Channel"
+msgstr "ຊ່ອງທາງການສົນທະນາ"
+
+#. module: mail_mobile
+#: model:ir.model.fields,field_description:mail_mobile.field_discuss_channel__display_name
+#: model:ir.model.fields,field_description:mail_mobile.field_ir_http__display_name
+#: model:ir.model.fields,field_description:mail_mobile.field_mail_thread__display_name
+#: model:ir.model.fields,field_description:mail_mobile.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:mail_mobile.field_res_partner__display_name
+msgid "Display Name"
+msgstr "ຊື່ສະແດງ"
+
+#. module: mail_mobile
+#: model:ir.model,name:mail_mobile.model_mail_thread
+msgid "Email Thread"
+msgstr "ກະທູ້ອີເມວ"
+
+#. module: mail_mobile
+#: model:ir.model,name:mail_mobile.model_ir_http
+msgid "HTTP Routing"
+msgstr "ການກຳນົດເສັ້ນທາງ HTTP"
+
+#. module: mail_mobile
+#: model:ir.model.fields,field_description:mail_mobile.field_discuss_channel__id
+#: model:ir.model.fields,field_description:mail_mobile.field_ir_http__id
+#: model:ir.model.fields,field_description:mail_mobile.field_mail_thread__id
+#: model:ir.model.fields,field_description:mail_mobile.field_res_config_settings__id
+#: model:ir.model.fields,field_description:mail_mobile.field_res_partner__id
+msgid "ID"
+msgstr "ໄອດີ"
+
+#. module: mail_mobile
+#: model_terms:ir.ui.view,arch_db:mail_mobile.res_config_settings_view_form
+msgid ""
+"If disabled, you won't be able to open external URL's in the Android/iOS "
+"mobile app (e.g. \"View Task\" button in email)."
+msgstr ""
+"ຫາກປິດໄວ້, ທ່ານຈະບໍ່ສາມາດເປີດ URL ພາຍນອກໃນແອັບມືຖື Android/iOS ໄດ້ (ຕົວຢ່າງ: ປຸ່ມ \"ເບິ່ງວຽ"
+"ກ\" ໃນອີເມວ)."
+
+#. module: mail_mobile
+#: model_terms:ir.ui.view,arch_db:mail_mobile.res_config_settings_view_form
+msgid "Mobile"
+msgstr "ມືຖື"
+
+#. module: mail_mobile
+#: model:ir.model.fields,field_description:mail_mobile.field_res_partner__ocn_token
+#: model:ir.model.fields,field_description:mail_mobile.field_res_users__ocn_token
+msgid "OCN Token"
+msgstr "ໂທເຄັນ OCN"
+
+#. module: mail_mobile
+#: model:ir.model.fields,field_description:mail_mobile.field_res_config_settings__enable_ocn
+msgid "Push Notifications"
+msgstr "ການແຈ້ງເຕືອນແບບ Push"
+
+#. module: mail_mobile
+#: model_terms:ir.ui.view,arch_db:mail_mobile.res_config_settings_view_form
+msgid "Receive notifications on Android and iOS application"
+msgstr "ຮັບການແຈ້ງເຕືອນໃນແອັບພລິເຄຊັນ Android ແລະ iOS"
+
+#. module: mail_mobile
+#: model:ir.model.fields,help:mail_mobile.field_res_partner__ocn_token
+#: model:ir.model.fields,help:mail_mobile.field_res_users__ocn_token
+msgid "Used for sending notification to registered devices"
+msgstr "ໃຊ້ສຳລັບສົ່ງການແຈ້ງເຕືອນໄປຫາອຸປະກອນທີ່ໄດ້ລົງທະບຽນໄວ້"

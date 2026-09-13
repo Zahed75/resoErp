@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="view_account_journal_form_inherited" model="ir.ui.view">
+        <field name="name">account.journal.form.inherited</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="l10n_be_coda.view_account_journal_form_inherited" />
+        <field name="arch" type="xml">
+            <field name="coda_split_transactions" position="before">
+                <field name="extension_number" invisible="bank_statements_source not in ['l10n_be_codabox', 'l10n_be_codaclean']"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_management_renting
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:47+0000\n"
+"PO-Revision-Date: 2026-08-06 10:32+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"sale_management_renting/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: sale_management_renting
+#: model_terms:ir.actions.act_window,help:sale_management_renting.sale_order_template_action
+#, fuzzy
+msgid "Create your quotation template"
+msgstr "Ustvarite predlogo ponudbe"
+
+#. module: sale_management_renting
+#: model:ir.model.fields,field_description:sale_management_renting.field_sale_order_template_line__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: sale_management_renting
+#: model:ir.model.fields,field_description:sale_management_renting.field_sale_order_template_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_management_renting
+#: model:sale.order.template.line,name:sale_management_renting.rental_order_template_line_section_1
+#, fuzzy
+msgid "Optional Products Section"
+msgstr "Razdelek opcijskih izdelkov"
+
+#. module: sale_management_renting
+#: model:ir.model,name:sale_management_renting.model_sale_order_template_line
+#, fuzzy
+msgid "Quotation Template Line"
+msgstr "Vrstica predloge za ponudbo"
+
+#. module: sale_management_renting
+#: model:ir.ui.menu,name:sale_management_renting.menu_quotation_template
+msgid "Quotation Templates"
+msgstr "Predloge ponudb"
+
+#. module: sale_management_renting
+#: model:ir.actions.act_window,name:sale_management_renting.sale_order_template_action
+#, fuzzy
+msgid "Rental Quotation Templates"
+msgstr "Predloge ponudb za najem"
+
+#. module: sale_management_renting
+#: model_terms:ir.actions.act_window,help:sale_management_renting.sale_order_template_action
+#, fuzzy
+msgid ""
+"Use templates to create polished, professional quotes in minutes.\n"
+"                Send these quotes by email and let your customers sign "
+"online.\n"
+"                Use cross-selling and discounts to push and boost your sales."
+msgstr ""
+"                Uporabite predloge za ustvarjanje dovršenih, profesionalnih "
+"ponudb v nekaj minutah.\n"
+"                Pošljite te ponudbe po e-pošti in svojim strankam omogočite, "
+"da jih podpišejo prek spleta.\n"
+"                Uporabite navzkrižno prodajo in popuste za spodbujanje in "
+"povečanje prodaje."

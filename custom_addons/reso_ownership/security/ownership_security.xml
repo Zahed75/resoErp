@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_reso_ownership" model="ir.module.category">
+        <field name="name">Reso Ownership</field>
+        <field name="description">Fractional Ownership &amp; Investor Management</field>
+        <field name="sequence">51</field>
+    </record>
+
+    <record id="res_groups_privilege_ownership" model="res.groups.privilege">
+        <field name="name">Ownership</field>
+        <field name="category_id" ref="module_category_reso_ownership"/>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="group_ownership_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="privilege_id" ref="res_groups_privilege_ownership"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_ownership_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="privilege_id" ref="res_groups_privilege_ownership"/>
+        <field name="implied_ids" eval="[(4, ref('group_ownership_user'))]"/>
+    </record>
+
+    <record id="base.group_user" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_ownership_user'))]"/>
+    </record>
+
+    <record id="base.group_system" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_ownership_manager'))]"/>
+    </record>
+
+    <!-- Multi-company record rules -->
+    <record id="reso_owner_registry_company_rule" model="ir.rule">
+        <field name="name">Reso Owner Registry: multi-company</field>
+        <field name="model_id" ref="model_reso_owner_registry"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="reso_share_transfer_company_rule" model="ir.rule">
+        <field name="name">Reso Share Transfer: multi-company</field>
+        <field name="model_id" ref="model_reso_share_transfer"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="reso_distribution_run_company_rule" model="ir.rule">
+        <field name="name">Reso Distribution Run: multi-company</field>
+        <field name="model_id" ref="model_reso_distribution_run"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="reso_distribution_line_company_rule" model="ir.rule">
+        <field name="name">Reso Distribution Line: multi-company</field>
+        <field name="model_id" ref="model_reso_distribution_line"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

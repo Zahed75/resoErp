@@ -1,0 +1,35 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * accountant_hr_expense
+#
+# Guillem Palomino Muñoz <guillem.palomino@midgard.cat>, 2026.
+# "Noemi Pla Garcia (nopl)" <nopl@odoo.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-07-24 08:12+0000\n"
+"Last-Translator: Guillem Palomino Muñoz <guillem.palomino@midgard.cat>\n"
+"Language-Team: Catalan <https://translate.odoo.com/projects/odoo-19/"
+"accountant_hr_expense/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: accountant_hr_expense
+#: model:account.return.check.template,description:accountant_hr_expense.account_return_check_template_travel_and_entertainment_expenses
+msgid ""
+"Review travel and entertainment expenses. Ensure all entries are supported "
+"by valid documentation."
+msgstr ""
+"Revisa les despeses de viatge i representació. Assegura't que tots els "
+"registres estan justificats amb documentació vàlida."
+
+#. module: accountant_hr_expense
+#: model:account.return.check.template,name:accountant_hr_expense.account_return_check_template_travel_and_entertainment_expenses
+msgid "Travel and Entertainment Expenses"
+msgstr "Despeses de viatge i representació"

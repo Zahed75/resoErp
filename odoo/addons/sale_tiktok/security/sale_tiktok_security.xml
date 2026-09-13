@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record model="ir.rule" id="tiktok_shop_comp_rule">
+        <field name="name">TikTok Shop multi-company</field>
+        <field name="model_id" ref="model_tiktok_shop"/>
+        <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+
+    <record model="ir.rule" id="tiktok_item_comp_rule">
+        <field name="name">TikTok Item multi-company</field>
+        <field name="model_id" ref="model_tiktok_item"/>
+        <field name="domain_force">[('shop_id.company_id', 'in', company_ids + [False])]</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,1748 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * quality_control
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-10 18:45+0000\n"
+"PO-Revision-Date: 2026-08-06 10:28+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"quality_control/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#, fuzzy
+msgid "% of the time"
+msgstr "% časa"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/quality.py:0
+#, fuzzy
+msgid "%(product_name)s is not in Picking %(picking_name)s"
+msgstr "%(product_name)s ni v prevzemu %(picking_name)s"
+
+#. module: quality_control
+#: model:ir.actions.report,print_report_name:quality_control.quality_check_report
+#: model:ir.actions.report,print_report_name:quality_control.quality_check_report_internal
+#, fuzzy
+msgid "'Worksheet_%s' % object.name"
+msgstr "'Delovni_list_%s' % object.name"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "15.3 cm"
+msgstr "15,3 cm"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_dashboard_view_kanban
+msgid ""
+"<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"Domain alias\" "
+"title=\"Domain alias\"/>&amp;nbsp;"
+msgstr ""
+"<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"Domain alias\" "
+"title=\"Domain alias\"/>&amp;nbsp;"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+msgid ""
+"<span class=\"fa fa-2x\" data-icon=\"∑\" style=\"padding-left: 10px;\" "
+"role=\"img\" aria-label=\"Statistics\" title=\"Statistics\"/>"
+msgstr ""
+"<span class=\"fa fa-2x\" data-icon=\"∑\" style=\"padding-left: 10px;\" "
+"role=\"img\" aria-label=\"Statistics\" title=\"Statistics\"/>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_picking_view_form_inherit_quality
+#, fuzzy
+msgid "<span class=\"o_stat_text text-danger\">Quality Checks</span>"
+msgstr "<span class=\"o_stat_text text-danger\">Kontrole kakovosti</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_picking_view_form_inherit_quality
+#, fuzzy
+msgid "<span class=\"o_stat_text text-success\">Quality Checks</span>"
+msgstr "<span class=\"o_stat_text text-success\">Kontrole kakovosti</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#, fuzzy
+msgid ""
+"<span class=\"o_stat_text\">AVG:</span>\n"
+"                        <span class=\"o_stat_text\">STD:</span>"
+msgstr ""
+"<span class=\"o_stat_text\">POVP:</span>\n"
+"                        <span class=\"o_stat_text\">STD:</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.product_product_form_view_quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.product_template_form_view_quality_control
+#, fuzzy
+msgid ""
+"<span class=\"o_stat_text\">Pass:</span>\n"
+"                        <span class=\"o_stat_text\">Fail:</span>"
+msgstr ""
+"<span class=\"o_stat_text\">Uspešno:</span>\n"
+"                        <span class=\"o_stat_text\">Neuspešno:</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_picking_view_form_inherit_quality
+#, fuzzy
+msgid "<span class=\"o_stat_text\">Quality Alert</span>"
+msgstr "<span class=\"o_stat_text\">Opozorilo glede kakovosti</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_production_lot_view_form
+#, fuzzy
+msgid "<span class=\"o_stat_text\">Quality Alerts:</span>"
+msgstr "<span class=\"o_stat_text\">Opozorila glede kakovosti:</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+#, fuzzy
+msgid "<span class=\"o_stat_text\">Quality Check</span>"
+msgstr "<span class=\"o_stat_text\">Kontrola kakovosti</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_picking_view_form_inherit_quality
+#, fuzzy
+msgid "<span class=\"o_stat_text\">Quality Checks</span>"
+msgstr "<span class=\"o_stat_text\">Kontrole kakovosti</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#, fuzzy
+msgid "<span>% of products</span>"
+msgstr "<span>% izdelkov</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#, fuzzy
+msgid "<span>Test </span>"
+msgstr "<span>Test </span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+msgid "<span>from </span>"
+msgstr "<span>od </span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#, fuzzy
+msgid "<span>to </span>"
+msgstr "<span> za</span>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Lot/Serial Number: </strong>"
+msgstr "<strong>Lot/serijska številka: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Measure: </strong>"
+msgstr "<strong>Meritev: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Notes: </strong>"
+msgstr "<strong>Opombe: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Product: </strong>"
+msgstr "<strong>Izdelek: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Test Type: </strong>"
+msgstr "<strong>Vrsta preizkusa: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Tested by: </strong>"
+msgstr "<strong>Preizkusil: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Tested on: </strong>"
+msgstr "<strong>Preizkušeno dne: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Transfer: </strong>"
+msgstr "<strong>Premestitev: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "<strong>Warning: </strong>"
+msgstr "<strong>Opozorilo: </strong>"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_view_form
+msgid "Accept Emails From"
+msgstr "Sprejemaj e-pošto od"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_tag_action
+msgid "Add a new tag"
+msgstr "Dodaj novo oznako"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__additional_note
+msgid "Additional Note"
+msgstr "Dodatne opombe"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__additional_note
+#, fuzzy
+msgid "Additional remarks concerning this check."
+msgstr "Dodatne opombe v zvezi s tem preverjanjem."
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_picking__quality_alert_ids
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+msgid "Alerts"
+msgstr "Opozorila"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_frequency_type__all
+msgid "All"
+msgstr "Vse"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__stock_move_line__check_state__pass
+#, fuzzy
+msgid "All checks passed"
+msgstr "Vsa preverjanja so uspešno opravljena"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "All parameters passed."
+msgstr "Vsi posredovani parametri."
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__allowed_product_ids
+#, fuzzy
+msgid "Allowed Product"
+msgstr "Dovoljeni izdelek"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__average
+msgid "Average"
+msgstr "Povprečna"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+msgid "Back"
+msgstr "Nazaj"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__check_ids
+msgid "Check"
+msgstr "Ček"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_move_line__check_state
+#, fuzzy
+msgid "Check State"
+msgstr "Stanje preverjanja"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_tree
+#, fuzzy
+msgid "Checked By"
+msgstr "Preveril"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_tree
+#, fuzzy
+msgid "Checked Date"
+msgstr "Datum preverjanja"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_move_line__check_ids
+#: model:ir.model.fields,field_description:quality_control.field_stock_picking__check_ids
+msgid "Checks"
+msgstr "Čeki"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_dashboard_view_kanban
+#, fuzzy
+msgid "Checks In Progress"
+msgstr "Preverjanja v teku"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__company_id
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__company_id
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.menu_quality_configuration
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_dashboard_view_kanban
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+msgid "Confirm"
+msgstr "Potrdi"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+#, fuzzy
+msgid "Confirm Measure"
+msgstr "Potrdi ukrep"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__measure_frequency_type
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+msgid "Control Frequency"
+msgstr "Kontrola pogostosti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+#, fuzzy
+msgid "Control Person"
+msgstr "Kontrolna oseba"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_search
+#, fuzzy
+msgid "Control Point"
+msgstr "Kontrolna točka"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_point_action
+#: model:ir.ui.menu,name:quality_control.menu_quality_control_points
+#, fuzzy
+msgid "Control Points"
+msgstr "Kontrolne točke"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__measure_on
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__measure_on
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__measure_on
+#, fuzzy
+msgid "Control per"
+msgstr "Krmiljenje po"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_point_kanban
+#, fuzzy
+msgid "Control per:"
+msgstr "Krmiljenje po:"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+#, fuzzy
+msgid "Correct Measure"
+msgstr "Popravi meritev"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+#, fuzzy
+msgid "Corrective Actions"
+msgstr "Korektivni ukrepi"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+#, fuzzy
+msgid "Create Alert"
+msgstr "Ustvari opozorilo"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_alert_action_check
+msgid "Create a new quality alert"
+msgstr "Ustvari novo opozorilo o kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_alert_stage_action
+msgid "Create a new quality alert stage"
+msgstr "Ustvari novo stopnjo kakovosti opozorila"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__create_uid
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__create_uid
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__create_date
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__create_date
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__current_check_id
+#, fuzzy
+msgid "Current Check"
+msgstr "Trenutna kontrola"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__current_revision_uuid
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__current_revision_uuid
+msgid "Current Revision Uuid"
+msgstr "Trenutni UUID revizije"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_spreadsheet_template_view_list
+msgid "Data"
+msgstr "Podatki"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_frequency_unit__day
+msgid "Days"
+msgstr "Dni"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__uom_id
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "Privzeta merska enota, ki se uporablja za vse operacije z zalogami."
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_check_action_main
+#: model_terms:ir.actions.act_window,help:quality_control.quality_check_action_team
+#, fuzzy
+msgid ""
+"Define Quality Control Points in order to automatically generate\n"
+"              quality checks at the right logistic operation: transfers, "
+"manufacturing orders."
+msgstr ""
+"Določite kontrolne točke kakovosti, da samodejno ustvarite\n"
+"              kontrole kakovosti pri ustrezni logistični operaciji: prenosi, "
+"proizvodni nalogi."
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__testing_percentage_within_lot
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__testing_percentage_within_lot
+#: model:ir.model.fields,help:quality_control.field_quality_point__testing_percentage_within_lot
+#, fuzzy
+msgid "Defines the percentage within a lot that should be tested"
+msgstr "Določa odstotek znotraj serije, ki ga je treba preizkusiti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+#, fuzzy
+msgid "Describe the corrective actions you did..."
+msgstr "Opišite korektivne ukrepe, ki ste jih izvedli..."
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+#, fuzzy
+msgid "Describe the preventive actions you did..."
+msgstr "Opišite preventivne ukrepe, ki ste jih izvedli..."
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+msgid "Description"
+msgstr "Opis"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+#, fuzzy
+msgid "Description of the issue..."
+msgstr "Opis težave..."
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__is_lot_tested_fractionally
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__is_lot_tested_fractionally
+#: model:ir.model.fields,help:quality_control.field_quality_point__is_lot_tested_fractionally
+#, fuzzy
+msgid "Determines if only a fraction of the lot should be tested"
+msgstr "Določa, ali je treba testirati le del serije"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+msgid "Discard"
+msgstr "Opusti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_product_product__display_name
+#: model:ir.model.fields,field_description:quality_control.field_product_template__display_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_alert__display_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__display_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__display_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__display_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__display_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__display_name
+#: model:ir.model.fields,field_description:quality_control.field_report_quality_control_quality_worksheet__display_name
+#: model:ir.model.fields,field_description:quality_control.field_report_quality_control_quality_worksheet_internal__display_name
+#: model:ir.model.fields,field_description:quality_control.field_stock_lot__display_name
+#: model:ir.model.fields,field_description:quality_control.field_stock_move__display_name
+#: model:ir.model.fields,field_description:quality_control.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:quality_control.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__display_thumbnail
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__display_thumbnail
+msgid "Display Thumbnail"
+msgstr "Prikaži sličico"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_spreadsheet_template_view_list
+msgid "Edit"
+msgstr "Uredi"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_view_form
+msgid "Email Alias"
+msgstr "Email vzdevek"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__product_tracking
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__product_tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "Zagotovite sledljivost skladiščenega izdelka v vašem skladišču."
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_check__measure_success__fail
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+#, fuzzy
+msgid "Fail"
+msgstr "Neuspešno"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+msgid "Failed"
+msgstr "Neuspešno"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+#, fuzzy
+msgid "Failed Quantity"
+msgstr "Količina neuspešnih"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__failure_location_id
+#, fuzzy
+msgid "Failure Location"
+msgstr "Lokacija napake"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__potential_failure_location_ids
+#, fuzzy
+msgid "Failure Locations"
+msgstr "Lokacije napak"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__failure_message
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__failure_message
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__failure_message
+#, fuzzy
+msgid "Failure Message"
+msgstr "Sporočilo o napaki"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+msgid "Frequency"
+msgstr "Pogostost"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__measure_frequency_unit_value
+#, fuzzy
+msgid "Frequency Unit Value"
+msgstr "Vrednost enote pogostosti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+msgid "Future Activities"
+msgstr "Bodoče aktivnosti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__hide_picking_id
+#, fuzzy
+msgid "Hide Picking"
+msgstr "Skrij prevzem"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__hide_production_id
+#, fuzzy
+msgid "Hide Production"
+msgstr "Skrij proizvodnjo"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__hide_repair_id
+#, fuzzy
+msgid "Hide Repair"
+msgstr "Skrij popravilo"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_product_product__id
+#: model:ir.model.fields,field_description:quality_control.field_product_template__id
+#: model:ir.model.fields,field_description:quality_control.field_quality_alert__id
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__id
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__id
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__id
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__id
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__id
+#: model:ir.model.fields,field_description:quality_control.field_report_quality_control_quality_worksheet__id
+#: model:ir.model.fields,field_description:quality_control.field_report_quality_control_quality_worksheet_internal__id
+#: model:ir.model.fields,field_description:quality_control.field_stock_lot__id
+#: model:ir.model.fields,field_description:quality_control.field_stock_move__id
+#: model:ir.model.fields,field_description:quality_control.field_stock_move_line__id
+#: model:ir.model.fields,field_description:quality_control.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__potential_failure_location_ids
+#, fuzzy
+msgid ""
+"If quality check fails, a destination location is chosen from this list for\n"
+"- each failed specific product quantity if control is per quantity\n"
+" /- all quantities of a product if control is per product\n"
+" /- all quantities of products in the operation if control is per operation"
+msgstr ""
+"Če preverjanje kakovosti ni uspešno, se s tega seznama izbere ciljna "
+"lokacija za\n"
+"- vsako neuspešno količino posameznega izdelka, če je nadzor po količini\n"
+" /- vse količine izdelka, če je nadzor po izdelku\n"
+" /- vse količine izdelkov v operaciji, če je nadzor po operaciji\n"
+"Lokacija: "
+"model:ir.model.fields,help:quality_control.field_quality_check_wizard__potential_failure_location_ids."
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+msgid "In Progress"
+msgstr "V teku"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__move_line_id
+#, fuzzy
+msgid ""
+"In case of Quality Check by Quantity, Move Line on which the Quality Check "
+"applies"
+msgstr ""
+"V primeru preverjanja kakovosti glede na količino, vrstica premika, za "
+"katero velja preverjanje kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+msgid "Instructions"
+msgstr "Navodila"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__is_last_check
+#, fuzzy
+msgid "Is Last Check"
+msgstr "Je zadnja kontrola"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+msgid "John Doe"
+msgstr "Janez Novak"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "LT-00045"
+msgstr "LT-00045"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "Laptop XYZ"
+msgstr "Prenosnik XYZ"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__write_uid
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__write_uid
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__write_date
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__write_date
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+msgid "Late Activities"
+msgstr "Aktivnosti z zamudo"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__lot_line_id
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__lot_line_id
+#, fuzzy
+msgid "Lot Line"
+msgstr "Linija serije"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__is_lot_tested_fractionally
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__is_lot_tested_fractionally
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__is_lot_tested_fractionally
+#, fuzzy
+msgid "Lot Tested Fractionally"
+msgstr "Serija je bila delno testirana"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+#, fuzzy
+msgid "Lot/SN"
+msgstr "Partija/SN"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_stock_lot
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__lot_ids
+msgid "Lot/Serial"
+msgstr "Lot/serijska številka"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__lot_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__lot_name
+msgid "Lot/Serial Number Name"
+msgstr "Naziv lota/serijske številke"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.quality_control_menu_traceability
+msgid "Lots/Serial Numbers"
+msgstr "Loti/Serijske številke"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__tolerance_max
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__tolerance_max
+#, fuzzy
+msgid "Max Tolerance"
+msgstr "Maksimalna toleranca"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__measure
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__measure
+#: model:quality.point.test_type,name:quality_control.test_type_measure
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+msgid "Measure"
+msgstr "Mera"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__measure_frequency_unit
+#, fuzzy
+msgid "Measure Frequency Unit"
+msgstr "Enota pogostosti merjenja"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__measure_success
+#, fuzzy
+msgid "Measure Success"
+msgstr "Uspešnost meritve"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#, fuzzy
+msgid "Message If Failure"
+msgstr "Sporočilo ob neuspehu"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__tolerance_min
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__tolerance_min
+#, fuzzy
+msgid "Min Tolerance"
+msgstr "Minimalna toleranca"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+msgid "Miscellaneous"
+msgstr "Razno"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_frequency_unit__month
+msgid "Months"
+msgstr "Meseci"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__name
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__nb_checks
+#, fuzzy
+msgid "Nb Checks"
+msgstr "Št. čekov"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/quality.py:0
+msgid "New"
+msgstr "Novo"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+msgid "Next"
+msgstr "Naprej"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__stock_move_line__check_state__no_checks
+#, fuzzy
+msgid "No checks"
+msgstr "Brez preverjanj"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_check_action_spc
+msgid "No data yet!"
+msgstr "Podatkov še ni!"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_check__measure_success__none
+#, fuzzy
+msgid "No measure"
+msgstr "Brez meritve"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_alert_action_report
+#, fuzzy
+msgid "No quality alert"
+msgstr "Ni opozoril glede kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_check_action_main
+#: model_terms:ir.actions.act_window,help:quality_control.quality_check_action_team
+#, fuzzy
+msgid "No quality check found"
+msgstr "Ni najdenega preverjanja kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_check_action_report
+#, fuzzy
+msgid "No quality checks"
+msgstr "Ni preverjanj kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_point_action
+#, fuzzy
+msgid "No quality control point found"
+msgstr "Nobena kontrolna točka kakovosti ni bila najdena"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__norm
+#, fuzzy
+msgid "Norm"
+msgstr "Norma"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__norm_unit
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__norm_unit
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__norm_unit
+#, fuzzy
+msgid "Norm Unit"
+msgstr "Enota norme"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__note
+msgid "Note"
+msgstr "Opomba"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+msgid "Notes"
+msgstr "Beležke"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+#, fuzzy
+msgid "OK"
+msgstr "V redu"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_frequency_type__on_demand
+#, fuzzy
+msgid "On-demand"
+msgstr "Na zahtevo"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+#, fuzzy
+msgid "Open spreadsheet"
+msgstr "Odpri preglednico"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_check__measure_on__operation
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_on__operation
+msgid "Operation"
+msgstr "Postopek"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__measure_on
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__measure_on
+#: model:ir.model.fields,help:quality_control.field_quality_point__measure_on
+#, fuzzy
+msgid ""
+"Operation = One quality check is requested at the operation level.\n"
+"                  Product = A quality check is requested per product.\n"
+"                 Quantity = A quality check is requested for each new "
+"product quantity registered, with partial quantity checks also possible."
+msgstr ""
+"Operacija = En pregled kakovosti je zahtevan na ravni operacije.\n"
+"                  Izdelek = Pregled kakovosti je zahtevan za vsak izdelek.\n"
+"                 Količina = Pregled kakovosti je zahtevan za vsako novo "
+"registrirano količino izdelka, mogoči pa so tudi pregledi delnih količin.\n"
+"Lokacija: "
+"model:ir.model.fields,help:quality_control.field_quality_check__measure_on, "
+"model:ir.model.fields,help:quality_control.field_quality_check_wizard__measure_on, "
+"model:ir.model.fields,help:quality_control.field_quality_point__measure_on"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.menu_quality_dashboard
+msgid "Overview"
+msgstr "Pregled"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#, fuzzy
+msgid "Partial Test"
+msgstr "Delni preskus"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+msgid "Partner"
+msgstr "Partner"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_check__measure_success__pass
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+#, fuzzy
+msgid "Pass"
+msgstr "Uspešno"
+
+#. module: quality_control
+#: model:quality.point.test_type,name:quality_control.test_type_passfail
+#, fuzzy
+msgid "Pass - Fail"
+msgstr "Uspešno - Neuspešno"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+msgid "Passed"
+msgstr "Opravljeno"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_picking__quality_check_todo
+#, fuzzy
+msgid "Pending checks"
+msgstr "Čakajoča preverjanja"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__measure_frequency_value
+msgid "Percentage"
+msgstr "Odstotek"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_frequency_type__periodical
+#, fuzzy
+msgid "Periodically"
+msgstr "Periodično"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__picture
+msgid "Picture"
+msgstr "Slika"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/quality.py:0
+#, fuzzy
+msgid "Picture Uploaded"
+msgstr "Slika naložena"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__position_current_check
+#, fuzzy
+msgid "Position Current Check"
+msgstr "Položaj trenutne kontrole"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_form
+msgid "Preventive Actions"
+msgstr "Preventivni ukrepi"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+msgid "Previous"
+msgstr "Nazaj"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_product_template
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__product_id
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__product_id
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_check__measure_on__product
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_on__product
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_stock_move_line
+#, fuzzy
+msgid "Product Moves (Stock Move Line)"
+msgstr "Premiki zaloge"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_product_product
+msgid "Product Variant"
+msgstr "Različica proizvoda"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.quality_control_menu_product_variant
+msgid "Product Variants"
+msgstr "Različice proizvoda"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.quality_control_menu_product
+#: model:ir.ui.menu,name:quality_control.quality_product_menu_product_template
+msgid "Products"
+msgstr "Proizvodi"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "QC-00123"
+msgstr "QC-00123"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__qty_failed
+#, fuzzy
+msgid "Qty Failed"
+msgstr "Količina z napako"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.menu_quality_root
+msgid "Quality"
+msgstr "Kakovost"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/quality.py:0
+#: model:ir.actions.server,name:quality_control.stock_picking_action_quality_alert
+#: model:ir.model,name:quality_control.model_quality_alert
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_calendar
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_search_inherit_quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_picking_view_form_inherit_quality
+#, fuzzy
+msgid "Quality Alert"
+msgstr "Kakovostno opozorilo"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_graph
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_view_pivot
+#, fuzzy
+msgid "Quality Alert Analysis"
+msgstr "Analiza opozoril kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_picking__quality_alert_count
+#, fuzzy
+msgid "Quality Alert Count"
+msgstr "Število kakovostnih opozoril"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_lot__quality_alert_qty
+#, fuzzy
+msgid "Quality Alert Qty"
+msgstr "Količina kakovostnih opozoril"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_alert_stage_action
+#: model:ir.ui.menu,name:quality_control.menu_quality_config_alert_stage
+#, fuzzy
+msgid "Quality Alert Stages"
+msgstr "Stopnje kakovostnih opozoril"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_alert_stage_action
+#, fuzzy
+msgid ""
+"Quality Alert stages define the different steps a quality alert should go "
+"through."
+msgstr ""
+"Stopnje opozorila kakovosti določajo različne korake, skozi katere mora iti "
+"opozorilo kakovosti."
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_alert_action_check
+#: model:ir.actions.act_window,name:quality_control.quality_alert_action_team
+#: model:ir.ui.menu,name:quality_control.menu_quality_alert
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_dashboard_view_kanban
+#, fuzzy
+msgid "Quality Alerts"
+msgstr "Kakovostna opozorila"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_alert_action_report
+#: model:ir.ui.menu,name:quality_control.menu_quality_alert_report
+#, fuzzy
+msgid "Quality Alerts Analysis"
+msgstr "Analiza opozoril kakovosti"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/quality.py:0
+#: model:ir.actions.act_window,name:quality_control.action_quality_check_wizard
+#: model:ir.actions.server,name:quality_control.stock_picking_action_quality_check_on_demand
+#: model:ir.model,name:quality_control.model_quality_check
+#: model_terms:ir.ui.view,arch_db:quality_control.view_stock_move_line_detailed_operation_tree_inherit_quality
+msgid "Quality Check"
+msgstr "Preverjanje kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_check_action_report
+#: model:ir.ui.menu,name:quality_control.menu_quality_check_report
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_graph
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_pivot
+#, fuzzy
+msgid "Quality Check Analysis"
+msgstr "Analiza preverjanja kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_picking__quality_check_fail
+#, fuzzy
+msgid "Quality Check Fail"
+msgstr "Neuspešno preverjanje kakovosti"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/wizard/quality_check_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+#, fuzzy
+msgid "Quality Check Failed"
+msgstr "Preverjanje kakovosti ni uspelo"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/wizard/quality_check_wizard.py:0
+#, fuzzy
+msgid "Quality Check Failed for %(product_name)s"
+msgstr "Kontrola kakovosti ni uspela za %(product_name)s"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "Quality Check Picture"
+msgstr "Slika preverjanja kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_stock_lot__quality_check_qty
+#, fuzzy
+msgid "Quality Check Qty"
+msgstr "Količina preverjanja kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "Quality Check:"
+msgstr "Preverjanje kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_check_action_main
+#: model:ir.actions.act_window,name:quality_control.quality_check_action_picking
+#: model:ir.actions.act_window,name:quality_control.quality_check_action_production_lot
+#: model:ir.actions.act_window,name:quality_control.quality_check_action_team
+#: model:ir.ui.menu,name:quality_control.menu_quality_checks
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_picking_view_form_inherit_quality
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_picking_view_search_inherit_quality
+#: model_terms:ir.ui.view,arch_db:quality_control.stock_production_lot_form_quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+#, fuzzy
+msgid "Quality Checks"
+msgstr "Preverjanja kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_check_action_spc
+#, fuzzy
+msgid "Quality Checks SPC"
+msgstr "Preverjanja kakovosti SPC"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.menu_quality_control
+msgid "Quality Control"
+msgstr "Kontrola kakovosti"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_quality_point
+#, fuzzy
+msgid "Quality Control Point"
+msgstr "Točka kontrole kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_product_product__quality_control_point_qty
+#: model:ir.model.fields,field_description:quality_control.field_product_template__quality_control_point_qty
+#, fuzzy
+msgid "Quality Control Point Qty"
+msgstr "Količina točk kontrole kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_product_product__quality_fail_qty
+#: model:ir.model.fields,field_description:quality_control.field_product_template__quality_fail_qty
+#, fuzzy
+msgid "Quality Fail Qty"
+msgstr "Količina neuspešnih preverjanj kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_alert_team_action
+#, fuzzy
+msgid "Quality Overview"
+msgstr "Pregled kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_product_product__quality_pass_qty
+#: model:ir.model.fields,field_description:quality_control.field_product_template__quality_pass_qty
+#, fuzzy
+msgid "Quality Pass Qty"
+msgstr "Količina uspešnih preverjanj kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.product_product_form_view_quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.product_template_form_view_quality_control
+#, fuzzy
+msgid "Quality Points"
+msgstr "Točke kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_spreadsheet_template_action_config
+#: model:ir.ui.menu,name:quality_control.menu_config_quality_spreadsheet_template
+#, fuzzy
+msgid "Quality Spreadsheet Templates"
+msgstr "Predloge preglednic kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_tag_action
+#: model:ir.ui.menu,name:quality_control.menu_config_quality_tags
+#, fuzzy
+msgid "Quality Tags"
+msgstr "Oznake kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.act_window,name:quality_control.quality_alert_team_action_config
+#: model:ir.ui.menu,name:quality_control.menu_quality_config_alert_team
+#, fuzzy
+msgid "Quality Teams"
+msgstr "Ekipe za kakovost"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_alert_team_action
+#, fuzzy
+msgid ""
+"Quality Teams group the different quality alerts/checks\n"
+"              according to the roles (teams) that need them."
+msgstr ""
+"Ekipe kakovosti združujejo različna opozorila/preverjanja kakovosti\n"
+"              glede na vloge (ekipe), ki jih potrebujejo."
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_report_quality_control_quality_worksheet_internal
+#, fuzzy
+msgid "Quality Worksheet Internal Report"
+msgstr "Interno poročilo delovnega lista kakovosti"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_report_quality_control_quality_worksheet
+#, fuzzy
+msgid "Quality Worksheet Report"
+msgstr "Poročilo delovnega lista kakovosti"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_quality_check_spreadsheet
+#, fuzzy
+msgid "Quality check spreadsheet"
+msgstr "Preglednica preverjanja kakovosti"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_quality_spreadsheet_template
+#, fuzzy
+msgid "Quality check template spreadsheet"
+msgstr "Predloga preglednice preverjanja kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.actions.act_window,help:quality_control.quality_point_action
+#, fuzzy
+msgid ""
+"Quality control points define the quality checks which should be\n"
+"              performed at each operation, for your different products."
+msgstr ""
+"Točke nadzora kakovosti določajo preverjanja kakovosti, ki jih je treba\n"
+"              izvesti pri vsaki operaciji za vaše različne izdelke."
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__qty_line
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__qty_line
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_check__measure_on__move_line
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_on__move_line
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__qty_failed
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
+#, fuzzy
+msgid "Quantity Failed"
+msgstr "Količina neuspešnih"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__qty_passed
+#, fuzzy
+msgid "Quantity Passed"
+msgstr "Količina, ki je prestala preverjanje"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__qty_tested
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__qty_tested
+#, fuzzy
+msgid "Quantity Tested"
+msgstr "Preizkušena količina"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__qty_tested
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__qty_tested
+#, fuzzy
+msgid "Quantity of product tested within the lot"
+msgstr "Količina izdelka, testiranega v lotu"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__qty_failed
+#, fuzzy
+msgid "Quantity of product that failed the quality check"
+msgstr "Količina izdelka, ki ni prestal preverjanja kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__qty_passed
+#, fuzzy
+msgid "Quantity of product that passed the quality check"
+msgstr "Količina izdelka, ki je uspešno prestal preverjanje kakovosti"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check__qty_to_test
+#: model:ir.model.fields,help:quality_control.field_quality_check_wizard__qty_to_test
+#, fuzzy
+msgid "Quantity of product to test within the lot"
+msgstr "Količina izdelka za testiranje v lotu"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__qty_to_test
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__qty_to_test
+#, fuzzy
+msgid "Quantity to Test"
+msgstr "Količina za testiranje"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_frequency_type__random
+msgid "Randomly"
+msgstr "Naključno"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__name
+msgid "Reference"
+msgstr "Referenca"
+
+#. module: quality_control
+#: model:ir.ui.menu,name:quality_control.menu_quality_reporting
+msgid "Reporting"
+msgstr "Poročanje"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_search
+msgid "Responsible"
+msgstr "Odgovoren"
+
+#. module: quality_control
+#. odoo-javascript
+#: code:addons/quality_control/static/src/spreadsheet_bundle/quality_check_spreadsheet_action/quality_check_spreadsheet_action.xml:0
+#, fuzzy
+msgid "Save in"
+msgstr "Shrani v"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__show_lot_text
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__show_lot_text
+#, fuzzy
+msgid "Show Lot Text"
+msgstr "Prikaži besedilo lota"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__stock_move_line__check_state__fail
+#, fuzzy
+msgid "Some checks failed"
+msgstr "Nekateri pregledi niso uspeli"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__stock_move_line__check_state__in_progress
+#, fuzzy
+msgid "Some checks to be done"
+msgstr "Treba je opraviti nekaj preverjanj"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__spreadsheet_id
+#: model:quality.point.test_type,name:quality_control.test_type_spreadsheet
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+msgid "Spreadsheet"
+msgstr "Preglednica"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__spreadsheet_data
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__spreadsheet_data
+msgid "Spreadsheet Data"
+msgstr "Podatki preglednice"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__spreadsheet_file_name
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__spreadsheet_file_name
+msgid "Spreadsheet File Name"
+msgstr "Ime datoteke preglednice"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__spreadsheet_revision_ids
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__spreadsheet_revision_ids
+msgid "Spreadsheet Revision"
+msgstr "Pregled preglednice"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__spreadsheet_snapshot
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__spreadsheet_snapshot
+msgid "Spreadsheet Snapshot"
+msgstr "Posnetek preglednice"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__spreadsheet_template_id
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__spreadsheet_template_id
+msgid "Spreadsheet Template"
+msgstr "Predloga preglednice"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__spreadsheet_binary_data
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__spreadsheet_binary_data
+msgid "Spreadsheet file"
+msgstr "Datoteka preglednice"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_stage_view_tree
+msgid "Stage Name"
+msgstr "Naziv stopnje"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__standard_deviation
+#, fuzzy
+msgid "Standard Deviation"
+msgstr "Standardni odklon"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__quality_state
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+msgid "Status"
+msgstr "Status"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_stock_move
+msgid "Stock Move"
+msgstr "Premik zaloge"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__move_line_id
+#, fuzzy
+msgid "Stock Move Line"
+msgstr "Vrstica premika zaloge"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__check_cell
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__spreadsheet_check_cell
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__check_cell
+#, fuzzy
+msgid "Success cell"
+msgstr "Celica uspeha"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_tag_view_search
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_tag_view_tree
+msgid "Tags"
+msgstr "Ključne besede"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_search
+msgid "Team"
+msgstr "Ekipa"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_view_form
+msgid "Team Name"
+msgstr "Naziv ekipe"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_point_kanban
+#, fuzzy
+msgid "Team:"
+msgstr "Ekipa:"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_view_tree
+msgid "Teams"
+msgstr "Ekipe"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__test_type
+#, fuzzy
+msgid "Technical name"
+msgstr "Tehnično ime"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_search
+msgid "Test Type"
+msgstr "Vrsta testa"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_tree
+#, fuzzy
+msgid "Testing % Within Lot"
+msgstr "Testiranje % znotraj serije"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__testing_percentage_within_lot
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__testing_percentage_within_lot
+#: model:ir.model.fields,field_description:quality_control.field_quality_point__testing_percentage_within_lot
+#, fuzzy
+msgid "Testing Percentage Within Lot"
+msgstr "Odstotek testiranja znotraj serije"
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_check_spreadsheet__check_cell
+#: model:ir.model.fields,help:quality_control.field_quality_point__spreadsheet_check_cell
+#: model:ir.model.fields,help:quality_control.field_quality_spreadsheet_template__check_cell
+#, fuzzy
+msgid ""
+"The check is successful if the success cell value is TRUE. If there are "
+"several sheets, specify which one you want to use (e.g. Sheet2!C4). If not "
+"specified, the first sheet is selected by default."
+msgstr ""
+"Preverjanje je uspešno, če je vrednost celice za uspeh TRUE. Če je več "
+"listov, navedite, katerega želite uporabiti (npr. Sheet2!C4). Če ni "
+"navedeno, je privzeto izbran prvi list."
+
+#. module: quality_control
+#: model:ir.model.fields,help:quality_control.field_quality_point__measure_frequency_value
+#, fuzzy
+msgid "The probability of each quality check being generated"
+msgstr "Verjetnost, da bo posamezno preverjanje kakovosti ustvarjeno"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__thumbnail
+#: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__thumbnail
+msgid "Thumbnail"
+msgstr "Ikona"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_alert__title
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__title
+msgid "Title"
+msgstr "Naslov"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
+msgid "Today Activities"
+msgstr "Današnje aktivnosti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+msgid "Tolerance"
+msgstr "Toleranca"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__product_tracking
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__product_tracking
+msgid "Tracking"
+msgstr "Sledenje"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_stock_picking
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_tree
+msgid "Transfer"
+msgstr "Prenos"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "Transfer-987"
+msgstr "Prenos-987"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
+msgid "Type"
+msgstr "Tip"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_point_kanban
+msgid "Type:"
+msgstr "Vrsta:"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__uom_id
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__uom_id
+msgid "Unit"
+msgstr "Enota"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+msgid "Unit of Measure"
+msgstr "Enota mere"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/quality_spreadsheet_template.py:0
+#, fuzzy
+msgid "Untitled spreadsheet"
+msgstr "Preglednica brez naslova"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+msgid "Validate"
+msgstr "Potrditev"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "Value near threshold."
+msgstr "Vrednost blizu praga."
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_spreadsheet_template_view_list
+msgid "Visible to all"
+msgstr "Vidno vsem"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.worksheet_page
+#, fuzzy
+msgid "Visual Check"
+msgstr "Vizualni pregled"
+
+#. module: quality_control
+#: model:ir.model.fields,field_description:quality_control.field_quality_check__warning_message
+#: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__warning_message
+msgid "Warning Message"
+msgstr "Opozorilno sporočilo"
+
+#. module: quality_control
+#: model:ir.model.fields.selection,name:quality_control.selection__quality_point__measure_frequency_unit__week
+msgid "Weeks"
+msgstr "Tedni"
+
+#. module: quality_control
+#: model:ir.model,name:quality_control.model_quality_check_wizard
+#, fuzzy
+msgid "Wizard for Quality Check Pop Up"
+msgstr "Čarovnik za pojavno okno preverjanja kakovosti"
+
+#. module: quality_control
+#: model:ir.actions.report,name:quality_control.quality_check_report
+#, fuzzy
+msgid "Worksheet Report - External (PDF)"
+msgstr "Poročilo delovnega lista - zunanje (PDF)"
+
+#. module: quality_control
+#: model:ir.actions.report,name:quality_control.quality_check_report_internal
+#, fuzzy
+msgid "Worksheet Report - Internal (PDF)"
+msgstr "Poročilo delovnega lista - notranje (PDF)"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.view_quality_check_wizard
+#, fuzzy
+msgid "Write quality check notes..."
+msgstr "Napišite opombe o preverjanju kakovosti..."
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/quality.py:0
+#, fuzzy
+msgid ""
+"You measured %(measure).2f %(unit)s and it should be between %"
+"(tolerance_min).2f and %(tolerance_max).2f %(unit)s."
+msgstr ""
+"Izmerili ste %(measure).2f %(unit)s, vrednost pa bi morala biti med %"
+"(tolerance_min).2f in %(tolerance_max).2f %(unit)s."
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/wizard/quality_check_wizard.py:0
+#, fuzzy
+msgid "You must provide a picture before validating"
+msgstr "Pred potrditvijo morate predložiti sliko"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/stock_picking.py:0
+#, fuzzy
+msgid ""
+"You need to supply a Lot/Serial Number for product:\n"
+"%(products)s"
+msgstr ""
+"Za izdelek morate navesti številko serije/serijsko številko:\n"
+"%(products)s"
+
+#. module: quality_control
+#. odoo-python
+#: code:addons/quality_control/models/stock_picking.py:0
+#, fuzzy
+msgid "You still need to do the quality checks!"
+msgstr "Še vedno morate opraviti preverjanja kakovosti!"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_view_form
+msgid "alias"
+msgstr "vzdevek"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_view_form
+#, fuzzy
+msgid "e.g. The QA Masters"
+msgstr "Mojstri zagotavljanja kakovosti"
+
+#. module: quality_control
+#: model_terms:ir.ui.view,arch_db:quality_control.quality_alert_team_view_form
+msgid "e.g. mycompany.com"
+msgstr "npr. mycompany.si"
+
+#~ msgid "2023-08-15"
+#~ msgstr "2023-08-15"

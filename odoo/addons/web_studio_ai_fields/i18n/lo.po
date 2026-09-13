@@ -1,0 +1,255 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_studio_ai_fields
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:48+0000\n"
+"PO-Revision-Date: 2026-06-15 15:09+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"web_studio_ai_fields/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.xml:0
+msgid "AI"
+msgstr "AI"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/interactive_editor.js:0
+msgid "AI Field"
+msgstr "ຟິວ AI"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Add Field"
+msgstr "ເພີ່ມຟິວ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Add Values"
+msgstr "ເພີ່ມຄ່າ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Add an AI Field"
+msgstr "ເພີ່ມຟິວ AI"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Checkbox"
+msgstr "ກ່ອງເຄື່ອງໝາຍ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Date"
+msgstr "ວັນທີ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Datetime"
+msgstr "ວັນທີ ແລະ ເວລາ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Decimal"
+msgstr "ເລກທົດສະນິຍົມ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Discard"
+msgstr "ຍົກເລີກ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Edit Values"
+msgstr "ແກ້ໄຂຄ່າ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Field Type"
+msgstr "ປະເພດຟິວ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "HTML"
+msgstr "HTML"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Integer"
+msgstr "ເລກຖ້ວນ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Many2one"
+msgstr "Many2one"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Monetary"
+msgstr "ສະກຸນເງິນ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Multiline Text"
+msgstr "ຂໍ້ຄວາມຫຼາຍແຖວ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI CheckBox"
+msgstr "ກ່ອງເຄື່ອງໝາຍ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Date"
+msgstr "ວັນທີ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Datetime"
+msgstr "ວັນທີ ແລະ ເວລາ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Decimal"
+msgstr "ເລກທົດສະນິຍົມ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI HTML"
+msgstr "HTML AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Integer"
+msgstr "ເລກຖ້ວນ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Many2One"
+msgstr "Many2One AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Monetary"
+msgstr "ສະກຸນເງິນ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Multiline Text"
+msgstr "ຂໍ້ຄວາມຫຼາຍແຖວ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Selection"
+msgstr "ຕົວເລືອກ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Tags"
+msgstr "ແທັກ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Text"
+msgstr "ຂໍ້ຄວາມ AI ໃໝ່"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.xml:0
+msgid "Prompt"
+msgstr "ຄຳສັ່ງ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Relation"
+msgstr "ຄວາມສຳພັນ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Selection"
+msgstr "ຕົວເລືອກ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Selection Values"
+msgstr "ຄ່າຕົວເລືອກ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Tags"
+msgstr "ແທັກ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Text"
+msgstr "ຂໍ້ຄວາມ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Write a prompt, use '/field' to insert dynamic values"
+msgstr "ຂຽນຄຳສັ່ງ, ໃຊ້ '/field' ເພື່ອແຊກຄ່າແບບໄດນາມິກ"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "ai icon"
+msgstr "ໄອຄອນ AI"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "button to run your prompt."
+msgstr "ປຸ່ມເພື່ອສັ່ງງານຄຳສັ່ງຂອງທ່ານ."
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "fields won't update automatically - Click the"
+msgstr "ຟິວຈະບໍ່ອັບເດດໂດຍອັດຕະໂນມັດ - ກົດທີ່"

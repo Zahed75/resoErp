@@ -1,0 +1,245 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * whatsapp_account_followup
+#
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:49+0000\n"
+"PO-Revision-Date: 2026-07-25 21:22+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"whatsapp_account_followup/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: whatsapp_account_followup
+#. odoo-python
+#: code:addons/whatsapp_account_followup/models/account_followup_report.py:0
+msgid "A phone number is required to use WhatsApp"
+msgstr "За използване на WhatsApp е необходим телефонен номер"
+
+#. module: whatsapp_account_followup
+#. odoo-python
+#: code:addons/whatsapp_account_followup/models/account_followup_report.py:0
+msgid "A template is required to use WhatsApp"
+msgstr "За използване на WhatsApp е необходим шаблон"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__button_dynamic_url_1
+msgid "Button Url 1"
+msgstr "URL на бутон 1"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__button_dynamic_url_2
+msgid "Button Url 2"
+msgstr "URL на бутон 2"
+
+#. module: whatsapp_account_followup
+#: model:ir.model,name:whatsapp_account_followup.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: whatsapp_account_followup
+#: model:ir.model,website_form_label:whatsapp_account_followup.model_res_partner
+msgid "Create a Customer"
+msgstr "Създаване на клиент"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__create_uid
+msgid "Created by"
+msgstr "Създадено от"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__create_date
+msgid "Created on"
+msgstr "Създадено на"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_followup_line__display_name
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__display_name
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_report__display_name
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__res_ids
+msgid "Document IDs"
+msgstr "Идентификатори на документи"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__res_model
+msgid "Document Model Name"
+msgstr "Име на модела на документа"
+
+#. module: whatsapp_account_followup
+#: model:ir.model,name:whatsapp_account_followup.model_account_followup_followup_line
+msgid "Follow-up Criteria"
+msgstr "Последващи критерии"
+
+#. module: whatsapp_account_followup
+#: model:ir.model,name:whatsapp_account_followup.model_account_followup_report
+msgid "Follow-up Report"
+msgstr "Справка за проследяване"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_1
+msgid "Free Text 1"
+msgstr "Свободен текст 1"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_10
+msgid "Free Text 10"
+msgstr "Свободен текст 10"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_2
+msgid "Free Text 2"
+msgstr "Свободен текст 2"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_3
+msgid "Free Text 3"
+msgstr "Свободен текст 3"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_4
+msgid "Free Text 4"
+msgstr "Свободен текст 4"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_5
+msgid "Free Text 5"
+msgstr "Свободен текст 5"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_6
+msgid "Free Text 6"
+msgstr "Свободен текст 6"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_7
+msgid "Free Text 7"
+msgstr "Свободен текст 7"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_8
+msgid "Free Text 8"
+msgstr "Свободен текст 8"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__free_text_9
+msgid "Free Text 9"
+msgstr "Свободен текст 9"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__header_text_1
+msgid "Header Free Text"
+msgstr "Свободен текст в заглавието"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_followup_line__id
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__id
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_report__id
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_res_partner__id
+msgid "ID"
+msgstr "Номер (ID)"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__invalid_phone_number_count
+msgid "Invalid Phone Number Count"
+msgstr "Брой невалидни телефонни номера"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__is_button_dynamic
+msgid "Is Button Dynamic"
+msgstr "Динамичен бутон"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__is_header_free_text
+msgid "Is Header Free Text"
+msgstr "Свободен текст в заглавието"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__batch_mode
+msgid "Is Multiple Records"
+msgstr "Множество записи"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__write_uid
+msgid "Last Updated by"
+msgstr "Последно актуализирано от"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__write_date
+msgid "Last Updated on"
+msgstr "Последно актуализирано на"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__preview_whatsapp
+msgid "Message Preview"
+msgstr "Преглед на съобщението"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__number_of_free_text
+msgid "Number of free text"
+msgstr "Брой свободни текстове"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__number_of_free_text_button
+msgid "Number of free text Buttons"
+msgstr "Брой бутони със свободен текст"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__phone
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__wa_template_id
+msgid "Template"
+msgstr "Шаблон"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_followup_line__send_whatsapp
+#: model_terms:ir.ui.view,arch_db:whatsapp_account_followup.manual_reminder_view_form_inherit_whatsapp_followup
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#. module: whatsapp_account_followup
+#: model_terms:ir.ui.view,arch_db:whatsapp_account_followup.view_account_followup_followup_line_form_inherit_whatsapp
+msgid "WhatsApp Template"
+msgstr "Шаблон за WhatsApp"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__attachment_id
+msgid "WhatsApp attachment"
+msgstr "Прикачен файл за WhatsApp"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_manual_reminder__whatsapp
+msgid "Whatsapp"
+msgstr "WhatsApp"
+
+#. module: whatsapp_account_followup
+#: model:ir.model.fields,field_description:whatsapp_account_followup.field_account_followup_followup_line__whatsapp_template_id
+msgid "Whatsapp Template"
+msgstr "Шаблон за WhatsApp"
+
+#. module: whatsapp_account_followup
+#: model:ir.model,name:whatsapp_account_followup.model_account_followup_manual_reminder
+msgid "Wizard for sending manual reminders to clients"
+msgstr "Помощник за ръчно изпращане на напомняния до клиенти"
+
+#. module: whatsapp_account_followup
+#. odoo-python
+#: code:addons/whatsapp_account_followup/models/account_followup_report.py:0
+msgid "whatsapp_composer and followup_line cannot both be None"
+msgstr "whatsapp_composer и followup_line не може и двете да бъдат None"

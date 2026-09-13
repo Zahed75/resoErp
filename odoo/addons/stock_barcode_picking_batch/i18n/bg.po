@@ -1,0 +1,278 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * stock_barcode_picking_batch
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:48+0000\n"
+"PO-Revision-Date: 2026-07-25 20:14+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"stock_barcode_picking_batch/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_move_line_product_selector_inherit
+msgid "<i class=\"fa fa-lg fa-truck\" title=\"Transfer\"/>"
+msgstr "<i class=\"fa fa-lg fa-truck\" title=\"Трансфер\"/>"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_picking_view_kanban
+msgid ""
+"<span class=\"fa fa-external-link-square ms-1\" title=\"Open Batch Picking\"/"
+">"
+msgstr ""
+"<span class=\"fa fa-external-link-square ms-1\" title=\"Отвори партидно "
+"товарене\"/>"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_info
+msgid "Allocation"
+msgstr "Разпределяне"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_picking_batch_form
+msgid "Barcode"
+msgstr "Баркод"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.actions.client,name:stock_barcode_picking_batch.stock_barcode_picking_batch_client_action
+msgid "Barcode Batch Picking Client Action"
+msgstr "Клиентско действие за баркод комплектоване по партиди"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model,name:stock_barcode_picking_batch.model_stock_picking_batch
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_barcode_cancel_operation__batch_id
+msgid "Batch Transfer"
+msgstr "Групов трансфер"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_barcode_cancel_operation__batch_name
+msgid "Batch Transfer Name"
+msgstr "Име на партидното прехвърляне"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.actions.act_window,name:stock_barcode_picking_batch.stock_barcode_batch_picking_action_kanban
+msgid "Batch Transfers"
+msgstr "Прехвърляния на партиди"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/kanban/stock_barcode_kanban_renderer.xml:0
+msgid "Batches"
+msgstr "Партиди"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "Cancel Batch Transfer"
+msgstr "Отказ на групово прехвърляне"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model,name:stock_barcode_picking_batch.model_stock_barcode_cancel_operation
+msgid "Cancel Operation"
+msgstr "Отказ на операция"
+
+#. module: stock_barcode_picking_batch
+#. odoo-python
+#: code:addons/stock_barcode_picking_batch/models/stock_picking_batch.py:0
+msgid "Cancel this batch transfer?"
+msgstr "Да се откаже ли това групово прехвърляне?"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_info
+msgid "Confirm"
+msgstr "Потвърждение"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_info
+msgid "Description"
+msgstr "Описание"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_info
+msgid "Discard"
+msgstr "Отхвърлете"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking__display_batch_button
+msgid "Display Batch Button"
+msgstr "Показване на бутон за партида"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_barcode_cancel_operation__display_name
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking_batch__display_name
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking_type__display_name
+msgid "Display Name"
+msgstr "Име за Показване"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking_type__group_lines_by_product
+msgid "Group batch lines"
+msgstr "Групиране на редовете на партида"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_barcode_cancel_operation__id
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_move_line__id
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking_batch__id
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_kanban
+msgid "Lines"
+msgstr "Линии"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,help:stock_barcode_picking_batch.field_stock_picking_type__group_lines_by_product
+msgid ""
+"Lines of same product at same location appear grouped. Not to use for "
+"cluster picking"
+msgstr ""
+"Редовете на същия продукт на същото местоположение се показват групирани. Да "
+"не се използва за клъстерно извличане"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.actions.act_window,help:stock_barcode_picking_batch.stock_barcode_batch_picking_action_kanban
+msgid "No batch transfer found"
+msgstr "Не е намерено прехвърляне на партиди"
+
+#. module: stock_barcode_picking_batch
+#. odoo-python
+#: code:addons/stock_barcode_picking_batch/models/stock_picking_batch.py:0
+msgid "Open picking batch form"
+msgstr "Отваряне на форма за партида комплектоване"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model,name:stock_barcode_picking_batch.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Вид пикинг"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "Print Batch Transfer"
+msgstr "Печат на пакетен трансфер"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "Print Product Labels"
+msgstr "Печат на продуктови етикети"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model,name:stock_barcode_picking_batch.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Движения на продукти (ред за преместване на запаси)"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "Scan the package %s"
+msgstr "Сканирайте пакета %s"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "The Batch Transfer has been validated"
+msgstr "Партидното прехвърляне е валидирано"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "The batch picking has been cancelled"
+msgstr "Груповата комплектация беше отменена"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.actions.act_window,help:stock_barcode_picking_batch.stock_barcode_batch_picking_action_kanban
+msgid ""
+"The goal of the batch transfer is to group operations that may\n"
+"            (needs to) be done together in order to increase their "
+"efficiency.\n"
+"            It may also be useful to assign jobs (one person = one batch) "
+"or\n"
+"            help the timing management of operations (tasks to be done at "
+"1pm)."
+msgstr ""
+"Целта на груповия трансфер е да групира операции, които може\n"
+"            (трябва) да бъдат извършени заедно, за да се повиши тяхната "
+"ефективност.\n"
+"            Може също да е полезен за възлагане на задачи (един човек = една "
+"група) или\n"
+"            за управление на времето на операциите (задачи, които трябва да "
+"се извършат в 13:00 ч.)."
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,help:stock_barcode_picking_batch.field_stock_move_line__picking_id
+msgid "The stock operation where the packing has been made"
+msgstr "Складовата операция, в която е извършено опаковането"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "This batch is already cancelled"
+msgstr "Тази партида вече е отменена"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid "This batch is already done"
+msgstr "Тази партида вече е завършена"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
+msgid ""
+"This batch transfer is still in draft, scans are disabled until the batch is "
+"confirmed"
+msgstr ""
+"Този партиден трансфер все още е в чернова, сканиранията са деактивирани, "
+"докато партидата не бъде потвърдена"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model,name:stock_barcode_picking_batch.model_stock_picking
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_move_line__picking_id
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_move_line_product_selector_inherit
+msgid "Transfer"
+msgstr "Прехвърлете"
+
+#. module: stock_barcode_picking_batch
+#. odoo-javascript
+#: code:addons/stock_barcode_picking_batch/static/src/kanban/stock_barcode_kanban_renderer.xml:0
+msgid "Transfers"
+msgstr "Трансфери"
+
+#. module: stock_barcode_picking_batch
+#: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking_batch__picking_type_code
+msgid "Type of Operation"
+msgstr "Вид операция"
+
+#. module: stock_barcode_picking_batch
+#: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_info
+msgid "Unbatch Transfer"
+msgstr "Премахване на трансфера от партида"
+
+#. module: stock_barcode_picking_batch
+#. odoo-python
+#: code:addons/stock_barcode_picking_batch/models/stock_picking.py:0
+msgid ""
+"You cannot validate a transfer if no quantities are reserved nor done. You "
+"can use the info button on the top right corner of your screen to remove the "
+"transfer in question from the batch."
+msgstr ""
+"Не можете да валидирате трансфер, ако няма резервирани, нито извършени "
+"количества. Можете да използвате бутона за информация в горния десен ъгъл на "
+"екрана, за да премахнете въпросния трансфер от групата."

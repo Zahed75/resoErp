@@ -1,0 +1,2471 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * stock_barcode
+#
+# Translators:
+# Grega Vavtar <grega@hbs.si>, 2022
+# laznikd <laznik@mentis.si>, 2022
+# Vida Potočnik <vida.potocnik@mentis.si>, 2022
+# matjaz k <matjaz@mentis.si>, 2022
+# Matjaz Mozetic <m.mozetic@matmoz.si>, 2022
+# Simon Gorše <simon@gorse.org>, 2022
+# Martin Trigaux, 2022
+# Tadej Lupšina <tadej@hbs.si>, 2022
+# Jasmina Macur <jasmina@hbs.si>, 2022
+# Tomaž Jug <tomaz@editor.si>, 2023
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-10 18:45+0000\n"
+"PO-Revision-Date: 2026-08-06 12:40+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"stock_barcode/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "%s can't be inventoried. Only storable products can be inventoried."
+msgstr "%sni mogoče popisati. Popisati je mogoče le izdelke z zalogo."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
+#, fuzzy
+msgid "/s"
+msgstr "/s"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#, fuzzy
+msgid ""
+"<i class=\"fa fa-fw fa-lg fa-barcode me-3\" title=\"Serial/Lot Number\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-barcode me-3\" title=\"Serijska/lot številka\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#, fuzzy
+msgid "<i class=\"fa fa-fw fa-lg fa-cube me-3\" title=\"Quantity\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-cube me-3\" title=\"Količina\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#, fuzzy
+msgid ""
+"<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"Scrap "
+"Location\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"Lokacija "
+"izmeta\"/>\n"
+"Lokacija: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#, fuzzy
+msgid ""
+"<i class=\"fa fa-fw fa-lg fa-map-marker me-3\" title=\"Source Location\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-map-marker me-3\" title=\"Izvorna lokacija\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#, fuzzy
+msgid "<i class=\"fa fa-fw fa-lg fa-tags me-3\" title=\"Product\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-tags me-3\" title=\"Izdelek\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban_2
+#, fuzzy
+msgid "<i class=\"fa fa-lg fa-archive me-2\" title=\"Package\"/>"
+msgstr "<i class=\"fa fa-lg fa-archive me-2\" title=\"Paket\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban_2
+#, fuzzy
+msgid "<i class=\"fa fa-lg fa-user-o me-2\" title=\"Owner\"/>"
+msgstr "<i class=\"fa fa-lg fa-user-o me-2\" title=\"Owner\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+#, fuzzy
+msgid "<i class=\"fa fa-print\"/> Print barcode commands and operation types"
+msgstr ""
+"<i class=\"fa fa-print\"/> Natisnite ukaze za črtne kode in vrste operacij"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+#, fuzzy
+msgid "<i class=\"fa fa-print\"/> Print barcode demo sheet"
+msgstr "<i class=\"fa fa-print\"/> Natisni preizkusni list s črtnimi kodami"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+#, fuzzy
+msgid "<i class=\"fa fa-print\"/> Print storage locations"
+msgstr "<i class=\"fa fa-print\"/> Natisni skladiščne lokacije"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+#, fuzzy
+msgid "<i class=\"fa fs-4 fa-tags me-1\" title=\"Product\"/>"
+msgstr "<i class=\"fa fs-4 fa-tags me-1\" title=\"Izdelek\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#, fuzzy
+msgid "<span>Replenish Quantities</span>"
+msgstr "<span>Dopolni količine</span>"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+#, fuzzy
+msgid "A GTIN can only contains digits"
+msgstr "GTIN lahko vsebuje samo števke"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_scan_product
+#, fuzzy
+msgid "A line's product must be scanned before the line can be edited"
+msgstr "Izdelek v vrstici je treba skenirati, preden je mogoče vrstico urediti"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#, fuzzy
+msgid ""
+"A product tracked by serial numbers can't have multiple quantities for the "
+"same serial number."
+msgstr ""
+"Izdelek, sledljiv po serijskih številkah, ne more imeti več kosov z isto "
+"serijsko številko."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.js:0
+msgid "Add Product"
+msgstr "Dodajte izdelek"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#, fuzzy
+msgid "Add colors to operation cards to help users differentiate them."
+msgstr ""
+"Dodajte barve karticam operacij, da jih bodo uporabniki lažje razlikovali."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/extra_product_dialog.js:0
+msgid "Add extra product?"
+msgstr "Želite dodati dodaten izdelek?"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__mandatory
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_dest_location__mandatory
+#, fuzzy
+msgid "After each product"
+msgstr "Po vsakem izdelku"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__optional
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_dest_location__optional
+#, fuzzy
+msgid "After group of products"
+msgstr "Po skupini izdelkov"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "All products need to be packed"
+msgstr "Vse izdelke je treba zapakirati"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+msgid "Allocation"
+msgstr "Dodelitev"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_allow_extra_product
+#, fuzzy
+msgid "Allow extra products"
+msgstr "Dovoli dodatne izdelke"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_full
+#, fuzzy
+msgid "Allow full picking validation"
+msgstr "Dovoli popolno potrjevanje prenosa"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__barcode_validation_full
+#, fuzzy
+msgid ""
+"Allow validating a picking even if nothing has been scanned yet, i.e. do an "
+"immediate transfer"
+msgstr ""
+"Dovoli potrditev prevzema, tudi če še ni bilo ničesar skeniranega, tj. "
+"izvedi takojšnji prenos"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid ""
+"An error occured during parsing of element_string: AI code %(ai_code)s is "
+"missing for scheme %(scheme_name)s"
+msgstr ""
+"Med razčlenjevanjem element_string je prišlo do napake: za shemo %"
+"(scheme_name)s manjka koda AI %(ai_code)s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid ""
+"An error occured with field '%(field_name)s': the corresponding AI '%"
+"(ai_code)s' was not found in the element_string"
+msgstr ""
+"Prišlo je do napake pri polju '%(field_name)s': ustrezni AI '%(ai_code)s' ni "
+"bil najden v element_string"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid ""
+"An error occured: value of company_prefix_length (%(company_prefix_length)s) "
+"must be between 6 and 12 inclusive."
+msgstr ""
+"Prišlo je do napake: vrednost company_prefix_length (%(company_prefix_length)"
+"s) mora biti med vključno 6 in 12."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "An error occurred with field '%(field_name)s': %(error_message)s"
+msgstr "Prišlo je do napake pri polju '%(field_name)s': %(error_message)s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid ""
+"An error occurred with field 'partition': no partition value can be found "
+"for the given company_prefix_length"
+msgstr ""
+"Pri polju 'partition' je prišlo do napake: za podano company_prefix_length "
+"ni mogoče najti nobene vrednosti particije"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "An error occurred with method '%(method_name)s': %(error_message)s"
+msgstr "Prišlo je do napake pri metodi '%(method_name)s': %(error_message)s"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#, fuzzy
+msgid ""
+"An unexisting package type was scanned. This part of the barcode can't be "
+"processed."
+msgstr ""
+"Skeniran je bil neobstoječ tip paketa. Tega dela črtne kode ni mogoče "
+"obdelati."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/confirm_quant_dialog.xml:0
+msgid "Apply Now"
+msgstr "Prijavi se zdaj"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+#, fuzzy
+msgid "Are you sure you want to cancel this operation?"
+msgstr "Ali ste prepričani, da želite preklicati to operacijo?"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban_2
+msgid "Available:"
+msgstr "Na voljo:"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#, fuzzy
+msgid "Backorder"
+msgstr "Naknadna dobava"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_backorder_confirmation
+#, fuzzy
+msgid "Backorder Confirmation"
+msgstr "Potrditev naročila za nedobavljeno blago"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+#: model:ir.actions.client,name:stock_barcode.stock_barcode_action_main_menu
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_scrap__product_barcode
+#: model:ir.ui.menu,name:stock_barcode.stock_barcode_menu
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_picking_form
+msgid "Barcode"
+msgstr "Črtna koda"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#, fuzzy
+msgid "Barcode App"
+msgstr "Aplikacija za črtne kode"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_location__barcode_img
+#, fuzzy
+msgid "Barcode Img"
+msgstr "Slika črtne kode"
+
+#. module: stock_barcode
+#: model:ir.actions.client,name:stock_barcode.stock_barcode_inventory_client_action
+#, fuzzy
+msgid "Barcode Inventory Client Action"
+msgstr "Odjemalsko dejanje inventarja s črtnimi kodami"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+msgid "Barcode Nomenclature"
+msgstr "Nomenklatura črtne kode"
+
+#. module: stock_barcode
+#: model:ir.actions.client,name:stock_barcode.stock_barcode_picking_client_action
+#, fuzzy
+msgid "Barcode Picking Client Action"
+msgstr "Odjemalsko dejanje za komisioniranje s črtno kodo"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_scrap___barcode_scanned
+msgid "Barcode Scanned"
+msgstr "Skenirana črtna koda"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+msgid "Barcode Scanner"
+msgstr "Optični čitalec"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#, fuzzy
+msgid "Barcode scan is ambiguous with several model: %s. Use the most likely."
+msgstr ""
+"Skeniranje črtne kode je dvoumno za več modelov: %s. Uporabite "
+"najverjetnejši model."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+#, fuzzy
+msgid "Barcodes are not available."
+msgstr "Črtne kode niso na voljo."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid ""
+"Binary value %(word)s cannot be represented with %(word_size_write)s bits"
+msgstr ""
+"Binarne vrednosti %(word)s ni mogoče predstaviti z %(word_size_write)s biti"
+
+#. module: stock_barcode
+#: model:product.template,name:stock_barcode.product_cable_management_box_2_product_template
+#, fuzzy
+msgid "Cable Management Box"
+msgstr "Škatla za urejanje kablov"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/confirm_quant_dialog.xml:0
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_barcode_cancel_operation
+#, fuzzy
+msgid "Cancel Operation"
+msgstr "Prekliči operacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Cancel Transfer"
+msgstr "Prekliči prenos"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+#, fuzzy
+msgid "Cancel operation"
+msgstr "Prekliči operacijo"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Cancel this operation?"
+msgstr "Prekliči to operacijo?"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#, fuzzy
+msgid "Card Color"
+msgstr "Barva kartice"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+#: code:addons/stock_barcode/static/src/widgets/image_preview.xml:0
+msgid "Close"
+msgstr "Zaključi"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_res_config_settings
+msgid "Config Settings"
+msgstr "Uredi nastavitve"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+msgid "Configure Product Barcodes"
+msgstr "Konfigurirajte črtne kode izdelka"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+#: code:addons/stock_barcode/static/src/js/stock_barcode_sml_form.js:0
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Confirm"
+msgstr "Potrdi"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/confirm_quant_dialog.xml:0
+#, fuzzy
+msgid "Confirm Inventory Adjustment"
+msgstr "Potrdi popravek zaloge"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_res_partner
+msgid "Contact"
+msgstr "Stik"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+#, fuzzy
+msgid "Count Entire Locations"
+msgstr "Preštej celotne lokacije"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+#, fuzzy
+msgid "Count Inventory"
+msgstr "Popis zaloge"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Counted Quantity"
+msgstr "Prešteta količina"
+
+#. module: stock_barcode
+#: model:ir.model,website_form_label:stock_barcode.model_res_partner
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: stock_barcode
+#: model_terms:ir.actions.act_window,help:stock_barcode.stock_picking_action_kanban
+#, fuzzy
+msgid "Create a new transfer"
+msgstr "Ustvari nov prenos"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: stock_barcode
+#: model:product.template,name:stock_barcode.product_custom_cabinet_metric_product_template
+#, fuzzy
+msgid "Customized Cabinet (Metric)"
+msgstr "Prilagojena omarica (metrična)"
+
+#. module: stock_barcode
+#: model:product.template,name:stock_barcode.product_custom_cabinet_usa_product_template
+#, fuzzy
+msgid "Customized Cabinet (USA)"
+msgstr "Prilagojena omarica (ZDA)"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Delete"
+msgstr "Izbriši"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__stock_barcode_demo_active
+#, fuzzy
+msgid "Demo Data Active"
+msgstr "Demonstracijski podatki so aktivni"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#, fuzzy
+msgid "Destination Container Package"
+msgstr "Ciljni paket vsebnika"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/line.xml:0
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Destination Location"
+msgstr "Ciljna lokacija"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Destination Package"
+msgstr "Ciljno pakiranje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Destination location must be scanned"
+msgstr "Ciljna lokacija mora biti skenirana"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+#, fuzzy
+msgid "Disable sound effect while scanning a barcode."
+msgstr "Onemogoči zvočni učinek med skeniranjem črtne kode."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/apply_quant_dialog.xml:0
+#: code:addons/stock_barcode/static/src/js/stock_barcode_sml_form.js:0
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Discard"
+msgstr "Opusti"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_product_product__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_product_uom__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_res_partner__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_location__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_lot__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_package__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_package_type__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_quant__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_scrap__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_warehouse__display_name
+#: model:ir.model.fields,field_description:stock_barcode.field_uom_uom__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__show_reserved_sns
+#, fuzzy
+msgid ""
+"Display reserved lots/serial numbers. When not active, the picker can pick "
+"lots/serials as they want."
+msgstr ""
+"Prikaži rezervirane lotne/serijske številke. Ko ni aktivno, lahko skladiščni "
+"delavec izbere poljubne lote/serijske številke."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid ""
+"Do you want to permanently remove this message ? It won't appear anymore, so "
+"make sure you don't need the barcodes sheet or you have a copy."
+msgstr ""
+"Ali želite to sporočilo trajno odstraniti? Ne bo več prikazano, zato se "
+"prepričajte, da lista s črtnimi kodami ne potrebujete oziroma da imate "
+"kopijo."
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_put_in_pack
+#, fuzzy
+msgid ""
+"Does the picker have to put the scanned products in a package? If yes, when?"
+msgstr "Ali mora komisionar skenirane izdelke dati v paket? Če da, kdaj?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_scan_dest_location
+#, fuzzy
+msgid "Does the picker have to scan the destination? If yes, when?"
+msgstr "Ali mora komisionar skenirati cilj? Če da, kdaj?"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+#, fuzzy
+msgid "Don't cancel"
+msgstr "Ne prekliči"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+msgid "Don't show this message again"
+msgstr "Tega sporočila ne prikaži več"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#, fuzzy
+msgid "Done / To do"
+msgstr "Končano / Za dokončanje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid "Download demo data sheet"
+msgstr "Prenesi podatkovni list z demo podatki"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid "Download operation barcodes"
+msgstr "Prenesi črtne kode operacij"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__dummy_id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_quant__dummy_id
+msgid "Dummy"
+msgstr "Navidezno"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__electronic_product_code
+#, fuzzy
+msgid "Electronic Product Code"
+msgstr "Elektronska koda izdelka"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__empty_move_count
+#, fuzzy
+msgid "Empty Move Count"
+msgstr "Število praznih premikov"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_move_line.py:0
+#, fuzzy
+msgid ""
+"Error: The product barcode is not a valid Global Trade Item Number, we can't "
+"generate an Electronic Product Code for it."
+msgstr ""
+"Napaka: Črtna koda izdelka ni veljavna globalna trgovinska identifikacijska "
+"številka, zato zanjo ne moremo ustvariti elektronske kode izdelka."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_move_line.py:0
+#, fuzzy
+msgid ""
+"Error: We can't generate an Electronic Product Code for a product without a "
+"barcode."
+msgstr ""
+"Napaka: Elektronske kode izdelka ni mogoče ustvariti za izdelek brez črtne "
+"kode."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_move_line.py:0
+#, fuzzy
+msgid ""
+"Error: We can't generate an Electronic Product Code for a tracked product "
+"without a tracking number."
+msgstr ""
+"Napaka: Elektronske kode izdelka ni mogoče ustvariti za sledeni izdelek brez "
+"številke sledenja."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid ""
+"Field '%(field_name)s' is a reserved field, you can't manually update its "
+"value with this method"
+msgstr ""
+"Polje '%(field_name)s' je rezervirano polje, njegove vrednosti s to metodo "
+"ne morete ročno posodobiti"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Field '%(field_name)s' not found"
+msgstr "Polje '%(field_name)s' ni bilo najdeno"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Final Validation"
+msgstr "Končno preverjanje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Following backorder was created:"
+msgstr "Ustvarjeno je bilo naslednje naročilo za dopolnitev:"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Following backorders were created:"
+msgstr "Ustvarjena so bila naslednja naročila za dopolnitev:"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/extra_product_dialog.js:0
+#, fuzzy
+msgid ""
+"Following scanned products are not reserved for this transfer. Are you sure "
+"you want to add them?"
+msgstr ""
+"Naslednji skenirani izdelki niso rezervirani za ta prenos. Ali jih res "
+"želite dodati?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__barcode_allow_extra_product
+#, fuzzy
+msgid "For planned transfers, allow adding non-reserved products"
+msgstr "Pri načrtovanih prenosih dovoli dodajanje nerezerviranih izdelkov"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_dest_location
+msgid "Force Destination Location scan?"
+msgstr "Vsilite skeniranje ciljne lokacije?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_tracking_number
+msgid "Force Lot/Serial scan?"
+msgstr "Vsilite skeniranje Lot / Serijskih številk"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_product
+msgid "Force Product scan?"
+msgstr "Vsilite skeniranje izdelka"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_source_location
+#, fuzzy
+msgid "Force Source Location scan?"
+msgstr "Obvezno skeniranje izvorne lokacije?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_after_dest_location
+#, fuzzy
+msgid "Force a destination for all products"
+msgstr "Vsili ciljno lokacijo za vse izdelke"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_all_product_packed
+msgid "Force all products to be packed"
+msgstr "Vsilite pakiranje vseh izdelkov."
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_put_in_pack
+#, fuzzy
+msgid "Force put in pack?"
+msgstr "Prisilno vstavi v paket?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__formatted_product_barcode
+#, fuzzy
+msgid "Formatted Product Barcode"
+msgstr "Oblikovana črtna koda izdelka"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_product_product__has_image
+msgid "Has Image"
+msgstr "Ima sliko"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__hide_lot
+#, fuzzy
+msgid "Hide Lot"
+msgstr "Skrij serijo"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__hide_lot_name
+#, fuzzy
+msgid "Hide Lot Name"
+msgstr "Skrij ime lota"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_product_product__id
+#: model:ir.model.fields,field_description:stock_barcode.field_product_uom__id
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__id
+#: model:ir.model.fields,field_description:stock_barcode.field_res_partner__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_location__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_lot__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_package__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_package_type__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_quant__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_scrap__id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_warehouse__id
+#: model:ir.model.fields,field_description:stock_barcode.field_uom_uom__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking_type.py:0
+#, fuzzy
+msgid ""
+"If the source location must be scanned, then the destination location must "
+"either be scanned after each product or not scanned at all."
+msgstr ""
+"Če je treba izvorno lokacijo skenirati, je treba ciljno lokacijo skenirati "
+"bodisi za vsakim izdelkom bodisi je sploh ne skenirati."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#, fuzzy
+msgid ""
+"If you validate now, the remaining products will be added to a backorder."
+msgstr "Če potrdite zdaj, bodo preostali izdelki dodani v naknadno naročilo."
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__image_1920
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_quant__image_1920
+msgid "Image"
+msgstr "Slika"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#, fuzzy
+msgid "Incomplete Transfer"
+msgstr "Nedokončan prenos"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+msgid "Install"
+msgstr "Namesti"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_move_line__product_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_scrap__product_barcode
+msgid "International Article Number used for product identification."
+msgstr "EAN za mednarodno identifikacijo izdelkov"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Invalid pad_char '%(pad_char)s'. Use '0' or '1'."
+msgstr "Neveljaven znak za zapolnitev '%(pad_char)s'. Uporabite '0' ali '1'."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Invalid pad_side '%(pad_side)s'. Use 'left' or 'right'."
+msgstr "Neveljaven pad_side '%(pad_side)s'. Uporabite 'left' ali 'right'."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Invalid word_pad_char '%(word_pad_char)s'. Use '0' or '1'."
+msgstr ""
+"Neveljaven znak za zapolnitev '%(word_pad_char)s'. Uporabite '0' ali '1'."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Invalid word_pad_side '%(word_pad_side)s'. Use 'left' or 'right'."
+msgstr ""
+"Neveljaven word_pad_side '%(word_pad_side)s'. Uporabite 'left' ali 'right'."
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_location
+msgid "Inventory Locations"
+msgstr "Lokacije inventure"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/confirm_quant_dialog.xml:0
+#, fuzzy
+msgid "Inventory Reason"
+msgstr "Razlog inventure"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__is_barcode_picking_type
+#, fuzzy
+msgid "Is Barcode Picking Type"
+msgstr "Je vrsta operacije s črtno kodo"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+msgid "Leave it"
+msgstr "Pustite ga"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Length must be a positive integer"
+msgstr "Dolžina mora biti pozitivno celo število"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_product_uom
+#, fuzzy
+msgid "Link between products and their UoMs"
+msgstr "Povezava med izdelki in njihovimi merskimi enotami"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Loading..."
+msgstr "Nalaganje …"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Location"
+msgstr "Lokacija"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__location_processed
+msgid "Location Processed"
+msgstr "Obdelana lokacija"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+msgid "Log out"
+msgstr "Odjava"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_lot
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Lot/Serial"
+msgstr "Lot/serijska številka"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Mandatory Destination Location"
+msgstr "Obvezna ciljna lokacija"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_source_location__mandatory
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_tracking_number__mandatory
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#, fuzzy
+msgid "Mandatory Scan"
+msgstr "Obvezno skeniranje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Mandatory Source Location"
+msgstr "Obvezna izvorna lokacija"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_max_time_between_keys_in_ms
+#, fuzzy
+msgid "Max time between each key"
+msgstr "Najdaljši čas med posameznimi tipkami"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_res_config_settings__barcode_max_time_between_keys_in_ms
+#, fuzzy
+msgid "Maximum delay between each key in ms (100 ms by default)"
+msgstr "Največji zamik med posameznimi tipkami v ms (privzeto 100 ms)"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_separator_regex
+#, fuzzy
+msgid "Multiscan Separator"
+msgstr "Ločilo za večkratno skeniranje"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__stock_barcode_mute_sound_notifications
+#, fuzzy
+msgid "Mute Barcode application sounds"
+msgstr "Utišaj zvoke aplikacije Črtne kode"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__no
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_dest_location__no
+msgid "No"
+msgstr "Ne"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No %(picking_type)s ready for this %(barcode_type)s"
+msgstr "Za ta %(barcode_type)s ni pripravljen noben %(picking_type)s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_move_line.py:0
+#, fuzzy
+msgid "No Barcode"
+msgstr "Brez črtne kode"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_source_location__no
+#, fuzzy
+msgid "No Scan"
+msgstr "Brez skeniranja"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+#, fuzzy
+msgid "No internal operation type. Please configure one in warehouse settings."
+msgstr "Ni notranje vrste operacije. Konfigurirajte jo v nastavitvah skladišča."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+#, fuzzy
+msgid "No picking or location or product corresponding to barcode %(barcode)s"
+msgstr "Ni prevzema, lokacije ali izdelka, ki ustreza črtni kodi %(barcode)s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+#, fuzzy
+msgid "No picking or product corresponding to barcode %(barcode)s"
+msgstr "Ni prevzema ali izdelka, ki ustreza črtni kodi %(barcode)s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product or lot found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek ali lot"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product or package found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek ali paket"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product or packaging found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek ali embalaža"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product, lot, or package found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek, lot ali paket"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product, lot, or packaging found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek, lot ali embalaža"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product, lot, packaging, or package found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek, lot, embalaža ali paket"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "No product, package, or packaging found for barcode %s"
+msgstr "Za črtno kodo %s ni bil najden noben izdelek, paket ali embalaža"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/apply_quant_dialog.xml:0
+#, fuzzy
+msgid "No, I'll count them later"
+msgstr "Ne, preštel jih bom pozneje"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_nomenclature_id
+msgid "Nomenclature"
+msgstr "Nomenklatura"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Not the expected scan"
+msgstr "Skeniranje ni pričakovano"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/js/stock_barcode_sml_form.js:0
+#, fuzzy
+msgid ""
+"Oops! It seems that this product is not located in %(location)s.\n"
+"Do you confirm you picked from there?"
+msgstr ""
+"Ups! Zdi se, da ta izdelek ni na lokaciji %(location)s.\n"
+"Ali potrjujete, da ste ga prevzeli od tam?"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#: model:ir.actions.act_window,name:stock_barcode.open_picking
+#, fuzzy
+msgid "Open picking form"
+msgstr "Odpri obrazec za skladiščni premik"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+#: model:ir.actions.act_window,name:stock_barcode.stock_picking_action_kanban
+#: model:ir.actions.act_window,name:stock_barcode.stock_picking_type_action_kanban
+msgid "Operations"
+msgstr "Operacije"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_tracking_number__optional
+#, fuzzy
+msgid "Optional Scan"
+msgstr "Neobvezno skeniranje"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Options"
+msgstr "Možnosti"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__outermost_result_package_id
+#, fuzzy
+msgid "Outermost Result Package"
+msgstr "Najbolj zunanji ciljni paket"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Owner"
+msgstr "Lastnik"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_package
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Package"
+msgstr "Paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+#, fuzzy
+msgid "Package type %(type)s applied to the package %(package)s"
+msgstr "Tip paketa %(type)s uporabljen za paket %(package)s"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__packaging_uom_qty
+msgid "Packaging Quantity"
+msgstr "Količina pakiranja"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__packaging_uom_id
+#, fuzzy
+msgid "Packaging Unit of Measure"
+msgstr "Merska enota pakiranja"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_move_line__packaging_uom_id
+#, fuzzy
+msgid "Packaging unit from sale or purchase orders"
+msgstr "Pakirna enota iz prodajnih ali nabavnih naročil"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/line.xml:0
+#, fuzzy
+msgid "Packaging:"
+msgstr "Pakiranje:"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__parent_location_id
+msgid "Parent Location"
+msgstr "Nadrejena lokacija"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__parent_location_dest_id
+#, fuzzy
+msgid "Parent Location Dest"
+msgstr ""
+"Nadrejena ciljna lokacija\n"
+"Lokacija: "
+"model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__parent_location_dest_id"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__partial_move_count
+#, fuzzy
+msgid "Partial Move Count"
+msgstr "Število delnih premikov"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid ""
+"Partition table %(table_name)s not found, available tables are : %"
+"(table_list)s)"
+msgstr ""
+"Particijska tabela %(table_name)s ni najdena, razpoložljive tabele so : %"
+"(table_list)s)"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Physical Inventory"
+msgstr "Inventura"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+#, fuzzy
+msgid "Picking Details"
+msgstr "Podrobnosti zbiranja"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Tip zbirnika"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Please scan destination location for %s before scanning other product"
+msgstr "Pred skeniranjem drugega izdelka skenirajte ciljno lokacijo %s"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.js:0
+msgid "Please, Scan again!"
+msgstr "Prosim, skenirajte še enkrat!"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Press Validate or scan another product"
+msgstr "Pritisnite Potrditev ali poskenirajte drug izdelek"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Print"
+msgstr "Tiskanje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Print Barcodes"
+msgstr "Natisni črtne kode"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Print Delivery Slip"
+msgstr "Natisni dobavnico"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Print Inventory"
+msgstr "Natisni zalogo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Print Packages"
+msgstr "Natisni pakete"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Print Picking Operations"
+msgstr "Natisni zbirnik"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid ""
+"Print the %(sheet_s)sdemo data sheet%(sheet_e)s to test, or %"
+"(ops_s)sbarcodes%(ops_e)s for operations."
+msgstr ""
+"Natisnite %(sheet_s)spreizkusni podatkovni list%(sheet_e)s za preizkus ali %"
+"(ops_s)sčrtne kode%(ops_e)s za operacije."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.js:0
+#, fuzzy
+msgid "Processing %(processed)s/%(toProcess)s barcodes"
+msgstr "Obdelava %(processed)s/%(toProcess)s črtnih kod"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: stock_barcode
+#: model:ir.actions.act_window,name:stock_barcode.product_action_barcodes
+#: model_terms:ir.ui.view,arch_db:stock_barcode.product_view_list_barcodes
+msgid "Product Barcodes"
+msgstr "Črtne kode proizvodov"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Premiki zaloge"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_reference_code
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_quant__product_reference_code
+#, fuzzy
+msgid "Product Reference Code"
+msgstr "Referenčna koda izdelka"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_stock_quant_ids
+#, fuzzy
+msgid "Product Stock Quant"
+msgstr "Količina zaloge izdelka"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "Merska enota izdelka"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_product_product
+msgid "Product Variant"
+msgstr "Različica proizvoda"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__lot_properties
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Properties"
+msgstr "Lastnosti"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Put In Pack"
+msgstr "Dajte v paket"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Put in Pack"
+msgstr "Dajte v paket"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__qty_done
+#, fuzzy
+msgid "Qty Done"
+msgstr "Opravljena količina"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban
+msgid "Quantity Done"
+msgstr "Opravljena količina"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#, fuzzy
+msgid "Quantity in Stock"
+msgstr "Količina na zalogi"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_move_line__packaging_uom_qty
+#, fuzzy
+msgid "Quantity in the packaging unit"
+msgstr "Količina v pakirni enoti"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_quant
+msgid "Quants"
+msgstr "Kvanti"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_rfid_batch_time
+#, fuzzy
+msgid "RFID Timer"
+msgstr "Časovnik RFID"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
+#, fuzzy
+msgid "Read Rate"
+msgstr "Hitrost branja"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
+#, fuzzy
+msgid "Read Time"
+msgstr "Čas branja"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+msgid "Remove it"
+msgstr "Odstrani ga"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Return Products"
+msgstr "Vrni izdelke"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s or a %(bold_s)s product%(bold_e)s to "
+"filter your records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s, a %(bold_s)s product%(bold_e)s, a %"
+"(bold_s)s lot%(bold_e)s, a %(bold_s)s packaging%(bold_e)s, or a %(bold_s)s "
+"package%(bold_e)s to filter your records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s, a %(bold_s)s product%(bold_e)s, a %"
+"(bold_s)s lot%(bold_e)s, or a %(bold_s)s package%(bold_e)s to filter your "
+"records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s, a %(bold_s)s product%(bold_e)s, a %"
+"(bold_s)s lot%(bold_e)s, or a %(bold_s)s packaging%(bold_e)s to filter your "
+"records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s, a %(bold_s)s product%(bold_e)s, a %"
+"(bold_s)s packaging%(bold_e)s, or a %(bold_s)s package%(bold_e)s to filter "
+"your records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s, a %(bold_s)s product%(bold_e)s, or a %"
+"(bold_s)s lot%(bold_e)s to filter your records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s, a %(bold_s)s product%(bold_e)s, or a %"
+"(bold_s)s package%(bold_e)s to filter your records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)s transfer%(bold_e)s, a %(bold_s)s product%(bold_e)s, or a %"
+"(bold_s)s packaging%(bold_e)s to filter your records"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s, %(bold_s)spaket%(bold_e)s ali %"
+"(bold_s)sembalažo%(bold_e)s za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid "Scan a %(bold_s)slocation%(bold_e)s to initiate a transfer"
+msgstr "Skenirajte %(bold_s)slokacijo%(bold_e)s, da začnete prenos"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid "Scan a %(bold_s)spackage%(bold_e)s to find a transfer"
+msgstr "Skenirajte %(bold_s)spaket%(bold_e)s, da poiščete prenos"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid "Scan a %(bold_s)spicking%(bold_e)s to open it"
+msgstr "Skenirajte %(bold_s)spremnico%(bold_e)s, da jo odprete"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)sproduct%(bold_e)s or its %(bold_s)spackaging%(bold_e)s to "
+"locate it"
+msgstr ""
+"Skenirajte %(bold_s)sizdelek%(bold_e)s ali njegovo %(bold_s)sembalažo%"
+"(bold_e)s, da ga poiščete"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid ""
+"Scan a %(bold_s)stracking number%(bold_e)s or a %(bold_s)spackage%(bold_e)s "
+"to find a transfer"
+msgstr ""
+"Optično preberite %(bold_s)sštevilko za sledenje%(bold_e)s ali %(bold_s)"
+"spaket%(bold_e)s, da poiščete prenos"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid "Scan a %(bold_s)stracking number%(bold_e)s to find a transfer"
+msgstr "Skenirajte %(bold_s)sledilno številko%(bold_e)s, da poiščete prenos"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a lot number"
+msgstr "Optično preberite številko serije"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a lot number or a packages then the destination location"
+msgstr "Skenirajte serijsko številko ali paket in nato ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a lot number then the destination location"
+msgstr "Skenirajte številko serije, nato ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a package"
+msgstr "Skeniraj paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a package or put in pack"
+msgstr "Skenirajte paket ali ga vstavite v paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a package or the destination location"
+msgstr "Skenirajte paket ali ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a package, the destination location or another product"
+msgstr "Skenirajte paket, ciljno lokacijo ali drug izdelek"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product"
+msgstr "Skenirajte izdelek"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a product before scanning a tracking number"
+msgstr "Skenirajte izdelek, preden skenirate številko za sledenje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product from %s"
+msgstr "Skenirajte izdelek iz%s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Scan a product or a lot to filter the transfers."
+msgstr "Skenirajte izdelek ali lot, da filtrirate prenose."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product or a package"
+msgstr "Skenirajte izdelek ali paket"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Scan a product or a package to filter the transfers."
+msgstr "Skenirajte izdelek ali paket, da filtrirate prenose."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Scan a product or a packaging to filter the transfers."
+msgstr "Skenirajte izdelek ali embalažo, da filtrirate prenose."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product or another package"
+msgstr "Skenirajte izdelek ali drug paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product or the destination location."
+msgstr "Skenirajte izdelek ali ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a product then the destination location"
+msgstr "Skenirajte izdelek, nato ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Scan a product to filter the transfers."
+msgstr "Skenirajte izdelek, da filtrirate prenose."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid ""
+"Scan a product, a lot, a packaging, or a package to filter the transfers."
+msgstr "Skenirajte izdelek, serijo, embalažo ali paket, da filtrirate prenose."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Scan a product, a lot, or a package to filter the transfers."
+msgstr "Skenirajte izdelek, serijo ali paket, da filtrirate prenose."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Scan a product, a lot, or a packaging to filter the transfers."
+msgstr "Skenirajte izdelek, serijo ali embalažo, da filtrirate prenose."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a product, a package or the destination location"
+msgstr "Skenirajte izdelek, paket ali ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan a product, a package or the destination location."
+msgstr "Skenirajte izdelek, paket ali ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#, fuzzy
+msgid "Scan a product, a package, or a packaging to filter the transfers."
+msgstr "Skenirajte izdelek, paket ali embalažo za filtriranje prenosov."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number"
+msgstr "Skeniraj serijsko šetvilko"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number or a package"
+msgstr "Skeniraj serijsko številko ali paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number or a package then the destination location"
+msgstr "Skenirajte serijsko številko ali paket in nato še ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number then the destination location"
+msgstr "Skenirajte serijsko številko in nato še ciljno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
+#, fuzzy
+msgid "Scan an %(bold_s)soperation type%(bold_e)s to start it"
+msgstr "Skenirajte %(bold_s)svrsto operacije%(bold_e)s, da jo zaženete"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan another serial number"
+msgstr "Skenirajte drugo serijsko številko"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan more lot numbers"
+msgstr "Optično preberite več številk serij"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan more lot numbers or a package"
+msgstr "Skenirajte več številk serij ali paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan more products or a package"
+msgstr "Skenirajte več izdelkov ali paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan more products, or scan a new source location"
+msgstr "Skenirajte več izdelkov ali skenirajte novo izvorno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
+msgid "Scan or tap"
+msgstr "Skenirajte ali se dotaknite"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan the destination location"
+msgstr "Skeniranje ciljne lokacije"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan the package %s"
+msgstr "Skeniranje paketa %s"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "Scan the source location"
+msgstr "Optično preberite izvorno lokacijo"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan the source location or a package"
+msgstr "Skeniraj izvorno lokacijo ali paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scanning package"
+msgstr "Paket za skeniranje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+#: model:ir.model,name:stock_barcode.model_stock_scrap
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+msgid "Scrap"
+msgstr "Odpis"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+msgid "Scrap Location"
+msgstr "Lokacija odpada"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#, fuzzy
+msgid "Select a Product"
+msgstr "Izberite izdelek"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#, fuzzy
+msgid "Select where else to pick the product from"
+msgstr "Izberite, kje drugje prevzeti izdelek"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+#, fuzzy
+msgid "Serial/Lot Number"
+msgstr "Serijska/lot številka"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+#, fuzzy
+msgid "Set the maximum delay between each key in ms (100 ms by default.)"
+msgstr ""
+"Nastavite največji zamik med posameznimi tipkami v ms (privzeto 100 ms)."
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__show_barcode_nomenclature
+#, fuzzy
+msgid "Show Barcode Nomenclature"
+msgstr "Prikaži nomenklaturo črtnih kod"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__show_barcode_validation
+msgid "Show Barcode Validation"
+msgstr "Pokaži potrditev črtne kode"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__show_reserved_sns
+#, fuzzy
+msgid "Show reserved lots/SN"
+msgstr "Prikaži rezervirane lote/serijske številke"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Sign"
+msgstr "Podpisovanje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/apply_quant_dialog.xml:0
+#, fuzzy
+msgid "Some serials where not counted, set them as missing?"
+msgstr ""
+"Nekatere serijske številke niso bile preštete, naj jih nastavim kot "
+"manjkajoče?"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Source Location"
+msgstr "Izvorna lokacija"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Source Package"
+msgstr "Izvorni paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#, fuzzy
+msgid "Stay on transfer"
+msgstr "Ostani pri premiku"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_move
+msgid "Stock Move"
+msgstr "Premik zaloge"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_package_type
+msgid "Stock package type"
+msgstr "Tip paketa zaloge"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__is_barcode_picking_type
+#, fuzzy
+msgid ""
+"Technical field indicating if type should be used in barcode app and used to "
+"control visibility in the related UI."
+msgstr ""
+"Tehnično polje, ki označuje, ali naj se vrsta uporablja v aplikaciji za "
+"črtne kode, in se uporablja za nadzor vidnosti v povezanem uporabniškem "
+"vmesniku."
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__show_barcode_validation
+#, fuzzy
+msgid ""
+"Technical field used to compute whether the \"Final Validation\" group "
+"should be displayed, to support combined groups/invisible complexity."
+msgstr ""
+"Tehnično polje, ki se uporablja za izračun, ali naj bo prikazana skupina »"
+"Končna validacija«, za podporo zapletenosti kombiniranih skupin/nevidnosti."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "The encoding '%(encoding_name)s' is not supported."
+msgstr "Kodiranje '%(encoding_name)s' ni podprto."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+#, fuzzy
+msgid "The inventory count has been updated"
+msgstr "Količina zaloge je bila posodobljena"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "The product %s should not be picked in this operation."
+msgstr "Izdelka %s pri tej operaciji ni dovoljeno pobrati."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "The scanned location doesn't belong to this operation's destination"
+msgstr "Skenirana lokacija ne pripada cilju te operacije"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "The scanned location doesn't belong to this operation's location"
+msgstr "Skenirana lokacija ne pripada lokacije te operacije"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "The scanned serial number %(lotName)s is already awaiting confirmation."
+msgstr "Optično prebrana serijska številka %(lotName)s že čaka na potrditev."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#, fuzzy
+msgid "The scanned serial number %s is already used."
+msgstr "Optično prebrana serijska številka %s je že uporabljena."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "The transfer has been cancelled"
+msgstr "Prenos je bil preklican"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "The transfer has been validated"
+msgstr "Prenos je potrjen"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+#, fuzzy
+msgid "There is nothing to apply in this page."
+msgstr "Na tej strani ni ničesar za uveljaviti."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "There is nothing to print in this page."
+msgstr "Na tej strani ni ničesar za tiskanje."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid ""
+"This package contains extra products and extra products are not allowed on "
+"this operation."
+msgstr ""
+"Ta paket vsebuje dodatne izdelke, dodatni izdelki pa pri tem postopku niso "
+"dovoljeni."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "This package is already scanned."
+msgstr "Ta paket je že skeniran"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "This picking is already done"
+msgstr "Ta prenos je že opravljen"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "This picking is cancelled"
+msgstr "Ta prenos je preklican"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#, fuzzy
+msgid "This product doesn't exist."
+msgstr "Ta izdelek ne obstaja."
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_res_config_settings__barcode_separator_regex
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+#, fuzzy
+msgid ""
+"This regex is used in the Barcode application to separate individual "
+"barcodes when an aggregate barcode (i.e. single barcode consisting of "
+"multiple barcode encodings) is scanned."
+msgstr ""
+"Ta regularni izraz se uporablja v aplikaciji Črtne kode za ločevanje "
+"posameznih črtnih kod, ko je optično prebrana sestavljena črtna koda (tj. "
+"ena sama črtna koda, sestavljena iz več kodiranj črtnih kod)."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "This serial number is already used."
+msgstr "Ta serijska številka je že uporabljena."
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+#, fuzzy
+msgid ""
+"Time before processing a batch. Used to group communication to the server "
+"and improve global performance at the cost of reactivity."
+msgstr ""
+"Čas pred obdelavo paketa. Uporablja se za združevanje komunikacije s "
+"strežnikom in izboljšanje splošne zmogljivosti na račun odzivnosti."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "To use packages, enable 'Packages' in the settings"
+msgstr "Za uporabo paketov v nastavitvah omogočite 'Paketi'"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
+#, fuzzy
+msgid "Total Reads"
+msgstr "Skupno število odčitkov"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_picking
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__picking_id
+msgid "Transfer"
+msgstr "Prenos"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__picking_name
+#, fuzzy
+msgid "Transfer Name"
+msgstr "Ime prenosa"
+
+#. module: stock_barcode
+#: model_terms:ir.actions.act_window,help:stock_barcode.stock_picking_action_kanban
+msgid "Transfers allow you to move products from one location to another."
+msgstr "Prenosi dopuščajo premike artiklov iz ene lokacije na drugo."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
+#, fuzzy
+msgid "Unique Tags"
+msgstr "Enolične oznake"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
+msgid "Unit"
+msgstr "Enota"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/package_line.xml:0
+msgid "Unpack"
+msgstr "Odpakiraj"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_stock_quant_tree
+msgid "UoM"
+msgstr "EM"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "Validate"
+msgstr "Potrditev"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Value %(value)s cannot be represented with %(length)s bits"
+msgstr "Vrednosti %(value)s ni mogoče predstaviti z %(length)s biti"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Value '%(value)s' must be an integer"
+msgstr "Vrednost '%(value)s' mora biti celo število"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_scrap___barcode_scanned
+msgid "Value of the last barcode scanned."
+msgstr "Vrednost zadnje skenirane črtne kode."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Value to encode contains invalid character(s): %(invalid_chars)s"
+msgstr "Vrednost za kodiranje vsebuje neveljavne znake: %(invalid_chars)s"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/widgets/image_preview.xml:0
+msgid "Viewer"
+msgstr "Gledalec"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/confirm_quant_dialog.xml:0
+#, fuzzy
+msgid "Wait a Review"
+msgstr "Počakajte na pregled"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Skladišče"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/epc_encoder.py:0
+#, fuzzy
+msgid "Word size must be a positive integer"
+msgstr "Velikost besede mora biti pozitivno celo število"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/apply_quant_dialog.xml:0
+msgid "Yes"
+msgstr "Da"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid ""
+"You are about to take the product %(productName)s from the location %"
+"(locationName)s but this product isn't reserved in this location.\n"
+"Scan the current location to confirm that."
+msgstr ""
+"Izdelek%(productName)s želite vzeti z lokacije %(locationName)s, vendar ta "
+"izdelek na tej lokaciji ni rezerviran.\n"
+"Poskenirajte trenutno lokacijo, da to potrdite."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#, fuzzy
+msgid ""
+"You are expected to scan one or more products or a package available at the "
+"picking location"
+msgstr ""
+"Pričakuje se, da boste skenirali enega ali več izdelkov ali paket, ki je na "
+"voljo na lokaciji za komisioniranje"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "You are supposed to scan %s or another source location"
+msgstr "Pregledati bi morali %s ali drugo izvorno mesto"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "You can't apply a package type. First, scan product or select a line"
+msgstr ""
+"Vrste paketa ni mogoče uporabiti. Najprej skenirajte izdelek ali izberite "
+"vrstico."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "You can't register scrap at this state of the operation"
+msgstr "V tem stanju operacije ne morete registrirati odpadkov"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid ""
+"You have already scanned %s items of this package. Do you want to scan the "
+"whole package?"
+msgstr ""
+"Poskenirali ste že%s elementov tega paketa. Ali želite skenirati celoten "
+"paket?"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
+#, fuzzy
+msgid "You have processed less products than the initial demand:"
+msgstr "Obdelali ste manj izdelkov, kot je bilo prvotno zahtevano:"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#, fuzzy
+msgid "You must scan a package or put in pack"
+msgstr "Paket morate skenirati ali ga vstaviti v paket"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "You must scan a product"
+msgstr "Morate skenirati izdelek"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
+#, fuzzy
+msgid "products were not processed at all."
+msgstr "izdelki sploh niso bili obdelani."
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
+#, fuzzy
+msgid "products were partially processed."
+msgstr "izdelki so bili delno obdelani."
+
+#~ msgid ""
+#~ "Scanned product %s is not reserved for this transfer. Are you sure you "
+#~ "want to add it?"
+#~ msgstr ""
+#~ "Skenirani izdelek %s ni rezervirani za ta prenos. Ste prepričani, da ga "
+#~ "želite dodati?"
+
+#~ msgid "<i class=\"fa fa-print\"/> Print barcode commands"
+#~ msgstr "<i class=\"fa fa-print\"/> Natisnite ukaze črtne kode"
+
+#~ msgid "Apply"
+#~ msgstr "Uporabi"
+
+#~ msgid "Barcode Scanning"
+#~ msgstr "Skeniranje črtne kode"
+
+#~ msgid "Download"
+#~ msgstr "Prenesi"
+
+#~ msgid "General"
+#~ msgstr "Splošno"
+
+#~ msgid "Inventory Adjustment"
+#~ msgstr "Popravek inventarja"
+
+#~ msgid "Inventory Adjustments"
+#~ msgstr "Inventura"
+
+#~ msgid "Packages"
+#~ msgstr "Pakiranja"
+
+#~ msgid "Packaging"
+#~ msgstr "Pakiranje"
+
+#~ msgid "Picking"
+#~ msgstr "Prevzem"
+
+#~ msgid "Product Packaging"
+#~ msgstr "Pakiranje proizvoda"
+
+#~ msgid "Scan a"
+#~ msgstr "Skenirajte"
+
+#~ msgid "Scan an"
+#~ msgstr "Skrenirajte"
+
+#~ msgid "To Process"
+#~ msgstr "Za obdelavo"
+
+#~ msgid "Unit of Measure"
+#~ msgstr "Enota mere"
+
+#~ msgid "document"
+#~ msgstr "dokument"
+
+#~ msgid "location"
+#~ msgstr "lokacijo"
+
+#~ msgid "operation type"
+#~ msgstr "tip operacije"
+
+#~ msgid "product"
+#~ msgstr "izdelek"
+
+#~ msgid "to create a new transfer from this location."
+#~ msgstr "za ustvarjanje novega transferja iz te lokacije."
+
+#~ msgid "to create a new transfer."
+#~ msgstr "za ustvarjanje novega transferja."
+
+#~ msgid "to open it."
+#~ msgstr ", da ga odprete."

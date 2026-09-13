@@ -1,0 +1,2151 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * social
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-10 17:44+0000\n"
+"PO-Revision-Date: 2026-08-25 17:49+0000\n"
+"Last-Translator: Žiga Trček <ziga.trcek@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/social/"
+"sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.8.1\n"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__accounts_count
+#, fuzzy
+msgid "# Accounts"
+msgstr "Konti"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid "%(media_name)s (max %(max_chars)s chars)"
+msgstr "%(media_name)s (največ %(max_chars)s znakov)"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid ", you must first link a social media."
+msgstr ", najprej morate povezati družabno omrežje."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_http_error_view
+#, fuzzy
+msgid "<b>An error occurred while trying to link your account</b>"
+msgstr "<b>Pri poskusu povezovanja vašega računa je prišlo do napake</b>"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
+#, fuzzy
+msgid "<i class=\"fa fa-calendar me-1 small fw-bold\" title=\"Calendar\"/>"
+msgstr "<i class=\"fa fa-calendar me-1 small fw-bold\" title=\"Koledar\"/>"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
+#, fuzzy
+msgid ""
+"<i class=\"fa fa-calendar-check-o me-1 small fw-bold\" title=\"Calendar\"/>"
+msgstr ""
+"<i class=\"fa fa-calendar-check-o me-1 small fw-bold\" title=\"Koledar\"/>"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+#, fuzzy
+msgid "<i class=\"fa fa-globe ms-1\" title=\"See the post\"/>"
+msgstr "<i class=\"fa fa-globe ms-1\" title=\"Oglejte si objavo\"/>"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_http_error_view
+#, fuzzy
+msgid "<i class=\"oi oi-arrow-left\"/> Go back to Odoo"
+msgstr "<i class=\"oi oi-arrow-left\"/> Nazaj v Odoo"
+
+#. module: social
+#: model_terms:web_tour.tour,rainbow_man_message:social.social_tour
+#, fuzzy
+msgid ""
+"<strong>Congrats! Come back in a few minutes to check your statistics.</"
+"strong>"
+msgstr ""
+"<strong>Čestitamo! Čez nekaj minut se vrnite in preverite svojo statistiko.</"
+"strong>"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_needaction
+#: model:ir.model.fields,field_description:social.field_social_post__message_needaction
+msgid "Action Needed"
+msgstr "Potreben je ukrep"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Izjema pri oznaki aktivnosti"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_state
+msgid "Activity State"
+msgstr "Stanje aktivnosti"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste dejavnosti"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Add"
+msgstr "Dodaj"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_form
+#, fuzzy
+msgid "Add Post"
+msgstr "Dodaj objavo"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Add Stream"
+msgstr "Dodaj tok"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/add_stream_modal.js:0
+#: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
+#, fuzzy
+msgid "Add a Stream"
+msgstr "Dodaj tok"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_stream_post
+#, fuzzy
+msgid "Add a stream"
+msgstr "Dodaj tok"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Add an image"
+msgstr "Dodaj sliko"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "All Companies"
+msgstr "Vsa podjetja"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_utm_campaign__social_post_ids
+msgid "All related social media posts"
+msgstr "Vse povezane objave na družabnih omrežjih"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__account_allowed_ids
+msgid "Allowed Accounts"
+msgstr "Dovoljeni računi"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_account_view_search
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__has_active_accounts
+#: model:ir.model.fields,field_description:social.field_social_post_template__has_active_accounts
+msgid "Are Accounts Available?"
+msgstr "So računi na voljo?"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__image_ids
+#: model:ir.model.fields,field_description:social.field_social_post_template__image_ids
+msgid "Attach Images"
+msgstr "Pripni slike"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_live_post__image_ids
+#, fuzzy
+msgid "Attached Images"
+msgstr "Pripete slike"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_attachment_count
+#: model:ir.model.fields,field_description:social.field_social_post__message_attachment_count
+msgid "Attachment Count"
+msgstr "Število prilog"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#: model:ir.model.fields,field_description:social.field_social_account__audience
+msgid "Audience"
+msgstr "Občinstvo"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__audience_trend
+msgid "Audience Trend"
+msgstr "Trend občinstva"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__author_link
+#, fuzzy
+msgid "Author Link"
+msgstr "Povezava avtorja"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__author_name
+msgid "Author Name"
+msgstr "Ime avtorja"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_stream_post__author_link
+#, fuzzy
+msgid "Author link to the external social.media (ex: link to the X Account)."
+msgstr ""
+"Povezava avtorja do zunanjega družbenega medija (npr. povezava do računa X)."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "Before posting, links will be converted to be trackable."
+msgstr "Pred objavo bodo povezave pretvorjene tako, da jim bo mogoče slediti."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_search
+#, fuzzy
+msgid "By Stream"
+msgstr "Po toku"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__csrf_token
+#, fuzzy
+msgid "CSRF Token"
+msgstr "Žeton CSRF"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__calendar_date
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_search
+msgid "Calendar Date"
+msgstr "Koledarski datum"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__utm_campaign_id
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_search
+#: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_form_quick_create_social
+msgid "Campaign"
+msgstr "Kampanja"
+
+#. module: social
+#: model:ir.actions.act_window,name:social.action_view_utm_campaigns
+#: model:ir.ui.menu,name:social.menu_social_campaign
+msgid "Campaigns"
+msgstr "Kampanje"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_view_utm_campaigns
+#, fuzzy
+msgid ""
+"Campaigns are used to centralize your marketing efforts and track their "
+"results."
+msgstr ""
+"Kampanje se uporabljajo za centralizacijo vaših trženjskih prizadevanj in "
+"spremljanje njihovih rezultatov."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__can_link_accounts
+#, fuzzy
+msgid "Can link accounts?"
+msgstr "Ali je mogoče povezati račune?"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/tours/social.js:0
+#, fuzzy
+msgid "Choose which <b>account</b> you would like to link first."
+msgstr "Izberite, kateri <b>račun</b> želite najprej povezati."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Click to refresh."
+msgstr "Kliknite za osvežitev."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+msgid "Clicks"
+msgstr "Klikov"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
+#, fuzzy
+msgid "Clicks:"
+msgstr "Klikov:"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Comment GIF"
+msgstr "Komentar GIF-a"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Comment Image"
+msgstr "Slika komentarja"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__company_id
+#: model:ir.model.fields,field_description:social.field_social_live_post__company_id
+#: model:ir.model.fields,field_description:social.field_social_post__company_id
+#: model:ir.model.fields,field_description:social.field_social_stream__company_id
+#: model:ir.model.fields,field_description:social.field_social_stream_post__company_id
+#: model_terms:ir.ui.view,arch_db:social.social_account_view_search
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_search
+#: model_terms:ir.ui.view,arch_db:social.social_stream_view_search
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: social
+#: model:ir.model,name:social.model_res_config_settings
+msgid "Config Settings"
+msgstr "Uredi nastavitve"
+
+#. module: social
+#: model:ir.ui.menu,name:social.menu_social_configuration
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Connecting Problem"
+msgstr "Težava pri povezovanju"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__social_account_handle
+#, fuzzy
+msgid ""
+"Contains the social media handle of the person that created this account. "
+"E.g: '@odoo.official' for the 'Odoo' X account"
+msgstr ""
+"Vsebuje uporabniško ime v družbenem omrežju osebe, ki je ustvarila ta račun. "
+"Npr.: '@odoo.official' za račun 'Odoo' na omrežju X"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_live_post__message
+#, fuzzy
+msgid ""
+"Content of the social post message that is post-processed (links are "
+"shortened, UTMs, ...)"
+msgstr ""
+"Vsebina sporočila objave v družbenem omrežju, ki je naknadno obdelana "
+"(povezave so skrajšane, UTM-ji, ...)"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__has_streams
+#, fuzzy
+msgid "Controls if social streams are handled on this social media."
+msgstr ""
+"Določa, ali se tokovi družbenih omrežij obravnavajo na tem družbenem mediju."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__can_link_accounts
+#, fuzzy
+msgid "Controls if we can link accounts or not."
+msgstr "Določa, ali lahko povežemo račune ali ne."
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_view_utm_campaigns
+msgid "Create a Campaign"
+msgstr "Ustvari kampanjo"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_post
+#, fuzzy
+msgid "Create a Post"
+msgstr "Ustvari objavo"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_account.py:0
+#, fuzzy
+msgid ""
+"Create other accounts for %(media_names)s for this company or ask %"
+"(company_names)s to share their accounts"
+msgstr ""
+"Ustvarite druge račune za %(media_names)s za to podjetje ali prosite %"
+"(company_names)s, naj delijo svoje račune"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__create_uid
+#: model:ir.model.fields,field_description:social.field_social_live_post__create_uid
+#: model:ir.model.fields,field_description:social.field_social_media__create_uid
+#: model:ir.model.fields,field_description:social.field_social_post__create_uid
+#: model:ir.model.fields,field_description:social.field_social_post_template__create_uid
+#: model:ir.model.fields,field_description:social.field_social_stream__create_uid
+#: model:ir.model.fields,field_description:social.field_social_stream_post__create_uid
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__create_uid
+#: model:ir.model.fields,field_description:social.field_social_stream_type__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__create_date
+#: model:ir.model.fields,field_description:social.field_social_live_post__create_date
+#: model:ir.model.fields,field_description:social.field_social_media__create_date
+#: model:ir.model.fields,field_description:social.field_social_post__create_date
+#: model:ir.model.fields,field_description:social.field_social_post_template__create_date
+#: model:ir.model.fields,field_description:social.field_social_stream__create_date
+#: model:ir.model.fields,field_description:social.field_social_stream_post__create_date
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__create_date
+#: model:ir.model.fields,field_description:social.field_social_stream_type__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__has_account_stats
+#, fuzzy
+msgid ""
+"Defines whether this account has Audience/Engagements/Stories stats.\n"
+"        Account with stats are displayed on the dashboard."
+msgstr ""
+"Določa, ali ima ta račun statistične podatke o občinstvu/interakcijah/"
+"zgodbah.\n"
+"        Računi s statističnimi podatki so prikazani na nadzorni plošči."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__has_trends
+#, fuzzy
+msgid "Defines whether this account has statistics tends or not."
+msgstr "Določa, ali ima ta račun statistične trende ali ne."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_comment.js:0
+#: code:addons/social/static/src/js/stream_post_comments.js:0
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Delete"
+msgstr "Izbriši"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_comment.js:0
+#, fuzzy
+msgid "Delete Comment"
+msgstr "Izbriši komentar"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_comments.js:0
+#, fuzzy
+msgid "Delete Post"
+msgstr "Izbriši objavo"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
+#, fuzzy
+msgid "Demo Mode"
+msgstr "Demo način"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__media_description
+msgid "Description"
+msgstr "Opis"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
+#, fuzzy
+msgid "Developer Accounts"
+msgstr "Razvijalski računi"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Discard"
+msgstr "Opusti"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__display_message
+#: model:ir.model.fields,field_description:social.field_social_post_template__display_message
+#, fuzzy
+msgid "Display Message"
+msgstr "Prikaži sporočilo"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:social.field_social_account__display_name
+#: model:ir.model.fields,field_description:social.field_social_live_post__display_name
+#: model:ir.model.fields,field_description:social.field_social_media__display_name
+#: model:ir.model.fields,field_description:social.field_social_post__display_name
+#: model:ir.model.fields,field_description:social.field_social_post_template__display_name
+#: model:ir.model.fields,field_description:social.field_social_stream__display_name
+#: model:ir.model.fields,field_description:social.field_social_stream_post__display_name
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__display_name
+#: model:ir.model.fields,field_description:social.field_social_stream_type__display_name
+#: model:ir.model.fields,field_description:social.field_utm_campaign__display_name
+#: model:ir.model.fields,field_description:social.field_utm_medium__display_name
+#: model:ir.model.fields,field_description:social.field_utm_source__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_comment.js:0
+#, fuzzy
+msgid "Do you really want to delete this %s?"
+msgstr "Ali res želiš izbrisati ta %s?"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_comments.js:0
+#, fuzzy
+msgid "Do you really want to delete this Post ?"
+msgstr "Ali res želite izbrisati to objavo?"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_post__state__draft
+msgid "Draft"
+msgstr "Osnutek"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid ""
+"Due to length restrictions, the following posts cannot be posted:\n"
+" %s"
+msgstr ""
+"Zaradi omejitev dolžine naslednjih objav ni mogoče objaviti:\n"
+" %s"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Edit"
+msgstr "Uredi"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Edit Your Post"
+msgstr "Uredi svojo objavo"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_res_config_settings__module_social_demo
+#, fuzzy
+msgid "Enable Demo Mode"
+msgstr "Omogoči predstavitveni način"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
+#, fuzzy
+msgid ""
+"Enable this option and load demo data to test the social module. This must "
+"never be used on a production database!"
+msgstr ""
+"Omogočite to možnost in naložite predstavitvene podatke za preizkus "
+"družbenega modula. Tega nikoli ne smete uporabiti v produkcijski zbirki "
+"podatkov!"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#: model:ir.model.fields,field_description:social.field_social_account__engagement
+#: model:ir.model.fields,field_description:social.field_social_live_post__engagement
+#: model:ir.model.fields,field_description:social.field_social_post__engagement
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+#: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_form
+msgid "Engagement"
+msgstr "Zavzetost"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__engagement_trend
+msgid "Engagement Trend"
+msgstr "Trend sodelovanja"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
+#, fuzzy
+msgid "Engagement:"
+msgstr "Zavzetost"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__utm_medium_id
+#, fuzzy
+msgid ""
+"Every time an account is created, a utm.medium is also created and linked to "
+"the account"
+msgstr ""
+"Vsakič, ko je ustvarjen račun, se ustvari tudi utm.medium in poveže z računom"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_live_post__state__failed
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
+msgid "Failed"
+msgstr "Neuspešno"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_live_post__failure_reason
+msgid "Failure Reason"
+msgstr "Razlog neuspeha"
+
+#. module: social
+#: model:ir.actions.act_window,name:social.action_social_stream_post
+#: model:ir.ui.menu,name:social.menu_social_stream_post
+msgid "Feed"
+msgstr "Krma"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+#, fuzzy
+msgid "Feed Posts"
+msgstr "Objave vira"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__stream_posts_count
+#, fuzzy
+msgid "Feed Posts Count"
+msgstr "Število objav v viru"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_follower_ids
+#: model:ir.model.fields,field_description:social.field_social_post__message_follower_ids
+msgid "Followers"
+msgstr "Sledilci"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_partner_ids
+#: model:ir.model.fields,field_description:social.field_social_post__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Sledilci (partnerji)"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font izjemna ikona npr. fa-tasks"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__formatted_published_date
+msgid "Formatted Published Date"
+msgstr "Oblikovani datum objave"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__audience
+#, fuzzy
+msgid ""
+"General audience of the Social Account (Page Likes, Account Follows, ...)."
+msgstr ""
+"Splošno občinstvo družbenega računa (všečki strani, sledilci računa, ...)."
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_stream
+#, fuzzy
+msgid "Go to the"
+msgstr ""
+"Pojdite na\n"
+"Lokacija: model_terms:ir.actions.act_window,help:social.action_social_stream"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__social_account_handle
+#, fuzzy
+msgid "Handle / Short Name"
+msgstr "Uporabniško ime / kratko ime"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/tours/social.js:0
+#, fuzzy
+msgid "Happy with the result? Let's post it!"
+msgstr "Ste zadovoljni z rezultatom? Objavimo ga!"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__has_account_stats
+#, fuzzy
+msgid "Has Account Stats"
+msgstr "Ima statistiko računa"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__has_message
+#: model:ir.model.fields,field_description:social.field_social_post__has_message
+msgid "Has Message"
+msgstr "Ima sporočilo"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__has_trends
+msgid "Has Trends?"
+msgstr "Ima trende?"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__is_hatched
+msgid "Hatched"
+msgstr "Izlegla"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_res_config_settings__id
+#: model:ir.model.fields,field_description:social.field_social_account__id
+#: model:ir.model.fields,field_description:social.field_social_live_post__id
+#: model:ir.model.fields,field_description:social.field_social_media__id
+#: model:ir.model.fields,field_description:social.field_social_post__id
+#: model:ir.model.fields,field_description:social.field_social_post_template__id
+#: model:ir.model.fields,field_description:social.field_social_stream__id
+#: model:ir.model.fields,field_description:social.field_social_stream_post__id
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__id
+#: model:ir.model.fields,field_description:social.field_social_stream_type__id
+#: model:ir.model.fields,field_description:social.field_utm_campaign__id
+#: model:ir.model.fields,field_description:social.field_utm_medium__id
+#: model:ir.model.fields,field_description:social.field_utm_source__id
+msgid "ID"
+msgstr "ID"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona za označevanje izjemne aktivnosti."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__message_needaction
+#: model:ir.model.fields,help:social.field_social_post__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Če je označeno, zahtevajo nova sporočila vašo pozornost."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__message_has_error
+#: model:ir.model.fields,help:social.field_social_media__message_has_sms_error
+#: model:ir.model.fields,help:social.field_social_post__message_has_error
+#: model:ir.model.fields,help:social.field_social_post__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Če je označeno, nekatera sporočila vsebujejo napako pri dostavi."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__image
+#: model:ir.model.fields,field_description:social.field_social_media__image
+msgid "Image"
+msgstr "Slika"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__image_url
+#, fuzzy
+msgid "Image URL"
+msgstr "URL slike"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Image Url"
+msgstr "URL slike"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__image_urls
+#: model:ir.model.fields,field_description:social.field_social_post_template__image_urls
+#, fuzzy
+msgid "Images URLs"
+msgstr "URL-ji slik"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_stream_post__stream_post_image_ids
+#, fuzzy
+msgid "Images that were shared with this post."
+msgstr "Slike, ki so bile deljene s to objavo."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Insights"
+msgstr "Vpogledi"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__is_author
+#, fuzzy
+msgid "Is Author"
+msgstr "Je avtor"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_is_follower
+#: model:ir.model.fields,field_description:social.field_social_post__message_is_follower
+msgid "Is Follower"
+msgstr "Je sledilec"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid ""
+"It appears there is an issue with the Social Media link, click here to link "
+"the account again"
+msgstr ""
+"Kaže, da je prišlo do težave s povezavo do družbenega omrežja, kliknite "
+"tukaj, da znova povežete račun"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
+#, fuzzy
+msgid "It will appear in the Feed once it has posts to display."
+msgstr "Prikazal se bo v viru, ko bodo v njem objave za prikaz."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__write_uid
+#: model:ir.model.fields,field_description:social.field_social_live_post__write_uid
+#: model:ir.model.fields,field_description:social.field_social_media__write_uid
+#: model:ir.model.fields,field_description:social.field_social_post__write_uid
+#: model:ir.model.fields,field_description:social.field_social_post_template__write_uid
+#: model:ir.model.fields,field_description:social.field_social_stream__write_uid
+#: model:ir.model.fields,field_description:social.field_social_stream_post__write_uid
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__write_uid
+#: model:ir.model.fields,field_description:social.field_social_stream_type__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__write_date
+#: model:ir.model.fields,field_description:social.field_social_live_post__write_date
+#: model:ir.model.fields,field_description:social.field_social_media__write_date
+#: model:ir.model.fields,field_description:social.field_social_post__write_date
+#: model:ir.model.fields,field_description:social.field_social_post_template__write_date
+#: model:ir.model.fields,field_description:social.field_social_stream__write_date
+#: model:ir.model.fields,field_description:social.field_social_stream_post__write_date
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__write_date
+#: model:ir.model.fields,field_description:social.field_social_stream_type__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/tours/social.js:0
+#, fuzzy
+msgid "Let's <b>connect</b> to Facebook, LinkedIn or X."
+msgstr "Povežimo se s <b>Facebookom</b>, LinkedInom ali X."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/tours/social.js:0
+#, fuzzy
+msgid "Let's create your own <b>social media</b> dashboard."
+msgstr "Ustvarimo vašo lastno nadzorno ploščo za <b>družbena omrežja</b>."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/tours/social.js:0
+#, fuzzy
+msgid "Let's start posting."
+msgstr "Začnimo objavljati."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Like"
+msgstr "Všeč mi je"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Likes"
+msgstr "Všečki"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__link_description
+msgid "Link Description"
+msgstr "Opis povezave"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_kanban
+#, fuzzy
+msgid "Link Image"
+msgstr "Slika povezave"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__link_image_url
+msgid "Link Image URL"
+msgstr "Povezava URL slike"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__link_title
+msgid "Link Title"
+msgstr "Naslov povezave"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__link_url
+msgid "Link URL"
+msgstr "URL povezave"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Link a new account"
+msgstr "Poveži nov konto"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_media_view_kanban
+#, fuzzy
+msgid "Link account"
+msgstr "Poveži račun"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_account
+#, fuzzy
+msgid "Link an Account"
+msgstr "Povežite račun"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__company_id
+#: model:ir.model.fields,help:social.field_social_live_post__company_id
+#: model:ir.model.fields,help:social.field_social_stream__company_id
+#: model:ir.model.fields,help:social.field_social_stream_post__company_id
+#, fuzzy
+msgid ""
+"Link an account to a company to restrict its usage or keep empty to let all "
+"companies use it."
+msgstr ""
+"Povežite račun s podjetjem, da omejite njegovo uporabo, ali pustite prazno, "
+"da omogočite uporabo vsem podjetjem."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_live_post__live_post_link
+#, fuzzy
+msgid "Link of the live post on the target media."
+msgstr "Povezava do objave v živo v ciljnem mediju."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "Link social accounts"
+msgstr "Povežite račune družbenih omrežij"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__stats_link
+#, fuzzy
+msgid "Link to the external Social Account statistics"
+msgstr "Povezava do statističnih podatkov zunanjega družabnega računa"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__is_media_disconnected
+#, fuzzy
+msgid "Link with external Social Media is broken"
+msgstr "Povezava z zunanjim družbenim omrežjem je prekinjena"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__account_allowed_ids
+#, fuzzy
+msgid "List of the accounts which can be selected for this post."
+msgstr "Seznam računov, ki jih je mogoče izbrati za to objavo."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__live_posts_by_media
+msgid "Live Posts by Social Media"
+msgstr "Objava v živo"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Load more comments..."
+msgstr "Naloži več komentarjev..."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__max_post_length
+msgid "Max Post Length"
+msgstr "Največja dolžina prispevka"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_live_post__media_type
+#: model:ir.model.fields,field_description:social.field_social_post__media_ids
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
+msgid "Media"
+msgstr "Mediji"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__media_count
+#: model:ir.model.fields,field_description:social.field_social_post_template__media_count
+#, fuzzy
+msgid "Media Count"
+msgstr "Število medijev"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__media_type
+#: model:ir.model.fields,field_description:social.field_social_media__media_type
+msgid "Media Type"
+msgstr "Vrsta medija"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_live_post__message
+#: model:ir.model.fields,field_description:social.field_social_post__message
+#: model:ir.model.fields,field_description:social.field_social_post_template__message
+#: model:ir.model.fields,field_description:social.field_social_stream_post__message
+msgid "Message"
+msgstr "Sporočilo"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_has_error
+#: model:ir.model.fields,field_description:social.field_social_post__message_has_error
+msgid "Message Delivery error"
+msgstr "Napaka pri dostavi sporočila"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid "Message posted"
+msgstr "Sporočilo objavljeno"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid "Message posted partially. These are the ones that couldn't be posted:%s"
+msgstr ""
+"Sporočilo je bilo objavljeno le delno. To so tista, ki jih ni bilo mogoče "
+"objaviti:%s"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_ids
+#: model:ir.model.fields,field_description:social.field_social_post__message_ids
+msgid "Messages"
+msgstr "Sporočila"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_live_post__state
+#, fuzzy
+msgid ""
+"Most social.live.posts directly go from Ready to Posted/Failed since they "
+"result of a single call to the third party API.\n"
+"        A 'Posting' state is also available for those that are sent through "
+"batching (like push notifications)."
+msgstr ""
+"Večina social.live.posts neposredno preide iz stanja Pripravljeno v "
+"Objavljeno/Neuspešno, saj so rezultat enega samega klica API-ja tretje "
+"osebe.\n"
+"        Stanje »Objavljanje« je na voljo tudi za tiste, ki se pošljejo v "
+"paketih (kot potisna obvestila)."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Moj rok dejavnosti"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_search
+#, fuzzy
+msgid "My Posts"
+msgstr "Moje objave"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_search
+#, fuzzy
+msgid "My Streams"
+msgstr "Moji tokovi"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__name
+#: model:ir.model.fields,field_description:social.field_social_media__name
+#: model:ir.model.fields,field_description:social.field_social_post__name
+#: model:ir.model.fields,field_description:social.field_social_stream_type__name
+#: model_terms:ir.ui.view,arch_db:social.social_account_view_form
+#: model_terms:ir.ui.view,arch_db:social.social_account_view_search
+msgid "Name"
+msgstr "Naziv"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "New Post"
+msgstr "Nova objava"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "New comments are disabled"
+msgstr "Novi komentarji so onemogočeni"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "New content available"
+msgstr "Na voljo je nova vsebina"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Next"
+msgstr "Naprej"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Naslednji dogodek v koledarju"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok naslednje aktivnosti"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_summary
+msgid "Next Activity Summary"
+msgstr "Povzetek naslednje aktivnosti"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tip naslednje aktivnosti"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_account
+#, fuzzy
+msgid "No Social Account yet!"
+msgstr "Še ni družabnega računa!"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_stream
+#, fuzzy
+msgid "No Social Streams yet!"
+msgstr "Družabnih tokov še ni!"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_stream_post
+#, fuzzy
+msgid "No Stream added yet!"
+msgstr "Tok še ni dodan!"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "No comments yet."
+msgstr "Še nobenega komentarja."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
+#, fuzzy
+msgid "No social accounts configured, please contact your administrator."
+msgstr "Družabni računi niso konfigurirani, obrnite se na skrbnika."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_needaction_counter
+#: model:ir.model.fields,field_description:social.field_social_post__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Število aktivnosti"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Number of Followers of your channel"
+msgstr "Število sledilcev vašega kanala"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__click_count
+msgid "Number of clicks"
+msgstr "Število klikov"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_has_error_counter
+#: model:ir.model.fields,field_description:social.field_social_post__message_has_error_counter
+msgid "Number of errors"
+msgstr "Število napak"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_utm_campaign__social_engagement
+msgid ""
+"Number of interactions (likes, shares, comments ...) with the social posts"
+msgstr "Število interakcij (všečki, delitve, komentarji ...)"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__message_needaction_counter
+#: model:ir.model.fields,help:social.field_social_post__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Število sporočil, ki zahtevajo ukrepanje"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__message_has_error_counter
+#: model:ir.model.fields,help:social.field_social_post__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Število sporočil, ki niso bila pravilno dostavljena."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_live_post__engagement
+#: model:ir.model.fields,help:social.field_social_post__engagement
+#, fuzzy
+msgid "Number of people engagements with the post (Likes, comments...)"
+msgstr "Število interakcij ljudi z objavo (všečki, komentarji ...)"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__engagement
+#, fuzzy
+msgid "Number of people engagements with your posts (Likes, Comments, ...)."
+msgstr "Število interakcij ljudi z vašimi objavami (všečki, komentarji, ...)."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__stories
+#, fuzzy
+msgid "Number of stories created from your posts (Shares, Reposts, ...)."
+msgstr ""
+"Število zgodb, ustvarjenih iz vaših objav (delitve, ponovne objave, ...)."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid ""
+"Number of times people have engaged with your posts (likes, comments, "
+"shares,...)"
+msgstr ""
+"Število interakcij ljudi z vašimi objavami (všečki, komentarji, delitve,...)"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid ""
+"Number of times people who have engaged with your channel have created "
+"stories on their friends' or followers' feed (Shares, Reposts...)"
+msgstr ""
+"Število, kolikokrat so ljudje, ki so sodelovali z vašim kanalom, ustvarili "
+"zgodbe v viru svojih prijateljev ali sledilcev (delitve, ponovne objave ...)"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Or add"
+msgstr "Ali dodaj"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__audience_trend
+#, fuzzy
+msgid "Percentage of increase/decrease of the audience over a defined period."
+msgstr "Odstotek povečanja/zmanjšanja občinstva v določenem obdobju."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__engagement_trend
+#, fuzzy
+msgid ""
+"Percentage of increase/decrease of the engagement over a defined period."
+msgstr "Odstotek povečanja/zmanjšanja angažiranosti v določenem obdobju."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__stories_trend
+#, fuzzy
+msgid "Percentage of increase/decrease of the stories over a defined period."
+msgstr "Odstotek povečanja/zmanjšanja zgodb v določenem obdobju."
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid "Please specify at least one account to post into (for post ID(s) %s)."
+msgstr "Navedite vsaj en račun, v katerega želite objaviti (za ID-je objav %s)."
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post_template.py:0
+#, fuzzy
+msgid "Please specify either a message or upload some images."
+msgstr "Določite sporočilo ali naložite nekaj slik."
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+msgid "Post"
+msgstr "Objavi"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/fields/social_many2many_images.xml:0
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
+#: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_kanban
+#, fuzzy
+msgid "Post Image"
+msgstr "Objavi sliko"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/fields/social_many2many_images.js:0
+#: code:addons/social/static/src/js/post_kanban_view.js:0
+#: code:addons/social/static/src/js/stream_post_comments.js:0
+#: code:addons/social/static/src/js/stream_post_kanban_renderer.js:0
+#, fuzzy
+msgid "Post Images"
+msgstr "Slike objave"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_live_post__live_post_link
+#: model:ir.model.fields,field_description:social.field_social_stream_post__post_link
+msgid "Post Link"
+msgstr "Objava povezave"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_search
+#: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_search
+#, fuzzy
+msgid "Post Message"
+msgstr "Objavi sporočilo"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+msgid "Post Now"
+msgstr "Objavi zdaj"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_stream_post__post_link
+#, fuzzy
+msgid ""
+"Post link to the external social.media (ex: link to the actual Facebook "
+"Post)."
+msgstr ""
+"Povezava do objave na zunanjem družbenem omrežju (npr. povezava do dejanske "
+"objave na Facebooku)."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "Post on"
+msgstr "Objavi na"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_live_post__state__posted
+#: model:ir.model.fields.selection,name:social.selection__social_post__state__posted
+msgid "Posted"
+msgstr "Objavljeno"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_live_post__state__posting
+#: model:ir.model.fields.selection,name:social.selection__social_post__state__posting
+msgid "Posting"
+msgstr "Objavljanje"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream__stream_post_ids
+#: model:ir.ui.menu,name:social.menu_social_post
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+#: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_form
+#: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_kanban
+msgid "Posts"
+msgstr "Članki"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__live_post_ids
+#, fuzzy
+msgid "Posts By Account"
+msgstr "Objave po računu"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "Posts Preview"
+msgstr "Predogled objav"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Press Enter to edit. Press Shift+Enter to insert a Line Break."
+msgstr ""
+"Pritisnite Enter za urejanje. Pritisnite Shift+Enter za vstavljanje preloma "
+"vrstice."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Press Enter to post. Press Shift+Enter to insert a Line Break."
+msgstr ""
+"Pritisnite Enter za objavo. Pritisnite Shift+Enter za vstavljanje preloma "
+"vrstice."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "Preview your post"
+msgstr "Predogled vaše objave"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Previous"
+msgstr "Nazaj"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__post_method
+#, fuzzy
+msgid "Publish your post immediately or schedule it at a later time."
+msgstr "Objavite svojo objavo takoj ali jo razporedite za poznejši čas."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_search
+#, fuzzy
+msgid "Published By"
+msgstr "Objavil"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__published_date
+msgid "Published Date"
+msgstr "Datum objave"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__published_date
+msgid "Published date"
+msgstr "Datum objave"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__rating_ids
+#: model:ir.model.fields,field_description:social.field_social_post__rating_ids
+msgid "Ratings"
+msgstr "Ocene"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_live_post__state__ready
+msgid "Ready"
+msgstr "Pripravljeno"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__media_type
+msgid "Related Social Media"
+msgstr "Povezani družabni mediji"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__media_id
+#, fuzzy
+msgid "Related Social Media (Facebook, X, ...)."
+msgstr "Povezani družbeni medij (Facebook, X, ...)."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__account_id
+msgid "Related social Account"
+msgstr "Povezan družabni račun"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Reply"
+msgstr "Odgovori"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni uporabnik"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_live_post_view_form
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+msgid "Retry"
+msgstr "Ponovno"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__message_has_sms_error
+#: model:ir.model.fields,field_description:social.field_social_post__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Napaka pri dostavi SMS"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+msgid "Schedule"
+msgstr "Razpored"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_post__post_method__scheduled
+#, fuzzy
+msgid "Schedule later"
+msgstr "Načrtuj pozneje"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_post__state__scheduled
+msgid "Scheduled"
+msgstr "Načrtovano"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__scheduled_date
+msgid "Scheduled Date"
+msgstr "Načrtovani datum"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid ""
+"Selected accounts (%(account_list)s) do not match the selected company (%"
+"(company)s)"
+msgstr ""
+"Izbrani konti (%(account_list)s) se ne ujemajo z izbranim podjetjem (%"
+"(company)s)"
+
+#. module: social
+#: model:ir.model.fields.selection,name:social.selection__social_post__post_method__now
+#, fuzzy
+msgid "Send now"
+msgstr "Pošlji zdaj"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream__sequence
+msgid "Sequence"
+msgstr "Zaporedje"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_stream__sequence
+#, fuzzy
+msgid "Sequence used to order streams (mainly for the 'Feed' kanban view)"
+msgstr ""
+"Zaporedje, ki se uporablja za razvrščanje tokov (predvsem za kanbanski "
+"pogled 'Vir')"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__max_post_length
+#, fuzzy
+msgid ""
+"Set a maximum number of characters can be posted in post. 0 for no limit."
+msgstr ""
+"Nastavite največje število znakov, ki jih je mogoče objaviti v objavi. 0 "
+"pomeni brez omejitve."
+
+#. module: social
+#: model:ir.actions.act_window,name:social.action_social_global_settings
+#: model:ir.ui.menu,name:social.menu_social_global_settings
+msgid "Settings"
+msgstr "Nastavitve"
+
+#. module: social
+#: model:ir.model,name:social.model_social_account
+#: model:ir.model.fields,field_description:social.field_social_live_post__account_id
+#: model:ir.model.fields,field_description:social.field_social_stream__account_id
+#: model_terms:ir.ui.view,arch_db:social.social_account_view_form
+msgid "Social Account"
+msgstr "Družabni račun"
+
+#. module: social
+#: model:ir.actions.act_window,name:social.action_social_account
+#: model:ir.model.fields,field_description:social.field_social_media__account_ids
+#: model:ir.model.fields,field_description:social.field_social_post__account_ids
+#: model:ir.model.fields,field_description:social.field_social_post_template__account_ids
+#: model:ir.ui.menu,name:social.menu_social_account
+#: model_terms:ir.ui.view,arch_db:social.social_account_view_list
+msgid "Social Accounts"
+msgstr "Račun na družabnih omrežjih"
+
+#. module: social
+#: model:ir.model,name:social.model_social_live_post
+#, fuzzy
+msgid "Social Live Post"
+msgstr "Objava v živo na družbenih omrežjih"
+
+#. module: social
+#: model:res.groups,name:social.group_social_manager
+#, fuzzy
+msgid "Social Manager"
+msgstr "Vodja družbenih omrežij"
+
+#. module: social
+#: model:ir.ui.menu,name:social.menu_social_global
+#: model:res.groups.privilege,name:social.res_groups_privilege_social_marketing
+#: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
+msgid "Social Marketing"
+msgstr "Družbeno Trženje"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#: model:ir.actions.act_window,name:social.action_social_media
+#: model:ir.model,name:social.model_social_media
+#: model:ir.model.fields,field_description:social.field_social_account__media_id
+#: model:ir.model.fields,field_description:social.field_social_stream__media_id
+#: model:ir.model.fields,field_description:social.field_social_stream_type__media_id
+#: model:ir.ui.menu,name:social.menu_social_media
+#: model_terms:ir.ui.view,arch_db:social.social_media_view_kanban
+#: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_form
+msgid "Social Media"
+msgstr "Socialni medij"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_utm_campaign__social_posts_count
+msgid "Social Media Posts"
+msgstr "Objave v družabnih medijih"
+
+#. module: social
+#: model:ir.model,name:social.model_social_post
+#: model:ir.model.fields,field_description:social.field_social_live_post__post_id
+#: model_terms:ir.ui.view,arch_db:social.social_live_post_view_form
+msgid "Social Post"
+msgstr "Objava na družbenih omrežjih"
+
+#. module: social
+#: model:ir.model,name:social.model_social_post_template
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+msgid "Social Post Template"
+msgstr "Predloga za objavo v družabnih omrežjih"
+
+#. module: social
+#: model:ir.actions.act_window,name:social.social_post_template_action
+#, fuzzy
+msgid "Social Post Templates"
+msgstr "Predloge za objave v družabnih omrežjih"
+
+#. module: social
+#: model:ir.actions.act_window,name:social.action_social_post
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_calendar
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_pivot
+#, fuzzy
+msgid "Social Posts"
+msgstr "Objave na družbenih omrežjih"
+
+#. module: social
+#: model:ir.model,name:social.model_social_stream
+#: model:ir.model.fields,field_description:social.field_social_stream_post__stream_id
+#: model_terms:ir.ui.view,arch_db:social.social_stream_view_form
+msgid "Social Stream"
+msgstr "Socialni pretok"
+
+#. module: social
+#: model:ir.model,name:social.model_social_stream_post
+#: model:ir.model,name:social.model_social_stream_type
+#, fuzzy
+msgid "Social Stream Post"
+msgstr "Objava v socialnem pretoku"
+
+#. module: social
+#: model:ir.model,name:social.model_social_stream_post_image
+#, fuzzy
+msgid "Social Stream Post Image Attachment"
+msgstr "Slikovna priponka objave v družbenem toku"
+
+#. module: social
+#: model:ir.actions.act_window,name:social.action_social_stream
+#: model:ir.ui.menu,name:social.menu_social_stream
+#, fuzzy
+msgid "Social Streams"
+msgstr "Socialni pretoki"
+
+#. module: social
+#: model:res.groups,name:social.group_social_user
+#, fuzzy
+msgid "Social User"
+msgstr "Uporabnik družbenih omrežij"
+
+#. module: social
+#: model:ir.actions.server,name:social.ir_cron_post_scheduled_ir_actions_server
+#, fuzzy
+msgid "Social: Publish Scheduled Posts"
+msgstr "Družabno: Objavi načrtovane objave"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_kanban_dashboard.js:0
+#, fuzzy
+msgid ""
+"Sorry, you're not allowed to re-link this account, please contact your "
+"administrator."
+msgstr "Oprostite, tega računa ne smete znova povezati, obrnite se na skrbnika."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__source_id
+msgid "Source"
+msgstr "Vir"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__live_posts_by_media
+#, fuzzy
+msgid ""
+"Special technical field that holds a dict containing the live posts names by "
+"media ids (used for kanban view)."
+msgstr ""
+"Posebno tehnično polje, ki vsebuje slovar z imeni objav v živo po ID-jih "
+"medijev (uporablja se za kanban pogled)."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/fields/social_post_split_per_media.xml:0
+#, fuzzy
+msgid "Split Per Media"
+msgstr "Razdeli po mediju"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__is_split_per_media
+#: model:ir.model.fields,field_description:social.field_social_post_template__is_split_per_media
+#, fuzzy
+msgid "Split Per Network"
+msgstr "Razdeli po omrežju"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__stats_link
+#, fuzzy
+msgid "Stats Link"
+msgstr "Povezava do statistike"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_live_post__state
+#: model:ir.model.fields,field_description:social.field_social_post__state
+msgid "Status"
+msgstr "Status"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na osnovi aktivnosti\n"
+"Zapadel: Rok je že prekoračen\n"
+"Danes: Datum aktivnosti je danes\n"
+"Planirano: Bodoče aktivnosti."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#: model:ir.model.fields,field_description:social.field_social_account__stories
+#, fuzzy
+msgid "Stories"
+msgstr "Zgodbe"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_account__stories_trend
+#, fuzzy
+msgid "Stories Trend"
+msgstr "Trend zgodb"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
+#, fuzzy
+msgid "Stream Added (%s)"
+msgstr "Tok dodan (%s)"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post_image__stream_post_id
+#, fuzzy
+msgid "Stream Post"
+msgstr "Objava toka"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__stream_post_image_ids
+#, fuzzy
+msgid "Stream Post Images"
+msgstr "Slike objave toka"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream_post__stream_post_image_urls
+#, fuzzy
+msgid "Stream Post Images URLs"
+msgstr "URL-ji slik objave toka"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__stream_type_ids
+msgid "Stream Types"
+msgstr "Vrste tokov"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream__stream_type_type
+#: model:ir.model.fields,field_description:social.field_social_stream_type__stream_type
+#, fuzzy
+msgid "Stream type name (technical)"
+msgstr "Ime vrste toka (tehnično)"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__has_streams
+msgid "Streams Enabled"
+msgstr "Omogočeni tokovi"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__live_post_ids
+#, fuzzy
+msgid "Sub-posts that will be published on each selected social accounts."
+msgstr ""
+"Podobjave, ki bodo objavljene na vsakem izbranem računu družbenega omrežja."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Sync"
+msgstr "Sinhroniziraj"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__account_ids
+#: model:ir.model.fields,help:social.field_social_post_template__account_ids
+#, fuzzy
+msgid "The accounts on which this post will be published."
+msgstr "Računi, na katerih bo ta objava objavljena."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_stream_post__author_name
+#, fuzzy
+msgid "The post author name based on third party information (ex: 'John Doe')."
+msgstr ""
+"Ime avtorja objave na podlagi informacij tretje osebe (npr.: 'John Doe')."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__state
+#, fuzzy
+msgid ""
+"The post is considered as 'Posted' when all its sub-posts (one per social "
+"account) are either 'Failed' or 'Posted'"
+msgstr ""
+"Objava se šteje kot 'Objavljeno', ko so vse njene podobjave (ena za vsak "
+"račun družbenega omrežja) bodisi 'Neuspešno' bodisi 'Objavljeno'"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_stream_post__published_date
+#, fuzzy
+msgid "The post published date based on third party information."
+msgstr "Datum objave prispevka na podlagi informacij tretje osebe."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_live_post__failure_reason
+#, fuzzy
+msgid ""
+"The reason why a post is not successfully posted on the Social Media (eg: "
+"connection error, duplicated post, ...)."
+msgstr ""
+"Razlog, zakaj objava ni bila uspešno objavljena na družbenem omrežju (npr.: "
+"napaka pri povezavi, podvojena objava, ...)."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream__media_image
+msgid "The related Social Media's image"
+msgstr "Slika povezanih družabnih medijev"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__media_ids
+#, fuzzy
+msgid "The social medias linked to the selected social accounts."
+msgstr "Družbena omrežja, povezana z izbranimi družbenimi računi."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__has_post_errors
+#, fuzzy
+msgid "There are post errors on sub-posts"
+msgstr "Na podobjavah so napake pri objavljanju"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__csrf_token
+#, fuzzy
+msgid ""
+"This token can be used to verify that an incoming request from a social "
+"provider has not been forged."
+msgstr ""
+"Ta žeton se lahko uporabi za preverjanje, ali vhodna zahteva ponudnika "
+"družbenih omrežij ni bila ponarejena."
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream__name
+msgid "Title"
+msgstr "Naslov"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "To add a stream"
+msgstr "Dodati tok"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_stream__stream_type_id
+msgid "Type"
+msgstr "Tip"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta dejavnosti izjeme na zapisu."
+
+#. module: social
+#: model:ir.model,name:social.model_utm_campaign
+msgid "UTM Campaign"
+msgstr "UTM kampanja"
+
+#. module: social
+#: model:ir.model,name:social.model_utm_medium
+#: model:ir.model.fields,field_description:social.field_social_account__utm_medium_id
+msgid "UTM Medium"
+msgstr "UTM Medij"
+
+#. module: social
+#: model:ir.model,name:social.model_utm_source
+msgid "UTM Source"
+msgstr "UTM vir"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/controllers/main.py:0
+#, fuzzy
+msgid "Uh-oh! It looks like this message has been deleted from X."
+msgstr "Ojoj! Zdi se, da je bilo to sporočilo izbrisano iz omrežja X."
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+msgid "Unknown error"
+msgstr "Neznana napaka"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post_template.py:0
+#, fuzzy
+msgid "Uploaded file does not seem to be a valid image."
+msgstr "Zdi se, da naložena datoteka ni veljavna slika."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
+#, fuzzy
+msgid ""
+"Use your own Developer Accounts on our Social app. Those credentials are "
+"provided in the developer section of your professional social media account."
+msgstr ""
+"Uporabite lastne razvijalske račune v naši družabni aplikaciji. Te "
+"poverilnice so na voljo v razdelku za razvijalce vašega profesionalnega "
+"računa družbenega omrežja."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_account__media_type
+#: model:ir.model.fields,help:social.field_social_live_post__media_type
+#: model:ir.model.fields,help:social.field_social_media__media_type
+#: model:ir.model.fields,help:social.field_social_stream_post__media_type
+#, fuzzy
+msgid ""
+"Used to make comparisons when we need to restrict some features to a "
+"specific media ('facebook', 'x', ...)."
+msgstr ""
+"Uporablja se za primerjave, ko moramo nekatere funkcionalnosti omejiti na "
+"določen medij ('facebook', 'x', ...)."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "View"
+msgstr "Prikaz"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_account_view_form
+#: model_terms:ir.ui.view,arch_db:social.social_post_view_form
+msgid "Visible to all"
+msgstr "Vidno vsem"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_media__website_message_ids
+#: model:ir.model.fields,field_description:social.field_social_post__website_message_ids
+msgid "Website Messages"
+msgstr "Sporočila iz spletne strani"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_media__website_message_ids
+#: model:ir.model.fields,help:social.field_social_post__website_message_ids
+msgid "Website communication history"
+msgstr "Kronologija komunikacij spletne strani"
+
+#. module: social
+#: model:ir.model.fields,field_description:social.field_social_post__post_method
+msgid "When"
+msgstr "Kdaj"
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__published_date
+#, fuzzy
+msgid ""
+"When the global post was published. The actual sub-posts published dates may "
+"be different depending on the media."
+msgstr ""
+"Ko je bila globalna objava objavljena. Dejanski datumi objave podobjav se "
+"lahko razlikujejo glede na medij."
+
+#. module: social
+#: model:ir.model.fields,help:social.field_social_post__image_ids
+#: model:ir.model.fields,help:social.field_social_post_template__image_ids
+#, fuzzy
+msgid "Will attach images to your posts (if the social media supports it)."
+msgstr "Slike bodo priložene vašim objavam (če jih družbeno omrežje podpira)."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "Write a comment..."
+msgstr "Zapiši komentar..."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "Write a message or upload an image"
+msgstr "Napišite sporočilo ali naložite sliko"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/tours/social.js:0
+#, fuzzy
+msgid "Write a message to get a preview of your post."
+msgstr "Napišite sporočilo, da dobite predogled svoje objave."
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "Write a reply..."
+msgstr "Napišite odgovor..."
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_post
+#, fuzzy
+msgid ""
+"Write an enticing post, add images and schedule it to be posted later on "
+"multiple platforms at once."
+msgstr ""
+"Napišite privlačno objavo, dodajte slike in jo razporedite za poznejšo "
+"objavo na več platformah hkrati."
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/utm_medium.py:0
+#, fuzzy
+msgid ""
+"You cannot delete these UTM Mediums as they are linked to the following "
+"social accounts in Social:\n"
+"%(social_accounts)s"
+msgstr ""
+"Teh medijev UTM ne morete izbrisati, saj so v aplikaciji Družabno povezani z "
+"naslednjimi družabnimi računi:\n"
+"%(social_accounts)s"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/utm_source.py:0
+#, fuzzy
+msgid ""
+"You cannot delete these UTM Sources as they are linked to social posts in "
+"Social:\n"
+"%(utm_sources)s"
+msgstr ""
+"Teh virov UTM ne morete izbrisati, ker so povezani z objavami v družbenih "
+"omrežjih v aplikaciji Social:\n"
+"%(utm_sources)s"
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid "You cannot reschedule a post that has already been posted."
+msgstr "Objave, ki je že bila objavljena, ni mogoče prestaviti."
+
+#. module: social
+#. odoo-python
+#: code:addons/social/models/social_post.py:0
+#, fuzzy
+msgid "You cannot schedule a post in the past."
+msgstr "Objave ne morete načrtovati v preteklosti."
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "Your Post"
+msgstr "Vaša objava"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "a Stream from an existing account"
+msgstr "Tok iz obstoječega računa"
+
+#. module: social
+#: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
+#, fuzzy
+msgid "before posting."
+msgstr "pred objavo"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/js/stream_post_comment.js:0
+#, fuzzy
+msgid "comment/reply"
+msgstr "komentar/odgovor"
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_stream
+#, fuzzy
+msgid "dashboard"
+msgstr "Nadzorna plošča"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+msgid "for"
+msgstr "za"
+
+#. module: social
+#. odoo-javascript
+#: code:addons/social/static/src/xml/social_templates.xml:0
+#, fuzzy
+msgid "replies..."
+msgstr "odgovorov..."
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_stream_post
+#, fuzzy
+msgid "to keep an eye on your own posts and monitor all social activities."
+msgstr ""
+"da spremljate svoje objave in nadzorujete vse dejavnosti v družbenih "
+"omrežjih."
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_stream
+#, fuzzy
+msgid "to link your accounts and start posting."
+msgstr "za povezavo vaših računov in začetek objavljanja."
+
+#. module: social
+#: model_terms:ir.actions.act_window,help:social.action_social_account
+#, fuzzy
+msgid "to start posting from Odoo."
+msgstr "za začetek objavljanja iz Odooja."

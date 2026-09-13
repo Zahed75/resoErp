@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_reso_distribution_run" model="ir.actions.act_window">
+        <field name="name">Distribution Runs</field>
+        <field name="res_model">reso.distribution.run</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first owner income distribution run.
+            </p>
+        </field>
+    </record>
+
+    <record id="view_reso_distribution_run_list" model="ir.ui.view">
+        <field name="name">reso.distribution.run.list</field>
+        <field name="model">reso.distribution.run</field>
+        <field name="arch" type="xml">
+            <list string="Distribution Runs">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="period_start"/>
+                <field name="period_end"/>
+                <field name="total_amount"/>
+                <field name="total_distributed"/>
+                <field name="state" decoration-info="state == 'draft'"
+                    decoration-warning="state == 'calculated'"
+                    decoration-success="state == 'approved'"
+                    decoration-muted="state == 'paid'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reso_distribution_run_form" model="ir.ui.view">
+        <field name="name">reso.distribution.run.form</field>
+        <field name="model">reso.distribution.run</field>
+        <field name="arch" type="xml">
+            <form string="Distribution Run">
+                <header>
+                    <button name="action_calculate" string="Calculate"
+                        type="object" class="btn-primary"
+                        invisible="state != 'draft'"/>
+                    <button name="action_approve" string="Approve"
+                        type="object" class="btn-primary"
+                        invisible="state != 'calculated'"/>
+                    <button name="action_mark_paid" string="Mark Paid"
+                        type="object" class="btn-primary"
+                        invisible="state != 'approved'"/>
+                    <button name="action_reset" string="Reset to Draft"
+                        type="object"
+                        invisible="state != 'calculated'"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,calculated,approved,paid"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" icon="fa-users"
+                            type="object" name="action_view_lines">
+                            <div class="o_stat_info">
+                                <field name="line_count" class="o_stat_value"/>
+                                <span class="o_stat_text">Owners</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="property_id"/>
+                            <field name="period_start"/>
+                            <field name="period_end"/>
+                        </group>
+                        <group>
+                            <field name="total_amount"/>
+                            <field name="total_distributed"/>
+                            <field name="calculated_by"/>
+                            <field name="approved_by"/>
+                            <field name="company_id"
+                                groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Distribution Lines" name="lines">
+                            <field name="line_ids">
+                                <list>
+                                    <field name="registry_id"/>
+                                    <field name="partner_id"/>
+                                    <field name="fraction_percent"/>
+                                    <field name="amount"/>
+                                    <field name="paid"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_reso_distribution_line_list" model="ir.ui.view">
+        <field name="name">reso.distribution.line.list</field>
+        <field name="model">reso.distribution.line</field>
+        <field name="arch" type="xml">
+            <list string="Distribution Lines" editable="bottom">
+                <field name="run_id"/>
+                <field name="registry_id"/>
+                <field name="partner_id"/>
+                <field name="fraction_percent"/>
+                <field name="amount"/>
+                <field name="paid"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reso_distribution_run_search" model="ir.ui.view">
+        <field name="name">reso.distribution.run.search</field>
+        <field name="model">reso.distribution.run</field>
+        <field name="arch" type="xml">
+            <search string="Distribution Runs">
+                <field name="name"/>
+                <field name="property_id"/>
+                <filter string="Draft" name="draft"
+                    domain="[('state', '=', 'draft')]"/>
+                <filter string="Calculated" name="calculated"
+                    domain="[('state', '=', 'calculated')]"/>
+                <filter string="Approved" name="approved"
+                    domain="[('state', '=', 'approved')]"/>
+                <filter string="Paid" name="paid"
+                    domain="[('state', '=', 'paid')]"/>
+                <group>
+                    <filter string="Property" name="group_property"
+                        context="{'group_by': 'property_id'}"/>
+                    <filter string="Status" name="group_state"
+                        context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

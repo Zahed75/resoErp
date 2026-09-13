@@ -1,0 +1,244 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_workorder_iot
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-09 18:44+0000\n"
+"PO-Revision-Date: 2026-06-14 21:55+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"mrp_workorder_iot/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__action
+msgid "Action"
+msgstr "ການດຳເນີນການ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_quality_check__boxes
+msgid "Boxes"
+msgstr "ກ່ອງ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__canc
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#. module: mrp_workorder_iot
+#. odoo-javascript
+#: code:addons/mrp_workorder_iot/static/src/mrp_display/quality_check.js:0
+msgid "Capturing image..."
+msgstr "ກຳລັງຖ່າຍຮູບ..."
+
+#. module: mrp_workorder_iot
+#. odoo-javascript
+#: code:addons/mrp_workorder_iot/static/src/mrp_display/picture_preview_dialog.xml:0
+msgid "Close"
+msgstr "ປິດ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__clmo
+msgid "Close MO"
+msgstr "ປິດ MO"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__clwo
+msgid "Close WO"
+msgstr "ປິດ WO"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__create_uid
+msgid "Created by"
+msgstr "ສ້າງໂດຍ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__create_date
+msgid "Created on"
+msgstr "ສ້າງເມື່ອ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__device_id
+msgid "Device"
+msgstr "ອຸປະກອນ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_device__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_mrp_workcenter__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_quality_check__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__fini
+msgid "Finish"
+msgstr "ສຳເລັດ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_device__id
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__id
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_mrp_workcenter__id
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_quality_check__id
+msgid "ID"
+msgstr "ໄອດີ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model,name:mrp_workorder_iot.model_iot_device
+msgid "IOT Device"
+msgstr "ອຸປະກອນ IoT"
+
+#. module: mrp_workorder_iot
+#: model:ir.model,name:mrp_workorder_iot.model_iot_trigger
+msgid "IOT Trigger"
+msgstr "ຕົວຈຸດຊະນວນ IoT"
+
+#. module: mrp_workorder_iot
+#. odoo-javascript
+#: code:addons/mrp_workorder_iot/static/src/mrp_display/quality_check.js:0
+msgid "Image captured successfully"
+msgstr "ຖ່າຍຮູບສຳເລັດແລ້ວ"
+
+#. module: mrp_workorder_iot
+#: model_terms:ir.ui.view,arch_db:mrp_workorder_iot.iot_device_view_form
+#: model_terms:ir.ui.view,arch_db:mrp_workorder_iot.mrp_workcenter_view_form_iot
+msgid "IoT Triggers"
+msgstr "ຕົວຈຸດຊະນວນ IoT"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__key
+msgid "Key"
+msgstr "ຄີ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__write_uid
+msgid "Last Updated by"
+msgstr "ອັບເດດລ່າສຸດໂດຍ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__write_date
+msgid "Last Updated on"
+msgstr "ອັບເດດລ່າສຸດເມື່ອ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__next
+msgid "Next"
+msgstr "ຖັດໄປ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__pack
+msgid "Pack"
+msgstr "ຫຸ້ມຫໍ່"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__paus
+msgid "Pause"
+msgstr "ຢຸດຊົ່ວຄາວ"
+
+#. module: mrp_workorder_iot
+#. odoo-javascript
+#: code:addons/mrp_workorder_iot/static/src/mrp_display/pedal_status_button.xml:0
+msgid "Pedal Status"
+msgstr "ສະຖານະຄັນຢຽບ"
+
+#. module: mrp_workorder_iot
+#. odoo-javascript
+#: code:addons/mrp_workorder_iot/static/src/mrp_display/quality_check.js:0
+msgid "Please check if the device is still connected."
+msgstr "ກະລຸນາກວດສອບວ່າອຸປະກອນຍັງເຊື່ອມຕໍ່ຢູ່ຫຼືບໍ່."
+
+#. module: mrp_workorder_iot
+#. odoo-javascript
+#: code:addons/mrp_workorder_iot/static/src/mrp_display/picture_preview_dialog.xml:0
+msgid "Preview"
+msgstr "ຕົວຢ່າງ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__prev
+msgid "Previous"
+msgstr "ກ່ອນໜ້າ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__prsl
+msgid "Print Delivery Slip"
+msgstr "ພິມໃບສົ່ງເຄື່ອງ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__prnt
+msgid "Print Labels"
+msgstr "ພິມສະຫຼາກ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__prop
+msgid "Print Operation"
+msgstr "ພິມການປະຕິບັດງານ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model,name:mrp_workorder_iot.model_quality_check
+msgid "Quality Check"
+msgstr "ການກວດສອບຄຸນນະພາບ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__reco
+msgid "Record Production"
+msgstr "ບັນທຶກການຜະລິດ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__scra
+msgid "Scrap"
+msgstr "ສິນຄ້າເສຍ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__sequence
+msgid "Sequence"
+msgstr "ລຳດັບ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__skip
+msgid "Skip"
+msgstr "ຂ້າມ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__picture
+msgid "Take Picture"
+msgstr "ຖ່າຍຮູບ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_device__trigger_ids
+msgid "Trigger"
+msgstr "ຕົວຈຸດຊະນວນ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_mrp_workcenter__trigger_ids
+msgid "Triggers"
+msgstr "ຕົວຈຸດຊະນວນ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields.selection,name:mrp_workorder_iot.selection__iot_trigger__action__vali
+msgid "Validate"
+msgstr "ຢືນຢັນ"
+
+#. module: mrp_workorder_iot
+#. odoo-javascript
+#: code:addons/mrp_workorder_iot/static/src/mrp_display/picture_preview_dialog.xml:0
+msgid "Viewer"
+msgstr "ຕົວເບິ່ງ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model,name:mrp_workorder_iot.model_mrp_workcenter
+msgid "Work Center"
+msgstr "ສູນວຽກ"
+
+#. module: mrp_workorder_iot
+#: model:ir.model.fields,field_description:mrp_workorder_iot.field_iot_trigger__workcenter_id
+msgid "Workcenter"
+msgstr "ສູນວຽກ"

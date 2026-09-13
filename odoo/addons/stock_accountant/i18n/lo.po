@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * stock_accountant
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:48+0000\n"
+"PO-Revision-Date: 2026-06-15 17:46+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"stock_accountant/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: stock_accountant
+#: model:ir.model,name:stock_accountant.model_res_config_settings
+msgid "Config Settings"
+msgstr "ການກຳນົດຄ່າ"
+
+#. module: stock_accountant
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid ""
+"Default accounts, valuation and cost method for the company. These option "
+"can be overridden on each product category"
+msgstr ""
+"ບັນຊີເລີ່ມຕົ້ນ, ການຕີລາຄາມູນຄ່າ ແລະ ວິທີການຕົ້ນທຶນສຳລັບບໍລິສັດ. ຕົວເລືອກເຫຼົ່ານີ້ສາມາດກຳນົດທັບໄດ້ໃນແຕ່ລະໝວ"
+"ດສິນຄ້າ"
+
+#. module: stock_accountant
+#: model:ir.model.fields,field_description:stock_accountant.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: stock_accountant
+#: model:ir.model.fields,field_description:stock_accountant.field_res_config_settings__id
+msgid "ID"
+msgstr "ໄອດີ"
+
+#. module: stock_accountant
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid "Inventory Accounting"
+msgstr "ການບັນຊີສາງສິນຄ້າ"
+
+#. module: stock_accountant
+#: model:ir.model.fields,field_description:stock_accountant.field_res_config_settings__cost_method
+msgid "Inventory Cost Method"
+msgstr "ວິທີການຕົ້ນທຶນສາງສິນຄ້າ"
+
+#. module: stock_accountant
+#: model:ir.model.fields,field_description:stock_accountant.field_res_config_settings__inventory_period
+msgid "Inventory Period"
+msgstr "ຮອບວຽນສາງສິນຄ້າ"
+
+#. module: stock_accountant
+#: model:ir.model.fields,field_description:stock_accountant.field_res_config_settings__valuation_method
+#: model:ir.ui.menu,name:stock_accountant.menu_action_stock_account_report_stock_valuation
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid "Inventory Valuation"
+msgstr "ການຕີລາຄາມູນຄ່າສາງສິນຄ້າ"
+
+#. module: stock_accountant
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid "Journal"
+msgstr "ສະມຸດລາຍວັນ"
+
+#. module: stock_accountant
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid ""
+"Other accounts can be defined on \"Inventory Loss\" and \"Production\" on "
+"dedicated"
+msgstr ""
+"ບັນຊີອື່ນໆ ສາມາດກຳນົດໄດ້ໃນ \"ການສູນເສຍສາງ\" ແລະ \"ການຜະລິດ\" ໃນສ່ວນສະເພາະ"
+
+#. module: stock_accountant
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid "Periodic Valuation"
+msgstr "ການຕີລາຄາມູນຄ່າຕາມໄລຍະເວລາ"
+
+#. module: stock_accountant
+#: model:ir.model.fields,field_description:stock_accountant.field_res_config_settings__stock_journal
+msgid "Stock Journal"
+msgstr "ສະມຸດລາຍວັນສາງ"
+
+#. module: stock_accountant
+#: model:ir.model.fields,field_description:stock_accountant.field_res_config_settings__stock_valuation_account_id
+msgid "Stock Valuation Account"
+msgstr "ບັນຊີການຕີລາຄາມູນຄ່າສາງ"
+
+#. module: stock_accountant
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid "Valuation Account"
+msgstr "ບັນຊີການຕີລາຄາມູນຄ່າ"
+
+#. module: stock_accountant
+#: model_terms:ir.ui.view,arch_db:stock_accountant.res_config_settings_view_form
+msgid "locations"
+msgstr "ສະຖານທີ່"

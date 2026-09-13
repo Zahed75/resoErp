@@ -1,0 +1,109 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_delivery_sendcloud
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:48+0000\n"
+"PO-Revision-Date: 2026-08-06 12:39+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"website_delivery_sendcloud/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,help:website_delivery_sendcloud.field_delivery_carrier__sendcloud_use_locations
+#, fuzzy
+msgid ""
+"Allows the ecommerce user to choose a pick-up point as delivery address."
+msgstr ""
+"Omogoča uporabniku e-trgovine, da izbere prevzemno točko kot naslov dostave."
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__sendcloud_locations_id
+#, fuzzy
+msgid "Locations Id"
+msgstr "ID lokacij"
+
+#. module: website_delivery_sendcloud
+#: model_terms:ir.ui.view,arch_db:website_delivery_sendcloud.view_delivery_carrier_form
+#, fuzzy
+msgid "Locations Radius"
+msgstr "Polmer lokacij"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,help:website_delivery_sendcloud.field_delivery_carrier__sendcloud_locations_radius_value
+#, fuzzy
+msgid "Maximum locations distance radius."
+msgstr "Največji polmer razdalje do lokacij."
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__sendcloud_can_customize_use_locations
+#, fuzzy
+msgid "Sendcloud Can Customize Use Locations"
+msgstr "Sendcloud lahko prilagodi uporabljene lokacije"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__sendcloud_locations_radius_value
+#, fuzzy
+msgid "Sendcloud Locations Radius"
+msgstr "Radij lokacij Sendcloud"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__sendcloud_locations_radius_unit
+#, fuzzy
+msgid "Sendcloud Locations Radius Unit"
+msgstr "Enota radija lokacij Sendcloud"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__sendcloud_locations_radius_unit_name
+#, fuzzy
+msgid "Sendcloud Radius Unit Name"
+msgstr "Ime enote polmera Sendcloud"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model,name:website_delivery_sendcloud.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Metode odpreme"
+
+#. module: website_delivery_sendcloud
+#. odoo-python
+#: code:addons/website_delivery_sendcloud/models/delivery_sendcloud.py:0
+#, fuzzy
+msgid "The maximum radius allowed is %(distance)d%(unit)s"
+msgstr "Največji dovoljeni radij je %(distance)d%(unit)s"
+
+#. module: website_delivery_sendcloud
+#. odoo-python
+#: code:addons/website_delivery_sendcloud/models/delivery_sendcloud.py:0
+#, fuzzy
+msgid "The minimum radius allowed is %(distance)d%(unit)s"
+msgstr "Najmanjši dovoljeni radij je %(distance)d%(unit)s"
+
+#. module: website_delivery_sendcloud
+#: model:ir.model.fields,field_description:website_delivery_sendcloud.field_delivery_carrier__sendcloud_use_locations
+#, fuzzy
+msgid "Use Sendcloud Locations"
+msgstr "Uporabi lokacije Sendcloud"

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="reso_pms.ResoReportsTemplate">
+        <div class="o_reso_dashboard_wrapper h-100">
+            <!-- Header Section -->
+            <div class="dashboard-header">
+                <div>
+                    <h1 class="page-title">resoERP Analytics &amp; Reports Center</h1>
+                    <p class="subtitle">Comprehensive performance, yield, occupancy, and revenue reporting for management and investors.</p>
+                </div>
+                <div class="header-actions">
+                    <button t-attf-class="btn-reso-secondary {{state.activeTab == 'occupancy' ? 'active' : ''}}" t-on-click="() => this.setTab('occupancy')">
+                        <i class="fa fa-line-chart me-1"/> Occupancy &amp; RevPAR
+                    </button>
+                    <button t-attf-class="btn-reso-secondary {{state.activeTab == 'revenue' ? 'active' : ''}}" t-on-click="() => this.setTab('revenue')">
+                        <i class="fa fa-file-text-o me-1"/> Revenue Breakdown
+                    </button>
+                    <button t-attf-class="btn-reso-secondary {{state.activeTab == 'ownership' ? 'active' : ''}}" t-on-click="() => this.setTab('ownership')">
+                        <i class="fa fa-pie-chart me-1"/> Fractional Owner Yield
+                    </button>
+                </div>
+            </div>
+
+            <!-- Occupancy Report Tab -->
+            <div t-if="state.activeTab == 'occupancy'" class="card">
+                <div class="card-header">
+                    <h3>Occupancy Rate vs RevPAR Monthly Trend (2026)</h3>
+                    <button class="btn-reso-secondary" t-on-click="() => this.exportReport('Occupancy_Report.csv')">
+                        <i class="fa fa-download me-1"/> Export CSV
+                    </button>
+                </div>
+                <div class="card-body">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Occupancy Rate (%)</th>
+                                <th>ADR (BDT)</th>
+                                <th>RevPAR (BDT)</th>
+                                <th>Performance Index</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="state.occupancyData" t-as="row" t-key="row.month">
+                                <tr>
+                                    <td><strong><t t-esc="row.month"/></strong></td>
+                                    <td><strong><t t-esc="row.occupancy"/>%</strong></td>
+                                    <td>৳<t t-esc="row.adr"/></td>
+                                    <td><strong>৳<t t-esc="row.revpar"/></strong></td>
+                                    <td>
+                                        <span t-attf-class="badge {{row.occupancy >= 80 ? 'badge-success' : 'badge-warning'}}">
+                                            <t t-esc="row.status"/>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Revenue Report Tab -->
+            <div t-if="state.activeTab == 'revenue'" class="card">
+                <div class="card-header">
+                    <h3>Revenue &amp; Folio Billing Outlet Analysis</h3>
+                    <button class="btn-reso-secondary" t-on-click="() => this.exportReport('Revenue_Report.csv')">
+                        <i class="fa fa-download me-1"/> Export Report
+                    </button>
+                </div>
+                <div class="card-body">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Outlet / Service Category</th>
+                                <th>Gross Revenue (BDT)</th>
+                                <th>Tax &amp; VAT (15%)</th>
+                                <th>Net Revenue (BDT)</th>
+                                <th>Contribution %</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="state.revenueOutlets" t-as="item" t-key="item.category">
+                                <tr>
+                                    <td><strong><t t-esc="item.category"/></strong></td>
+                                    <td>৳<t t-esc="item.gross"/></td>
+                                    <td>৳<t t-esc="item.vat"/></td>
+                                    <td><strong>৳<t t-esc="item.net"/></strong></td>
+                                    <td><t t-esc="item.percent"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Ownership Report Tab -->
+            <div t-if="state.activeTab == 'ownership'" class="card">
+                <div class="card-header">
+                    <h3>Fractional Owner Dividend &amp; Yield Statements</h3>
+                    <button class="btn-reso-secondary" t-on-click="() => this.exportReport('Ownership_Yield_Report.csv')">
+                        <i class="fa fa-download me-1"/> Export
+                    </button>
+                </div>
+                <div class="card-body">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Shareholder Name</th>
+                                <th>Property</th>
+                                <th>Shares Held</th>
+                                <th>Ownership %</th>
+                                <th>Quarterly Dividend (BDT)</th>
+                                <th>Distribution Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="state.ownershipYields" t-as="sh" t-key="sh.name">
+                                <tr>
+                                    <td><strong><t t-esc="sh.name"/></strong></td>
+                                    <td><t t-esc="sh.property"/></td>
+                                    <td><t t-esc="sh.shares"/> Shares</td>
+                                    <td><t t-esc="sh.percent"/></td>
+                                    <td><strong>৳<t t-esc="sh.dividend"/></strong></td>
+                                    <td><span class="badge badge-success"><t t-esc="sh.status"/></span></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

@@ -1,0 +1,2407 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * equity
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-08 17:40+0000\n"
+"PO-Revision-Date: 2026-08-06 11:16+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/equity/"
+"sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__securities
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__securities
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+#, fuzzy
+msgid "# Securities"
+msgstr "# Vrednostni papirji"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__shares
+#, fuzzy
+msgid "# Shares"
+msgstr "# Delitve"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_valuation.py:0
+#, fuzzy
+msgid "%(partner_name)s %(amount)s"
+msgstr "%(partner_name)s %(amount)s"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_ubo.py:0
+#, fuzzy
+msgid "%(partner_name)s (%(holder_name)s)"
+msgstr "%(partner_name)s (%(holder_name)s)"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#, fuzzy
+msgid "%(partner_name)s's Transactions"
+msgstr "Transakcije partnerja %(partner_name)s"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#, fuzzy
+msgid "%(partner_name)s's Valuations"
+msgstr "Vrednotenja partnerja %(partner_name)s"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "%(transaction_type)s %(securities).2f %(class_name)s"
+msgstr "%(transaction_type)s %(securities).2f %(class_name)s"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#, fuzzy
+msgid "(Completed through portal Form)"
+msgstr "(Dokončano prek portalnega obrazca)"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "(ID"
+msgstr "(ID"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "(Non-positive options don't expire)"
+msgstr "(Ne-pozitivne opcije ne potečejo)"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#, fuzzy
+msgid "(Optional)"
+msgstr "(opcijsko)"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "(expired)"
+msgstr "(poteklo)"
+
+#. module: equity
+#: model:ir.actions.report,print_report_name:equity.action_equity_ubo_report
+#, fuzzy
+msgid "(object._get_ubo_report_filename())"
+msgstr "(object._get_ubo_report_filename())"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "/ Security"
+msgstr "/ Vrednostni papir"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid ""
+"<br/>\n"
+"                                            Politically Exposed Person:"
+msgstr ""
+"<br/>\n"
+"                                            Politično izpostavljena oseba:"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "<br/> Nationality:"
+msgstr "<br/> Državljanstvo:"
+
+#. module: equity
+#: model:mail.template,body_html:equity.equity_shareholder_email_template
+#, fuzzy
+msgid ""
+"<div>\n"
+"                    <p> Hello <t t-out=\"ctx.get('holder_name')\"/>,<br/>\n"
+"                        You will find your latest transaction and valuations "
+"in the following link: <br/>\n"
+"                        <a t-attf-href=\"/my/equity?"
+"access_token={{ctx.get('equity_access_token')}}\" class=\"btn btn-"
+"primary\">Show Equity</a> <br/> <br/>\n"
+"                        Best,\n"
+"                        <t t-if=\"user_id.signature\">\n"
+"                            <br/>--<br/>\n"
+"                            <t t-out=\"user_id.signature or ''\">Mitchell "
+"Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div>\n"
+"                    <p> Pozdravljeni <t t-out=\"ctx.get('holder_name')\"/>"
+",<br/>\n"
+"                        Svojo zadnjo transakcijo in ovrednotenja lahko "
+"najdete na naslednji povezavi: <br/>\n"
+"                        <a t-attf-href=\"/my/equity?access_token={{ctx.get"
+"('equity_access_token')}}\" class=\"btn btn-primary\">Prikaži kapital</a> "
+"<br/> <br/>\n"
+"                        Lep pozdrav,\n"
+"                        <t t-if=\"user_id.signature\">\n"
+"                            <br/>--<br/>\n"
+"                            <t t-out=\"user_id.signature or ''\">Mitchell "
+"Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: equity
+#: model:mail.template,body_html:equity.equity_ubo_form_email_template
+#, fuzzy
+msgid ""
+"<div>\n"
+"                    <p> Hello <t t-out=\"object.name\"/>,<br/>\n"
+"                        Following our legal obligations to identify clients, "
+"we need to report natural persons who directly or indirectly\n"
+"                        hold or control at least 25% in the capital or "
+"voting rights of <b><t t-out=\"user_id.company_id.name\"/></b>. <br/> <br/>\n"
+"                        Please fill in the UBO request:<br/>\n"
+"                        <a t-attf-href=\"/my/ubo?"
+"{{object._get_equity_url_params()}}\" class=\"btn btn-primary\">Fill UBO</a> "
+"<br/> <br/>\n"
+"                        Thank you,\n"
+"                        <t t-if=\"user_id.signature\">\n"
+"                            <br/>--<br/>\n"
+"                            <t t-out=\"user_id.signature or ''\">Mitchell "
+"Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div>\n"
+"                    <p> Pozdravljeni <t t-out=\"object.name\"/>,<br/>\n"
+"                        V skladu z našimi zakonskimi obveznostmi glede "
+"identifikacije strank moramo prijaviti fizične osebe, ki imajo neposredno "
+"ali posredno v lasti ali obvladujejo vsaj 25 % kapitala ali glasovalnih "
+"pravic družbe <b><t t-out=\"user_id.company_id.name\"/></b>. <br/> <br/>\n"
+"                        Prosimo, izpolnite zahtevo UBO:<br/>\n"
+"                        <a t-attf-href=\"/my/ubo?{"
+"{object._get_equity_url_params()}}\" class=\"btn btn-primary\">Izpolni UBO</"
+"a> <br/> <br/>\n"
+"                        Hvala,\n"
+"                        <t t-if=\"user_id.signature\">\n"
+"                            <br/>--<br/>\n"
+"                            <t t-out=\"user_id.signature or ''\">Mitchell "
+"Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_help
+#, fuzzy
+msgid ""
+"<i class=\"fa fa-envelope ms-2 mt-1\" aria-label=\"Email Address\" "
+"title=\"Email Address\"/>"
+msgstr ""
+"<i class=\"fa fa-envelope ms-2 mt-1\" aria-label=\"E-poštni naslov\" "
+"title=\"E-poštni naslov\"/>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_help
+#, fuzzy
+msgid ""
+"<i class=\"fa fa-phone ms-2 mt-1\" aria-label=\"Phone Number\" title=\"Phone "
+"Number\"/>"
+msgstr ""
+"<i class=\"fa fa-phone ms-2 mt-1\" aria-label=\"Telefonska številka\" "
+"title=\"Telefonska številka\"/>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_kanban
+#, fuzzy
+msgid ""
+"<i title=\"To\" class=\"fa fa-fw fa-arrow-right mx-1\" "
+"invisible=\"transaction_type != 'exercise'\"/>"
+msgstr ""
+"<i title=\"V\" class=\"fa fa-fw fa-arrow-right mx-1\" "
+"invisible=\"transaction_type != 'exercise'\"/>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_kanban
+#, fuzzy
+msgid ""
+"<i title=\"To\" class=\"fa fa-fw fa-arrow-right mx-1\" "
+"invisible=\"transaction_type != 'transfer'\"/>"
+msgstr ""
+"<i title=\"V\" class=\"fa fa-fw fa-arrow-right mx-1\" "
+"invisible=\"transaction_type != 'transfer'\"/>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_view_partner_form
+#, fuzzy
+msgid "<span class=\"o_stat_text\">Shareholders</span>"
+msgstr "<span class=\"o_stat_text\">Delničarji</span>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_dashboard_res_partner
+#, fuzzy
+msgid "<span class=\"text-muted\">Valuation</span>"
+msgstr "<span class=\"text-muted\">Vrednotenje</span>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_dashboard_res_partner
+#, fuzzy
+msgid ""
+"<span> Shareholder<span invisible=\"equity_shareholders_count == 1\">s</"
+"span></span>"
+msgstr ""
+"<span> Delničar<span invisible=\"equity_shareholders_count == 1\">ji</span></"
+"span>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_dashboard_res_partner
+#, fuzzy
+msgid ""
+"<span> Transaction<span invisible=\"equity_transaction_count == 1\">s</"
+"span></span>"
+msgstr ""
+"<span> Transakcij<span invisible=\"equity_transaction_count == 1\">e</span></"
+"span>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "<span>Missing supporting documents! Attach them in the chatter.</span>"
+msgstr "<span>Manjkajo podporni dokumenti! Priložite jih v dnevnik.</span>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_security_class_form
+#, fuzzy
+msgid "<span>per share</span>"
+msgstr "<span>na delnico</span>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+msgid "<strong>Address:</strong>"
+msgstr "<strong>Naslov:</strong>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "<strong>Company Name:</strong>"
+msgstr "<strong>Naziv podjetja:</strong>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "<strong>OR</strong>"
+msgstr "<strong>ALI</strong>"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "<strong>Tax ID Number:</strong>"
+msgstr "<strong>Davčna številka:</strong>"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/valuation_chart/valuation_chart.xml:0
+#, fuzzy
+msgid ""
+"= Your shares / Total number of shares (i.e., options not taken into account)"
+msgstr "= Vaše delnice / Skupno število delnic (tj., opcije niso upoštevane)"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"A credit or financial institution located in a country listed by the Royal "
+"Decree of 19 July 2013 drawing up a third\n"
+"                            country equivalence list for a simplified due "
+"diligence (article 37(2), subparagraph 1(2 and 5), of the AML law);"
+msgstr ""
+"Kreditna ali finančna institucija, ki ima sedež v državi, ki je navedena v "
+"Kraljevi uredbi z dne 19. julija 2013, s katero se določa seznam ekvivalence "
+"tretjih\n"
+"                            držav za poenostavljeno preverjanje skrbnosti "
+"(člen 37(2), pododstavek 1(2 in 5), zakona AML);"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"A listed company: a company whose shares are traded on a regulated market a "
+"Member States of the European\n"
+"                            Economic Area; or"
+msgstr ""
+"Javno kotirana družba: družba, katere delnice se trgujejo na reguliranem "
+"trgu ene od držav članic Evropskega\n"
+"                            gospodarskega območja; ali"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "A partner cannot have transactions in different currencies."
+msgstr "Partner ne more imeti transakcij v različnih valutah."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid ""
+"According to laws related to anti money laundering, the notary must identify "
+"the beneficial owners of their customer."
+msgstr ""
+"V skladu z zakonodajo, ki se nanaša na preprečevanje pranja denarja, mora "
+"notar identificirati končne dejanske lastnike stranke."
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_needaction
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_needaction
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_needaction
+msgid "Action Needed"
+msgstr "Potreben je ukrep"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.js:0
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+#, fuzzy
+msgid "Add Beneficial Owner"
+msgstr "Dodaj končnega dejanskega lastnika"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/valuation_chart_action/valuation_chart_action.js:0
+#, fuzzy
+msgid "Add some valuations over the past year to see some data here."
+msgstr ""
+"Dodajte nekaj vrednotenj v zadnjem letu, da boste tukaj videli nekaj "
+"podatkov."
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_attachment_count
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_attachment_count
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Število prilog"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__attachment_number
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__attachment_number
+#, fuzzy
+msgid "Attachment Number"
+msgstr "Število priponk"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__attachment_ids
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__attachment_ids
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__attachment_ids
+msgid "Attachments"
+msgstr "Priponke"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_valuation__event__audit
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_valuation_search
+msgid "Audit"
+msgstr "Revizija"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__auditor
+#, fuzzy
+msgid "Auditor"
+msgstr "Revizor"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: model:ir.model.fields,help:equity.field_equity_ubo__auth_rep_role
+#, fuzzy
+msgid "Authorized Representative Role"
+msgstr "Vloga pooblaščenega predstavnika"
+
+#. module: equity
+#: model:ir.actions.act_window,name:equity.action_equity_ubo
+#: model_terms:ir.ui.view,arch_db:equity.equity_view_partner_form
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_list
+#, fuzzy
+msgid "Beneficial Owners"
+msgstr "Končni dejanski lastniki"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Beneficial owners are natural person(s) who ultimately own(s) or control(s) "
+"the customer or the natural person(s)\n"
+"                    for whose account or on whose behalf a transaction is "
+"being conducted or a business relationship is established. It\n"
+"                    includes those natural persons that do not have a "
+"controlling holding in the company or a formal mandate of any kind\n"
+"                    but who are de facto exercising similar control over the "
+"company."
+msgstr ""
+"Dejanski lastniki so fizične osebe, ki so končni lastniki stranke ali jo "
+"obvladujejo, ali fizične osebe\n"
+"                    za račun katerih oziroma v imenu katerih se izvaja "
+"transakcija ali vzpostavlja poslovno razmerje. To\n"
+"                    vključuje tudi tiste fizične osebe, ki nimajo "
+"obvladujočega deleža v družbi ali kakršnega koli formalnega pooblastila,\n"
+"                    vendar družbo de facto podobno obvladujejo."
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: model:ir.model.fields,field_description:equity.field_res_partner__ubo_birth_date
+#: model:ir.model.fields,field_description:equity.field_res_users__ubo_birth_date
+#, fuzzy
+msgid "Birth Date"
+msgstr "Datum rojstva"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__ubo_birth_place
+#: model:ir.model.fields,field_description:equity.field_res_users__ubo_birth_place
+#, fuzzy
+msgid "Birth Place"
+msgstr "Kraj rojstva"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__board_member
+#, fuzzy
+msgid "Board Member"
+msgstr "Član upravnega odbora"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+msgid "Buyer"
+msgstr "Kupec"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__ceo
+msgid "CEO"
+msgstr "Izvršni direktor"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__can_change_currency
+#, fuzzy
+msgid "Can Change Currency"
+msgstr "Lahko spremeni valuto"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Can only exercise options, please select an options class"
+msgstr "Uveljaviti je mogoče samo opcije, izberite razred opcij."
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_transaction__transaction_type__cancellation
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_search
+#, fuzzy
+msgid "Cancellation"
+msgstr "Preklic"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_security_class.py:0
+#, fuzzy
+msgid "Cannot change security class type because it has linked transactions"
+msgstr ""
+"Vrste razreda vrednostnega papirja ni mogoče spremeniti, ker ima povezane "
+"transakcije"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#: model:ir.actions.client,name:equity.action_equity_cap_table
+#: model:ir.model,name:equity.model_equity_cap_table
+#: model:ir.ui.menu,name:equity.menu_equity_reporting_cap_table
+#, fuzzy
+msgid "Cap Table"
+msgstr "Kapitalska tabela"
+
+#. module: equity
+#: model:ir.actions.act_window,name:equity.action_equity_cap_table_pivot
+#: model:ir.ui.menu,name:equity.menu_equity_reporting_cap_table_pivot
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_cap_table_pivot
+#, fuzzy
+msgid "Cap Table Pivot"
+msgstr "Vrtilna tabela kapitalske tabele"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__chairman
+#, fuzzy
+msgid "Chairman of the Board"
+msgstr "Predsednik upravnega odbora"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__security_class_id
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "Class"
+msgstr "Razred"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+msgid "Clear"
+msgstr "Počisti"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__company_id
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__partner_id
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__partner_id
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__partner_id
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_search
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_form
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_search
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__co_1
+#, fuzzy
+msgid "Company - Cat 1. Capital Ownership or voting rights"
+msgstr "Podjetje - Kategorija 1. Lastništvo kapitala ali glasovalne pravice"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__co_2
+#, fuzzy
+msgid "Company - Cat 2. Control by other means"
+msgstr "Podjetje - Kategorija 2. Nadzor z drugimi sredstvi"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__co_3
+#, fuzzy
+msgid "Company - Cat 3. Executive officer"
+msgstr "Podjetje - Kat. 3. Izvršni direktor"
+
+#. module: equity
+#: model:ir.model.fields,help:equity.field_equity_transaction__company_id
+#: model:ir.model.fields,help:equity.field_equity_ubo__company_id
+#: model:ir.model.fields,help:equity.field_equity_valuation__company_id
+#, fuzzy
+msgid "Company to which this record is visible"
+msgstr "Družba, za katero je ta zapis viden"
+
+#. module: equity
+#: model:ir.ui.menu,name:equity.menu_equity_configuration
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.xml:0
+#: model:ir.model,name:equity.model_res_partner
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_help
+msgid "Contact"
+msgstr "Stik"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.js:0
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__end_date
+#, fuzzy
+msgid "Control End Date"
+msgstr "Datum konca kontrole"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.js:0
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__control_method
+#, fuzzy
+msgid "Control Method"
+msgstr "Način nadzora"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.js:0
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__start_date
+#, fuzzy
+msgid "Control Start Date"
+msgstr "Datum začetka kontrole"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.js:0
+#, fuzzy
+msgid "Control Start Date is mandatory"
+msgstr "Začetni datum nadzora je obvezen"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Control is the legal or de facto right to exercise a decisive influence over "
+"the appointment of the majority of its\n"
+"                    directors or managers or over the direction of its "
+"operations."
+msgstr ""
+"Kontrola je pravna ali dejanska pravica do izvajanja odločilnega vpliva na "
+"imenovanje večine njegovih\n"
+"                    direktorjev ali upraviteljev ali na usmerjanje njegovega "
+"poslovanja."
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#, fuzzy
+msgid "Controlling Method"
+msgstr "Metoda nadzora"
+
+#. module: equity
+#: model:ir.actions.act_window,name:equity.action_equity_valuation_form
+#, fuzzy
+msgid "Create Valuation"
+msgstr "Ustvari vrednotenje"
+
+#. module: equity
+#: model:ir.model,website_form_label:equity.model_res_partner
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__create_uid
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__create_uid
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__create_uid
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__create_date
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__create_date
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__create_date
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__equity_currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: equity
+#: model:ir.ui.menu,name:equity.menu_equity_dashboard
+msgid "Dashboard"
+msgstr "Nadzorna plošča"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__date
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__date
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+msgid "Date"
+msgstr "Datum"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "Decision maker"
+msgstr "Odločevalec"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Definitions: \"beneficial owners\", \"control\", \"shareholder holding 25% "
+"or more\", \"decision makers\""
+msgstr ""
+"Opredelitve: »dejanski lastniki«, »nadzor«, »delničar z 25 % ali večjim "
+"deležem«, »odločevalci«"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__destination_class_id
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "Destination Class"
+msgstr "Ciljni razred"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Destination class can only be set in exercise transactions."
+msgstr "Ciljni razred je mogoče nastaviti samo pri transakcijah izvrševanja."
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__dilution
+#, fuzzy
+msgid "Dilution"
+msgstr "Razredčenje"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: code:addons/equity/static/src/components/ubo_form/holder_end_dialog.xml:0
+msgid "Discard"
+msgstr "Opusti"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__display_name
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__display_name
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__display_name
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__display_name
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__display_name
+#: model:ir.model.fields,field_description:equity.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__dividend_payout
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__dividend_payout
+#, fuzzy
+msgid "Dividend Payout"
+msgstr "Izplačilo dividend"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__attachment_expiration_date
+#, fuzzy
+msgid "Document Exp. Date"
+msgstr "Datum poteka dokumenta"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#, fuzzy
+msgid "Document Expiration Date"
+msgstr "Datum izteka dokumenta"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.js:0
+#, fuzzy
+msgid "Edit Beneficial Owner"
+msgstr "Uredi končnega dejanskega lastnika"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#: model:ir.actions.server,name:equity.action_equity_dashboard_res_partner
+#: model:ir.ui.menu,name:equity.menu_equity
+#: model:res.groups.privilege,name:equity.res_groups_privilege_equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_breadcrumbs_equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_home_equity
+msgid "Equity"
+msgstr "Kapital"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_access_token
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_access_token
+#, fuzzy
+msgid "Equity Access Token"
+msgstr "Equity žeton za dostop"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__equity_currency_id
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_currency_id
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_currency_id
+#, fuzzy
+msgid "Equity Currency"
+msgstr "Valuta kapitala"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_kanban_dashboard_graph
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_kanban_dashboard_graph
+#, fuzzy
+msgid "Equity Kanban Dashboard Graph"
+msgstr "Graf nadzorne plošče Kanban kapitala"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_last_valuation
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_last_valuation
+#, fuzzy
+msgid "Equity Last Valuation"
+msgstr "Zadnja ovrednotitev kapitala"
+
+#. module: equity
+#: model:mail.template,name:equity.equity_shareholder_email_template
+#, fuzzy
+msgid "Equity Shareholder Email"
+msgstr "E-pošta delničarja"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_shareholders_count
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_shareholders_count
+#, fuzzy
+msgid "Equity Shareholders Count"
+msgstr "Število delničarjev"
+
+#. module: equity
+#: model:ir.model,name:equity.model_equity_transaction
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_transaction_ids
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_transaction_ids
+#, fuzzy
+msgid "Equity Transaction"
+msgstr "Kapitalska transakcija"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_transaction_count
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_transaction_count
+#, fuzzy
+msgid "Equity Transaction Count"
+msgstr "Število kapitalskih transakcij"
+
+#. module: equity
+#: model:mail.template,name:equity.equity_ubo_form_email_template
+#, fuzzy
+msgid "Equity UBO Form Email"
+msgstr "Equity UBO obrazec po e-pošti"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_valuation_ids
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_valuation_ids
+#, fuzzy
+msgid "Equity Valuation"
+msgstr "Ovrednotitev kapitala"
+
+#. module: equity
+#: model:mail.template,subject:equity.equity_shareholder_email_template
+#, fuzzy
+msgid "Equity notice"
+msgstr "Obvestilo o kapitalu"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__event
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+msgid "Event"
+msgstr "Dogodek"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "Exemption from the identification of beneficial"
+msgstr "Izjema od identifikacije dejanskega lastnika"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Exercise transactions must have a destination 'Share' class"
+msgstr "Transakcije izvrševanja morajo imeti ciljni razred 'Delnica'"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__expiration_date
+msgid "Expiration"
+msgstr "Veljavnost"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+msgid "Expiration Date"
+msgstr "Datum izteka"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__expiration_diff
+#, fuzzy
+msgid "Expiration Diff"
+msgstr "Razlika veljavnosti"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_search
+#, fuzzy
+msgid "Expired Documents"
+msgstr "Potekli dokumenti"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Family members: the spouse, any person considered as equivalent to the "
+"persons considered as equivalent to the\n"
+"                        spouse; the parents;"
+msgstr ""
+"Družinski člani: zakonec, katera koli oseba, ki se šteje za enakovredno "
+"osebam, ki se štejejo za enakovredne zakoncem;\n"
+"                        starši;"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "First and Last Name:"
+msgstr "Ime in priimek:"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_follower_ids
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_follower_ids
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_follower_ids
+msgid "Followers"
+msgstr "Sledilci"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_partner_ids
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_partner_ids
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Sledilci (partnerji)"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Following out legal obligations to identify clients, please report natural "
+"persons who directly or indirectly\n"
+"                <b>hold or control at least 25% in the capital or voting "
+"rights</b> of"
+msgstr ""
+"Za izpolnjevanje zakonskih obveznosti glede identifikacije strank navedite "
+"fizične osebe, ki neposredno ali posredno\n"
+"                <b>imajo v lasti ali obvladujejo vsaj 25 % kapitala ali "
+"glasovalnih pravic</b> od"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_formation_date
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_formation_date
+#, fuzzy
+msgid "Formation Date"
+msgstr "Datum ustanovitve"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#, fuzzy
+msgid "Fully Diluted"
+msgstr "Popolnoma razredčeno"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_end_dialog.js:0
+#, fuzzy
+msgid "Function end: %s"
+msgstr "Konec funkcije: %s"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Governing authorities of the European Union, bodies and agencies as defined "
+"by the Royal Decree of 19 July 2013\n"
+"                            drawing up a list of European governing "
+"authorities, bodies and specialized agencies for a simplified due diligence."
+msgstr ""
+"Organi Evropske unije, telesa in agencije, kot so določeni v Kraljevem "
+"dekretu z dne 19. julija 2013\n"
+"                            o sestavi seznama evropskih organov, teles in "
+"specializiranih agencij za poenostavljeno skrbnost."
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__has_auth_rep_role
+#, fuzzy
+msgid "Has Auth Rep Role"
+msgstr "Ima vlogo pooblaščenega predstavnika"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__has_message
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__has_message
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__has_message
+msgid "Has Message"
+msgstr "Ima sporočilo"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__has_percentages
+#, fuzzy
+msgid "Has Percentages"
+msgstr "Ima odstotke"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Heads of State, heads of government, ministers and deputy or assistant "
+"ministers; members of parliaments;\n"
+"                        members of the governing bodies of political "
+"parties; members of supreme courts, of constitutional courts or of other\n"
+"                        high judicial bodies whose decisions are not subject "
+"to further appeal, except in exceptional circumstances; members\n"
+"                        of courts of auditors or of the boards of central "
+"banks; ambassadors, charges d'affaires and high armed forces;\n"
+"                        members of the administrative, management or "
+"supervisory bodies of State owned enterprises; directors, deputy\n"
+"                        directors and members of the board or equivalent "
+"function of an international"
+msgstr ""
+"Vodje držav, vodje vlad, ministri in namestniki ali pomočniki ministrov; "
+"člani parlamentov;\n"
+"                        člani vodstev političnih strank; člani vrhovnih "
+"sodišč, ustavnih sodišč ali drugih\n"
+"                        najvišjih sodnih organov, katerih odločbe niso "
+"predmet nadaljnjega izpodbijanja, razen v izjemnih okoliščinah; člani\n"
+"                        računskih sodišč ali uprav centralnih bank; "
+"ambasadorji, charges d'affaires in visoki častniki oboroženih sil;\n"
+"                        člani upravnih, upravljavskih ali nadzornih organov "
+"podjetij v državni lasti; direktorji, namestniki\n"
+"                        direktorjev in člani upravnega odbora ali "
+"ekvivalentne funkcije mednarodne organizacije"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__holder_id
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__holder_id
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_form
+#, fuzzy
+msgid "Holder"
+msgstr "Imetnik"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_view_partner_form
+#, fuzzy
+msgid "Holdings"
+msgstr "Lastništva"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+#, fuzzy
+msgid ""
+"I hereby declare on honor that the information provided is truthful and "
+"accurate."
+msgstr "S to izjavo prisegam, da so podani podatki resnični in točni."
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__id
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__id
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__id
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__id
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__id
+#: model:ir.model.fields,field_description:equity.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: model_terms:ir.ui.view,arch_db:equity.equity_view_partner_form
+#, fuzzy
+msgid "ID Number"
+msgstr "ID številka"
+
+#. module: equity
+#: model:ir.model.fields,help:equity.field_equity_transaction__message_needaction
+#: model:ir.model.fields,help:equity.field_equity_ubo__message_needaction
+#: model:ir.model.fields,help:equity.field_equity_valuation__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Če je označeno, zahtevajo nova sporočila vašo pozornost."
+
+#. module: equity
+#: model:ir.model.fields,help:equity.field_equity_transaction__message_has_error
+#: model:ir.model.fields,help:equity.field_equity_transaction__message_has_sms_error
+#: model:ir.model.fields,help:equity.field_equity_ubo__message_has_error
+#: model:ir.model.fields,help:equity.field_equity_ubo__message_has_sms_error
+#: model:ir.model.fields,help:equity.field_equity_valuation__message_has_error
+#: model:ir.model.fields,help:equity.field_equity_valuation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Če je označeno, nekatera sporočila vsebujejo napako pri dostavi."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"If the future beneficiary(ies) have not yet been designated, the group of "
+"persons in the main interests of whom the\n"
+"                                    legal entity was formed or operates."
+msgstr ""
+"Če bodoči upravičenec(i) še niso bili določeni, skupina oseb, v čigar "
+"glavnem interesu je bila\n"
+"                                    pravna oseba ustanovljena ali deluje."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "If the shareholder holding more than 25% is"
+msgstr "Če je delničar, ki ima v lasti več kot 25 %,"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_submit
+#, fuzzy
+msgid ""
+"If you are returning to an already submitted form, please note that your "
+"information has been securely stored."
+msgstr ""
+"Če se vračate na že oddan obrazec, upoštevajte, da so vaši podatki varno "
+"shranjeni."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_submit
+#, fuzzy
+msgid ""
+"If your form has been successfully submitted, our team will review it and "
+"keep you informed of any updates."
+msgstr ""
+"Če je vaš obrazec uspešno oddan, ga bo naša ekipa pregledala in vas "
+"obveščala o morebitnih posodobitvah."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_search
+#, fuzzy
+msgid "In Control"
+msgstr "Pod nadzorom"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__invalid_securities_error
+#, fuzzy
+msgid "Invalid Securities Error"
+msgstr "Napaka neveljavnih vrednostnic"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_ubo.py:0
+#, fuzzy
+msgid "Invalid data: %s"
+msgstr "Neveljavni podatki: %s"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/controllers/portal.py:0
+#, fuzzy
+msgid "Invalid token"
+msgstr "Neveljaven žeton"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#, fuzzy
+msgid "Invite %s"
+msgstr "Povabi %s"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_is_follower
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_is_follower
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_is_follower
+msgid "Is Follower"
+msgstr "Je sledilec"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_transaction__transaction_type__issuance
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_search
+#, fuzzy
+msgid "Issuance"
+msgstr "Izdaja"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+msgid "Job Position:"
+msgstr "Delovno mesto:"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__write_uid
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__write_uid
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__write_uid
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__write_date
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__write_date
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__write_date
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__equity_legal_form
+#: model:ir.model.fields,field_description:equity.field_res_users__equity_legal_form
+#, fuzzy
+msgid "Legal Form"
+msgstr "Pravna oblika"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "Legal persons governed by public national laws;"
+msgstr "Pravne osebe, ki jih urejajo javni nacionalni zakoni;"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__liquidator
+#, fuzzy
+msgid "Liquidator"
+msgstr "Likvidator"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#, fuzzy
+msgid "Manage transactions, equity, cap table, and shareholders."
+msgstr "Upravljajte transakcije, kapital, kapitalsko tabelo in delničarje."
+
+#. module: equity
+#: model:res.groups,name:equity.group_equity_manager
+msgid "Manager"
+msgstr "Upravitelj"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__managing_director
+#, fuzzy
+msgid "Managing Director"
+msgstr "Upravljajoči direktor"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_has_error
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_has_error
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_has_error
+msgid "Message Delivery error"
+msgstr "Napaka pri dostavi sporočila"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_ids
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_ids
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_ids
+msgid "Messages"
+msgstr "Sporočila"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_search
+#, fuzzy
+msgid "Missing Documents"
+msgstr "Manjkajoči dokumenti"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_equity
+#, fuzzy
+msgid "My Companies"
+msgstr "Moja podjetja"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__ngo_1
+#, fuzzy
+msgid "NGO - Cat 1. Directors"
+msgstr "NVO - Kategorija 1. Direktorji"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__ngo_2
+#, fuzzy
+msgid "NGO - Cat 2. Individuals with representation authority"
+msgstr "NVO - Kategorija 2. Osebe z pooblastili za zastopanje"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__ngo_3
+#, fuzzy
+msgid "NGO - Cat 3. Individuals responsible for day-to-day management"
+msgstr "NVO - Kategorija 3. Osebe, odgovorne za vsakodnevno upravljanje"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__ngo_4
+#, fuzzy
+msgid "NGO - Cat 4. Founders of a foundation"
+msgstr "NVO - Kategorija 4. Ustanovitelji fundacije"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__ngo_5
+#, fuzzy
+msgid ""
+"NGO - Cat 5. Individuals or categories of individuals in whose main interest "
+"the association or foundation has been established or operates"
+msgstr ""
+"NGO - Kategorija 5. Posamezniki ali kategorije posameznikov, v katerih je "
+"glavni interes ustanovitev ali delovanje društva ali fundacije"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__control_method__ngo_6
+#, fuzzy
+msgid ""
+"NGO - Cat 6. Any other individual who ultimately exercises control by other "
+"means"
+msgstr ""
+"NGO - Kategorija 6. Vsaka druga fizična oseba, ki končno izvaja nadzor na "
+"druge načine"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.js:0
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__name
+#: model_terms:ir.ui.view,arch_db:equity.equity_view_partner_form
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_ubo_list
+msgid "Name"
+msgstr "Naziv"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.js:0
+#, fuzzy
+msgid "Name is mandatory"
+msgstr "Ime je obvezno"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+msgid "Nationality"
+msgstr "Državljanstvo"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Natural Persons who have a formal mandate within the Board of the company. "
+"These are for example the person(s) who are named (or equivalent of) Chief "
+"Executive Officer (CEO), Chief Financial Officer (CFO) or Treasurer. If a "
+"legal entity exercises a mandate in the Board of the company, it is required "
+"to list all Board level mandate holders including their function. <br/> "
+"Natural persons that do not have a controlling holding in the company or a "
+"formal mandate of any kind but who are de facto exercising similar control "
+"over the company."
+msgstr ""
+"Fizične osebe, ki imajo formalni mandat v upravi družbe. To so na primer "
+"osebe, ki so imenovane za (ali imajo enakovreden naziv) glavnega izvršnega "
+"direktorja (CEO), finančnega direktorja (CFO) ali blagajnika. Če pravna "
+"oseba izvaja mandat v upravi družbe, je treba navesti vse imetnike mandatov "
+"na ravni uprave, vključno z njihovo funkcijo. <br/> Fizične osebe, ki nimajo "
+"obvladujočega deleža v družbi ali kakršnega koli formalnega mandata, vendar "
+"de facto izvajajo podoben nadzor nad družbo."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_help
+#, fuzzy
+msgid "Need help?"
+msgstr "Potrebujete pomoč?"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.xml:0
+msgid "New Transaction"
+msgstr "Nova transakcija"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "New Valuation"
+msgstr "Novo vrednotenje"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+msgid "No"
+msgstr "Ne"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "No %s was set!"
+msgstr "Noben %s ni bil nastavljen!"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "No UBOs recorded for this company."
+msgstr "Za to podjetje ni zabeleženih nobenih UBO-jev."
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#, fuzzy
+msgid "No shareholders yet!"
+msgstr "Še ni delničarjev!"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/valuation_chart_action/valuation_chart_action.js:0
+#, fuzzy
+msgid "No valuations yet!"
+msgstr "Vrednotenj še ni!"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__notes
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+msgid "Notes"
+msgstr "Beležke"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_needaction_counter
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_needaction_counter
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Število aktivnosti"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_has_error_counter
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_has_error_counter
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_has_error_counter
+msgid "Number of errors"
+msgstr "Število napak"
+
+#. module: equity
+#: model:ir.model.fields,help:equity.field_equity_transaction__message_needaction_counter
+#: model:ir.model.fields,help:equity.field_equity_ubo__message_needaction_counter
+#: model:ir.model.fields,help:equity.field_equity_valuation__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Število sporočil, ki zahtevajo ukrepanje"
+
+#. module: equity
+#: model:ir.model.fields,help:equity.field_equity_transaction__message_has_error_counter
+#: model:ir.model.fields,help:equity.field_equity_ubo__message_has_error_counter
+#: model:ir.model.fields,help:equity.field_equity_valuation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Število sporočil, ki niso bila pravilno dostavljena."
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid ""
+"Only %(seller_options)s %(security_class_name)s options available for "
+"transfer"
+msgstr ""
+"Za prenos je na voljo samo %(seller_options)s %(security_class_name)s opcij"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid ""
+"Only %(seller_shares)s %(security_class_name)s shares available for transfer"
+msgstr ""
+"Samo %(seller_shares)s %(security_class_name)s delnic je na voljo za prenos"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid ""
+"Only %(subscriber_options)s %(security_class_name)s options available for "
+"cancellation"
+msgstr ""
+"Za preklic je na voljo samo %(subscriber_options)s opcij razreda %"
+"(security_class_name)s"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid ""
+"Only %(subscriber_options)s %(security_class_name)s options available for "
+"exercise"
+msgstr ""
+"Za izvršitev je na voljo samo %(subscriber_options)s opcij razreda %"
+"(security_class_name)s"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid ""
+"Only %(subscriber_shares)s %(security_class_name)s shares available for "
+"cancellation"
+msgstr ""
+"Samo %(subscriber_shares)s delnic razreda %(security_class_name)s je na "
+"voljo za preklic"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_transaction__transaction_type__exercise
+#, fuzzy
+msgid "Option Exercise"
+msgstr "Izvršitev opcije"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Option Pool"
+msgstr "Opcijski sklad"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_security_class__class_type__options
+msgid "Options"
+msgstr "Možnosti"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_search
+#, fuzzy
+msgid "Options Exercise"
+msgstr "Uveljavitev opcij"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.js:0
+#: code:addons/equity/static/src/components/valuation_chart/valuation_chart.xml:0
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__ownership
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__ownership
+#: model:ir.ui.menu,name:equity.menu_equity_ownership
+msgid "Ownership"
+msgstr "Lastništvo"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__ubo_pep
+#: model:ir.model.fields,field_description:equity.field_res_users__ubo_pep
+#, fuzzy
+msgid "PEP"
+msgstr "PEP"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "PEP - Politically Exposed Person"
+msgstr "PEP - Politično izpostavljena oseba"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: model:ir.model.fields,help:equity.field_res_partner__ubo_pep
+#: model:ir.model.fields,help:equity.field_res_users__ubo_pep
+#, fuzzy
+msgid "Politically Exposed Person"
+msgstr "Politično izpostavljena oseba"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+msgid "Position"
+msgstr "Delovno mesto"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+msgid "Price"
+msgstr "Cena"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_valuation_list
+#, fuzzy
+msgid "Price FD"
+msgstr "Cena FD"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_valuation_list
+#, fuzzy
+msgid "Price ND"
+msgstr "Cena ND"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__security_price
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__security_price
+#, fuzzy
+msgid "Price per Security"
+msgstr "Cena vrednostnega papirja"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__share_price
+#, fuzzy
+msgid "Price per Share"
+msgstr "Cena na delnico"
+
+#. module: equity
+#: model:ir.actions.report,name:equity.action_equity_ubo_report
+#, fuzzy
+msgid "Print UBO"
+msgstr "Natisni UBO"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__rating_ids
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__rating_ids
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__rating_ids
+msgid "Ratings"
+msgstr "Ocene"
+
+#. module: equity
+#: model:ir.model.fields,help:equity.field_equity_transaction__subscriber_id
+#, fuzzy
+msgid "Recipient of the securities of the transaction."
+msgstr "Prejemnik vrednostnih papirjev transakcije."
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_end_dialog.xml:0
+#, fuzzy
+msgid "Remove Shareholder"
+msgstr "Odstrani delničarja"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+#, fuzzy
+msgid "Remove holder exit date."
+msgstr "Odstrani datum izstopa imetnika."
+
+#. module: equity
+#: model:ir.ui.menu,name:equity.menu_equity_reporting
+msgid "Reporting"
+msgstr "Poročanje"
+
+#. module: equity
+#: model:ir.actions.act_window,name:equity.action_equity_request_ubo_form
+#, fuzzy
+msgid "Request UBO Form"
+msgstr "Obrazec zahteve za UBO"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__auth_rep_role
+msgid "Role"
+msgstr "Vloga"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__message_has_sms_error
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__message_has_sms_error
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Napaka pri dostavi SMS"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__secretary
+#, fuzzy
+msgid "Secretary"
+msgstr "Tajnik"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__securities
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_equity
+msgid "Securities"
+msgstr "Vrednostni papirji"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Securities must be positive"
+msgstr "Vrednostni papirji morajo biti pozitivni"
+
+#. module: equity
+#: model:ir.model,name:equity.model_equity_security_class
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__security_class_id
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_security_class_form
+#, fuzzy
+msgid "Security Class"
+msgstr "Razred vrednostnega papirja"
+
+#. module: equity
+#: model:ir.actions.act_window,name:equity.action_equity_security_class
+#: model:ir.ui.menu,name:equity.menu_equity_configuration_security_classes
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_security_class_list
+#, fuzzy
+msgid "Security Classes"
+msgstr "Razredi vrednostnih papirjev"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+#, fuzzy
+msgid "Security Price"
+msgstr "Cena vrednostnega papirja"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_home_equity
+#, fuzzy
+msgid "See your shares and transactions"
+msgstr "Oglejte si svoje deleže in transakcije"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__seller_id
+#, fuzzy
+msgid "Seller"
+msgstr "Prodajalec"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__seller_name
+#, fuzzy
+msgid "Seller Name"
+msgstr "Ime prodajalca"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Seller and Buyer must be different."
+msgstr "Prodajalec in kupec morata biti različna."
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Seller id can only be set in transfer transactions."
+msgstr "ID prodajalca je mogoče nastaviti samo pri prenosnih transakcijah."
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.xml:0
+msgid "Send"
+msgstr "Pošlji"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "Send to Seller"
+msgstr "Pošlji prodajalcu"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "Send to Subscriber"
+msgstr "Pošlji naročniku"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__sequence
+msgid "Sequence"
+msgstr "Zaporedje"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "Shareholders who hold more than 25%"
+msgstr "Delničarji, ki imajo v lasti več kot 25 %"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_security_class__class_type__shares
+msgid "Shares"
+msgstr "Delitve"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "Shares transactions must have a subscriber"
+msgstr "Transakcije z deleži morajo imeti vpisnika"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "Signature date:"
+msgstr "Datum podpisa:"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+#, fuzzy
+msgid "Signature of Representative"
+msgstr "Podpis zastopnika"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+msgid "Signature:"
+msgstr "Podpis:"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "Strike Price"
+msgstr "Izvršilna cena"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+msgid "Submit"
+msgstr "Pošlji"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__subscriber_id
+#, fuzzy
+msgid "Subscriber"
+msgstr "Naročnik"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__subscriber_id_placeholder
+#, fuzzy
+msgid "Subscriber Id Placeholder"
+msgstr "Ograda za ID naročnika"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__subscriber_name
+#, fuzzy
+msgid "Subscriber Name"
+msgstr "Ime naročnika"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+msgid "Supporting Document"
+msgstr "Podporni dokument"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_submit
+#, fuzzy
+msgid ""
+"Thank you for providing your Ultimate Beneficial Owner (UBO) information."
+msgstr ""
+"Hvala, ker ste posredovali podatke o svojem končnem dejanskem lastniku (UBO)."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+#, fuzzy
+msgid ""
+"The \"# Securities\" total is not counting the \"Options Exercise\" "
+"transactions (because they are counted at the time of \"Options Issuance\"). "
+"The \"Transaction Price\" total is not counting the prices of options "
+"issuance transactions because that is a strike price."
+msgstr ""
+"Skupni znesek »# Vrednostni papirji« ne vključuje transakcij »Izvrševanje "
+"opcij« (ker se upoštevajo ob »Izdaji opcij«). Skupni znesek »Transakcijska "
+"cena« ne vključuje cen transakcij izdaje opcij, ker gre za izvršilno ceno."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"The declaration must be completed by the persons authorized to represent the "
+"company or entity according to its Articles of Association."
+msgstr ""
+"Izjavo morajo izpolniti osebe, pooblaščene za zastopanje družbe ali subjekta "
+"v skladu z njegovim statutom."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"The natural person(s) who ultimately own(s) or control(s) this corporate "
+"entity through direct or indirect ownership or control over 25% of the "
+"shares or voting rights of that corporate entity. <br/> Example: Company B "
+"and Company C hold each have a 20-percent interest in Company A. The private "
+"individual Z holds 90 % of the shares of Company B and of the Company C. Z "
+"is considered as shareholder holding more than 25% of A, for Z holds - "
+"indirectly - 36 % of the shares in A."
+msgstr ""
+"Fizična oseba oziroma fizične osebe, ki imajo v končni fazi v lasti to "
+"pravno osebo oziroma jo nadzorujejo z neposrednim ali posrednim lastništvom "
+"ali nadzorom nad več kot 25 % deležev ali glasovalnih pravic te pravne "
+"osebe. <br/> Primer: Družba B in družba C imata vsaka 20-odstotni delež v "
+"družbi A. Zasebna oseba Z ima 90 % deležev družbe B in družbe C. Z se šteje "
+"za družbenika, ki ima več kot 25 % družbe A, saj ima Z - posredno - 36 % "
+"deležev v družbi A."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid ""
+"The undersigned (executive officer or administrator) acting as a "
+"representative of the company:"
+msgstr ""
+"Spodaj podpisani (izvršni direktor ali skrbnik), ki deluje kot predstavnik "
+"družbe:"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+#, fuzzy
+msgid "There are currently no transactions for your account."
+msgstr "Za vaš račun trenutno ni transakcij."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "There are two classes of beneficial owners:"
+msgstr "Obstajata dve vrsti dejanskih lastnikov:"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_equity
+#, fuzzy
+msgid "There is currently no equity for your account."
+msgstr "Za vaš račun trenutno ni lastniškega kapitala."
+
+#. module: equity
+#: model:ir.model.constraint,message:equity.constraint_equity_ubo_unique_ubo
+#, fuzzy
+msgid "This contact is already a holder of this company"
+msgstr "Ta stik je že imetnik tega podjetja"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"This said, where a shareholder holding more than 25% is a legal arrangement "
+"other than a registered company, beneficial owners are:"
+msgstr ""
+"Vendar pa so v primeru, ko je delničar, ki ima v lasti več kot 25 %, pravna "
+"ureditev, ki ni registrirana družba, dejanski lastniki:"
+
+#. module: equity
+#. odoo-javascript
+#. odoo-python
+#: code:addons/equity/controllers/portal.py:0
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__transfer_amount
+msgid "Total"
+msgstr "Skupaj"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/controllers/portal.py:0
+msgid "Total Value"
+msgstr "Skupna vrednost"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_valuation__event__transaction
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_valuation_search
+msgid "Transaction"
+msgstr "Transakcija"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_my_company_equity
+#, fuzzy
+msgid "Transaction Price"
+msgstr "Transakcijska cena"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__transaction_type
+msgid "Transaction Type"
+msgstr "Vrsta transakcije"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#: model:ir.actions.act_window,name:equity.action_equity_transaction
+#: model:ir.ui.menu,name:equity.menu_equity_ownership_transactions
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_list
+msgid "Transactions"
+msgstr "Transakcije"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_transaction__transaction_type__transfer
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_search
+msgid "Transfer"
+msgstr "Prenos"
+
+#. module: equity
+#: model:ir.model.fields.selection,name:equity.selection__equity_ubo__auth_rep_role__treasurer
+#, fuzzy
+msgid "Treasurer"
+msgstr "Blagajnik"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__securities_type
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__class_type
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__securities_type
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_list
+msgid "Type"
+msgstr "Tip"
+
+#. module: equity
+#: model:ir.ui.menu,name:equity.menu_equity_ownership_ubos
+#: model_terms:ir.ui.view,arch_db:equity.equity_view_partner_form
+#, fuzzy
+msgid "UBO"
+msgstr "Končni dejanski lastnik"
+
+#. module: equity
+#: model:mail.activity.type,name:equity.equity_ubo_form_mail_activity
+#, fuzzy
+msgid "UBO Form Request"
+msgstr "Zahteva za obrazec UBO"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__ubo_national_identifier
+#: model:ir.model.fields,field_description:equity.field_res_users__ubo_national_identifier
+#, fuzzy
+msgid "UBO ID Number"
+msgstr "Identifikacijska številka UBO"
+
+#. module: equity
+#: model:mail.template,subject:equity.equity_ubo_form_email_template
+#, fuzzy
+msgid "UBO form"
+msgstr "Obrazec UBO"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#, fuzzy
+msgid ""
+"UBO portal form will become unavailable once this activity will be marked as "
+"done"
+msgstr ""
+"Portalni obrazec UBO ne bo več na voljo, ko bo ta dejavnost označena kot "
+"opravljena"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__ubo_owned_company_ids
+#: model:ir.model.fields,field_description:equity.field_res_users__ubo_owned_company_ids
+#, fuzzy
+msgid "Ubo Owned Company"
+msgstr "Podjetje v lasti UBO"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_res_partner__ubo_owner_ids
+#: model:ir.model.fields,field_description:equity.field_res_users__ubo_owner_ids
+#, fuzzy
+msgid "Ubo Owner"
+msgstr "Lastnik UBO"
+
+#. module: equity
+#: model:ir.model,name:equity.model_equity_ubo
+#, fuzzy
+msgid "Ultimate Beneficial Owner"
+msgstr "Končni dejanski lastnik"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "Ultimate Beneficial Owners (UBO) Request"
+msgstr "Zahteva za končne dejanske lastnike (UBO)"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "Ultimate Beneficial Owners (UBO) statement"
+msgstr "Izjava o končnih dejanskih lastnikih (UBO)"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+msgid "Unassigned"
+msgstr "Nedodeljeno"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+msgid "Upload"
+msgstr "Naloži"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "Upload Files"
+msgstr "Naloži datoteke"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#, fuzzy
+msgid "Upload UBO Form"
+msgstr "Naloži obrazec UBO"
+
+#. module: equity
+#. odoo-javascript
+#. odoo-python
+#: code:addons/equity/models/res_partner.py:0
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#: code:addons/equity/static/src/components/valuation_chart/valuation_chart.xml:0
+#: model:ir.actions.client,name:equity.action_equity_valuation_graph
+#: model:ir.model,name:equity.model_equity_valuation
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__valuation
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__valuation
+#: model:ir.ui.menu,name:equity.menu_equity_reporting_valuation
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_valuation_form
+msgid "Valuation"
+msgstr "Vrednotenje"
+
+#. module: equity
+#: model:ir.actions.act_window,name:equity.action_equity_valuation
+#: model:ir.ui.menu,name:equity.menu_equity_ownership_valuations
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_valuation_list
+#, fuzzy
+msgid "Valuations"
+msgstr "Vrednotenja"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+#, fuzzy
+msgid "Vesting period, exercise deadline, etc."
+msgstr "Obdobje pridobivanja pravic, rok za uveljavljanje itd."
+
+#. module: equity
+#: model:res.groups,name:equity.group_equity_viewer
+msgid "Viewer"
+msgstr "Gledalec"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__company_id
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__company_id
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__company_id
+#, fuzzy
+msgid "Visible to"
+msgstr "Vidno za"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__votes
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_security_class_form
+msgid "Votes"
+msgstr "Glasovi"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_security_class__share_votes
+#, fuzzy
+msgid "Votes per Share"
+msgstr "Glasovi na delnico"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/cap_table/cap_table.js:0
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.js:0
+#: code:addons/equity/static/src/components/valuation_chart/valuation_chart.xml:0
+#: model:ir.model.fields,field_description:equity.field_equity_cap_table__voting_rights
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__voting_rights
+#, fuzzy
+msgid "Voting Rights"
+msgstr "Glasovalne pravice"
+
+#. module: equity
+#: model:ir.model.fields,field_description:equity.field_equity_transaction__website_message_ids
+#: model:ir.model.fields,field_description:equity.field_equity_ubo__website_message_ids
+#: model:ir.model.fields,field_description:equity.field_equity_valuation__website_message_ids
+msgid "Website Messages"
+msgstr "Sporočila iz spletne strani"
+
+#. module: equity
+#: model:ir.model.fields,help:equity.field_equity_transaction__website_message_ids
+#: model:ir.model.fields,help:equity.field_equity_ubo__website_message_ids
+#: model:ir.model.fields,help:equity.field_equity_valuation__website_message_ids
+msgid "Website communication history"
+msgstr "Kronologija komunikacij spletne strani"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_end_dialog.xml:0
+#, fuzzy
+msgid "When did the shareholder lose its 25% stake in control or in votes?"
+msgstr ""
+"Kdaj je delničar izgubil svoj 25-odstotni delež pri nadzoru ali glasovanju?"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"Where the future beneficiaries have already been determined, the natural "
+"person(s) who is the beneficiary of 25% or\n"
+"                                    more of the property of a legal "
+"arrangement or entity or"
+msgstr ""
+"Kadar so bili bodoči upravičenci že določeni, fizična oseba oziroma fizične "
+"osebe, ki je oziroma so upravičena do 25 % ali\n"
+"                                    več premoženja pravnega aranžmaja ali "
+"subjekta ali"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid "Who should complete and sign the declaration?"
+msgstr "Kdo mora izpolniti in podpisati izjavo?"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+msgid "Yes"
+msgstr "Da"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+#, fuzzy
+msgid ""
+"You can remove any shareholder holding less than 25% of the shares or voting "
+"rights."
+msgstr ""
+"Lahko odstranite vsakega delničarja, ki ima v lasti manj kot 25 % delnic ali "
+"glasovalnih pravic."
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid ""
+"You cannot change the equity currency because this partner already has "
+"existing transactions."
+msgstr ""
+"Valute kapitala ne morete spremeniti, ker ima ta partner že obstoječe "
+"transakcije."
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.js:0
+#, fuzzy
+msgid "You must provide either the date of birth, or the ID number"
+msgstr "Navesti morate bodisi datum rojstva bodisi identifikacijsko številko"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+msgid "Your Name"
+msgstr "Vaše ime"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/ubo_form.xml:0
+#, fuzzy
+msgid "Your Position"
+msgstr "Vaše delovno mesto"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_submit
+#, fuzzy
+msgid "Your UBO Declaration Has Been Submitted!"
+msgstr "Vaša izjava o dejanskih lastnikih je bila oddana!"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/controllers/portal.py:0
+#, fuzzy
+msgid "Your Value ND"
+msgstr "Vaša vrednost ND"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"any natural person who has sole beneficial ownership of a legal entity or "
+"legal arrangement which is known to have\n"
+"                        been set up for the benefit de facto of a PEP."
+msgstr ""
+"vsaka fizična oseba, ki je edini dejanski lastnik pravne osebe ali pravnega "
+"aranžmaja, za katerega je znano, da je bil\n"
+"                        dejansko vzpostavljen v korist PEP."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.portal_ubo_form
+#, fuzzy
+msgid ""
+"any natural person who is known to have joint beneficial ownership of legal "
+"entities or legal arrangements, or any\n"
+"                        other close business relations, with a PEP;"
+msgstr ""
+"katera koli fizična oseba, za katero je znano, da ima skupaj s PEP skupno "
+"dejansko lastništvo pravnih oseb ali pravnih ureditev ali kakršne koli\n"
+"                        druge tesne poslovne odnose s PEP;"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid ""
+"are the following individuals who have control by other means on the "
+"direction of the company (administrators)"
+msgstr ""
+"so naslednje osebe, ki imajo nadzor nad usmerjanjem družbe na druge načine "
+"(administratorji)"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid ""
+"are the following individuals who, in last resort, own or control directly "
+"or indirectly more than 25% of the shares or of the voting rights of this "
+"company"
+msgstr ""
+"so naslednje fizične osebe, ki imajo v končni fazi neposredno ali posredno v "
+"lasti ali pod nadzorom več kot 25 % delnic ali glasovalnih pravic te družbe"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "are the following publicly traded companies."
+msgstr "so naslednje družbe, ki kotirajo na borzi."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "born"
+msgstr "rojen"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+msgid "day"
+msgstr "dan"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+msgid "days"
+msgstr "dni"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+#, fuzzy
+msgid "declares that the beneficial owners of the company:"
+msgstr "izjavlja, da so dejanski lastniki družbe:"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_security_class_form
+#, fuzzy
+msgid "e.g. Seed, Series A, ..."
+msgstr "npr. Seed, serija A, ..."
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+msgid "in"
+msgstr "v"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+msgid "month"
+msgstr "mesec"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+msgid "months"
+msgstr "meseci"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.equity_ubo_report
+msgid "on"
+msgstr "na"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.xml:0
+msgid "or"
+msgstr "ali"
+
+#. module: equity
+#. odoo-javascript
+#: code:addons/equity/static/src/components/ubo_form/holder_edit_dialog.js:0
+#, fuzzy
+msgid "please keep percentages between 0 and 100"
+msgstr "prosimo, ohranite odstotke med 0 in 100"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "remaining"
+msgstr "preostanek"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "seller"
+msgstr "Prodajalec"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "subscriber"
+msgstr "Naročnik"
+
+#. module: equity
+#: model_terms:ir.ui.view,arch_db:equity.view_equity_transaction_form
+msgid "to"
+msgstr "do"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+msgid "year"
+msgstr "leto"
+
+#. module: equity
+#. odoo-python
+#: code:addons/equity/models/equity_transaction.py:0
+#, fuzzy
+msgid "years"
+msgstr "Leta"

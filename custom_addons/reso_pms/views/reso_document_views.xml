@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Document Form View -->
+    <record id="view_reso_document_form" model="ir.ui.view">
+        <field name="name">reso.document.form</field>
+        <field name="model">reso.document</field>
+        <field name="arch" type="xml">
+            <form string="Document &amp; KYC Record">
+                <header>
+                    <button name="action_verify" string="Verify Document" type="object" class="oe_highlight" invisible="is_verified"/>
+                    <button name="action_unverify" string="Unverify" type="object" invisible="not is_verified"/>
+                    <field name="is_verified" widget="boolean_toggle"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Document Title / Ref..."/></h1>
+                    </div>
+                    <group>
+                        <group string="Classification">
+                            <field name="document_type"/>
+                            <field name="partner_id"/>
+                            <field name="booking_id"/>
+                            <field name="property_id"/>
+                        </group>
+                        <group string="Verification &amp; Expiry">
+                            <field name="expiry_date"/>
+                            <field name="verified_by"/>
+                            <field name="verified_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Attachments">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="Notes">
+                            <field name="note" placeholder="Verification notes or compliance instructions..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- Document List View -->
+    <record id="view_reso_document_tree" model="ir.ui.view">
+        <field name="name">reso.document.tree</field>
+        <field name="model">reso.document</field>
+        <field name="arch" type="xml">
+            <list string="Documents &amp; KYC Files">
+                <field name="name"/>
+                <field name="document_type"/>
+                <field name="partner_id"/>
+                <field name="property_id"/>
+                <field name="expiry_date"/>
+                <field name="is_verified" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Document Action -->
+    <record id="action_reso_document" model="ir.actions.act_window">
+        <field name="name">Guest &amp; Owner Documents</field>
+        <field name="res_model">reso.document</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

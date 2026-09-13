@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * digest_enterprise
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:44+0000\n"
+"PO-Revision-Date: 2026-06-17 10:37+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"digest_enterprise/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: digest_enterprise
+#: model_terms:digest.tip,tip_description:digest_enterprise.digest_tip_web_enterprise_0
+msgid "<b class=\"tip_title\">Tip: Navigate menus like a pro</b>"
+msgstr "<b class=\"tip_title\">ເຄັດລັບ: ເຂົ້າເຖິງເມນູແບບມືອາຊີບ</b>"
+
+#. module: digest_enterprise
+#: model_terms:digest.tip,tip_description:digest_enterprise.digest_tip_web_enterprise_1
+msgid ""
+"Connect your WhatsApp account to Odoo to receive inbound messages directly "
+"in your CRM."
+msgstr ""
+"ເຊື່ອມຕໍ່ບັນຊີ WhatsApp ຂອງທ່ານກັບ Odoo ເພື່ອຮັບຂໍ້ຄວາມຂາເຂົ້າໂດຍກົງໃນ CRM ຂອງທ່ານ."
+
+#. module: digest_enterprise
+#: model_terms:digest.tip,tip_description:digest_enterprise.digest_tip_web_enterprise_0
+msgid ""
+"From the Home page, start typing what you would like to access. Odoo will "
+"suggest menus matching your search. Use arrow keys and press enter to jump "
+"to your menu."
+msgstr ""
+"ຈາກໜ້າຫຼັກ, ເລີ່ມພິມສິ່ງທີ່ທ່ານຕ້ອງການເຂົ້າເຖິງ. Odoo ຈະແນະນຳເມນູທີ່ກົງກັບການຄົ້ນຫາຂອງທ່ານ. ໃຊ້ປຸ່ມລູກສອ"
+"ນ ແລະ ກົດ enter ເພື່ອໄປທີ່ເມນູຂອງທ່ານ."
+
+#. module: digest_enterprise
+#: model:digest.tip,name:digest_enterprise.digest_tip_web_enterprise_0
+msgid "Tip: Navigate menus like a pro"
+msgstr "ເຄັດລັບ: ເຂົ້າເຖິງເມນູແບບມືອາຊີບ"
+
+#. module: digest_enterprise
+#: model:digest.tip,name:digest_enterprise.digest_tip_web_enterprise_1
+#: model_terms:digest.tip,tip_description:digest_enterprise.digest_tip_web_enterprise_1
+msgid "Tip: Your Business right in their pocket"
+msgstr "ເຄັດລັບ: ທຸລະກິດຂອງທ່ານຢູ່ໃນມືຂອງພວກເຂົາ"

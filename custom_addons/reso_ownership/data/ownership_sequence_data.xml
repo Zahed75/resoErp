@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_reso_owner_registry" model="ir.sequence">
+            <field name="name">Owner Registry</field>
+            <field name="code">reso.owner.registry</field>
+            <field name="prefix">SH/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_reso_share_transfer" model="ir.sequence">
+            <field name="name">Share Transfer</field>
+            <field name="code">reso.share.transfer</field>
+            <field name="prefix">TR/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_reso_distribution_run" model="ir.sequence">
+            <field name="name">Distribution Run</field>
+            <field name="code">reso.distribution.run</field>
+            <field name="prefix">DIST/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

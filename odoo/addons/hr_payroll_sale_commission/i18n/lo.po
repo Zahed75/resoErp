@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * hr_payroll_sale_commission
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-06-17 10:17+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"hr_payroll_sale_commission/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: hr_payroll_sale_commission
+#: model:ir.model,name:hr_payroll_sale_commission.model_sale_commission_plan
+msgid "Commission Plan"
+msgstr "ແຜນຄ່ານາຍໜ້າ"
+
+#. module: hr_payroll_sale_commission
+#: model:ir.model.fields,field_description:hr_payroll_sale_commission.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:hr_payroll_sale_commission.field_sale_commission_plan__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: hr_payroll_sale_commission
+#: model:ir.model.fields,field_description:hr_payroll_sale_commission.field_hr_payslip__id
+#: model:ir.model.fields,field_description:hr_payroll_sale_commission.field_sale_commission_plan__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_payroll_sale_commission
+#: model:ir.model,name:hr_payroll_sale_commission.model_hr_payslip
+msgid "Pay Slip"
+msgstr "ໃບຈ່າຍເງິນເດືອນ"
+
+#. module: hr_payroll_sale_commission
+#: model:ir.model.fields,field_description:hr_payroll_sale_commission.field_sale_commission_plan__commission_payroll_input
+msgid "Payslip input"
+msgstr "ຂໍ້ມູນນຳເຂົ້າໃບຈ່າຍເງິນເດືອນ"
+
+#. module: hr_payroll_sale_commission
+#: model:ir.model.fields,help:hr_payroll_sale_commission.field_sale_commission_plan__commission_payroll_input
+msgid ""
+"Payslip input type for this commission plan, commission are grouped by input"
+" type."
+msgstr ""
+"ປະເພດຂໍ້ມູນນຳເຂົ້າໃບຈ່າຍເງິນເດືອນສຳລັບແຜນຄ່ານາຍໜ້ານີ້, ຄ່ານາຍໜ້າແມ່ນຖືກຈັດກຸ່ມຕາມປະເພດຂໍ້ມູນນຳເຂົ້າ."

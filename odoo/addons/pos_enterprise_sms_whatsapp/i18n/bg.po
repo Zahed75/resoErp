@@ -1,0 +1,161 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_enterprise_sms_whatsapp
+#
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-06 18:45+0000\n"
+"PO-Revision-Date: 2026-07-25 21:43+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"pos_enterprise_sms_whatsapp/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+msgid "<span>Enable this option to send order status updates via SMS.</span>"
+msgstr ""
+"<span>Активирайте тази опция, за да изпращате актуализации за статуса на "
+"поръчката чрез SMS.</span>"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+msgid ""
+"<span>Enable this option to send order status updates via Whatsapp.</span>"
+msgstr ""
+"<span>Активирайте тази опция, за да изпращате актуализации за статуса на "
+"поръчката чрез WhatsApp.</span>"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+msgid "Communication"
+msgstr "Комуникация"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__display_name
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_order__display_name
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_state__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,body:pos_enterprise_sms_whatsapp.sms_template_order_received_confirmation_pos
+msgid ""
+"Hello {{ object.partner_id.name }},\n"
+"\n"
+"Thank you for your order number {{ object.pos_reference }} for the {{ object.preset_time }}.\n"
+"You will soon be notified when your order is ready.\n"
+"\n"
+"{{ object.company_id.name }}\n"
+"\n"
+"            "
+msgstr ""
+"Здравейте {{ object.partner_id.name }},\n"
+"\n"
+"Благодарим Ви за поръчка номер {{ object.pos_reference }} за {{ "
+"object.preset_time }}.\n"
+"Скоро ще бъдете уведомени, когато поръчката Ви е готова.\n"
+"\n"
+"{{ object.company_id.name }}\n"
+"\n"
+"            "
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,body:pos_enterprise_sms_whatsapp.sms_template_order_ready_pos
+msgid ""
+"Hello {{ object.partner_id.name }},\n"
+"\n"
+"Your order number {{ object.pos_reference }} is now ready for pickup. Head over whenever you're ready, and enjoy your meal.\n"
+"\n"
+"{{ object.company_id.name }}\n"
+"\n"
+"            "
+msgstr ""
+"Здравейте {{ object.partner_id.name }},\n"
+"\n"
+"Поръчка номер {{ object.pos_reference }} вече е готова за вземане. "
+"Заповядайте, когато Ви е удобно, и приятен апетит.\n"
+"\n"
+"{{ object.company_id.name }}\n"
+"\n"
+"            "
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__id
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_order__id
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_state__id
+msgid "ID"
+msgstr "Номер (ID)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+msgid "Order is ready"
+msgstr "Поръчката е готова"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__sms_order_ready_id
+msgid "Order is ready (SMS)"
+msgstr "Поръчката е готова (SMS)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__whatsapp_order_ready_id
+msgid "Order is ready (wa)"
+msgstr "Поръчката е готова (wa)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+msgid "Order received"
+msgstr "Поръчката е приета"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__sms_order_received_id
+msgid "Order received (SMS)"
+msgstr "Поръчката е приета (SMS)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__whatsapp_order_received_id
+msgid "Order received (wa)"
+msgstr "Поръчката е приета (wa)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,name:pos_enterprise_sms_whatsapp.sms_template_order_ready_pos
+msgid "POS: Order is ready"
+msgstr "POS: Поръчката е готова"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,name:pos_enterprise_sms_whatsapp.sms_template_order_received_confirmation_pos
+msgid "POS: Order received confirmation"
+msgstr "POS: Потвърждение за приета поръчка"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model,name:pos_enterprise_sms_whatsapp.model_pos_prep_display
+msgid "Pos Preparation Display"
+msgstr "Дисплей за подготовка в POS"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model,name:pos_enterprise_sms_whatsapp.model_pos_prep_order
+msgid "Pos Preparation Order"
+msgstr "Поръчка за подготовка в POS"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model,name:pos_enterprise_sms_whatsapp.model_pos_prep_state
+msgid "Pos Preparation State"
+msgstr "Състояние на подготовка в POS"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__sms_enabled
+msgid "SMS Enabled"
+msgstr "SMS активиран"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__whatsapp_enabled
+msgid "WhatsApp Enabled"
+msgstr "WhatsApp активиран"

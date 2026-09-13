@@ -1,0 +1,6 @@
+<templates>
+    <t t-name="account_asset.common_warning_discrepancy_detected">
+        The fixed asset account differs from the account on the bill. Click
+        <a type="button" t-on-click="(ev) => controller.reportAction(ev, 'open_discrepancy_assets', warningParams)">here</a>.
+    </t>
+</templates>

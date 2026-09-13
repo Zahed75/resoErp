@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="l10n_be_pos_blackbox.Navbar" t-inherit="point_of_sale.Navbar" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('pos-burger-menu-items')]" position="after">
+            <t t-if="this.pos.blackbox.isActive">
+                <div class="border-top p-2">
+                    <div>
+                        POS ID: <t t-esc="this.pos.config.l10n_be_pos_id"/>
+                    </div>
+                    <div>
+                        PosSwVersion: <t t-esc="this.pos.config.posSwVersion"/>
+                    </div>
+                </div>
+            </t>
+        </xpath>
+    </t>
+</templates>

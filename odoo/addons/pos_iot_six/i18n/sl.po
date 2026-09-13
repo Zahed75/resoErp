@@ -1,0 +1,227 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_iot_six
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:46+0000\n"
+"PO-Revision-Date: 2026-07-31 10:44+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_iot_six/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_iot_six
+#: model_terms:ir.ui.view,arch_db:pos_iot_six.view_add_six_terminal
+#, fuzzy
+msgid "Add Terminal"
+msgstr "Dodaj terminal"
+
+#. module: pos_iot_six
+#: model_terms:ir.ui.view,arch_db:pos_iot_six.view_add_six_terminal
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. module: pos_iot_six
+#: model:ir.model,name:pos_iot_six.model_pos_iot_six_add_six_terminal
+#, fuzzy
+msgid "Connect a Six Payment Terminal"
+msgstr "Poveži plačilni terminal Six"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_iot_box__display_name
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__display_name
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_payment_method__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__iot_box_ip
+msgid "Domain Address"
+msgstr "Naslov domene"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid "Failed to get balance report from the terminal. Please retry."
+msgstr ""
+"Ni bilo mogoče pridobiti poročila o stanju iz terminala. Poskusite znova."
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/six_terminal_id_field.xml:0
+#, fuzzy
+msgid "Failed to save Terminal ID to IoT Box"
+msgstr "Shranjevanje ID-ja terminala v IoT Box ni uspelo"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_iot_box__id
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__id
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_payment_method__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_iot_six
+#: model:ir.model,name:pos_iot_six.model_iot_box
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__iot_box_id
+msgid "IoT Box"
+msgstr "IoT Box"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/six_terminal_id_field.xml:0
+#, fuzzy
+msgid "Must only contain digits"
+msgstr "Mora vsebovati samo cifre"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid "No printer configured"
+msgstr "Noben tiskalnik ni nastavljen"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid "Payment terminal error"
+msgstr "Napaka plačilnega terminala"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid ""
+"Please check the network connection and then check the status of the last "
+"transaction manually."
+msgstr ""
+"Prosimo, preverite omrežno povezavo in nato ročno preverite stanje zadnje "
+"transakcije."
+
+#. module: pos_iot_six
+#: model:ir.model,name:pos_iot_six.model_pos_payment_method
+#, fuzzy
+msgid "Point of Sale Payment Methods"
+msgstr "Načini plačila prodajne točke"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/six_terminal_id_field.xml:0
+#, fuzzy
+msgid "Saved Terminal ID to IoT Box"
+msgstr "ID terminala je shranjen v IoT Box"
+
+#. module: pos_iot_six
+#: model_terms:ir.ui.view,arch_db:pos_iot_six.pos_payment_method_view_form_six_iot
+#, fuzzy
+msgid "Setup Six Terminal"
+msgstr "Nastavi terminal Six"
+
+#. module: pos_iot_six
+#: model:ir.actions.act_window,name:pos_iot_six.action_add_six_terminal
+#: model_terms:ir.ui.view,arch_db:pos_iot_six.view_add_six_terminal
+#, fuzzy
+msgid "Setup a Six Payment Terminal"
+msgstr "Nastavitev plačilnega terminala Six"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/xml/balance_button.xml:0
+#, fuzzy
+msgid "Six Terminal Balance"
+msgstr "Stanje terminala Six"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_iot_box__six_terminal_id
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__six_terminal_id
+#, fuzzy
+msgid "Six Terminal ID (TID)"
+msgstr "ID terminala Six (TID)"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid "Six balance report error"
+msgstr "Napaka poročila o stanju Six"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__terminal_device_id
+#, fuzzy
+msgid "Terminal Device"
+msgstr "Naprava terminala"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid "Terminal Disconnected"
+msgstr "Terminal ni povezan"
+
+#. module: pos_iot_six
+#: model:ir.model.fields,help:pos_iot_six.field_iot_box__six_terminal_id
+#: model:ir.model.fields,help:pos_iot_six.field_pos_iot_six_add_six_terminal__six_terminal_id
+#, fuzzy
+msgid ""
+"The ID of your Six payment terminal. Please note that after entering this, "
+"you will have to wait several seconds before the terminal will appear in "
+"your device list."
+msgstr ""
+"ID vašega plačilnega terminala Six. Upoštevajte, da boste po vnosu tega "
+"podatka morali počakati nekaj sekund, preden se terminal pojavi na seznamu "
+"naprav."
+
+#. module: pos_iot_six
+#: model:ir.model.fields,help:pos_iot_six.field_pos_iot_six_add_six_terminal__iot_box_id
+#, fuzzy
+msgid "The IoT Box that your Six terminal is connected to."
+msgstr "IoT Box, s katerim je vaš terminal Six povezan."
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid "Transaction could not be cancelled"
+msgstr "Transakcije ni bilo mogoče preklicati"
+
+#. module: pos_iot_six
+#. odoo-javascript
+#: code:addons/pos_iot_six/static/src/js/payment_six.js:0
+#, fuzzy
+msgid ""
+"You must select a printer in your POS config to print Six balance report"
+msgstr ""
+"Za tiskanje poročila o stanju Six morate v nastavitvah prodajne točke "
+"izbrati tiskalnik."

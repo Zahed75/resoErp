@@ -1,0 +1,987 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * theme_anelusia
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 17:38+0000\n"
+"PO-Revision-Date: 2026-07-25 13:38+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"theme_anelusia/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_quotes_carousel_minimal
+msgid ""
+"\" A go-to partner for stylish growth. <br/>Creative, timely, and ahead of "
+"the fashion game. \""
+msgstr ""
+"\" Партньор за стилен растеж. <br/>Креативни, навременни и винаги крачка "
+"пред модата. \""
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_quotes_carousel_minimal
+msgid ""
+"\" Exceptional quality and service! <br/>They consistently deliver on all "
+"our fashion needs. \""
+msgstr ""
+"\" Изключително качество и обслужване! <br/>Неизменно покриват всичките ни "
+"модни нужди. \""
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_quotes_carousel_minimal
+msgid ""
+"\" Their designs revamped our image. Fashion-forward and always on trend. \""
+msgstr "\" Техните дизайни преобразиха имиджа ни. Модерни и винаги в тренд. \""
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_text_cover
+msgid ""
+"<br/>Color trends are already waiting to spring into action for the  next "
+"summer.<br/>"
+msgstr ""
+"<br/>Цветовите тенденции вече чакат да разцъфтят за следващото лято.<br/>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_split_intro
+msgid ""
+"<br/>Step into the future with our inclusive styles designed to celebrate "
+"your unique expression. From expanding your wardrobe to embracing new "
+"trends, our collections provide the foundation for a vibrant fashion "
+"experience. Don’t let conventional choices limit your style any longer.<br/"
+"><br/>"
+msgstr ""
+"<br/>Пристъпете в бъдещето с нашите приобщаващи стилове, създадени да "
+"празнуват вашата уникална себеизява. От разширяване на гардероба до "
+"прегръщане на нови тенденции, нашите колекции дават основата за ярко модно "
+"изживяване. Не позволявайте на конвенционалните избори да ограничават стила "
+"ви повече.<br/><br/>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_empowerment
+msgid "<br/>Unveil the latest, shop the best!<br/><br/>"
+msgstr "<br/>Открийте най-новото, пазарувайте най-доброто!<br/><br/>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_big_number
+msgid ""
+"<font class=\"text-gradient\" style=\"background-image: linear-"
+"gradient(15deg, var(--o-color-1) 25%, var(--o-color-5) 100%);\">\n"
+"            100+\n"
+"        </font>"
+msgstr ""
+"<font class=\"text-gradient\" style=\"background-image: linear-gradient"
+"(15deg, var(--o-color-1) 25%, var(--o-color-5) 100%);\">\n"
+"            100+\n"
+"        </font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_text_cover
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\"><strong>The next</strong></"
+"font><br/><font style=\"background-image: linear-gradient(135deg, var(--o-"
+"color-1) 0%, var(--o-color-2) 100%);\" class=\"text-gradient\"> "
+"<strong>summer</strong></font><br/><font style=\"background-image: linear-"
+"gradient(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);\" class=\"text-"
+"gradient\"> <strong>collection</strong></font>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\"><strong>Следващата</strong>"
+"</font><br/><font style=\"background-image: linear-gradient(135deg, var(--o-"
+"color-1) 0%, var(--o-color-2) 100%);\" class=\"text-gradient\"> <strong>"
+"лятна</strong></font><br/><font style=\"background-image: linear-gradient"
+"(135deg, var(--o-color-1) 0%, var(--o-color-2) 100%);\" class=\"text-"
+"gradient\"> <strong>колекция</strong></font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_comparisons_horizontal
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\">Our Style Plans</font>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\">Нашите стилови планове</"
+"font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_timeline_images
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\">Our journey</font>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\">Нашият път</font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references_grid
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references_social
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\">Our top brands</font>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-2) 100%);\" class=\"text-gradient\">Нашите топ марки</font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Mich Stark</font>\n"
+"        <br/>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Mich Stark</font>\n"
+"        <br/>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Tony Fred</font>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-1) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Tony Fred</font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-2) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Aline Turner</font>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-2) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Aline Turner</font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-2) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Iris Joe</font>"
+msgstr ""
+"<font style=\"background-image: linear-gradient(135deg, var(--o-color-2) 0%, "
+"var(--o-color-5) 100%);\" class=\"text-gradient\">Iris Joe</font>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_empowerment
+msgid ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/>  Enjoy "
+"exclusive deals up to -50% !"
+msgstr ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/>  "
+"Възползвайте се от ексклузивни оферти до -50% !"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_image_title
+msgid "A Deep Dive into Style and Innovation"
+msgstr "Задълбочен поглед към стила и иновациите"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid ""
+"A beautiful midi dress with vibrant floral prints, designed with a flowing "
+"skirt and fitted bodice, ideal for summer outings."
+msgstr ""
+"Красива миди рокля с ярки флорални принтове, с разкроена пола и прилепнал "
+"корсаж, идеална за летни разходки."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_key_images
+msgid "A glimpse of elegance and comfort in every piece"
+msgstr "Нотка елегантност и комфорт във всяко изделие"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Aline Turner"
+msgstr "Aline Turner"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"Aline is one of the iconic people in life who can say they love what they "
+"do. She likes to capture the moment from another point of view, another "
+"perspective."
+msgstr ""
+"Aline е една от онези емблематични личности, които могат да кажат, че обичат "
+"това, което правят. Обича да улавя мига от друга гледна точка, от друга "
+"перспектива."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_color_blocks_2
+msgid ""
+"Are you looking for sustainable clothing for men or women? Discover our "
+"exclusive fashion brand for both of you."
+msgstr ""
+"Търсите устойчиво облекло за мъже или жени? Открийте нашата ексклузивна "
+"модна марка и за двамата."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_call_to_action
+msgid "Be yourself, create your own style"
+msgstr "Бъдете себе си, създайте свой собствен стил"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_shape_image
+msgid "Celebrating diversity in fashion"
+msgstr "Празнуваме многообразието в модата"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "Classic Black Dress"
+msgstr "Класическа черна рокля"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid ""
+"Classic blue denim trucker jacket with a modern fit, featuring button "
+"closures and a slight stretch for comfort."
+msgstr ""
+"Класическо синьо дънково яке в модерна кройка, с копчета и лека еластичност "
+"за комфорт."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cover
+msgid "Color Matters"
+msgstr "Цветът има значение"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_striped_top
+msgid ""
+"Color trends are already waiting to spring into action for the next summer."
+msgstr "Цветовите тенденции вече чакат да разцъфтят за следващото лято."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cover
+msgid ""
+"Color trends are already waiting to spring into action for the next summer.\n"
+"        <br/>\n"
+"        <br/>"
+msgstr ""
+"Цветовите тенденции вече чакат да разцъфтят за следващото лято.\n"
+"        <br/>\n"
+"        <br/>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_striped_center_top
+msgid "Crafted with passion for every season"
+msgstr "Изработено със страст за всеки сезон"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_features_wall
+msgid "Custom Tailoring"
+msgstr "Шиене по поръчка"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid ""
+"Customer delight drives us. Our support team is always on hand, ensuring "
+"your fashion journey is smooth and satisfying."
+msgstr ""
+"Радостта на клиента ни движи. Екипът ни за поддръжка винаги е насреща, за да "
+"направи модния ви път плавен и удовлетворяващ."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "Denim Trucker Jacket"
+msgstr "Дънково яке"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid ""
+"Designed for the modern individual, our fashion seamlessly transitions from "
+"day to night, offering versatile pieces for any wardrobe."
+msgstr ""
+"Създадена за модерния човек, нашата мода плавно преминава от ден към вечер, "
+"предлагайки гъвкави изделия за всеки гардероб."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cover
+msgid "Discover"
+msgstr "Открийте"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_key_images
+msgid "Discover Our Latest Fashion Collection"
+msgstr "Открийте нашата най-нова модна колекция"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_call_to_action
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_text_cover
+msgid "Discover it"
+msgstr "Открийте я"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_shape_image
+msgid "Discover more"
+msgstr "Открийте повече"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_split_intro
+msgid "Discover new fashion trends"
+msgstr "Открийте нови модни тенденции"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid ""
+"Discover our latest fashion pieces with a modern touch. Perfectly crafted "
+"for every style!"
+msgstr ""
+"Открийте нашите най-нови модни изделия с модерна нотка. Перфектно изработени "
+"за всеки стил!"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cta_box
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_empowerment
+msgid "Discover our new collection,<br/>shop our bestsellers today!"
+msgstr "Открийте новата ни колекция,<br/>пазарувайте бестселърите ни още днес!"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_freegrid
+msgid "Discover the Latest Fashion and Fitness Trends"
+msgstr "Открийте най-новите тенденции в модата и фитнеса"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_quadrant
+msgid ""
+"Discover the latest in fashion and sportswear, where style meets "
+"performance. Our curated collections are designed to inspire and empower "
+"your active lifestyle.<br/><br/> Experience the perfect blend of form and "
+"function."
+msgstr ""
+"Открийте най-новото в модата и спортното облекло, където стилът среща "
+"представянето. Нашите подбрани колекции са създадени да вдъхновяват и "
+"подсилват активния ви начин на живот.<br/><br/> Изпитайте идеалния баланс "
+"между форма и функция."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_card_offset
+msgid ""
+"Discover the latest trends in fashion and sportswear, designed to elevate "
+"your style and performance. Our collection offers a blend of innovation, "
+"comfort, and flair."
+msgstr ""
+"Открийте най-новите тенденции в модата и спортното облекло, създадени да "
+"издигнат вашия стил и представяне. Нашата колекция съчетава иновация, "
+"комфорт и финес."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_striped_center_top
+msgid ""
+"Discover the latest trends in fashion, sports, and fitness, designed to "
+"empower your unique style and elevate your active lifestyle."
+msgstr ""
+"Открийте най-новите тенденции в модата, спорта и фитнеса, създадени да "
+"овластят вашия уникален стил и да издигнат активния ви начин на живот."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_call_to_action
+msgid "Discover the new summer collection."
+msgstr "Открийте новата лятна колекция."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_image_hexagonal
+msgid ""
+"Discover timeless elegance and modern style with our exclusive fashion "
+"collections. Elevate your wardrobe with unique pieces crafted to make a "
+"statement."
+msgstr ""
+"Открийте безвременна елегантност и модерен стил с нашите ексклузивни модни "
+"колекции. Издигнете гардероба си с уникални изделия, създадени да правят "
+"впечатление."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_carousel_intro
+msgid "Discover your style"
+msgstr "Открийте своя стил"
+
+#. module: theme_anelusia
+#: model:ir.model.fields,field_description:theme_anelusia.field_theme_utils__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references_social
+msgid "Disrupting fashion since 2013"
+msgstr "Преобразяваме модата от 2013 г."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid ""
+"Edgy black leather jacket with classic biker details, including zippers, "
+"studs, and an asymmetrical front closure."
+msgstr ""
+"Дръзко черно кожено яке с класически байкерски детайли, включително ципове, "
+"нитове и асиметрично предно закопчаване."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Editor-in-chief"
+msgstr "Главен редактор"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_features_wall
+msgid ""
+"Elevate your wardrobe with personalized styling advice from our experts, "
+"helping you express your individuality effortlessly."
+msgstr ""
+"Издигнете гардероба си с персонализирани стилови съвети от нашите експерти, "
+"които ви помагат да изразите своята индивидуалност без усилие."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_quadrant
+msgid "Elevating Fashion Trends"
+msgstr "Издигаме модните тенденции"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_striped_top
+msgid "Embrace Style: Discover the Ultimate Experience in Fashion Excellence"
+msgstr "Прегърнете стила: открийте върховното изживяване в модното съвършенство"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_striped_center_top
+msgid "Embrace the Future of Fashion"
+msgstr "Прегърнете бъдещето на модата"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_carousel_intro
+msgid ""
+"Enhance elegance and comfort with our thoughtfully crafted pieces that bring "
+"out the best version of you, every day."
+msgstr ""
+"Подсилете елегантността и комфорта с нашите внимателно изработени изделия, "
+"които изваждат на показ най-добрата ви версия всеки ден."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references_social
+msgid "Every style for everybody."
+msgstr "Всеки стил за всеки."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_features_wall
+msgid ""
+"Experience perfectly fitted clothing with our bespoke tailoring service, "
+"designed to match your unique style and body shape."
+msgstr ""
+"Изпитайте перфектно прилягащо облекло с нашата услуга за шиене по поръчка, "
+"създадена да съответства на вашия уникален стил и фигура."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid "Expertise and Vision"
+msgstr "Експертиза и визия"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_quadrant
+msgid "Explore Collections"
+msgstr "Разгледайте колекциите"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_freegrid
+msgid "Explore Now"
+msgstr "Разгледайте сега"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_carousel_intro
+msgid ""
+"Explore more and find unique fashion that aligns with your personal style, "
+"crafted for confidence and sophistication."
+msgstr ""
+"Разгледайте повече и открийте уникална мода, която съответства на вашия "
+"личен стил, създадена за увереност и изтънченост."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_freegrid
+msgid ""
+"Explore our collection of fashion and sportswear designed to keep you ahead "
+"of the trends. From innovative materials to cutting-edge designs, we offer "
+"products that combine style and performance."
+msgstr ""
+"Разгледайте нашата колекция от модни и спортни облекла, създадени да ви "
+"държат в тенденциите. От иновативни материали до авангардни дизайни, ние "
+"предлагаме продукти, които съчетават стил и ефективност."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_shape_image
+msgid ""
+"Explore our diverse range of fashion that embraces all identities and "
+"styles. We believe in inclusivity, offering collections that represent "
+"everyone. Fashion is for all—find your unique expression with us."
+msgstr ""
+"Разгледайте нашата разнообразна гама от мода, която прегръща всички "
+"идентичности и стилове. Вярваме в приобщаването и предлагаме колекции, които "
+"представят всекиго. Модата е за всички — открийте своята уникална себеизява "
+"с нас."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_images_mosaic
+msgid "Explore our newest styles to elevate your wardrobe."
+msgstr "Разгледайте най-новите ни стилове, за да издигнете гардероба си."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_key_images
+msgid "Explore the Trends that Define Style"
+msgstr "Открийте тенденциите, които определят стила"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_color_blocks_2
+msgid "Fancy for them"
+msgstr "Изтънчено за тях"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_color_blocks_2
+msgid "Fashion for her"
+msgstr "Мода за нея"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "Floral Midi Dress"
+msgstr "Флорална миди рокля"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"Founder and chief visionary, Tony is the driving force behind the company. "
+"He loves to keep his hands full by participating in the development of the "
+"magazine and does not hesitate to carry out field surveys."
+msgstr ""
+"Основател и главен визионер, Tony е движещата сила зад компанията. Обича да "
+"е затрупан с работа, участвайки в развитието на списанието, и не се колебае "
+"да провежда теренни проучвания."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_media_list
+msgid ""
+"Go off beaten track and discover unexpected and curious places. Here’s our "
+"ultimate guide to the best-kept secret spots that you simply must visit!"
+msgstr ""
+"Излезте от утъпкания път и открийте неочаквани и любопитни места. Ето нашия "
+"пълен пътеводител за най-добре пазените тайни кътчета, които просто трябва "
+"да посетите!"
+
+#. module: theme_anelusia
+#: model:ir.model.fields,field_description:theme_anelusia.field_theme_utils__id
+msgid "ID"
+msgstr "ID"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid "Innovative Design"
+msgstr "Иновативен дизайн"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_images_mosaic
+msgid "Introducing Our Latest Fashion Trends"
+msgstr "Представяме ви най-новите ни модни тенденции"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Iris Joe"
+msgstr "Iris Joe"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"Iris, with her international experience, helps us easily understand global "
+"politics. She is determined to drive success and delivers her professional "
+"acumen to bring the magazine to the next level."
+msgstr ""
+"Със своя международен опит Айрис ни помага лесно да разбираме световната "
+"политика. Тя е решена да постига успехи и влага професионалния си усет, за "
+"да изведе списанието на следващо ниво."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "Leather Moto Jacket"
+msgstr "Кожено мото яке"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid ""
+"Luxurious satin wrap dress in deep red, with a v-neckline and adjustable "
+"waist tie, perfect for evening events."
+msgstr ""
+"Луксозна сатенена рокля с прехлупване в наситено червено, с V-образно "
+"деколте и регулируем колан на талията, идеална за вечерни събития."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Mich Stark"
+msgstr "Mich Stark"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+msgid ""
+"Mich loves taking on challenges. With his multi-year experience as a "
+"journalist, he wanted to join a team that puts people at the center of the "
+"stories."
+msgstr ""
+"Мич обича да приема предизвикателства. С многогодишния си опит като "
+"журналист той искаше да се присъедини към екип, който поставя хората в "
+"центъра на историите."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_color_blocks_2
+msgid "More Details"
+msgstr "Още детайли"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "Our Collection"
+msgstr "Нашата колекция"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid ""
+"Our collection captures the essence of timeless elegance, blending classic "
+"designs with modern sophistication for every occasion."
+msgstr ""
+"Нашата колекция улавя есенцията на безвременната елегантност, съчетавайки "
+"класически дизайни със съвременна изтънченост за всеки повод."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_key_images
+msgid "Perfect outfits for every occasion"
+msgstr "Перфектни тоалети за всеки повод"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_color_blocks_2
+msgid ""
+"Perfectly combined by fashion experts. Get fresh outfit ideas for the new "
+"season and every occasion. Discover what's made for him."
+msgstr ""
+"Перфектно съчетани от експерти по мода. Получете свежи идеи за тоалети за "
+"новия сезон и всеки повод. Открийте какво е създадено за него."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_features_wall
+msgid "Personal Styling"
+msgstr "Персонален стайлинг"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Photograph"
+msgstr "Фотография"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Political Reporter"
+msgstr "Политически репортер"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid ""
+"Pushing the boundaries of fashion, our innovative designs merge cutting-edge "
+"trends with unparalleled comfort and quality."
+msgstr ""
+"Премествайки границите на модата, нашите иновативни дизайни сливат най-"
+"новите тенденции с несравним комфорт и качество."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid "Quality and Craftsmanship"
+msgstr "Качество и майсторство"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_key_images
+msgid "Quality that speaks for itself"
+msgstr "Качество, което говори само за себе си"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_media_list
+msgid "Read more"
+msgstr "Прочетете повече"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_key_images
+msgid "Redefine your wardrobe with our latest styles"
+msgstr "Преоткрийте гардероба си с нашите най-нови стилове"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid "Redefining Fashion"
+msgstr "Преоткриваме модата"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_card_offset
+msgid "Redefining Style with Every Step"
+msgstr "Преоткриваме стила с всяка стъпка"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references_social
+msgid "Redefining elegance since 2009"
+msgstr "Преоткриваме елегантността от 2009 г."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_carousel_intro
+msgid "Redefining your style statement"
+msgstr "Преоткриваме вашето стилово изказване"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_color_blocks_2
+msgid ""
+"Refresh your daily rotation with our women’s clothing range. Discover our "
+"last collection for her for the next summer."
+msgstr ""
+"Освежете ежедневната си ротация с нашата гама дамско облекло. Открийте "
+"последната ни колекция за нея за идното лято."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_carousel_intro
+msgid "Refresh your look with our exclusive designs and expert styling tips."
+msgstr ""
+"Освежете визията си с нашите ексклузивни дизайни и експертни съвети за "
+"стайлинг."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "Satin Wrap Dress"
+msgstr "Сатенена рокля с прехлупване"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references_social
+msgid "Shaping your style since 2015"
+msgstr "Оформяме вашия стил от 2015 г."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid ""
+"Sharp and sophisticated tailored blazer, crafted from high-quality wool, "
+"featuring structured shoulders and a slim fit."
+msgstr ""
+"Изчистено и изтънчено ушито сако от висококачествена вълна, със "
+"структурирани рамене и приталена кройка."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_striped_center_top
+msgid "Shop Now"
+msgstr "Пазарувай сега"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cta_box
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_empowerment
+msgid "Shop now"
+msgstr "Пазарувай сега"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_empowerment
+msgid "Shop now   <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+msgstr "Пазарувай сега  <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_card_offset
+msgid "Shop the looks that define the season."
+msgstr "Пазарувайте визиите, които определят сезона."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Sports Reporter"
+msgstr "Спортен репортер"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_features_wall
+msgid ""
+"Stay ahead of fashion trends with our insightful forecasts, curated to keep "
+"your look fresh and contemporary all year round."
+msgstr ""
+"Бъдете крачка пред модните тенденции с нашите проницателни прогнози, "
+"подбрани да поддържат визията ви свежа и съвременна целогодишно."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_color_blocks_2
+msgid "Style for him"
+msgstr "Стил за него"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_media_list
+msgid "Summer Essentials"
+msgstr "Летни задължителни артикули"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid "Sustainable Craftsmanship"
+msgstr "Устойчиво майсторство"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid "Sustainable Fashion"
+msgstr "Устойчива мода"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "Tailored Blazer"
+msgstr "Ушито сако"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid "Tailored Designs"
+msgstr "Дизайни по поръчка"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_media_list
+msgid ""
+"The right summer essentials can make the difference between a good time and "
+"a stand-out great time. Discover our selection for everyday wear during the "
+"warm summer months."
+msgstr ""
+"Правилните летни задължителни артикули могат да направят разликата между "
+"добро прекарване и изключително страхотно изживяване. Открийте нашата "
+"селекция за ежедневно носене през топлите летни месеци."
+
+#. module: theme_anelusia
+#: model:ir.model,name:theme_anelusia.model_theme_utils
+msgid "Theme Utils"
+msgstr "Theme Utils"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_sidegrid
+msgid ""
+"This is a simple hero unit, a simple jumbotron-style component for calling "
+"extra attention to featured content or information."
+msgstr ""
+"Това е прост hero блок, прост jumbotron-стилов компонент за привличане на "
+"допълнително внимание към избрано съдържание или информация."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid "Timeless Elegance"
+msgstr "Безвременна елегантност"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid ""
+"Timeless black dress with a flattering silhouette, featuring a soft fabric "
+"and elegant neckline, perfect for any occasion."
+msgstr ""
+"Безвременна черна рокля с ласкав силует, с мека материя и елегантно деколте, "
+"идеална за всеки повод."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_company_team_basic
+msgid "Tony Fred"
+msgstr "Tony Fred"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_image_title
+msgid ""
+"Transform your wardrobe with our latest fashion collection, where elegance "
+"meets versatility. Elevate your style with pieces that blend sophistication "
+"and comfort effortlessly."
+msgstr ""
+"Преобразете гардероба си с нашата най-нова модна колекция, където "
+"елегантността среща универсалността. Издигнете стила си с елементи, които "
+"съчетават изтънченост и комфорт без усилие."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_references_social
+msgid "Transforming trends since 2018"
+msgstr "Преобразяваме тенденциите от 2018 г."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_features_wall
+msgid "Trend Forecasting"
+msgstr "Прогнозиране на тенденции"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_sidegrid
+msgid "Unleash your potential"
+msgstr "Освободете потенциала си"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_image_hexagonal
+msgid "Unvail our <br/>Exclusive <br/>Collections"
+msgstr "Разкриваме нашите <br/>ексклузивни <br/>колекции"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cta_box
+msgid "Unveil the latest, shop the best!<br/><br/>"
+msgstr "Разкрийте най-новото, пазарувайте най-доброто!<br/><br/>"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid "Versatile Style"
+msgstr "Универсален стил"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_cards_grid
+msgid ""
+"We are committed to sustainable practices, using eco-friendly materials and "
+"supporting ethical craftsmanship in every piece we create."
+msgstr ""
+"Ангажирани сме с устойчиви практики, използвайки екологични материали и "
+"подкрепяйки етично майсторство във всеки елемент, който създаваме."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid ""
+"We craft bespoke styles to reflect your unique identity. Our team "
+"collaborates with you to ensure flawless fashion from concept to creation."
+msgstr ""
+"Изработваме стилове по поръчка, за да отразяваме уникалната ви идентичност. "
+"Нашият екип си сътрудничи с вас, за да осигури безупречна мода от "
+"концепцията до създаването."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid ""
+"We deliver innovative fashion solutions for today’s demands. Harnessing the "
+"latest trends, we help you set new standards."
+msgstr ""
+"Предлагаме иновативни модни решения за днешните изисквания. Използвайки най-"
+"новите тенденции, ви помагаме да задавате нови стандарти."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid "What we bring to our clients"
+msgstr "Какво носим на нашите клиенти"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_wavy_grid
+msgid ""
+"With rich experience and fashion expertise, we offer trends and solutions "
+"that keep you ahead of the curve."
+msgstr ""
+"С богат опит и експертиза в модата предлагаме тенденции и решения, които ви "
+"държат пред кривата."
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_media_list
+msgid "World's top Hidden gems"
+msgstr "Топ скрити бижута в света"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_carousel_intro
+msgid "Your wardrobe tailored for you"
+msgstr "Вашият гардероб, ушит за вас"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_big_number
+msgid "happy customers"
+msgstr "Щастливи клиенти"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "✽  Dresses"
+msgstr "✽ Рокли"
+
+#. module: theme_anelusia
+#: model_terms:theme.ir.ui.view,arch:theme_anelusia.s_pricelist_boxed
+msgid "✽  Jackets"
+msgstr "✽ Якета"
+
+#~ msgid "$120.00"
+#~ msgstr "$120.00"

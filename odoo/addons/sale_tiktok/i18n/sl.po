@@ -1,0 +1,1479 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_tiktok
+#
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-17 17:44+0000\n"
+"PO-Revision-Date: 2026-08-06 12:36+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"sale_tiktok/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_shop_create_wizard.py:0
+#, fuzzy
+msgid "(Pending Authorization)"
+msgstr "Čaka na avtorizacijo"
+
+#. module: sale_tiktok
+#: model:mail.template,body_html:sale_tiktok.order_sync_failure
+#, fuzzy
+msgid ""
+"<div>\n"
+"                <p>\n"
+"                    The synchronization of the TikTok Shop order with reference\n"
+"                    <t t-out=\"ctx.get('tiktok_order_ref') or ''\">REF</t>\n"
+"                    encountered an error and was not completed.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Unless the order is canceled in TikTok Shop, no other synchronization will be attempted.\n"
+"                </p>\n"
+"                <p>\n"
+"                    To schedule a new synchronization attempt, proceed as follows:\n"
+"                    </p><ol>\n"
+"                        <li>Enter the Developer Tools.</li>\n"
+"                        <li>Open the form of the TikTok Shop on which the order was placed.</li>\n"
+"                        <li>Navigate to the Order Follow-up tab.</li>\n"
+"                        <li>\n"
+"                            Set a date for <em>Last Order Synchronization Date</em> that is before the last status update of the order.\n"
+"                        </li>\n"
+"                        <li>Save the changes and click on the <em>SYNC ORDERS</em> button.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>\n"
+"                    If the problem persists, contact\n"
+"                    <a href=\"https://www.odoo.com/help/\">Odoo support</a>.\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"                <p>\n"
+"                    Sinhronizacija naročila TikTok Shop z referenco\n"
+"                    <t t-out=\"ctx.get('tiktok_order_ref') or ''\">REF</t>\n"
+"                    je naletela na napako in ni bila dokončana.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Če naročilo ni preklicano v TikTok Shopu, nobena druga "
+"sinhronizacija ne bo izvedena.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Za načrtovanje novega poskusa sinhronizacije postopajte "
+"tako:\n"
+"                    </p><ol>\n"
+"                        <li>Odprite razvojna orodja.</li>\n"
+"                        <li>Odprite obrazec trgovine TikTok Shop, v kateri "
+"je bilo naročilo oddano.</li>\n"
+"                        <li>Pomaknite se na zavihek Nadaljnje spremljanje "
+"naročil.</li>\n"
+"                        <li>\n"
+"                            Nastavite datum za <em>Datum zadnje "
+"sinhronizacije naročil</em>, ki je pred zadnjo posodobitvijo statusa "
+"naročila.\n"
+"                        </li>\n"
+"                        <li>Shranite spremembe in kliknite gumb <em>"
+"SINHRONIZIRAJ NAROČILA</em>.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>\n"
+"                    Če težava ni odpravljena, se obrnite na\n"
+"                    <a href=\"https://www.odoo.com/help/\">Odoo podporo</a>"
+".\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid ""
+"<strong>Authorization Failed: </strong>\n"
+"                    An unexpected error occurred during authorization. Please try again."
+msgstr ""
+"<strong>Avtorizacija ni uspela: </strong>\n"
+"                    Med avtorizacijo je prišlo do nepričakovane napake. "
+"Poskusite znova."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+#, fuzzy
+msgid ""
+"<strong>Where to find your API credentials:</strong><br/>\n"
+"                    1. Go to TikTok Shop Partner Center<br/>\n"
+"                    2. Navigate to Apps &amp; Service → Create New App or use existing<br/>\n"
+"                    3. Grant the App permissions to access your shop data<br/>\n"
+"                    4. Get your Service ID, App key and App secret<br/>"
+msgstr ""
+"<strong>Kje najdete poverilnice API-ja:</strong><br/>\n"
+"                    1. Pojdite v TikTok Shop Partner Center<br/>\n"
+"                    2. Pomaknite se do Apps &amp; Service → Create New App "
+"ali uporabite obstoječo<br/>\n"
+"                    3. Aplikaciji dodelite dovoljenja za dostop do podatkov "
+"vaše trgovine<br/>\n"
+"                    4. Pridobite svoj ID storitve, ključ aplikacije in "
+"skrivnost aplikacije<br/>"
+
+#. module: sale_tiktok
+#: model:mail.template,body_html:sale_tiktok.inventory_sync_failure
+#, fuzzy
+msgid ""
+"<style>\n"
+"                .tiktok_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th,\n"
+"                .tiktok_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .tiktok_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table tbody th,\n"
+"                .tiktok_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>\n"
+"                    The synchronization of the inventory for TikTok Shop\n"
+"                    <b><t t-out=\"ctx.get('tiktok_shop') or ''\">REF</t></b>\n"
+"                    encountered some errors and was not completed.\n"
+"                </p>\n"
+"                <p>Here are the errors sent by TikTok Shop:</p>\n"
+"                <table class=\"tiktok_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Product Internal Reference(s)</th>\n"
+"                            <th>Message</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-as=\"error\">\n"
+"                            <th>\n"
+"                                <t t-out=\"', '.join(error['default_codes'])\"/>\n"
+"                            </th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">\n"
+"                                    An unknown error occurred during the synchronisation with TikTok Shop.\n"
+"                                    Unfortunately you need to manually check if the available quantity for the product is correct or not.\n"
+"                                    If the problem persists, contact\n"
+"                                    <a href=\"https://www.odoo.com/help/\">Odoo support</a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+msgstr ""
+"<style>\n"
+"                .tiktok_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th,\n"
+"                .tiktok_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .tiktok_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .tiktok_table tbody th,\n"
+"                .tiktok_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>\n"
+"                    Sinhronizacija zaloge za trgovino TikTok Shop\n"
+"                    <b><t t-out=\"ctx.get('tiktok_shop') or ''\">REF</t></b>"
+"\n"
+"                    je naletela na nekaj napak in ni bila dokončana.\n"
+"                </p>\n"
+"                <p>Tukaj so napake, ki jih je poslala trgovina TikTok Shop:</"
+"p>\n"
+"                <table class=\"tiktok_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Interna referenca izdelka</th>\n"
+"                            <th>Sporočilo</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th>\n"
+"                                <t t-out=\"', '.join(error['default_codes'])"
+"\"/>\n"
+"                            </th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">\n"
+"                                    Med sinhronizacijo s trgovino TikTok "
+"Shop je prišlo do neznane napake.\n"
+"                                    Žal morate ročno preveriti, ali je "
+"razpoložljiva količina izdelka pravilna ali ne.\n"
+"                                    Če težava ni odpravljena, se obrnite na\n"
+"                                    <a href=\"https://www.odoo.com/help/\">"
+"Odoo podporo</a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__access_token
+#, fuzzy
+msgid "Access Token"
+msgstr "Žeton vabila"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__access_token_expire_datetime
+#, fuzzy
+msgid "Access Token Expiration"
+msgstr "Potek dostopnega žetona"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__active
+#, fuzzy
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+#, fuzzy
+msgid "An unexpected error occurred during authorization."
+msgstr "Med avtorizacijo je prišlo do nepričakovane napake."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__tiktok_cipher
+#, fuzzy
+msgid "An unique identifier as an input parameter in shop related APIs."
+msgstr ""
+"Enolični identifikator kot vhodni parameter v API-jih, povezanih s trgovino."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "App Credentials"
+msgstr "Poverilnice aplikacije"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__app_key
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__app_key
+#, fuzzy
+msgid "App key"
+msgstr "Ključ aplikacije"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__app_secret
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__app_secret
+#, fuzzy
+msgid "App secret"
+msgstr "Skrivnost aplikacije"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_search
+#, fuzzy
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__confirmed
+#, fuzzy
+msgid "Awaiting Collection on TikTok Shop"
+msgstr "Čaka na prevzem v trgovini TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__draft
+#, fuzzy
+msgid "Awaiting Shipment on TikTok Shop"
+msgstr "Čakanje na odpremo v trgovini TikTok"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+#, fuzzy
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__canceled
+#, fuzzy
+msgid "Canceled on TikTok Shop"
+msgstr "Preklicano v trgovini TikTok"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+#, fuzzy
+msgid "Collection Period"
+msgstr "Obdobje prevzema"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__company_id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__company_id
+#, fuzzy
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_list
+#, fuzzy
+msgid "Connect New Shop"
+msgstr "Poveži novo trgovino"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+#, fuzzy
+msgid "Connect Shop & Authorize"
+msgstr "Poveži trgovino in avtoriziraj"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_res_partner
+#, fuzzy
+msgid "Contact"
+msgstr "Stik"
+
+#. module: sale_tiktok
+#: model:ir.actions.act_window,name:sale_tiktok.action_tiktok_shop_create_wizard
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_create_wizard_view_form
+#, fuzzy
+msgid "Create TikTok Shop"
+msgstr "Ustvari trgovino TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model,website_form_label:sale_tiktok.model_res_partner
+#, fuzzy
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__create_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__create_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__create_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__create_uid
+#, fuzzy
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__create_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__create_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__create_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__create_date
+#, fuzzy
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Credentials"
+msgstr "Poverilnice"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__team_id
+#, fuzzy
+msgid "Default Sales Team"
+msgstr "Privzeta prodajna ekipa"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__user_id
+#, fuzzy
+msgid "Default Salesperson"
+msgstr "Privzeti prodajalec"
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__done
+#, fuzzy
+msgid "Delivered on TikTok Shop"
+msgstr "Dostavljeno v trgovini TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_product_product__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__display_name
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__display_name
+#, fuzzy
+msgid "Display Name"
+msgstr "Prikazni naziv"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.stock_picking_form
+#, fuzzy
+msgid "Download TikTok Label"
+msgstr "Prenesi oznako TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__synchronize_inventory
+#, fuzzy
+msgid "Enable Inventory Synchronization"
+msgstr "Omogoči sinhronizacijo zaloge"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__sync_to_tiktok
+#, fuzzy
+msgid ""
+"Enable this to allow pushing the product inventory quantities from Odoo to "
+"TikTok."
+msgstr ""
+"Omogočite to možnost, da dovolite pošiljanje količin zaloge izdelkov iz Odoo "
+"v TikTok."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__synchronize_inventory
+#, fuzzy
+msgid ""
+"Enable this to keep this shop's product quantities synchronized with TikTok "
+"Shop."
+msgstr ""
+"Omogočite to možnost, da bodo količine izdelkov v tej trgovini "
+"sinhronizirane s TikTok Shop."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__fbs_warehouse_id
+#, fuzzy
+msgid "FBS Warehouse"
+msgstr "Skladišče FBS"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid ""
+"Failed to download the shipping label. Use the provided link:\n"
+"%(link)s"
+msgstr ""
+"Ni bilo mogoče prenesti nalepke za odpremo. Uporabite navedeno povezavo:\n"
+"%(link)s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid "Failed to fetch label. Please wait and try again later. %s"
+msgstr ""
+"Oznake ni bilo mogoče pridobiti. Počakajte in poskusite znova pozneje. %s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid "Failed to ship order: %s"
+msgstr "Pošiljanje naročila ni uspelo: %s"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_product_product__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_partner__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__id
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_form
+#, fuzzy
+msgid ""
+"If the sale is locked, you can not modify it anymore. However, you will "
+"still be able to invoice or deliver."
+msgstr ""
+"Če je prodaja zaklenjena, je ne morete več spreminjati. Kljub temu boste "
+"lahko še vedno izdali račun ali dostavili."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+#, fuzzy
+msgid ""
+"In TikTok Shop '%(shop_name)s', an error %(error_code)s occurred during the TikTok API operation '%(operation)s' with request ID '%(request_id)s':\n"
+"%(error_message)s"
+msgstr ""
+"V trgovini TikTok '%(shop_name)s' je med operacijo API-ja TikTok '%"
+"(operation)s' prišlo do napake %(error_code)s z ID-jem zahteve '%(request_id)"
+"s':\n"
+"%(error_message)s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+#, fuzzy
+msgid "Invalid JSON response received from TikTok."
+msgstr "Prejet je bil neveljaven odgovor JSON iz TikToka."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+#, fuzzy
+msgid "Invalid OAuth state."
+msgstr "Neveljavno stanje OAuth"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid "Invalid TikTok document URL"
+msgstr "Neveljaven URL dokumenta TikTok"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+#, fuzzy
+msgid "Invalid authorization signature"
+msgstr "Neveljaven avtorizacijski podpis"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Inventory Synchronization"
+msgstr "Sinhronizacija zaloge"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_item_count
+#, fuzzy
+msgid "Item Count"
+msgstr "Število artiklov"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__tiktok_item_extern_id
+#, fuzzy
+msgid "Item ID"
+msgstr "ID izdelka"
+
+#. module: sale_tiktok
+#: model:ir.model.constraint,message:sale_tiktok.constraint_tiktok_item_unique_tiktok_item_and_sku_external_ids
+#, fuzzy
+msgid "Item and SKU external IDs must be unique for a given shop."
+msgstr ""
+"Zunanji ID-ji artiklov in SKU-jev morajo biti edinstveni za dano trgovino."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_item_ids
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Items"
+msgstr "Artikli"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__last_product_catalog_sync_date
+#, fuzzy
+msgid "Last Catalog Synchronization"
+msgstr "Zadnja sinhronizacija kataloga"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__last_orders_sync_date
+#, fuzzy
+msgid "Last Order Synchronization"
+msgstr "Sinhronizacija zadnjih naročil"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__last_inventory_sync_date
+#, fuzzy
+msgid "Last Sync Date"
+msgstr "Datum zadnje sinhronizacije"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__write_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__write_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__write_uid
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__write_uid
+#, fuzzy
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__write_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__write_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__write_date
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__write_date
+#, fuzzy
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_form
+#, fuzzy
+msgid "Lock"
+msgstr "Zakleni"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+#, fuzzy
+msgid "Malformed OAuth state."
+msgstr "Napačno oblikovano stanje OAuth."
+
+#. module: sale_tiktok
+#: model:ir.model.fields.selection,name:sale_tiktok.selection__sale_order__tiktok_delivery_status__manual
+#, fuzzy
+msgid "Manual handling required"
+msgstr "Potrebna je ročna obdelava"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+#, fuzzy
+msgid "Missing OAuth state."
+msgstr "Manjka stanje OAuth."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__name
+#, fuzzy
+msgid "Name"
+msgstr "Naziv"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid "No TikTok shop found for this order."
+msgstr "Za to naročilo ni bila najdena nobena trgovina TikTok."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+#, fuzzy
+msgid "No authorization code or refresh token found for shop %(shop_name)s."
+msgstr ""
+"Za trgovino %(shop_name)s ni bilo mogoče najti avtorizacijske kode ali "
+"osvežitvenega žetona."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__order_count
+#, fuzzy
+msgid "Order Count"
+msgstr "Število naročil"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Order Synchronization"
+msgstr "Sinhronizacija naročil"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__order_ids
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Orders"
+msgstr "Naročila"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "Original price: %(price)s"
+msgstr "Izvirna cena: %(price)s"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__picking_id
+#, fuzzy
+msgid "Picking"
+msgstr "Prevzem"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__pickup_end
+#, fuzzy
+msgid "Pickup End Time"
+msgstr "Čas konca prevzema"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+#, fuzzy
+msgid "Pickup End Time must be after Pickup Start Time."
+msgstr "Čas konca prevzema mora biti poznejši od časa začetka prevzema."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_picking_ship_wizard__pickup_start
+#, fuzzy
+msgid "Pickup Start Time"
+msgstr "Začetni čas prevzema"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+#, fuzzy
+msgid "Please provide both Pickup Start and Pickup End times."
+msgstr "Prosimo, navedite čas začetka in konca prevzema."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__product_id
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_item_search
+#, fuzzy
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__product_tmpl_id
+#, fuzzy
+msgid "Product Template"
+msgstr "Predloga izdelka"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_product_product
+#, fuzzy
+msgid "Product Variant"
+msgstr "Različica proizvoda"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+#, fuzzy
+msgid "Rate limit reached. Please try again later."
+msgstr "Dosežena je omejitev zahtevkov. Poskusite znova pozneje."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Re-authorize Shop"
+msgstr "Ponovno avtoriziraj trgovino"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__refresh_token
+#, fuzzy
+msgid "Refresh Token"
+msgstr "Osvežitev žetona"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__refresh_token_expire_datetime
+#, fuzzy
+msgid "Refresh Token Expiration"
+msgstr "Potek žetona za osvežitev"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/utils.py:0
+#, fuzzy
+msgid "Request exception during TikTok Shop API operation"
+msgstr "Izjema zahteve med operacijo API-ja TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__tiktok_sku_extern_id
+#, fuzzy
+msgid "SKU ID"
+msgstr "ID SKU"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "Sale Orders"
+msgstr "Prodajni nalogi"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_sale_order
+#, fuzzy
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__tiktok_seller_sku
+#, fuzzy
+msgid "Seller SKU"
+msgstr "SKU prodajalca"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__service_extern_id
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop_create_wizard__service_extern_id
+#, fuzzy
+msgid "Service ID"
+msgstr "ID storitve"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+#, fuzzy
+msgid "Ship Order"
+msgstr "Pošlji naročilo"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+#, fuzzy
+msgid "Ship Orders Result"
+msgstr "Rezultat odpreme naročil"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+#, fuzzy
+msgid "Ship TikTok Orders"
+msgstr "Odpošlji naročila TikTok"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.stock_picking_form
+#, fuzzy
+msgid "Ship on TikTok"
+msgstr "Pošlji na TikTok"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "Shipping: %(carrier)s"
+msgstr "Dostava: %(carrier)s"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__shop_id
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_search
+#, fuzzy
+msgid "Shop"
+msgstr "Trgovina"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_shop_ref
+#, fuzzy
+msgid "Shop ID"
+msgstr "ID trgovine"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Shop Information"
+msgstr "Informacije o trgovini"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Shop Name"
+msgstr "Ime trgovine"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__country_id
+#, fuzzy
+msgid "Shop Region"
+msgstr "Regija trgovine"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Shop Settings"
+msgstr "Nastavitve trgovine"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Shop Tokens"
+msgstr "Žetoni trgovine"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+#, fuzzy
+msgid "Shop not found."
+msgstr "Trgovina ni najdena."
+
+#. module: sale_tiktok
+#: model:ir.ui.menu,name:sale_tiktok.shops_menu
+#, fuzzy
+msgid "Shops"
+msgstr "Trgovine"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_delivery_status
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_delivery_status
+#, fuzzy
+msgid ""
+"Status of the delivery order on TikTok Shop:\n"
+"- Awaiting Shipment: The order is ready for shipment, but nothing is shipped yet.\n"
+"- Awaiting Collection: The shipment is arranged and awaits carrier pickup.\n"
+"- Delivered: The package has been collected by the carrier and is shipped.\n"
+"- Canceled: The package has been cancelled.\n"
+"- Manual handling required: Shipment must be rearranged and checked again in TikTok Shop."
+msgstr ""
+"Status dostavnega naročila v trgovini TikTok:\n"
+"- Čakanje na odpremo: Naročilo je pripravljeno za odpremo, vendar še ni bilo "
+"nič odposlano.\n"
+"- Čakanje na prevzem: Pošiljka je pripravljena in čaka na prevzem "
+"prevoznika.\n"
+"- Dostavljeno: Prevoznik je paket prevzel in ta je odposlan.\n"
+"- Preklicano: Paket je bil preklican.\n"
+"- Potrebna ročna obravnava: Pošiljko je treba ponovno pripraviti in "
+"preveriti v trgovini TikTok.\n"
+"Lokacija: "
+"model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_delivery_status, "
+"model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_delivery_status"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/wizard/tiktok_picking_ship_wizard.py:0
+#, fuzzy
+msgid "Successfully shipped orders."
+msgstr "Uspešno odpremljena naročila."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Sync Catalog"
+msgstr "Sinhroniziraj katalog"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Sync Inventory"
+msgstr "Sinhroniziraj zalogo"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_item__sync_to_tiktok
+#, fuzzy
+msgid "Sync Inventory to TikTok"
+msgstr "Sinhroniziraj zalogo s TikTokom"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Sync Orders"
+msgstr "Sinhroniziraj naročila"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "Synchronization Information"
+msgstr "Informacije o sinhronizaciji"
+
+#. module: sale_tiktok
+#: model:mail.template,subject:sale_tiktok.inventory_sync_failure
+#, fuzzy
+msgid "Synchronization of TikTok Shop inventory has failed"
+msgstr "Sinhronizacija zaloge TikTok Shop ni uspela"
+
+#. module: sale_tiktok
+#: model:mail.template,subject:sale_tiktok.order_sync_failure
+#, fuzzy
+msgid ""
+"Synchronization of TikTok Shop order {{ ctx.get('tiktok_order_ref') }} has "
+"failed"
+msgstr ""
+"Sinhronizacija TikTokovega naročila {{ ctx.get('tiktok_order_ref') }} ni "
+"uspela"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_order_ref
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_order_ref
+#, fuzzy
+msgid "The TikTok Shop-defined order reference."
+msgstr "Referenca naročila, ki jo določi TikTok Shop."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_packing_ref
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_packing_ref
+#, fuzzy
+msgid "The TikTok Shop-defined packing reference."
+msgstr "Referenca pakiranja, ki jo določi TikTok Shop."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_sale_order__tiktok_shop_id
+#, fuzzy
+msgid "The TikTok shop from which the order was placed."
+msgstr "Trgovina TikTok, iz katere je bilo oddano naročilo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__access_token
+#, fuzzy
+msgid ""
+"The access token for the TikTok Shop API. This token expires in 7 days and "
+"needs to be refreshed with the refresh token. You don't have to manage this "
+"field manually."
+msgstr ""
+"Dostopni žeton za API TikTok Shop. Ta žeton poteče čez 7 dni in ga je treba "
+"osvežiti z osvežitvenim žetonom. Tega polja vam ni treba upravljati ročno."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_stock_picking__tiktok_label_attachment_id
+#, fuzzy
+msgid "The attachment related to the TikTok shipping label."
+msgstr "Priloga, povezana s TikTokovo odpremno nalepko."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid "The collection of this order was already scheduled."
+msgstr "Prevzem tega naročila je bil že načrtovan."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_picking_ship_wizard_form
+#, fuzzy
+msgid ""
+"The collection period is optional. Leave empty to follow courier pickup "
+"schedule."
+msgstr ""
+"Obdobje prevzema je neobvezno. Pustite prazno, da sledite urniku prevzemov "
+"kurirja."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__access_token_expire_datetime
+#, fuzzy
+msgid ""
+"The date when the access token expires. Odoo will automatically refresh the "
+"token before it expires."
+msgstr ""
+"Datum, ko poteče žeton za dostop. Odoo bo žeton samodejno osvežil, preden "
+"poteče."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__refresh_token_expire_datetime
+#, fuzzy
+msgid ""
+"The date when the refresh token expires. Odoo will automatically refresh the"
+" token before it expires."
+msgstr ""
+"Datum, ko poteče žeton za osvežitev. Odoo bo žeton samodejno osvežil, preden "
+"poteče."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__team_id
+#, fuzzy
+msgid "The default Sales Team assigned to TikTok Shop orders for reporting"
+msgstr "Privzeta prodajna ekipa, dodeljena naročilom TikTok Shop za poročanje"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__user_id
+#, fuzzy
+msgid "The default salesperson assigned to TikTok Shop orders"
+msgstr "Privzeti prodajalec, dodeljen naročilom trgovine TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__last_orders_sync_date
+#, fuzzy
+msgid ""
+"The last time orders were synchronized with TikTok Shop. Orders whose status"
+" has not changed since this date are not created nor updated in Odoo."
+msgstr ""
+"Čas zadnje sinhronizacije naročil s trgovino TikTok Shop. Naročila, katerih "
+"stanje se od tega datuma ni spremenilo, se v Odoo ne ustvarijo niti "
+"posodobijo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__last_product_catalog_sync_date
+#, fuzzy
+msgid "The last time the TikTok Shop catalog was synchronized with Odoo."
+msgstr "Čas zadnje sinhronizacije kataloga trgovine TikTok z Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__refresh_token
+#, fuzzy
+msgid ""
+"The refresh token for the TikTok Shop API. This token expires in 30 days and"
+" needs to be refreshed with the access token. You don't have to manage this "
+"field manually."
+msgstr ""
+"Osvežitveni žeton za API TikTok Shop. Ta žeton poteče čez 30 dni in ga je "
+"treba osvežiti z dostopnim žetonom. Tega polja vam ni treba upravljati ročno."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__tiktok_seller_sku
+#, fuzzy
+msgid ""
+"The seller SKU in TikTok. A Seller SKU in TikTok is equivalent to the "
+"product default code in Odoo."
+msgstr ""
+"SKU prodajalca v TikToku. SKU prodajalca v TikToku je enakovreden privzeti "
+"kodi izdelka v Odooju."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__service_extern_id
+#, fuzzy
+msgid ""
+"The service ID for the TikTok Shop API. This ID is used to identify the shop"
+" in the TikTok Shop API. You can find this in your TikTok Partner Center "
+"after creating an application."
+msgstr ""
+"ID storitve za API TikTok Shop. Ta ID se uporablja za identifikacijo "
+"trgovine v API-ju TikTok Shop. Najdete ga v središču TikTok Partner Center, "
+"ko ustvarite aplikacijo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__tiktok_sku_extern_id
+#, fuzzy
+msgid ""
+"The unique identifier for a SKU in TikTok. A SKU in TikTok is equivalent to "
+"a product variant in Odoo."
+msgstr ""
+"Edinstveni identifikator SKU-ja v TikToku. SKU v TikToku je enakovreden "
+"različici izdelka v Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_item__tiktok_item_extern_id
+#, fuzzy
+msgid ""
+"The unique identifier for an item in TikTok. An item in TikTok is equivalent"
+" to a product in Odoo."
+msgstr ""
+"Edinstveni identifikator artikla v TikToku. Artikel v TikToku je enakovreden "
+"izdelku v Odoo."
+
+#. module: sale_tiktok
+#: model:ir.model.constraint,message:sale_tiktok.constraint_sale_order_unique_tiktok_order_ref_tiktok_shop_id
+#, fuzzy
+msgid ""
+"There can only exist one sale order for a given TikTok Shop Order Reference "
+"per Shop."
+msgstr ""
+"Za dano referenco naročila TikTok Shop v posamezni trgovini lahko obstaja "
+"samo eno prodajno naročilo."
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_form
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.stock_picking_form
+#, fuzzy
+msgid ""
+"This order contains unsupported TikTok Shop delivery status.\n"
+"                    Please process the order manually on TikTok Shop."
+msgstr ""
+"To naročilo vsebuje nepodprto stanje dostave TikTok Shopa.\n"
+"                    Prosimo, obdelajte naročilo ročno na TikTok Shopu."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid "This picking is not linked to a TikTok order."
+msgstr "Ta prevzem ni povezan z naročilom TikTok."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "TikTok API rate limit reached. Please try again later."
+msgstr "Dosežena je omejitev zahtevkov API-ja TikTok. Poskusite znova pozneje."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#: model:product.template,name:sale_tiktok.default_adjustment_product_product_template
+#, fuzzy
+msgid "TikTok Amount Adjustment"
+msgstr "Prilagoditev zneska TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_partner__tiktok_buyer_extern_id
+#: model:ir.model.fields,field_description:sale_tiktok.field_res_users__tiktok_buyer_extern_id
+#, fuzzy
+msgid "TikTok Buyer ID"
+msgstr "ID kupca TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_packing_ref
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_packing_ref
+#, fuzzy
+msgid "TikTok Packing Reference"
+msgstr "TikTokov pakirni sklic"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_picking_ship_wizard
+#, fuzzy
+msgid "TikTok Picking Ship Wizard"
+msgstr "Čarovnik za odpremo prevzema TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_order_ref
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_order_ref
+#, fuzzy
+msgid "TikTok Reference"
+msgstr "TikTokov sklic"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_shop
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_shop_id
+#: model:ir.ui.menu,name:sale_tiktok.root_menu
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.sale_order_search
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_item_search
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "TikTok Shop"
+msgstr "Trgovina TikTok"
+
+#. module: sale_tiktok
+#: model:ir.actions.act_window,name:sale_tiktok.action_tiktok_shop_authorization_error
+#, fuzzy
+msgid "TikTok Shop Authorization Error"
+msgstr "Napaka pri avtorizaciji trgovine TikTok Shop"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_shop_create_wizard
+#, fuzzy
+msgid "TikTok Shop Creation Wizard"
+msgstr "Čarovnik za ustvarjanje trgovine TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_tiktok_item
+#, fuzzy
+msgid "TikTok Shop Item"
+msgstr "Izdelek trgovine TikTok"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_item_list
+#, fuzzy
+msgid "TikTok Shop Items"
+msgstr "Izdelki trgovine TikTok"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/stock_picking.py:0
+#, fuzzy
+msgid "TikTok Shop Label"
+msgstr "Oznaka trgovine TikTok"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/tests/test_tiktok.py:0
+#, fuzzy
+msgid "TikTok Shop Order %(order)s"
+msgstr "Naročilo TikTok Shop %(order)s"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "TikTok Shop Order %(tiktok_order_ref)s"
+msgstr "Naročilo TikTok Shop %(tiktok_order_ref)s"
+
+#. module: sale_tiktok
+#: model:product.template,name:sale_tiktok.default_sale_product_product_template
+#, fuzzy
+msgid "TikTok Shop Sale"
+msgstr "Prodaja trgovine TikTok"
+
+#. module: sale_tiktok
+#: model:product.template,name:sale_tiktok.default_shipping_product_product_template
+#, fuzzy
+msgid "TikTok Shop Shipping"
+msgstr "Pošiljanje prek trgovine TikTok"
+
+#. module: sale_tiktok
+#: model:ir.actions.server,name:sale_tiktok.ir_cron_sync_tiktok_inventory_ir_actions_server
+#, fuzzy
+msgid "TikTok Shop: sync inventory"
+msgstr "TikTok Shop: sinhronizacija zaloge"
+
+#. module: sale_tiktok
+#: model:ir.actions.server,name:sale_tiktok.ir_cron_sync_tiktok_orders_ir_actions_server
+#, fuzzy
+msgid "TikTok Shop: sync orders"
+msgstr "TikTok Shop: sinhronizacija naročil"
+
+#. module: sale_tiktok
+#: model:ir.actions.act_window,name:sale_tiktok.action_tiktok_shop_list
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_list
+#, fuzzy
+msgid "TikTok Shops"
+msgstr "Trgovine TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_sale_order__tiktok_delivery_status
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_delivery_status
+#, fuzzy
+msgid "TikTok Status"
+msgstr "Stanje TikToka"
+
+#. module: sale_tiktok
+#: model:mail.template,name:sale_tiktok.inventory_sync_failure
+#, fuzzy
+msgid "TikTok: Inventory Synchronization Failure"
+msgstr "TikTok: Napaka pri sinhronizaciji zaloge"
+
+#. module: sale_tiktok
+#: model:mail.template,name:sale_tiktok.order_sync_failure
+#, fuzzy
+msgid "TikTok: Order Synchronization Failure"
+msgstr "TikTok: Napaka pri sinhronizaciji naročila"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_tiktok_shop__tiktok_cipher
+#, fuzzy
+msgid "Tiktok Cipher"
+msgstr "TikTok šifra"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,field_description:sale_tiktok.field_stock_picking__tiktok_label_attachment_id
+#, fuzzy
+msgid "Tiktok Label Attachment"
+msgstr "Priponka oznake TikTok"
+
+#. module: sale_tiktok
+#: model:ir.model,name:sale_tiktok.model_stock_picking
+#, fuzzy
+msgid "Transfer"
+msgstr "Prenos"
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__fbs_warehouse_id
+#, fuzzy
+msgid ""
+"Warehouse synchronized with TikTok Shop under the Fulfilled by Seller (FBS) "
+"program. Select the warehouse where you store products that you ship "
+"directly to customers. If not set, your company's default warehouse will be "
+"used."
+msgstr ""
+"Skladišče, sinhronizirano s trgovino TikTok v okviru programa Fulfilled by "
+"Seller (FBS). Izberite skladišče, v katerem hranite izdelke, ki jih "
+"neposredno pošiljate strankam. Če ni nastavljeno, bo uporabljeno privzeto "
+"skladišče vašega podjetja."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_item.py:0
+#, fuzzy
+msgid ""
+"We do not support syncing services or combo products to TikTok Shop. Only "
+"storable products are supported."
+msgstr ""
+"Ne podpiramo sinhronizacije storitev ali kombiniranih izdelkov s TikTok "
+"Shopom. Podprti so samo izdelki, ki jih je mogoče skladiščiti."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/controllers/onboarding.py:0
+#, fuzzy
+msgid "You are not allowed to access this page."
+msgstr "Dostop do te strani ni dovoljen."
+
+#. module: sale_tiktok
+#: model:ir.model.constraint,message:sale_tiktok.constraint_tiktok_shop_unique_active_shop
+#, fuzzy
+msgid ""
+"You cannot connect the same shop twice. Consider archiving the existing shop"
+" first."
+msgstr ""
+"Iste trgovine ne morete povezati dvakrat. Najprej razmislite o arhiviranju "
+"obstoječe trgovine."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__app_key
+#, fuzzy
+msgid ""
+"Your TikTok Shop application key. You can find this in your TikTok Partner "
+"Center after creating an application. Enter this before authorizing the "
+"connection."
+msgstr ""
+"Vaš aplikacijski ključ za TikTok Shop. Najdete ga v partnerskem centru "
+"TikTok po ustvarjanju aplikacije. Vnesite ga pred avtorizacijo povezave."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop__app_secret
+#, fuzzy
+msgid ""
+"Your TikTok Shop application secret. You can find this in your TikTok "
+"Partner Center after creating an application. Enter this before authorizing "
+"the connection."
+msgstr ""
+"Vaša skrivnost aplikacije TikTok Shop. Najdete jo v partnerskem centru "
+"TikTok po ustvarjanju aplikacije. Vnesite jo pred avtorizacijo povezave."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop_create_wizard__app_key
+#, fuzzy
+msgid ""
+"Your TikTok application key. You can find this in your TikTok Shop Partner "
+"Center → Apps/Service after creating an application. Enter this before "
+"authorizing the connection."
+msgstr ""
+"Vaš aplikacijski ključ TikTok. Najdete ga v partnerskem centru TikTok Shop → "
+"Apps/Service po ustvarjanju aplikacije. Vnesite ga pred avtorizacijo "
+"povezave."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop_create_wizard__app_secret
+#, fuzzy
+msgid ""
+"Your TikTok application secret. This is provided alongside your App Key in "
+"the TikTok Shop Partner Center → Apps/Service. Keep this confidential and "
+"enter it before authorizing the connection."
+msgstr ""
+"Skrivnost vaše aplikacije TikTok. Na voljo je skupaj z vašim ključem "
+"aplikacije v središču za partnerje TikTok Shop → Aplikacije/storitve. To naj "
+"ostane zaupno in vnesite jo pred avtorizacijo povezave."
+
+#. module: sale_tiktok
+#: model:ir.model.fields,help:sale_tiktok.field_tiktok_shop_create_wizard__service_extern_id
+#, fuzzy
+msgid ""
+"Your TikTok service ID. You can find this in your TikTok Shop Partner Center"
+" → Apps/Service at the top of the page called ID. Enter this before "
+"authorizing the connection."
+msgstr ""
+"ID storitve TikTok. Najdete ga v partnerskem centru TikTok Shop → Apps/"
+"Service na vrhu strani z oznako ID. Vnesite ga pred avtorizacijo povezave."
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "[%(sku)s] %(product_name)s"
+msgstr "[%(sku)s] %(product_name)s"
+
+#. module: sale_tiktok
+#: model_terms:ir.ui.view,arch_db:sale_tiktok.tiktok_shop_form
+#, fuzzy
+msgid "e.g. Indonesian Shop"
+msgstr "npr. indonezijska trgovina"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "shop_id"
+msgstr "ID trgovine"
+
+#. module: sale_tiktok
+#. odoo-python
+#: code:addons/sale_tiktok/models/tiktok_shop.py:0
+#, fuzzy
+msgid "tiktok_shop_id"
+msgstr "tiktok_shop_id"

@@ -1,0 +1,199 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * ai_website_livechat
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-07-26 08:12+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"ai_website_livechat/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: ai_website_livechat
+#: model_terms:ir.ui.view,arch_db:ai_website_livechat.s_ai_livechat
+msgid "<span class=\"text-muted flex-grow-1\">Ask AI</span>"
+msgstr "<span class=\"text-muted flex-grow-1\">Попитай AI</span>"
+
+#. module: ai_website_livechat
+#: model_terms:ir.ui.view,arch_db:ai_website_livechat.snippets
+msgid "AI"
+msgstr "AI"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+#: model:ir.model,name:ai_website_livechat.model_ai_agent
+msgid "AI Agent"
+msgstr "AI агент"
+
+#. module: ai_website_livechat
+#: model_terms:ir.ui.view,arch_db:ai_website_livechat.snippets
+msgid "AI,chat,livechat"
+msgstr "AI,чат,чат на живо"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/interactions/ai_livechat.js:0
+#: code:addons/ai_website_livechat/static/src/website/interactions/edit/ai_livechat.edit.js:0
+msgid "Ask AI"
+msgstr "Попитай AI"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.xml:0
+#: code:addons/ai_website_livechat/static/src/website/interactions/edit/ai_livechat.edit.xml:0
+msgid "Ask a Human"
+msgstr "Попитай човек"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "Chat Style"
+msgstr "Стил на чата"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.xml:0
+msgid "Close"
+msgstr "Затвори"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/interactions/ai_livechat.js:0
+#: code:addons/ai_website_livechat/static/src/website/interactions/edit/ai_livechat.edit.js:0
+msgid "Contact Us"
+msgstr "Свържете се с нас"
+
+#. module: ai_website_livechat
+#: model:ir.model.fields,field_description:ai_website_livechat.field_ai_agent__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "Fallback Button"
+msgstr "Резервен бутон"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "Fullscreen"
+msgstr "Цял екран"
+
+#. module: ai_website_livechat
+#: model:ir.model.fields,field_description:ai_website_livechat.field_ai_agent__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "Livechat Channel"
+msgstr "Канал за чат на живо"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.xml:0
+msgid "Loading..."
+msgstr "Зареждане..."
+
+#. module: ai_website_livechat
+#: model_terms:ir.ui.view,arch_db:ai_website_livechat.s_ai_livechat
+msgid "Need help?<br/>"
+msgstr "Нуждаете се от помощ?<br/>"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.js:0
+msgid "Oops, the Agent linked to this block is archived!"
+msgstr "Опа, агентът, свързан с този блок, е архивиран!"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.js:0
+msgid "Oops, there is no Agent linked to this block!"
+msgstr "Опа, няма агент, свързан с този блок!"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "Popup Window"
+msgstr "Изскачащ прозорец"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "Prompt Placeholder"
+msgstr "Заместващ текст на подсказката"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.xml:0
+msgid "Submit"
+msgstr "Изпращане"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "Text"
+msgstr "Текст"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.xml:0
+msgid "Thinking..."
+msgstr "Мисля..."
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "URL"
+msgstr "URL адрес"
+
+#. module: ai_website_livechat
+#: model:ir.model.fields,field_description:ai_website_livechat.field_ai_agent__used_on_website_snippet
+msgid "Used On Website Snippet"
+msgstr "Използван в блок на уебсайта"
+
+#. module: ai_website_livechat
+#. odoo-python
+#: code:addons/ai_website_livechat/controllers/main.py:0
+msgid "Visitor"
+msgstr "Посетител"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "e.g. /contactus"
+msgstr "напр. /contactus"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "e.g. Ask AI"
+msgstr "напр. Попитай AI"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/plugins/ai_livechat_option.xml:0
+msgid "e.g. Contact Us"
+msgstr "напр. Свържете се с нас"
+
+#. module: ai_website_livechat
+#. odoo-javascript
+#: code:addons/ai_website_livechat/static/src/website/components/ai_livechat_component/ai_livechat.xml:0
+#: code:addons/ai_website_livechat/static/src/website/interactions/edit/ai_livechat.edit.xml:0
+msgid "or"
+msgstr "или"

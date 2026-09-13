@@ -1,0 +1,411 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_settle_due
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 18:44+0000\n"
+"PO-Revision-Date: 2026-08-06 11:34+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_settle_due/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "(with cart:"
+msgstr "(z vozičkom:"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_account_bank_statement_line__pos_amount_unsettled
+#: model:ir.model.fields,field_description:pos_settle_due.field_account_move__pos_amount_unsettled
+#, fuzzy
+msgid "Amount To Pay In POS"
+msgstr "Znesek za plačilo na POS-u"
+
+#. module: pos_settle_due
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.customer_due_pos_order_list_view
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.due_account_move_list_view
+msgid "Amount total"
+msgstr "Skupni znesek"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Poslovni subjekt"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_res_company
+msgid "Companies"
+msgstr "Podjetja"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_res_partner
+msgid "Contact"
+msgstr "Stik"
+
+#. module: pos_settle_due
+#: model:ir.model,website_form_label:pos_settle_due.model_res_partner
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_list.xml:0
+#, fuzzy
+msgid "Credit limit reached!"
+msgstr "Kreditni limit je dosežen!"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "Credit limit:"
+msgstr "Kreditni limit:"
+
+#. module: pos_settle_due
+#: model:product.template,name:pos_settle_due.product_product_deposit_product_template
+msgid "Deposit"
+msgstr "Depozit"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_config__deposit_product_id
+msgid "Deposit Product"
+msgstr "Proizvod za depozit"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "Deposit money"
+msgstr "Polog denarja"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "Deposited:"
+msgstr "Položeno:"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_account_move__display_name
+#: model:ir.model.fields,field_description:pos_settle_due.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_config__display_name
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order__display_name
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_session__display_name
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_company__display_name
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+#, fuzzy
+msgid "Do you want to deposit %s to %s?"
+msgstr "Ali želite nakazati %s na %s?"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+#, fuzzy
+msgid ""
+"Do you want to deposit money to a specific customer? If so, first select him/"
+"her."
+msgstr ""
+"Ali želite položiti denar za določenega kupca? Če je tako, ga/jo najprej "
+"izberite."
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order__customer_due_total
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.due_account_move_list_view
+msgid "Due"
+msgstr "Zapadlo"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/payment_screen/payment_screen.js:0
+msgid "Empty Order"
+msgstr "Prazen nalog"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/payment_screen/payment_screen.js:0
+#, fuzzy
+msgid "Empty orders cannot be invoiced."
+msgstr "Praznih naročil ni mogoče fakturirati."
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+msgid "Error"
+msgstr "Napaka"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_account_move__id
+#: model:ir.model.fields,field_description:pos_settle_due.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_config__id
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order__id
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order_line__id
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_session__id
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_company__id
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order__init_customer_due_total
+#, fuzzy
+msgid "Initial due (before any settlement)"
+msgstr "Začetni dolg (pred kakršno koli poravnavo)"
+
+#. module: pos_settle_due
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.due_account_move_list_view
+msgid "Invoice Date"
+msgstr "Datum računa"
+
+#. module: pos_settle_due
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.due_account_move_list_view
+msgid "Invoices"
+msgstr "Računi"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_account_move
+msgid "Journal Entry"
+msgstr "Temeljnica"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order__settled_orders_count
+#, fuzzy
+msgid "Number of settled orders"
+msgstr "Število poravnanih naročil"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_account_bank_statement_line__pos_order_line_ids
+#: model:ir.model.fields,field_description:pos_settle_due.field_account_move__pos_order_line_ids
+#, fuzzy
+msgid "Order lines settling the invoice"
+msgstr "Postavke naročila za poravnavo računa"
+
+#. module: pos_settle_due
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.customer_due_pos_order_list_view
+msgid "POS Orders"
+msgstr "POS naročila"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Nastavitve POS-blagajne"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_pos_order_line
+#, fuzzy
+msgid "Point of Sale Order Lines"
+msgstr "Postavke naročila prodajnega mesta"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Naročila POS"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_pos_session
+msgid "Point of Sale Session"
+msgstr "Seja POS"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/services/pos_store.js:0
+#, fuzzy
+msgid "Select the payment method to deposit money"
+msgstr "Izberite plačilno metodo za polog denarja"
+
+#. module: pos_settle_due
+#: model:product.template,name:pos_settle_due.product_product_settle_product_template
+#, fuzzy
+msgid "Settle Due"
+msgstr "Poravnaj zapadlo"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_config__settle_due_product_id
+#, fuzzy
+msgid "Settle Due Product"
+msgstr "Izdelek za poravnavo zapadlih obveznosti"
+
+#. module: pos_settle_due
+#: model:product.template,name:pos_settle_due.product_product_settle_invoice_product_template
+#, fuzzy
+msgid "Settle Invoice"
+msgstr "Poravnaj račun"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_config__settle_invoice_product_id
+#, fuzzy
+msgid "Settle Invoice Product"
+msgstr "Izdelek za poravnavo računa"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "Settle due amount"
+msgstr "Poravnaj zapadli znesek"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+#, fuzzy
+msgid "Settle due orderlines"
+msgstr "Poravnaj zapadle vrstice naročila"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "Settle invoices"
+msgstr "Poravnaj račune"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "Settle orders"
+msgstr "Poravnaj naročila"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order_line__settled_invoice_id
+#, fuzzy
+msgid "Settled Invoice"
+msgstr "Poravnan račun"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order_line__settled_order_id
+#, fuzzy
+msgid "Settled Order"
+msgstr "Poravnano naročilo"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_pos_order__settled_order_line_ids
+#, fuzzy
+msgid "Settled Order Lines"
+msgstr "Poravnane postavke naročila"
+
+#. module: pos_settle_due
+#. odoo-python
+#: code:addons/pos_settle_due/models/pos_order.py:0
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.pos_order_form_inherit_pos_settle_due
+#, fuzzy
+msgid "Settled Orders"
+msgstr "Poravnana naročila"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_partner__pos_orders_amount_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_users__pos_orders_amount_due
+#, fuzzy
+msgid "Sum of customers PoS orders's due amount"
+msgstr "Vsota zapadlega zneska naročil strank na prodajnem mestu"
+
+#. module: pos_settle_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_partner__invoices_amount_due
+#: model:ir.model.fields,field_description:pos_settle_due.field_res_users__invoices_amount_due
+#, fuzzy
+msgid "Sum of customers's invoice due amount"
+msgstr "Vsota zapadlih zneskov računov strank"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+#, fuzzy
+msgid "The order is empty"
+msgstr "Naročilo je prazno"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+#, fuzzy
+msgid ""
+"The selected customer is not in the list of partners of the ongoing settling "
+"orderlines."
+msgstr ""
+"Izbrana stranka ni na seznamu partnerjev vrstic naročila v postopku "
+"poravnave."
+
+#. module: pos_settle_due
+#: model:ir.model.fields,help:pos_settle_due.field_pos_config__settle_due_product_id
+#, fuzzy
+msgid "This product is used as to settle due of customer account."
+msgstr ""
+"Ta izdelek se uporablja za poravnavo zapadlih obveznosti na računu stranke."
+
+#. module: pos_settle_due
+#: model:ir.model.fields,help:pos_settle_due.field_pos_config__settle_invoice_product_id
+#, fuzzy
+msgid "This product is used as to settle invoices of customer."
+msgstr "Ta izdelek se uporablja za poravnavo računov stranke."
+
+#. module: pos_settle_due
+#: model:ir.model.fields,help:pos_settle_due.field_pos_config__deposit_product_id
+#, fuzzy
+msgid "This product is used to deposit money on customer account."
+msgstr "Ta izdelek se uporablja za polog denarja na račun stranke."
+
+#. module: pos_settle_due
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.customer_due_pos_order_list_view
+#: model_terms:ir.ui.view,arch_db:pos_settle_due.due_account_move_list_view
+#, fuzzy
+msgid "Total due"
+msgstr "Skupaj dolgovano"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/screens/partner_list/partner_line/partner_line.xml:0
+#, fuzzy
+msgid "Total due:"
+msgstr "Skupaj dolgovano:"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_ir_ui_view
+msgid "View"
+msgstr "Prikaz"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+msgid "Yes"
+msgstr "Da"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+#, fuzzy
+msgid "You can not deposit zero amount."
+msgstr "Ne morete vplačati ničelnega zneska."
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/app/utils/order_payment_validation.js:0
+#, fuzzy
+msgid "You cannot refund a deposit/settling order."
+msgstr "Pologa/poravnalnega naročila ni mogoče povrniti."
+
+#. module: pos_settle_due
+#. odoo-python
+#: code:addons/pos_settle_due/models/pos_order.py:0
+msgid "id"
+msgstr "identifikacija"

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="reso_booking_view_list" model="ir.ui.view">
+        <field name="name">reso.booking.list</field>
+        <field name="model">reso.booking</field>
+        <field name="arch" type="xml">
+            <list string="Bookings"
+                  decoration-muted="state == 'cancelled'"
+                  decoration-success="state == 'confirmed'"
+                  decoration-info="state == 'checked_in'"
+                  decoration-bf="state == 'checked_out'">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="property_id"/>
+                <field name="room_type_id"/>
+                <field name="room_id" optional="hide"/>
+                <field name="checkin_date"/>
+                <field name="checkout_date"/>
+                <field name="adults"/>
+                <field name="children"/>
+                <field name="amount_total" widget="monetary"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="source" optional="hide"/>
+                <field name="state" widget="badge"
+                       decoration-muted="state == 'cancelled'"
+                       decoration-success="state == 'confirmed'"
+                       decoration-info="state == 'checked_in'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="reso_booking_view_form" model="ir.ui.view">
+        <field name="name">reso.booking.form</field>
+        <field name="model">reso.booking</field>
+        <field name="arch" type="xml">
+            <form string="Booking">
+                <header>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="hold,confirmed,checked_in,checked_out,invoiced"/>
+                    <button name="action_confirm" string="Confirm"
+                            type="object" class="oe_highlight"
+                            invisible="state != 'hold'"/>
+                    <button name="action_check_in" string="Check In"
+                            type="object" class="oe_highlight"
+                            invisible="state != 'confirmed'"/>
+                    <button name="action_check_out" string="Check Out"
+                            type="object" class="oe_highlight"
+                            invisible="state != 'checked_in'"/>
+                    <button name="action_create_invoice" string="Create Invoice / Folio"
+                            type="object" class="oe_highlight"
+                            invisible="state != 'checked_out'"/>
+                    <button name="action_cancel" string="Cancel"
+                            type="object"
+                            invisible="state not in ('hold', 'confirmed')"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Stay">
+                            <field name="property_id"/>
+                            <field name="partner_id"/>
+                            <field name="room_type_id"/>
+                            <field name="rate_plan_id"/>
+                            <field name="room_id"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group string="Dates &amp; Guests">
+                            <field name="checkin_date"/>
+                            <field name="checkout_date"/>
+                            <field name="adults"/>
+                            <field name="children"/>
+                            <field name="source"/>
+                            <field name="invoice_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Pricing">
+                        <field name="amount_total" widget="monetary"/>
+                        <field name="currency_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Folio &amp; Outlet Charges" name="folio_charges">
+                            <field name="folio_line_ids">
+                                <list string="Outlet Charges" editable="bottom">
+                                    <field name="date"/>
+                                    <field name="name"/>
+                                    <field name="outlet_type"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="amount" widget="monetary"/>
+                                    <field name="reference"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="WhatsApp Logs" name="whatsapp_logs">
+                            <field name="whatsapp_message_ids" readonly="1">
+                                <list string="WhatsApp Messages">
+                                    <field name="name"/>
+                                    <field name="template_name"/>
+                                    <field name="phone"/>
+                                    <field name="message_type"/>
+                                    <field name="body"/>
+                                    <field name="state"/>
+                                    <field name="create_date"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="note" nolabel="1"
+                                   placeholder="Internal notes..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="reso_booking_view_calendar" model="ir.ui.view">
+        <field name="name">reso.booking.calendar</field>
+        <field name="model">reso.booking</field>
+        <field name="arch" type="xml">
+            <calendar string="Bookings" date_start="checkin_date"
+                      date_stop="checkout_date" color="room_type_id"
+                      mode="month">
+                <field name="partner_id"/>
+                <field name="name"/>
+                <field name="state"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="reso_booking_view_pivot" model="ir.ui.view">
+        <field name="name">reso.booking.pivot</field>
+        <field name="model">reso.booking</field>
+        <field name="arch" type="xml">
+            <pivot string="Booking Analysis">
+                <field name="property_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="amount_total" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="reso_booking_view_graph" model="ir.ui.view">
+        <field name="name">reso.booking.graph</field>
+        <field name="model">reso.booking</field>
+        <field name="arch" type="xml">
+            <graph string="Booking Analysis" type="bar">
+                <field name="property_id" type="row"/>
+                <field name="amount_total" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="reso_booking_view_search" model="ir.ui.view">
+        <field name="name">reso.booking.search</field>
+        <field name="model">reso.booking</field>
+        <field name="arch" type="xml">
+            <search string="Bookings">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="property_id"/>
+                <field name="room_type_id"/>
+                <filter string="Hold" name="hold"
+                        domain="[('state', '=', 'hold')]"/>
+                <filter string="Confirmed" name="confirmed"
+                        domain="[('state', '=', 'confirmed')]"/>
+                <filter string="Checked In" name="checked_in"
+                        domain="[('state', '=', 'checked_in')]"/>
+                <filter string="Checked Out" name="checked_out"
+                        domain="[('state', '=', 'checked_out')]"/>
+                <filter string="Cancelled" name="cancelled"
+                        domain="[('state', '=', 'cancelled')]"/>
+                <separator/>
+                <filter string="Check-in Today" name="checkin_today"
+                        domain="[('checkin_date', '=', context_today())]"/>
+                <filter string="Check-out Today" name="checkout_today"
+                        domain="[('checkout_date', '=', context_today())]"/>
+                <group>
+                    <filter string="Property" name="group_property" context="{'group_by': 'property_id'}"/>
+                    <filter string="State" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Room Type" name="group_room_type" context="{'group_by': 'room_type_id'}"/>
+                    <filter string="Source" name="group_source" context="{'group_by': 'source'}"/>
+                    <filter string="Check-in Month" name="group_checkin_month" context="{'group_by': 'checkin_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_reso_booking" model="ir.actions.act_window">
+        <field name="name">Bookings</field>
+        <field name="res_model">reso.booking</field>
+        <field name="view_mode">list,form,calendar,pivot,graph</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first booking.
+            </p>
+        </field>
+    </record>
+</odoo>

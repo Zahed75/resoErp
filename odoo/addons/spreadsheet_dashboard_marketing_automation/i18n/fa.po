@@ -1,0 +1,429 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * spreadsheet_dashboard_marketing_automation
+#
+# Aliraza Habibitanha <alireza.habibitanha@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-10 18:52+0000\n"
+"PO-Revision-Date: 2026-08-09 11:18+0000\n"
+"Last-Translator: Aliraza Habibitanha <alireza.habibitanha@gmail.com>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-19/"
+"spreadsheet_dashboard_marketing_automation/fa/>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "# of mails opened"
+msgstr "تعداد پیام‌های باز شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "# of mails sent"
+msgstr "تعداد پیام‌های ارسال شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Average Order Value (AOV)"
+msgstr "میانگین ارزش سفارش (AOV)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Bounce Rate"
+msgstr "نرخ پرش"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Bounce details"
+msgstr "جزئیات پرش"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Bounced"
+msgstr "برگشتی"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Bounced (%)"
+msgstr "برگشتی (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Cancelled"
+msgstr "لغو شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Click-Through Rate (CTR)"
+msgstr "نرخ کلیک (CTR)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Click-to-open Rate (CTOR)"
+msgstr "نرخ کلیک به باز شدن (CTOR)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Clicked"
+msgstr "کلیک شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Clicks (%)"
+msgstr "کلیک (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Conversion Rate"
+msgstr "نرخ تبدیل"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Count"
+msgstr "تعداد"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Created on"
+msgstr "زمان ایجاد"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Delivered"
+msgstr "تحویل داده شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Delivery  Rate"
+msgstr "نرخ تحویل"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Delivery Rate"
+msgstr "نرخ تحویل"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_marketing_automation.spreadsheet_dashboard_marketing_automation
+msgid "Email Marketing"
+msgstr "بازاریابی ایمیلی"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Engagement Rate"
+msgstr "نرخ تعامل"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Exception"
+msgstr "استثناء"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Mailing Campaign"
+msgstr "کمپین ارسال ایمیل"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Mailing campaigns in preparation"
+msgstr "کمین‌های ارسال در مرحله آماده سازی"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Mails sent over previous period"
+msgstr "پیام‌های ارسال شده در بازه زمانی قبلی"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Mails sent per month"
+msgstr "پیام‌های ارسال شده در هر ماه"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Mass Mailing"
+msgstr "ایمیل دسته‌جمعی"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Medium"
+msgstr "وسیله ارتباطی"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "N"
+msgstr ""
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "N-1"
+msgstr ""
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "New Subscribers"
+msgstr "مشترک‌های جدید"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Number of Clicks"
+msgstr "تعداد کلیک‌ها"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Number of orders"
+msgstr "تعداد سفارش‌ها"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Open Rate"
+msgstr "نرخ باز شدن"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Opened"
+msgstr "باز شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Opened (%)"
+msgstr "باز شده (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Page Title"
+msgstr "عنوان صفحه"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Period"
+msgstr "دوره"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Reason"
+msgstr "دلیل"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Received (%)"
+msgstr "دریافت شده (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Recipients Model"
+msgstr "مدل گیرندگان"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Replied"
+msgstr "پاسخ داده شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Replied (%)"
+msgstr "پاسخ داده شده (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Requires # of click date defined -> worth ? change ?"
+msgstr "نیازمند تعریف تعداد کلیک تاریخ تعریف شده است -> ارزش؟ تغییر؟"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Responsible"
+msgstr "مسئول"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Revenue Generated"
+msgstr "درآمد ایجاد شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Scheduled for"
+msgstr "زمان‌بندی شده برای"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Sent"
+msgstr "ارسال شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Sent Date"
+msgstr "تاریخ ارسال"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Source"
+msgstr "مبدأ"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Status"
+msgstr "وضعیت"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Subject"
+msgstr "موضوع"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Subscribers Growth Rate"
+msgstr "نرخ رشد مشترک‌ها"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Target URL"
+msgstr "آدرس URL هدف"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Top 10 best link trackers"
+msgstr "10 لینک ردیابی شده برتر"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Top 10 recent mailing campaigns"
+msgstr "10 کمپین ارسال اخیر برتر"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Top 5 failed reasons"
+msgstr "5 علت شکست مهم"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Top products sold"
+msgstr "برترین محصولات فروخته شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Total"
+msgstr "جمع کل"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Unsubscribe Rate"
+msgstr "نرخ لغو اشتراک"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Unsubscribed"
+msgstr "لغو اشتراک شده"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Unsubscribers"
+msgstr "لغو اشتراک کرده‌ها"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Visits"
+msgstr "بازدیدها"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "vs last period"
+msgstr "نسبت به دوره قبل"

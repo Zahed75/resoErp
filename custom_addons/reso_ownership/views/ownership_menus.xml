@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_reso_ownership_root" name="Reso Ownership"
+        web_icon="reso_ownership,static/description/icon.png"
+        groups="group_ownership_user" sequence="6"/>
+
+    <menuitem id="menu_reso_owner_registry" name="Owner Registry"
+        parent="menu_reso_ownership_root"
+        action="action_reso_owner_registry" sequence="10"/>
+
+    <menuitem id="menu_reso_share_transfer" name="Transfers"
+        parent="menu_reso_ownership_root"
+        action="action_reso_share_transfer" sequence="20"/>
+
+    <menuitem id="menu_reso_distribution_run" name="Distribution Runs"
+        parent="menu_reso_ownership_root"
+        action="action_reso_distribution_run" sequence="30"/>
+</odoo>

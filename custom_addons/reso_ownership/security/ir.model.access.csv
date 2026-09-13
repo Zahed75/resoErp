@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_reso_owner_registry_user,reso.owner.registry user,model_reso_owner_registry,group_ownership_user,1,0,0,0
+access_reso_owner_registry_manager,reso.owner.registry manager,model_reso_owner_registry,group_ownership_manager,1,1,1,1
+access_reso_owner_registry_pms_manager,reso.owner.registry pms manager,model_reso_owner_registry,reso_pms.group_pms_manager,1,0,0,0
+access_reso_share_transfer_user,reso.share.transfer user,model_reso_share_transfer,group_ownership_user,1,0,0,0
+access_reso_share_transfer_manager,reso.share.transfer manager,model_reso_share_transfer,group_ownership_manager,1,1,1,1
+access_reso_share_transfer_pms_manager,reso.share.transfer pms manager,model_reso_share_transfer,reso_pms.group_pms_manager,1,0,0,0
+access_reso_distribution_run_user,reso.distribution.run user,model_reso_distribution_run,group_ownership_user,1,0,0,0
+access_reso_distribution_run_manager,reso.distribution.run manager,model_reso_distribution_run,group_ownership_manager,1,1,1,1
+access_reso_distribution_run_pms_manager,reso.distribution.run pms manager,model_reso_distribution_run,reso_pms.group_pms_manager,1,0,0,0
+access_reso_distribution_line_user,reso.distribution.line user,model_reso_distribution_line,group_ownership_user,1,0,0,0
+access_reso_distribution_line_manager,reso.distribution.line manager,model_reso_distribution_line,group_ownership_manager,1,1,1,1
+access_reso_distribution_line_pms_manager,reso.distribution.line pms manager,model_reso_distribution_line,reso_pms.group_pms_manager,1,0,0,0

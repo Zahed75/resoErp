@@ -1,0 +1,269 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_fiscal_categories
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-07-31 10:43+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"account_fiscal_categories/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: account_fiscal_categories
+#: model:ir.model,name:account_fiscal_categories.model_account_account
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__related_account_id
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__account_ids
+msgid "Account"
+msgstr "Konto"
+
+#. module: account_fiscal_categories
+#: model:ir.model,name:account_fiscal_categories.model_account_fiscal_category
+#, fuzzy
+msgid "Account Fiscal Category"
+msgstr "Fiskalna kategorija konta"
+
+#. module: account_fiscal_categories
+#. odoo-python
+#: code:addons/account_fiscal_categories/report/account_fiscal_report_handler.py:0
+#, fuzzy
+msgid "Account(s) with Multiple Fiscal Rates"
+msgstr "Konto(i) z več davčnimi stopnjami"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: account_fiscal_categories
+#: model_terms:ir.actions.act_window,help:account_fiscal_categories.action_account_fiscal_category_list
+#, fuzzy
+msgid "Add a Fiscal Category"
+msgstr "Dodaj fiskalno kategorijo"
+
+#. module: account_fiscal_categories
+#: model:account.report.column,name:account_fiscal_categories.fiscal_report_total_amount
+#, fuzzy
+msgid "Base Total"
+msgstr "Skupna osnova"
+
+#. module: account_fiscal_categories
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_fiscal_category_form
+msgid "Category Name"
+msgstr "Naziv kategorije"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__code
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_fiscal_category_form
+msgid "Code"
+msgstr "Oznaka"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__company_id
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__company_id
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__create_uid
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__create_date
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account__current_rate
+msgid "Current Rate"
+msgstr "Trenutni menjalni tečaj"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account__display_name
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__display_name
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__display_name
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_report_handler__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: account_fiscal_categories
+#: model:account.report.column,name:account_fiscal_categories.fiscal_report_deductible_amount
+#, fuzzy
+msgid "Fiscal Amount"
+msgstr "Fiskalni znesek"
+
+#. module: account_fiscal_categories
+#: model:ir.actions.act_window,name:account_fiscal_categories.action_account_fiscal_category_list
+#: model:ir.ui.menu,name:account_fiscal_categories.menu_action_account_fiscal_category_list
+msgid "Fiscal Categories"
+msgstr "Fiskalne kategorije"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account__fiscal_category_id
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_form
+#, fuzzy
+msgid "Fiscal Category"
+msgstr "Fiskalna kategorija"
+
+#. module: account_fiscal_categories
+#: model:ir.model,name:account_fiscal_categories.model_account_account_fiscal_rate
+#, fuzzy
+msgid "Fiscal Rate"
+msgstr "Fiskalna stopnja"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__rate
+#, fuzzy
+msgid "Fiscal Rate (%)"
+msgstr "Fiskalna stopnja (%)"
+
+#. module: account_fiscal_categories
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_form
+#, fuzzy
+msgid "Fiscal Rates"
+msgstr "Fiskalne stopnje"
+
+#. module: account_fiscal_categories
+#: model:account.report,name:account_fiscal_categories.fiscal_report
+#: model:ir.actions.client,name:account_fiscal_categories.action_account_fiscal_report
+#: model:ir.ui.menu,name:account_fiscal_categories.menu_action_account_fiscal_report
+#, fuzzy
+msgid "Fiscal Report"
+msgstr "Fiskalno poročilo"
+
+#. module: account_fiscal_categories
+#: model:ir.model,name:account_fiscal_categories.model_account_fiscal_report_handler
+#, fuzzy
+msgid "Fiscal Report Custom Handler"
+msgstr "Prilagojen obdelovalnik fiskalnega poročila"
+
+#. module: account_fiscal_categories
+#: model:ir.model.constraint,message:account_fiscal_categories.constraint_account_fiscal_category_unique_code
+#, fuzzy
+msgid "Fiscal category code should be unique."
+msgstr "Koda fiskalne kategorije mora biti edinstvena."
+
+#. module: account_fiscal_categories
+#. odoo-python
+#: code:addons/account_fiscal_categories/report/account_fiscal_report_handler.py:0
+msgid "General Ledger"
+msgstr "Kartica glavne knjige"
+
+#. module: account_fiscal_categories
+#: model:account.return.check.template,description:account_fiscal_categories.account_return_check_template_meal_expense_adjustment
+#, fuzzy
+msgid ""
+"General: Make sure the deduction for business meals is under the legal limit."
+msgstr "Splošno: Poskrbite, da je odbitek za poslovne obroke pod zakonsko mejo."
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account__id
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__id
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__id
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_report_handler__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_fiscal_categories
+#. odoo-python
+#: code:addons/account_fiscal_categories/report/account_fiscal_report_handler.py:0
+msgid "Journal Items"
+msgstr "Postavke"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__write_uid
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__write_date
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: account_fiscal_categories
+#: model:account.return.check.template,name:account_fiscal_categories.account_return_check_template_meal_expense_adjustment
+#, fuzzy
+msgid "Meal expense adjustments"
+msgstr "Prilagoditve stroškov prehrane"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_fiscal_category__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: account_fiscal_categories
+#: model:account.report.column,name:account_fiscal_categories.fiscal_report_rate
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account__rate_ids
+msgid "Rate"
+msgstr "Tečaj"
+
+#. module: account_fiscal_categories
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_fiscal_category_form
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_fiscal_category_tree
+msgid "Related Account(s)"
+msgstr "Povezani račun(i)"
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,help:account_fiscal_categories.field_account_fiscal_category__active
+msgid "Set active to false to hide the category without removing it."
+msgstr ""
+"Če želite skriti kategorijo, ne da bi jo odstranili, nastavite »active« na "
+"»false«."
+
+#. module: account_fiscal_categories
+#: model:ir.model.fields,field_description:account_fiscal_categories.field_account_account_fiscal_rate__date_from
+msgid "Start Date"
+msgstr "Začetni datum"
+
+#. module: account_fiscal_categories
+#. odoo-javascript
+#: code:addons/account_fiscal_categories/static/src/components/fiscal_report/warnings.xml:0
+msgid "There are"
+msgstr "Obstajajo"
+
+#. module: account_fiscal_categories
+#. odoo-python
+#: code:addons/account_fiscal_categories/report/account_fiscal_report_handler.py:0
+msgid "Total"
+msgstr "Skupaj"
+
+#. module: account_fiscal_categories
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_fiscal_category_form
+msgid "e.g. 1201"
+msgstr "npr. 1201"
+
+#. module: account_fiscal_categories
+#: model_terms:ir.ui.view,arch_db:account_fiscal_categories.view_account_fiscal_category_form
+msgid "e.g. Non-Deductible Tax"
+msgstr "npr. neodbitni davek"
+
+#. module: account_fiscal_categories
+#. odoo-javascript
+#: code:addons/account_fiscal_categories/static/src/components/fiscal_report/warnings.xml:0
+#, fuzzy
+msgid "in this period."
+msgstr "v tem obdobju."
+
+#. module: account_fiscal_categories
+#. odoo-javascript
+#: code:addons/account_fiscal_categories/static/src/components/fiscal_report/warnings.xml:0
+#, fuzzy
+msgid "multiple fiscal rates"
+msgstr "več davčnih stopenj"

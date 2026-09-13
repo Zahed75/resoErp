@@ -1,0 +1,971 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * l10n_si_reports
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 19:09+0000\n"
+"PO-Revision-Date: 2026-06-27 19:42+0000\n"
+"Last-Translator: Žiga Trček <ziga.trcek@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19-l10n/"
+"l10n_si_reports/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_III_2
+msgid ""
+" 2. Revaluation operating expenses for intangible assets and property, plant "
+"and equipment"
+msgstr ""
+"2. Prevrednotovalni poslovni odhodki pri neopredmetenih sredstvih in "
+"opredmetenih osnovnih sredstvih"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_1
+msgid "1. Cost of goods and materials sold"
+msgstr "1. Nabavna vrednost prodanega blaga in materiala"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_III_1
+msgid "1. Depreciation"
+msgstr "1. Amortizacija"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_II_1
+msgid "1. Financial expenses from loans received from group companies"
+msgstr "1. Finančni odhodki iz posojil, prejetih od družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_III_1
+msgid "1. Financial expenses from operating liabilities to group companies"
+msgstr "1. Finančni odhodki iz poslovnih obveznosti do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_II_1
+msgid "1. Financial income from loans granted to group companies"
+msgstr "1. Finančni prihodki iz posojil, danih družbam v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_III_1
+msgid "1. Financial revenues from operating receivables from group companies"
+msgstr "1. Finančni prihodki iz poslovnih terjatev do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_I_1
+msgid "1. Financial revenues from shares in group companies"
+msgstr "1. Finančni prihodki iz deležev v družbah v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_I_1
+msgid "1. Intangible assets"
+msgstr "1. Neopredmetena sredstva"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II_1
+msgid "1. Land"
+msgstr "1. Zemljišča"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_III_1
+msgid "1. Legal reserves"
+msgstr "1. Zakonske rezerve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_I_1
+msgid "1. Long-term financial liabilities to group companies"
+msgstr "1. Dolgoročne finančne obveznosti do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV_1
+msgid "1. Long-term investments other than loans"
+msgstr "1. Dolgoročne naložbe razen posojil"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_II_1
+msgid "1. Long-term operating liabilities to group companies"
+msgstr "1. Dolgoročne poslovne obveznosti do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_V_1
+msgid "1. Long-term operating receivables from group companies"
+msgstr "1. Dolgoročne poslovne terjatve do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_II_1
+msgid "1. Material"
+msgstr "1. Material"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_I_1
+msgid "1. Net income from the sale of products and services other than rents"
+msgstr "1. Čisti prihodki od prodaje proizvodov in storitev razen najemnin"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_III_1
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_II_1
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_II_2
+msgid "1. Net sales of products and services"
+msgstr "1. Čisti prihodki od prodaje proizvodov in storitev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1
+msgid "1. Net sales revenue"
+msgstr "1. Čisti prihodki od prodaje"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_b_1
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_IV_1
+msgid "1. Reservations"
+msgstr "1. Rezervacije"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_VI_1
+msgid "1. Retained Earnings / net loss carried forward"
+msgstr "1. Preneseni čisti dobiček / čista izguba"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_I_1
+msgid "1. Share capital"
+msgstr "1. Osnovni kapital"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_II_1
+msgid "1. Short-term financial liabilities to group companies"
+msgstr "1. Kratkoročne finančne obveznosti do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III_1
+msgid "1. Short-term investments other than loans"
+msgstr "1. Kratkoročne naložbe razen posojil"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_III_1
+msgid "1. Short-term operating liabilities to group companies"
+msgstr "1. Kratkoročne poslovne obveznosti do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_IV_1
+msgid "1. Short-term operating receivables from group companies"
+msgstr "1. Kratkoročne poslovne terjatve do družb v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_II_1
+msgid "1. Wage costs"
+msgstr "1. Stroški plač"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_10
+msgid "10. Operating losses"
+msgstr "10. Izguba iz poslovanja"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11
+msgid "11. Financial revenue"
+msgstr "11. Finančni prihodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12
+msgid "12. Financial expenses"
+msgstr "12. Finančni odhodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_13
+msgid "13. Other revenue"
+msgstr "13. Drugi prihodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_14
+msgid "14. Other expenditure"
+msgstr "14. Drugi odhodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_15
+msgid "15. Total profit"
+msgstr "15. Celotni dobiček"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_ssi_pl_16
+msgid "16. Total loss"
+msgstr "16. Celotna izguba"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_17
+msgid "17. Profit tax"
+msgstr "17. Davek iz dobička"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_18
+msgid "18. Deferred taxes"
+msgstr "18. Odloženi davki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_19
+msgid "19. Net profit for the period"
+msgstr "19. Čisti dobiček obračunskega obdobja"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II_2
+msgid "2. Buildings"
+msgstr "2. Zgradbe"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_2
+msgid "2. Cost of materials used"
+msgstr "2. Stroški porabljenega materiala"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_II_2
+msgid "2. Costs of pension insurance"
+msgstr "2. Stroški pokojninskih zavarovanj"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_II_2
+msgid "2. Financial expenses from loans received from banks"
+msgstr "2. Finančni odhodki iz posojil, prejetih od bank"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_III_2
+msgid ""
+"2. Financial expenses from trade payables and bill of exchange liabilities"
+msgstr ""
+"2. Finančni odhodki iz obveznosti do dobaviteljev in meničnih obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_II_2
+msgid "2. Financial income from loans granted to others"
+msgstr "2. Finančni prihodki iz posojil, danih drugim"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_I_2
+msgid "2. Financial income from shares in associated companies"
+msgstr "2. Finančni prihodki iz deležev v pridruženih družbah"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_III_2
+msgid "2. Financial revenues from operating receivables from others"
+msgstr "2. Finančni prihodki iz poslovnih terjatev do drugih"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_2
+msgid "2. Increase in the value of stocks of products and work in progress"
+msgstr "2. Povečanje vrednosti zalog proizvodov in nedokončane proizvodnje"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_b_2
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_I_2
+msgid "2. Long-term accrued costs and deferred revenue"
+msgstr "2. Dolgoročne aktivne časovne razmejitve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_I_2
+msgid "2. Long-term financial liabilities to banks"
+msgstr "2. Dolgoročne finančne obveznosti do bank"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV_2
+msgid "2. Long-term loans"
+msgstr "2. Dolgoročna posojila"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_II_2
+msgid "2. Long-term operating liabilities to suppliers"
+msgstr "2. Dolgoročne poslovne obveznosti do dobaviteljev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_V_2
+msgid "2. Long-term trade receivables"
+msgstr "2. Dolgoročne terjatve do kupcev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_I_2
+msgid "2. Net rental income"
+msgstr "2. Čisti prihodki od najemnin"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_III_2
+msgid "2. Net sales of goods and materials"
+msgstr "2. Čisti prihodki od prodaje blaga in materiala"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_IV_2
+msgid "2. Other costs"
+msgstr "2. Drugi stroški"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_III_2
+msgid "2. Reserves for treasury shares and treasury shares"
+msgstr "2. Rezerve za lastne deleže in lastne delnice"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_II_2
+msgid "2. Short-term financial liabilities to banks"
+msgstr "2. Kratkoročne finančne obveznosti do bank"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III_2
+msgid "2. Short-term loans"
+msgstr "2. Kratkoročna posojila"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_III_2
+msgid "2. Short-term trade payables"
+msgstr "2. Kratkoročne obveznosti do dobaviteljev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_IV_2
+msgid "2. Short-term trade receivables"
+msgstr "2. Kratkoročne terjatve do kupcev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_VI_2
+msgid "2. Unallocated earnings from previous years"
+msgstr "2. Nerazporejeni dobiček iz prejšnjih let"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_I_2
+msgid "2. Uncalled capital (as a deductible item)"
+msgstr "2. Nevybrani kapital (kot odbitna postavka)"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_II_2
+msgid "2. Work in progress"
+msgstr "2. Nedokončana proizvodnja"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_20
+msgid "20. Net loss for the period"
+msgstr "20. Čista izguba obračunskega obdobja"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_II_3
+msgid "3. Costs of other social insurance"
+msgstr "3. Stroški drugih socialnih zavarovanj"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_3
+msgid "3. Costs of services"
+msgstr "3. Stroški storitev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_3
+msgid "3. Decrease in the value of stocks of products and work in progress"
+msgstr "3. Zmanjšanje vrednosti zalog proizvodov in nedokončane proizvodnje"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_II_3
+msgid "3. Financial expenses from issued bonds"
+msgstr "3. Finančni odhodki iz izdanih obveznic"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_III_3
+msgid "3. Financial expenses from other operating liabilities"
+msgstr "3. Finančni odhodki iz drugih poslovnih obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_I_3
+msgid "3. Financial income from shares in other companies"
+msgstr "3. Finančni prihodki iz deležev v drugih družbah"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_V_3
+msgid "3. Long-term operating receivables from others"
+msgstr "3. Dolgoročne poslovne terjatve do drugih"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_I_3
+msgid "3. Net sales of goods and materials"
+msgstr "3. Čisti prihodki od prodaje blaga in materiala"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_I_3
+msgid "3. Other long-term financial liabilities"
+msgstr "3. Druge dolgoročne finančne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_II_3
+msgid "3. Other long-term operating liabilities"
+msgstr "3. Druge dolgoročne poslovne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_II_3
+msgid "3. Other short-term financial liabilities"
+msgstr "3. Druge kratkoročne finančne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_III_3
+msgid "3. Other short-term operating liabilities"
+msgstr "3. Druge kratkoročne poslovne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_III_3
+msgid "3. Own shares and own business shares (as a deductible item)"
+msgstr "3. Lastne delnice in lastni poslovni deleži (kot odbitna postavka)"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II_3
+msgid "3. Production facilities and machines"
+msgstr "3. Proizvajalne naprave in stroji"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_II_3
+msgid "3. Products"
+msgstr "3. Proizvodi"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_III_3
+msgid "3. Revaluation operating expenses for current assets"
+msgstr "3. Prevrednotovalni poslovni odhodki pri obratnih sredstvih"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_IV_3
+msgid "3. Short-term operating receivables from others"
+msgstr "3. Kratkoročne poslovne terjatve do drugih"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_II_4
+msgid "4. Financial expenses from other financial liabilities"
+msgstr "4. Finančni odhodki iz drugih finančnih obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_I_4
+msgid "4. Financial income from other investments"
+msgstr "4. Finančni prihodki iz drugih naložb"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_II_4
+msgid "4. Merchandise"
+msgstr "4. Trgovsko blago"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_II_4
+msgid "4. Other labor costs"
+msgstr "4. Drugi stroški dela"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II_4
+msgid ""
+"4. Other plant and equipment, small inventory and other tangible fixed assets"
+msgstr ""
+"4. Druge naprave in oprema, drobni inventar in druga opredmetena osnovna "
+"sredstva"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_4
+msgid "4. Own capital products and own services"
+msgstr "4. Usredstveni lastni proizvodi in lastne storitve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_III_4
+msgid "4. Statutory reserves"
+msgstr "4. Statutarne rezerve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_II_5
+msgid "5. Advances for inventories"
+msgstr "5. Predujmi za zaloge"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II_5
+msgid "5. Biological agents"
+msgstr "5. Biološka sredstva"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_III_5
+msgid "5. Other reserves from profit"
+msgstr "5. Druge rezerve iz dobička"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_5
+msgid ""
+"5. Subsidies, grants, revenues, compensations and other revenues related to "
+"business effects"
+msgstr ""
+"5. Subvencije, dotacije, regresi, kompenzacije in drugi prihodki, povezani s "
+"poslovnimi učinki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_6
+msgid "6. Other operating income"
+msgstr "6. Drugi poslovni prihodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II_6
+msgid "6. Tangible fixed assets under construction and manufacture"
+msgstr "6. Opredmetena osnovna sredstva v gradnji in izdelavi"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II_7
+msgid "7. Advances for the acquisition of property, plant and equipment"
+msgstr "7. Predujmi za pridobitev opredmetenih osnovnih sredstev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_7
+msgid "7. Operating income"
+msgstr "7. Poslovni prihodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8
+msgid "8. Operating expenses"
+msgstr "8. Poslovni odhodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_9
+msgid "9. Operating profit"
+msgstr "9. Dobiček iz poslovanja"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a
+msgid "A. Capital"
+msgstr "A. Kapital"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a
+msgid "A. Long-term assets"
+msgstr "A. Dolgoročna sredstva"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b
+msgid "B. Current assets"
+msgstr "B. Kratkoročna sredstva"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_b
+msgid "B. Provisions and long-term accrued costs and deferred income"
+msgstr "B. Rezervacije in dolgoročne pasivne časovne razmejitve"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.l10n_si_balance_sheet_column
+#: model:account.report.column,name:l10n_si_reports.l10n_si_pl_column
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: l10n_si_reports
+#: model:account.report,name:l10n_si_reports.l10n_si_balance_sheet
+msgid "Balance sheet"
+msgstr "Bilanca stanja"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c
+msgid "C. Long-term liabilities"
+msgstr "C. Dolgoročne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch
+msgid "C. Short term obligations"
+msgstr "Č. Kratkoročne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_c
+msgid "C. Short-term accrued and deferred income"
+msgstr "C. Kratkoročne aktivne časovne razmejitve"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.account_financial_report_ec_sales_country
+msgid "Country Code"
+msgstr "Koda države"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_d
+msgid "D. Short-term accrued and deferred income"
+msgstr "D. Kratkoročne pasivne časovne razmejitve"
+
+#. module: l10n_si_reports
+#: model:ir.model.fields,field_description:l10n_si_reports.field_l10n_si_ec_sales_report_handler__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: l10n_si_reports
+#: model:account.report,name:l10n_si_reports.l10n_si_ec_sales_report
+msgid "EC Sales List"
+msgstr "EC prodajni seznam"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_details
+msgid ""
+"Financial income from interest (already taken into account in II. And III.)"
+msgstr "Finančni prihodki iz obresti (že upoštevani v II. in III.)"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_details
+msgid ""
+"Financial interest expenses (already taken into account in II. And III.)"
+msgstr "Finančni odhodki za obresti (že upoštevani v II. in III.)"
+
+#. module: l10n_si_reports
+#. odoo-python
+#: code:addons/l10n_si_reports/models/account_sales_report.py:0
+msgid "Goods - 42-63"
+msgstr "Blago - 42-63"
+
+#. module: l10n_si_reports
+#. odoo-python
+#: code:addons/l10n_si_reports/models/account_sales_report.py:0
+msgid "Goods - Stocks"
+msgstr "Blago - zaloge"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_I
+msgid "I. Assets (disposal groups) held for sale"
+msgstr "I. Sredstva (skupine za odtujitev) za prodajo"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_I
+msgid "I. Called-up capital"
+msgstr "I. Vpoklicani kapital"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I
+msgid "I. Costs of goods, materials and services"
+msgstr "I. Stroški blaga, materiala in storitev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_I
+msgid ""
+"I. Financial expenses from impairment and write-offs of financial investments"
+msgstr "I. Finančni odhodki iz oslabitve in odpisov finančnih naložb"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_I
+msgid "I. Financial income from shares"
+msgstr "I. Finančni prihodki iz deležev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_I
+msgid "I. Intangible assets and long-term accrued costs and deferred revenue"
+msgstr "I. Neopredmetena sredstva in dolgoročne aktivne časovne razmejitve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_I
+msgid "I. Liabilities included in disposal groups"
+msgstr "I. Obveznosti, vključene v skupino za odtujitev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_I
+msgid "I. Long-term financial liabilities"
+msgstr "I. Dolgoročne finančne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_I
+msgid "I. Net domestic sales revenue"
+msgstr "I. Čisti prihodki od prodaje na domačem trgu"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_13_I
+msgid ""
+"I. Subsidies, grants and similar revenues not related to business performance"
+msgstr ""
+"I. Subvencije, dotacije in podobni prihodki, ki niso povezani s poslovnimi "
+"učinki"
+
+#. module: l10n_si_reports
+#: model:ir.model.fields,field_description:l10n_si_reports.field_l10n_si_ec_sales_report_handler__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_II
+msgid "II. Capital reserves"
+msgstr "II. Kapitalske rezerve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_II
+msgid "II. Financial expenses from financial liabilities"
+msgstr "II. Finančni odhodki iz finančnih obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_II
+msgid "II. Financial income from loans"
+msgstr "II. Finančni prihodki iz posojil"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_II
+msgid "II. Labor costs"
+msgstr "II. Stroški dela"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_II
+msgid "II. Long-term operating liabilities"
+msgstr "II. Dolgoročne poslovne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_II
+msgid "II. Net sales revenue inside the EU market"
+msgstr "II. Čisti prihodki od prodaje na trgu EU"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_13_II
+msgid "II. Other income"
+msgstr "II. Drugi prihodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_II
+msgid "II. Short-term financial liabilities"
+msgstr "II. Kratkoročne finančne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_II
+msgid "II. Stocks"
+msgstr "II. Zaloge"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_II
+msgid "II. Tangible fixed assets"
+msgstr "II. Opredmetena osnovna sredstva"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_c_III
+msgid "III. Deferred tax liabilities"
+msgstr "III. Odložene obveznosti za davek"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_12_III
+msgid "III. Financial expenses from operating liabilities"
+msgstr "III. Finančni odhodki iz poslovnih obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_11_III
+msgid "III. Financial revenues from operating receivables"
+msgstr "III. Finančni prihodki iz poslovnih terjatev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_III
+msgid "III. Investment property"
+msgstr "III. Naložbene nepremičnine"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_1_III
+msgid "III. Net sales revenue outside the EU market"
+msgstr "III. Čisti prihodki od prodaje na trgu zunaj EU"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_III
+msgid "III. Profit reserves"
+msgstr "III. Rezerve iz dobička"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III
+msgid "III. Short-term investments"
+msgstr "III. Kratkoročne finančne naložbe"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_ch_III
+msgid "III. Short-term operating liabilities"
+msgstr "III. Kratkoročne poslovne obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_III
+msgid "III. Write-offs"
+msgstr "III. Odpisi vrednosti"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV
+msgid "IV. Long-term financial investments"
+msgstr "IV. Dolgoročne finančne naložbe"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_IV
+msgid "IV. Other operating expenses"
+msgstr "IV. Drugi poslovni odhodki"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_IV
+msgid "IV. Revaluation reserves"
+msgstr "IV. Prevrednotovalne rezerve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_IV
+msgid "IV. Short-term receivables"
+msgstr "IV. Kratkoročne poslovne terjatve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities
+msgid "Liabilities"
+msgstr "Obveznosti"
+
+#. module: l10n_si_reports
+#: model:account.report,name:l10n_si_reports.l10n_si_pl
+#: model:ir.actions.client,name:l10n_si_reports.action_account_report_si_pl
+msgid "Profit and loss"
+msgstr "Izkaz poslovnega izida"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources
+msgid "Resources"
+msgstr "Viri"
+
+#. module: l10n_si_reports
+#: model:ir.model,name:l10n_si_reports.model_l10n_si_ec_sales_report_handler
+msgid "Slovenian Sales Report Custom Handler"
+msgstr "Slovenski obdelovalec poročila o prodaji"
+
+#. module: l10n_si_reports
+#: model:account.return.type,name:l10n_si_reports.si_tax_return_type
+msgid "Tax"
+msgstr "Davek"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.account_financial_report_ec_sales_total_amount_A3
+msgid "Total Amount - A3"
+msgstr "Skupni znesek - A3"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.account_financial_report_ec_sales_total_amount_A4
+msgid "Total Amount - A4"
+msgstr "Skupni znesek - A4"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.account_financial_report_ec_sales_total_amount_A5
+msgid "Total Amount - A5"
+msgstr "Skupni znesek - A5"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.account_financial_report_ec_sales_total_amount_A6
+msgid "Total Amount - A6"
+msgstr "Skupni znesek - A6"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.account_financial_report_ec_sales_total_amount_A7
+msgid "Total Amount - A7"
+msgstr "Skupni znesek - A7"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_V
+msgid "V. Cash"
+msgstr "V. Denarna sredstva"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_V
+msgid "V. Long-term operating receivables"
+msgstr "V. Dolgoročne poslovne terjatve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_V
+msgid "V. Reserves arising from fair value measurement"
+msgstr "V. Rezerve, nastale zaradi vrednotenja po pošteni vrednosti"
+
+#. module: l10n_si_reports
+#: model:account.report.column,name:l10n_si_reports.account_financial_report_ec_sales_vat
+msgid "VAT Number"
+msgstr "DDV številka"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_VI
+msgid "VI. Deferred tax assets"
+msgstr "VI. Odložene terjatve za davek"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_VI
+msgid "VI. Transferred net profit or loss"
+msgstr "VI. Preneseni čisti poslovni izid"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_liabilities_a_VII
+msgid "VII. Net profit or loss for the financial year"
+msgstr "VII. Čisti poslovni izid poslovnega leta"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV_2_a
+msgid "a) Long-term loans to group companies"
+msgstr "a) Dolgoročna posojila družbam v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_I_1_a
+msgid "a) Long-term property rights"
+msgstr "a) Dolgoročne premoženjske pravice"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV_1_a
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III_1_a
+msgid "a) Shares and stakes in group companies"
+msgstr "a) Delnice in deleži v družbah v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III_2_a
+msgid "a) Short-term loans to group companies"
+msgstr "a) Kratkoročna posojila družbam v skupini"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_2_a
+msgid "a) material costs"
+msgstr "a) stroški materiala"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_3_a
+msgid "a) transport services"
+msgstr "a) prevozne storitve"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_I_1_b
+msgid "b) Good name"
+msgstr "b) Dobro ime"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV_2_b
+msgid "b) Other long-term loans"
+msgstr "b) Druga dolgoročna posojila"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV_1_b
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III_1_b
+msgid "b) Other shares and stakes"
+msgstr "b) Drugi deleži"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III_2_b
+msgid "b) Other short-term loans"
+msgstr "b) Druga kratkoročna posojila"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_2_b
+msgid "b) energy costs"
+msgstr "b) stroški energije"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_3_b
+msgid "b) rents"
+msgstr "b) najemnine"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_I_1_c
+msgid "c) Long-term deferred development costs"
+msgstr "c) Dolgoročni odloženi stroški razvijanja"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_IV_1_c
+msgid "c) Other long-term financial investments"
+msgstr "c) Druge dolgoročne finančne naložbe"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_b_III_1_c
+msgid "c) Other short-term financial investments"
+msgstr "c) Druge kratkoročne finančne naložbe"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_2_c
+msgid "c) other material costs"
+msgstr "c) drugi stroški materiala"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_3_c
+msgid "c) reimbursement of work-related expenses to employees"
+msgstr "c) povračila stroškov v zvezi z delom zaposlenim"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_pl_8_I_3_d
+msgid "d) other costs of services"
+msgstr "d) drugi stroški storitev"
+
+#. module: l10n_si_reports
+#: model:account.report.line,name:l10n_si_reports.l10n_si_balance_sheet_resources_a_I_1_ch
+msgid "č) Other intangible assets"
+msgstr "č) Druga neopredmetena sredstva"

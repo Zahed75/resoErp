@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_helpdesk_slides
+#
+# Translators:
+# Martin Trigaux <mat@odoo.com>, 2017
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.saas~18+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-20 09:48+0000\n"
+"PO-Revision-Date: 2026-06-15 17:47+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"website_helpdesk_slides/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.channel_search_result
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.search_result
+msgid ", by"
+msgstr ", ໂດຍ"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.channel_search_result
+msgid "<i class=\"fa fa-2x fa-mortar-board\" title=\"eLearning Course\"/>"
+msgstr "<i class=\"fa fa-2x fa-mortar-board\" title=\"ຫຼັກສູດ eLearning\"/>"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.search_result
+msgid "<i class=\"fa fa-2x fa-mortar-board\" title=\"eLearning\"/>"
+msgstr "<i class=\"fa fa-2x fa-mortar-board\" title=\"eLearning\"/>"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.knowledge_base_slides_card
+msgid "<i class=\"fa fa-3x rounded bg-o-color-5 m-3 fa-mortar-board fa-3x rounded bg-o-color-5 m-3\">​</i>"
+msgstr ""
+"<i class=\"fa fa-3x rounded bg-o-color-5 m-3 fa-mortar-board fa-3x rounded "
+"bg-o-color-5 m-3\">​</i>"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.knowledge_base_slides_card
+msgid "<span style=\"font-size: 18px;\">Level up your skills with training videos and tutorials</span>"
+msgstr ""
+"<span style=\"font-size: 18px;\">ຍົກລະດັບທັກສະຂອງທ່ານດ້ວຍວິດີໂອການຝຶກອົບຮົມ ແລະ ຄຳແນະນ"
+"ຳ</span>"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.knowledge_base_slides_card
+msgid "<span style=\"font-weight: bolder; font-size: 18px;\">Courses</span>"
+msgstr "<span style=\"font-weight: bolder; font-size: 18px;\">ຫຼັກສູດ</span>"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.search_result
+msgid ""
+"Comments\n"
+"                    | <i class=\"fa fa-folder-open-o\"/>"
+msgstr ""
+"ຄວາມຄິດເຫັນ\n"
+"                    | <i class=\"fa fa-folder-open-o\"/>"
+
+#. module: website_helpdesk_slides
+#: model:ir.model,name:website_helpdesk_slides.model_slide_channel
+msgid "Course"
+msgstr "ຫຼັກສູດ"
+
+#. module: website_helpdesk_slides
+#: code:addons/website_helpdesk_slides/models/helpdesk.py:0
+#: model:ir.model.fields,field_description:website_helpdesk_slides.field_helpdesk_team__website_slide_channel_ids
+msgid "Courses"
+msgstr "ຫຼັກສູດ"
+
+#. module: website_helpdesk_slides
+#: model:ir.model,name:website_helpdesk_slides.model_helpdesk_team
+msgid "Helpdesk Team"
+msgstr "ທີມງານຊ່ວຍເຫຼືອ"
+
+#. module: website_helpdesk_slides
+#: model:ir.model.fields,help:website_helpdesk_slides.field_helpdesk_team__website_slide_channel_ids
+msgid "In the help center, customers will only be able to see the selected courses."
+msgstr ""
+"ໃນສູນຊ່ວຍເຫຼືອ, ລູກຄ້າຈະສາມາດເຫັນໄດ້ສະເພາະຫຼັກສູດທີ່ຖືກເລືອກໄວ້ເທົ່ານັ້ນ."
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.search_result
+msgid ""
+"Likes\n"
+"                    |"
+msgstr ""
+"ຖືກໃຈ\n"
+"                    |"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.channel_search_result
+msgid ""
+"Members\n"
+"                    |"
+msgstr ""
+"ສະມາຊິກ\n"
+"                    |"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.channel_search_result
+msgid "Reviews"
+msgstr "ການຣີວິວ"
+
+#. module: website_helpdesk_slides
+#: model:ir.model.fields,field_description:website_helpdesk_slides.field_helpdesk_team__show_knowledge_base_slide_channel
+msgid "Show Knowledge Base Slide Channel"
+msgstr "ສະແດງຊ່ອງສະໄລ້ຄັງຄວາມຮູ້"
+
+#. module: website_helpdesk_slides
+#: model:ir.model,name:website_helpdesk_slides.model_slide_slide
+msgid "Slides"
+msgstr "ສະໄລ້"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.knowledge_base_slides_card
+msgid "Take Courses"
+msgstr "ເຂົ້າຮຽນຫຼັກສູດ"
+
+#. module: website_helpdesk_slides
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_slides.search_result
+msgid ""
+"Views\n"
+"                    |"
+msgstr ""
+"ການເຂົ້າຊົມ\n"
+"                    |"

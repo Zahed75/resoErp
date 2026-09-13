@@ -1,0 +1,988 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * databases
+#
+# Odoo Translation Bot <c3p@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 17:41+0000\n"
+"PO-Revision-Date: 2026-08-06 11:07+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"databases/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid "%(nb_failed_dbs)s databases could not be synchronized.\n"
+msgstr "%(nb_failed_dbs)s podatkovne baze ni bilo mogoče sinhronizirati.\n"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid "%(nb_new_dbs)s new databases, %(nb_updated_dbs)s updated."
+msgstr "%(nb_new_dbs)s novih podatkovnih baz, %(nb_updated_dbs)s posodobljenih."
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid "- … and %(nb_dbs)d more!\n"
+msgstr "… in še %(nb_dbs)d več!\n"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_users_form_databases_inherit
+#, fuzzy
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                Manage access:\n"
+"                            </span>\n"
+"                            <span class=\"text-muted\">\n"
+"                                useful to cut all access at once\n"
+"                            </span>"
+msgstr ""
+"<span class=\"o_form_label\">\n"
+"                                Upravljanje dostopa:\n"
+"                            </span>\n"
+"                            <span class=\"text-muted\">\n"
+"                                uporabno za prekinitev vseh dostopov "
+"naenkrat\n"
+"                            </span>"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#: model_terms:ir.ui.view,arch_db:databases.project_project_view_form_simplified_template
+#, fuzzy
+msgid ""
+"<span class=\"o_wrap_label\"><span class=\"o_form_label\">Fetch</span></span>"
+msgstr ""
+"<span class=\"o_wrap_label\"><span class=\"o_form_label\">Prenesi</span></"
+"span>"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#: model_terms:ir.ui.view,arch_db:databases.project_project_view_form_simplified_template
+#, fuzzy
+msgid "<span>Documents</span>"
+msgstr "<span>Dokumenti</span>"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#: model_terms:ir.ui.view,arch_db:databases.project_project_view_form_simplified_template
+#, fuzzy
+msgid "<span>Draft Journal Entries</span>"
+msgstr "<span>Osnutki dnevniških vnosov</span>"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#: model_terms:ir.ui.view,arch_db:databases.project_project_view_form_simplified_template
+#, fuzzy
+msgid "<span>Tax Returns</span>"
+msgstr "<span>Davčne napovedi</span>"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+#, fuzzy
+msgid "API credentials to Odoo.com"
+msgstr "API poverila za Odoo.com"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#, fuzzy
+msgid "Add a user"
+msgstr "Dodaj uporabnika"
+
+#. module: databases
+#: model:res.groups,name:databases.group_databases_manager
+msgid "Administrator"
+msgstr "Administrator"
+
+#. module: databases
+#: model:res.groups,comment:databases.group_databases_manager
+#, fuzzy
+msgid "Administrator can manage the client databases"
+msgstr "Administrator lahko upravlja odjemalske baze podatkov"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_nb_users
+#, fuzzy
+msgid "Amount of Users"
+msgstr "Število uporabnikov"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_nb_documents
+#, fuzzy
+msgid "Amount of documents in Inbox"
+msgstr "Število dokumentov v nabiralniku"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "An error occurred: %s"
+msgstr "Pojavila se je napaka: %s"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+#, fuzzy
+msgid ""
+"Automatically connect to SaaS databases using Odoo.com as an OAuth provider."
+msgstr ""
+"Samodejno se povežite z bazami podatkov SaaS z uporabo Odoo.com kot "
+"ponudnika OAuth."
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.databases_manage_users_wizard_view_form
+msgid "Close"
+msgstr "Zaključi"
+
+#. module: databases
+#: model:ir.model,name:databases.model_res_config_settings
+msgid "Config Settings"
+msgstr "Uredi nastavitve"
+
+#. module: databases
+#: model:ir.ui.menu,name:databases.menu_configuration
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+msgid "Connect"
+msgstr "Povežite"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.databases_synchronization_wizard_view_form
+msgid "Continue"
+msgstr "Naprej"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__created_database_ids
+#, fuzzy
+msgid "Created Database"
+msgstr "Ustvarjena podatkovna baza"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__create_uid
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__create_uid
+#: model:ir.model.fields,field_description:databases.field_databases_user__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__create_date
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__create_date
+#: model:ir.model.fields,field_description:databases.field_databases_user__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__database_ids
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__database_ids
+#: model:ir.model.fields,field_description:databases.field_databases_user__project_id
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+msgid "Database"
+msgstr "Podatkovna zbirka"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/api.py:0
+#, fuzzy
+msgid "Database \"%s\" not found"
+msgstr "Baza podatkov \"%s\" ni najdena"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_api_key
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_api_key
+#, fuzzy
+msgid "Database API Key"
+msgstr "API ključ podatkovne zbirke"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_api_login
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_api_login
+#, fuzzy
+msgid "Database API Login"
+msgstr "Prijava API baze podatkov"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_api_key_to_use
+#, fuzzy
+msgid "Database Api Key To Use"
+msgstr "API ključ baze podatkov za uporabo"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_can_access
+#, fuzzy
+msgid "Database Can Access"
+msgstr "Dostop do baze podatkov"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_kpi_base_definition_id
+#, fuzzy
+msgid "Database Kpi Base Definition"
+msgstr "Osnovna definicija baze podatkov KPI"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_name
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_name
+msgid "Database Name"
+msgstr "Naziv podatkovne zbirke"
+
+#. module: databases
+#: model:ir.model,name:databases.model_databases_synchronization_wizard
+#, fuzzy
+msgid "Database Synchronization Wizard"
+msgstr "Čarovnik za sinhronizacijo baze podatkov"
+
+#. module: databases
+#: model:project.project,name:databases.database_default_template
+#, fuzzy
+msgid "Database Template"
+msgstr "Predloga baze podatkov"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_url
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_url
+#, fuzzy
+msgid "Database URL"
+msgstr "URL podatkovne zbirke"
+
+#. module: databases
+#: model:ir.model,name:databases.model_databases_user
+#: model:ir.model.fields,field_description:databases.field_res_users__database_user_ids
+#, fuzzy
+msgid "Database User"
+msgstr "Uporabnik podatkovne zbirke"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_user_ids
+#, fuzzy
+msgid "Database Users"
+msgstr "Uporabniki baze podatkov"
+
+#. module: databases
+#: model:ir.model,name:databases.model_databases_manage_users_wizard
+#, fuzzy
+msgid "Database Users Invitation Wizard"
+msgstr "Čarovnik za vabila uporabnikov baze podatkov"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_version
+#, fuzzy
+msgid "Database Version"
+msgstr "Različica baze podatkov"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid ""
+"Database synchronization is running in the background. You will be notified "
+"upon completion."
+msgstr ""
+"Sinhronizacija podatkovne baze se izvaja v ozadju. O zaključku boste "
+"obveščeni."
+
+#. module: databases
+#: model:ir.actions.act_window,name:databases.action_view_databases_all
+#: model:ir.ui.menu,name:databases.menu_databases
+#: model:ir.ui.menu,name:databases.menu_main_databases
+#: model:res.groups.privilege,name:databases.res_groups_privilege_databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:databases.view_users_form_databases_inherit
+#, fuzzy
+msgid "Databases"
+msgstr "Podatkovne zbirke"
+
+#. module: databases
+#: model:ir.actions.server,name:databases.ir_cron_synchronize_databases_with_odoocom_ir_actions_server
+#, fuzzy
+msgid "Databases: pull databases from Odoo.com and synchronize"
+msgstr ""
+"Podatkovne baze: pridobi podatkovne baze iz Odoo.com in jih sinhroniziraj"
+
+#. module: databases
+#: model:ir.actions.server,name:databases.ir_cron_synchronize_databases_ir_actions_server
+#, fuzzy
+msgid "Databases: synchronize"
+msgstr "Podatkovne baze: sinhronizacija"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.databases_manage_users_wizard_view_form
+msgid "Discard"
+msgstr "Opusti"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__display_name
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__display_name
+#: model:ir.model.fields,field_description:databases.field_databases_user__display_name
+#: model:ir.model.fields,field_description:databases.field_project_project__display_name
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__display_name
+#: model:ir.model.fields,field_description:databases.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:databases.field_res_users__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__databases_manage_users_wizard__state__done
+#: model:project.task.type,name:databases.stage_done
+msgid "Done"
+msgstr "Opravljeno"
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__databases_manage_users_wizard__state__draft
+msgid "Draft"
+msgstr "Osnutek"
+
+#. module: databases
+#. odoo-javascript
+#: code:addons/databases/static/src/views/databases_project_list/databases_project_list_renderer.js:0
+#, fuzzy
+msgid "Draft entries in journal %(journal_name)s"
+msgstr "Osnutki v dnevniku %(journal_name)s"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__error_message
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__error_message
+msgid "Error Message"
+msgstr "Sporočilo napake"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid ""
+"Error while connecting to %(url)s: We are missing the database name, the api "
+"login or the api key\n"
+msgstr ""
+"Napaka pri povezovanju z %(url)s: manjka ime baze podatkov, api prijava ali "
+"api ključ\n"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid "Error while creating an API key on %(nb_dbs)d databases:\n"
+msgstr "Napaka pri ustvarjanju API ključa v %(nb_dbs)d podatkovnih bazah:\n"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "Error while creating users on %(dbname)s: %(message)s\n"
+msgstr ""
+"Napaka pri ustvarjanju uporabnikov v podatkovni bazi %(dbname)s: %(message)"
+"s\n"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid ""
+"Error while fetching information from %(host_names)s on %(ip)s: %(message)s\n"
+msgstr ""
+"Napaka pri pridobivanju podatkov iz %(host_names)s na naslovu %(ip)s: %"
+"(message)s\n"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid "Error while listing databases from %(dbname)s: %(message)s\n"
+msgstr ""
+"Napaka pri pridobivanju seznama baz podatkov iz %(dbname)s: %(message)s\n"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "Error while removing users from %(dbname)s: %(message)s\n"
+msgstr "Napaka med odstranjevanjem uporabnikov iz %(dbname)s: %(message)s\n"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__everywhere_user_ids
+#, fuzzy
+msgid "Everywhere User"
+msgstr "Uporabniki povsod"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_fetch_documents
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_fetch_documents
+#, fuzzy
+msgid "Fetch Documents"
+msgstr "Pridobi dokumente"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_fetch_draft_entries
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_fetch_draft_entries
+#, fuzzy
+msgid "Fetch Draft Journal Entries"
+msgstr "Pridobi osnutke vnosov v dnevnik"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_fetch_tax_returns
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_fetch_tax_returns
+#, fuzzy
+msgid "Fetch Tax Returns"
+msgstr "Pridobi davčne napovedi"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__fetched_values
+#, fuzzy
+msgid "Fetched Values"
+msgstr "Pridobljene vrednosti"
+
+#. module: databases
+#: model_terms:ir.actions.act_window,help:databases.action_view_databases_all
+#, fuzzy
+msgid ""
+"Get all your Odoo databases summarized, and perform mass action like "
+"inviting users."
+msgstr ""
+"Prikažite vse svoje Odoo baze podatkov v povzetku in izvajajte množična "
+"dejanja, kot je vabilo uporabnikov."
+
+#. module: databases
+#: model:ir.model.constraint,message:databases.constraint_project_project_database_url_unique
+#, fuzzy
+msgid "Hey, this URL is already hooked up to a database!"
+msgstr "Hej, ta URL je že povezan z bazo podatkov!"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_hosting
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__database_hosting
+#, fuzzy
+msgid "Hosting"
+msgstr "Gostovanje"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__id
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__id
+#: model:ir.model.fields,field_description:databases.field_databases_user__id
+#: model:ir.model.fields,field_description:databases.field_project_project__id
+#: model:ir.model.fields,field_description:databases.field_project_template_create_wizard__id
+#: model:ir.model.fields,field_description:databases.field_res_config_settings__id
+#: model:ir.model.fields,field_description:databases.field_res_users__id
+msgid "ID"
+msgstr "ID"
+
+#. module: databases
+#: model:project.task.type,name:databases.stage_progress
+msgid "In Progress"
+msgstr "V teku"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+msgid "Inbox"
+msgstr "Prejeto"
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__databases_manage_users_wizard__mode__invite
+msgid "Invitation"
+msgstr "Povabilo"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "Invitation is done"
+msgstr "Povabilo je opravljeno"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.databases_manage_users_wizard_view_form
+msgid "Invite"
+msgstr "Povabi"
+
+#. module: databases
+#: model:ir.actions.server,name:databases.action_invite_users
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+#, fuzzy
+msgid "Invite Users"
+msgstr "Povabi uporabnike"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+msgid "KPIs"
+msgstr "Ključni kazalniki"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_last_synchro
+#, fuzzy
+msgid "Last Synchronization"
+msgstr "Zadnja sinhronizacija"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__write_uid
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__write_uid
+#: model:ir.model.fields,field_description:databases.field_databases_user__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__write_date
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__write_date
+#: model:ir.model.fields,field_description:databases.field_databases_user__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_user__latest_authentication
+msgid "Latest Authentication"
+msgstr "Najnovejša avtentikacija"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_user__local_user_id
+#, fuzzy
+msgid "Local User"
+msgstr "Lokalni uporabnik"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_user__login
+msgid "Login"
+msgstr "Prijava"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_kpi_properties
+#, fuzzy
+msgid "Metrics"
+msgstr "Metrike"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__mode
+msgid "Mode"
+msgstr "Način"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_res_config_settings__module_databases_auth
+#, fuzzy
+msgid "Module Databases Auth"
+msgstr "Modul za preverjanje pristnosti baz podatkov"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_user__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: databases
+#: model:project.task.type,name:databases.stage_new
+msgid "New"
+msgstr "Novo"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__new_properties
+#, fuzzy
+msgid "New KPIs to add:"
+msgstr "Novi KPI-ji za dodajanje:"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+#, fuzzy
+msgid "New databases will be based on the selected project template."
+msgstr "Nove baze podatkov bodo temeljile na izbrani predlogi projekta."
+
+#. module: databases
+#: model_terms:ir.actions.act_window,help:databases.action_view_tasks_all
+msgid "No tasks found. Let's create one!"
+msgstr "Nobenega opravila ni najdenega. Kreirajte ga!"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__notify_user
+#, fuzzy
+msgid "Notify User"
+msgstr "Obveščanje uporabnika"
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__project_project__database_hosting__saas
+#: model:ir.model.fields.selection,name:databases.selection__project_template_create_wizard__database_hosting__saas
+#, fuzzy
+msgid "Odoo Online"
+msgstr "Odoo Online"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_res_config_settings__databases_apikey
+#, fuzzy
+msgid "Odoo.com API Key"
+msgstr "Ključ API Odoo.com"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_res_config_settings__databases_apiuser
+#, fuzzy
+msgid "Odoo.com API User"
+msgstr "Odoo.com API uporabnik"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+#, fuzzy
+msgid ""
+"Odoo.com API keys are managed in the <em>Developer API Keys</em> section of "
+"your"
+msgstr ""
+"Odoo.com API ključi se upravljajo v razdelku <em>Developer API Keys</em> vaše"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+#, fuzzy
+msgid "Odoo.com Connection &amp; Security page"
+msgstr "stran Odoo.com Povezava &amp; Varnost"
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__project_project__database_hosting__paas
+#: model:ir.model.fields.selection,name:databases.selection__project_template_create_wizard__database_hosting__paas
+#, fuzzy
+msgid "Odoo.sh"
+msgstr "Odoo.sh"
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__project_project__database_hosting__premise
+#: model:ir.model.fields.selection,name:databases.selection__project_template_create_wizard__database_hosting__premise
+#, fuzzy
+msgid "On Premise"
+msgstr "Lastna namestitev"
+
+#. module: databases
+#: model_terms:ir.actions.act_window,help:databases.action_view_tasks_all
+#, fuzzy
+msgid ""
+"Organize your tasks by dispatching them across the pipeline.<br>\n"
+"                Collaborate efficiently by chatting in real-time or via "
+"email."
+msgstr ""
+"Organizirajte svoja opravila tako, da jih razporedite po stopnjah poteka "
+"dela.<br>\n"
+"                Sodelujte učinkovito z klepetom v živo ali po e-pošti."
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__project_project__database_hosting__other
+#: model:ir.model.fields.selection,name:databases.selection__project_template_create_wizard__database_hosting__other
+#, fuzzy
+msgid "Outside of Odoo"
+msgstr "Izven Odoo"
+
+#. module: databases
+#. odoo-javascript
+#: code:addons/databases/static/src/views/databases_project_list/databases_project_list_renderer.js:0
+#, fuzzy
+msgid "Planned activities of type %(return_name)s"
+msgstr "Načrtovane aktivnosti vrste %(return_name)s"
+
+#. module: databases
+#: model:ir.model,name:databases.model_project_project
+msgid "Project"
+msgstr "Projekt"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+msgid "Project Template"
+msgstr "Predloga projekta"
+
+#. module: databases
+#: model:ir.model,name:databases.model_project_template_create_wizard
+#, fuzzy
+msgid "Project Template create Wizard"
+msgstr "Čarovnik za ustvarjanje predloge projekta"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_res_config_settings__databases_project_template_id
+#, fuzzy
+msgid "Project template"
+msgstr "Predloga projekta"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__property_definition
+#, fuzzy
+msgid "Property Definition"
+msgstr "Določitev lastnosti"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#, fuzzy
+msgid "Regular Project"
+msgstr "Običajen projekt"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__removable_user_ids
+#, fuzzy
+msgid "Removable User"
+msgstr "Odstranljiv uporabnik"
+
+#. module: databases
+#: model:ir.model.fields.selection,name:databases.selection__databases_manage_users_wizard__mode__remove
+msgid "Removal"
+msgstr "Umik"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.databases_manage_users_wizard_view_form
+msgid "Remove"
+msgstr "Odstrani"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#: model_terms:ir.ui.view,arch_db:databases.view_users_form_databases_inherit
+#, fuzzy
+msgid "Remove User"
+msgstr "Odstrani uporabnika"
+
+#. module: databases
+#: model:ir.actions.server,name:databases.action_remove_users
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+#, fuzzy
+msgid "Remove Users"
+msgstr "Odstrani uporabnike"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_users_form_databases_inherit
+#, fuzzy
+msgid "Remove this user from all databases"
+msgstr "Odstrani tega uporabnika iz vseh baz podatkov"
+
+#. module: databases
+#: model:ir.ui.menu,name:databases.menu_reporting
+msgid "Reporting"
+msgstr "Poročanje"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+msgid "Responsible"
+msgstr "Odgovoren"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_users_form_databases_inherit
+#, fuzzy
+msgid "Revoke all access"
+msgstr "Prekini ves dostop"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.res_config_settings_view_form
+#, fuzzy
+msgid "SaaS SSO Auto-login"
+msgstr "Samodejna prijava SaaS SSO"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_res_config_settings__databases_saas_single_sign_on
+#, fuzzy
+msgid "Saas SSO"
+msgstr "SaaS enotna prijava"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid ""
+"Select the users you want to invite to the %(nb_databases)s selected "
+"databases."
+msgstr ""
+"Izberite uporabnike, ki jih želite povabiti v %(nb_databases)s izbranih "
+"bazah podatkov."
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "Select the users you want to invite to the database %(database_name)s."
+msgstr ""
+"Izberite uporabnike, ki jih želite povabiti v podatkovno bazo %"
+"(database_name)s."
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid ""
+"Select the users you want to remove from the %(nb_databases)s selected "
+"databases."
+msgstr ""
+"Izberite uporabnike, ki jih želite odstraniti iz izbranih %(nb_databases)s "
+"podatkovnih baz."
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid ""
+"Select the users you want to remove from the database %(database_name)s."
+msgstr ""
+"Izberite uporabnike, ki jih želite odstraniti iz baze podatkov %"
+"(database_name)s."
+
+#. module: databases
+#: model:ir.actions.act_window,name:databases.action_databases_configuration
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+msgid "Settings"
+msgstr "Nastavitve"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__state
+msgid "State"
+msgstr "Zvezna država ali regija"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__summary_message
+#: model:ir.model.fields,field_description:databases.field_databases_synchronization_wizard__summary_message
+#, fuzzy
+msgid "Summary Message"
+msgstr "Povzetno sporočilo"
+
+#. module: databases
+#: model:ir.model.fields,field_description:databases.field_project_project__database_nb_synchro_errors
+#, fuzzy
+msgid "Synchronization Errors Count"
+msgstr "Število napak sinhronizacije"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/models/project_project.py:0
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid "Synchronization of %d databases"
+msgstr "Sinhronizacija %d podatkovnih baz"
+
+#. module: databases
+#: model:ir.actions.server,name:databases.action_synchronize_database
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+#, fuzzy
+msgid "Synchronize"
+msgstr "Sinhroniziraj"
+
+#. module: databases
+#: model:ir.actions.server,name:databases.action_synchronize_all_databases
+#, fuzzy
+msgid "Synchronize all the Databases"
+msgstr "Sinhroniziraj vse podatkovne baze"
+
+#. module: databases
+#: model_terms:ir.actions.act_window,help:databases.action_view_databases_all
+#, fuzzy
+msgid ""
+"Synchronize to automatically fetch Odoo Online databases, or set an API Key "
+"to connect to On Premise or Odoo.sh ones."
+msgstr ""
+"Sinhronizirajte za samodejno pridobivanje podatkovnih baz Odoo Online ali "
+"nastavite API ključ za povezavo z On Premise ali Odoo.sh podatkovnimi bazami."
+
+#. module: databases
+#: model:ir.actions.act_window,name:databases.action_view_tasks_all
+#: model:ir.ui.menu,name:databases.menu_tasks
+#: model:project.project,label_tasks:databases.database_default_template
+msgid "Tasks"
+msgstr "Opravila"
+
+#. module: databases
+#. odoo-javascript
+#: code:addons/databases/static/src/views/databases_project_list/databases_project_list_renderer.js:0
+#, fuzzy
+msgid "Tax return %(return_name)s"
+msgstr "Davčna napoved %(return_name)s"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "These users were successfully invited to %(nb_databases)s databases."
+msgstr ""
+"Ti uporabniki so bili uspešno povabljeni v %(nb_databases)s podatkovne baze."
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "These users were successfully removed from %(nb_databases)s databases."
+msgstr ""
+"Ti uporabniki so bili uspešno odstranjeni iz %(nb_databases)s podatkovnih "
+"baz."
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/models/res_users.py:0
+#, fuzzy
+msgid "This user has no access to remove."
+msgstr "Ta uporabnik nima dostopa do odstranitve."
+
+#. module: databases
+#: model:ir.model.constraint,message:databases.constraint_project_project_database_url_required
+#, fuzzy
+msgid "Uh-oh! It seems we are missing a url for a database!"
+msgstr "Ups! Izgleda, da manjka URL za bazo podatkov!"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_synchronization_wizard.py:0
+#, fuzzy
+msgid "Unreachable"
+msgstr "Nedosegljivo"
+
+#. module: databases
+#: model:ir.model,name:databases.model_res_users
+#: model:ir.model.fields,field_description:databases.field_databases_manage_users_wizard__user_ids
+#: model:res.groups,name:databases.group_databases_user
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.edit_project
+#, fuzzy
+msgid "User Management"
+msgstr "Upravljanje uporabnikov"
+
+#. module: databases
+#: model:res.groups,comment:databases.group_databases_user
+#, fuzzy
+msgid "User can access the client databases"
+msgstr "Uporabnik lahko dostopa do podatkovnih baz strank"
+
+#. module: databases
+#. odoo-python
+#: code:addons/databases/wizard/databases_manage_users_wizard.py:0
+#, fuzzy
+msgid "User removal is done"
+msgstr "Odstranitev uporabnika je opravljena"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+msgid "Users"
+msgstr "Uporabniki"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_databases_list
+msgid "Version"
+msgstr "Različica"
+
+#. module: databases
+#: model:ir.model.fields,help:databases.field_databases_synchronization_wizard__notify_user
+#, fuzzy
+msgid ""
+"Whether the user should be notified once the cron has finished synchronizing "
+"the databases"
+msgstr ""
+"Ali naj bo uporabnik obveščen, ko cron konča sinhronizacijo podatkovnih baz"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_users_form_databases_inherit
+#, fuzzy
+msgid ""
+"You can't revoke your own access. You wouldn't want to lock yourself out!"
+msgstr ""
+"Svojega dostopa ne morete preklicati. Saj se vendar ne želite zakleniti iz "
+"sistema!"
+
+#. module: databases
+#: model_terms:ir.ui.view,arch_db:databases.view_users_form_databases_inherit
+#, fuzzy
+msgid "remote user"
+msgstr "oddaljeni uporabnik"

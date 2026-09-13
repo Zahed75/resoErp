@@ -1,0 +1,227 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * whatsapp_sign
+#
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:49+0000\n"
+"PO-Revision-Date: 2026-08-06 12:38+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"whatsapp_sign/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: whatsapp_sign
+#. odoo-python
+#: code:addons/whatsapp_sign/models/sign_request.py:0
+#, fuzzy
+msgid ""
+"All Whatsapp templates must be configured before creating the sign request."
+msgstr ""
+"Vse predloge WhatsApp je treba konfigurirati pred ustvarjanjem zahteve za "
+"podpis."
+
+#. module: whatsapp_sign
+#. odoo-python
+#: code:addons/whatsapp_sign/wizard/sign_send_request.py:0
+#, fuzzy
+msgid "All signers must have a phone number to send messages via WhatsApp."
+msgstr ""
+"Vsi podpisniki morajo imeti telefonsko številko za pošiljanje sporočil prek "
+"WhatsAppa."
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request_item__attachments_download_link
+#, fuzzy
+msgid "Attachments Download Link"
+msgstr "Povezava za prenos prilog"
+
+#. module: whatsapp_sign
+#. odoo-python
+#: code:addons/whatsapp_sign/controllers/main.py:0
+#, fuzzy
+msgid "Attachments of Request %s"
+msgstr "Priloge zahteve %s"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,help:whatsapp_sign.field_res_config_settings__send_request_wa_template_id
+#, fuzzy
+msgid "Choose an approved WhatsApp template to send signature requests"
+msgstr "Izberite odobreno predlogo WhatsApp za pošiljanje zahtev za podpis"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,help:whatsapp_sign.field_res_config_settings__request_completion_wa_template_id
+#, fuzzy
+msgid ""
+"Choose an approved WhatsApp template to send the signature request "
+"completion"
+msgstr ""
+"Izberite odobreno predlogo WhatsApp za pošiljanje obvestila o zaključku "
+"zahteve za podpis"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,help:whatsapp_sign.field_res_config_settings__request_refusal_wa_template_id
+#, fuzzy
+msgid ""
+"Choose an approved WhatsApp template to send the signature request refusal"
+msgstr ""
+"Izberite odobreno predlogo WhatsApp za pošiljanje zavrnitve zahteve za podpis"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_res_config_settings__request_completion_wa_template_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_sign.res_config_settings_view_form
+#, fuzzy
+msgid "Completed template"
+msgstr "Predloga ob zaključku"
+
+#. module: whatsapp_sign
+#: model:ir.model,name:whatsapp_sign.model_res_config_settings
+#, fuzzy
+msgid "Config Settings"
+msgstr "Uredi nastavitve"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request__send_channel
+#, fuzzy
+msgid "Delivery Method"
+msgstr "Način dostave"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request__display_name
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request_item__display_name
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_send_request__display_name
+#: model:ir.model.fields,field_description:whatsapp_sign.field_whatsapp_template_variable__display_name
+#, fuzzy
+msgid "Display Name"
+msgstr "Prikazno ime"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request_item__document_link
+#, fuzzy
+msgid "Document Link"
+msgstr "Povezava do dokumenta"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_res_config_settings__id
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request__id
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request_item__id
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_send_request__id
+#: model:ir.model.fields,field_description:whatsapp_sign.field_whatsapp_template_variable__id
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#. module: whatsapp_sign
+#. odoo-python
+#: code:addons/whatsapp_sign/models/sign_request_item.py:0
+#, fuzzy
+msgid ""
+"In sign request '%(ref)s', signer '%(signer)s' does not have a phone number,"
+" which is required to send messages via WhatsApp."
+msgstr ""
+"V zahtevi za podpis '%(ref)s' podpisnik '%(signer)s' nima telefonske "
+"številke, ki je potrebna za pošiljanje sporočil prek WhatsAppa."
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_send_request__is_whatsapp_feature_enabled
+#, fuzzy
+msgid "Is Whatsapp Feature Enabled"
+msgstr "Ali je funkcija WhatsApp omogočena"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request__raw_optional_message
+#, fuzzy
+msgid "Optional Message"
+msgstr "Izbirno sporočilo"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request__refusal_reason
+#, fuzzy
+msgid "Refusal reason"
+msgstr "Razlog za zavrnitev"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_res_config_settings__request_refusal_wa_template_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_sign.res_config_settings_view_form
+#, fuzzy
+msgid "Refusal template"
+msgstr "Predloga za zavrnitev"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request__refuser_partner
+#, fuzzy
+msgid "Refuser Partner"
+msgstr "Partner zavrnitve zahtevka"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_res_config_settings__send_request_wa_template_id
+#: model_terms:ir.ui.view,arch_db:whatsapp_sign.res_config_settings_view_form
+#, fuzzy
+msgid "Request template"
+msgstr "Predloga zahteve"
+
+#. module: whatsapp_sign
+#: model_terms:ir.ui.view,arch_db:whatsapp_sign.res_config_settings_view_form
+#, fuzzy
+msgid "Send Requests through WhatsApp"
+msgstr "Pošiljanje zahtev prek WhatsAppa"
+
+#. module: whatsapp_sign
+#: model_terms:ir.ui.view,arch_db:whatsapp_sign.sign_send_request_view_form_inherit_whatsapp
+#, fuzzy
+msgid "Send via WhatsApp"
+msgstr "Pošlji prek WhatsAppa"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request_item__sign_link
+#, fuzzy
+msgid "Sign Link"
+msgstr "Povezava za podpis"
+
+#. module: whatsapp_sign
+#: model:ir.model,name:whatsapp_sign.model_sign_send_request
+#, fuzzy
+msgid "Sign send request"
+msgstr "Zahteva za pošiljanje podpisa"
+
+#. module: whatsapp_sign
+#: model:ir.model,name:whatsapp_sign.model_sign_request
+#, fuzzy
+msgid "Signature Request"
+msgstr "Zahteva za podpis"
+
+#. module: whatsapp_sign
+#: model:ir.model,name:whatsapp_sign.model_sign_request_item
+#, fuzzy
+msgid "Signature Request Item"
+msgstr "Element zahteve za podpis"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields,field_description:whatsapp_sign.field_sign_request__signers_name
+#, fuzzy
+msgid "Signers name"
+msgstr "Ime podpisnikov"
+
+#. module: whatsapp_sign
+#: model:ir.model.fields.selection,name:whatsapp_sign.selection__sign_request__send_channel__whatsapp
+#, fuzzy
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#. module: whatsapp_sign
+#: model:ir.model,name:whatsapp_sign.model_whatsapp_template_variable
+#, fuzzy
+msgid "WhatsApp Template Variable"
+msgstr "Spremenljivka predloge WhatsApp"

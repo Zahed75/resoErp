@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_reso_booking" model="ir.sequence">
+            <field name="name">Reso Booking</field>
+            <field name="code">reso.booking</field>
+            <field name="prefix">BK/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="seq_reso_maintenance_ticket" model="ir.sequence">
+            <field name="name">Reso Maintenance Ticket</field>
+            <field name="code">reso.maintenance.ticket</field>
+            <field name="prefix">MT/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="seq_reso_whatsapp_message" model="ir.sequence">
+            <field name="name">Reso WhatsApp Message</field>
+            <field name="code">reso.whatsapp.message</field>
+            <field name="prefix">WA/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="seq_reso_hr_shift" model="ir.sequence">
+            <field name="name">Reso HR Shift</field>
+            <field name="code">reso.hr.shift</field>
+            <field name="prefix">SFT/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

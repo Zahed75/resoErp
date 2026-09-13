@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="tax_export_xml" inherit_id="l10n_de_reports.tax_export_xml">
+            <xpath expr="//Anmeldungssteuern" position="attributes">
+                <attribute name="t-att-xmlns">'http://finkonsens.de/elster/elsteranmeldung/ustva/v%s' % year</attribute>
+                <attribute name="t-att-art">None</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>

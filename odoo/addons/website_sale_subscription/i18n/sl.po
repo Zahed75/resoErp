@@ -1,0 +1,158 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_sale_subscription
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-06 18:47+0000\n"
+"PO-Revision-Date: 2026-08-06 12:42+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"website_sale_subscription/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: website_sale_subscription
+#: model_terms:ir.ui.view,arch_db:website_sale_subscription.subscription_one_time_sale
+#, fuzzy
+msgid "<span>Buy Once</span>"
+msgstr "<span>Kupi enkrat</span>"
+
+#. module: website_sale_subscription
+#: model:ir.model,name:website_sale_subscription.model_res_partner
+#, fuzzy
+msgid "Contact"
+msgstr "Stik"
+
+#. module: website_sale_subscription
+#: model:ir.model,website_form_label:website_sale_subscription.model_res_partner
+#, fuzzy
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: website_sale_subscription
+#. odoo-javascript
+#: code:addons/website_sale_subscription/static/src/xml/pricing_view.xml:0
+#: model_terms:ir.ui.view,arch_db:website_sale_subscription.sale_subscription_product_price
+#: model_terms:ir.ui.view,arch_db:website_sale_subscription.subscription_one_time_sale
+#, fuzzy
+msgid "Deliver Every"
+msgstr "Dostavi vsakih"
+
+#. module: website_sale_subscription
+#: model:ir.model.fields,field_description:website_sale_subscription.field_product_product__display_name
+#: model:ir.model.fields,field_description:website_sale_subscription.field_product_template__display_name
+#: model:ir.model.fields,field_description:website_sale_subscription.field_res_partner__display_name
+#: model:ir.model.fields,field_description:website_sale_subscription.field_sale_order__display_name
+#: model:ir.model.fields,field_description:website_sale_subscription.field_sale_order_line__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: website_sale_subscription
+#: model:ir.model.fields,field_description:website_sale_subscription.field_product_product__id
+#: model:ir.model.fields,field_description:website_sale_subscription.field_product_template__id
+#: model:ir.model.fields,field_description:website_sale_subscription.field_res_partner__id
+#: model:ir.model.fields,field_description:website_sale_subscription.field_sale_order__id
+#: model:ir.model.fields,field_description:website_sale_subscription.field_sale_order_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/sale_order.py:0
+#, fuzzy
+msgid "No suitable subscription pricing found for this product."
+msgstr "Za ta izdelek ni bila najdena nobena primerna cena naročnine."
+
+#. module: website_sale_subscription
+#: model:ir.model,name:website_sale_subscription.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: website_sale_subscription
+#: model:ir.model,name:website_sale_subscription.model_product_product
+msgid "Product Variant"
+msgstr "Različica proizvoda"
+
+#. module: website_sale_subscription
+#: model:ir.model,name:website_sale_subscription.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: website_sale_subscription
+#: model:ir.model,name:website_sale_subscription.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Postavka prodajnega naloga"
+
+#. module: website_sale_subscription
+#: model_terms:ir.ui.view,arch_db:website_sale_subscription.product_template_message
+#, fuzzy
+msgid ""
+"This subscription is not compatible with the one already in your cart.\n"
+"                Please order them separately or empty your cart."
+msgstr ""
+"Ta naročnina ni združljiva s tisto, ki je že v vaši košarici.\n"
+"                Naročite ju ločeno ali izpraznite košarico."
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/product_template.py:0
+msgid ""
+"You cannot have an optional product that has a no common pricing's plan."
+msgstr "Ni mogoče imeti izbirnega opcijskega izdelka, ki nima privzete cene."
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/sale_order.py:0
+msgid "You cannot mix different subscription plans in the same order."
+msgstr "Ni mogoče imeti več naročniških tipov v enem naročilu."
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/product_template.py:0
+msgid "month"
+msgstr "mesec"
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/product_template.py:0
+#, fuzzy
+msgid "months"
+msgstr "meseci"
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/product_template.py:0
+msgid "week"
+msgstr "teden"
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/product_template.py:0
+#, fuzzy
+msgid "weeks"
+msgstr "tedni"
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/product_template.py:0
+msgid "year"
+msgstr "leto"
+
+#. module: website_sale_subscription
+#. odoo-python
+#: code:addons/website_sale_subscription/models/product_template.py:0
+#, fuzzy
+msgid "years"
+msgstr "Leta"

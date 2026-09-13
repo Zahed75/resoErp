@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="reso_property_view_list" model="ir.ui.view">
+        <field name="name">reso.property.list</field>
+        <field name="model">reso.property</field>
+        <field name="arch" type="xml">
+            <list string="Properties" decoration-muted="not active">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="city"/>
+                <field name="country_id"/>
+                <field name="company_id" optional="show"/>
+                <field name="phone" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="reso_property_view_form" model="ir.ui.view">
+        <field name="name">reso.property.form</field>
+        <field name="model">reso.property</field>
+        <field name="arch" type="xml">
+            <form string="Property">
+                <sheet>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Property Name"/></h1>
+                    </div>
+                    <group>
+                        <group string="General">
+                            <field name="code"/>
+                            <field name="company_id"/>
+                            <field name="active"/>
+                            <field name="partner_id"/>
+                        </group>
+                        <group string="Contact">
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="street"/>
+                            <field name="street2"/>
+                            <field name="city"/>
+                            <field name="country_id"/>
+                        </group>
+                        <group string="Housekeeping Times">
+                            <field name="checkin_time" widget="float_time"/>
+                            <field name="checkout_time" widget="float_time"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Rooms" name="rooms">
+                            <field name="room_ids"/>
+                        </page>
+                        <page string="Bookings" name="bookings">
+                            <field name="booking_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="reso_property_view_search" model="ir.ui.view">
+        <field name="name">reso.property.search</field>
+        <field name="model">reso.property</field>
+        <field name="arch" type="xml">
+            <search string="Properties">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="city"/>
+                <field name="country_id"/>
+                <filter string="Archived" name="archived" domain="[('active', '=', False)]"/>
+                <group>
+                    <filter string="Company" name="group_company" context="{'group_by': 'company_id'}"/>
+                    <filter string="Country" name="group_country" context="{'group_by': 'country_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_reso_property" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">reso.property</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first property.
+            </p>
+        </field>
+    </record>
+</odoo>

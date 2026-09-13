@@ -1,0 +1,468 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * spreadsheet_dashboard_marketing_automation
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-10 18:52+0000\n"
+"PO-Revision-Date: 2026-08-06 12:37+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"spreadsheet_dashboard_marketing_automation/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "# of mails opened"
+msgstr "Število odprtih e-poštnih sporočil"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "# of mails sent"
+msgstr "Število poslanih e-poštnih sporočil"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Average Order Value (AOV)"
+msgstr "Povprečna vrednost naročila (AOV)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Bounce Rate"
+msgstr "Stopnja zavrnitev"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Bounce details"
+msgstr "Podrobnosti o zavrnjenih e-poštnih sporočilih"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Bounced"
+msgstr "Zavrnjeno"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Bounced (%)"
+msgstr "Nedostavljena (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Cancelled"
+msgstr "Preklicano"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Click-Through Rate (CTR)"
+msgstr "Razmerje klikov (CTR)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Click-to-open Rate (CTOR)"
+msgstr "Stopnja klikov po odprtju (CTOR)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Clicked"
+msgstr "Kliknil"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Clicks (%)"
+msgstr "Kliki (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Conversion Rate"
+msgstr "Stopnja konverzije"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Count"
+msgstr "Štetje"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Delivered"
+msgstr "Dostavljeno"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Delivery  Rate"
+msgstr "Stopnja dostave"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Delivery Rate"
+msgstr "Stopnja dostave"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_marketing_automation.spreadsheet_dashboard_marketing_automation
+msgid "Email Marketing"
+msgstr "Email Marketing"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Engagement Rate"
+msgstr "Stopnja zavzetosti"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Exception"
+msgstr "Izjema"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Mailing Campaign"
+msgstr "Mailing kampanja"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Mailing campaigns in preparation"
+msgstr "Poštne kampanje v pripravi"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Mails sent over previous period"
+msgstr "E-poštna sporočila, poslana v prejšnjem obdobju"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Mails sent per month"
+msgstr "Poslana e-poštna sporočila na mesec"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Mass Mailing"
+msgstr "Masovno pošiljanje pošte"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Medium"
+msgstr "Medij"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "N"
+msgstr "N"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "N-1"
+msgstr "N-1"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "New Subscribers"
+msgstr "Novi naročniki"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "None"
+msgstr "Brez"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Number of Clicks"
+msgstr "Število klikov"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Number of orders"
+msgstr "Število naročil"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Open Rate"
+msgstr "Stopnja odpiranja"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Opened"
+msgstr "Odprto"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Opened (%)"
+msgstr "Odprto (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Page Title"
+msgstr "Naslov strani"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Period"
+msgstr "Obdobje"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Reason"
+msgstr "Razlog"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Received (%)"
+msgstr "Prejeto (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Recipients Model"
+msgstr "Model prejemnikov"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Replied"
+msgstr "Odgovorjeno"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Replied (%)"
+msgstr "Odgovorjeno (%)"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Requires # of click date defined -> worth ? change ?"
+msgstr ""
+"Zahteva določeno število opredeljenih datumov klikov -> ali se sprememba "
+"splača?"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Responsible"
+msgstr "Odgovoren"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Revenue Generated"
+msgstr "Ustvarjeni prihodki"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Scheduled for"
+msgstr "Načrtovano za"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Sent"
+msgstr "Poslano"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Sent Date"
+msgstr "Datum pošiljanja"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Source"
+msgstr "Vir"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Status"
+msgstr "Status"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Subject"
+msgstr "Zadeva"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Subscribers Growth Rate"
+msgstr "Stopnja rasti naročnikov"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Target URL"
+msgstr "Ciljni URL"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Top 10 best link trackers"
+msgstr "10 najboljših sledilnikov povezav"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Top 10 recent mailing campaigns"
+msgstr "10 najnovejših poštnih kampanj"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Top 5 failed reasons"
+msgstr "5 najpogostejših razlogov za neuspeh"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Top products sold"
+msgstr "Najbolj prodajani izdelki"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Total"
+msgstr "Skupaj"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#, fuzzy
+msgid "Unsubscribe Rate"
+msgstr "Stopnja odjav"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+msgid "Unsubscribed"
+msgstr "Odjavljen"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "Unsubscribers"
+msgstr "Odjavljeni"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+msgid "Visits"
+msgstr "Obiski"
+
+#. module: spreadsheet_dashboard_marketing_automation
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_marketing_automation/data/files/marketing_automation_sample_dashboard.json:0
+#, fuzzy
+msgid "vs last period"
+msgstr "v primerjavi z zadnjim obdobjem"

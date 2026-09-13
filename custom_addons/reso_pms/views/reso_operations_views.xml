@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inventory Stock Supply Views -->
+    <record id="view_reso_stock_supply_tree" model="ir.ui.view">
+        <field name="name">reso.stock.supply.tree</field>
+        <field name="model">reso.stock.supply</field>
+        <field name="arch" type="xml">
+            <list string="Resort Stock &amp; Supplies" decoration-danger="reorder_needed">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="category"/>
+                <field name="quantity_on_hand"/>
+                <field name="min_quantity"/>
+                <field name="max_quantity"/>
+                <field name="unit_cost" widget="monetary"/>
+                <field name="vendor_id"/>
+                <field name="reorder_needed" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reso_stock_supply_form" model="ir.ui.view">
+        <field name="name">reso.stock.supply.form</field>
+        <field name="model">reso.stock.supply</field>
+        <field name="arch" type="xml">
+            <form string="Stock &amp; Supply Item">
+                <header>
+                    <button name="action_create_reorder_po" string="Create Reorder PO" type="object" class="oe_highlight" invisible="not reorder_needed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Item Name..."/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="property_id"/>
+                            <field name="category"/>
+                            <field name="vendor_id"/>
+                        </group>
+                        <group>
+                            <field name="quantity_on_hand"/>
+                            <field name="min_quantity"/>
+                            <field name="max_quantity"/>
+                            <field name="unit_cost"/>
+                            <field name="reorder_needed" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_reso_stock_supply" model="ir.actions.act_window">
+        <field name="name">Inventory &amp; Supplies</field>
+        <field name="res_model">reso.stock.supply</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- HR Shifts Views -->
+    <record id="view_reso_hr_shift_tree" model="ir.ui.view">
+        <field name="name">reso.hr.shift.tree</field>
+        <field name="model">reso.hr.shift</field>
+        <field name="arch" type="xml">
+            <list string="Resort Employee Shifts">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="property_id"/>
+                <field name="department"/>
+                <field name="date"/>
+                <field name="shift_type"/>
+                <field name="check_in_time"/>
+                <field name="check_out_time"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reso_hr_shift_form" model="ir.ui.view">
+        <field name="name">reso.hr.shift.form</field>
+        <field name="model">reso.hr.shift</field>
+        <field name="arch" type="xml">
+            <form string="Employee Shift">
+                <header>
+                    <button name="action_clock_in" string="Biometric Clock In" type="object" class="oe_highlight" invisible="state != 'scheduled'"/>
+                    <button name="action_clock_out" string="Biometric Clock Out" type="object" class="oe_highlight" invisible="state != 'present'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="scheduled,present,completed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="property_id"/>
+                            <field name="department"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="shift_type"/>
+                            <field name="check_in_time"/>
+                            <field name="check_out_time"/>
+                            <field name="biometric_device_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_reso_hr_shift" model="ir.actions.act_window">
+        <field name="name">Shifts &amp; Biometric Attendance</field>
+        <field name="res_model">reso.hr.shift</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- CAPEX Projects Views -->
+    <record id="view_reso_capex_project_tree" model="ir.ui.view">
+        <field name="name">reso.capex.project.tree</field>
+        <field name="model">reso.capex.project</field>
+        <field name="arch" type="xml">
+            <list string="Renovation &amp; CAPEX Projects">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="project_type"/>
+                <field name="budget" widget="monetary"/>
+                <field name="actual_cost" widget="monetary"/>
+                <field name="progress_percent" widget="progressbar"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reso_capex_project_form" model="ir.ui.view">
+        <field name="name">reso.capex.project.form</field>
+        <field name="model">reso.capex.project</field>
+        <field name="arch" type="xml">
+            <form string="Renovation &amp; CAPEX Project">
+                <header>
+                    <button name="action_start" string="Start Project" type="object" class="oe_highlight" invisible="state != 'draft'"/>
+                    <button name="action_complete" string="Complete Project" type="object" class="oe_highlight" invisible="state != 'in_progress'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,completed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Project Name..."/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="property_id"/>
+                            <field name="project_type"/>
+                            <field name="manager_id"/>
+                        </group>
+                        <group>
+                            <field name="budget"/>
+                            <field name="actual_cost"/>
+                            <field name="progress_percent"/>
+                            <field name="start_date"/>
+                            <field name="target_end_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Project Scope &amp; Notes">
+                            <field name="description" placeholder="Specify renovation details, contractor notes..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_reso_capex_project" model="ir.actions.act_window">
+        <field name="name">Renovation &amp; CAPEX Projects</field>
+        <field name="res_model">reso.capex.project</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

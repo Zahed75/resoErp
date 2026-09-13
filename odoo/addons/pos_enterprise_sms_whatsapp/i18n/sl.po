@@ -1,0 +1,180 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_enterprise_sms_whatsapp
+#
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-06 18:45+0000\n"
+"PO-Revision-Date: 2026-08-06 12:11+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_enterprise_sms_whatsapp/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+#, fuzzy
+msgid "<span>Enable this option to send order status updates via SMS.</span>"
+msgstr ""
+"<span>Omogočite to možnost za pošiljanje posodobitev stanja naročila prek "
+"SMS-a.</span>"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+#, fuzzy
+msgid ""
+"<span>Enable this option to send order status updates via Whatsapp.</span>"
+msgstr ""
+"<span>Omogočite to možnost za pošiljanje posodobitev stanja naročila prek "
+"WhatsAppa.</span>"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+#, fuzzy
+msgid "Communication"
+msgstr "Komunikacija"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__display_name
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_order__display_name
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_state__display_name
+#, fuzzy
+msgid "Display Name"
+msgstr "Prikazni naziv"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,body:pos_enterprise_sms_whatsapp.sms_template_order_received_confirmation_pos
+#, fuzzy
+msgid ""
+"Hello {{ object.partner_id.name }},\n"
+"\n"
+"Thank you for your order number {{ object.pos_reference }} for the {{ object.preset_time }}.\n"
+"You will soon be notified when your order is ready.\n"
+"\n"
+"{{ object.company_id.name }}\n"
+"\n"
+"            "
+msgstr ""
+"Pozdravljeni {{ object.partner_id.name }},\n"
+"\n"
+"Hvala za vaše naročilo številka {{ object.pos_reference }} za {{ "
+"object.preset_time }}.\n"
+"Kmalu boste obveščeni, ko bo vaše naročilo pripravljeno.\n"
+"\n"
+"{{ object.company_id.name }}"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,body:pos_enterprise_sms_whatsapp.sms_template_order_ready_pos
+#, fuzzy
+msgid ""
+"Hello {{ object.partner_id.name }},\n"
+"\n"
+"Your order number {{ object.pos_reference }} is now ready for pickup. Head over whenever you're ready, and enjoy your meal.\n"
+"\n"
+"{{ object.company_id.name }}\n"
+"\n"
+"            "
+msgstr ""
+"Pozdravljeni {{ object.partner_id.name }},\n"
+"\n"
+"Vaše naročilo številka {{ object.pos_reference }} je zdaj pripravljeno za "
+"prevzem. Pridite, ko boste pripravljeni, in uživajte v obroku.\n"
+"\n"
+"{{ object.company_id.name }}"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__id
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_order__id
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_state__id
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+#, fuzzy
+msgid "Order is ready"
+msgstr "Naročilo je pripravljeno"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__sms_order_ready_id
+#, fuzzy
+msgid "Order is ready (SMS)"
+msgstr "Naročilo je pripravljeno (SMS)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__whatsapp_order_ready_id
+#, fuzzy
+msgid "Order is ready (wa)"
+msgstr "Naročilo je pripravljeno (wa)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model_terms:ir.ui.view,arch_db:pos_enterprise_sms_whatsapp.view_pos_prep_display_form_inherit_comm
+#, fuzzy
+msgid "Order received"
+msgstr "Naročilo prejeto"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__sms_order_received_id
+#, fuzzy
+msgid "Order received (SMS)"
+msgstr "Naročilo prejeto (SMS)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__whatsapp_order_received_id
+#, fuzzy
+msgid "Order received (wa)"
+msgstr "Naročilo prejeto (wa)"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,name:pos_enterprise_sms_whatsapp.sms_template_order_ready_pos
+#, fuzzy
+msgid "POS: Order is ready"
+msgstr "POS: Naročilo je pripravljeno"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:sms.template,name:pos_enterprise_sms_whatsapp.sms_template_order_received_confirmation_pos
+#, fuzzy
+msgid "POS: Order received confirmation"
+msgstr "POS: Potrditev prejema naročila"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model,name:pos_enterprise_sms_whatsapp.model_pos_prep_display
+#, fuzzy
+msgid "Pos Preparation Display"
+msgstr "POS pripravljalni zaslon"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model,name:pos_enterprise_sms_whatsapp.model_pos_prep_order
+#, fuzzy
+msgid "Pos Preparation Order"
+msgstr "Naročilo priprave POS"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model,name:pos_enterprise_sms_whatsapp.model_pos_prep_state
+#, fuzzy
+msgid "Pos Preparation State"
+msgstr "Stanje priprave POS"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__sms_enabled
+#, fuzzy
+msgid "SMS Enabled"
+msgstr "SMS omogočen"
+
+#. module: pos_enterprise_sms_whatsapp
+#: model:ir.model.fields,field_description:pos_enterprise_sms_whatsapp.field_pos_prep_display__whatsapp_enabled
+#, fuzzy
+msgid "WhatsApp Enabled"
+msgstr "Omogočen WhatsApp"

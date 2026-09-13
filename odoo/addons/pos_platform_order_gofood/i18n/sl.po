@@ -1,0 +1,353 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_platform_order_gofood
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-06 18:46+0000\n"
+"PO-Revision-Date: 2026-08-06 10:23+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_platform_order_gofood/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,help:pos_platform_order_gofood.field_platform_order_provider__gofood_relay_secret
+#, fuzzy
+msgid ""
+"A security token used to verify that incoming webhooks (system "
+"notifications) are genuinely from GoFood."
+msgstr ""
+"Varnostni žeton, ki se uporablja za preverjanje, ali dohodni spletni kavlji "
+"(sistemska obvestila) resnično prihajajo iz GoFooda."
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.constraint,message:pos_platform_order_gofood.constraint_gofood_idempotency_key_key_uniq
+#, fuzzy
+msgid "An idempotency key with the same value already exists."
+msgstr "Idempotenčni ključ z enako vrednostjo že obstaja."
+
+#. module: pos_platform_order_gofood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_gofood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "App ID"
+msgstr "ID aplikacije"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_provider__code
+#, fuzzy
+msgid "Code"
+msgstr "Oznaka"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model,name:pos_platform_order_gofood.model_res_partner
+#, fuzzy
+msgid "Contact"
+msgstr "Stik"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model,website_form_label:pos_platform_order_gofood.model_res_partner
+#, fuzzy
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_gofood_idempotency_key__create_uid
+#, fuzzy
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_gofood_idempotency_key__create_date
+#, fuzzy
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "Cutlery Requested: %s"
+msgstr "Zahtevan pribor: %s"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_gofood_idempotency_key__display_name
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_entity__display_name
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_provider__display_name
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_pos_order__display_name
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_res_partner__display_name
+#, fuzzy
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "Failed to update menu items on GoFood: %s"
+msgstr "Posodobitev menijskih postavk v GoFood ni uspela: %s"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields.selection,name:pos_platform_order_gofood.selection__platform_order_provider__code__gofood
+#, fuzzy
+msgid "GoFood"
+msgstr "GoFood"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_provider__gofood_appid
+#, fuzzy
+msgid "GoFood App ID"
+msgstr "ID aplikacije GoFood"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "GoFood Customer %s"
+msgstr "GoFood kupec %s"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_res_partner__gofood_customer_id
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_res_users__gofood_customer_id
+#, fuzzy
+msgid "GoFood Customer ID"
+msgstr "GoFood ID kupca"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model,name:pos_platform_order_gofood.model_gofood_idempotency_key
+#, fuzzy
+msgid "GoFood Idempotency Key"
+msgstr "GoFood ključ idempotentnosti"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_provider__gofood_partner_id
+#, fuzzy
+msgid "GoFood Partner ID"
+msgstr "ID partnerja GoFood"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_provider__gofood_relay_secret
+#, fuzzy
+msgid "GoFood Relay Secret"
+msgstr "Skrivnost posrednika GoFood"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_provider.py:0
+#, fuzzy
+msgid "GoFood Relay Secret is not set for this provider."
+msgstr "Skrivnost GoFood Relay za tega ponudnika ni nastavljena."
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_provider__gofood_secret
+#, fuzzy
+msgid "GoFood Secret"
+msgstr "Skrivnost GoFood"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/pos_order.py:0
+#, fuzzy
+msgid ""
+"GoFood: Cannot reject the order as the food is already marked as ready."
+msgstr ""
+"GoFood: Naročila ni mogoče zavrniti, saj je hrana že označena kot "
+"pripravljena."
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/pos_order.py:0
+#, fuzzy
+msgid "GoFood: Failed to accept order: %s"
+msgstr "GoFood: Naročila ni bilo mogoče sprejeti: %s"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/pos_order.py:0
+#, fuzzy
+msgid "GoFood: Failed to mark food as ready: %s"
+msgstr "GoFood: Hrane ni bilo mogoče označiti kot pripravljene: %s"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/pos_order.py:0
+#, fuzzy
+msgid "GoFood: Failed to reject order: %s"
+msgstr "GoFood: Naročila ni bilo mogoče zavrniti: %s"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/pos_order.py:0
+#, fuzzy
+msgid "GoFood: No order found matching order ID %s."
+msgstr "GoFood: Ni najdenega naročila, ki bi ustrezalo ID-ju naročila %s."
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "GoFood: No store found matching ID %s."
+msgstr "GoFood: Ni najdene trgovine, ki bi ustrezala ID-ju %s."
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "GoFood: Product with external ID %s was not found."
+msgstr "GoFood: Izdelek z zunanjim ID-jem %s ni bil najden."
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "GoFood: Received data with missing store ID %s."
+msgstr "GoFood: Prejeti podatki brez ID-ja trgovine %s."
+
+#. module: pos_platform_order_gofood
+#. odoo-javascript
+#: code:addons/pos_platform_order_gofood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "High Demand"
+msgstr "Veliko povpraševanje"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_gofood_idempotency_key__id
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_entity__id
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_platform_order_provider__id
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_pos_order__id
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_res_partner__id
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_platform_order_gofood
+#. odoo-javascript
+#: code:addons/pos_platform_order_gofood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "Items Out of Stock"
+msgstr "Izdelki niso na zalogi"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_gofood_idempotency_key__key
+#, fuzzy
+msgid "Key"
+msgstr "Ključ"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_gofood_idempotency_key__write_uid
+#, fuzzy
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,field_description:pos_platform_order_gofood.field_gofood_idempotency_key__write_date
+#, fuzzy
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/platform_order_entity.py:0
+#, fuzzy
+msgid "No products found in the store."
+msgstr "V trgovini ni najdenih izdelkov."
+
+#. module: pos_platform_order_gofood
+#. odoo-python
+#: code:addons/pos_platform_order_gofood/models/pos_order.py:0
+#, fuzzy
+msgid "Order rejected by merchant"
+msgstr "Trgovec je zavrnil naročilo"
+
+#. module: pos_platform_order_gofood
+#. odoo-javascript
+#: code:addons/pos_platform_order_gofood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "Others"
+msgstr "Ostali"
+
+#. module: pos_platform_order_gofood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_gofood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Partner ID"
+msgstr "ID partnerja"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model,name:pos_platform_order_gofood.model_platform_order_entity
+#, fuzzy
+msgid "Platform Order Entity"
+msgstr "Entiteta naročila platforme"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model,name:pos_platform_order_gofood.model_platform_order_provider
+#, fuzzy
+msgid "Platform Order Provider"
+msgstr "Ponudnik naročil platforme"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model,name:pos_platform_order_gofood.model_pos_order
+#, fuzzy
+msgid "Point of Sale Orders"
+msgstr "Naročila POS"
+
+#. module: pos_platform_order_gofood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_gofood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Relay Secret Key"
+msgstr "Skrivni ključ Relay"
+
+#. module: pos_platform_order_gofood
+#. odoo-javascript
+#: code:addons/pos_platform_order_gofood/static/src/app/models/pos_order.js:0
+#, fuzzy
+msgid "Restaurant Closed"
+msgstr "Restavracija je zaprta"
+
+#. module: pos_platform_order_gofood
+#: model_terms:ir.ui.view,arch_db:pos_platform_order_gofood.platform_order_provider_form_inherit
+#, fuzzy
+msgid "Secret Key"
+msgstr "Skrivni ključ"
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,help:pos_platform_order_gofood.field_platform_order_provider__gofood_appid
+#, fuzzy
+msgid "The App ID for the GoFood account."
+msgstr "ID aplikacije za račun GoFood."
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,help:pos_platform_order_gofood.field_res_partner__gofood_customer_id
+#: model:ir.model.fields,help:pos_platform_order_gofood.field_res_users__gofood_customer_id
+#, fuzzy
+msgid "The GoFood Customer ID used for the GoFood payment provider."
+msgstr "ID stranke GoFood, uporabljen za plačilnega ponudnika GoFood."
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,help:pos_platform_order_gofood.field_platform_order_provider__gofood_partner_id
+#, fuzzy
+msgid "The POS ID associated with GoFood."
+msgstr "ID POS-a, povezan z GoFoodom."
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,help:pos_platform_order_gofood.field_platform_order_provider__gofood_secret
+#, fuzzy
+msgid "The Secret key for accessing the GoFood services."
+msgstr "Skrivni ključ za dostop do storitev GoFood."
+
+#. module: pos_platform_order_gofood
+#: model:ir.model.fields,help:pos_platform_order_gofood.field_platform_order_provider__code
+#, fuzzy
+msgid "The technical code of this platform order provider."
+msgstr "Tehnična koda tega ponudnika platformskih naročil."

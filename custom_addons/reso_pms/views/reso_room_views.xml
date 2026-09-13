@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="reso_room_type_view_list" model="ir.ui.view">
+        <field name="name">reso.room.type.list</field>
+        <field name="model">reso.room.type</field>
+        <field name="arch" type="xml">
+            <list string="Room Types">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="code" optional="hide"/>
+                <field name="bed_type"/>
+                <field name="max_guests"/>
+                <field name="company_id" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="reso_room_type_view_form" model="ir.ui.view">
+        <field name="name">reso.room.type.form</field>
+        <field name="model">reso.room.type</field>
+        <field name="arch" type="xml">
+            <form string="Room Type">
+                <sheet>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Room Type"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="property_id"/>
+                            <field name="code"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group>
+                            <field name="bed_type"/>
+                            <field name="max_guests"/>
+                        </group>
+                    </group>
+                    <group string="Amenities">
+                        <field name="amenity_ids" widget="many2many_tags"/>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Rooms" name="rooms">
+                            <field name="room_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="reso_room_type_view_search" model="ir.ui.view">
+        <field name="name">reso.room.type.search</field>
+        <field name="model">reso.room.type</field>
+        <field name="arch" type="xml">
+            <search string="Room Types">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="property_id"/>
+                <filter string="My Properties" name="my_property"
+                        domain="[('property_id.company_id', '=', company_id)]"/>
+                <group>
+                    <filter string="Property" name="group_property" context="{'group_by': 'property_id'}"/>
+                    <filter string="Bed Type" name="group_bed" context="{'group_by': 'bed_type'}"/>
+                    <filter string="Company" name="group_company" context="{'group_by': 'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_reso_room_type" model="ir.actions.act_window">
+        <field name="name">Room Types</field>
+        <field name="res_model">reso.room.type</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="reso_room_view_list" model="ir.ui.view">
+        <field name="name">reso.room.list</field>
+        <field name="model">reso.room</field>
+        <field name="arch" type="xml">
+            <list string="Rooms"
+                  decoration-success="status == 'available'"
+                  decoration-danger="status == 'out_of_order'"
+                  decoration-warning="status in ('cleaning', 'maintenance')">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="room_type_id"/>
+                <field name="floor" optional="hide"/>
+                <field name="status" widget="badge"
+                       decoration-success="status == 'available'"
+                       decoration-warning="status in ('cleaning', 'maintenance')"
+                       decoration-danger="status == 'out_of_order'"/>
+                <field name="housekeeping_status" widget="badge"
+                       decoration-success="housekeeping_status == 'clean'"
+                       decoration-warning="housekeeping_status in ('dirty', 'in_progress')"
+                       decoration-info="housekeeping_status == 'inspecting'"/>
+                <field name="housekeeper_id"/>
+                <field name="company_id" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="reso_room_view_form" model="ir.ui.view">
+        <field name="name">reso.room.form</field>
+        <field name="model">reso.room</field>
+        <field name="arch" type="xml">
+            <form string="Room">
+                <header>
+                    <button name="action_mark_clean" string="Mark Clean" type="object" class="oe_highlight" invisible="housekeeping_status == 'clean'"/>
+                    <button name="action_mark_dirty" string="Mark Dirty" type="object" invisible="housekeeping_status == 'dirty'"/>
+                    <button name="action_mark_inspecting" string="Mark Inspecting" type="object" invisible="housekeeping_status == 'inspecting'"/>
+                    <field name="housekeeping_status" widget="statusbar" statusbar_visible="clean,dirty,in_progress,inspecting"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Room / Villa No."/></h1>
+                    </div>
+                    <group>
+                        <group string="Room Info">
+                            <field name="property_id"/>
+                            <field name="room_type_id"/>
+                            <field name="floor"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group string="Status &amp; Housekeeping">
+                            <field name="status"/>
+                            <field name="housekeeper_id"/>
+                            <field name="last_cleaned"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Housekeeping &amp; Room Notes">
+                            <field name="notes" placeholder="Room specific instructions, housekeeping notes..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="reso_room_view_search" model="ir.ui.view">
+        <field name="name">reso.room.search</field>
+        <field name="model">reso.room</field>
+        <field name="arch" type="xml">
+            <search string="Rooms">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="room_type_id"/>
+                <filter string="Available" name="available"
+                        domain="[('status', '=', 'available')]"/>
+                <filter string="Occupied" name="occupied"
+                        domain="[('status', '=', 'occupied')]"/>
+                <filter string="Maintenance" name="maintenance"
+                        domain="[('status', 'in', ('maintenance', 'out_of_order'))]"/>
+                <filter string="Archived" name="archived"
+                        domain="[('active', '=', False)]"/>
+                <group>
+                    <filter string="Property" name="group_property" context="{'group_by': 'property_id'}"/>
+                    <filter string="Room Type" name="group_room_type" context="{'group_by': 'room_type_id'}"/>
+                    <filter string="Status" name="group_status" context="{'group_by': 'status'}"/>
+                    <filter string="Floor" name="group_floor" context="{'group_by': 'floor'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_reso_room" model="ir.actions.act_window">
+        <field name="name">Rooms</field>
+        <field name="res_model">reso.room</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="reso_room_amenity_view_list" model="ir.ui.view">
+        <field name="name">reso.room.amenity.list</field>
+        <field name="model">reso.room.amenity</field>
+        <field name="arch" type="xml">
+            <list string="Amenities" editable="bottom">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="reso_room_amenity_view_form" model="ir.ui.view">
+        <field name="name">reso.room.amenity.form</field>
+        <field name="model">reso.room.amenity</field>
+        <field name="arch" type="xml">
+            <form string="Amenity">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="reso_room_amenity_view_search" model="ir.ui.view">
+        <field name="name">reso.room.amenity.search</field>
+        <field name="model">reso.room.amenity</field>
+        <field name="arch" type="xml">
+            <search string="Amenities">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_reso_room_amenity" model="ir.actions.act_window">
+        <field name="name">Amenities</field>
+        <field name="res_model">reso.room.amenity</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_reso_executive_dashboard" model="ir.actions.client">
+        <field name="name">Executive Dashboard</field>
+        <field name="tag">reso_pms.executive_dashboard</field>
+    </record>
+
+    <record id="action_reso_analytics_dashboard" model="ir.actions.client">
+        <field name="name">Analytics &amp; Reports</field>
+        <field name="tag">reso_pms.analytics_dashboard</field>
+    </record>
+</odoo>

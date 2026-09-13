@@ -1,0 +1,198 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_helpdesk
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:46+0000\n"
+"PO-Revision-Date: 2026-07-25 21:26+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"project_helpdesk/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: project_helpdesk
+#: model_terms:ir.ui.view,arch_db:project_helpdesk.helpdesk_ticket_convert_to_task_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:project_helpdesk.project_task_convert_to_ticket_wizard_view_form
+msgid "Convert"
+msgstr "Преобразуване"
+
+#. module: project_helpdesk
+#: model:ir.model,name:project_helpdesk.model_helpdesk_ticket_convert_wizard
+msgid "Convert Helpdesk Tickets to Tasks"
+msgstr "Преобразуване на заявки от бюро за помощ в задачи"
+
+#. module: project_helpdesk
+#: model:ir.model,name:project_helpdesk.model_project_task_convert_wizard
+msgid "Convert Project Tasks to Tickets"
+msgstr "Преобразуване на проектни задачи в заявки"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/models/helpdesk_ticket.py:0
+#: model:ir.actions.server,name:project_helpdesk.action_ticket_convert_to_task
+#: model_terms:ir.ui.view,arch_db:project_helpdesk.helpdesk_ticket_convert_to_task_wizard_view_form
+msgid "Convert to Task"
+msgstr "Преобразуване в задача"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/models/project_task.py:0
+#: model:ir.actions.server,name:project_helpdesk.action_task_convert_to_ticket
+#: model_terms:ir.ui.view,arch_db:project_helpdesk.project_task_convert_to_ticket_wizard_view_form
+msgid "Convert to Ticket"
+msgstr "Преобразуване в заявка"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/wizard/helpdesk_ticket_convert_wizard.py:0
+msgid "Converted Tasks"
+msgstr "Преобразувани задачи"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/wizard/project_task_convert_wizard.py:0
+msgid "Converted Tickets"
+msgstr "Преобразувани заявки"
+
+#. module: project_helpdesk
+#: model:ir.model,website_form_label:project_helpdesk.model_project_task
+msgid "Create a Task"
+msgstr "Създай задача"
+
+#. module: project_helpdesk
+#: model:ir.model,website_form_label:project_helpdesk.model_helpdesk_ticket
+msgid "Create a Ticket"
+msgstr "Създаване на заявка"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__create_uid
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__create_uid
+msgid "Created by"
+msgstr "Създадено от"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__create_date
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__create_date
+msgid "Created on"
+msgstr "Създадено на"
+
+#. module: project_helpdesk
+#: model_terms:ir.ui.view,arch_db:project_helpdesk.helpdesk_ticket_convert_to_task_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:project_helpdesk.project_task_convert_to_ticket_wizard_view_form
+msgid "Discard"
+msgstr "Отхвърлете"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__display_name
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task__display_name
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: project_helpdesk
+#: model:ir.model,name:project_helpdesk.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Хелпдеск тикет"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__id
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task__id
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__write_uid
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Последно актуализирано от"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__write_date
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__write_date
+msgid "Last Updated on"
+msgstr "Последно актуализирано на"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__project_id
+msgid "Project"
+msgstr "Проект"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/models/project_task.py:0
+msgid "Recurring tasks cannot be converted into tickets."
+msgstr "Повтарящи се задачи не могат да бъдат преобразувани в заявки."
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__stage_id
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__stage_id
+msgid "Stage"
+msgstr "Стадий"
+
+#. module: project_helpdesk
+#: model:ir.model,name:project_helpdesk.model_project_task
+msgid "Task"
+msgstr "Задача"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/wizard/project_task_convert_wizard.py:0
+msgid "Task converted into ticket %s"
+msgstr "Задачата е преобразувана в заявка %s"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/models/project_task.py:0
+msgid "Tasks templates cannot be converted into tickets."
+msgstr "Шаблони на задачи не могат да бъдат преобразувани в заявки."
+
+#. module: project_helpdesk
+#: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__team_id
+msgid "Team"
+msgstr "Екип"
+
+#. module: project_helpdesk
+#. odoo-python
+#: code:addons/project_helpdesk/wizard/helpdesk_ticket_convert_wizard.py:0
+msgid "Ticket converted into task %s"
+msgstr "Заявката е преобразувана в задача %s"
+
+#. module: project_helpdesk
+#: model:ir.model.fields,help:project_helpdesk.field_project_task__display_name
+msgid ""
+"Use these keywords in the title to set new tasks:\n"
+"\n"
+"        30h Allocate 30 hours to the task\n"
+"        #tags Set tags on the task\n"
+"        @user Assign the task to a user\n"
+"        ! Set the task a medium priority\n"
+"        !! Set the task a high priority\n"
+"        !!! Set the task a urgent priority\n"
+"\n"
+"        Make sure to use the right format and order e.g. Improve the "
+"configuration screen 5h #feature #v16 @Mitchell !"
+msgstr ""
+"Използвайте тези ключови думи в заглавието, за да зададете нови задачи:\n"
+"\n"
+"        30h Заделяне на 30 часа за задачата\n"
+"        #tags Задаване на етикети на задачата\n"
+"        @user Възлагане на задачата на потребител\n"
+"        ! Задаване на среден приоритет на задачата\n"
+"        !! Задаване на висок приоритет на задачата\n"
+"        !!! Задаване на спешен приоритет на задачата\n"
+"\n"
+"        Уверете се, че използвате правилния формат и ред, напр. Подобряване "
+"на конфигурационния екран 5h #feature #v16 @Mitchell !"

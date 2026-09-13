@@ -1,0 +1,43 @@
+# -*- encoding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
+{
+    'name': 'Netherlands - Accounting Reports',
+    'version': '1.5',
+    'category': 'Accounting/Localizations/Reporting',
+    'description': """
+Accounting reports for Netherlands
+Submit your Tax Reports to the Dutch tax authorities
+    """,
+    'author': 'Odoo S.A.',
+    'depends': ['l10n_nl', 'account_reports', 'certificate'],
+    'external_dependencies': {
+        'python': ['xmlsec'],
+        'apt': {
+            'xmlsec': 'python3-xmlsec',
+        },
+    },
+    'data': [
+        'data/cron.xml',
+        'data/account_financial_report_profit_loss.xml',
+        'data/account_financial_report_profit_loss_tags.xml',
+        'data/account_financial_report_balance_sheet.xml',
+        'data/account_financial_report_balance_sheet_tags.xml',
+        'data/account_report_ec_sales_list_report.xml',
+        'data/account_return_data.xml',
+        'data/xml_audit_file_3_2.xml',
+        'data/mail_templates.xml',
+        'report/sbr_tax_report_templates.xml',
+        'report/l10n_nl_sbr_icp_template.xml',
+        'security/ir.model.access.csv',
+        'wizard/l10n_tax_report_sbr_views.xml',
+        'wizard/l10n_nl_sbr_icp_wizard_view.xml',
+        'views/res_config_settings_view.xml',
+        'views/res_company_views.xml',
+        'data/tax_report.xml',
+        'wizard/vat_pay_wizard.xml',
+    ],
+    'installable': True,
+    'auto_install': ['l10n_nl', 'account_reports'],
+    'license': 'OEEL-1',
+}

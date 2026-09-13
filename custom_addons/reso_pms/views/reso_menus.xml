@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_reso_pms_root" name="Reso PMS"
+              web_icon="reso_pms,static/description/icon.png"
+              sequence="1"/>
+
+    <menuitem id="menu_reso_dashboard" name="Executive Dashboard"
+              parent="menu_reso_pms_root"
+              action="action_reso_executive_dashboard" sequence="1"/>
+
+    <menuitem id="menu_reso_analytics" name="Analytics &amp; Reports"
+              parent="menu_reso_pms_root"
+              action="action_reso_analytics_dashboard" sequence="2"/>
+
+    <menuitem id="menu_reso_properties" name="Properties"
+              parent="menu_reso_pms_root"
+              action="action_reso_property" sequence="10"/>
+
+    <menuitem id="menu_reso_rooms" name="Rooms &amp; Operations"
+              parent="menu_reso_pms_root" sequence="20"/>
+    <menuitem id="menu_reso_room" name="Rooms Board"
+              parent="menu_reso_rooms"
+              action="action_reso_room" sequence="10"/>
+    <menuitem id="menu_reso_room_type" name="Room Types"
+              parent="menu_reso_rooms"
+              action="action_reso_room_type" sequence="20"/>
+    <menuitem id="menu_reso_room_amenity" name="Amenities"
+              parent="menu_reso_rooms"
+              action="action_reso_room_amenity" sequence="30"/>
+
+    <menuitem id="menu_reso_maintenance" name="Maintenance Tickets"
+              parent="menu_reso_pms_root"
+              action="action_reso_maintenance_ticket" sequence="25"/>
+
+    <menuitem id="menu_reso_rates" name="Rates &amp; Pricing"
+              parent="menu_reso_pms_root"
+              action="action_reso_rate_plan" sequence="30"/>
+
+    <menuitem id="menu_reso_bookings" name="Bookings"
+              parent="menu_reso_pms_root"
+              action="action_reso_booking" sequence="40"/>
+
+    <menuitem id="menu_reso_investor_leads" name="Investor Leads"
+              parent="menu_reso_pms_root"
+              action="action_reso_investor_leads" sequence="45"/>
+
+    <menuitem id="menu_reso_documents" name="Documents &amp; KYC"
+              parent="menu_reso_pms_root"
+              action="action_reso_document" sequence="48"/>
+
+    <menuitem id="menu_reso_resort_ops" name="Resort Inventory &amp; HR"
+              parent="menu_reso_pms_root" sequence="49"/>
+    <menuitem id="menu_reso_stock_supply" name="Stock &amp; Supplies"
+              parent="menu_reso_resort_ops"
+              action="action_reso_stock_supply" sequence="10"/>
+    <menuitem id="menu_reso_hr_shift" name="Shifts &amp; Attendance"
+              parent="menu_reso_resort_ops"
+              action="action_reso_hr_shift" sequence="20"/>
+    <menuitem id="menu_reso_capex_project" name="Renovation Projects"
+              parent="menu_reso_resort_ops"
+              action="action_reso_capex_project" sequence="30"/>
+
+    <menuitem id="menu_reso_whatsapp_root" name="WhatsApp Automation"
+              parent="menu_reso_pms_root" sequence="50"/>
+    <menuitem id="menu_reso_whatsapp_log" name="Message Logs"
+              parent="menu_reso_whatsapp_root"
+              action="action_reso_whatsapp_message" sequence="10"/>
+    <menuitem id="menu_reso_whatsapp_chatbot" name="Chatbot &amp; FAQ Rules"
+              parent="menu_reso_whatsapp_root"
+              action="action_reso_whatsapp_chatbot_rule" sequence="20"/>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_whatsapp_partner_bsuid_administrator,access.whatsapp.partner.bsuid.admin,model_whatsapp_partner_bsuid,whatsapp.group_whatsapp_admin,1,1,1,1

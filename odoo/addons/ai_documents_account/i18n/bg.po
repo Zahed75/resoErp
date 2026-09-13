@@ -1,0 +1,190 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * ai_documents_account
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Toma Tomov <toma.tomov@gmail.com>, 2026.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-07-26 13:39+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"ai_documents_account/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "%(b_open)sContracts & NDAs%(b_close)s go to the %(legal)s folder."
+msgstr ""
+"%(b_open)sДоговори и споразумения за поверителност%(b_close)s отиват в папка "
+"%(legal)s."
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"%(b_open)sInsurance contracts%(b_close)s go to the %(insurance)s folder."
+msgstr ""
+"%(b_open)sЗастрахователни договори%(b_close)s отиват в папка %(insurance)s."
+
+#. module: ai_documents_account
+#: model:ir.model.fields,field_description:ai_documents_account.field_documents_document__ai_document_or_env_company_id
+msgid "AI Company"
+msgstr "AI фирма"
+
+#. module: ai_documents_account
+#: model:ir.model,name:ai_documents_account.model_ai_documents_sort
+msgid "Ai Documents Sort"
+msgstr "AI сортиране на документи"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "Company > Email"
+msgstr "Компания > Имейл"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "Company > Name"
+msgstr "Компания > Име"
+
+#. module: ai_documents_account
+#: model:ir.model.fields,field_description:ai_documents_account.field_ai_documents_sort__display_name
+#: model:ir.model.fields,field_description:ai_documents_account.field_documents_document__display_name
+#: model:ir.model.fields,field_description:ai_documents_account.field_ir_actions_server__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: ai_documents_account
+#: model:ir.model,name:ai_documents_account.model_documents_document
+msgid "Document"
+msgstr "Документ"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"First, check the file to see if it contains a single document or if several "
+"documents are collated together."
+msgstr ""
+"Първо проверете файла, за да видите дали съдържа един документ или дали "
+"няколко документа са събрани заедно."
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "For this, use this field: %s"
+msgstr "За целта използвайте това поле: %s"
+
+#. module: ai_documents_account
+#: model:ir.model.fields,field_description:ai_documents_account.field_ai_documents_sort__id
+#: model:ir.model.fields,field_description:ai_documents_account.field_documents_document__id
+#: model:ir.model.fields,field_description:ai_documents_account.field_ir_actions_server__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "If it is a customer invoice, trigger the action to create one."
+msgstr ""
+"Ако е фактура към клиент, задействайте действието за създаване на такава."
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "If it is false, continue with the normal process"
+msgstr "Ако е невярно, продължете с нормалния процес"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"If it is true, add the tag %(b_open)s\"To Split\"%(b_close)s and stop there. "
+"This way, we'll know we first need to manually split it into different files."
+msgstr ""
+"Ако е вярно, добавете тага %(b_open)s„За разделяне“%(b_close)s и спрете "
+"дотук. По този начин ще знаем, че първо трябва ръчно да го разделим на "
+"различни файлове."
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"If the customer is %(b_open)sanyone else%(b_close)s, create a Customer "
+"Invoice."
+msgstr ""
+"Ако клиентът е %(b_open)sнякой друг%(b_close)s, създайте фактура към клиент."
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"If the customer is %s it means it is a vendor bill, trigger the Create "
+"Vendor Bill action."
+msgstr ""
+"Ако клиентът е %s, това означава, че е фактура от доставчик, задействайте "
+"действието Създаване на фактура от доставчик."
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"If the customer of the invoice is us (%(company_name)s, with email %"
+"(company_email)s), create a Vendor Bill."
+msgstr ""
+"Ако клиентът по фактурата сме ние (%(company_name)s, с имейл %(company_email)"
+"s), създайте фактура за доставчик."
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"If the document is %(b_open)snot an invoice%(b_close)s, move it to the "
+"correct folder:"
+msgstr ""
+"Ако документът %(b_open)sне е фактура%(b_close)s, преместете го в правилната "
+"папка:"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid ""
+"If the document is an %(b_open)sinvoice%(b_close)s, move it to the %"
+"(finance)s folder then trigger the relevant action:"
+msgstr ""
+"Ако документът е %(b_open)sфактура%(b_close)s, преместете го в папката %"
+"(finance)s, след което задействайте съответното действие:"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "Is considered multipage"
+msgstr "Счита се за многостраничен"
+
+#. module: ai_documents_account
+#. odoo-python
+#: code:addons/ai_documents_account/wizard/ai_documents_sort.py:0
+msgid "Otherwise, %s"
+msgstr "В противен случай, %s"
+
+#. module: ai_documents_account
+#: model:ir.model,name:ai_documents_account.model_ir_actions_server
+msgid "Server Action"
+msgstr "Действие на сървър"
+
+#. module: ai_documents_account
+#: model:documents.tag,name:ai_documents_account.documents_tag_to_split
+msgid "To Split"
+msgstr "За разделяне"

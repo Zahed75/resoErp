@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="hr_attendance.hr_attendance_overtime_employee_schedule_rule" model="hr.attendance.overtime.rule" forcecreate="0">
+            <field name="work_entry_type_id" model="hr.attendance.overtime.rule" eval="obj()._get_default_work_entry_type_id()"/>
+        </record>
+
+        <record id="hr_attendance.hr_attendance_overtime_non_working_days_rule" model="hr.attendance.overtime.rule" forcecreate="0">
+            <field name="work_entry_type_id" model="hr.attendance.overtime.rule" eval="obj()._get_default_work_entry_type_id()"/>
+        </record>
+
+        <record id="hr_attendance.hr_attendance_overtime_rule_1_ae" model="hr.attendance.overtime.rule">
+            <field name="work_entry_type_id" ref="hr_work_entry.uae_work_entry_type_overtime_work_days_daytime"/>
+            <field name="paid">True</field>
+        </record>
+
+        <record id="hr_attendance.hr_attendance_overtime_rule_2_ae" model="hr.attendance.overtime.rule">
+            <field name="work_entry_type_id" ref="hr_work_entry.uae_work_entry_type_overtime_work_days_nighttime"/>
+            <field name="paid">True</field>
+        </record>
+
+        <record id="hr_attendance.hr_attendance_overtime_rule_3_ae" model="hr.attendance.overtime.rule">
+            <field name="work_entry_type_id" ref="hr_work_entry.uae_work_entry_type_overtime_work_days_nighttime"/>
+            <field name="paid">True</field>
+        </record>
+
+        <record id="hr_attendance.hr_attendance_overtime_rule_4_ae" model="hr.attendance.overtime.rule">
+            <field name="work_entry_type_id" ref="hr_work_entry.uae_work_entry_type_overtime_off_days"/>
+            <field name="paid">True</field>
+        </record>
+    </data>
+</odoo>

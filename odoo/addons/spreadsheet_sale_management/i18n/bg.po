@@ -1,0 +1,310 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * spreadsheet_sale_management
+#
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-19 17:46+0000\n"
+"PO-Revision-Date: 2026-07-25 21:20+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"spreadsheet_sale_management/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: spreadsheet_sale_management
+#: model_terms:ir.ui.view,arch_db:spreadsheet_sale_management.sale_order_spreadsheet_view_search
+msgid "Calculator Templates"
+msgstr "Шаблони за калкулатор"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
+msgid "Cell to sync"
+msgstr "Клетка за синхронизиране"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__company_id
+msgid "Company"
+msgstr "Фирма"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__create_uid
+msgid "Created by"
+msgstr "Създадено от"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__create_date
+msgid "Created on"
+msgstr "Създадено на"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__current_revision_uuid
+msgid "Current Revision Uuid"
+msgstr "UUID на текущата ревизия"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
+msgid "Delete field syncing"
+msgstr "Изтриване на синхронизацията на полето"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_ir_http__display_name
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order__display_name
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__display_name
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_template__display_name
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_spreadsheet_cell_thread__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__display_thumbnail
+msgid "Display Thumbnail"
+msgstr "Показване на миниатюра"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
+msgid "Edit sync"
+msgstr "Редактиране на синхронизация"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
+msgid "Field syncing"
+msgstr "Синхронизиране на поле"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
+msgid "Field to sync"
+msgstr "Поле за синхронизиране"
+
+#. module: spreadsheet_sale_management
+#: model:sale.order.template.line,name:spreadsheet_sale_management.sale_order_template_line_assembly
+msgid "Furniture Assembly"
+msgstr "Сглобяване на мебели"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model,name:spreadsheet_sale_management.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP Маршрутизиране"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_ir_http__id
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order__id
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__id
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_template__id
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_spreadsheet_cell_thread__id
+msgid "ID"
+msgstr "Номер (ID)"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
+msgid "It should be a boolean."
+msgstr "Трябва да е булева стойност."
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
+msgid "It should be a number."
+msgstr "Трябва да е число."
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
+msgid "It should be an id."
+msgstr "Трябва да е id."
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
+msgid "It should be an integer."
+msgstr "Трябва да е цяло число."
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__write_uid
+msgid "Last Updated by"
+msgstr "Последно актуализирано от"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__write_date
+msgid "Last Updated on"
+msgstr "Последно актуализирано на"
+
+#. module: spreadsheet_sale_management
+#: model:sale.order.template.line,name:spreadsheet_sale_management.sale_order_template_line_delivery
+msgid "Local Delivery"
+msgstr "Локална доставка"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
+msgid ""
+"Multiple cells are updating the same field of the same record! Unable to "
+"determine which one to choose: %s"
+msgstr ""
+"Няколко клетки обновяват едно и също поле на един и същ запис! Не може да се "
+"определи коя да се избере: %s"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__name
+msgid "Name"
+msgstr "Име"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__order_id
+msgid "Order"
+msgstr "Поръчка"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
+msgid "Position of the record in the list"
+msgstr "Позиция на записа в списъка"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model,name:spreadsheet_sale_management.model_sale_order_spreadsheet
+msgid "Quotation Spreadsheet"
+msgstr "Електронна таблица за оферта"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model,name:spreadsheet_sale_management.model_sale_order_template
+msgid "Quotation Template"
+msgstr "Шаблон за оферта"
+
+#. module: spreadsheet_sale_management
+#. odoo-python
+#: code:addons/spreadsheet_sale_management/models/sale_order_spreadsheet.py:0
+msgid "Quotation templates"
+msgstr "Шаблони за оферти"
+
+#. module: spreadsheet_sale_management
+#. odoo-python
+#: code:addons/spreadsheet_sale_management/models/sale_order_spreadsheet.py:0
+msgid "Quote"
+msgstr "Оферта"
+
+#. module: spreadsheet_sale_management
+#: model_terms:ir.ui.view,arch_db:spreadsheet_sale_management.sale_order_spreadsheet_view_search
+msgid "Quote Sheets"
+msgstr "Листове за оферти"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order__spreadsheet_template_id
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_template__spreadsheet_template_id
+#: model_terms:ir.ui.view,arch_db:spreadsheet_sale_management.sale_order_view_form
+msgid "Quote calculator"
+msgstr "Калкулатор за оферта"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
+msgid "Record to sync (position)"
+msgstr "Запис за синхронизиране (позиция)"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_spreadsheet_cell_thread__sale_order_spreadsheet_id
+msgid "Sale Order Spreadsheet"
+msgstr "Електронна таблица на поръчка за продажба"
+
+#. module: spreadsheet_sale_management
+#: model:ir.actions.act_window,name:spreadsheet_sale_management.sale_order_spreadsheet_action
+#: model:ir.ui.menu,name:spreadsheet_sale_management.menu_technical_spreadsheet_sale_order_template
+msgid "Sale Order Spreadsheets"
+msgstr "Електронни таблици на поръчки за продажба"
+
+#. module: spreadsheet_sale_management
+#. odoo-python
+#: code:addons/spreadsheet_sale_management/models/sale_order_spreadsheet.py:0
+msgid "Sale order lines"
+msgstr "Редове на поръчка за продажба"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model,name:spreadsheet_sale_management.model_sale_order
+msgid "Sales Order"
+msgstr "Поръчка"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/action/field_sync_action.xml:0
+msgid "Save in"
+msgstr "Запазване в"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
+msgid "Saved"
+msgstr "Запазен"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_data
+msgid "Spreadsheet Data"
+msgstr "Данни на електронната таблица"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_file_name
+msgid "Spreadsheet File Name"
+msgstr "Име на файла на електронната таблица"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_revision_ids
+msgid "Spreadsheet Revision"
+msgstr "Ревизия на електронната таблица"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_snapshot
+msgid "Spreadsheet Snapshot"
+msgstr "Моментна снимка на електронната таблица"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model,name:spreadsheet_sale_management.model_spreadsheet_cell_thread
+msgid "Spreadsheet discussion thread"
+msgstr "Дискусионна нишка в електронна таблица"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_binary_data
+msgid "Spreadsheet file"
+msgstr "Файл на електронната таблица"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
+msgid "Sync with field"
+msgstr "Синхронизирай с поле"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
+msgid ""
+"The value of %(cell_reference)s (%(cell_value)s) can't be used for field \"%"
+"(field_name)s\"."
+msgstr ""
+"Стойността на %(cell_reference)s (%(cell_value)s) не може да се използва за "
+"поле \"%(field_name)s\"."
+
+#. module: spreadsheet_sale_management
+#: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__thumbnail
+msgid "Thumbnail"
+msgstr "Миниатюра"
+
+#. module: spreadsheet_sale_management
+#. odoo-javascript
+#: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/action/field_sync_action.js:0
+msgid "Unable to save"
+msgstr "Запазването е неуспешно"
+
+#. module: spreadsheet_sale_management
+#. odoo-python
+#: code:addons/spreadsheet_sale_management/models/sale_order_spreadsheet.py:0
+msgid "Untitled spreadsheet"
+msgstr "Електронна таблица без заглавие"

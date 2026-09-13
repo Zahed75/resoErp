@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vat_return_lock_wizard_form_inherit" model="ir.ui.view">
+        <field name="name">l10n_be_reports_vat_comment.vat.return.lock.wizard.form.inherit</field>
+        <field name="model">l10n_be_reports.vat.return.lock.wizard</field>
+        <field name="inherit_id" ref="l10n_be_reports.vat_return_lock_wizard_form"/>
+        <field name="arch" type="xml">
+            <group id="export_options" position="inside">
+                <field name="comment" placeholder="Comment"/>
+            </group>
+        </field>
+    </record>
+</odoo>

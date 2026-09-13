@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="reso_pms.ResoDashboardTemplate">
+        <div class="o_reso_dashboard_wrapper h-100">
+            <!-- Header Section -->
+            <div class="dashboard-header">
+                <div>
+                    <h1 class="page-title">resoERP Executive &amp; Operations Dashboard</h1>
+                    <p class="subtitle">Real-time resort performance, room availability, and fractional ownership summary.</p>
+                </div>
+                <div class="header-actions">
+                    <select class="property-select" t-on-change="onPropertyChange">
+                        <option value="all">All Properties</option>
+                        <t t-foreach="state.properties" t-as="prop" t-key="prop.id">
+                            <option t-att-value="prop.id"><t t-esc="prop.name"/></option>
+                        </t>
+                    </select>
+                    <button class="btn-reso-primary" t-on-click="refreshData">
+                        <i class="fa fa-refresh me-1"/> Refresh
+                    </button>
+                </div>
+            </div>
+
+            <!-- KPI Cards Grid -->
+            <div class="kpi-grid">
+                <div class="kpi-card success">
+                    <div class="kpi-icon"><i class="fa fa-percent"/></div>
+                    <div class="kpi-body">
+                        <div class="kpi-title">Occupancy Rate</div>
+                        <div class="kpi-value"><t t-esc="state.kpis.occupancyRate"/>%</div>
+                        <div class="kpi-sub">
+                            <t t-esc="state.kpis.occupiedRooms"/> / <t t-esc="state.kpis.totalRooms"/> Rooms Occupied
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" t-attf-style="width: {{state.kpis.occupancyRate}}%"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card info">
+                    <div class="kpi-icon"><i class="fa fa-line-chart"/></div>
+                    <div class="kpi-body">
+                        <div class="kpi-title">RevPAR / ADR</div>
+                        <div class="kpi-value">৳<t t-esc="state.kpis.revpar"/></div>
+                        <div class="kpi-sub">
+                            ADR: ৳<t t-esc="state.kpis.adr"/> <t t-esc="state.kpis.currencySymbol"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fa fa-money"/></div>
+                    <div class="kpi-body">
+                        <div class="kpi-title">Total Revenue</div>
+                        <div class="kpi-value">৳<t t-esc="state.kpis.totalRevenue"/></div>
+                        <div class="kpi-sub">Current Billing Period</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card warning">
+                    <div class="kpi-icon"><i class="fa fa-exchange"/></div>
+                    <div class="kpi-body">
+                        <div class="kpi-title">Today's Movement</div>
+                        <div class="kpi-value"><t t-esc="state.kpis.checkinsToday"/> In / <t t-esc="state.kpis.checkoutsToday"/> Out</div>
+                        <div class="kpi-sub">Front Desk Operations</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card danger">
+                    <div class="kpi-icon"><i class="fa fa-exclamation-triangle"/></div>
+                    <div class="kpi-body">
+                        <div class="kpi-title">Housekeeping Alerts</div>
+                        <div class="kpi-value"><t t-esc="state.kpis.dirtyRooms"/> Dirty Rooms</div>
+                        <div class="kpi-sub"><t t-esc="state.kpis.maintenanceRooms"/> Rooms in Maintenance</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fa fa-pie-chart"/></div>
+                    <div class="kpi-body">
+                        <div class="kpi-title">Fractional Ownership</div>
+                        <div class="kpi-value"><t t-esc="state.kpis.fractionalOwners"/> Owners</div>
+                        <div class="kpi-sub"><t t-esc="state.kpis.fractionalUnits"/> Units Issued</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2-Column Tables -->
+            <div class="grid-2-col">
+                <!-- Live Room Status & Housekeeping Board -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fa fa-bed"/> Live Room Status &amp; Housekeeping Board</h3>
+                        <button class="btn-reso-secondary" t-on-click="openAllRooms">View All</button>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table" t-if="state.rooms.length">
+                            <thead>
+                                <tr>
+                                    <th>Room No</th>
+                                    <th>Property</th>
+                                    <th>Room Type</th>
+                                    <th>Occupancy</th>
+                                    <th>Housekeeping</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="state.rooms" t-as="room" t-key="room.id">
+                                    <tr t-on-click="() => this.openRoom(room.id)">
+                                        <td><strong><t t-esc="room.name"/></strong></td>
+                                        <td><t t-esc="room.property"/></td>
+                                        <td><t t-esc="room.room_type"/></td>
+                                        <td>
+                                            <span t-attf-class="badge badge-{{room.status}}"><t t-esc="room.status"/></span>
+                                        </td>
+                                        <td>
+                                            <span t-attf-class="badge badge-{{room.housekeeping_status}}"><t t-esc="room.housekeeping_status"/></span>
+                                        </td>
+                                        <td>
+                                            <button t-if="room.housekeeping_status == 'dirty'" class="btn-sm-clean" t-on-click="(ev) => this.markClean(room.id, ev)">
+                                                Mark Clean
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <div class="empty-state" t-else="">No rooms configured yet.</div>
+                    </div>
+                </div>
+
+                <!-- Recent Guest Bookings -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fa fa-ticket"/> Recent Guest Bookings</h3>
+                        <button class="btn-reso-primary" t-on-click="openNewBooking">+ New Booking</button>
+                    </div>
+                    <div class="card-body">
+                        <table class="data-table" t-if="state.bookings.length">
+                            <thead>
+                                <tr>
+                                    <th>Ref</th>
+                                    <th>Guest Name</th>
+                                    <th>Check-In</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="state.bookings" t-as="b" t-key="b.id">
+                                    <tr t-on-click="() => this.openBooking(b.id)">
+                                        <td><strong><t t-esc="b.name"/></strong></td>
+                                        <td>
+                                            <div class="guest-cell">
+                                                <span class="avatar-circle"><t t-esc="this.getInitials(b.guest)"/></span>
+                                                <t t-esc="b.guest"/>
+                                            </div>
+                                        </td>
+                                        <td><t t-esc="b.checkin_date"/></td>
+                                        <td>
+                                            <span t-attf-class="badge badge-{{b.state}}"><t t-esc="b.state"/></span>
+                                        </td>
+                                        <td><strong>৳<t t-esc="b.amount_total"/></strong></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <div class="empty-state" t-else="">No bookings yet.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

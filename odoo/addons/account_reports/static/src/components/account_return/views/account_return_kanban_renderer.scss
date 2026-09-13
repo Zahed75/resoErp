@@ -1,0 +1,29 @@
+.o_account-return-kanban {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+
+    .o_kanban_record {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        &:focus {
+            outline: none;
+            box-shadow: inset 0 0 0 2px var(--KanbanColumn__highlight-selected-border);
+        }
+    }
+
+    .o_kanban_record .fa-clock-o {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .o_kanban_record:hover .fa-clock-o {
+        opacity: 1;
+    }
+}

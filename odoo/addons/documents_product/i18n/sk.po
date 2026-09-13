@@ -1,0 +1,172 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * documents_product
+#
+# Translators:
+# SAKodoo <sak@odoo.com>, 2022
+# Jaroslav Bosansky <jaro.bosansky@ekoenergo.sk>, 2022
+# Martin Trigaux, 2022
+# Tomáš Píšek <Tomas.Pisek@seznam.cz>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.5alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:44+0000\n"
+"PO-Revision-Date: 2026-06-22 10:21+0000\n"
+"Last-Translator: Tomáš Píšek <Tomas.Pisek@seznam.cz>\n"
+"Language-Team: Slovak <https://translate.odoo.com/projects/odoo-19/"
+"documents_product/sk/>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && "
+"n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: documents_product
+#: model_terms:ir.ui.view,arch_db:documents_product.res_config_settings_view_form
+msgid "Centralize files attached to products"
+msgstr "Centralizujte súbory priložené k produktom"
+
+#. module: documents_product
+#: model:ir.model,name:documents_product.model_res_company
+msgid "Companies"
+msgstr "Spoločnosti"
+
+#. module: documents_product
+#: model:ir.model,name:documents_product.model_res_config_settings
+msgid "Config Settings"
+msgstr "Nastavenia konfigurácie"
+
+#. module: documents_product
+#: model:ir.model.fields,field_description:documents_product.field_documents_document__display_name
+#: model:ir.model.fields,field_description:documents_product.field_product_product__display_name
+#: model:ir.model.fields,field_description:documents_product.field_product_template__display_name
+#: model:ir.model.fields,field_description:documents_product.field_res_company__display_name
+#: model:ir.model.fields,field_description:documents_product.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Zobrazovaný názov"
+
+#. module: documents_product
+#: model:ir.model,name:documents_product.model_documents_document
+msgid "Document"
+msgstr "Dokument"
+
+#. module: documents_product
+#: model:ir.model.fields,field_description:documents_product.field_res_company__documents_product_settings
+msgid "Documents Product Settings"
+msgstr "Dokumenty - Nastavenia pre produkty"
+
+#. module: documents_product
+#: model_terms:ir.ui.view,arch_db:documents_product.res_config_settings_view_form
+msgid "Folder"
+msgstr "Priečinok"
+
+#. module: documents_product
+#: model:ir.model.fields,field_description:documents_product.field_documents_document__id
+#: model:ir.model.fields,field_description:documents_product.field_product_product__id
+#: model:ir.model.fields,field_description:documents_product.field_product_template__id
+#: model:ir.model.fields,field_description:documents_product.field_res_company__id
+#: model:ir.model.fields,field_description:documents_product.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: documents_product
+#: model:ir.model,name:documents_product.model_product_template
+#: model:ir.model.fields,field_description:documents_product.field_documents_document__product_template_id
+#: model:ir.model.fields,field_description:documents_product.field_res_config_settings__documents_product_settings
+msgid "Product"
+msgstr "Produkt"
+
+#. module: documents_product
+#: model:documents.tag,name:documents_product.documents_product_sheet_tag
+msgid "Product > DataSheets"
+msgstr "Produkt > Technické listy"
+
+#. module: documents_product
+#: model:documents.tag,name:documents_product.documents_product_msds_tag
+msgid "Product > MSDS"
+msgstr "Produkt > MSDS"
+
+#. module: documents_product
+#: model:documents.tag,name:documents_product.documents_product_new_tag
+msgid "Product > New"
+msgstr "Produkt > Nové"
+
+#. module: documents_product
+#: model:documents.tag,name:documents_product.documents_product_plans_tag
+msgid "Product > Plans"
+msgstr "Produkt > Plány"
+
+#. module: documents_product
+#: model:documents.tag,name:documents_product.documents_product_specs_tag
+msgid "Product > Specs"
+msgstr "Produkt > Špecifikácie"
+
+#. module: documents_product
+#: model:ir.model.fields,field_description:documents_product.field_res_company__product_folder_id
+msgid "Product Folder"
+msgstr "Produktová zložka"
+
+#. module: documents_product
+#: model:ir.model.fields,field_description:documents_product.field_res_company__product_tag_ids
+msgid "Product Tag"
+msgstr "Štítok produktu"
+
+#. module: documents_product
+#: model:ir.model.fields,field_description:documents_product.field_res_config_settings__product_tag_ids
+msgid "Product Tags"
+msgstr "Štítky produktov"
+
+#. module: documents_product
+#: model:ir.model,name:documents_product.model_product_product
+#: model:ir.model.fields,field_description:documents_product.field_documents_document__product_id
+msgid "Product Variant"
+msgstr "Varianta produktu"
+
+#. module: documents_product
+#. odoo-python
+#: code:addons/documents_product/models/document.py:0
+msgid "Product created from Documents"
+msgstr "Produkt vytvorený z dokumentov"
+
+#. module: documents_product
+#: model:documents.document,name:documents_product.document_product_folder
+msgid "Products"
+msgstr "Produkty"
+
+#. module: documents_product
+#: model_terms:ir.ui.view,arch_db:documents_product.res_config_settings_view_form
+msgid "Tags"
+msgstr "Štítky"
+
+#. module: documents_product
+#: model:ir.model.fields,field_description:documents_product.field_res_config_settings__product_folder_id
+msgid "product default folder"
+msgstr "predvolená zložka k produktu"
+
+#~ msgid ""
+#~ "A set of condition and actions which will be available to all attachments "
+#~ "matching the conditions"
+#~ msgstr ""
+#~ "Zoznam podmienok a akcií, ktoré budú k dispozícii pre všetky prílohy "
+#~ "zodpovedajúce podmienkam"
+
+#~ msgid "Create"
+#~ msgstr "Vytvoriť"
+
+#~ msgid "Default Tags"
+#~ msgstr "Predvolené tagy"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenty"
+
+#~ msgid "New"
+#~ msgstr "Nové"
+
+#~ msgid "Plans"
+#~ msgstr "Plány"
+
+#~ msgid "Workspace"
+#~ msgstr "Pracovný priestor"

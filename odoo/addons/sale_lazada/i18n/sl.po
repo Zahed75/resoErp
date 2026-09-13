@@ -1,0 +1,1615 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_lazada
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-24 17:43+0000\n"
+"PO-Revision-Date: 2026-08-06 11:11+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"sale_lazada/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: sale_lazada
+#: model:mail.template,body_html:sale_lazada.order_sync_failure
+#, fuzzy
+msgid ""
+"<div>\n"
+"                <p>The synchronization of the Lazada order with reference <t "
+"t-out=\"ctx.get('lazada_order_ref') or ''\">REF</t> encountered an error and "
+"was not completed.</p>\n"
+"                <p>Unless the order is cancelled in Lazada, no other "
+"synchronization will be attempted.</p>\n"
+"                <p>To schedule a new synchronization attempt, proceed as "
+"follows:\n"
+"                    </p><ol>\n"
+"                        <li>Enter the Developer Tools.</li>\n"
+"                        <li>Open the form of the Lazada Shop on which the "
+"order was placed.</li>\n"
+"                        <li>Navigate to the Order Follow-up tab.</li>\n"
+"                        <li>Set a date for <em>Last Order Synchronization "
+"Date</em> that is anterior to the last status update of the order.</li>\n"
+"                        <li>Save the changes and click on the <em>SYNC "
+"ORDERS</em> button.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>If the problem persists, contact <a href=\"https://"
+"www.odoo.com/help/\">Odoo support</a>.</p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"                <p>Sinhronizacija naročila Lazada s sklicem <t t-"
+"out=\"ctx.get('lazada_order_ref') or ''\">REF</t> je naletela na napako in "
+"ni bila dokončana.</p>\n"
+"                <p>Če naročilo ni preklicano v Lazadi, noben drug poskus "
+"sinhronizacije ne bo izveden.</p>\n"
+"                <p>Če želite načrtovati nov poskus sinhronizacije, storite "
+"naslednje:\n"
+"                    </p><ol>\n"
+"                        <li>Odprite razvojna orodja.</li>\n"
+"                        <li>Odprite obrazec trgovine Lazada, v kateri je "
+"bilo naročilo oddano.</li>\n"
+"                        <li>Odprite zavihek Spremljanje naročil.</li>\n"
+"                        <li>Nastavite datum za <em>Datum zadnje "
+"sinhronizacije naročil</em>, ki je pred zadnjo posodobitvijo statusa "
+"naročila.</li>\n"
+"                        <li>Shranite spremembe in kliknite gumb <em>"
+"SINHRONIZIRAJ NAROČILA</em>.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>Če težava ni odpravljena, se obrnite na <a href=\"https://"
+"www.odoo.com/help/\">podporo Odoo</a>.</p>\n"
+"            </div>\n"
+"        "
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid ""
+"<strong>Authorization Failed: </strong>\n"
+"                    An unexpected error occurred during authorization. "
+"Please try again."
+msgstr ""
+"<strong>Avtorizacija ni uspela: </strong>\n"
+"                    Med avtorizacijo je prišlo do nepričakovane napake. "
+"Poskusite znova."
+
+#. module: sale_lazada
+#: model:mail.template,body_html:sale_lazada.inventory_sync_failure
+#, fuzzy
+msgid ""
+"<style>\n"
+"                .lazada_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .lazada_table th,\n"
+"                .lazada_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .lazada_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .lazada_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .lazada_table tbody th,\n"
+"                .lazada_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>The synchronization of the inventory for Lazada Shop\n"
+"                    <b><t t-out=\"ctx.get('lazada_shop') or ''\">REF</t></"
+"b>\n"
+"                    encountered some errors and was not completed.</p>\n"
+"                <p>Here are the errors sent by Lazada: </p>\n"
+"                <table class=\"lazada_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Product Internal Reference(s)</th>\n"
+"                            <th>Message</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th><t t-out=\"', '.join(error['default_codes'])"
+"\"/></th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">An unknown error occurred "
+"during the synchronisation with Lazada.\n"
+"                                    Unfortunately you need to manually check "
+"if the available quantity for the product is correct or not.\n"
+"                                    If the problem persists, contact <a "
+"href=\"https://www.odoo.com/help/\">Odoo support </a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+msgstr ""
+"<style>\n"
+"                .lazada_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .lazada_table th,\n"
+"                .lazada_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .lazada_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .lazada_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .lazada_table tbody th,\n"
+"                .lazada_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>Sinhronizacija zaloge za trgovino Lazada\n"
+"                    <b><t t-out=\"ctx.get('lazada_shop') or ''\">REF</t></b>"
+"\n"
+"                    je naletela na nekaj napak in ni bila dokončana.</p>\n"
+"                <p>Tukaj so napake, ki jih je poslala Lazada: </p>\n"
+"                <table class=\"lazada_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Interna referenca izdelka</th>\n"
+"                            <th>Sporočilo</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th><t t-out=\"', '.join(error['default_codes'])"
+"\"/></th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">Med sinhronizacijo z Lazado "
+"je prišlo do neznane napake.\n"
+"                                    Žal morate ročno preveriti, ali je "
+"razpoložljiva količina izdelka pravilna ali ne.\n"
+"                                    Če težava ni odpravljena, se obrnite na "
+"<a href=\"https://www.odoo.com/help/\">Odoo podporo </a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+
+#. module: sale_lazada
+#: model:ir.model.constraint,message:sale_lazada.constraint_lazada_shop_unique_shop_extern_id_company
+#, fuzzy
+msgid ""
+"A shop with this external identifier already exists in this company. The "
+"same Lazada shop cannot be linked twice to the same company."
+msgstr ""
+"Trgovina s tem zunanjim identifikatorjem v tem podjetju že obstaja. Iste "
+"trgovine Lazada ni mogoče dvakrat povezati z istim podjetjem."
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "API Credentials"
+msgstr "Poverilnice API"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "API Credentials & Tokens"
+msgstr "Poverilnice API-ja in žetoni"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__api_endpoint
+#, fuzzy
+msgid "API Endpoint"
+msgstr "Končna točka API-ja"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__access_token
+#, fuzzy
+msgid "Access Token"
+msgstr "Žeton vabila"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__access_token_expiration_date
+#, fuzzy
+msgid "Access Token Expiration Date"
+msgstr "Datum poteka dostopnega žetona"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Access Tokens"
+msgstr "Dostopni žetoni"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__active
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_search
+#, fuzzy
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__synchronize_inventory
+#, fuzzy
+msgid "Allow inventory synchronization"
+msgstr "Dovoli sinhronizacijo zaloge"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/controllers/onboarding.py:0
+#, fuzzy
+msgid "An unexpected error occurred during authorization."
+msgstr "Med avtorizacijo je prišlo do nepričakovane napake."
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__app_key
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__app_key
+#, fuzzy
+msgid "App Key"
+msgstr "Ključ aplikacije"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "App Key and App Secret are required for authorization."
+msgstr "Ključ aplikacije in skrivnost aplikacije sta potrebna za avtorizacijo."
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__app_secret
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__app_secret
+#, fuzzy
+msgid "App Secret"
+msgstr "Skrivnost aplikacije"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Archived"
+msgstr "Arhivirano"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_create_wizard_form
+#, fuzzy
+msgid "Cancel"
+msgstr "Prekliči"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_order_item__status__canceled
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_order_status__canceled
+#, fuzzy
+msgid "Canceled"
+msgstr "Preklicano"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__stock_picking__lazada_package_status__canceled
+#, fuzzy
+msgid "Canceled on Lazada"
+msgstr "Preklicano na Lazadi"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/utils.py:0
+#, fuzzy
+msgid "Cannot determine the API endpoint for the operation."
+msgstr "Ni mogoče določiti končne točke API-ja za operacijo."
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__company_id
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__company_id
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__company_id
+#, fuzzy
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_order_item__status__confirmed
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_order_status__confirmed
+#, fuzzy
+msgid "Confirmed"
+msgstr "Potrjeno"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_list
+#, fuzzy
+msgid "Connect New Shop"
+msgstr "Poveži novo trgovino"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_create_wizard_form
+#, fuzzy
+msgid "Connect Shop"
+msgstr "Poveži trgovino"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_res_partner
+#, fuzzy
+msgid "Contact"
+msgstr "Stik"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Could not allocate the shop identifier"
+msgstr "Ni bilo mogoče dodeliti identifikatorja trgovine"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Could not find country with code %(code)s"
+msgstr "Države s kodo %(code)s ni bilo mogoče najti"
+
+#. module: sale_lazada
+#: model:ir.actions.act_window,name:sale_lazada.action_lazada_shop_create_wizard
+#, fuzzy
+msgid "Create Lazada Shop"
+msgstr "Ustvari trgovino Lazada"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_create_wizard_form
+#, fuzzy
+msgid "Create New Lazada Shop"
+msgstr "Ustvari novo trgovino Lazada"
+
+#. module: sale_lazada
+#: model:ir.model,website_form_label:sale_lazada.model_res_partner
+#, fuzzy
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__create_uid
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__create_uid
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__create_uid
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__create_uid
+#, fuzzy
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__create_date
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__create_date
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__create_date
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__create_date
+#, fuzzy
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__team_id
+#, fuzzy
+msgid "Default Sales Team"
+msgstr "Privzeta prodajna ekipa"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__user_id
+#, fuzzy
+msgid "Default Salesperson"
+msgstr "Privzeti prodajalec"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_order_item__status__delivered
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_order_status__delivered
+#, fuzzy
+msgid "Delivered"
+msgstr "Dostavljeno"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__stock_picking__lazada_package_status__delivered
+#, fuzzy
+msgid "Delivered on Lazada"
+msgstr "Dostavljeno na Lazadi"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_product_product__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_move__display_name
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__display_name
+#, fuzzy
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.stock_picking_form
+#, fuzzy
+msgid "Download Shipping Label (Lazada)"
+msgstr "Prenesi nalepko za pošiljanje (Lazada)"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_order_item__status__draft
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_order_status__draft
+#, fuzzy
+msgid "Draft"
+msgstr "Osnutek"
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_item__sync_lazada_inventory
+#, fuzzy
+msgid ""
+"Enable this to allow pushing the product inventory quantities from Odoo to "
+"Lazada."
+msgstr ""
+"Omogočite to možnost, da dovolite pošiljanje količin zaloge izdelkov iz Odoo "
+"v Lazado."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__synchronize_inventory
+#, fuzzy
+msgid ""
+"Enable this to automatically sync your Odoo inventory quantities to Lazada. "
+"When enabled, product stock levels in Odoo will be pushed to Lazada for FBM "
+"(Fulfilled by Merchant) items. This ensures your Lazada listings show "
+"accurate stock availability."
+msgstr ""
+"Omogočite to možnost za samodejno sinhronizacijo količin zalog Odoo z "
+"Lazado. Ko je omogočena, bodo ravni zalog izdelkov v Odoo poslane v Lazado "
+"za izdelke FBM (ki jih izpolni trgovec). To zagotavlja, da vaši oglasi na "
+"Lazadi prikazujejo točno razpoložljivost zaloge."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__manage_fbl_inventory
+#, fuzzy
+msgid ""
+"Enable this to track inventory for FBL (Fulfilled by Lazada) items in Odoo. "
+"When enabled, stock in the FBL location will be deducted from your available "
+"FBM stock. The FBL location is automatically created when you set up the "
+"shop."
+msgstr ""
+"Omogočite to možnost za sledenje zalogi izdelkov FBL (Fulfilled by Lazada) v "
+"Odoo. Ko je omogočena, se zaloga na lokaciji FBL odšteje od vaše "
+"razpoložljive zaloge FBM. Lokacija FBL se samodejno ustvari, ko nastavite "
+"trgovino."
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__fbl_location_id
+#, fuzzy
+msgid "FBL Stock Location"
+msgstr "Lokacija zaloge FBL"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__fbm_warehouse_id
+#, fuzzy
+msgid "FBM Warehouse"
+msgstr "Skladišče FBM"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid ""
+"Failed to download shipping label for picking %(picking_id)s: HTTP Status "
+"Code %(error_code)s"
+msgstr ""
+"Prenos odpremne nalepke za pripravo %(picking_id)s ni uspel: koda stanja "
+"HTTP %(error_code)s"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid ""
+"Failed to get shipment provider for order: %(order_id)s. Error: %(error_msg)s"
+msgstr ""
+"Ni bilo mogoče pridobiti ponudnika pošiljanja za naročilo: %(order_id)s. "
+"Napaka: %(error_msg)s"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid "Failed to get shipment provider."
+msgstr "Ni uspelo pridobiti ponudnika pošiljanja."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Failed to get token from Lazada."
+msgstr "Ni bilo mogoče pridobiti žetona iz Lazade."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid ""
+"Failed to set Ready to Ship status for pickings:\n"
+"%(error_msg)s"
+msgstr ""
+"Ni bilo mogoče nastaviti statusa »Pripravljeno za odpremo« za odpreme:\n"
+"%(error_msg)s\n"
+"Lokacija: code:addons/sale_lazada/models/stock_picking.py:0"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid ""
+"Failed to synchronize Lazada product catalog for shop: %(shop)d.\n"
+"The total number of products in Lazada changed during synchronization. "
+"Please re-run the synchronization."
+msgstr ""
+"Sinhronizacija kataloga izdelkov Lazada za trgovino ni uspela: %(shop)d.\n"
+"Skupno število izdelkov v Lazadi se je med sinhronizacijo spremenilo. Znova "
+"zaženite sinhronizacijo.\n"
+"Lokacija: code:addons/sale_lazada/models/lazada_shop.py:0"
+
+#. module: sale_lazada
+#: model:ir.actions.server,name:sale_lazada.action_fetch_shipping_label
+#, fuzzy
+msgid "Fetch Shipping Label (Lazada)"
+msgstr "Pridobi odpremno nalepko (Lazada)"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__fulfillment_type
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_item_search
+#, fuzzy
+msgid "Fulfillment Type"
+msgstr "Vrsta izpolnitve"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_item__fulfillment_type__fbl
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_fulfillment_type__fbl
+#, fuzzy
+msgid "Fulfillment by Lazada"
+msgstr "Izpolnitev s strani Lazade"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_item__fulfillment_type__fbm
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_fulfillment_type__fbm
+#, fuzzy
+msgid "Fulfillment by Merchant"
+msgstr "Izpolnil trgovec"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__id
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__id
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__id
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__id
+#: model:ir.model.fields,field_description:sale_lazada.field_product_product__id
+#: model:ir.model.fields,field_description:sale_lazada.field_res_partner__id
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order_line__id
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_move__id
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__id
+#, fuzzy
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.view_order_form
+#, fuzzy
+msgid ""
+"If the sale is locked, you can not modify it anymore. However, you will "
+"still be able to invoice or deliver."
+msgstr ""
+"Če je prodaja zaklenjena, je ne morete več spreminjati. Kljub temu boste "
+"lahko še vedno izdali račun ali dostavili."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/utils.py:0
+#, fuzzy
+msgid ""
+"In Lazada Shop '%(shop_name)s', an error %(error_code)s occurred during the "
+"Lazada API operation '%(operation)s' with request ID '%(request_id)s':\n"
+"%(error_message)s"
+msgstr ""
+"V trgovini Lazada '%(shop_name)s' je med operacijo API-ja Lazada '%"
+"(operation)s' prišlo do napake %(error_code)s z ID-jem zahteve '%(request_id)"
+"s':\n"
+"%(error_message)s"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_search
+#, fuzzy
+msgid "Inactive"
+msgstr "Neaktivno"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid "Invalid Lazada document URL"
+msgstr "Neveljaven URL dokumenta Lazada"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/controllers/onboarding.py:0
+#, fuzzy
+msgid "Invalid OAuth state"
+msgstr "Neveljavno stanje OAuth"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Inventory Synchronization"
+msgstr "Sinhronizacija zaloge"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__lazada_item_count
+#, fuzzy
+msgid "Item Count"
+msgstr "Število artiklov"
+
+#. module: sale_lazada
+#: model:ir.model.constraint,message:sale_lazada.constraint_lazada_item_unique_lazada_item_extern_id
+#, fuzzy
+msgid "Item External IDs must be unique for a given shop."
+msgstr "Zunanji ID-ji artiklov morajo biti edinstveni za dano trgovino."
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Items"
+msgstr "Artikli"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__last_product_catalog_sync_date
+#, fuzzy
+msgid "Last Catalog Synchronization"
+msgstr "Zadnja sinhronizacija kataloga"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__last_inventory_sync_date
+#, fuzzy
+msgid "Last Inventory Sync Date"
+msgstr "Datum zadnje sinhronizacije zaloge"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__last_lazada_picking_sync_date
+#, fuzzy
+msgid "Last Lazada Picking Sync Date"
+msgstr "Datum zadnje sinhronizacije prevzema Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__last_orders_sync_date
+#, fuzzy
+msgid "Last Order Synchronization Date"
+msgstr "Datum zadnje sinhronizacije naročil"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__write_uid
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__write_uid
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__write_uid
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__write_uid
+#, fuzzy
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__write_date
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__write_date
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__write_date
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop_create_wizard__write_date
+#, fuzzy
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: sale_lazada
+#: model:ir.ui.menu,name:sale_lazada.root_menu
+#, fuzzy
+msgid "Lazada"
+msgstr "Lazada"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_create_wizard_form
+#, fuzzy
+msgid "Lazada API Credentials"
+msgstr "Poverilnice API za Lazado"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid "Lazada API rate limit reached. Please try again later."
+msgstr "Dosežena je omejitev zahtevkov API-ja Lazada. Poskusite znova pozneje."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#: model:product.template,name:sale_lazada.default_adjustment_product_product_template
+#, fuzzy
+msgid "Lazada Amount Adjustment"
+msgstr "Prilagoditev zneska Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_res_partner__lazada_buyer_extern_id
+#: model:ir.model.fields,field_description:sale_lazada.field_res_users__lazada_buyer_extern_id
+#, fuzzy
+msgid "Lazada Buyer ID"
+msgstr "ID kupca Lazada"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Lazada FBL Stock - %(shop)s"
+msgstr "Zaloga Lazada FBL - %(shop)s"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order__lazada_fulfillment_type
+#, fuzzy
+msgid "Lazada Fulfillment Type"
+msgstr "Vrsta izpolnitve Lazada"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_lazada_item
+#, fuzzy
+msgid "Lazada Item"
+msgstr "Izdelek Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__lazada_item_extern_id
+#, fuzzy
+msgid "Lazada Item ID"
+msgstr "ID izdelka Lazada"
+
+#. module: sale_lazada
+#: model:ir.actions.act_window,name:sale_lazada.action_lazada_item_list
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__lazada_item_ids
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_item_list
+#, fuzzy
+msgid "Lazada Items"
+msgstr "Izdelki Lazada"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid "Lazada Label"
+msgstr "Oznaka Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__lazada_label_attachment_ids
+#, fuzzy
+msgid "Lazada Label Attachment"
+msgstr "Priloga oznake Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__lazada_oauth_state
+#, fuzzy
+msgid "Lazada OAuth State"
+msgstr "Stanje OAuth Lazada"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Lazada Order %(lazada_order_ref)s at %(name)s"
+msgstr "Lazadino naročilo %(lazada_order_ref)s pri %(name)s"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#: model:product.template,name:sale_lazada.default_discount_product_product_template
+#, fuzzy
+msgid "Lazada Order Discount"
+msgstr "Popust za naročilo Lazada"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_lazada_order_item
+#, fuzzy
+msgid "Lazada Order Item"
+msgstr "Postavka naročila Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__order_item_extern_id
+#, fuzzy
+msgid "Lazada Order Item ID"
+msgstr "ID postavke naročila Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order_line__lazada_order_item_ids
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_move__lazada_order_item_ids
+#, fuzzy
+msgid "Lazada Order Items"
+msgstr "Postavke naročila Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__package_extern_id
+#, fuzzy
+msgid "Lazada Package ID"
+msgstr "ID paketa Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__lazada_package_status
+#, fuzzy
+msgid "Lazada Package Status"
+msgstr "Status paketa Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order__lazada_order_ref
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__lazada_order_ref
+#, fuzzy
+msgid "Lazada Reference"
+msgstr "Referenca Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__lazada_sku
+#, fuzzy
+msgid "Lazada SKU"
+msgstr "Lazada SKU"
+
+#. module: sale_lazada
+#: model:product.template,name:sale_lazada.default_sale_product_product_template
+#, fuzzy
+msgid "Lazada Sale"
+msgstr "Lazada prodaja"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__shop_extern_id
+#, fuzzy
+msgid "Lazada Seller ID"
+msgstr "ID prodajalca Lazada"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#: model:product.template,name:sale_lazada.default_shipping_product_product_template
+#, fuzzy
+msgid "Lazada Shipping"
+msgstr "Lazada dostava"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_stock_picking__lazada_shipping_allocate_type
+#, fuzzy
+msgid "Lazada Shipping Allocate Type"
+msgstr "Vrsta dodelitve pošiljanja Lazada"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_lazada_shop
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order__lazada_shop_id
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_item_search
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Lazada Shop"
+msgstr "Trgovina Lazada"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/controllers/onboarding.py:0
+#, fuzzy
+msgid "Lazada Shop - %(name)s"
+msgstr "Trgovina Lazada - %(name)s"
+
+#. module: sale_lazada
+#: model:ir.actions.act_window,name:sale_lazada.action_lazada_shop_authorization_error
+#, fuzzy
+msgid "Lazada Shop Authorization Error"
+msgstr "Napaka pri avtorizaciji trgovine Lazada"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_lazada_shop_create_wizard
+#, fuzzy
+msgid "Lazada Shop Creation Wizard"
+msgstr "Čarovnik za ustvarjanje trgovine Lazada"
+
+#. module: sale_lazada
+#: model:ir.actions.act_window,name:sale_lazada.action_lazada_shop_list
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_list
+#, fuzzy
+msgid "Lazada Shops"
+msgstr "Trgovine Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_sale_order__lazada_order_status
+#, fuzzy
+msgid "Lazada Status"
+msgstr "Status Lazada"
+
+#. module: sale_lazada
+#: model:mail.template,name:sale_lazada.inventory_sync_failure
+#, fuzzy
+msgid "Lazada: Inventory Synchronization Failure"
+msgstr "Lazada: Napaka pri sinhronizaciji zaloge"
+
+#. module: sale_lazada
+#: model:mail.template,name:sale_lazada.order_sync_failure
+#, fuzzy
+msgid "Lazada: Order Synchronization Failure"
+msgstr "Lazada: Napaka pri sinhronizaciji naročila"
+
+#. module: sale_lazada
+#: model:ir.actions.server,name:sale_lazada.ir_cron_sync_lazada_inventory_ir_actions_server
+#, fuzzy
+msgid "Lazada: sync inventory"
+msgstr "Lazada: sinhronizacija zaloge"
+
+#. module: sale_lazada
+#: model:ir.actions.server,name:sale_lazada.ir_cron_sync_lazada_orders_ir_actions_server
+#, fuzzy
+msgid "Lazada: sync orders"
+msgstr "Lazada: sinhronizacija naročil"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.view_order_form
+#, fuzzy
+msgid "Lock"
+msgstr "Zakleni"
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__refresh_token
+#, fuzzy
+msgid ""
+"Long-term refresh token used to automatically obtain new access tokens. This "
+"token expires after 30 days. If it expires, you'll need to re-authorize the "
+"connection by clicking the authorization button in the Lazada shop view."
+msgstr ""
+"Dolgotrajni žeton za osveževanje, ki se uporablja za samodejno pridobivanje "
+"novih žetonov za dostop. Ta žeton poteče po 30 dneh. Če poteče, boste morali "
+"povezavo znova avtorizirati s klikom na gumb za avtorizacijo v pogledu "
+"trgovine Lazada."
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_order_item__status__manual
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_order_status__manual
+#, fuzzy
+msgid "Manual"
+msgstr "Ročno"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__stock_picking__lazada_package_status__manual
+#, fuzzy
+msgid "Manual handling required"
+msgstr "Potrebna je ročna obdelava"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__name
+#, fuzzy
+msgid "Name"
+msgstr "Naziv"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/wizard/lazada_shop_create_wizard.py:0
+#, fuzzy
+msgid "New Lazada Shop"
+msgstr "Nova trgovina Lazada"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid "No Lazada order item found to pack."
+msgstr "Za pakiranje ni bil najden noben artikel naročila Lazada."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid "No Lazada order reference found."
+msgstr "Referenca naročila Lazada ni bila najdena."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/utils.py:0
+#, fuzzy
+msgid "No authorization code or refresh token found for shop %(shop_name)s."
+msgstr ""
+"Za trgovino %(shop_name)s ni bilo mogoče najti avtorizacijske kode ali "
+"osvežitvenega žetona."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_item.py:0
+#, fuzzy
+msgid "Only FBM items can be synced to Lazada."
+msgstr "Samo izdelke FBM je mogoče sinhronizirati z Lazado."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_item.py:0
+#, fuzzy
+msgid "Only goods are supported with Lazada."
+msgstr "Z Lazado je podprto samo blago."
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__order_count
+#, fuzzy
+msgid "Order Count"
+msgstr "Število naročil"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Order Discount"
+msgstr "Popust za naročilo"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Order Synchronization"
+msgstr "Sinhronizacija naročil"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__order_ids
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Orders"
+msgstr "Naročila"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.stock_picking_form
+#, fuzzy
+msgid "Pack Lazada Package"
+msgstr "Pakiraj paket Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__stock_picking__lazada_package_status__confirmed
+#, fuzzy
+msgid "Package Confirmed on Lazada"
+msgstr "Paket potrjen na Lazadi"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__stock_picking__lazada_package_status__draft
+#, fuzzy
+msgid "Package Pending on Lazada"
+msgstr "Paket čaka na Lazadi"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__lazada_order_item__status__processing
+#: model:ir.model.fields.selection,name:sale_lazada.selection__sale_order__lazada_order_status__processing
+#, fuzzy
+msgid "Processing"
+msgstr "V teku"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__product_id
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_item_search
+#, fuzzy
+msgid "Product"
+msgstr "Izdelek"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__product_tmpl_id
+#, fuzzy
+msgid "Product Template"
+msgstr "Predloga izdelka"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_product_product
+#, fuzzy
+msgid "Product Variant"
+msgstr "Različica izdelka"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Re-authorize Shop"
+msgstr "Ponovno avtoriziraj trgovino"
+
+#. module: sale_lazada
+#: model:ir.model.fields.selection,name:sale_lazada.selection__stock_picking__lazada_package_status__processing
+#, fuzzy
+msgid "Ready to Ship on Lazada"
+msgstr "Pripravljeno za odpremo na Lazadi"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__refresh_token
+#, fuzzy
+msgid "Refresh Token"
+msgstr "Osvežitev žetona"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__refresh_token_expiration_date
+#, fuzzy
+msgid "Refresh Token Expiration Date"
+msgstr "Datum poteka žetona za osvežitev"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__sale_order_line_id
+#, fuzzy
+msgid "Sale Order Line"
+msgstr "Postavka prodajnega naloga"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_sale_order
+#, fuzzy
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_sale_order_line
+#, fuzzy
+msgid "Sales Order Line"
+msgstr "Postavka prodajnega naloga"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Shipping"
+msgstr "Dostava"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "Shipping: %(carrier)s"
+msgstr "Dostava: %(carrier)s"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__shop_id
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_search
+#, fuzzy
+msgid "Shop"
+msgstr "Trgovina"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Shop Information"
+msgstr "Informacije o trgovini"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Shop Name"
+msgstr "Ime trgovine"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__country_id
+#, fuzzy
+msgid "Shop Region"
+msgstr "Regija trgovine"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Shop Settings"
+msgstr "Nastavitve trgovine"
+
+#. module: sale_lazada
+#: model:ir.ui.menu,name:sale_lazada.shops_menu
+#, fuzzy
+msgid "Shops"
+msgstr "Trgovine"
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__last_orders_sync_date
+#, fuzzy
+msgid ""
+"Shows when orders were last synchronized from Lazada. Only orders that have "
+"changed since this date will be imported or updated in Odoo."
+msgstr ""
+"Prikazuje, kdaj so bila naročila nazadnje sinhronizirana iz Lazade. V Odoo "
+"bodo uvožena ali posodobljena samo naročila, ki so se spremenila od tega "
+"datuma."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__last_product_catalog_sync_date
+#, fuzzy
+msgid ""
+"Shows when the product catalog was last synchronized from Lazada to Odoo. "
+"Only products updated in Lazada after this date will be fetched in the next "
+"synchronization. This is automatically updated after each sync. To re-"
+"initialize the full catalog, clear this value."
+msgstr ""
+"Prikazuje, kdaj je bil katalog izdelkov nazadnje sinhroniziran iz Lazade v "
+"Odoo. V naslednji sinhronizaciji bodo pridobljeni samo izdelki, posodobljeni "
+"v Lazadi po tem datumu. Ta vrednost se samodejno posodobi po vsaki "
+"sinhronizaciji. Če želite znova inicializirati celoten katalog, počistite to "
+"vrednost."
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__status
+#, fuzzy
+msgid "Status"
+msgstr "Status"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_stock_move
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_order_item__stock_move_id
+#, fuzzy
+msgid "Stock Move"
+msgstr "Premik zaloge"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Sync Catalog"
+msgstr "Sinhroniziraj katalog"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Sync Inventory"
+msgstr "Sinhroniziraj zalogo"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Sync Orders"
+msgstr "Sinhroniziraj naročila"
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "Synchronization Information"
+msgstr "Informacije o sinhronizaciji"
+
+#. module: sale_lazada
+#: model:mail.template,subject:sale_lazada.inventory_sync_failure
+#, fuzzy
+msgid "Synchronization of Lazada inventory has failed"
+msgstr "Sinhronizacija zaloge Lazada ni uspela"
+
+#. module: sale_lazada
+#: model:mail.template,subject:sale_lazada.order_sync_failure
+#, fuzzy
+msgid ""
+"Synchronization of Lazada order {{ ctx.get('lazada_order_ref') }} has failed"
+msgstr ""
+"Sinhronizacija Lazadinega naročila {{ ctx.get('lazada_order_ref') }} ni "
+"uspela"
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_item__sync_lazada_inventory
+#, fuzzy
+msgid "Synchronize Inventory to Lazada"
+msgstr "Sinhroniziraj zalogo z Lazado"
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__access_token
+#, fuzzy
+msgid ""
+"Temporary access token provided by Lazada for API authentication. This token "
+"expires after 4 hours and is automatically refreshed using the refresh "
+"token. You don't need to manage this manually."
+msgstr ""
+"Začasni žeton za dostop, ki ga zagotovi Lazada za preverjanje pristnosti API-"
+"ja. Ta žeton poteče po 4 urah in se samodejno osveži z uporabo žetona za "
+"osvežitev. Tega vam ni treba upravljati ročno."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid "The API Endpoint for the country %(country)s is not supported."
+msgstr "Končna točka API-ja za državo %(country)s ni podprta."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/stock_picking.py:0
+#, fuzzy
+msgid "The Lazada order reference is required to get the shipment provider."
+msgstr "Referenca naročila Lazada je obvezna za pridobitev ponudnika dostave."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_sale_order__lazada_shop_id
+#, fuzzy
+msgid "The Lazada shop from which the order was placed."
+msgstr "Trgovina Lazada, iz katere je bilo oddano naročilo."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_sale_order__lazada_order_ref
+#: model:ir.model.fields,help:sale_lazada.field_stock_picking__lazada_order_ref
+#, fuzzy
+msgid "The Lazada-defined order reference."
+msgstr "Referenca naročila, ki jo določi Lazada."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_item__lazada_sku
+#, fuzzy
+msgid ""
+"The SKU of the item in Lazada. Odoo can match the product when the Lazada "
+"SKU is equivalent to the default code of the product."
+msgstr ""
+"SKU izdelka v Lazadi. Odoo lahko najde izdelek, ko je SKU v Lazadi enak "
+"privzeti šifri izdelka."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_stock_picking__lazada_label_attachment_ids
+#, fuzzy
+msgid "The attachments that are related to the Lazada label."
+msgstr "Priloge, ki so povezane z oznako Lazada."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__access_token_expiration_date
+#, fuzzy
+msgid ""
+"The date and time when the current access token will expire. The system "
+"automatically refreshes the token before expiration, so no action is "
+"required."
+msgstr ""
+"Datum in čas poteka trenutnega žetona za dostop. Sistem žeton samodejno "
+"osveži pred potekom, zato ni potrebno nobeno dejanje."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__refresh_token_expiration_date
+#, fuzzy
+msgid ""
+"The date and time when the refresh token will expire. If this date passes, "
+"you'll need to re-authorize the connection to continue synchronizing with "
+"Lazada."
+msgstr ""
+"Datum in čas poteka žetona za osvežitev. Če ta datum poteče, boste morali "
+"znova avtorizirati povezavo, da boste lahko nadaljevali sinhronizacijo z "
+"Lazado."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__team_id
+#, fuzzy
+msgid ""
+"The default Sales Team assigned to orders imported from this Lazada shop"
+msgstr ""
+"Privzeta prodajna ekipa, dodeljena naročilom, uvoženim iz te trgovine Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__user_id
+#, fuzzy
+msgid ""
+"The default Salesperson assigned to orders imported from this Lazada shop"
+msgstr "Privzeti prodajalec, dodeljen naročilom, uvoženim iz te trgovine Lazada"
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_stock_picking__last_lazada_picking_sync_date
+#, fuzzy
+msgid "The last time the picking was synchronized with Lazada."
+msgstr "Zadnjič, ko je bil prevzem sinhroniziran z Lazado."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_stock_picking__package_extern_id
+#, fuzzy
+msgid "The package identifier for the picking."
+msgstr "Identifikator paketa za premik."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/controllers/onboarding.py:0
+#, fuzzy
+msgid "The request is expired."
+msgstr "Zahteva je potekla."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/controllers/onboarding.py:0
+#, fuzzy
+msgid "The request signature is not valid."
+msgstr "Podpis zahteve ni veljaven."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_stock_picking__lazada_shipping_allocate_type
+#, fuzzy
+msgid "The shipping allocate type for the picking."
+msgstr "Vrsta dodelitve dostave za odpremnico."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__lazada_oauth_state
+#, fuzzy
+msgid "The state of the OAuth flow for this shop."
+msgstr "Stanje toka OAuth za to trgovino."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_order_item__status
+#, fuzzy
+msgid ""
+"The status of the order item on Lazada:\n"
+"- Draft: The order item is in draft status by default.\n"
+"- Confirmed: The order item has been packed.\n"
+"- Processing: The order item is ready to ship.\n"
+"- Delivered: The order item has been shipped or delivered.\n"
+"- Canceled: The order item has been canceled.\n"
+"- Manual: The order item has to be processed manually on Lazada."
+msgstr ""
+"Status postavke naročila na Lazadi:\n"
+"- Osnutek: postavka naročila je privzeto v statusu osnutka.\n"
+"- Potrjeno: postavka naročila je bila zapakirana.\n"
+"- V obdelavi: postavka naročila je pripravljena za odpremo.\n"
+"- Dostavljeno: postavka naročila je bila odposlana ali dostavljena.\n"
+"- Preklicano: postavka naročila je bila preklicana.\n"
+"- Ročno: postavko naročila je treba obdelati ročno na Lazadi."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__fbl_location_id
+#, fuzzy
+msgid ""
+"The stock location representing inventory managed by Lazada under the FBL "
+"(Fulfilled by Lazada) program. This location is automatically created when "
+"you set up the shop. Stock moves to this location represent items sent to "
+"Lazada warehouses for fulfillment."
+msgstr ""
+"Lokacija zaloge, ki predstavlja inventar, ki ga Lazada upravlja v okviru "
+"programa FBL (Fulfilled by Lazada). Ta lokacija se samodejno ustvari, ko "
+"nastavite trgovino. Premiki zaloge na to lokacijo predstavljajo izdelke, "
+"poslane v skladišča Lazade za izpolnjevanje naročil.\n"
+"Lokacija: "
+"model:ir.model.fields,help:sale_lazada.field_lazada_shop__fbl_location_id"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_order_item.py:0
+#, fuzzy
+msgid ""
+"The stock move must be related to the same sale order line as the Lazada "
+"order item."
+msgstr ""
+"Premik zaloge mora biti povezan z isto postavko prodajnega naročila kot "
+"postavka naročila Lazada."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_item__lazada_item_extern_id
+#, fuzzy
+msgid ""
+"The unique identifier for an item in Lazada. An item in Lazada is equivalent "
+"to a product variant in Odoo."
+msgstr ""
+"Edinstveni identifikator artikla v Lazadi. Artikel v Lazadi je enakovreden "
+"različici izdelka v Odoo."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__fbm_warehouse_id
+#, fuzzy
+msgid ""
+"The warehouse containing inventory that will be synchronized to Lazada for "
+"FBM (Fulfilled by Merchant) orders. Select the warehouse where you store "
+"products that you ship directly to customers. If not set, your company's "
+"default warehouse will be used."
+msgstr ""
+"Skladišče z zalogo, ki bo sinhronizirana z Lazado za naročila FBM (Fulfilled "
+"by Merchant). Izberite skladišče, v katerem hranite izdelke, ki jih "
+"neposredno pošiljate strankam. Če ni nastavljeno, bo uporabljeno privzeto "
+"skladišče vašega podjetja."
+
+#. module: sale_lazada
+#: model:ir.model.constraint,message:sale_lazada.constraint_sale_order_unique_lazada_order_ref_lazada_shop_id
+#, fuzzy
+msgid ""
+"There can only exist one sale order for a given Lazada Order Reference per "
+"Shop."
+msgstr ""
+"Za dano referenco Lazadinega naročila v posamezni trgovini lahko obstaja "
+"samo eno prodajno naročilo."
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.view_order_form
+#, fuzzy
+msgid ""
+"This order contains unsupported Lazada order status.\n"
+"                    Please process the order manually on Lazada."
+msgstr ""
+"To naročilo vsebuje nepodprto stanje naročila Lazada.\n"
+"                    Prosimo, obdelajte naročilo ročno na Lazadi."
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.stock_picking_form
+#, fuzzy
+msgid ""
+"This order contains unsupported order status.\n"
+"                    Please process the order manually on Lazada."
+msgstr ""
+"To naročilo vsebuje nepodprto stanje naročila.\n"
+"                    Prosimo, obdelajte naročilo ročno na Lazadi."
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_item.py:0
+#, fuzzy
+msgid ""
+"This product does not track inventory and can not be synchronized with "
+"Lazada."
+msgstr "Ta izdelek ne sledi zalogi in ga ni mogoče sinhronizirati z Lazado."
+
+#. module: sale_lazada
+#: model:ir.model.fields,field_description:sale_lazada.field_lazada_shop__manage_fbl_inventory
+#, fuzzy
+msgid "Track FBL Inventory"
+msgstr "Sledenje zalogi FBL"
+
+#. module: sale_lazada
+#: model:ir.model,name:sale_lazada.model_stock_picking
+#, fuzzy
+msgid "Transfer"
+msgstr "Prenos"
+
+#. module: sale_lazada
+#. odoo-python
+#: code:addons/sale_lazada/models/lazada_shop.py:0
+#, fuzzy
+msgid ""
+"Voucher id: %(voucher_id)s\n"
+"Original price: %(price)s"
+msgstr ""
+"ID bona: %(voucher_id)s\n"
+"Originalna cena: %(price)s\n"
+"Lokacija: code:addons/sale_lazada/models/lazada_shop.py:0"
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__app_key
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop_create_wizard__app_key
+#, fuzzy
+msgid ""
+"Your Lazada application key (App Key). You can find this in your Lazada "
+"Service Provider Center after creating an application. Enter this before "
+"authorizing the connection."
+msgstr ""
+"Vaš aplikacijski ključ Lazada (App Key). Najdete ga v centru ponudnika "
+"storitev Lazada, ko ustvarite aplikacijo. Vnesite ga pred avtorizacijo "
+"povezave."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__app_secret
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop_create_wizard__app_secret
+#, fuzzy
+msgid ""
+"Your Lazada application secret (App Secret). This is provided alongside your "
+"App Key in the Lazada Service Provider Center. Keep this confidential and "
+"enter it before authorizing the connection."
+msgstr ""
+"Skrivnost vaše aplikacije Lazada (App Secret). Na voljo je skupaj z vašim "
+"ključem aplikacije v središču ponudnika storitev Lazada. To naj ostane "
+"zaupno in vnesite jo pred avtorizacijo povezave."
+
+#. module: sale_lazada
+#: model:ir.model.fields,help:sale_lazada.field_lazada_shop__shop_extern_id
+#, fuzzy
+msgid ""
+"Your unique seller ID assigned by Lazada. This is automatically set during "
+"authorization and ensures the same Lazada shop cannot be linked twice to the "
+"same company."
+msgstr ""
+"Vaš enolični ID prodajalca, ki ga je dodelila Lazada. To se samodejno "
+"nastavi med avtorizacijo in zagotavlja, da iste trgovine Lazada ni mogoče "
+"dvakrat povezati z istim podjetjem."
+
+#. module: sale_lazada
+#: model_terms:ir.ui.view,arch_db:sale_lazada.lazada_shop_form
+#, fuzzy
+msgid "e.g. Indonesian Shop"
+msgstr "npr. indonezijska trgovina"
+
+#, fuzzy
+#~ msgid "[%(sku)s] %(product_name)s"
+#~ msgstr "[%(sku)s] %(product_name)s"

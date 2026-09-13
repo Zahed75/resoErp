@@ -1,0 +1,7 @@
+// The withholding portal page reuses account.portal_invoice_page, whose sidebar shows
+// account_payment's "Paid" badge. That badge is meaningless for a withholding, but
+// account_payment is not a dependency of this module, so it cannot be hidden through view
+// inheritance. Scope the rule to a withholding sidebar via its own status badge.
+.o_portal_invoice_sidebar:has(.o_l10n_ec_withhold_status) [name="invoice_paid_badge"] {
+    display: none;
+}

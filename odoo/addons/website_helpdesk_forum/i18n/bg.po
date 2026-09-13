@@ -1,0 +1,349 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_helpdesk_forum
+#
+# Translators:
+# Nikola Iliev, 2023
+# aleksandar ivanov, 2023
+# Martin Trigaux, 2023
+# Maria Boyadjieva <marabo2000@gmail.com>, 2023
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.5alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-07-25 20:14+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"website_helpdesk_forum/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.search_result
+msgid ", by"
+msgstr ", от"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.search_result
+msgid "<i class=\"fa fa-fw fa-2x fa-comments\" title=\"Forum Post\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-2x fa-comments\" title=\"Публикация във форума\"/>"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.question_dropdown
+msgid ""
+"<i class=\"fa fa-life-ring fa-fw\"/>\n"
+"                    Create Ticket"
+msgstr ""
+"<i class=\"fa fa-life-ring fa-fw\"/>\n"
+"                    Създаване на тикет"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.question_dropdown
+msgid ""
+"<i class=\"fa fa-life-ring fa-fw\"/>\n"
+"                    View Ticket"
+msgstr ""
+"<i class=\"fa fa-life-ring fa-fw\"/>\n"
+"                    Преглед на тикет"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.forum_forum_view_form_inherited
+msgid "<span class=\"o_stat_text\">Helpdesk Teams</span>"
+msgstr "<span class=\"o_stat_text\">Екипи на хелпдеск</span>"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__answer_content
+msgid "Answer"
+msgstr "Отговор"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.search_result
+msgid "Answers"
+msgstr "Отговори"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.knowledge_base_forum_card
+msgid "Ask questions and discuss tips with fellow members in a forum"
+msgstr "Задаване на въпроси и обсъждане на съвети с познати членове във форум"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.footer
+msgid "Ask the Community"
+msgstr "Попитайте общността"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.knowledge_base_forum_card
+msgid "Ask the community"
+msgstr "Попитайте общността"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.knowledge_base_forum_card
+msgid "Community"
+msgstr "Общност"
+
+#. module: website_helpdesk_forum
+#. odoo-javascript
+#: code:addons/website_helpdesk_forum/static/src/components/create_ticket_dialog/create_ticket_dialog.xml:0
+msgid "Create & View Ticket"
+msgstr "Създаване и преглед на тикет"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.helpdesk_ticket_select_forum_wizard_view_form
+msgid "Create Post"
+msgstr "Създаване на публикация"
+
+#. module: website_helpdesk_forum
+#. odoo-javascript
+#: code:addons/website_helpdesk_forum/static/src/components/create_ticket_dialog/create_ticket_dialog.xml:0
+msgid "Create Ticket"
+msgstr "Създаване на тикет"
+
+#. module: website_helpdesk_forum
+#: model:ir.model,website_form_label:website_helpdesk_forum.model_helpdesk_ticket
+msgid "Create a Ticket"
+msgstr "Създаване на тикет"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.helpdesk_ticket_select_forum_wizard_view_form
+msgid "Create and View Post"
+msgstr "Създаване и преглед на публикация"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__create_uid
+msgid "Created by"
+msgstr "Създадено от"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__create_date
+msgid "Created on"
+msgstr "Създадено на"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,help:website_helpdesk_forum.field_helpdesk_team__website_forum_ids
+msgid ""
+"Customers will see only the posts from chosen forums in the help center. If "
+"you want all forums to be accessible, just leave the field empty. "
+"Alternatively, you can make forums private to restrict this feature to "
+"internal users."
+msgstr ""
+"Клиентите ще виждат само публикациите от избраните форуми в помощния център. "
+"Ако искате всички форуми да са достъпни, просто оставете полето празно. Като "
+"алтернатива можете да направите форумите частни, за да ограничите тази "
+"функция само за вътрешни потребители."
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__description
+msgid "Description"
+msgstr "Описание"
+
+#. module: website_helpdesk_forum
+#. odoo-javascript
+#: code:addons/website_helpdesk_forum/static/src/components/create_ticket_dialog/create_ticket_dialog.xml:0
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.helpdesk_ticket_select_forum_wizard_view_form
+msgid "Discard"
+msgstr "Отхвърлете"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_forum_forum__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_forum_post__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_team__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_forum_forum__filter_for_helpdesk_wizard
+msgid "Filter For Helpdesk Wizard"
+msgstr "Филтър за съветника на хелпдеск"
+
+#. module: website_helpdesk_forum
+#: model:ir.model,name:website_helpdesk_forum.model_forum_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__forum_id
+msgid "Forum"
+msgstr "Форум"
+
+#. module: website_helpdesk_forum
+#: model:ir.model,name:website_helpdesk_forum.model_forum_post
+msgid "Forum Post"
+msgstr "Публикация във форум"
+
+#. module: website_helpdesk_forum
+#. odoo-python
+#: code:addons/website_helpdesk_forum/wizards/helpdesk_ticket_select_forum.py:0
+msgid "Forum Post Created"
+msgstr "Публикацията във форума е създадена"
+
+#. module: website_helpdesk_forum
+#. odoo-python
+#: code:addons/website_helpdesk_forum/models/helpdesk.py:0
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.helpdesk_ticket_view_form_inherit_website_helpdesk_forum
+msgid "Forum Posts"
+msgstr "Публикации във форум"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_team__website_forum_ids
+msgid "Forums"
+msgstr "Форуми"
+
+#. module: website_helpdesk_forum
+#. odoo-python
+#: code:addons/website_helpdesk_forum/models/helpdesk.py:0
+msgid "Help Center is not active for this team."
+msgstr "Помощният център не е активен за този екип."
+
+#. module: website_helpdesk_forum
+#. odoo-javascript
+#: code:addons/website_helpdesk_forum/static/src/components/create_ticket_dialog/create_ticket_dialog.xml:0
+#: model:ir.model,name:website_helpdesk_forum.model_helpdesk_team
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_forum_forum__helpdesk_team_ids
+msgid "Helpdesk Team"
+msgstr "Хелпдеск екип"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_forum_forum__helpdesk_team_count
+msgid "Helpdesk Team Count"
+msgstr "Брой екипи на хелпдеск"
+
+#. module: website_helpdesk_forum
+#. odoo-python
+#: code:addons/website_helpdesk_forum/models/forum_forum.py:0
+msgid "Helpdesk Teams"
+msgstr "Хелпдеск екипи"
+
+#. module: website_helpdesk_forum
+#: model:ir.model,name:website_helpdesk_forum.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Хелпдеск тикет"
+
+#. module: website_helpdesk_forum
+#. odoo-javascript
+#: code:addons/website_helpdesk_forum/static/src/components/create_ticket_dialog/create_ticket_dialog.js:0
+msgid ""
+"Helpdesk ticket %(ticket)s has been successfully created for this forum post."
+msgstr ""
+"Хелпдеск тикет %(ticket)s беше успешно създаден за тази публикация във "
+"форума."
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_forum_forum__id
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_forum_post__id
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_team__id
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Последно актуализирано от"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__write_date
+msgid "Last Updated on"
+msgstr "Последно актуализирано на"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.knowledge_base_forum_card
+msgid "Most voted"
+msgstr "Най-гласувани"
+
+#. module: website_helpdesk_forum
+#. odoo-javascript
+#: code:addons/website_helpdesk_forum/static/src/components/create_ticket_dialog/create_ticket_dialog.xml:0
+msgid "Please fill out this field."
+msgstr "Моля, попълнете това поле."
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.knowledge_base_forum_card
+msgid "Quick Links"
+msgstr "Бързи връзки"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.helpdesk_ticket_select_forum_wizard_view_form
+msgid "Select Forum"
+msgstr "Изберете форум"
+
+#. module: website_helpdesk_forum
+#: model:ir.actions.act_window,name:website_helpdesk_forum.helpdesk_ticket_select_forum_wizard_action
+#: model:ir.model,name:website_helpdesk_forum.model_helpdesk_ticket_select_forum_wizard
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.helpdesk_ticket_view_form_inherit_website_helpdesk_forum
+msgid "Share on Forum"
+msgstr "Споделяне във форума"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.search_result
+msgid "Solved"
+msgstr "Разрешен"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__tag_ids
+msgid "Tags"
+msgstr "Маркери"
+
+#. module: website_helpdesk_forum
+#. odoo-python
+#: code:addons/website_helpdesk_forum/models/helpdesk.py:0
+msgid "There are no posts associated with this ticket."
+msgstr "Няма публикации, свързани с този тикет."
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,help:website_helpdesk_forum.field_helpdesk_team__top_forum_posts
+msgid ""
+"These are the top posts in the forums associated with this helpdesk team"
+msgstr ""
+"Това са най-популярните публикации във форумите, свързани с този екип на "
+"хелпдеск"
+
+#. module: website_helpdesk_forum
+#. odoo-python
+#: code:addons/website_helpdesk_forum/models/forum_forum.py:0
+msgid "Ticket created from forum post"
+msgstr "Тикет, създаден от публикация във форума"
+
+#. module: website_helpdesk_forum
+#. odoo-javascript
+#: code:addons/website_helpdesk_forum/static/src/components/create_ticket_dialog/create_ticket_dialog.xml:0
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_ticket_select_forum_wizard__title
+msgid "Title"
+msgstr "Заглавие"
+
+#. module: website_helpdesk_forum
+#: model:ir.model.fields,field_description:website_helpdesk_forum.field_helpdesk_team__top_forum_posts
+msgid "Top Posts"
+msgstr "Топ публикации"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.search_result
+msgid "Views"
+msgstr "Гледания"
+
+#. module: website_helpdesk_forum
+#. odoo-python
+#: code:addons/website_helpdesk_forum/wizards/helpdesk_ticket_select_forum.py:0
+msgid "You must select a forum to share the ticket"
+msgstr "Трябва да изберете форум, за да споделите тикета"
+
+#. module: website_helpdesk_forum
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_forum.search_result
+msgid "• 0 Answer"
+msgstr "• 0 отговора"
+
+#~ msgid "Help Center Active"
+#~ msgstr "Активен помощен център"
+
+#~ msgid "Help Center not active for this team."
+#~ msgstr "Помощният център не е активен за този екип."
+
+#~ msgid "Ticket"
+#~ msgstr "Тикет"

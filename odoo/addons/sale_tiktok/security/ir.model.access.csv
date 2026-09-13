@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_tiktok_shop","access.tiktok.shop","model_tiktok_shop","sales_team.group_sale_manager",1,1,1,1
+"access_tiktok_item","access.tiktok.item","model_tiktok_item","sales_team.group_sale_manager",1,1,1,1
+"access_tiktok_shop_create_wizard","access.tiktok.shop.create.wizard","model_tiktok_shop_create_wizard","sales_team.group_sale_manager",1,1,1,1
+"access_tiktok_picking_ship_wizard","access.tiktok.picking.ship.wizard","model_tiktok_picking_ship_wizard","stock.group_stock_user",1,1,1,1

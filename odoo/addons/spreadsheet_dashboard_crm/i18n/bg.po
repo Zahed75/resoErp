@@ -1,0 +1,516 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * spreadsheet_dashboard_crm
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:47+0000\n"
+"PO-Revision-Date: 2026-07-25 21:31+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"spreadsheet_dashboard_crm/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+msgid " days"
+msgstr " дни"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "# Leads"
+msgstr "Брой нови контакти"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "4 days"
+msgstr "4 дни"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "8.5 days"
+msgstr "8,5 дни"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Average Deal Size"
+msgstr "Среден размер на сделка"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Average deal size"
+msgstr "Среден размер на сделка"
+
+#. module: spreadsheet_dashboard_crm
+#: model:spreadsheet.dashboard.group,name:spreadsheet_dashboard_crm.spreadsheet_dashboard_group_crm
+msgid "CRM"
+msgstr "CRM"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Campaign"
+msgstr "Кампании"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "City"
+msgstr "Град"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Close Rate"
+msgstr "Процент на затваряне"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Close rate"
+msgstr "Процент на затваряне"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Closed"
+msgstr "Затворено"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Closed count"
+msgstr "Брой затворени"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Closed revenue"
+msgstr "Затворени приходи"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Country"
+msgstr "Държава"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Current"
+msgstr "Настоящ"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Current period"
+msgstr "Текущ период"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Days to Assign"
+msgstr "Дни до назначаване"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Days to Win"
+msgstr "Дни до спечелване"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Days to assign"
+msgstr "Дни до възлагане"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Days to win"
+msgstr "Дни до спечелване"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Expected"
+msgstr "Очакван"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Expected Closing"
+msgstr "Очаквано приключване"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Expected count"
+msgstr "Очаквано количество"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Expected revenue"
+msgstr "Очакван приход"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "KPI"
+msgstr "KPI"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_crm.dashboard_leads
+msgid "Leads"
+msgstr "Лийдове"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Leads by Month"
+msgstr "Потенциални клиенти по месец"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Lost Reason"
+msgstr "Причина за загуба"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Medium"
+msgstr "Преносител"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "New"
+msgstr "Нов"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Open opportunities"
+msgstr "Отворени възможности"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Opportunity"
+msgstr "Възможност"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Percentage closed"
+msgstr "Процент завършено"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+msgid "Period"
+msgstr "Период"
+
+#. module: spreadsheet_dashboard_crm
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_crm.dashboard_pipeline
+msgid "Pipeline"
+msgstr "Входен поток"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Pipeline Stages"
+msgstr "Етапи на потока от сделки"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Pre-Sales"
+msgstr "Предпродажби"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Previous"
+msgstr "Предишен"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Previous period"
+msgstr "Предходен период"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Proposition"
+msgstr "Предложение"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Qualified"
+msgstr "Квалифициран"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Revenue"
+msgstr "Приход"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Sales"
+msgstr "Продажби"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Sales Team"
+msgstr "Търговски отдел"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Salesperson"
+msgstr "Търговец"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Source"
+msgstr "Източник"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Stage"
+msgstr "Стадий"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Success (%)"
+msgstr "Успех (%)"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Tag"
+msgstr "Маркер"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+msgid "Tags"
+msgstr "Маркери"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "To close"
+msgstr "За затваряне"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Top Campaigns"
+msgstr "Топ кампании"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Top Cities"
+msgstr "Топ градове"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Top Countries"
+msgstr "Топ страни"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Top Lost Reasons"
+msgstr "Топ причини за загуба"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Top Mediums"
+msgstr "Топ медии"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Top Opportunities"
+msgstr "Топ възможности"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Top Sales Teams"
+msgstr "Топ търговски екипи"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Top Salespeople"
+msgstr "Топ търговци"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Top Sources"
+msgstr "Топ източници"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Top Tags"
+msgstr "Топ тагове"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Total days to assign"
+msgstr "Общо дни за възлагане"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Total days to win"
+msgstr "Общо дни за спечелване"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Total leads"
+msgstr "Общо потенциални клиенти"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "Won"
+msgstr "Спечелени"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "Won leads"
+msgstr "Спечелени потенциални клиенти"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+msgid "last period"
+msgstr "последен период"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/leads_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "since last period"
+msgstr "от последния период"
+
+#. module: spreadsheet_dashboard_crm
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_crm/data/files/pipeline_sample_dashboard.json:0
+msgid "to close"
+msgstr "за затваряне"

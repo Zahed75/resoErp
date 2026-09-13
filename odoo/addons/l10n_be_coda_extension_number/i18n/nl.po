@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_be_coda_extension_number
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-03 18:05+0000\n"
+"PO-Revision-Date: 2026-07-03 18:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,field_description:l10n_be_coda_extension_number.field_account_journal__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,field_description:l10n_be_coda_extension_number.field_account_journal__extension_number
+msgid "Extension Number"
+msgstr ""
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,field_description:l10n_be_coda_extension_number.field_account_journal__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model,name:l10n_be_coda_extension_number.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_be_coda_extension_number
+#: model:ir.model.fields,help:l10n_be_coda_extension_number.field_account_journal__extension_number
+msgid ""
+"Required if you have multiple accounts sharing the same IBAN and same "
+"currency. It specifies the journal used for processing the corresponding "
+"coda file"
+msgstr ""

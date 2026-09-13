@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- WhatsApp Chatbot Rules Form View -->
+    <record id="view_reso_whatsapp_chatbot_rule_form" model="ir.ui.view">
+        <field name="name">reso.whatsapp.chatbot.rule.form</field>
+        <field name="model">reso.whatsapp.chatbot.rule</field>
+        <field name="arch" type="xml">
+            <form string="WhatsApp Chatbot &amp; FAQ Rule">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Rule / Topic Name..."/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="category"/>
+                            <field name="sequence"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="trigger_keywords" placeholder="checkin, check-in, timing..."/>
+                            <field name="require_human_handoff"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Automated Reply Template">
+                            <field name="response_template" placeholder="Type automated response message..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- WhatsApp Chatbot Rules Tree View -->
+    <record id="view_reso_whatsapp_chatbot_rule_tree" model="ir.ui.view">
+        <field name="name">reso.whatsapp.chatbot.rule.tree</field>
+        <field name="model">reso.whatsapp.chatbot.rule</field>
+        <field name="arch" type="xml">
+            <list string="WhatsApp Chatbot Rules">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="trigger_keywords"/>
+                <field name="require_human_handoff"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- WhatsApp Chatbot Rule Action -->
+    <record id="action_reso_whatsapp_chatbot_rule" model="ir.actions.act_window">
+        <field name="name">Chatbot &amp; FAQ Rules</field>
+        <field name="res_model">reso.whatsapp.chatbot.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- WhatsApp Message Log Tree View -->
+    <record id="view_reso_whatsapp_message_tree" model="ir.ui.view">
+        <field name="name">reso.whatsapp.message.tree</field>
+        <field name="model">reso.whatsapp.message</field>
+        <field name="arch" type="xml">
+            <list string="WhatsApp Message Logs">
+                <field name="create_date" string="Date"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="phone"/>
+                <field name="message_type" widget="badge" decoration-info="message_type == 'inbound'" decoration-success="message_type == 'outbound'"/>
+                <field name="body"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- WhatsApp Message Log Action -->
+    <record id="action_reso_whatsapp_message" model="ir.actions.act_window">
+        <field name="name">WhatsApp Activity Log</field>
+        <field name="res_model">reso.whatsapp.message</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

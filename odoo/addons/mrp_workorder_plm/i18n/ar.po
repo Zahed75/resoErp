@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_workorder_plm
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# "Malaz Siddig Elsayed Abuidris (msea)" <msea@odoo.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-10 17:49+0000\n"
+"PO-Revision-Date: 2026-08-19 13:10+0000\n"
+"Last-Translator: \"Malaz Siddig Elsayed Abuidris (msea)\" <msea@odoo.com>\n"
+"Language-Team: Arabic <https://translate.odoo.com/projects/odoo-19/"
+"mrp_workorder_plm/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: mrp_workorder_plm
+#. odoo-python
+#: code:addons/mrp_workorder_plm/wizard/propose_change.py:0
+msgid ""
+"BoM feedback for not found step: %(step)s (%(production)s - %(operation)s)"
+msgstr ""
+"ملاحظات قائمة المواد للخطوة التي لم يتم العثور عليها: %(step)s (%"
+"(production)s - %(operation)s)"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,help:mrp_workorder_plm.field_mrp_eco_routing_change__test_type
+msgid "Defines the type of the quality control point."
+msgstr "يحدد نوع نقطة مراقبة الجودة."
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco_routing_change__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_production__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_propose_change__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_quality_check__display_name
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_quality_point__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco__routing_change_ids_on_operation
+msgid "ECO Routing Changes - Operation"
+msgstr "تغييرات مسار أمر التغيير الهندسي - العملية"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco__routing_change_ids_on_quality_point
+msgid "ECO Routing Changes - Quality Point"
+msgstr "تغييرات مسار أمر التغيير الهندسي - نقطة مراقبة الجودة"
+
+#. module: mrp_workorder_plm
+#: model:ir.model,name:mrp_workorder_plm.model_mrp_eco_routing_change
+msgid "Eco Routing changes"
+msgstr "تغييرات مسارات أمر التغيير الهندسي"
+
+#. module: mrp_workorder_plm
+#: model:ir.model,name:mrp_workorder_plm.model_mrp_eco
+msgid "Engineering Change Order (ECO)"
+msgstr "أمر التغيير الهندسي (ECO)"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco__id
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco_routing_change__id
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_production__id
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_propose_change__id
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_quality_check__id
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_quality_point__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: mrp_workorder_plm
+#: model_terms:ir.ui.view,arch_db:mrp_workorder_plm.mrp_workorder_eco_view_form
+msgid "Instruction Changes"
+msgstr "تغييرات الإرشادات"
+
+#. module: mrp_workorder_plm
+#. odoo-python
+#: code:addons/mrp_workorder_plm/models/mrp_workorder.py:0
+#: code:addons/mrp_workorder_plm/wizard/propose_change.py:0
+msgid "Instruction Suggestions (%(wo_name)s)"
+msgstr "اقتراحات الإرشادات (%(wo_name)s)"
+
+#. module: mrp_workorder_plm
+#: model:ir.model,name:mrp_workorder_plm.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "أمر التصنيع"
+
+#. module: mrp_workorder_plm
+#. odoo-python
+#: code:addons/mrp_workorder_plm/models/mrp_workorder.py:0
+msgid "New Step Suggestion: %s"
+msgstr "اقتراح خطوة جديدة: %s"
+
+#. module: mrp_workorder_plm
+#: model_terms:ir.ui.view,arch_db:mrp_workorder_plm.mrp_workorder_eco_view_form
+msgid "Open Quality Point"
+msgstr "فتح نقطة مراقبة الجودة"
+
+#. module: mrp_workorder_plm
+#: model:ir.model,name:mrp_workorder_plm.model_propose_change
+msgid "Propose a change in the production"
+msgstr "اقتراح تغيير في الإنتاج"
+
+#. module: mrp_workorder_plm
+#: model_terms:ir.ui.view,arch_db:mrp_workorder_plm.mrp_workorder_eco_view_form
+msgid "Quality Changes made on the quality point."
+msgstr "تغييرات الجودة التي تم إجراؤها على نقطة مراقبة الجودة."
+
+#. module: mrp_workorder_plm
+#: model:ir.model,name:mrp_workorder_plm.model_quality_check
+msgid "Quality Check"
+msgstr "فحص الجودة"
+
+#. module: mrp_workorder_plm
+#: model:ir.model,name:mrp_workorder_plm.model_quality_point
+msgid "Quality Control Point"
+msgstr "نقطة مراقبة الجودة"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco_routing_change__quality_point_id
+msgid "Quality Point"
+msgstr "نقطة الجودة"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco_routing_change__step
+msgid "Step"
+msgstr "خطوة"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco_routing_change__test_type
+msgid "Step Type"
+msgstr "نوع الخطوة"
+
+#. module: mrp_workorder_plm
+#: model:ir.model.fields,field_description:mrp_workorder_plm.field_mrp_eco_routing_change__title
+msgid "Title"
+msgstr "العنوان"
+
+#. module: mrp_workorder_plm
+#. odoo-python
+#: code:addons/mrp_workorder_plm/models/mrp_workorder.py:0
+msgid ""
+"Unable to add the proposed step to the corresponding Engineering Change "
+"Order (ECO) for this work order (WO) because multiple operations were "
+"matched with the WO. Please differentiate the operations by name, work "
+"center, or product variant. Please let your manager know if you need "
+"additional assistance for your proposed change."
+msgstr ""
+"تعذر إضافة الخطوة المقترحة إلى أمر التغيير الهندسي (ECO) المقابل لأمر العمل "
+"(WO) هذا، نظرًا لوجود عدة عمليات مطابقة مع أمر العمل. يرجى التمييز بين "
+"العمليات حسب الاسم أو مركز العمل أو نوع المنتج. يرجى إبلاغ مديرك إذا كنت بحاجة "
+"إلى مساعدة إضافية بشأن التغيير المقترح."
+
+#. module: mrp_workorder_plm
+#. odoo-python
+#: code:addons/mrp_workorder_plm/models/mrp_workorder.py:0
+msgid ""
+"Unable to add the proposed step to the corresponding Engineering Change "
+"Order (ECO) for this work order because no corresponding operation could not "
+"be found in the ECO's Bill of Materials (BoM). This can happen if the BoM "
+"was modified after the manufacturing order was created. Please let your "
+"manager know if you need additional assistance for your proposed change."
+msgstr ""
+"لا يمكن إضافة الخطوة المقترحة إلى أمر التغيير الهندسي (ECO) المقابل لأمر العمل "
+"هذا، لعدم العثور على عملية مطابقة في قائمة المواد (BoM) الخاصة بأمر التغيير "
+"الهندسي. وقد يحدث ذلك في حالة تعديل قائمة المواد بعد إنشاء أمر التصنيع. يرجى "
+"إبلاغ مديرك إذا كنت بحاجة إلى مساعدة إضافية بشأن التغيير المقترح."

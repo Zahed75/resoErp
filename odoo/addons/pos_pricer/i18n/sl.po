@@ -1,0 +1,528 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_pricer
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-05 19:36+0000\n"
+"PO-Revision-Date: 2026-08-06 10:48+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"pos_pricer/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: pos_pricer
+#: model:ir.model.constraint,message:pos_pricer.constraint_pricer_tag_name_unique
+#, fuzzy
+msgid "A Pricer tag with this barcode id already exists"
+msgstr "Oznaka Pricer s tem ID-jem črtne kode že obstaja"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__pricer_store_id
+#, fuzzy
+msgid "Associated Pricer Store"
+msgstr "Povezana trgovina Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__product_id
+#, fuzzy
+msgid "Associated Product"
+msgstr "Povezani izdelek"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__auth_url
+#, fuzzy
+msgid "Auth Url"
+msgstr "URL za preverjanje pristnosti"
+
+#. module: pos_pricer
+#: model:product.pricelist,name:pos_pricer.pricer_demo_pricelist
+msgid "Christmas"
+msgstr "Božič"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_res_partner
+msgid "Contact"
+msgstr "Stik"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__create_or_update_products_url
+#, fuzzy
+msgid "Create Or Update Products Url"
+msgstr "Ustvari ali posodobi URL-je izdelkov"
+
+#. module: pos_pricer
+#: model:ir.model,website_form_label:pos_pricer.model_res_partner
+#, fuzzy
+msgid "Create a Customer"
+msgstr "Ustvari stranko"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__create_uid
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__create_date
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__last_update_datetime
+#, fuzzy
+msgid "Date and time of the last synchronization with Pricer"
+msgstr "Datum in čas zadnje sinhronizacije s Pricerjem"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_account_tax__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_pos_config__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_product_supplierinfo__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_product_template__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_res_partner__display_name
+#: model:ir.model.fields,field_description:pos_pricer.field_stock_move__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_store.py:0
+#, fuzzy
+msgid "Error"
+msgstr "Napaka"
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_store.py:0
+#, fuzzy
+msgid "Error: %(code)s - %(reason)s"
+msgstr "Napaka: %(code)s - %(reason)s"
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_store.py:0
+#, fuzzy
+msgid "Error: check Pricer credentials"
+msgstr "Napaka: preverite poverilnice Pricerja"
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_store.py:0
+#, fuzzy
+msgid "Everything is already up to date with Pricer. No update needed."
+msgstr "Vse je že posodobljeno s Pricerjem. Posodobitev ni potrebna."
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_store.py:0
+#, fuzzy
+msgid "Failed to unlink Pricer tag %(pricer_tag)s at API url %(api_url)s"
+msgstr ""
+"Oznake Pricer %(pricer_tag)s na naslovu API-ja %(api_url)s ni bilo mogoče "
+"odstraniti"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_account_tax__id
+#: model:ir.model.fields,field_description:pos_pricer.field_pos_config__id
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__id
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__id
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__id
+#: model:ir.model.fields,field_description:pos_pricer.field_product_supplierinfo__id
+#: model:ir.model.fields,field_description:pos_pricer.field_product_template__id
+#: model:ir.model.fields,field_description:pos_pricer.field_res_partner__id
+#: model:ir.model.fields,field_description:pos_pricer.field_stock_move__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_store_identifier
+#, fuzzy
+msgid "Identifier of the store in the Pricer system"
+msgstr "Identifikator trgovine v sistemu Pricer"
+
+#. module: pos_pricer
+#. odoo-javascript
+#: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
+#, fuzzy
+msgid ""
+"Invalid tag name. Should be 1 letter followed by 16 digits. Example: "
+"'N4081315789813275'"
+msgstr ""
+"Neveljavno ime oznake. Sestavljeno mora biti iz 1 črke, ki ji sledi 16 "
+"števk. Primer: 'N4081315789813275'"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_tag__name
+#, fuzzy
+msgid "It is recommended to use a barcode scanner for input"
+msgstr "Za vnos je priporočljivo uporabiti čitalnik črtnih kod"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__last_update_datetime
+msgid "Last Update"
+msgstr "Zadnja posodobitev"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__last_update_status_message
+#, fuzzy
+msgid "Last Update Status"
+msgstr "Status zadnje posodobitve"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__write_uid
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__write_date
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__link_tags_url
+#, fuzzy
+msgid "Link Tags Url"
+msgstr "URL oznak povezav"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_login
+#, fuzzy
+msgid "Login of your Pricer account"
+msgstr "Prijava v vaš račun Pricer"
+
+#. module: pos_pricer
+#. odoo-javascript
+#: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
+#, fuzzy
+msgid "No product found for barcode '%s'"
+msgstr "Za črtno kodo '%s' ni bil najden noben izdelek"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__on_sale_price
+#, fuzzy
+msgid "On Sale Price"
+msgstr "Akcijska cena"
+
+#. module: pos_pricer
+#: model:ir.actions.server,name:pos_pricer.pricer_sync_cron_ir_actions_server
+#, fuzzy
+msgid "POS Pricer: tags update synchronization "
+msgstr "POS Pricer: sinhronizacija posodabljanja oznak"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_password
+#, fuzzy
+msgid "Password of your Pricer account"
+msgstr "Geslo vašega računa Pricer"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "Nastavitve POS-blagajne"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_product_product__on_sale_price
+#, fuzzy
+msgid "Price after setting a Pricer Sales Pricelist"
+msgstr "Cena po nastavitvi prodajnega cenika Pricer"
+
+#. module: pos_pricer
+#: model:ir.ui.menu,name:pos_pricer.pos_menu_pricer_configuration
+#: model_terms:ir.ui.view,arch_db:pos_pricer.product_product_form_view_pricers
+#, fuzzy
+msgid "Pricer"
+msgstr "Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_display_price
+#, fuzzy
+msgid "Pricer Display Price"
+msgstr "Prikazana cena Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_login
+#, fuzzy
+msgid "Pricer Login"
+msgstr "Prijava Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_password
+#, fuzzy
+msgid "Pricer Password"
+msgstr "Geslo Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_product_to_create_or_update
+#, fuzzy
+msgid "Pricer Product To Create Or Update"
+msgstr "Izdelek Pricer za ustvarjanje ali posodobitev"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__pricer_product_to_link
+#, fuzzy
+msgid "Pricer Product To Link"
+msgstr "Izdelek Pricer za povezavo"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_sale_pricelist_id
+#, fuzzy
+msgid "Pricer Sales Pricelist"
+msgstr "Prodajni cenik Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_store_id
+#: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_form_view
+#: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
+#, fuzzy
+msgid "Pricer Store"
+msgstr "Trgovina Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_store_identifier
+#, fuzzy
+msgid "Pricer Store ID"
+msgstr "ID trgovine Pricer"
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_store.py:0
+#, fuzzy
+msgid ""
+"Pricer Store ID must only contain lowercase a-z, 0-9 or '-' and not start "
+"with '-'"
+msgstr ""
+"ID trgovine Pricer lahko vsebuje samo male črke a–z, števke 0–9 ali '-' in "
+"se ne sme začeti z '-'"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__name
+#, fuzzy
+msgid "Pricer Store name in Odoo database"
+msgstr "Ime trgovine Pricer v podatkovni zbirki Odoo"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_pricer_store
+#, fuzzy
+msgid "Pricer Store regrouping pricer tags"
+msgstr "Prerazporejanje oznak Pricer v trgovini"
+
+#. module: pos_pricer
+#: model:ir.actions.act_window,name:pos_pricer.action_open_pricer_stores
+#: model:ir.ui.menu,name:pos_pricer.menu_pos_pricer_stores
+#, fuzzy
+msgid "Pricer Stores"
+msgstr "Trgovine Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__name
+#, fuzzy
+msgid "Pricer Tag Barcode ID"
+msgstr "ID črtne kode cenovne oznake"
+
+#. module: pos_pricer
+#: model:ir.actions.act_window,name:pos_pricer.action_open_pricer_tags
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_tag_ids
+#: model:ir.ui.menu,name:pos_pricer.menu_pos_pricer_tags
+#, fuzzy
+msgid "Pricer Tags"
+msgstr "Pricerjeve oznake"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_tenant_name
+#, fuzzy
+msgid "Pricer Tenant Name"
+msgstr "Ime najemnika Pricer"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_pricer_tag
+#, fuzzy
+msgid "Pricer electronic tag"
+msgstr "Pricerjeva elektronska cenovna oznaka"
+
+#. module: pos_pricer
+#: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_tag_view_list
+#, fuzzy
+msgid "Pricer tag"
+msgstr "Pricerjeva oznaka"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__dummy_tag_barcode
+#, fuzzy
+msgid "Pricer tag barcode"
+msgstr "Črtna koda cenovne oznake"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_tag_ids
+#, fuzzy
+msgid "Pricer tags ids"
+msgstr "ID-ji Pricerjevih oznak"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_product_template
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: pos_pricer
+#. odoo-javascript
+#: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
+#, fuzzy
+msgid "Product '%s' found"
+msgstr "Izdelek '%s' najden"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_product_product
+msgid "Product Variant"
+msgstr "Različica proizvoda"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__dummy_prod_barcode
+#, fuzzy
+msgid "Product barcode"
+msgstr "Črtna koda artikla"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__product_ids
+msgid "Products"
+msgstr "Proizvodi"
+
+#. module: pos_pricer
+#: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_form_view
+#, fuzzy
+msgid "Quick pairing"
+msgstr "Hitro seznanjanje"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__dummy_tag_barcode
+#, fuzzy
+msgid "Scan the Pricer tag barcode here"
+msgstr "Tukaj skenirajte črtno kodo oznake Pricer"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__dummy_prod_barcode
+#, fuzzy
+msgid "Scan the product barcode here"
+msgstr "Tukaj skenirajte črtno kodo izdelka"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__last_update_status_message
+#, fuzzy
+msgid "Status message of the last synchronization with Pricer"
+msgstr "Sporočilo o stanju zadnje sinhronizacije s Pricerjem"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_stock_move
+msgid "Stock Move"
+msgstr "Premik zaloge"
+
+#. module: pos_pricer
+#: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__name
+#, fuzzy
+msgid "Store Name"
+msgstr "Ime trgovine"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "Cenik dobavitelja"
+
+#. module: pos_pricer
+#. odoo-javascript
+#: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
+#, fuzzy
+msgid "Tag '%s' found"
+msgstr "Oznaka '%s' najdena"
+
+#. module: pos_pricer
+#. odoo-javascript
+#: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
+#, fuzzy
+msgid "Tag '%s' not found, creating it"
+msgstr "Oznaka '%s' ni najdena, ustvarjam jo"
+
+#. module: pos_pricer
+#. odoo-javascript
+#: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
+#, fuzzy
+msgid "Tag '%s' successfully linked with product '%s'"
+msgstr "Oznaka '%s' je bila uspešno povezana z izdelkom '%s'"
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_tag.py:0
+#, fuzzy
+msgid ""
+"Tag id should be a 17 characters string composed of a letter followed by 16 "
+"digits"
+msgstr ""
+"ID oznake mora biti 17-mestni niz, sestavljen iz črke, ki ji sledi 16 številk"
+
+#. module: pos_pricer
+#: model:ir.model,name:pos_pricer.model_account_tax
+msgid "Tax"
+msgstr "Davek"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_product_product__pricer_sale_pricelist_id
+#, fuzzy
+msgid ""
+"This pricelist will be used to set sales on Pricer tags for this product"
+msgstr ""
+"Ta cenik bo uporabljen za nastavitev prodaj na oznakah Pricer za ta izdelek"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_tag__pricer_store_id
+#: model:ir.model.fields,help:pos_pricer.field_product_product__pricer_store_id
+#, fuzzy
+msgid ""
+"This product will be linked to and displayed on the Pricer tags of the store "
+"selected here"
+msgstr ""
+"Ta izdelek bo povezan z oznakami Pricer in prikazan na njih v tukaj izbrani "
+"trgovini"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_product_product__pricer_tag_ids
+#, fuzzy
+msgid ""
+"This product will be linked to and displayed on the Pricer tags with ids "
+"listed here. It is recommended to use a barcode scanner"
+msgstr ""
+"Ta izdelek bo povezan z oznakami Pricer z ID-ji, navedenimi tukaj, in "
+"prikazan na njih. Priporočamo uporabo čitalnika črtnih kod"
+
+#. module: pos_pricer
+#. odoo-python
+#: code:addons/pos_pricer/models/pricer_store.py:0
+#, fuzzy
+msgid "Update successfully sent to Pricer"
+msgstr "Posodobitev je bila uspešno poslana v Pricer"
+
+#. module: pos_pricer
+#: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
+#, fuzzy
+msgid "Update tags"
+msgstr "Posodobitev oznak"
+
+#. module: pos_pricer
+#: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_tenant_name
+#, fuzzy
+msgid "Your company identifier at Pricer"
+msgstr "Identifikator vašega podjetja pri Pricerju"

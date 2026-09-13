@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_whatsapp_register_phone_system_admin,access.whatsapp.register.phone.system.admin,model_whatsapp_register_phone,base.group_system,1,1,1,1
+access_whatsapp_register_phone_admin,access.whatsapp.register.phone.admin,model_whatsapp_register_phone,whatsapp.group_whatsapp_admin,1,1,1,0

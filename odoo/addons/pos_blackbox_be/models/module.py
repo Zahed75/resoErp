@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
+from odoo import models
+from odoo.exceptions import UserError
+from odoo.tools.translate import _
+
+
+class IrModuleModule(models.Model):
+    _inherit = "ir.module.module"
+
+    def module_uninstall(self):
+        for module_to_remove in self:
+            if module_to_remove.name == "pos_blackbox_be" and not self._uninstall_blackbox_condition():
+                raise UserError(_("This module is not allowed to be removed."))
+
+        return super().module_uninstall()
+
+    def _uninstall_blackbox_condition(self):
+        return self.env['pos.config'].search_count([('certified_blackbox_identifier', '!=', False)], limit=1) == 0

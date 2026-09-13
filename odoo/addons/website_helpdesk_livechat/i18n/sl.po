@@ -1,0 +1,422 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * website_helpdesk_livechat
+#
+# Translators:
+# Jasmina Macur <jasmina@hbs.si>, 2022
+# Matjaz Mozetic <m.mozetic@matmoz.si>, 2022
+# Martin Trigaux, 2022
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-08-06 12:33+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/"
+"website_helpdesk_livechat/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/chatbot_script_step.py:0
+#, fuzzy
+msgid "%(name)s's Ticket"
+msgstr "Zahtevek uporabnika %(name)s"
+
+#. module: website_helpdesk_livechat
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_livechat.helpdesk_tiket_view_form_inherit_website_helpdesk_livechat
+msgid "<span class=\"o_stat_text\">View chat</span>"
+msgstr "<span class=\"o_stat_text\">Ogled klepeta</span>"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_done
+#, fuzzy
+msgid "Alright, we should have everything we need"
+msgstr "V redu, zdaj bi morali imeti vse, kar potrebujemo"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/chatbot_script.py:0
+#, fuzzy
+msgid ""
+"An \"Email\" step type must exist before the \"Create Ticket\" step for a "
+"ticket to be created."
+msgstr ""
+"Za ustvarjanje vstopnice mora pred korakom »Ustvari vstopnico« obstajati "
+"korak vrste »E-pošta«."
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_technical_serial_misc
+#, fuzzy
+msgid "Anything else to add?"
+msgstr "Želite še kaj dodati?"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,name:website_helpdesk_livechat.model_chatbot_script
+msgid "Chatbot Script"
+msgstr "Skript klepetalnega robota"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,name:website_helpdesk_livechat.model_chatbot_script_step
+msgid "Chatbot Script Step"
+msgstr "Korak skripta klepetalnega robota"
+
+#. module: website_helpdesk_livechat
+#: model:ir.ui.menu,name:website_helpdesk_livechat.chatbot_config
+msgid "Chatbots"
+msgstr "Chatbot-i"
+
+#. module: website_helpdesk_livechat
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_livechat.helpdesk_team_view_form_inherit_website_helpdesk_livechat
+#, fuzzy
+msgid "Configure Chatbots"
+msgstr "Konfiguriraj klepetalne robote"
+
+#. module: website_helpdesk_livechat
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_livechat.helpdesk_team_view_form_inherit_website_helpdesk_livechat
+#, fuzzy
+msgid "Configure Live Chat Channel"
+msgstr "Konfigurirajte kanal klepeta v živo"
+
+#. module: website_helpdesk_livechat
+#. odoo-javascript
+#: code:addons/website_helpdesk_livechat/static/src/core/thread_actions.js:0
+#: model:ir.model.fields.selection,name:website_helpdesk_livechat.selection__chatbot_script_step__step_type__create_ticket
+msgid "Create Ticket"
+msgstr "Ustvari zahtevek"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,website_form_label:website_helpdesk_livechat.model_helpdesk_ticket
+msgid "Create a Ticket"
+msgstr "Ustvari zahtevek"
+
+#. module: website_helpdesk_livechat
+#. odoo-javascript
+#: code:addons/website_helpdesk_livechat/static/src/core/web/store_service_patch.js:0
+#, fuzzy
+msgid "Create a new helpdesk ticket (/ticket ticket title)"
+msgstr "Ustvari nov zahtevek za pomoč (/ticket naslov zahtevka)"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+#, fuzzy
+msgid ""
+"Create a new helpdesk ticket with: %(pre_start)s%(ticket_command)s %"
+"(i_start)sticket title%(i_end)s%(pre_end)s"
+msgstr ""
+"Ustvari nov zahtevek za podporo z: %(pre_start)s%(ticket_command)s %(i_start)"
+"snaslov zahtevka%(i_end)s%(pre_end)s"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+#, fuzzy
+msgid "Created a new ticket: %s"
+msgstr "Ustvarjena je bila nova vstopnica: %s"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,name:website_helpdesk_livechat.model_discuss_channel
+msgid "Discussion Channel"
+msgstr "Kanal za razprave"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_chatbot_script__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_chatbot_script_step__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_discuss_channel__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_helpdesk_team__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_helpdesk_ticket__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_im_livechat_report_channel__display_name
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_res_users__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_dispatch
+#, fuzzy
+msgid "First, what is the nature of your issue?"
+msgstr "Najprej, kakšna je narava vaše težave?"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_administrative_customer_ref_yes
+#, fuzzy
+msgid "Great, that will make our lives easier."
+msgstr "Odlično, to nam bo olajšalo delo."
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_discuss_channel__has_helpdesk_ticket
+#, fuzzy
+msgid "Has Helpdesk Ticket"
+msgstr "Ima zahtevek za pomoč uporabnikom"
+
+#. module: website_helpdesk_livechat
+#: model:chatbot.script,title:website_helpdesk_livechat.chatbot_script_helpdesk_bot
+#, fuzzy
+msgid "Helpdesk Bot"
+msgstr "Klepetalni robot službe za pomoč"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,name:website_helpdesk_livechat.model_helpdesk_team
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_chatbot_script_step__helpdesk_team_id
+msgid "Helpdesk Team"
+msgstr "Skupina za pomoč uporabnikom"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,name:website_helpdesk_livechat.model_helpdesk_ticket
+msgid "Helpdesk Ticket"
+msgstr "Zahtevek za pomoč uporabnikom"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_welcome
+#, fuzzy
+msgid "Here we go, help is on the way!"
+msgstr "Pa začnimo, pomoč je na poti!"
+
+#. module: website_helpdesk_livechat
+#: model:chatbot.script.answer,name:website_helpdesk_livechat.chatbot_script_helpdesk_step_dispatch_answer_technical
+#, fuzzy
+msgid "I have a technical issue"
+msgstr "Imam tehnično težavo"
+
+#. module: website_helpdesk_livechat
+#: model:chatbot.script.answer,name:website_helpdesk_livechat.chatbot_script_helpdesk_step_dispatch_answer_administrative
+#, fuzzy
+msgid "I have an administrative question"
+msgstr "Imam administrativno vprašanje"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_chatbot_script__id
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_chatbot_script_step__id
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_discuss_channel__id
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_helpdesk_team__id
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_helpdesk_ticket__id
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_im_livechat_report_channel__id
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_res_users__id
+msgid "ID"
+msgstr "ID"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_administrative_customer_ref_no
+#, fuzzy
+msgid "It's OK, we can also find your contract by other means."
+msgstr "V redu, vašo pogodbo lahko najdemo tudi na druge načine."
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_email
+#, fuzzy
+msgid "Just a last thing, can we please have your email address?"
+msgstr "Še zadnja stvar, nam lahko prosim posredujete svoj e-poštni naslov?"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_helpdesk_team__use_website_helpdesk_livechat
+msgid "Live Chat"
+msgstr "Pogovor v živo"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_helpdesk_ticket__origin_channel_id
+#, fuzzy
+msgid "Live chat from which the ticket was created"
+msgstr "Klepet v živo, iz katerega je bil ustvarjen zahtevek"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,name:website_helpdesk_livechat.model_im_livechat_report_channel
+msgid "Livechat Support Channel Report"
+msgstr "Poročilo o kanalu za podporo v živo"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+msgid "Load More"
+msgstr "Naloži več"
+
+#. module: website_helpdesk_livechat
+#: model:chatbot.script.answer,name:website_helpdesk_livechat.chatbot_script_helpdesk_step_administrative_customer_ref_answer_no
+msgid "No"
+msgstr "Ne"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+#, fuzzy
+msgid ""
+"No tickets found for %(b_start)s%(keywords)s%(b_end)s.%(br)sMake sure you "
+"are using the right format: %(pre_start)s%(search_tickets_command)s %"
+"(i_start)skeywords%(i_end)s%(pre_end)s"
+msgstr ""
+"Ni najdenih zahtevkov za %(b_start)s%(keywords)s%(b_end)s.%(br)sPrepričajte "
+"se, da uporabljate pravilno obliko: %(pre_start)s%(search_tickets_command)s %"
+"(i_start)sključne besede%(i_end)s%(pre_end)s"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_ticket
+#, fuzzy
+msgid ""
+"OK, I just created a ticket for you. You should receive an email "
+"confirmation very soon."
+msgstr ""
+"V redu, pravkar sem za vas ustvaril zahtevek. Kmalu bi morali prejeti "
+"potrditveno e-poštno sporočilo."
+
+#. module: website_helpdesk_livechat
+#. odoo-javascript
+#: code:addons/website_helpdesk_livechat/static/src/core/web/livechat_channel_info_list_patch.xml:0
+#, fuzzy
+msgid "Open tickets"
+msgstr "Odprti zahtevki"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_technical_serial
+#, fuzzy
+msgid "Please write below the serial number of your equipment."
+msgstr "Prosimo, spodaj vpišite serijsko številko svoje opreme."
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_administrative_customer_ref_input
+#, fuzzy
+msgid "Please write below your customer reference."
+msgstr "Prosimo, spodaj vnesite sklic stranke."
+
+#. module: website_helpdesk_livechat
+#. odoo-javascript
+#: code:addons/website_helpdesk_livechat/static/src/core/web/store_service_patch.js:0
+#, fuzzy
+msgid "Search helpdesk tickets (/search_tickets keyword)"
+msgstr "Išči zahtevke podpore (/search_tickets ključna beseda)"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+#, fuzzy
+msgid ""
+"Search helpdesk tickets by typing: %(pre_start)s%(search_tickets_command)s %"
+"(i_start)skeywords%(i_end)s%(pre_end)s"
+msgstr ""
+"Zahtevke službe za pomoč uporabnikom poiščite tako, da vnesete: %(pre_start)"
+"s%(search_tickets_command)s %(i_start)skeywords%(i_end)s%(pre_end)s"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+#, fuzzy
+msgid "Something is missing or wrong in command"
+msgstr "V ukazu nekaj manjka ali je napačno"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+#, fuzzy
+msgid "Something is missing or wrong in the command"
+msgstr "V ukazu nekaj manjka ali je napačno"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_chatbot_script_step__step_type
+msgid "Step Type"
+msgstr "Vrsta koraka"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_technical_serial_thanks
+#, fuzzy
+msgid "Thank you, that will help our engineers see what went wrong."
+msgstr "Hvala, to bo našim inženirjem pomagalo ugotoviti, kaj je šlo narobe."
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,help:website_helpdesk_livechat.field_discuss_channel__ticket_ids
+#, fuzzy
+msgid "The channel becomes accessible to helpdesk users when tickets are set."
+msgstr ""
+"Kanal postane dostopen uporabnikom službe za pomoč uporabnikom, ko so "
+"nastavljeni zahtevki."
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_discuss_channel__ticket_ids
+#: model_terms:ir.ui.view,arch_db:website_helpdesk_livechat.chatbot_script_view_form
+msgid "Tickets"
+msgstr "Zahtevki"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model.fields,field_description:website_helpdesk_livechat.field_im_livechat_report_channel__tickets_created
+#, fuzzy
+msgid "Tickets created"
+msgstr "Ustvarjeni zahtevki"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/discuss_channel.py:0
+#, fuzzy
+msgid ""
+"Tickets search results for %(b_start)s%(keywords)s%(b_end)s: %(br)s%"
+"(tickets)s"
+msgstr ""
+"Rezultati iskanja zahtevkov za %(b_start)s%(keywords)s%(b_end)s: %(br)s%"
+"(tickets)s"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_administrative_customer_ref
+#, fuzzy
+msgid ""
+"To start with, do you have a customer reference?\n"
+"They are written on each invoice you received, next to your name."
+msgstr ""
+"Za začetek, ali imate referenco stranke?\n"
+"Navedene so na vsakem prejetem računu poleg vašega imena."
+
+#. module: website_helpdesk_livechat
+#: model:res.groups,name:website_helpdesk_livechat.group_use_website_helpdesk_livechat
+#, fuzzy
+msgid "Use Live Chat"
+msgstr "Uporabi pogovor v živo"
+
+#. module: website_helpdesk_livechat
+#: model:ir.model,name:website_helpdesk_livechat.model_res_users
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: website_helpdesk_livechat
+#: model_terms:chatbot.script.step,message:website_helpdesk_livechat.chatbot_script_helpdesk_step_administrative_issue
+#, fuzzy
+msgid "We're all set. Now, what is your issue?"
+msgstr "Vse je pripravljeno. Kakšna je torej vaša težava?"
+
+#. module: website_helpdesk_livechat
+#: model:chatbot.script.answer,name:website_helpdesk_livechat.chatbot_script_helpdesk_step_administrative_customer_ref_answer_yes
+msgid "Yes"
+msgstr "Da"
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/helpdesk_ticket.py:0
+#, fuzzy
+msgid "You cannot create tickets linked to channels you don't have access to."
+msgstr ""
+"Ne morete ustvariti zahtevkov, povezanih s kanali, do katerih nimate dostopa."
+
+#. module: website_helpdesk_livechat
+#. odoo-python
+#: code:addons/website_helpdesk_livechat/models/helpdesk_ticket.py:0
+#, fuzzy
+msgid ""
+"You cannot update a ticket and link it to a channel you don't have access to."
+msgstr ""
+"Zahtevka ne morete posodobiti in ga povezati s kanalom, do katerega nimate "
+"dostopa."
+
+#. module: website_helpdesk_livechat
+#. odoo-javascript
+#: code:addons/website_helpdesk_livechat/static/src/core/thread_actions.js:0
+msgid "e.g. Product arrived damaged"
+msgstr "npr, izdelek je prispel poškodovan"
+
+#~ msgid "Canned Responses"
+#~ msgstr "Pripravljeni odgovori"

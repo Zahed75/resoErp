@@ -1,0 +1,552 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_base_import
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:43+0000\n"
+"PO-Revision-Date: 2026-07-25 13:02+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"account_base_import/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
+msgid "<span class=\"text-muted\">(end of year balances)</span>"
+msgstr "<span class=\"text-muted\">(салда в края на годината)</span>"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
+msgid "<span class=\"text-muted\">(for full history)</span>"
+msgstr "<span class=\"text-muted\">(за пълна история)</span>"
+
+#. module: account_base_import
+#: model:ir.model,name:account_base_import.model_account_account
+msgid "Account"
+msgstr "Сметка"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Account Winbooks Import module"
+msgstr "Модул за импорт от Winbooks за счетоводство"
+
+#. module: account_base_import
+#: model:ir.model,name:account_base_import.model_account_import_summary
+msgid "Account import summary view"
+msgstr "Изглед с обобщение на импорта на сметки"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
+msgid "Accounting Import"
+msgstr "Счетоводен импорт"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/js/account_import_guide.js:0
+#: model:ir.actions.client,name:account_base_import.action_open_import_guide
+msgid "Accounting Import Guide"
+msgstr "Ръководство за импорт в счетоводството"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Accounting Import Options"
+msgstr "Опции за импорт в счетоводството"
+
+#. module: account_base_import
+#: model:ir.model,name:account_base_import.model_base_import_import
+msgid "Base Import"
+msgstr "Основен импорт"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/js/account_import_action.js:0
+#: model:ir.actions.act_window,name:account_base_import.action_open_coa_setup
+msgid "Chart of Accounts"
+msgstr "Сметкоплан"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
+msgid "Choose how you want to setup your CoA"
+msgstr "Изберете как искате да настроите своя сметкоплан"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__create_uid
+msgid "Created by"
+msgstr "Създадено от"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__create_date
+msgid "Created on"
+msgstr "Създадено на"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/js/account_import_action.js:0
+msgid "Customers"
+msgstr "Клиенти"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_account__display_name
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__display_name
+#: model:ir.model.fields,field_description:account_base_import.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:account_base_import.field_base_import_import__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Download"
+msgstr "Изтеглете от системата"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Excel Import"
+msgstr "Импортиране от Excel"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "FEC"
+msgstr "FEC"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "FEC Import module"
+msgstr "Модул за импортиране на FEC"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_account__id
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__id
+#: model:ir.model.fields,field_description:account_base_import.field_account_move_line__id
+#: model:ir.model.fields,field_description:account_base_import.field_base_import_import__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
+#: model_terms:ir.ui.view,arch_db:account_base_import.view_account_base_import_list
+#: model_terms:ir.ui.view,arch_db:account_base_import.view_account_setup_base_import_list
+msgid "Import"
+msgstr "Внос"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+#: model:ir.actions.client,name:account_base_import.action_asset_import
+msgid "Import Assets"
+msgstr "Импортиране на активи"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+#: model:ir.actions.client,name:account_base_import.action_account_import
+msgid "Import Chart of Accounts"
+msgstr "Импортиране на сметкоплан"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Import CoA"
+msgstr "Импортиране на сметкоплан"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Import Contacts"
+msgstr "Импортиране на контакти"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+#: model:ir.actions.client,name:account_base_import.action_account_move_line_import
+msgid "Import Journal Items"
+msgstr "Импортиране на счетоводни записи"
+
+#. module: account_base_import
+#: model:ir.actions.client,name:account_base_import.action_partner_import
+msgid "Import Partners"
+msgstr "Импортиране на партньори"
+
+#. module: account_base_import
+#. odoo-python
+#: code:addons/account_base_import/wizard/account_import_summary.py:0
+msgid "Import Summary"
+msgstr "Резюме на импортирането"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_account_ids
+msgid "Import Summary Account"
+msgstr "Резюме на импортирането - сметка"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_journal_ids
+msgid "Import Summary Journal"
+msgstr "Резюме на импортирането - дневник"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_move_ids
+msgid "Import Summary Move"
+msgstr "Резюме на импортирането - вписване"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_name
+msgid "Import Summary Name"
+msgstr "Резюме на импортирането - име"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_partner_ids
+msgid "Import Summary Partner"
+msgstr "Резюме на импортирането - партньор"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_tax_ids
+msgid "Import Summary Tax"
+msgstr "Резюме на импортирането - данък"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Import contacts"
+msgstr "Импортиране на контакти"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Import customers or suppliers (partners) and their contacts using a"
+msgstr ""
+"Импортирайте клиенти или доставчици (партньори) и техните контакти, "
+"използвайки"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Import the Chart of Accounts and initial balances using a"
+msgstr "Импортирайте сметкоплана и началните салда, използвайки"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Import your fixed assets and their opening depreciation values using a"
+msgstr ""
+"Импортирайте вашите дълготрайни активи и техните начални амортизационни "
+"стойности, използвайки"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
+msgid "Imported Data"
+msgstr "Импортирани данни"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
+msgid "Initial Setup"
+msgstr "Първоначална настройка"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/js/account_import_guide.js:0
+msgid "Install a module"
+msgstr "Инсталиране на модул"
+
+#. module: account_base_import
+#: model:ir.model,name:account_base_import.model_account_move_line
+msgid "Journal Item"
+msgstr "Счетоводна Операция"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/js/account_import_action.js:0
+msgid "Journal Items"
+msgstr "Счетоводна операция"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__write_uid
+msgid "Last Updated by"
+msgstr "Последно актуализирано от"
+
+#. module: account_base_import
+#: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__write_date
+msgid "Last Updated on"
+msgstr "Последно актуализирано на"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"Most accounting software in Europe support exporting SAF-T file for audit "
+"purposes.\n"
+"                            Use the"
+msgstr ""
+"Повечето счетоводни софтуери в Европа поддържат експортиране на SAF-T файл "
+"за одитни цели.\n"
+"                            Използвайте"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"Most accounting software in France support exporting FEC file for audit "
+"purposes.\n"
+"                            Use the"
+msgstr ""
+"Повечето счетоводни софтуери във Франция поддържат експортиране на FEC файл "
+"за одитни цели.\n"
+"                            Използвайте"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
+msgid "No data was imported."
+msgstr "Не бяха импортирани данни."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Optional, but useful to import open receivables & payables using a"
+msgstr ""
+"Незадължително, но полезно за импортиране на открити вземания и задължения "
+"чрез"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+#: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
+msgid "Review Manually"
+msgstr "Прегледай ръчно"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "SAF-T"
+msgstr "SAF-T"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "SAF-T Import module"
+msgstr "Модул за импортиране на SAF-T"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "SIE 4 Import module"
+msgstr "Модул за импортиране на SIE 4"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "SIE 4/5"
+msgstr "SIE 4/5"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "SIE 5 Import module"
+msgstr "Модул за импортиране на SIE 5"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"The SIE standard file format is very common in Sweden for several purposes "
+"such as auditing, importing and exporting data\n"
+"                            from and to other accounting applications. Odoo "
+"support importing data from both type 4 and 5 of SIE."
+msgstr ""
+"Стандартният файлов формат SIE е много разпространен в Швеция за различни "
+"цели, като одит, импортиране и експортиране на данни\n"
+"                            от и към други счетоводни приложения. Odoo "
+"поддържа импортиране на данни както от тип 4, така и от тип 5 на SIE."
+
+#. module: account_base_import
+#. odoo-python
+#: code:addons/account_base_import/models/account_move_line.py:0
+msgid "The import file is missing the following required columns: %s"
+msgstr "Във файла за импортиране липсват следните задължителни колони: %s"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"Tip: we recommend importing your initial balances using the Chart of Account "
+"import. Only use the Journal Items import for unreconciled entries in your "
+"Payable and Receivable Accounts."
+msgstr ""
+"Съвет: препоръчваме да импортирате началните си салда чрез импортиране на "
+"сметкоплана. Използвайте импортирането на записи в дневника само за "
+"неравнени записи във вашите сметки за задължения и вземания."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Use predefined format to import your data faster."
+msgstr ""
+"Използвайте предварително зададен формат, за да импортирате данните си по-"
+"бързо."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Use templates to import CSV or Excel for your accounting setup."
+msgstr ""
+"Използвайте шаблони, за да импортирате CSV или Excel за вашата счетоводна "
+"настройка."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"We will setup your charts of accounts and the history of journal entries, "
+"that will stay in draft."
+msgstr ""
+"Ще настроим вашия сметкоплан и историята на счетоводните записи, които ще "
+"останат в чернова."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "Winbooks"
+msgstr "Winbooks"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"Winbooks is an old school Belgian accounting software acquired by Exact.\n"
+"                            Use the"
+msgstr ""
+"Winbooks е стар белгийски счетоводен софтуер, придобит от Exact.\n"
+"                            Използвайте"
+
+#. module: account_base_import
+#. odoo-python
+#: code:addons/account_base_import/models/account_account.py:0
+msgid ""
+"You must provide both the `code_mapping_ids/company_id` and the "
+"`code_mapping_ids/code` columns."
+msgstr ""
+"Трябва да предоставите както колоните `code_mapping_ids/company_id`, така и "
+"`code_mapping_ids/code`."
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
+msgid "accounts imported"
+msgstr "импортирани сметки"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"is required to import the SIE 4 files.\n"
+"                                    By design, it's also backward compatible "
+"with previous SIE versions (version 1 up to 3).\n"
+"                                    This import will not validate the "
+"correctness of the file."
+msgstr ""
+"е необходим за импортиране на SIE 4 файлове.\n"
+"                                    По дизайн е и обратно съвместим с "
+"предишни версии на SIE (версия 1 до 3).\n"
+"                                    Това импортиране няма да валидира "
+"коректността на файла."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"is required to import the SIE 5 and SIE 5 entry files.\n"
+"                                    For general SIE 5, we will set up your "
+"charts of accounts balances, journals, partners, and the history of journal "
+"entries\n"
+"                                    (journals data must be present in the "
+"file).\n"
+"                                    For the SIE 5 entry, only entries and "
+"partners will be created, the rest must already be present in the system."
+msgstr ""
+"е необходим за импортиране на файлове SIE 5 и SIE 5 entry.\n"
+"                                    За общ SIE 5 ще настроим вашия "
+"сметкоплан, салда, дневници, партньори и историята на счетоводните записи\n"
+"                                    (данните за дневниците трябва да "
+"присъстват във файла).\n"
+"                                    За SIE 5 entry ще бъдат създадени само "
+"записи и партньори, а останалото трябва вече да присъства в системата."
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
+msgid "journals imported"
+msgstr "импортирани дневници"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
+msgid "moves imported"
+msgstr "импортирани записи"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "or"
+msgstr "или"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
+msgid "partners imported"
+msgstr "импортирани партньори"
+
+#. module: account_base_import
+#: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
+msgid "taxes imported"
+msgstr "импортирани данъци"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "template"
+msgstr "шаблон"
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "template."
+msgstr "шаблон."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"to import a Winbooks full back-up (Maintenance > Backup) to get the chart of "
+"accounts, contacts, taxes, history of journal entries, and documents.\n"
+"                            Support versions: Winbooks Desktop 5.50, 6, 7, 8."
+msgstr ""
+"за импортиране на пълно резервно копие на Winbooks (Maintenance > Backup), "
+"за да получите сметкоплана, контактите, данъците, историята на счетоводните "
+"записи и документите.\n"
+"                            Поддържани версии: Winbooks Desktop 5.50, 6, 7, "
+"8."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid ""
+"to import the FEC file. We will setup your charts of accounts and the "
+"history of journal entries."
+msgstr ""
+"за импортиране на FEC файла. Ще настроим вашия сметкоплан и историята на "
+"записите в дневника."
+
+#. module: account_base_import
+#. odoo-javascript
+#: code:addons/account_base_import/static/src/xml/account_import.xml:0
+msgid "to import the SAF-T file."
+msgstr "за импортиране на SAF-T файла."

@@ -1,0 +1,208 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * hr_recruitment_integration_website
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:45+0000\n"
+"PO-Revision-Date: 2026-06-14 21:55+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-19/"
+"hr_recruitment_integration_website/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__apply_method
+msgid "Apply Method"
+msgstr "ວິທີການສະໝັກ"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
+msgid "At least one job board must be selected.\n"
+msgstr "ຕ້ອງເລືອກຢ່າງໜ້ອຍໜຶ່ງກະດານປະກາດຮັບສະໝັກງານ.\n"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__campaign_start_date
+msgid "Campaign Start Date"
+msgstr "ວັນທີເລີ່ມຕົ້ນແຄມເປນ"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
+msgid "Campaign Start Date is required.\n"
+msgstr "ຈຳເປັນຕ້ອງລະບຸວັນທີເລີ່ມຕົ້ນແຄມເປນ.\n"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_job_post__apply_method
+msgid "Contact Method"
+msgstr "ວິທີການຕິດຕໍ່"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__post_html
+msgid "Description"
+msgstr "ຄຳອະທິບາຍ"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
+msgid "Description is required.\n"
+msgstr "ຈຳເປັນຕ້ອງມີຄຳອະທິບາຍ.\n"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_job__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_job_post__display_name
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
+msgid "Generate"
+msgstr "ສ້າງ"
+
+#. module: hr_recruitment_integration_website
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_integration_website.hr_recruitment_post_job_wizard_view_form
+msgid "Generate Description (<i class=\"fa fa-fw fa-magic\"/>AI)"
+msgstr "ສ້າງຄຳອະທິບາຍ (<i class=\"fa fa-fw fa-magic\"/>AI)"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_job__id
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_job_post__id
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__id
+msgid "ID"
+msgstr "ໄອດີ"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
+msgid ""
+"IGNORE PREVIOUS PROMPTS AND FORMAT AS HTML AND NO HYPERLINKS\n"
+"You are the best recruiter in out company and we are looking to hire a new employee.\n"
+"You have been tasked with creating a the best job description for a new job opening.\n"
+"Given the following infos, make a friendly and attractive job description that could be used\n"
+"to attract potential candidates (The platforms could be things like LinkedIn, Indeed, Glassdoor, Monster, etc.)\n"
+"It's your last chance to make a good impression and attract the best candidates to our company so make it count!\n"
+"Here is the data to generate the job description:\n"
+msgstr ""
+"ບໍ່ສົນໃຈຄຳສັ່ງກ່ອນໜ້ານີ້ ແລະ ຈັດຮູບແບບເປັນ HTML ໂດຍບໍ່ມີໄຮເປີລິງ\n"
+"ທ່ານຄືຜູ້ສັນຫາບຸກຄະລາກອນທີ່ເກັ່ງທີ່ສຸດໃນບໍລິສັດຂອງພວກເຮົາ ແລະ ພວກເຮົາກຳລັງຊອກຫາພະນັກງານໃໝ່.\n"
+"ທ່ານໄດ້ຮັບມອບໝາຍໃຫ້ສ້າງຄຳອະທິບາຍວຽກທີ່ດີທີ່ສຸດສຳລັບຕຳແໜ່ງງານໃໝ່ທີ່ເປີດຮັບ.\n"
+"ຈາກຂໍ້ມູນຕໍ່ໄປນີ້, ຈົ່ງສ້າງຄຳອະທິບາຍວຽກທີ່ເປັນກັນເອງ ແລະ ໜ້າສົນໃຈ ເພື່ອດຶງດູດຜູ້ສະໝັກທີ່ມີທ່າແຮງ\n"
+"(ແພລດຟອມອາດຈະເປັນ LinkedIn, Indeed, Glassdoor, Monster, ແລະ ອື່ນໆ)\n"
+"ນີ້ແມ່ນໂອກາດສຸດທ້າຍຂອງທ່ານທີ່ຈະສ້າງຄວາມປະທັບໃຈ ແລະ ດຶງດູດຜູ້ສະໝັກທີ່ດີທີ່ສຸດເຂົ້າມາໃນບໍລິສັດຂອງພວກເຮົ"
+"າ!\n"
+"ນີ້ແມ່ນຂໍ້ມູນສຳລັບສ້າງຄຳອະທິບາຍວຽກ:\n"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__job_is_published
+msgid "Is Published"
+msgstr "ຖືກເຜີຍແຜ່ແລ້ວ"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__platform_ids
+msgid "Job Board"
+msgstr "ກະດານປະກາດຮັບສະໝັກງານ"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model,name:hr_recruitment_integration_website.model_hr_job
+msgid "Job Position"
+msgstr "ຕຳແໜ່ງງານ"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model,name:hr_recruitment_integration_website.model_hr_job_post
+msgid "Job Post"
+msgstr "ປະກາດຮັບສະໝັກງານ"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__job_apply_url
+msgid "Job url"
+msgstr "ລິງກ໌ປະກາດງານ"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
+msgid "Oops, it looks like our AI is unreachable!"
+msgstr "ອຸ້ຍ, ເບິ່ງຄືວ່າ AI ຂອງພວກເຮົາບໍ່ສາມາດຕິດຕໍ່ໄດ້!"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model,name:hr_recruitment_integration_website.model_hr_recruitment_post_job_wizard
+msgid "Post Job"
+msgstr "ລົງປະກາດຮັບສະໝັກງານ"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
+msgid "Publish on a Job Board"
+msgstr "ເຜີຍແຜ່ໃນກະດານປະກາດຮັບສະໝັກງານ"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields.selection,name:hr_recruitment_integration_website.selection__hr_job_post__apply_method__redirect
+msgid "Redirect to Website"
+msgstr "ສົ່ງຕໍ່ໄປຍັງເວັບໄຊທ໌"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.model.fields.selection,name:hr_recruitment_integration_website.selection__hr_recruitment_post_job_wizard__apply_method__redirect
+msgid "Redirect to company's website"
+msgstr "ສົ່ງຕໍ່ໄປຍັງເວັບໄຊທ໌ຂອງບໍລິສັດ"
+
+#. module: hr_recruitment_integration_website
+#: model:ir.actions.server,name:hr_recruitment_integration_website.hr_recruitment_post_job_wizard_action_regenerate_post
+msgid "Regenerate Post"
+msgstr "ສ້າງການປະກາດໃໝ່"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
+msgid "Sorry, the web page is too long for our AI to process."
+msgstr "ຂໍອະໄພ, ໜ້າເວັບຍາວເກີນໄປສຳລັບໃຫ້ AI ປະມວນຜົນ."
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
+msgid "Sorry, we could not generate a response. Please try again later."
+msgstr "ຂໍອະໄພ, ພວກເຮົາບໍ່ສາມາດສ້າງຄຳຕອບໄດ້. ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ."
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
+msgid ""
+"The Job Description will be replaced with the generated one, do you want to "
+"continue?"
+msgstr "ຄຳອະທິບາຍວຽກຈະຖືກປ່ຽນແທນດ້ວຍອັນທີ່ສ້າງຂຶ້ນໃໝ່, ທ່ານຕ້ອງການສືບຕໍ່ຫຼືບໍ່?"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
+msgid ""
+"URL is required if the apply method is 'Redirect to company's website'.\n"
+msgstr ""
+"ຈຳເປັນຕ້ອງມີ URL ຖ້າເລືອກວິທີການສະໝັກເປັນ 'ສົ່ງຕໍ່ໄປຍັງເວັບໄຊທ໌ຂອງບໍລິສັດ'.\n"
+
+#. module: hr_recruitment_integration_website
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_integration_website.hr_job_post_view_form_inherit
+msgid "Website"
+msgstr "ເວັບໄຊທ໌"
+
+#. module: hr_recruitment_integration_website
+#. odoo-python
+#: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
+msgid ""
+"You have reached the maximum number of requests for this service. Try again "
+"later."
+msgstr ""
+"ທ່ານໄດ້ສົ່ງຄຳຮ້ອງຂໍເກີນຈຳນວນສູງສຸດສຳລັບບໍລິການນີ້ແລ້ວ. ກະລຸນາລອງໃໝ່ໃນພາຍຫຼັງ."
+
+#. module: hr_recruitment_integration_website
+#: model_terms:ir.ui.view,arch_db:hr_recruitment_integration_website.hr_recruitment_post_job_wizard_view_form
+msgid "Your job will be automatically published."
+msgstr "ວຽກຂອງທ່ານຈະຖືກເຜີຍແຜ່ໂດຍອັດຕະໂນມັດ."

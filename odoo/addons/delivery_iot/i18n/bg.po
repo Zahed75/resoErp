@@ -1,0 +1,232 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * delivery_iot
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:44+0000\n"
+"PO-Revision-Date: 2026-07-25 12:36+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"delivery_iot/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: delivery_iot
+#: model:ir.actions.report,print_report_name:delivery_iot.action_report_shipping_docs
+#: model:ir.actions.report,print_report_name:delivery_iot.action_report_shipping_labels
+msgid "'Empty Report - Used for assigning IoT printer'"
+msgstr "'Empty Report - Used for assigning IoT printer'"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__auto_print_carrier_labels
+msgid "Auto Print Carrier Labels"
+msgstr "Автоматичен печат на етикети на превозвача"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__auto_print_export_documents
+msgid "Auto Print Export Documents"
+msgstr "Автоматичен печат на експортни документи"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_put_in_pack__available_scale_ids
+msgid "Available Scale"
+msgstr "Налична везна"
+
+#. module: delivery_iot
+#: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
+msgid "Carrier Labels"
+msgstr "Етикети на превозвача"
+
+#. module: delivery_iot
+#: model:ir.model.fields,help:delivery_iot.field_stock_picking_type__iot_scale_ids
+msgid ""
+"Choose the scales you want to use for this operation type. Those scales can "
+"be used to weigh the packages created."
+msgstr ""
+"Изберете везните, които искате да използвате за този тип операция. Тези "
+"везни могат да се използват за претегляне на създадените опаковки."
+
+#. module: delivery_iot
+#: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
+msgid "Connect Scale"
+msgstr "Свържи везна"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_iot_device__display_name
+#: model:ir.model.fields,field_description:delivery_iot.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_put_in_pack__display_name
+msgid "Display Name"
+msgstr "Име за Показване"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_put_in_pack__iot_ip
+msgid "Domain Address"
+msgstr "Адрес на домейн"
+
+#. module: delivery_iot
+#: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
+msgid "Export Documents"
+msgstr "Експортни документи"
+
+#. module: delivery_iot
+#: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
+msgid "How to connect scales?"
+msgstr "Как да свържа везни?"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_iot_device__id
+#: model:ir.model.fields,field_description:delivery_iot.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_picking__id
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_put_in_pack__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_iot
+#: model:ir.model,name:delivery_iot.model_iot_device
+msgid "IOT Device"
+msgstr "IoT устройство"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_put_in_pack__iot_device_identifier
+msgid "Identifier"
+msgstr "Идентификатор"
+
+#. module: delivery_iot
+#: model:ir.model.fields,help:delivery_iot.field_stock_picking_type__auto_print_carrier_labels
+msgid ""
+"If this checkbox is ticked, Odoo will automatically print the carrier labels "
+"of the picking when they are created. Note this requires a printer to be "
+"assigned to this report."
+msgstr ""
+"Ако това поле е отметнато, Odoo автоматично ще печата етикетите на "
+"превозвача за складовата операция при тяхното създаване. Имайте предвид, че "
+"това изисква принтер, зачислен към тази справка."
+
+#. module: delivery_iot
+#: model:ir.model.fields,help:delivery_iot.field_stock_picking_type__auto_print_export_documents
+msgid ""
+"If this checkbox is ticked, Odoo will automatically print the export "
+"documents of the picking when they are created. Availability of export "
+"documents depends on the carrier and the destination. Note this requires a "
+"printer to be assigned to this report. "
+msgstr ""
+"Ако това поле е отметнато, Odoo автоматично ще печата експортните документи "
+"за складовата операция при тяхното създаване. Наличието на експортни "
+"документи зависи от превозвача и местоназначението. Имайте предвид, че това "
+"изисква принтер, зачислен към тази справка. "
+
+#. module: delivery_iot
+#: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
+msgid ""
+"If you connect your scales through the IoT App, the\n"
+"                            weight of the package will be set automatically "
+"when\n"
+"                            you do a \"Put in Pack\" operation.\n"
+"                            <br/>"
+msgstr ""
+"Ако свържете везните си през приложението IoT,\n"
+"                            теглото на опаковката ще се зададе автоматично, "
+"когато\n"
+"                            извършите операция „Поставяне в опаковка“.\n"
+"                            <br/>"
+
+#. module: delivery_iot
+#: model_terms:ir.ui.view,arch_db:delivery_iot.iot_device_view_form_inherit
+msgid "Linked Operation Types"
+msgstr "Свързани типове операции"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_put_in_pack__manual_measurement
+msgid "Manual Measurement"
+msgstr "Ръчно измерване"
+
+#. module: delivery_iot
+#: model:ir.model.fields,help:delivery_iot.field_stock_put_in_pack__manual_measurement
+msgid "Manually read the measurement from the device"
+msgstr "Ръчно прочитане на измерването от устройството"
+
+#. module: delivery_iot
+#. odoo-python
+#: code:addons/delivery_iot/models/ir_action_report.py:0
+msgid ""
+"One of the printer used to print the document has been removed.\n"
+"To reset printers, go to the Inventory App, Configuration tab, \"Reset "
+"Linked Printers\" and retry the operation."
+msgstr ""
+"Един от принтерите, използвани за печат на документа, е премахнат.\n"
+"За да нулирате принтерите, отидете в приложение Склад, раздел Конфигурация, „"
+"Нулиране на свързаните принтери“ и опитайте операцията отново."
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_iot_device__picking_type_ids
+msgid "Operation Types"
+msgstr "Видове операции"
+
+#. module: delivery_iot
+#: model:ir.model,name:delivery_iot.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Вид пикинг"
+
+#. module: delivery_iot
+#: model:ir.model,name:delivery_iot.model_stock_put_in_pack
+msgid "Put In Pack Wizard"
+msgstr "Помощник за поставяне в опаковка"
+
+#. module: delivery_iot
+#. odoo-javascript
+#: code:addons/delivery_iot/static/src/field_many2one_iot_scale.xml:0
+msgid "Read weight"
+msgstr "Прочети теглото"
+
+#. module: delivery_iot
+#: model:ir.model,name:delivery_iot.model_ir_actions_report
+msgid "Report Action"
+msgstr "Докладване на действие"
+
+#. module: delivery_iot
+#: model:ir.ui.menu,name:delivery_iot.iot_cached_printers_section
+msgid "Reporting"
+msgstr "Отчитане"
+
+#. module: delivery_iot
+#: model:ir.ui.menu,name:delivery_iot.iot_cached_printers_action
+msgid "Reset Linked Printers"
+msgstr "Нулиране на свързаните принтери"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_put_in_pack__iot_device_id
+msgid "Scale"
+msgstr "Везна"
+
+#. module: delivery_iot
+#: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__iot_scale_ids
+#: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
+msgid "Scales"
+msgstr "Везни"
+
+#. module: delivery_iot
+#: model:ir.actions.report,name:delivery_iot.action_report_shipping_docs
+msgid "Shipping Documents"
+msgstr "Документи за доставка"
+
+#. module: delivery_iot
+#: model:ir.actions.report,name:delivery_iot.action_report_shipping_labels
+msgid "Shipping Labels"
+msgstr "Транспортни етикети"
+
+#. module: delivery_iot
+#: model:ir.model,name:delivery_iot.model_stock_picking
+msgid "Transfer"
+msgstr "Прехвърлете"

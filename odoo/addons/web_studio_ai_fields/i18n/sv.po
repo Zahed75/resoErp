@@ -1,0 +1,256 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * web_studio_ai_fields
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:48+0000\n"
+"PO-Revision-Date: 2026-06-15 17:47+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
+"Language-Team: Swedish <https://translate.odoo.com/projects/odoo-19/"
+"web_studio_ai_fields/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.xml:0
+msgid "AI"
+msgstr "AI"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/interactive_editor.js:0
+msgid "AI Field"
+msgstr "AI-fält"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Add Field"
+msgstr "Lägg till fält"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Add Values"
+msgstr "Lägg till värden"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Add an AI Field"
+msgstr "Lägg till ett AI-fält"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Checkbox"
+msgstr "Kryssruta"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Datetime"
+msgstr "Datum och tid"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Decimal"
+msgstr "Decimal"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Discard"
+msgstr "Avbryt"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Edit Values"
+msgstr "Redigera värden"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Field Type"
+msgstr "Fälttyp"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "HTML"
+msgstr "HTML"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Integer"
+msgstr "Heltal"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Many2one"
+msgstr "Många till ett"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Monetary"
+msgstr "Valutafält"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Multiline Text"
+msgstr "Text med flera rader"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI CheckBox"
+msgstr "Nytt AI-fält kryssruta"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Date"
+msgstr "Nytt AI-fält datum"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Datetime"
+msgstr "Nytt AI-fält datum och tid"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Decimal"
+msgstr "Ny AI-fält decimal"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI HTML"
+msgstr "Ny AI-fält HTML"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Integer"
+msgstr "Nytt AI-fält heltal"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Many2One"
+msgstr "Nytt AI-fält många till en"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Monetary"
+msgstr "Nytt AI-fält valutafält"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Multiline Text"
+msgstr "Nytt AI-fält text med flera rader"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Selection"
+msgstr "Nytt AI-fält urval"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Tags"
+msgstr "Nya AI-fält taggar"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "New AI Text"
+msgstr "Nytt AI-fält text"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.xml:0
+msgid "Prompt"
+msgstr "Prompt"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Relation"
+msgstr "Relation"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Selection"
+msgstr "Urval"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Selection Values"
+msgstr "Val av värden"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Tags"
+msgstr "Taggar"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.js:0
+msgid "Text"
+msgstr "Text"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "Write a prompt, use '/field' to insert dynamic values"
+msgstr "Skriv ett prompt och använd '/field' för att infoga dynamiska värden"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "ai icon"
+msgstr "ai-ikon"
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "button to run your prompt."
+msgstr "knapp för att verkställa din prompt."
+
+#. module: web_studio_ai_fields
+#. odoo-javascript
+#: code:addons/web_studio_ai_fields/static/src/client_action/view_editor/interactive_editor/field_configuration/ai_field_configuration_dialog.xml:0
+msgid "fields won't update automatically - Click the"
+msgstr "fält uppdateras inte automatiskt - Klicka på"

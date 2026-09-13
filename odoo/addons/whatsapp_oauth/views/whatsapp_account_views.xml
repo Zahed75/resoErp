@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="whatsapp_account_view_tree" model="ir.ui.view">
+        <field name="name">whatsapp.account.view.tree.inherit.whatsapp.oauth</field>
+        <field name="model">whatsapp.account</field>
+        <field name="inherit_id" ref="whatsapp.whatsapp_account_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="js_class">whatsapp_oauth.whatsapp_account_list</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="whatsapp_account_view_form" model="ir.ui.view">
+        <field name="name">whatsapp.account.view.form.inherit.whatsapp.oauth</field>
+        <field name="model">whatsapp.account</field>
+        <field name="inherit_id" ref="whatsapp.whatsapp_account_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">0</attribute>
+            </xpath>
+            <xpath expr="//sheet" position="before">
+                <header invisible="not show_disconnect">
+                    <button name="button_disconnect"
+                            type="object"
+                            string="Disconnect"
+                            confirm="Disconnect this WhatsApp account? This will stop sending and receiving WhatsApp messages."
+                            class="btn btn-primary"/>
+                </header>
+                <div role="status" class="alert alert-danger mb-0" invisible="not is_oauth_onboarded or is_phone_registered or not active">
+                    <i class="fa fa-warning"/> Register your phone number to send WhatsApp messages.
+                    <button type="object"
+                        name="action_open_registration_wizard" class="btn-link p-0">
+                        <i class="oi oi-arrow-right"/>
+                        Register
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//div[@id='title']" position="before">
+                <field name="state"
+                    class="float-end"
+                    widget="badge"
+                    invisible="not is_oauth_onboarded"
+                    decoration-success="state == 'connected'"
+                    decoration-danger="state == 'disconnected'"/>
+            </xpath>
+            <xpath expr="//div[@id='app_setup']" position="attributes">
+                <attribute name="invisible">is_oauth_onboarded</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_sync_whatsapp_account_templates']" position="after">
+                <br/>
+                <button name="button_subscribe_webhook"
+                        type="object"
+                        string="Subscribe Webhook"
+                        class="btn-link p-1"
+                        icon="fa-bell"
+                        groups="base.group_no_one"
+                        invisible="not is_oauth_onboarded or is_webhook_subscribed or not active"/>
+            </xpath>
+            <xpath expr="//div[contains(normalize-space(.), 'Receiving Messages') or @name='receiving_messages']" position="attributes">
+                <attribute name="invisible">is_oauth_onboarded</attribute>
+            </xpath>
+            <xpath expr="//div[@id='toreceive_msg']" position="attributes">
+                <attribute name="invisible">is_oauth_onboarded</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

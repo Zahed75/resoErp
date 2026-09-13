@@ -1,0 +1,1445 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * iot
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-27 18:44+0000\n"
+"PO-Revision-Date: 2026-08-06 11:05+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/iot/"
+"sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_restart_odoo.js:0
+#, fuzzy
+msgid "%s is currently restarting"
+msgstr "%s se trenutno ponovno zaganja"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid ""
+"<span class=\"spinner-border spinner-border-sm\"/>\n"
+"                    Searching for an IoT Box.\n"
+"                    <span id=\"discover_retry_countdown\" class=\"fw-bold\"/>"
+msgstr ""
+"<span class=\"spinner-border spinner-border-sm\"/>\n"
+"                    Poteka iskanje IoT Boxa.\n"
+"                    <span id=\"discover_retry_countdown\" class=\"fw-bold\"/>"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+#, fuzzy
+msgid "A fiscal data module has been connected. To use it,"
+msgstr "Modul za fiskalne podatke je bil povezan. Za njegovo uporabo,"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__must_install_fdm_module
+#, fuzzy
+msgid "A fiscal data module is connected to this IoT Box"
+msgstr "Temu IoT Boxu je povezan fiskalni podatkovni modul"
+
+#. module: iot
+#: model:ir.model,name:iot.model_add_iot_box
+msgid "Add IoT Box wizard"
+msgstr "Čarovnik za dodajanje IoT Boxa"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__add_iot_box_wizard_id
+#, fuzzy
+msgid "Add Iot Box Wizard"
+msgstr "Čarovnik za dodajanje IoT Boxa"
+
+#. module: iot
+#: model:res.groups,name:iot.group_iot_admin
+msgid "Administrator"
+msgstr "Administrator"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/test_iot_box.js:0
+#, fuzzy
+msgid "All communication protocols are working properly."
+msgstr "Vsi komunikacijski protokoli delujejo pravilno."
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_discovered_box
+#, fuzzy
+msgid "An IoT box that is in pairing mode"
+msgstr "IoT škatla, ki je v načinu parjenja"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_restart_odoo.js:0
+#, fuzzy
+msgid "Are you sure you want to restart Odoo on the IoT Box?"
+msgstr "Ali ste prepričani, da želite ponovno zagnati Odoo na IoT Boxu?"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__drivers_auto_update
+msgid "Automatic drivers update"
+msgstr "Samodejna posodobitev gonilnikov"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_box__drivers_auto_update
+msgid "Automatically update drivers when the IoT Box boots"
+msgstr "Samodejno posodabljanje gonilnikov ob zagonu naprave IoT Box"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__scanner
+msgid "Barcode Scanner"
+msgstr "Optični čitalec"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.xml:0
+#, fuzzy
+msgid "Be careful:"
+msgstr "Pozor:"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid ""
+"Blackbox did not respond to your request. This usually means it has "
+"disconnected. Please check its cable connection and its power supply. "
+"Restart if necessary."
+msgstr ""
+"Blackbox se ni odzval na vašo zahtevo. To običajno pomeni, da se je "
+"odklopil. Preverite kabelski priklop in napajanje. Po potrebi ponovno "
+"zaženite."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid ""
+"Blackbox driver update required. Please restart your IoT Box to update the "
+"blackbox driver."
+msgstr ""
+"Potrebna je posodobitev gonilnika blackbox. Za posodobitev gonilnika "
+"blackbox ponovno zaženite svoj IoT Box."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Blackbox is running and operational"
+msgstr "Blackbox deluje in je operativen"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid ""
+"Blackbox responded with invalid response. Please check the cable connection "
+"and the power supply, then retry. Restart if necessary"
+msgstr ""
+"Blackbox je vrnil neveljaven odgovor. Preverite priklop kabla in napajanje, "
+"nato poskusite znova. Po potrebi ponovno zaženite"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__connection__bluetooth
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__camera
+msgid "Camera"
+msgstr "Kamera"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Check the lights"
+msgstr "Preverite luči"
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "Click on the"
+msgstr "Kliknite na"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/test_iot_box.js:0
+#, fuzzy
+msgid "Communication protocol '%s' is not working properly."
+msgstr "Komunikacijski protokol '%s' ne deluje pravilno."
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__company_id
+#: model:ir.model.fields,field_description:iot.field_iot_device__company_id
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: iot
+#: model:ir.ui.menu,name:iot.view_iot_selected_printer_local_action
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__add_iot_box__stage__connect
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_kanban
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_list
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+#: model_terms:ir.ui.view,arch_db:iot.view_select_box_to_connect
+msgid "Connect"
+msgstr "Povežite"
+
+#. module: iot
+#: model:ir.actions.act_window,name:iot.action_add_iot_box
+msgid "Connect my IoT Box"
+msgstr "Poveži moj IoT Box"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__connected_status__connected
+msgid "Connected"
+msgstr "Connected"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__connected_status
+#, fuzzy
+msgid "Connected Status"
+msgstr "Status povezave"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__connection
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_search
+msgid "Connection"
+msgstr "Povezava"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__create_uid
+#: model:ir.model.fields,field_description:iot.field_iot_box__create_uid
+#: model:ir.model.fields,field_description:iot.field_iot_device__create_uid
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__create_uid
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__create_uid
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__create_date
+#: model:ir.model.fields,field_description:iot.field_iot_box__create_date
+#: model:ir.model.fields,field_description:iot.field_iot_device__create_date
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__create_date
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__create_date
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__device_ids
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__device
+msgid "Device"
+msgstr "Naprava"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__device_count
+msgid "Device Count"
+msgstr "Število naprav"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/backend/iot_device_form.js:0
+#, fuzzy
+msgid "Device is disconnected"
+msgstr "Naprava je odklopljena"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_view_kanban
+#, fuzzy
+msgid "Device type is {{0}}"
+msgstr "Vrsta naprave je {{0}}"
+
+#. module: iot
+#: model:ir.actions.act_window,name:iot.iot_device_action
+#: model:ir.model.fields,field_description:iot.field_iot_box__device_ids
+#: model:ir.ui.menu,name:iot.iot_device_menu_action
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+msgid "Devices"
+msgstr "Naprave"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.xml:0
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#: model_terms:ir.ui.view,arch_db:iot.view_pair_offline
+msgid "Discard"
+msgstr "Opusti"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__connected_status__disconnected
+#, fuzzy
+msgid "Disconnected"
+msgstr "Disconnected"
+
+#. module: iot
+#: model:ir.actions.client,name:iot.action_discover_iot_boxes
+#, fuzzy
+msgid "Discover IoT boxes"
+msgstr "Odkrijte IoT škatle"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__discovered_box_ids
+#, fuzzy
+msgid "Discovered Box"
+msgstr "Odkrita škatla"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__display
+msgid "Display"
+msgstr "Prikaz"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__display_device_ids
+msgid "Display Device"
+msgstr "Prikazna naprava"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_box__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_channel__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_device__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__display_name
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__display_name
+#: model:ir.model.fields,field_description:iot.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:iot.field_ir_config_parameter__display_name
+#: model:ir.model.fields,field_description:iot.field_ir_http__display_name
+#: model:ir.model.fields,field_description:iot.field_publisher_warranty_contract__display_name
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__display_url
+msgid "Display URL"
+msgstr "Prikazni URL"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__do_not_ask_again
+msgid "Do not ask me again"
+msgstr "Ne sprašuj me več"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__ip
+#: model:ir.model.fields,field_description:iot.field_iot_device__iot_ip
+msgid "Domain Address"
+msgstr "Naslov domene"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/test_iot_box.js:0
+#, fuzzy
+msgid ""
+"Failed to check IoT Box network, check that it's connected to the Internet."
+msgstr ""
+"Preverjanje omrežja IoT Box ni uspelo, preverite, ali je povezan z "
+"internetom."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_download_logs.js:0
+#, fuzzy
+msgid "Failed to download logs from %s"
+msgstr "Prenos dnevnikov iz %s ni uspel"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Failed to initiate print"
+msgstr "Začetek tiskanja ni uspel"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Failed to reach the IoT Box for device: %s"
+msgstr "Ni mogoče vzpostaviti povezave z IoT Box za napravo: %s"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_reset_password.js:0
+#, fuzzy
+msgid "Failed to reset %s password."
+msgstr "Za %s ni bilo mogoče ponastaviti gesla."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_restart_odoo.js:0
+#, fuzzy
+msgid "Failed to send the restart command to the IoT Box ('%s')"
+msgstr "Pošiljanje ukaza za ponovni zagon IoT Boxa ('%s') ni uspelo"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.js:0
+#, fuzzy
+msgid "Failed to toggle remote debug."
+msgstr "Preklapljanje oddaljenega razhroščevanja ni uspelo."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/backend/iot_device_form.js:0
+#, fuzzy
+msgid "Failed to update keyboard layout on the device."
+msgstr "Posodobitev razporeditve tipkovnice na napravi ni uspela."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/backend/iot_device_form.js:0
+#, fuzzy
+msgid "Failed to update scanner mode on the device."
+msgstr "Ni uspelo posodobiti načina skenerja na napravi."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_pair_offline
+#, fuzzy
+msgid "Finally, paste the pairing token below in the \"Server token\" field."
+msgstr "Na koncu prilepite spodaj paritveni žeton v polje \"Server token\"."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_pair_offline
+#, fuzzy
+msgid "Find the IP address of your IoT Box then connect to the web homepage."
+msgstr ""
+"Poiščite IP-naslov svojega IoT Boxa in nato se povežite na spletno domačo "
+"stran."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+#, fuzzy
+msgid ""
+"First, connect the IoT Box to internet, using an ethernet cable. Or, "
+"checkout the"
+msgstr ""
+"Najprej povežite IoT Box na internet z ethernetnim kablom. Ali pa si oglejte"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__fiscal_data_module
+msgid "Fiscal Data Module"
+msgstr "Modul fiskalnih podatkov"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/backend/iot_device_form.js:0
+#, fuzzy
+msgid "Fiscal Data Module is connected and operational"
+msgstr "Fiskalni podatkovni modul je povezan in deluje"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Fiscal Data Module memory 90% full."
+msgstr "Pomnilnik modula fiskalnih podatkov je 90 % poln."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Fiscal Data Module memory full."
+msgstr "Pomnilnik modula fiskalnih podatkov je poln."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Fiscal Data Module not operational. Please restart the blackbox"
+msgstr "Fiskalni podatkovni modul ni operativen. Ponovno zaženite blackbox"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Fiscal Data Module real time clock corrupt."
+msgstr "Ura v realnem času modula fiskalnih podatkov je pokvarjena."
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__connection__hdmi
+msgid "HDMI"
+msgstr "HDMI"
+
+#. module: iot
+#: model:ir.model,name:iot.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP usmerjanje"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+msgid "Homepage"
+msgstr "Domača stran"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__id
+#: model:ir.model.fields,field_description:iot.field_iot_box__id
+#: model:ir.model.fields,field_description:iot.field_iot_channel__id
+#: model:ir.model.fields,field_description:iot.field_iot_device__id
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__id
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__id
+#: model:ir.model.fields,field_description:iot.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:iot.field_ir_config_parameter__id
+#: model:ir.model.fields,field_description:iot.field_ir_http__id
+#: model:ir.model.fields,field_description:iot.field_publisher_warranty_contract__id
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_device
+msgid "IOT Device"
+msgstr "IOT Naprava"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__identifier
+#: model:ir.model.fields,field_description:iot.field_iot_device__identifier
+msgid "Identifier"
+msgstr "Identifikator"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_select_printers_wizard__do_not_ask_again
+msgid ""
+"If checked, this dialog won't appear the next time you print and the "
+"selected printers will be used automatically."
+msgstr ""
+"Če je to polje označeno, se to pogovorno okno ne bo prikazalo ob naslednjem "
+"tiskanju in izbrani tiskalniki bodo uporabljeni samodejno."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_pair_offline
+#, fuzzy
+msgid ""
+"If your IoT Box has no access to the internet, you can pair it with your "
+"database using the pairing token."
+msgstr ""
+"Če vaša IoT Box nima dostopa do interneta, jo lahko povežete z vašo "
+"podatkovno bazo z uporabo paritvenega žetona."
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__version
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+msgid "Image Version"
+msgstr "Različica slike"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Internet is connected"
+msgstr "Internet je povezan"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Invalid PIN."
+msgstr "Neveljaven PIN."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Invalid data in message sent to the blackbox."
+msgstr "Neveljavni podatki v sporočilu, poslanem v blackbox."
+
+#. module: iot
+#: model:ir.ui.menu,name:iot.iot_menu_root
+#: model:res.groups.privilege,name:iot.res_groups_privilege_iot
+msgid "IoT"
+msgstr "IoT"
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_box
+#: model:ir.model.fields,field_description:iot.field_iot_device__iot_id
+msgid "IoT Box"
+msgstr "IoT Box"
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/wizard/discovered_iot_box.py:0
+#, fuzzy
+msgid "IoT Box %(serial_n)s %(pairing_code)s"
+msgstr "IoT Box %(serial_n)s %(pairing_code)s"
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/wizard/add_iot_box.py:0
+#, fuzzy
+msgid "IoT Box %s found. Connecting..."
+msgstr "IoT Box %s najdena. Povezovanje..."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+#, fuzzy
+msgid "IoT Box detected correctly."
+msgstr "IoT Box je bil pravilno zaznan."
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/wizard/add_iot_box.py:0
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+#, fuzzy
+msgid "IoT Box found. Connecting..."
+msgstr "IoT Box je bil najden. Povezovanje..."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/test_iot_box.js:0
+#, fuzzy
+msgid ""
+"IoT Box local network is %(lan_quality)s and internet is %(wan_quality)s"
+msgstr ""
+"IoT Box lokalno omrežje je %(lan_quality)s in internet je %(wan_quality)s"
+
+#. module: iot
+#: model:ir.actions.act_window,name:iot.iot_box_action
+#: model:ir.ui.menu,name:iot.iot_box_menu_action
+msgid "IoT Boxes"
+msgstr "IoT Boxes"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_search
+msgid "IoT Device"
+msgstr "IoT naprava"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_ir_actions_report__device_ids
+msgid "IoT Devices"
+msgstr "Naprave interneta stvari"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__iot_box_to_connect
+#, fuzzy
+msgid "Iot Box To Connect"
+msgstr "IoT Box za povezavo"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__is_scanner
+msgid "Is Scanner"
+msgstr "Je skener"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__keyboard
+msgid "Keyboard"
+msgstr "Tipkovnica"
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_keyboard_layout
+#: model:ir.model.fields,field_description:iot.field_iot_device__keyboard_layout
+msgid "Keyboard Layout"
+msgstr "Razporeditev tipkovnice"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__subtype__label_printer
+msgid "Label Printer"
+msgstr "Tiskalnik nalepk"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__write_uid
+#: model:ir.model.fields,field_description:iot.field_iot_box__write_uid
+#: model:ir.model.fields,field_description:iot.field_iot_device__write_uid
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__write_uid
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__write_uid
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__write_date
+#: model:ir.model.fields,field_description:iot.field_iot_box__write_date
+#: model:ir.model.fields,field_description:iot.field_iot_device__write_date
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__write_date
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__write_date
+#: model:ir.model.fields,field_description:iot.field_select_printers_wizard__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__layout
+msgid "Layout"
+msgstr "Postavitev"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Make sure the IoT Box is powered on."
+msgstr "Prepričajte se, da je IoT Box vklopljen."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Make sure the Network lights are on."
+msgstr "Prepričajte se, da so omrežne luči prižgane."
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__add_iot_box__stage__manual
+msgid "Manual"
+msgstr "Ročno"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__manual_measurement
+msgid "Manual Measurement"
+msgstr "Ročno merjenje"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__manual_measurement
+msgid "Manually read the measurement from the device"
+msgstr "Ročno odčitajte meritev z naprave"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__is_scanner
+msgid "Manually switch the device type between keyboard and scanner"
+msgstr "Ročno preklapljanje vrste naprave med tipkovnico in skenerjem"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__manufacturer
+msgid "Manufacturer"
+msgstr "Proizvajalec"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__name
+#: model:ir.model.fields,field_description:iot.field_iot_device__name
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__name
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__connection__network
+msgid "Network"
+msgstr "Omrežje"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/backend/add_iot_box_form_controller.js:0
+msgid "New IoT Box connected!"
+msgstr "Nov IoT Box povezan!"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_reset_password.js:0
+#, fuzzy
+msgid "New SSH password for %s"
+msgstr "Novo SSH geslo za %s"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "No IoT Box found"
+msgstr "Ni najdenega IoT Boxa"
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "No IoT Box found!"
+msgstr "Ni najdenega IoT Boxa!"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "No Vat Signing Card or Vat Signing Card broken."
+msgstr ""
+"Podpisna kartica DDV ni na voljo ali pa je podpisna kartica DDV pokvarjena."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/select_printer_wizard.js:0
+msgid "No printer selected"
+msgstr "Ni izbranega tiskalnika"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/client_action/delete_local_storage.xml:0
+msgid "No report to display"
+msgstr "Ni poročila za prikaz"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Note: It takes ~1 minute. After that, try to pair manually."
+msgstr "Opomba: Traja približno ~1 minuto. Po tem poskusite ročno upariti."
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__subtype__office_printer
+msgid "Office Printer"
+msgstr "Pisarniški tiskalnik"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__add_iot_box__stage__pair_offline
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Offline Pairing"
+msgstr "Brezžično uparjanje"
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/models/ir_actions_report.py:0
+#, fuzzy
+msgid ""
+"One of the printer used to print the document has been removed.\n"
+"To reset printers, go to the IoT App, Configuration tab, \"Reset Linked "
+"Printers\" and retry the operation."
+msgstr ""
+"Eden od tiskalnikov, uporabljenih za tiskanje dokumenta, je bil odstranjen.\n"
+"Za ponastavitev tiskalnikov pojdite v aplikacijo IoT, zavihek Konfiguracija, "
+"\"Ponastavi povezane tiskalnike\" in ponovno poskusite operacijo."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Operation wasn't saved on the blackbox"
+msgstr "Operacija ni bila shranjena v črni skrinjici"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Optional: Plug a screen"
+msgstr "Neobvezno: Priklopite zaslon"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "PIN accepted."
+msgstr "PIN je bil sprejet."
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/wizard/add_iot_box.py:0
+#: model_terms:ir.ui.view,arch_db:iot.view_pair_offline
+#, fuzzy
+msgid "Pair an IoT Box offline"
+msgstr "Poveži IoT Box brez povezave"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__pairing_code
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__pairing_code
+msgid "Pairing Code"
+msgstr "Koda za seznanjanje"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Pairing code received from a printer or screen"
+msgstr "Koda za parjenje prejeta iz tiskalnika ali zaslona"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__payment
+msgid "Payment Terminal"
+msgstr "Plačilni terminal"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Please activate the Vat Signing Card with PIN."
+msgstr "Prosimo, aktivirajte kartico za podpis DDV s PIN-om."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Plug a screen or a printer to get a status."
+msgstr "Priklopite zaslon ali tiskalnik, da dobite status."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Power is on"
+msgstr "Napajanje je vklopljeno"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Power the box"
+msgstr "Vključite škatlo"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_select_printers_wizard
+msgid "Print"
+msgstr "Tiskanje"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__printer
+msgid "Printer"
+msgstr "Tiskalnik"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Printer is unreachable"
+msgstr "Tiskalnik ni dosegljiv"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_select_printers_wizard
+msgid "Printers"
+msgstr "Tiskalniki"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Printing timed out"
+msgstr "Tiskanje je poteklo"
+
+#. module: iot
+#: model:ir.model,name:iot.model_publisher_warranty_contract
+msgid "Publisher Warranty Contract For IoT Box"
+msgstr "Garancijska pogodba založnika za IoT Box"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__subtype__receipt_printer
+msgid "Receipt Printer"
+msgstr "Tiskalnik računov"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.xml:0
+#, fuzzy
+msgid "Remote Debug"
+msgstr "Oddaljeno razhroščevanje"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.js:0
+#, fuzzy
+msgid "Remote debug is %s."
+msgstr "Oddaljeno razhroščevanje je %s."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.xml:0
+#, fuzzy
+msgid ""
+"Remote debug is enabled, the owner of the token you provided has access to "
+"both your IoT Box\n"
+"                and local network. If it's unintended, click on \"Disable\" "
+"below."
+msgstr ""
+"Oddaljeno razhroščevanje je omogočeno, lastnik žetona, ki ste ga navedli, "
+"ima dostop do vaše naprave IoT Box\n"
+"                in lokalnega omrežja. Če tega niste nameravali, spodaj "
+"kliknite »Onemogoči«."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid ""
+"Repeated request. This request was already handled by the fiscal data module."
+msgstr ""
+"Ponovljena zahteva. To zahtevo je že obravnaval fiskalni podatkovni modul."
+
+#. module: iot
+#: model:ir.model,name:iot.model_ir_actions_report
+msgid "Report Action"
+msgstr "Ukrep poročila"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.act_report_xml_view_tree_iot
+msgid "Report xml"
+msgstr "XML poročila"
+
+#. module: iot
+#: model:ir.ui.menu,name:iot.iot_settings_menu_action
+msgid "Reporting"
+msgstr "Poročanje"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__report_ids
+msgid "Reports"
+msgstr "Poročila"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_view_form
+#, fuzzy
+msgid "Reports to Auto-Print"
+msgstr "Poročila za samodejni tisk"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/client_action/delete_local_storage.xml:0
+msgid "Reports with linked printers"
+msgstr "Poročila s povezanimi tiskalniki"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/client_action/delete_local_storage.xml:0
+#: model:ir.ui.menu,name:iot.iot_clear_selected_devices
+msgid "Reset Linked Printers"
+msgstr "Ponastavi povezane tiskalnike"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/backend/no_iot_box_found_form_controller.js:0
+#, fuzzy
+msgid "Retrying in "
+msgstr "Ponovni poskus čez "
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__ssl_certificate_end_date
+#, fuzzy
+msgid "SSL Certificate End Date"
+msgstr "Datum poteka SSL-potrdila"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_select_printers_wizard
+msgid "Sales Details"
+msgstr "Podrobnost Prodaje"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__scale
+msgid "Scale"
+msgstr "Tehtnica"
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/wizard/add_iot_box.py:0
+#, fuzzy
+msgid "Searching for an IoT Box..."
+msgstr "Iskanje IoT Boxa..."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_select_box_to_connect
+#, fuzzy
+msgid "Select IoT Box to connect"
+msgstr "Izberite IoT Box za povezavo"
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/models/ir_actions_report.py:0
+#, fuzzy
+msgid "Select Printers for %s"
+msgstr "Izberi tiskalnike za %s"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/select_printer_wizard.js:0
+msgid "Select at least one printer"
+msgstr "Izberite vsaj en tiskalnik"
+
+#. module: iot
+#: model:ir.model,name:iot.model_select_printers_wizard
+msgid "Selection of printers"
+msgstr "Izbira tiskalnikov"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/iot_report_action.js:0
+#, fuzzy
+msgid "Sending document to printer %s..."
+msgstr "Pošiljanje dokumenta na tiskalnik %s..."
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__connection__serial
+msgid "Serial"
+msgstr "Serijska"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__serial_number
+#: model:ir.model.fields,field_description:iot.field_iot_discovered_box__serial_number
+msgid "Serial Number"
+msgstr "Serijska številka"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
+#, fuzzy
+msgid ""
+"Setup in progress, should take maximum 1 minute...\n"
+"                    <span class=\"spinner-border spinner-border-sm\"/>"
+msgstr ""
+"Nastavitev je v teku, naj bi trajala največ 1 minuto...\n"
+"                    <span class=\"spinner-border spinner-border-sm\"/>"
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/wizard/add_iot_box.py:0
+#, fuzzy
+msgid "Several IoT's detected"
+msgstr "Zaznanih je več naprav IoT"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__stage
+msgid "Stage"
+msgstr "Stopnja"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_pair_offline
+#, fuzzy
+msgid "Standard Pairing"
+msgstr "Standardno uparjanje"
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__add_iot_box__stage__start
+msgid "Start"
+msgstr "Prični"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/iot_report_action.js:0
+#, fuzzy
+msgid "Started printing operation on printer %s..."
+msgstr "Tiskanje na tiskalniku %s se je začelo..."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+msgid "Status"
+msgstr "Status"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__subtype
+msgid "Subtype"
+msgstr "Podvrsta"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__subtype
+msgid "Subtype of device."
+msgstr "Podvrsta naprave."
+
+#. module: iot
+#: model:ir.model,name:iot.model_ir_config_parameter
+msgid "System Parameter"
+msgstr "Sistemski parameter"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+msgid "Technical Information"
+msgstr "Tehnični podatki"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_view_form
+msgid "Test"
+msgstr "Test"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/backend/iot_device_form.js:0
+#, fuzzy
+msgid "Test page printed"
+msgstr "Preizkusna stran je natisnjena"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/test_iot_box.js:0
+#, fuzzy
+msgid "Testing communication with IoT Box and network quality, please wait..."
+msgstr ""
+"Preizkušanje komunikacije z IoT Boxom in kakovostjo omrežja, prosim "
+"počakajte..."
+
+#. module: iot
+#: model:ir.model,name:iot.model_iot_channel
+#, fuzzy
+msgid "The Websocket IoT Channel"
+msgstr "Websocket IoT kanal"
+
+#. module: iot
+#. odoo-python
+#: code:addons/iot/models/ir_actions_report.py:0
+#, fuzzy
+msgid ""
+"The report you are trying to print requires an IoT Box to be printed.\n"
+"Make sure you linked the report '%s' to the corresponding IoT printer device."
+msgstr ""
+"Poročilo, ki ga poskušate natisniti, za tiskanje zahteva IoT Box.\n"
+"Prepričajte se, da ste poročilo '%s' povezali z ustrezno IoT tiskalniško "
+"napravo."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_pair_offline
+#, fuzzy
+msgid "Then click on \"Configure\" under \"Odoo database connected\" section."
+msgstr ""
+"Nato kliknite na \"Konfiguriraj\" pod razdelkom \"Povezana Odoo baza "
+"podatkov\"."
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_device_action
+msgid "There is no device connected to your IoT Boxes"
+msgstr "Z vašimi IoT napravami ni povezana nobena naprava"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.xml:0
+#: model:ir.model.fields,field_description:iot.field_add_iot_box__offline_pairing_token
+#: model:ir.model.fields,field_description:iot.field_iot_box__token
+msgid "Token"
+msgstr "Žeton"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_device__type
+msgid "Type"
+msgstr "Tip"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__connection
+msgid "Type of connection."
+msgstr "Vrsta povezave."
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__type
+msgid "Type of device."
+msgstr "Vrsta naprave."
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_iot_device__display_url
+msgid ""
+"URL of the page that will be displayed by the device, leave empty to use the "
+"customer facing display of the POS."
+msgstr ""
+"URL strani, ki jo bo prikazala naprava, pustite prazno, če želite uporabiti "
+"prikaz POS-a, obrnjen proti stranki."
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__connection__direct
+msgid "USB"
+msgstr "USB"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Unknown identifier."
+msgstr "Neznan identifikator."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Unknown printer error occurred"
+msgstr "Prišlo je do neznane napake tiskalnika"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Unspecified error."
+msgstr "Nedoločena napaka."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Unspecified warning."
+msgstr "Nedoločeno opozorilo."
+
+#. module: iot
+#: model:ir.model.fields.selection,name:iot.selection__iot_device__type__unsupported
+msgid "Unsupported"
+msgstr "Nepodprto"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_no_iot_box_found
+#, fuzzy
+msgid "Use Pairing Code"
+msgstr "Uporabi kodo za seznanjanje"
+
+#. module: iot
+#: model:res.groups,name:iot.group_iot_user
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__variant
+msgid "Variant"
+msgstr "Različica"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Vat Signing Card blocked."
+msgstr "Kartica za podpis DDV je blokirana."
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/network_utils/iot_http_service.js:0
+#, fuzzy
+msgid "Vat Signing Card not compatible with Fiscal Data Module."
+msgstr ""
+"Kartica za podpisovanje DDV ni združljiva z modulom za fiskalne podatke."
+
+#. module: iot
+#: model:ir.model.fields,field_description:iot.field_iot_box__version_commit_url
+#, fuzzy
+msgid "Version Commit Url"
+msgstr "URL commita različice"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+msgid "Visible to all"
+msgstr "Vidno vsem"
+
+#. module: iot
+#: model:ir.model.fields,help:iot.field_ir_actions_report__device_ids
+msgid ""
+"When setting a device here, the report will be printed through this device "
+"on the IoT Box"
+msgstr ""
+"Ko tukaj nastavite napravo, bo poročilo natisnjeno prek te naprave na "
+"napravi IoT Box."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_select_box_to_connect
+#, fuzzy
+msgid "Which one do you want to connect?<br/><br/>"
+msgstr "Katero želite povezati?<br/><br/>"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.xml:0
+#, fuzzy
+msgid ""
+"You can enable remote debug on your IoT Box by providing a Ngrok authtoken."
+msgstr ""
+"Oddaljeno razhroščevanje na vaši IoT Box lahko omogočite tako, da navedete "
+"avtentikacijski žeton Ngrok."
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+#, fuzzy
+msgid "app."
+msgstr "aplikacijo."
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "connect"
+msgstr "povezati"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_device_view_kanban
+#, fuzzy
+msgid "connection_type"
+msgstr "Vrsta povezave"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_kanban
+#, fuzzy
+msgid "device-icon"
+msgstr "ikona naprave"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.js:0
+#, fuzzy
+msgid "disabled"
+msgstr "onemogočeno"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+msgid "documentation"
+msgstr "dokumentacija"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+#, fuzzy
+msgid "e.g. ABDE0123"
+msgstr "npr. ABDE0123"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.js:0
+#, fuzzy
+msgid "enabled"
+msgstr "omogočeno"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.view_enter_pairing_code
+#, fuzzy
+msgid ""
+"for Wi-Fi.<br/>\n"
+"                Then, connect the IoT Box to a printer (via USB cable) or a "
+"screen (via micro HDMI cable) to get the pairing code.<br/>\n"
+"                <br/>"
+msgstr ""
+"za Wi-Fi.<br/>\n"
+"                Nato priključite IoT Box na tiskalnik (prek kabla USB) ali "
+"na zaslon (prek kabla micro HDMI), da pridobite kodo za parjenje.<br/>\n"
+"                <br/>"
+
+#. module: iot
+#: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
+#, fuzzy
+msgid "install the Fiscal Data Module"
+msgstr "namestite Modul fiskalnih podatkov"
+
+#. module: iot
+#. odoo-javascript
+#: code:addons/iot/static/src/view_widgets/iot_remote_debug.xml:0
+#, fuzzy
+msgid ""
+"it enables remote access to your local network to the owner of the token."
+msgstr "to omogoča oddaljen dostop do vašega lokalnega omrežja lastniku žetona."
+
+#. module: iot
+#: model:ir.actions.client,name:iot.action_iot_delete_linked_devices_menu
+msgid "reset.linked.printers"
+msgstr "ponastavi.povezane.tiskalnike"
+
+#. module: iot
+#: model_terms:ir.actions.act_window,help:iot.iot_box_action
+msgid "to add an IoT Box."
+msgstr "za dodajanje naprave IoT."
+
+#~ msgid "Check if the device is still connected"
+#~ msgstr "Preverite, ali je naprava še vedno povezana"
+
+#~ msgid "Connection to device failed"
+#~ msgstr "Povezava z napravo ni uspela"
+
+#~ msgid "Are you sure you want to restart Odoo on the IoT box?"
+#~ msgstr "Ali ste prepričani, da želite znova zagnati Odoo na napravi IoT?"
+
+#~ msgid "Cache"
+#~ msgstr "Predpomnilnik"
+
+#~ msgid "Last restarting process hasn't finished yet"
+#~ msgstr "Zadnji postopek ponovnega zagona še ni končan"
+
+#~ msgid "Please wait"
+#~ msgstr "Prosim počakaj"
+
+#~ msgid "Restart Failed"
+#~ msgstr "Ponovni zagon ni uspel"
+
+#~ msgid "Restart finished"
+#~ msgstr "Ponovni zagon končan"
+
+#~ msgid "Restarting"
+#~ msgstr "Ponovni zagon"
+
+#~ msgid "Success"
+#~ msgstr "Uspešno"
+
+#~ msgid "Timed out"
+#~ msgstr "Časovna omejitev je potekla"
+
+#~ msgid "Last Sent Value"
+#~ msgstr "Zadnja poslana vrednost"

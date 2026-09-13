@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_reso_owner_registry" model="ir.actions.act_window">
+        <field name="name">Owner Registry</field>
+        <field name="res_model">reso.owner.registry</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Register the first owner shareholding.
+            </p>
+        </field>
+    </record>
+
+    <record id="view_reso_owner_registry_list" model="ir.ui.view">
+        <field name="name">reso.owner.registry.list</field>
+        <field name="model">reso.owner.registry</field>
+        <field name="arch" type="xml">
+            <list string="Owner Registry">
+                <field name="certificate_number"/>
+                <field name="partner_id"/>
+                <field name="property_id"/>
+                <field name="share_class"/>
+                <field name="fraction_percent"/>
+                <field name="status" decoration-success="status == 'active'"
+                    decoration-warning="status == 'suspended'"
+                    decoration-muted="status == 'redeemed'"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_reso_owner_registry_form" model="ir.ui.view">
+        <field name="name">reso.owner.registry.form</field>
+        <field name="model">reso.owner.registry</field>
+        <field name="arch" type="xml">
+            <form string="Owner Registry">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="certificate_number"/>
+                            <field name="partner_id"/>
+                            <field name="property_id"/>
+                            <field name="share_class"/>
+                            <field name="fraction_percent"/>
+                            <field name="unit_count"
+                                invisible="share_class != 'unit'"/>
+                        </group>
+                        <group>
+                            <field name="date_acquired"/>
+                            <field name="status"/>
+                            <field name="acquisition_price"/>
+                            <field name="company_id"
+                                groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <field name="note" placeholder="Notes..."/>
+                    <notebook>
+                        <page string="Transfers Out" name="transfers_out">
+                            <field name="transfer_out_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="to_partner_id"/>
+                                    <field name="fraction_percent"/>
+                                    <field name="transfer_date"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Transfers In" name="transfers_in">
+                            <field name="transfer_in_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="from_partner_id"/>
+                                    <field name="fraction_percent"/>
+                                    <field name="transfer_date"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Distribution Lines" name="distribution_lines">
+                            <field name="distribution_line_ids">
+                                <list>
+                                    <field name="run_id"/>
+                                    <field name="amount"/>
+                                    <field name="paid"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_reso_owner_registry_search" model="ir.ui.view">
+        <field name="name">reso.owner.registry.search</field>
+        <field name="model">reso.owner.registry</field>
+        <field name="arch" type="xml">
+            <search string="Owner Registry">
+                <field name="certificate_number"/>
+                <field name="partner_id"/>
+                <field name="property_id"/>
+                <filter string="Active" name="active"
+                    domain="[('status', '=', 'active')]"/>
+                <filter string="Suspended" name="suspended"
+                    domain="[('status', '=', 'suspended')]"/>
+                <filter string="Redeemed" name="redeemed"
+                    domain="[('status', '=', 'redeemed')]"/>
+                <group>
+                    <filter string="Property" name="group_property"
+                        context="{'group_by': 'property_id'}"/>
+                    <filter string="Status" name="group_status"
+                        context="{'group_by': 'status'}"/>
+                    <filter string="Share Class" name="group_share_class"
+                        context="{'group_by': 'share_class'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

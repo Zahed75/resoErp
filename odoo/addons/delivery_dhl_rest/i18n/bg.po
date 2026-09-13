@@ -1,0 +1,628 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * delivery_dhl_rest
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-12 17:41+0000\n"
+"PO-Revision-Date: 2026-07-25 12:35+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"delivery_dhl_rest/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid ""
+" Extra Info: The scheduled time for the shipment was either not set or was "
+"in the past, so DHL has been sent a planned shipping time of one hour from "
+"now"
+msgstr ""
+" Допълнителна информация: Планираното време за пратката или не беше "
+"зададено, или беше в миналото, затова на DHL е изпратено планирано време за "
+"изпращане един час от сега"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__0
+msgid "0 - Logistics Services"
+msgstr "0 - Logistics Services"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__1
+msgid "1 - Domestic Express 12:00"
+msgstr "1 - Domestic Express 12:00"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__2
+msgid "2 - B2C"
+msgstr "2 - B2C"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__3
+msgid "3 - B2C"
+msgstr "3 - B2C"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__4
+msgid "4 - Jetline"
+msgstr "4 - Jetline"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__5
+msgid "5 - Sprintline"
+msgstr "5 - Sprintline"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__6
+msgid "6 - Secureline"
+msgstr "6 - Secureline"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__6x4_a4_pdf
+msgid "6X4_A4_PDF"
+msgstr "6X4_A4_PDF"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__6x4_pdf
+msgid "6X4_PDF"
+msgstr "6X4_PDF"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__6x4_thermal
+msgid "6X4_thermal"
+msgstr "6X4_thermal"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__7
+msgid "7 - Express Easy"
+msgstr "7 - Express Easy"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__8
+msgid "8 - Express Easy"
+msgstr "8 - Express Easy"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__8x4_a4_pdf
+msgid "8X4_A4_PDF"
+msgstr "8X4_A4_PDF"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__8x4_a4_tc_pdf
+msgid "8X4_A4_TC_PDF"
+msgstr "8X4_A4_TC_PDF"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__8x4_ci_pdf
+msgid "8X4_CI_PDF"
+msgstr "8X4_CI_PDF"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__8x4_ci_thermal
+msgid "8X4_CI_thermal"
+msgstr "8X4_CI_thermal"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__8x4_pdf
+msgid "8X4_PDF"
+msgstr "8X4_PDF"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__8x4_ru_a4_pdf
+msgid "8X4_RU_A4_PDF"
+msgstr "8X4_RU_A4_PDF"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_template__8x4_thermal
+msgid "8X4_thermal"
+msgstr "8X4_thermal"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__9
+msgid "9 - Europack"
+msgstr "9 - Europack"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__a
+msgid "A - Auto Reversals"
+msgstr "A - Auto Reversals"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_region_code__am
+msgid "America"
+msgstr "Америка"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_region_code__ap
+msgid "Asia Pacific"
+msgstr "Азиатско-тихоокеанския регион"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__b
+msgid "B - Break Bulk Express"
+msgstr "B - Break Bulk Express"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__c
+msgid "C - Medical Express"
+msgstr "C - Medical Express"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_stock_package_type__package_carrier_type
+msgid "Carrier"
+msgstr "Превозвач"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_dutiable
+msgid "Check this if your package is dutiable."
+msgstr "Отметнете това, ако пакетът Ви подлежи на облагане."
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid "Could not decode the response from DHL."
+msgstr "Отговорът от DHL не може да бъде декодиран."
+
+#. module: delivery_dhl_rest
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_rest.view_delivery_carrier_form_with_provider_dhl
+msgid "Custom Data"
+msgstr "Персонализирани данни"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__d
+msgid "D - Express Worldwide"
+msgstr "D - Express по цял свят"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__delivery_type__dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__stock_package_type__package_carrier_type__dhl_rest
+msgid "DHL"
+msgstr "DHL"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_api_key
+msgid "DHL API Key"
+msgstr "DHL API ключ"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_api_secret
+msgid "DHL API Secret"
+msgstr "DHL API таен ключ"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid "DHL API key is missing, please modify your delivery method settings."
+msgstr ""
+"DHL API ключът липсва, моля променете настройките на метода за доставка."
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid "DHL API secret is missing, please modify your delivery method settings."
+msgstr ""
+"DHL API тайният ключ липсва, моля променете настройките на метода за "
+"доставка."
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_account_number
+msgid "DHL Account Number"
+msgstr "DHL номер на сметка"
+
+#. module: delivery_dhl_rest
+#: model:delivery.carrier,name:delivery_dhl_rest.delivery_carrier_dhl_be_dom
+#: model:product.template,name:delivery_dhl_rest.product_product_delivery_dhl_be_dom_product_template
+msgid "DHL BE"
+msgstr "DHL BE"
+
+#. module: delivery_dhl_rest
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_rest.view_delivery_carrier_form_with_provider_dhl
+msgid "DHL Configuration"
+msgstr "Конфигурация DHL"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid "DHL Documents"
+msgstr "DHL документи"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_product_code
+msgid "DHL Product"
+msgstr "DHL продукт"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid ""
+"DHL account number is missing, please modify your delivery method settings."
+msgstr ""
+"DHL номерът на сметката липсва, моля коригирайте настройките си за метода на "
+"доставка."
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_default_package_type_id
+msgid "DHLxw Package Type"
+msgstr "DHLxw тип пакет"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_duty_payment
+msgid "Dhl Duty Payment"
+msgstr "DHL плащане на мита"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_stock_package_type__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_dutiable
+msgid "Dutiable Material"
+msgstr "Материал, подлежащ на облагане"
+
+#. module: delivery_dhl_rest
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_rest.view_delivery_carrier_form_with_provider_dhl
+msgid "Duties paid by"
+msgstr "Митата се плащат от"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__e
+msgid "E - Express 9:00"
+msgstr "E - Express 9:00"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_image_format__epl2
+msgid "EPL2"
+msgstr "EPL2"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_region_code__eu
+msgid "Europe"
+msgstr "Европа"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_rate_request
+msgid "Extra data for rate requests"
+msgstr "Допълнителни данни за заявки за тарифи"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_return_request
+msgid "Extra data for return requests"
+msgstr "Допълнителни данни за заявки за връщане"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_ship_request
+msgid "Extra data for ship requests"
+msgstr "Допълнителни данни за заявки за изпращане"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_rate_request
+#: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_return_request
+#: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_ship_request
+msgid ""
+"Extra data to be sent in the request. It should be JSON-formatted.\n"
+"This functionality is advanced/technical and should only be used if you know "
+"what you are doing.\n"
+"\n"
+"Example of a valid value: ```\n"
+"\"content\": {\"packages\": {\"description\": \"amazing package\"}}\n"
+"```\n"
+"\n"
+"With the above example, the description of each package will be updated.\n"
+"For more information, please refer to the DHL API documentation: https://"
+"developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
+msgstr ""
+"Допълнителни данни, които да бъдат изпратени в заявката. Трябва да са във "
+"формат JSON.\n"
+"Тази функционалност е разширена/техническа и трябва да се използва само ако "
+"знаете какво правите.\n"
+"\n"
+"Пример за валидна стойност: ```\n"
+"\"content\": {\"packages\": {\"description\": \"amazing package\"}}\n"
+"```\n"
+"\n"
+"С горния пример описанието на всеки пакет ще бъде обновено.\n"
+"За повече информация, моля направете справка с документацията на DHL API: "
+"https://developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__f
+msgid "F - Freight Worldwide"
+msgstr "F - Freight Worldwide"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__g
+msgid "G - Domestic Economy Select"
+msgstr "G - Domestic Economy Select"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__h
+msgid "H - Economy Select"
+msgstr "H - Economy Select"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__i
+msgid "I - Break Bulk Economy"
+msgstr "I - Break Bulk Economy"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_stock_package_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_unit_system__imperial
+msgid "Imperial"
+msgstr "Имперска"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid "Invalid syntax for DHL extra data."
+msgstr "Невалиден синтаксис за допълнителните данни на DHL."
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__j
+msgid "J - Jumbo Box"
+msgstr "J - Jumbo Box"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__k
+msgid "K - Express 9:00"
+msgstr "K - Експрес 9:00"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__l
+msgid "L - Express 10:30"
+msgstr "L - Express 10:30"
+
+#. module: delivery_dhl_rest
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_rest.view_delivery_carrier_form_with_provider_dhl
+msgid "Label Format"
+msgstr "Формат на етикета"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_label_image_format
+msgid "Label Image Format"
+msgstr "Формат на изображението на етикета"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_label_template
+msgid "Label Template"
+msgstr "Шаблон за етикет"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__m
+msgid "M - Express 10:30"
+msgstr "M - Express 10:30"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_unit_system__metric
+msgid "Metric"
+msgstr "Метрична"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__n
+msgid "N - Domestic Express"
+msgstr "N - Вътрешен експрес"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__o
+msgid "O - DOM Express 10:30"
+msgstr "O - DOM Express 10:30"
+
+#. module: delivery_dhl_rest
+#: model_terms:ir.ui.view,arch_db:delivery_dhl_rest.view_delivery_carrier_form_with_provider_dhl
+msgid "Options"
+msgstr "Настройки"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__p
+msgid "P - Express Worldwide"
+msgstr "P - Express Worldwide"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_image_format__pdf
+msgid "PDF"
+msgstr "PDF"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid "Please provide at least one item to ship."
+msgstr "Моля, осигурете поне един артикул за превозване."
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__delivery_type
+msgid "Provider"
+msgstr "Доставчик"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__q
+msgid "Q - Medical Express"
+msgstr "Q - Medical Express"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__r
+msgid "R - GlobalMail Business"
+msgstr "R - GlobalMail Business"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_duty_payment__r
+msgid "Recipient"
+msgstr "Получател"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_region_code
+msgid "Region"
+msgstr "Район"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__s
+msgid "S - Same Day"
+msgstr "S - Same Day"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_duty_payment__s
+msgid "Sender"
+msgstr "Подател"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid "Shipment created into DHL"
+msgstr "Пратката е създадена в DHL"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid ""
+"Shipment insurance is not available between the origin and destination. You "
+"should try with another DHL product, or select a delivery method with no "
+"insurance."
+msgstr ""
+"Застраховката на пратката не е достъпна между мястото на изпращане и "
+"местоназначението. Опитайте с друг DHL продукт или изберете метод за "
+"доставка без застраховка."
+
+#. module: delivery_dhl_rest
+#: model:ir.model,name:delivery_dhl_rest.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Начини на доставка"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid "Something went wrong, please try again later!!"
+msgstr "Нещо се обърка, моля опитайте отново по-късно!!"
+
+#. module: delivery_dhl_rest
+#: model:ir.model,name:delivery_dhl_rest.model_stock_package_type
+msgid "Stock package type"
+msgstr "Тип на пакета за съхранение"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__t
+msgid "T - Express 12:00"
+msgstr "T - Експрес 12:00"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid ""
+"The address of the customer is missing or wrong (Missing field(s) :\n"
+" %s)"
+msgstr ""
+"Адресът на клиента липсва или е грешен (Липсващо(и) поле(та):\n"
+" %s)"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid ""
+"The address of your company warehouse is missing or wrong (Missing "
+"field(s) :\n"
+" %s)"
+msgstr ""
+"Адресът на склада на компанията Ви липсва или е грешен (Липсващо поле(та):\n"
+" %s)"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/dhl_request.py:0
+msgid ""
+"The estimated shipping price cannot be computed because the weight is "
+"missing for the following product(s): \n"
+" %s"
+msgstr ""
+"Прогнозната цена на доставката не може да бъде изчислена, защото липсва "
+"тегло за следния(те) продукт(и): \n"
+" %s"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid ""
+"The package cannot be created because the total weight of the products in "
+"the picking is 0.0 %s"
+msgstr ""
+"Пакетът не може да бъде създаден, защото общото тегло на продуктите в "
+"складовата операция е 0.0 %s"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid "The planned date for the shipment must be in the future."
+msgstr "Планираната дата за пратката трябва да е в бъдещето."
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid ""
+"There is no price available for this shipping, you should rather try with "
+"the DHL product %s"
+msgstr "Няма налична цена за тази доставка, по-добре опитайте с DHL продукт %s"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid "Tracking Number"
+msgstr "Номер за проследяване"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__u
+msgid "U - Express Worldwide"
+msgstr "U - Express Worldwide"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_unit_system
+msgid "Unit System"
+msgstr "Мерна система"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__v
+msgid "V - Europack"
+msgstr "V - Europack"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__w
+msgid "W - Economy Select"
+msgstr "W - Economy Select"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__x
+msgid "X - Express Envelope"
+msgstr "X - Express Envelope"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__y
+msgid "Y - Express 12:00"
+msgstr "Y - Express 12:00"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid "You can't cancel DHL shipping without pickup date."
+msgstr "Не можете да отмените шипинг чрез DHL без дата на събиране."
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__z
+msgid "Z - Destination Charges"
+msgstr "Z - Destination Charges"
+
+#. module: delivery_dhl_rest
+#: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_label_image_format__zpl2
+msgid "ZPL2"
+msgstr "ZPL2"

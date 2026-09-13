@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+import sys
+
+if sys.version_info < (3, 10):
+    sys.exit('ERROR: Odoo 19 requires Python 3.10 or higher')
+
+import odoo.cli
+
+if __name__ == "__main__":
+    odoo.cli.main()

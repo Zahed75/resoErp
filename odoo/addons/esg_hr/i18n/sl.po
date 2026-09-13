@@ -1,0 +1,203 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * esg_hr
+#
+# "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# NEDŽAD BEUS <nedzad.beus@implex.si>, 2026.
+# Jan Zorko <jan.zorko@implex.si>, 2026.
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-30 18:44+0000\n"
+"PO-Revision-Date: 2026-08-06 10:18+0000\n"
+"Last-Translator: NEDŽAD BEUS <nedzad.beus@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-19/esg_hr/"
+"sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: esg_hr
+#. odoo-javascript
+#: code:addons/esg_hr/static/src/components/esg_dashboard/esg_hr_sex_parity_box/esg_hr_sex_parity_box.js:0
+#, fuzzy
+msgid "%(overall_pay_gap)s%"
+msgstr "%(overall_pay_gap)s%"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__company_id
+msgid "Company"
+msgstr "Podjetje"
+
+#. module: esg_hr
+#: model_terms:ir.actions.act_window,help:esg_hr.action_esg_employee_report_pay_gap
+#, fuzzy
+msgid ""
+"Configure employee contracts and salaries to calculate the sex median pay "
+"gap."
+msgstr ""
+"Konfigurirajte pogodbe o zaposlitvi in plače za izračun mediane plačne "
+"vrzeli med spoloma."
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__contract_type_id
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+msgid "Contract Type"
+msgstr "Vrsta pogodbe"
+
+#. module: esg_hr
+#. odoo-python
+#: code:addons/esg_hr/controllers/esg_hr_dashboard.py:0
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__count
+msgid "Count"
+msgstr "Štetje"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__country_id
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+msgid "Country"
+msgstr "Država"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__department_id
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+msgid "Department"
+msgstr "Oddelek"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: esg_hr
+#: model:ir.model,name:esg_hr.model_esg_employee_report
+#, fuzzy
+msgid "ESG Employee Report"
+msgstr "Poročilo ESG o zaposlenih"
+
+#. module: esg_hr
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+msgid "Female"
+msgstr "Ženska"
+
+#. module: esg_hr
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+#, fuzzy
+msgid "Full-Time Workers"
+msgstr "Zaposleni za polni delovni čas"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__is_full_time
+msgid "Is Full Time"
+msgstr "Je polni delovni čas"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__is_team_leader
+#, fuzzy
+msgid "Is Team Leader"
+msgstr "Je vodja ekipe"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__job_id
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+msgid "Job Position"
+msgstr "Delovno mesto"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__leadership_level
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+#, fuzzy
+msgid "Leadership Level"
+msgstr "Raven vodenja"
+
+#. module: esg_hr
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+msgid "Male"
+msgstr "Moški"
+
+#. module: esg_hr
+#. odoo-javascript
+#: code:addons/esg_hr/static/src/components/esg_dashboard/esg_hr_sex_parity_box/esg_hr_sex_parity_box.js:0
+msgid "N/A"
+msgstr "N/A"
+
+#. module: esg_hr
+#: model_terms:ir.actions.act_window,help:esg_hr.action_esg_employee_report_sex_parity
+#, fuzzy
+msgid "No employee sex data available."
+msgstr "Podatki o spolu zaposlenih niso na voljo."
+
+#. module: esg_hr
+#: model_terms:ir.actions.act_window,help:esg_hr.action_esg_employee_report_pay_gap
+#, fuzzy
+msgid "No salary data available."
+msgstr "Podatki o plačah niso na voljo."
+
+#. module: esg_hr
+#: model_terms:ir.actions.act_window,help:esg_hr.action_esg_employee_report_sex_parity
+#, fuzzy
+msgid ""
+"Once configured, you'll be able to view sex distribution across your company."
+msgstr ""
+"Ko bo nastavljeno, boste lahko v svojem podjetju pregledali porazdelitev "
+"spolov."
+
+#. module: esg_hr
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+msgid "Other"
+msgstr "Drugo"
+
+#. module: esg_hr
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+#, fuzzy
+msgid "Part-Time Workers"
+msgstr "Zaposleni s krajšim delovnim časom"
+
+#. module: esg_hr
+#. odoo-javascript
+#: code:addons/esg_hr/static/src/components/esg_dashboard/esg_hr_sex_parity_box/esg_hr_sex_parity_box.xml:0
+#: model:ir.actions.act_window,name:esg_hr.action_esg_employee_report_pay_gap
+#: model:ir.ui.menu,name:esg_hr.menu_esg_pay_gap
+#, fuzzy
+msgid "Pay Gap"
+msgstr "Plačna vrzel"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__sex
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+#, fuzzy
+msgid "Sex"
+msgstr "Spol"
+
+#. module: esg_hr
+#. odoo-javascript
+#: code:addons/esg_hr/static/src/components/esg_dashboard/esg_hr_sex_parity_box/esg_hr_sex_parity_box.xml:0
+#: model:ir.actions.act_window,name:esg_hr.action_esg_employee_report_sex_parity
+#: model:ir.ui.menu,name:esg_hr.menu_esg_sex_parity
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_graph
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_pivot
+#: model_terms:ir.ui.view,arch_db:esg_hr.esg_employee_report_search
+#, fuzzy
+msgid "Sex Parity"
+msgstr "Spolna uravnoteženost"
+
+#. module: esg_hr
+#: model:ir.ui.menu,name:esg_hr.menu_esg_social
+msgid "Social"
+msgstr "Družbeno"
+
+#. module: esg_hr
+#: model:ir.model.fields,field_description:esg_hr.field_esg_employee_report__wage
+msgid "Wage"
+msgstr "Plača"

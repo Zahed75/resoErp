@@ -1,0 +1,340 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* whatsapp_oauth
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-28 17:52+0000\n"
+"PO-Revision-Date: 2026-08-28 17:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_account_view_form
+msgid ""
+"<i class=\"fa fa-warning\"/> Register your phone number to send WhatsApp "
+"messages."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_account_view_form
+msgid ""
+"<i class=\"oi oi-arrow-right\"/>\n"
+"                        Register"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.authorization_error
+msgid "<strong>Details</strong>"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__token
+msgid "Access Token"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.authorization_error
+msgid "An error occurred"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.authorization_error
+msgid "An error occurred while connecting your WhatsApp account."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__app_secret
+msgid "App Secret"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.constraint,message:whatsapp_oauth.constraint_whatsapp_account_check_app_credentials
+msgid ""
+"App Secret and Access Token are required unless the account was onboarded "
+"through OAuth."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.authorization_error
+msgid "Back to WhatsApp accounts"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_register_phone_form
+msgid "Cancel"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-javascript
+#: code:addons/whatsapp_oauth/static/src/views/whatsapp_account_list/whatsapp_account_list_view.xml:0
+msgid "Connect"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields.selection,name:whatsapp_oauth.selection__whatsapp_account__state__connected
+msgid "Connected"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_account_view_form
+msgid "Disconnect"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_account_view_form
+msgid ""
+"Disconnect this WhatsApp account? This will stop sending and receiving "
+"WhatsApp messages."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__display_name
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_register_phone_form
+msgid "Enter a two-step verification PIN to register phone."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__id
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__id
+msgid "ID"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "No WhatsApp Business Account was found for the access token."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields.selection,name:whatsapp_oauth.selection__whatsapp_account__state__disconnected
+msgid "Not Connected"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__is_oauth_onboarded
+msgid "OAuth Onboarded"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__pin
+msgid "PIN"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__is_phone_registered
+msgid "Phone Registered"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__proxy_webhook_url
+msgid "Proxy Webhook URL"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_register_phone_form
+msgid "Register Phone"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/models/whatsapp_account.py:0
+msgid "Register Phone Number"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_register_phone_form
+msgid "Register your Phone number"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/models/whatsapp_account.py:0
+msgid ""
+"Sending still works, but the webhook is not pointing to Odoo, so incoming "
+"messages will not reach this database."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__shared_webhook_secret
+msgid "Shared Webhook Secret"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__show_disconnect
+msgid "Show Disconnect"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__state
+msgid "State"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_account_view_form
+msgid "Subscribe Webhook"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/models/whatsapp_account.py:0
+msgid "Successfully subscribed to webhook!"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "The Enterprise subscription could not be validated."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "The WhatsApp proxy did not return an access token."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/controller/onboarding.py:0
+msgid "The WhatsApp proxy did not return the required information."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "The WhatsApp proxy did not unregister the webhook."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "The WhatsApp proxy rejected the request."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "The WhatsApp proxy returned an unknown error: %s"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid ""
+"The onboarded WhatsApp Business Account does not have any Cloud API phone "
+"numbers."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/models/whatsapp_account.py:0
+msgid ""
+"The phone number is not registered and the webhook is not pointing to Odoo, "
+"so this account can neither send nor receive messages."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/models/whatsapp_account.py:0
+msgid ""
+"The phone number is not registered, so this account can neither send nor "
+"receive messages."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,help:whatsapp_oauth.field_whatsapp_account__shared_webhook_secret
+msgid "The secret used to validate incoming webhook calls from the proxy."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_register_phone__wa_account_id
+msgid "Wa Account"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model.fields,field_description:whatsapp_oauth.field_whatsapp_account__is_webhook_subscribed
+msgid "Webhook Subscribed"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/controller/onboarding.py:0
+msgid ""
+"Webhook subscription failed after onboarding.%(br)sPlease subscribe it "
+"manually.%(br)sError: %(error)s"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model,name:whatsapp_oauth.model_whatsapp_account
+msgid "WhatsApp Business Account"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.actions.server,name:whatsapp_oauth.ir_cron_refresh_onboarded_account_state_ir_actions_server
+msgid "WhatsApp OAuth : Refresh Onboarded Accounts"
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model:ir.model,name:whatsapp_oauth.model_whatsapp_register_phone
+msgid "WhatsApp Registration Phone Number Wizard"
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "WhatsApp authorization is temporarily unavailable."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "WhatsApp could not be reached, please try again later."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/tools/whatsapp_oauth_api.py:0
+msgid "WhatsApp returned an unexpected response, please try again later."
+msgstr ""
+
+#. module: whatsapp_oauth
+#. odoo-python
+#: code:addons/whatsapp_oauth/controller/onboarding.py:0
+msgid "You are not allowed to access this page."
+msgstr ""
+
+#. module: whatsapp_oauth
+#: model_terms:ir.ui.view,arch_db:whatsapp_oauth.whatsapp_register_phone_form
+msgid "e.g. 123456"
+msgstr ""

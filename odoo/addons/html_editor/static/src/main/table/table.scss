@@ -1,0 +1,22 @@
+th.o_table_header {
+    background-color: #F7F7F7;
+    font-weight: 900;
+}
+
+.o_table {
+    display: block;
+    overflow-x: auto;
+    tbody {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    th, td {
+        > *:last-child {
+            margin-bottom: 0;
+        }
+        > .o_table {
+            overflow-x: visible;
+        }
+    }
+}

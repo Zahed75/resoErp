@@ -1,0 +1,682 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * delivery_ups_rest
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Rosen Vladimirov <vladimirov.rosen@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-28 17:44+0000\n"
+"PO-Revision-Date: 2026-07-26 13:39+0000\n"
+"Last-Translator: Rosen Vladimirov <vladimirov.rosen@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-19/"
+"delivery_ups_rest/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_bill_my_account
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_res_partner__bill_my_account
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_res_users__bill_my_account
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_sale_order__ups_bill_my_account
+msgid "Bill My Account"
+msgstr "Таксувай моя акаунт"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_cod_funds_code
+msgid "COD Funding Option"
+msgstr "Опция за плащане при наложен платеж"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_stock_package_type__package_carrier_type
+msgid "Carrier"
+msgstr "Превозвач"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_cod_funds_code__8
+msgid "Cashier's Check or MoneyOrder"
+msgstr "Банков чек или пощенски запис"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_package_dimension_unit__cm
+msgid "Centimeters"
+msgstr "Сантиметри"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_cod_funds_code__0
+msgid "Check, Cashier's Check or MoneyOrder"
+msgstr "Чек, банков чек или пощенски запис"
+
+#. module: delivery_ups_rest
+#: model:ir.model,name:delivery_ups_rest.model_res_partner
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "Could not decode response"
+msgstr "Отговорът не може да бъде декодиран"
+
+#. module: delivery_ups_rest
+#: model:ir.model,website_form_label:delivery_ups_rest.model_res_partner
+msgid "Create a Customer"
+msgstr "Създаване на клиент"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Create an account on"
+msgstr "Създайте акаунт в"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Create an app"
+msgstr "Създайте приложение"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"Detected a problem when validating delivery %(delivery_name)s. Invoicing "
+"address of the commercial invoice has been defaulted to %(ship_to_partner)s "
+"instead of %(sold_to_partner)s to avoid the following error from UPS: \"The "
+"Sold To party's country code must be the same as the Ship To party's country "
+"code with the exception of Canada and satellite countries.\""
+msgstr ""
+"Установен е проблем при потвърждаването на доставка %(delivery_name)s. "
+"Адресът за фактуриране на търговската фактура беше зададен по подразбиране "
+"на %(ship_to_partner)s вместо на %(sold_to_partner)s, за да се избегне "
+"следната грешка от UPS: „Кодът на държавата на страната Sold To трябва да "
+"съвпада с кода на държавата на страната Ship To, с изключение на Канада и "
+"сателитните ѝ държави.“"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_payment_provider__display_name
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_res_partner__display_name
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_sale_order__display_name
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_stock_package_type__display_name
+msgid "Display Name"
+msgstr "Име за показване"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Duties paid by"
+msgstr "Митата се плащат от"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_label_file_type__epl
+msgid "EPL"
+msgstr "EPL"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/delivery_ups.py:0
+msgid ""
+"Error:\n"
+"%s"
+msgstr ""
+"Грешка:\n"
+"%s"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Fill your address and contact information"
+msgstr "Попълнете вашия адрес и информация за контакт"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "From there, get your <b>account number</b>"
+msgstr "Оттам вземете вашия <b>номер на акаунт</b>"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "How to setup UPS?"
+msgstr "Как да настроите UPS?"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_payment_provider__id
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_res_partner__id
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_sale_order__id
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_stock_package_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,help:delivery_ups_rest.field_delivery_carrier__ups_bill_my_account
+#: model:ir.model.fields,help:delivery_ups_rest.field_res_partner__bill_my_account
+#: model:ir.model.fields,help:delivery_ups_rest.field_res_users__bill_my_account
+#: model:ir.model.fields,help:delivery_ups_rest.field_sale_order__ups_bill_my_account
+msgid ""
+"If checked, ecommerce users will be prompted their UPS account number\n"
+"and delivery fees will be charged on it."
+msgstr ""
+"Ако е отметнато, на потребителите на онлайн магазина ще бъде поискан техният "
+"номер на UPS акаунт\n"
+"и таксите за доставка ще бъдат начислени на него."
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_package_dimension_unit__in
+msgid "Inches"
+msgstr "Инча"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"Invalid Authentication Information: Please check your credentials and "
+"configuration within UPS's system."
+msgstr ""
+"Невалидна информация за удостоверяване: Моля, проверете вашите "
+"идентификационни данни и конфигурацията в системата на UPS."
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_package_weight_unit__kgs
+msgid "Kilograms"
+msgstr "Килограма"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Label Format"
+msgstr "Формат на етикета"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Log in with your account on"
+msgstr "Влезте с вашия акаунт в"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Name your app,"
+msgstr "Дайте име на вашето приложение,"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid ""
+"Now go to odoo and create a shipping method for UPS, using Account Number "
+"(step2) and Client ID + Client Secret (step 8). Also ensure you use correct "
+"dimensions and weight unit for your country"
+msgstr ""
+"Сега отидете в odoo и създайте метод за доставка за UPS, използвайки Номер "
+"на акаунт (стъпка 2) и Client ID + Client Secret (стъпка 8). Уверете се "
+"също, че използвате правилните размери и мерна единица за тегло за вашата "
+"държава"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid ""
+"Now open your app, you'll have your <b>Client ID</b> and <b>Client Secret</b>"
+msgstr ""
+"Сега отворете вашето приложение и ще видите вашите <b>Client ID</b> и "
+"<b>Client Secret</b>"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Options"
+msgstr "Настройки"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_label_file_type__gif
+msgid "PDF"
+msgstr "PDF"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_package_dimension_unit
+msgid "Package Size Unit"
+msgstr "Единица за размер на пакета"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Package Weight Unit"
+msgstr "Тегло на опаковката"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "Packages %s do not have a positive shipping weight."
+msgstr "Пакетите %s нямат положително тегло за доставка."
+
+#. module: delivery_ups_rest
+#: model:ir.model,name:delivery_ups_rest.model_payment_provider
+msgid "Payment Provider"
+msgstr "Доставчик на разплащания"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "Please provide at least one item to ship."
+msgstr "Моля, осигурете поне един артикул за превозване."
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_package_weight_unit__lbs
+msgid "Pounds"
+msgstr "Паунди"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__delivery_type
+msgid "Provider"
+msgstr "Доставчик"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_duty_payment__recipient
+msgid "Recipient"
+msgstr "Получател"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "Recipient Phone must be between 1 and 15 alphanumeric characters."
+msgstr ""
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_require_signature
+msgid "Require Signature"
+msgstr "Изисквай подпис"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/delivery_ups.py:0
+msgid ""
+"Return label generated<br/><b>Tracking Numbers:</b> %(tracking_numbers)s<br/"
+"><b>Packages:</b> %(packages)s"
+msgstr ""
+"Генериран е етикет за връщане<br/><b>Номера за проследяване:</b> %"
+"(tracking_numbers)s<br/><b>Пакети:</b> %(packages)s"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_label_file_type__spl
+msgid "SPL"
+msgstr "SPL"
+
+#. module: delivery_ups_rest
+#: model:ir.model,name:delivery_ups_rest.model_sale_order
+msgid "Sales Order"
+msgstr "Поръчка"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Saturday Delivery"
+msgstr "Доставка в Събота"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "Save and Accept terms and your app is created!"
+msgstr "Запазете и приемете условията и вашето приложение е създадено!"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_duty_payment__sender
+msgid "Sender"
+msgstr "Подател"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/delivery_ups.py:0
+msgid "Shipment #%s has been cancelled"
+msgstr "Пратка №%s беше отменена"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/delivery_ups.py:0
+msgid ""
+"Shipment created into UPS<br/><b>Tracking Numbers:</b> %"
+"(tracking_numbers)s<br/><b>Packages:</b> %(packages)s"
+msgstr ""
+"Пратката е създадена в UPS<br/><b>Номера за проследяване:</b> %"
+"(tracking_numbers)s<br/><b>Пакети:</b> %(packages)s"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "Shipper Phone must be between 1 and 15 alphanumeric characters."
+msgstr ""
+
+#. module: delivery_ups_rest
+#: model:ir.model,name:delivery_ups_rest.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Начини на доставка"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "Something went wrong, please try again later!!"
+msgstr "Нещо се обърка, моля, опитайте отново по-късно!!"
+
+#. module: delivery_ups_rest
+#: model:ir.model,name:delivery_ups_rest.model_stock_package_type
+msgid "Stock package type"
+msgstr "Тип на пакета за съхранение"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"The address of your company is missing or wrong.\n"
+"(Missing field(s) : %s)"
+msgstr ""
+"Адресът на компанията Ви липсва или е грешен.\n"
+"(Липсващо поле(та) : %s)"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"The address of your warehouse is missing or wrong.\n"
+"(Missing field(s) : %s)"
+msgstr ""
+"Адресът на склада Ви липсва или е грешен.\n"
+"(Липсващо поле(та) : %s)"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"The delivery cannot be done because the weight of your product %s is missing."
+msgstr ""
+"Доставката не може да бъде извършена, защото липсва теглото на вашия продукт "
+"%s."
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"The estimated shipping price cannot be computed because the weight is "
+"missing for the following product(s): \n"
+" %s"
+msgstr ""
+"Прогнозната цена за доставка не може да бъде изчислена, защото липсва тегло "
+"за следния(те) продукт(и): \n"
+" %s"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "The name of the customer should be no more than 35 characters."
+msgstr "Името на клиента трябва да бъде не повече от 35 знака."
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"The recipient address is missing or wrong.\n"
+"(Missing field(s) : %s)"
+msgstr ""
+"Адресът на получателя липсва или е грешен.\n"
+"(Липсващо поле(та) : %s)"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid ""
+"This value added service enables UPS to collect the payment of the shipment "
+"from your customer."
+msgstr ""
+"Тази услуга с добавена стойност позволява на UPS да събере плащането за "
+"пратката от вашия клиент."
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,help:delivery_ups_rest.field_delivery_carrier__ups_saturday_delivery
+msgid ""
+"This value added service will allow you to ship the package on saturday also."
+msgstr ""
+"Тази услуга с добавена стойност ще ви позволи да изпращате пакета и в събота."
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__delivery_type__ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__stock_package_type__package_carrier_type__ups_rest
+msgid "UPS"
+msgstr "UPS"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__02
+msgid "UPS 2nd Day"
+msgstr "UPS 2nd Day"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__59
+msgid "UPS 2nd Day AM"
+msgstr "UPS 2nd Day AM"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__12
+msgid "UPS 3-day Select"
+msgstr "UPS 3-day Select"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_access_token
+msgid "UPS Access Token"
+msgstr "UPS Access Token"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_shipper_number
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_res_partner__property_ups_carrier_account
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_res_users__property_ups_carrier_account
+msgid "UPS Account Number"
+msgstr "Номер на UPS акаунт"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_client_id
+msgid "UPS Client ID"
+msgstr "UPS Client ID"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_client_secret
+msgid "UPS Client Secret"
+msgstr "UPS Client Secret"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "UPS Configuration"
+msgstr "UPS конфигурация"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__03
+msgid "UPS Ground"
+msgstr "UPS Ground"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_label_file_type
+msgid "UPS Label File Type"
+msgstr "UPS вид файл на етикет"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__01
+msgid "UPS Next Day"
+msgstr "UPS Next Day"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__14
+msgid "UPS Next Day AM"
+msgstr "UPS Next Day AM"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__13
+msgid "UPS Next Day Air Saver"
+msgstr "UPS Next Day Air Saver"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_default_packaging_id
+msgid "UPS Package Type"
+msgstr "Тип на UPS пакет"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_saturday_delivery
+msgid "UPS Saturday Delivery"
+msgstr "UPS доставка в събота"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__65
+msgid "UPS Saver"
+msgstr "UPS Saver"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_default_service_type
+msgid "UPS Service Type"
+msgstr "UPS вид на услугата"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__11
+msgid "UPS Standard"
+msgstr "UPS Standard"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__08
+msgid "UPS Worldwide Expedited"
+msgstr "UPS Worldwide Expedited"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__07
+msgid "UPS Worldwide Express"
+msgstr "UPS Worldwide Express"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__96
+msgid "UPS Worldwide Express Freight"
+msgstr "UPS Worldwide Express Freight"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_default_service_type__54
+msgid "UPS Worldwide Express Plus"
+msgstr "UPS Worldwide Express Plus"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_sale_order__partner_ups_carrier_account
+msgid "UPS account number"
+msgstr "Номер на UPS акаунт"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"UPS address lines can only contain a maximum of 35 characters. You can split "
+"the contacts addresses on multiple lines to try to avoid this limitation."
+msgstr ""
+"Адресните редове за UPS могат да съдържат максимум 35 знака. Можете да "
+"разделите адресите на контактите на няколко реда, за да опитате да избегнете "
+"това ограничение."
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/payment_provider.py:0
+msgid "UPS provider is configured to use only Collect on Delivery."
+msgstr "Доставчикът UPS е конфигуриран да използва само наложен платеж."
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_duty_payment
+msgid "Ups Duty Payment"
+msgstr "Плащане на мита за UPS"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_package_weight_unit
+msgid "Ups Package Weight Unit"
+msgstr "Мерна единица за тегло на UPS пакет"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "Warehouse Phone must be between 1 and 15 alphanumeric characters."
+msgstr ""
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/sale_order.py:0
+msgid "You must enter an UPS account number."
+msgstr "Трябва да въведете номер на UPS акаунт."
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid "You must setup a client ID and secret on the carrier first"
+msgstr "Първо трябва да настроите client ID и secret на превозвача"
+
+#. module: delivery_ups_rest
+#: model:ir.model.fields.selection,name:delivery_ups_rest.selection__delivery_carrier__ups_label_file_type__zpl
+msgid "ZPL"
+msgstr "ZPL"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/sale_order.py:0
+msgid "[UPS] UPS Billing will remain to the customer"
+msgstr "[UPS] Таксуването от UPS ще остане за клиента"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid ""
+"add products <b>Authorization, Address validation, Locator, Paperless "
+"Documents, Shipping and Rating</b>"
+msgstr ""
+"добавете продуктите <b>Authorization, Address validation, Locator, Paperless "
+"Documents, Shipping and Rating</b>"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "and go to Apps"
+msgstr "и отидете в Apps"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "developer.ups.com"
+msgstr "developer.ups.com"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "the callback is your odoo address https://\"mycompany\".odoo.com"
+msgstr "callback адресът е вашият odoo адрес https://\"mycompany\".odoo.com"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "ups step 1"
+msgstr "UPS стъпка 1"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "ups step 2"
+msgstr "UPS стъпка 2"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "ups step 3"
+msgstr "UPS стъпка 3"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "ups step 4"
+msgstr "UPS стъпка 4"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "ups step 5"
+msgstr "UPS стъпка 5"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "ups step 6"
+msgstr "UPS стъпка 6"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "ups.com"
+msgstr "ups.com"
+
+#. module: delivery_ups_rest
+#: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
+msgid "you're ready to go!"
+msgstr "Готови сте!"
+
+#~ msgid "Recipient Phone must be at least 10 alphanumeric characters."
+#~ msgstr ""
+#~ "Телефонът на получателя трябва да съдържа поне 10 буквено-цифрови знака."
+
+#~ msgid "Shipper Phone must be at least 10 alphanumeric characters."
+#~ msgstr ""
+#~ "Телефонът на изпращача трябва да съдържа поне 10 буквено-цифрови знака."
+
+#~ msgid "Warehouse Phone must be at least 10 alphanumeric characters."
+#~ msgstr ""
+#~ "Телефонът на склада трябва да съдържа поне 10 буквено-цифрови знака."

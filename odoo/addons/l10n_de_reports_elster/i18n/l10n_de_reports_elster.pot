@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_de_reports_elster
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-17 18:04+0000\n"
+"PO-Revision-Date: 2026-07-17 18:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid ""
+"\n"
+"\n"
+"Details:\n"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid ""
+"\n"
+"\n"
+"For complete error code reference, check out https://docs.rs/eric-sdk/latest/eric_sdk/enum.ErrorCode.html."
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#: model:ir.model,name:l10n_de_reports_elster.model_account_return
+msgid "Accounting Return"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid "Configure your company"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#: model:ir.model.fields,field_description:l10n_de_reports_elster.field_account_return__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid "Hints:"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#: model:ir.model.fields,field_description:l10n_de_reports_elster.field_account_return__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#: model:ir.model.fields,field_description:l10n_de_reports_elster.field_account_return__l10n_de_elster_payload_attachment_id
+msgid "L10N De Elster Payload Attachment"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid "Submission Failed, Please try again later"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid "Submission failed with error code: %s"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid "Successfully submitted to Elster."
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid ""
+"The tax report's XML has been attached. You can review it before submission."
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid "Transfer Ticket: %s"
+msgstr ""
+
+#. module: l10n_de_reports_elster
+#. odoo-python
+#: code:addons/l10n_de_reports_elster/models/account_return.py:0
+msgid ""
+"Your company's must have a SteuerNummer. Please configure it before "
+"submitting to ELSTER."
+msgstr ""

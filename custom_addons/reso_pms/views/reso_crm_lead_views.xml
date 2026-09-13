@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_lead_view_form_reso_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.form.reso.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_convert_to_booking" string="Convert to Booking" type="object" class="oe_highlight" invisible="lead_type not in ('guest', 'corporate') or not partner_id"/>
+            </xpath>
+            <xpath expr="//group[@name='lead_partner']" position="after">
+                <group string="Reso ERP - Resort &amp; Ownership Details">
+                    <group>
+                        <field name="lead_type"/>
+                        <field name="property_id"/>
+                        <field name="room_type_id"/>
+                        <field name="lead_score" widget="badge"/>
+                    </group>
+                    <group>
+                        <field name="preferred_checkin" invisible="lead_type != 'guest'"/>
+                        <field name="preferred_checkout" invisible="lead_type != 'guest'"/>
+                        <field name="guests_count" invisible="lead_type != 'guest'"/>
+                        <field name="investor_budget" invisible="lead_type != 'investor'"/>
+                        <field name="investor_units_interested" invisible="lead_type != 'investor'"/>
+                        <field name="whatsapp_opt_in"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Custom Action for Investor Leads -->
+    <record id="action_reso_investor_leads" model="ir.actions.act_window">
+        <field name="name">Fractional Investor Leads</field>
+        <field name="res_model">crm.lead</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('lead_type', '=', 'investor')]</field>
+        <field name="context">{'default_lead_type': 'investor'}</field>
+    </record>
+</odoo>

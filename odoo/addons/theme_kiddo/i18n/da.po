@@ -1,0 +1,922 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * theme_kiddo
+#
+# "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2025, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-17 17:38+0000\n"
+"PO-Revision-Date: 2026-06-24 16:58+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-19/"
+"theme_kiddo/da/>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_quotes_carousel_minimal
+msgid ""
+"\" A perfect place for early growth. <br/>Supportive staff, fun activities, "
+"and a loving environment. \""
+msgstr ""
+"\" Et perfekt sted for de første år af barnets udvikling. <br/>Støttende "
+"personale, sjove aktiviteter og et kærligt miljø. \""
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_quotes_carousel_minimal
+msgid ""
+"\" Exceptional teachers and care! <br/>They foster learning and joy every "
+"single day. \""
+msgstr ""
+"\"Fremragende lærere og omsorg! <br/>De fremmer læring og glæde hver eneste "
+"dag.\""
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_quotes_carousel_minimal
+msgid ""
+"\" Their care and learning are wonderful. Safe, nurturing, and full of "
+"creativity. \""
+msgstr ""
+"\"Deres omsorg og undervisning er fantastisk. Trygt, omsorgsfuldt og fuld af "
+"kreativitet.\""
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_call_to_action
+msgid "2,000 parents<br/> brought their kid to our nursery."
+msgstr "2.000 forældre<br/> har valgt vores vuggestue til deres barn."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_three_columns
+msgid ""
+"<br/>\n"
+"        For every kid"
+msgstr ""
+"<br/>\n"
+"        Til alle børn"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_three_columns
+msgid ""
+"<br/>\n"
+"        Open-door policy"
+msgstr ""
+"<br/>\n"
+"        Åben dør-politik"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_three_columns
+msgid ""
+"<br/>\n"
+"        Our mission"
+msgstr ""
+"<br/>\n"
+"        Vores mission"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_text_cover
+msgid ""
+"<br/>Discover our nursery’s welcoming environment and engaging programs with "
+"ease. Our platform helps you explore our activities, meet our staff, and see "
+"how we make early learning fun and enriching for your child.<br/>"
+msgstr ""
+"<br/>Udforsk nemt de indbydende omgivelser og spændende tilbud i vores "
+"daginstitution. Vores platform giver dig indblik i vores aktiviteter, "
+"medarbejdere og i, hvordan vi gør tidlig læring både sjov og berigende for "
+"dit barn.<br/>"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_split_intro
+msgid ""
+"<br/>Welcome to our nursery, where every child's development is our top "
+"priority. We provide a warm and supportive setting designed to foster "
+"curiosity and learning. With experienced staff and engaging activities, we "
+"ensure your little ones receive the care and attention they need to thrive."
+"<br/><br/>"
+msgstr ""
+"<br/>Velkommen til vores daginstitution, hvor hvert barns udvikling er vores "
+"højeste prioritet. Vi tilbyder et varmt og støttende miljø, der styrker "
+"nysgerrighed og læring. Med erfarent personale og spændende aktiviteter "
+"sikrer vi tryghed, omsorg og gode rammer for udvikling.<br/><br/>"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_empowerment
+msgid ""
+"<br/>Where every child blossoms in a safe and loving environment.<br/><br/>"
+msgstr "<br/>Hvor hvert barn trives i et trygt og kærligt miljø.<br/><br/>"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_empowerment
+msgid ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/>  Caring "
+"hands"
+msgstr ""
+"<i class=\"fa fa-fw fa-info-circle o_not-animable\" role=\"img\"/>  "
+"Omsorgsfulde hænder"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_image_title
+msgid "A Deep Dive into Play and Learning"
+msgstr "En dybdegående undersøgelse af leg og læring"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_images
+msgid "A Fun and Safe Environment for Your Little One"
+msgstr "Et sjovt og sikkert miljø for dit barn"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_framed_intro
+msgid "A Safe Place to Grow: Play, Learn, and Thrive"
+msgstr "Et trygt sted at vokse: Leg, læring og trivsel"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_images
+msgid "A caring and supportive atmosphere for early development"
+msgstr "En omsorgsfuld og støttende atmosfære i den tidlige udvikling"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_banner
+msgid "A little place <br/>of paradise"
+msgstr "Et lille stykke <br/>paradis"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_image_hexagonal
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_sidegrid
+msgid "A little place of paradise"
+msgstr "Et lille stykke paradis"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_striped_top
+msgid "A little place of paradise."
+msgstr "Et lille stykke paradis."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_intro_pill
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_product_list
+msgid "About us"
+msgstr "Om os"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_image_text
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_three_columns
+msgid ""
+"All activities are planned to meet each child’s individual needs. This "
+"approach will help your child to develop to the best of their ability."
+msgstr ""
+"Alle aktiviteter planlægges på en sådan måde, at hvert barns individuelle "
+"behov imødekommes. Denne tilgang hjælper dit barn med at udvikle sig bedst "
+"muligt."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_benefits
+msgid "Around-the-Clock Support"
+msgstr "Support døgnet rundt"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "Backpack"
+msgstr "Rygsæk"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid "Caring for Your Child's Growth and Happiness"
+msgstr "Dit barns udvikling og lykke er vores højeste prioritet"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid ""
+"Colorful set of crayons and markers for creative drawing and coloring "
+"activities in the classroom."
+msgstr ""
+"Et farverigt sæt med farveblyanter og tuschpenne til kreative tegne- og "
+"maleaktiviteter i klasseværelset."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid ""
+"Compact pencil case with compartments for pens, pencils, and other small "
+"stationery items."
+msgstr ""
+"Kompakt penalhus med rum til kuglepenne, blyanter og andet småt skriveudstyr."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_call_to_action
+msgid "Contact us"
+msgstr "Kontakt os"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "Crayons and Markers Set"
+msgstr "Sæt med farvekridt og tuschpenne"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_split_intro
+msgid "Create an environment<br/>for growth"
+msgstr "Skab et miljø<br/>, der fremmer vækst"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_unveil
+msgid ""
+"Create joyful memories and foster growth in a loving, playful environment."
+msgstr ""
+"Skab dejlige minder og fremme børnenes udvikling i et kærligt og legende "
+"miljø."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid "Creative Play"
+msgstr "Kreativ leg"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_images_mosaic
+msgid "Discover fun and engaging activities designed for young learners."
+msgstr "Oplev underholdende og spændende aktiviteter for unge skoleelever."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_carousel_intro
+msgid "Discover joyful learning"
+msgstr "Oplev glæden ved at lære"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cta_box
+msgid "Discover our wide range of destinations for children holidays<br/><br/>"
+msgstr "Oplev vores store udvalg af rejsemål til børneferier<br/><br/>"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_intro_pill
+msgid "Discover our<br/>Little World"
+msgstr "Oplev vores<br/>lille verden"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_text_cover
+msgid "Discover<br/>our nursery"
+msgstr "Udforsk<br/>vores børnehave"
+
+#. module: theme_kiddo
+#: model:ir.model.fields,field_description:theme_kiddo.field_theme_utils__display_name
+msgid "Display Name"
+msgstr "Visningsnavn"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_striped_center_top
+msgid ""
+"Dive into a world where playgrounds come to life and costumes turn dreams "
+"into reality, sparking endless adventures for kids of all ages."
+msgstr ""
+"Dyk ned i en verden, hvor legepladser vækkes til live, kostumer forvandler "
+"drømme til virkelighed, og børn i alle aldre tager del i eventyr."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid ""
+"Durable backpack with adjustable straps and multiple compartments for "
+"organizing school essentials."
+msgstr ""
+"Slidstærk rygsæk med justerbare skulderstropper og flere praktiske rum til "
+"opbevaring af skoleudstyr."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_shape_image
+msgid "Early childhood care"
+msgstr "Børnepasning i den tidlige barndom"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_features_wall
+msgid "Engaging Learning Activities"
+msgstr "Engagerende læringsaktiviteter"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_images
+msgid "Engaging activities that spark curiosity and creativity"
+msgstr "Spændende aktiviteter, der vækker nysgerrighed og kreativitet"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_features_wall
+msgid ""
+"Enjoy convenient and adaptable care schedules to fit your family’s needs, "
+"from full-day to part-time and drop-in services."
+msgstr ""
+"Oplev fleksible og tilpassede pasningsordninger, skræddersyet til jeres "
+"families behov – fra heldags- til deltidspasning og behovspasning."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_carousel_intro
+msgid ""
+"Enrich your child's early years with our fun programs and dedicated teachers."
+msgstr ""
+"Gør dit barns første leveår endnu mere berigende med vores underholdende "
+"programmer og engagerede lærere."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_benefits
+msgid "Enriching Activities"
+msgstr "Berigende aktiviteter"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_features_wall
+msgid ""
+"Ensure your child’s well-being in a secure, caring setting with experienced "
+"staff dedicated to providing personalized attention and support."
+msgstr ""
+"Sørg for dit barns trivsel i et trygt og omsorgsfuldt miljø med erfarent "
+"personale, der er dedikeret til personlig omsorg og støtte."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_call_to_action
+msgid "Entrust us with your children and go to work with peace of mind"
+msgstr "Overlad dine børn til os, og gå trygt på arbejde"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid ""
+"Equip your child with all the necessary supplies for a successful school "
+"year. Each item is selected to ensure both comfort and functionality."
+msgstr ""
+"Sørg for, at dit barn har alt det nødvendige udstyr til et vellykket "
+"skoleår. Hver enkelt vare er udvalgt med fokus på både komfort og "
+"funktionalitet."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "Essential School Supplies"
+msgstr "Essentielle skoleartikler"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_product_list
+msgid "Events"
+msgstr "Arrangementer"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_carousel_intro
+msgid "Experiences designed just for kids"
+msgstr "Oplevelser designet specielt til børn"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_carousel_intro
+msgid ""
+"Explore more and find a nurturing space for your child’s growth, designed to "
+"inspire and support their early development."
+msgstr ""
+"Læs mere og find et sted, hvor dit barn kan udfolde sig, og som er indrettet "
+"til at inspirere og understøtte den tidlige udvikling."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_striped_center_top
+msgid "Explore the Fun"
+msgstr "Udforsk sjove aktiviteter"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_features_wall
+msgid "Flexible Scheduling Options"
+msgstr "Fleksible planlægningsmuligheder"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_carousel_intro
+msgid ""
+"Foster creativity and curiosity with our engaging activities and caring "
+"environment, perfect for your child's first steps."
+msgstr ""
+"Fremme dit barns kreativitet og nysgerrighed med vores spændende aktiviteter "
+"og det omsorgsfulde miljø, der er perfekt til dit barns første skridt."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_features_wall
+msgid ""
+"Foster early development with interactive and educational activities "
+"designed to stimulate curiosity and creativity in young children."
+msgstr ""
+"Fremme småbørns udvikling med interaktive og pædagogiske aktiviteter, der "
+"har til formål at vække småbørns nysgerrighed og kreativitet."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid "Fun Learning Activities"
+msgstr "Sjove læringsaktiviteter"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid "Fun and Educational Activities"
+msgstr "Sjove og lærerige aktiviteter"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cta_box
+msgid "Give your child<br/>unforgettable memories"
+msgstr "Giv dit barn<br/>uforglemmelige minder"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid "Growth and Exploration"
+msgstr "Vækst og udforskning"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_striped_top
+msgid "Happy Kids, Happy Parents: Great Childcare"
+msgstr "Glade børn, glade forældre: fantastisk børnepasning"
+
+#. module: theme_kiddo
+#: model:ir.model.fields,field_description:theme_kiddo.field_theme_utils__id
+msgid "ID"
+msgstr "ID"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_quadrant
+msgid ""
+"Ignite your child's imagination with our range of toys and games. Designed "
+"for creativity and fun, our products bring joy to kids of all ages.<br/><br/"
+"> Explore the magic of playtime."
+msgstr ""
+"Væk dit barns fantasi med vores udvalg af legetøj og spil. Vores produkter "
+"er designet med fokus på kreativitet og leg og giver børn i alle aldre "
+"glæde.<br/><br/> Oplev magien ved leg."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_striped_center_top
+msgid "Imaginative Playgrounds, Games and Costumes for Kids"
+msgstr "Fantasifulde legepladser, leg og kostumer til børn"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_card_offset
+msgid ""
+"Inspire creativity and joy in children with our carefully curated selection "
+"of toys and games. Designed for endless fun and learning, our products are "
+"perfect for every child."
+msgstr ""
+"Væk børns kreativitet og glæde med vores nøje sammensatte udvalg af legetøj "
+"og spil. Produkterne er designet til uendelig leg og læring og passer til "
+"alle børn."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_freegrid
+msgid ""
+"Inspire imagination and creativity with our range of toys and games for kids "
+"of all ages. Our products are designed to engage young minds, offering "
+"endless hours of fun and learning."
+msgstr ""
+"Stimulér fantasien og kreativiteten med vores udvalg af legetøj og spil til "
+"børn i alle aldre. Produkterne er udviklet til at inspirere unge sind og "
+"give timevis af sjov og læring."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid ""
+"Insulated lunchbox with a secure closure and easy-to-clean interior, perfect "
+"for keeping meals fresh."
+msgstr ""
+"Madkasse med sikker lukning og et indre, der er let at rengøre – perfekt til "
+"at holde måltiderne friske."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cover
+msgid "Kiddo Nursery"
+msgstr "Kiddo-børnehave"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_empowerment
+msgid ""
+"Learn about our approach   <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+msgstr ""
+"Få mere at vide om vores tilgang   <i class=\"fa fa-long-arrow-right\" "
+"role=\"img\"/>"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_text_cover
+msgid "Learn more"
+msgstr "Få mere at vide"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_picture
+msgid "Letting each child explore and grow at their own pace"
+msgstr "Hvert barn udvikler sig og vokser i sit eget tempo"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "Lunchbox"
+msgstr "Madpakke"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "Notebook"
+msgstr "Notesbog"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid "Nurturing Early Learning"
+msgstr "Fremme af tidlig læring"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_images
+msgid "Nurturing Young Minds with Joyful Learning"
+msgstr "Fremme unge mennesker, der har glæde ved at lære"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_empowerment
+msgid "Nurturing growth<br/>at Little Sprouts Nursery"
+msgstr "Fremme af vækst<br/>hos Little Sprouts Nursery"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_carousel_intro
+msgid "Nurturing young minds through play"
+msgstr "At stimulere unge sind gennem leg"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_images_mosaic
+msgid "Our New Learning Programs"
+msgstr "Vores nye læringsprogrammer"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_three_columns
+msgid ""
+"Our aim is to make the early years of your child’s life as enjoyable, "
+"rewarding and positive as possible."
+msgstr ""
+"Vores mål er at gøre de første år i dit barns liv så underholdende, "
+"behagelige og positive som muligt."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_benefits
+msgid ""
+"Our dedicated staff is here to support you and your child, offering guidance "
+"and assistance whenever you need it."
+msgstr ""
+"Vores engagerede personale står klar til dig og dit barn og tilbyder støtte "
+"og hjælp, når du har brug for det."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cta_box
+msgid "Our destinations"
+msgstr "Vores rejsemål"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid ""
+"Our facilities are designed with your child’s safety in mind. With secure "
+"premises, child-friendly spaces, and vigilant supervision, we provide peace "
+"of mind for parents and a joyful experience for children."
+msgstr ""
+"Vores faciliteter er indrettet med fokus på dit barns sikkerhed. Sikre "
+"lokaler, børnevenlige områder og opmærksomt tilsyn giver forældre ro i "
+"sindet og børnene en tryg oplevelse."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_shape_image
+msgid ""
+"Our nursery provides a nurturing environment where young children can grow "
+"and learn. With engaging activities and a focus on development, we ensure a "
+"supportive start to each child's educational journey."
+msgstr ""
+"Vores børnehave tilbyder et trygt og omsorgsfuldt miljø, hvor små børn kan "
+"vokse og lære. Med spændende aktiviteter og fokus på udvikling sikrer vi, at "
+"hvert barn får den bedste start på sin læringsrejse."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_empowerment
+msgid "Our programs"
+msgstr "Vores programmer"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_picture
+msgid ""
+"Our qualified staff ensure that each childs' needs are always recognised and "
+"fulfilled."
+msgstr ""
+"Vores kvalificerede personale sørger for, at hvert barns behov altid bliver "
+"erkendt og opfyldt."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_product_list
+msgid "Our team"
+msgstr "Vores team"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_image_text
+msgid "Our team is composed of experienced nursery nurses."
+msgstr "Vores team består af erfarne børnehavepædagoger."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid ""
+"Our team of trained caregivers and educators is dedicated to providing "
+"personalized attention and care. We focus on creating a warm and supportive "
+"atmosphere where every child feels valued and understood."
+msgstr ""
+"Vores team af uddannede pædagoger og omsorgspersoner bestræber sig på at "
+"give hvert enkelt barn personlig opmærksomhed og omsorg. Vi lægger stor vægt "
+"på at skabe en varm og støttende atmosfære, hvor hvert barn føler sig "
+"værdsat og forstået."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "Pencil Case"
+msgstr "Penalhus"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_benefits
+msgid "Personalized Care Plans"
+msgstr "Individuelle omsorgsplaner"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_images
+msgid "Personalized attention to help every child thrive"
+msgstr "Individuel støtte, så hvert barn kan udvikle sig"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_product_list
+msgid "Playground"
+msgstr "Legeplads"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_card_offset
+msgid "Playtime just got better."
+msgstr "Spilletiden er netop blevet bedre."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid "Professional and Caring Staff"
+msgstr "Professionelt og omsorgsfuldt personale"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid "Quality and Nurturing"
+msgstr "Kvalitet og pleje"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid ""
+"Reusable water bottle with a spill-proof lid and easy-grip design, ideal for "
+"staying hydrated throughout the day."
+msgstr ""
+"Genanvendelig vandflaske med lækagesikker låg og et design, der giver et "
+"godt greb – ideel til at holde sig hydreret hele dagen."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_features_wall
+msgid "Safe &amp; Nurturing Environment"
+msgstr "Et trygt og omsorgsfuldt miljø"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid "Safe and Secure Environment"
+msgstr "Sikkert og trygt miljø"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_empowerment
+msgid "Schedule a visit"
+msgstr "Planlæg et besøg"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_quadrant
+msgid "Shop Now"
+msgstr "Shop nu"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_freegrid
+msgid "Shop Toys"
+msgstr "Køb legetøj"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid ""
+"Spiral-bound notebook with lined pages, perfect for taking notes and "
+"practicing writing skills."
+msgstr ""
+"Notesbog med spiralryg og linjerede sider, perfekt til at skrive noter og "
+"øve sig i at skrive."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_images
+msgid "Start your child's learning journey with us today"
+msgstr "Start dit barns læringsrejse sammen med os allerede i dag"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cover
+msgid ""
+"The countryside nursery since 2002.<br/>\n"
+"        A truly unique service in a highly secure and tranquil setting."
+msgstr ""
+"Børnehaven på landet siden 2002.<br/>\n"
+"        En virkelig enestående service i et yderst sikkert og roligt miljø."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_sidegrid
+msgid ""
+"The countryside nursery since 2002.<br/>A truly unique service in a highly "
+"secure and tranquil setting."
+msgstr ""
+"Børnehaven på landet siden 2002.<br/>En virkelig enestående service i et "
+"yderst sikkert og roligt miljø."
+
+#. module: theme_kiddo
+#: model:ir.model,name:theme_kiddo.model_theme_utils
+msgid "Theme Utils"
+msgstr "Designværktøjer"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_image_text
+msgid ""
+"They will propose to your children educational activities, playful, varied "
+"and adapted to the stage of development."
+msgstr ""
+"De vil foreslå jeres børn pædagogiske aktiviteter, der er legende, "
+"afvekslende og tilpasset deres udviklingsniveau."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_banner
+msgid ""
+"This is a simple hero unit, a simple jumbotron-style component for calling "
+"extra attention to featured content or information."
+msgstr ""
+"Dette er en simpel hero-enhed i fuldskærmsstil, designet til at fremhæve "
+"udvalgt indhold eller information og tiltrække ekstra opmærksomhed."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_picture
+msgid ""
+"Through stimulating and fun activities, our aim<br/>\n"
+"        is to promote all areas of a childs' development."
+msgstr ""
+"Vores mål er gennem stimulerende og underholdende aktiviteter<br/>\n"
+"        at fremme alle områder af børns udvikling."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_quadrant
+msgid "Toys &amp; Fun"
+msgstr "Legetøjs og sjov"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_card_offset
+msgid "Toys That Spark Imagination"
+msgstr "Legetøj, der sætter gang i fantasien"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_freegrid
+msgid "Toys and Games That Spark Creativity"
+msgstr "Legetøj og spil, der sætter gang i kreativiteten"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_image_title
+msgid ""
+"Transform your child’s day with our engaging programs, where fun meets "
+"discovery. Elevate their growth with activities that blend playfulness and "
+"learning seamlessly."
+msgstr ""
+"Gør dit barns dag helt særlig med vores spændende programmer, hvor sjov og "
+"opdagelse går hånd i hånd. Styrk dit barns udvikling med aktiviteter, der "
+"naturligt kombinerer leg og læring."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_product_list
+msgid "Visit us"
+msgstr "Besøg os"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "Water Bottle"
+msgstr "Vandflaske"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid ""
+"We create engaging and playful experiences tailored to each child's needs. "
+"Our caring teachers provide a safe and stimulating environment for early "
+"growth and exploration."
+msgstr ""
+"Vi skaber spændende og legende oplevelser tilpasset hvert enkelt barns "
+"behov. Vores omsorgsfulde pædagoger skaber et trygt og stimulerende miljø, "
+"der fremmer tidlig udvikling og nysgerrighed."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid ""
+"We offer a range of activities that combine fun with learning, from creative "
+"arts and crafts to outdoor play and interactive storytelling, ensuring every "
+"child enjoys a balanced and enriching day."
+msgstr ""
+"Vi tilbyder en række aktiviteter, der kombinerer sjov med læring – lige fra "
+"kreative håndværksaktiviteter til udendørs leg og interaktiv "
+"historiefortælling – for at sikre, at hvert barn får en afbalanceret og "
+"berigende dag."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_cards_grid
+msgid ""
+"We provide a safe and engaging environment where children can explore, "
+"learn, and grow. Our programs are designed to foster creativity, curiosity, "
+"and a love for learning from an early age."
+msgstr ""
+"Vi tilbyder et trygt og stimulerende miljø, hvor børn kan udforske, lære og "
+"udvikle sig. Vores programmer er tilrettelagt med henblik på at fremme "
+"kreativitet, nysgerrighed og glæden ved at lære allerede fra en tidlig alder."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid ""
+"We provide hands-on activities and creative projects to help your child "
+"learn and grow. Using innovative methods, we make every day a new adventure "
+"in discovery."
+msgstr ""
+"Vi tilbyder praktiske aktiviteter og kreative projekter, der hjælper dit "
+"barn med at lære og udvikle sig. Med innovative metoder gør vi hver dag til "
+"et nyt opdagelseseventyr."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_benefits
+msgid ""
+"We provide tailored care and learning programs that cater to the unique "
+"needs of each child, fostering their growth and development."
+msgstr ""
+"Vi tilbyder skræddersyede pasnings- og læringsprogrammer, der er tilpasset "
+"hvert barns individuelle behov og fremmer dets udvikling."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid "What we offer to your little ones"
+msgstr "Hvad vi tilbyder til dine små"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_striped_center_top
+msgid "Where every child becomes the hero of their story"
+msgstr "Hvor hvert barn bliver helten i sin egen historie"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_unveil
+msgid "Where smiles grow"
+msgstr "Her er der latter"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid ""
+"With experienced caregivers and a love for teaching, we offer a curriculum "
+"that nurtures every child’s curiosity and supports their early development."
+msgstr ""
+"Med erfarne pædagoger og stor entusiasme for undervisningen tilbyder vi et "
+"undervisningsprogram, der stimulerer hvert barns nysgerrighed og "
+"understøtter dets tidlige udvikling."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_three_columns
+msgid ""
+"You are welcome to come and see the nursery and meet the team at any time "
+"convenient to you."
+msgstr ""
+"Du er altid velkommen til at besøge vores børnehave og møde personalet, når "
+"det passer dig."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_key_benefits
+msgid ""
+"Your child will enjoy a variety of carefully curated activities designed to "
+"nurture creativity, curiosity, and social skills."
+msgstr ""
+"Dit barn vil få glæde af en lang række omhyggeligt sammensatte aktiviteter, "
+"der har til formål at fremme kreativitet, nysgerrighed og sociale "
+"færdigheder."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_wavy_grid
+msgid ""
+"Your child's happiness is our focus. Our friendly staff ensures a joyful and "
+"interactive learning experience with plenty of fun activities and games."
+msgstr ""
+"Dit barns trivsel er vores højeste prioritet. Vores venlige personale sørger "
+"for en munter og interaktiv læringsoplevelse med masser af sjove aktiviteter "
+"og lege."
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_big_number
+msgid "families trusted us"
+msgstr "familier stolede på os"
+
+#. module: theme_kiddo
+#. odoo-javascript
+#: code:addons/theme_kiddo/static/src/js/tour.js:0
+msgid "width"
+msgstr "bredde"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "✽  Provided by the School"
+msgstr "✽  Leveret af skolen"
+
+#. module: theme_kiddo
+#: model_terms:theme.ir.ui.view,arch:theme_kiddo.s_pricelist_boxed
+msgid "✽  School Supplies"
+msgstr "✽  Skoleartikler"
+
+#~ msgid "$12.00"
+#~ msgstr "$12,00"
+
+#~ msgid "$15.00"
+#~ msgstr "$15.00"
+
+#~ msgid "45%"
+#~ msgstr "45%"
