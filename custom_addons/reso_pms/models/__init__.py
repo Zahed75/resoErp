@@ -14,3 +14,4 @@ from . import reso_document
 from . import reso_stock_supply
 from . import reso_hr_shift
 from . import reso_project
+from . import reso_demo_loader

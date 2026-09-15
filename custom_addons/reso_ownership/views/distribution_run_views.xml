@@ -3,11 +3,22 @@
     <record id="action_reso_distribution_run" model="ir.actions.act_window">
         <field name="name">Distribution Runs</field>
         <field name="res_model">reso.distribution.run</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">list,form,graph</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create the first owner income distribution run.
             </p>
+        </field>
+    </record>
+
+    <record id="view_reso_distribution_run_graph" model="ir.ui.view">
+        <field name="name">reso.distribution.run.graph</field>
+        <field name="model">reso.distribution.run</field>
+        <field name="arch" type="xml">
+            <graph string="Distributions by Property" type="bar">
+                <field name="property_id" type="row"/>
+                <field name="total_distributed" type="measure"/>
+            </graph>
         </field>
     </record>
 

@@ -3,10 +3,10 @@
     <t t-name="reso_pms.ResoDashboardTemplate">
         <div class="o_reso_dashboard_wrapper h-100">
             <!-- Header Section -->
-            <div class="dashboard-header">
+            <div class="dashboard-header reso-fade-in">
                 <div>
                     <h1 class="page-title">resoERP Executive &amp; Operations Dashboard</h1>
-                    <p class="subtitle">Real-time resort performance, room availability, and fractional ownership summary.</p>
+                    <p class="subtitle">Your complete resort at a glance — bookings, rooms, finance, ownership &amp; more.</p>
                 </div>
                 <div class="header-actions">
                     <select class="property-select" t-on-change="onPropertyChange">
@@ -15,14 +15,51 @@
                             <option t-att-value="prop.id"><t t-esc="prop.name"/></option>
                         </t>
                     </select>
-                    <button class="btn-reso-primary" t-on-click="refreshData">
-                        <i class="fa fa-refresh me-1"/> Refresh
-                    </button>
+                    <div class="dropdown reso-header-actions">
+                        <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-cog me-1"/> Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" t-on-click.prevent="refreshData"><i class="fa fa-refresh me-2"/>Refresh data</a></li>
+                            <li><a class="dropdown-item" href="#" t-on-click.prevent="openNewBooking"><i class="fa fa-plus me-2"/>New booking</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><a class="dropdown-item" href="#" t-on-click.prevent="openAllRooms"><i class="fa fa-bed me-2"/>Open rooms board</a></li>
+                            <li><a class="dropdown-item" href="#" t-on-click.prevent="() => this.openQuickLink('reso.booking', 'Bookings')"><i class="fa fa-ticket me-2"/>Open bookings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Counter Strip -->
+            <div class="counter-strip reso-fade-in">
+                <div class="counter-pill">
+                    <span class="counter-value"><t t-esc="state.kpis.checkinsToday"/></span>
+                    <span class="counter-label">Check-ins Today</span>
+                </div>
+                <div class="counter-pill warn">
+                    <span class="counter-value"><t t-esc="state.kpis.lateCheckouts"/></span>
+                    <span class="counter-label">Late Check-outs</span>
+                </div>
+                <div class="counter-pill ok">
+                    <span class="counter-value"><t t-esc="state.kpis.inProgressBookings"/></span>
+                    <span class="counter-label">In-House Guests</span>
+                </div>
+                <div class="counter-pill danger">
+                    <span class="counter-value"><t t-esc="state.kpis.openTickets"/></span>
+                    <span class="counter-label">Open Tickets</span>
+                </div>
+                <div class="counter-pill warn">
+                    <span class="counter-value"><t t-esc="state.kpis.lowStockItems"/></span>
+                    <span class="counter-label">Low Stock Items</span>
+                </div>
+                <div class="counter-pill">
+                    <span class="counter-value"><t t-esc="state.kpis.openLeads"/></span>
+                    <span class="counter-label">Open Leads</span>
                 </div>
             </div>
 
             <!-- KPI Cards Grid -->
-            <div class="kpi-grid">
+            <div class="kpi-grid reso-fade-in">
                 <div class="kpi-card success">
                     <div class="kpi-icon"><i class="fa fa-percent"/></div>
                     <div class="kpi-body">
@@ -41,9 +78,9 @@
                     <div class="kpi-icon"><i class="fa fa-line-chart"/></div>
                     <div class="kpi-body">
                         <div class="kpi-title">RevPAR / ADR</div>
-                        <div class="kpi-value">৳<t t-esc="state.kpis.revpar"/></div>
+                        <div class="kpi-value"><t t-esc="state.kpis.currencySymbol"/><t t-esc="state.kpis.revpar"/></div>
                         <div class="kpi-sub">
-                            ADR: ৳<t t-esc="state.kpis.adr"/> <t t-esc="state.kpis.currencySymbol"/>
+                            ADR: <t t-esc="state.kpis.currencySymbol"/><t t-esc="state.kpis.adr"/>
                         </div>
                     </div>
                 </div>
@@ -52,7 +89,7 @@
                     <div class="kpi-icon"><i class="fa fa-money"/></div>
                     <div class="kpi-body">
                         <div class="kpi-title">Total Revenue</div>
-                        <div class="kpi-value">৳<t t-esc="state.kpis.totalRevenue"/></div>
+                        <div class="kpi-value"><t t-esc="state.kpis.currencySymbol"/><t t-esc="state.kpis.totalRevenue"/></div>
                         <div class="kpi-sub">Current Billing Period</div>
                     </div>
                 </div>
@@ -61,37 +98,56 @@
                     <div class="kpi-icon"><i class="fa fa-exchange"/></div>
                     <div class="kpi-body">
                         <div class="kpi-title">Today's Movement</div>
-                        <div class="kpi-value"><t t-esc="state.kpis.checkinsToday"/> In / <t t-esc="state.kpis.checkoutsToday"/> Out</div>
-                        <div class="kpi-sub">Front Desk Operations</div>
+                        <div class="kpi-value">
+                            <span class="text-success"><t t-esc="state.kpis.checkinsToday"/> In</span>
+                            <span class="kpi-value-sep">/</span>
+                            <span class="text-danger"><t t-esc="state.kpis.checkoutsToday"/> Out</span>
+                        </div>
+                        <div class="kpi-sub">Arrivals / Departures</div>
                     </div>
                 </div>
 
                 <div class="kpi-card danger">
                     <div class="kpi-icon"><i class="fa fa-exclamation-triangle"/></div>
                     <div class="kpi-body">
-                        <div class="kpi-title">Housekeeping Alerts</div>
-                        <div class="kpi-value"><t t-esc="state.kpis.dirtyRooms"/> Dirty Rooms</div>
-                        <div class="kpi-sub"><t t-esc="state.kpis.maintenanceRooms"/> Rooms in Maintenance</div>
+                        <div class="kpi-title">Housekeeping</div>
+                        <div class="kpi-value"><t t-esc="state.kpis.dirtyRooms"/><span class="kpi-value-unit"> dirty</span></div>
+                        <div class="kpi-sub"><t t-esc="state.kpis.maintenanceRooms"/> in maintenance</div>
                     </div>
                 </div>
 
-                <div class="kpi-card">
+                <div class="kpi-card" t-if="state.kpis.fractionalOwners !== null">
                     <div class="kpi-icon"><i class="fa fa-pie-chart"/></div>
                     <div class="kpi-body">
                         <div class="kpi-title">Fractional Ownership</div>
-                        <div class="kpi-value"><t t-esc="state.kpis.fractionalOwners"/> Owners</div>
-                        <div class="kpi-sub"><t t-esc="state.kpis.fractionalUnits"/> Units Issued</div>
+                        <div class="kpi-value"><t t-esc="state.kpis.fractionalOwners"/><span class="kpi-value-unit"> owners</span></div>
+                        <div class="kpi-sub">Active registry</div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Quick Links / Full Solution App Grid -->
+            <div class="card reso-fade-in" style="margin-bottom: 20px;">
+                <div class="card-header">
+                    <h3><i class="fa fa-th-large"/> Complete Solution — Quick Access</h3>
+                </div>
+                <div class="quick-links-grid">
+                    <t t-foreach="visibleQuickLinks" t-as="link" t-key="link.model">
+                        <div class="quick-link-tile" t-attf-data-color="{{link.color}}" t-on-click="() => this.openQuickLink(link.model, link.label)">
+                            <div class="quick-link-icon"><i t-attf-class="fa {{link.icon}}"/></div>
+                            <div class="quick-link-label"><t t-esc="link.label"/></div>
+                        </div>
+                    </t>
                 </div>
             </div>
 
             <!-- 2-Column Tables -->
             <div class="grid-2-col">
                 <!-- Live Room Status & Housekeeping Board -->
-                <div class="card">
+                <div class="card reso-fade-in">
                     <div class="card-header">
                         <h3><i class="fa fa-bed"/> Live Room Status &amp; Housekeeping Board</h3>
-                        <button class="btn-reso-secondary" t-on-click="openAllRooms">View All</button>
+                        <button class="btn btn-outline-primary btn-sm" t-on-click="openAllRooms"><i class="fa fa-external-link me-1"/>View All</button>
                     </div>
                     <div class="card-body">
                         <table class="data-table" t-if="state.rooms.length">
@@ -118,8 +174,8 @@
                                             <span t-attf-class="badge badge-{{room.housekeeping_status}}"><t t-esc="room.housekeeping_status"/></span>
                                         </td>
                                         <td>
-                                            <button t-if="room.housekeeping_status == 'dirty'" class="btn-sm-clean" t-on-click="(ev) => this.markClean(room.id, ev)">
-                                                Mark Clean
+                                            <button t-if="room.housekeeping_status == 'dirty'" class="btn btn-primary btn-sm" t-on-click="(ev) => this.markClean(room.id, ev)">
+                                                <i class="fa fa-check me-1"/>Mark Clean
                                             </button>
                                         </td>
                                     </tr>
@@ -131,10 +187,10 @@
                 </div>
 
                 <!-- Recent Guest Bookings -->
-                <div class="card">
+                <div class="card reso-fade-in">
                     <div class="card-header">
                         <h3><i class="fa fa-ticket"/> Recent Guest Bookings</h3>
-                        <button class="btn-reso-primary" t-on-click="openNewBooking">+ New Booking</button>
+                        <button class="btn btn-primary btn-sm" t-on-click="openNewBooking"><i class="fa fa-plus me-1"/>New Booking</button>
                     </div>
                     <div class="card-body">
                         <table class="data-table" t-if="state.bookings.length">
@@ -161,12 +217,59 @@
                                         <td>
                                             <span t-attf-class="badge badge-{{b.state}}"><t t-esc="b.state"/></span>
                                         </td>
-                                        <td><strong>৳<t t-esc="b.amount_total"/></strong></td>
+                                        <td><strong><t t-esc="b.currency"/><t t-esc="b.amount_total"/></strong></td>
                                     </tr>
                                 </t>
                             </tbody>
                         </table>
                         <div class="empty-state" t-else="">No bookings yet.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Feed Row -->
+            <div class="grid-2-col">
+                <!-- Maintenance Tickets -->
+                <div class="card reso-fade-in">
+                    <div class="card-header">
+                        <h3><i class="fa fa-wrench"/> Open Maintenance Tickets</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="activity-list" t-if="state.tickets.length">
+                            <t t-foreach="state.tickets" t-as="ticket" t-key="ticket.id">
+                                <li class="activity-item" t-on-click="() => this.openTicket(ticket.id)">
+                                    <span t-attf-class="priority-dot priority-{{ticket.priority}}"/>
+                                    <div class="activity-body">
+                                        <div class="activity-title"><t t-esc="ticket.title"/></div>
+                                        <div class="activity-meta"><t t-esc="ticket.room"/> · <t t-esc="ticket.name"/></div>
+                                    </div>
+                                    <span t-attf-class="badge badge-{{ticket.state}}"><t t-esc="ticket.state"/></span>
+                                </li>
+                            </t>
+                        </ul>
+                        <div class="empty-state" t-else="">No open maintenance tickets. 🎉</div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Activity -->
+                <div class="card reso-fade-in">
+                    <div class="card-header">
+                        <h3><i class="fa fa-whatsapp"/> Recent WhatsApp Activity</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="activity-list" t-if="state.messages.length">
+                            <t t-foreach="state.messages" t-as="msg" t-key="msg.id">
+                                <li class="activity-item">
+                                    <span class="avatar-circle"><t t-esc="this.getInitials(msg.partner)"/></span>
+                                    <div class="activity-body">
+                                        <div class="activity-title"><t t-esc="msg.partner"/></div>
+                                        <div class="activity-meta"><t t-esc="msg.body"/></div>
+                                    </div>
+                                    <span t-attf-class="badge badge-{{msg.message_type == 'inbound' ? 'info' : 'success'}}"><t t-esc="msg.message_type"/></span>
+                                </li>
+                            </t>
+                        </ul>
+                        <div class="empty-state" t-else="">No WhatsApp activity yet.</div>
                     </div>
                 </div>
             </div>

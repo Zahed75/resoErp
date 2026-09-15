@@ -13,6 +13,7 @@ export class ResoExecutiveDashboard extends Component {
         this.state = useState({
             selectedPropertyId: "all",
             properties: [],
+            ownershipInstalled: false,
             kpis: {
                 totalRooms: 0,
                 occupiedRooms: 0,
@@ -21,21 +22,46 @@ export class ResoExecutiveDashboard extends Component {
                 occupancyRate: 0,
                 checkinsToday: 0,
                 checkoutsToday: 0,
+                lateCheckouts: 0,
+                inProgressBookings: 0,
                 totalRevenue: 0,
                 adr: 0,
                 revpar: 0,
                 currencySymbol: "BDT",
-                fractionalOwners: 0,
-                fractionalUnits: 0,
+                fractionalOwners: null,
+                openTickets: 0,
+                lowStockItems: 0,
+                openLeads: 0,
             },
             rooms: [],
             bookings: [],
+            tickets: [],
+            messages: [],
         });
+
+        this.quickLinks = [
+            { label: "Bookings", icon: "fa-ticket", model: "reso.booking", color: "primary" },
+            { label: "Rooms Board", icon: "fa-bed", model: "reso.room", color: "info" },
+            { label: "Rate Plans", icon: "fa-tags", model: "reso.rate.plan", color: "success" },
+            { label: "Maintenance", icon: "fa-wrench", model: "reso.maintenance.ticket", color: "danger" },
+            { label: "Stock & Supplies", icon: "fa-cubes", model: "reso.stock.supply", color: "warning" },
+            { label: "HR Shifts", icon: "fa-id-badge", model: "reso.hr.shift", color: "info" },
+            { label: "CAPEX Projects", icon: "fa-building", model: "reso.capex.project", color: "primary" },
+            { label: "Documents & KYC", icon: "fa-folder", model: "reso.document", color: "success" },
+            { label: "WhatsApp Logs", icon: "fa-whatsapp", model: "reso.whatsapp.message", color: "success" },
+            { label: "Investor Leads", icon: "fa-users", model: "crm.lead", color: "warning" },
+            { label: "Owner Registry", icon: "fa-pie-chart", model: "reso.owner.registry", color: "primary", ownershipOnly: true },
+            { label: "Distribution Runs", icon: "fa-money", model: "reso.distribution.run", color: "info", ownershipOnly: true },
+        ];
 
         onWillStart(async () => {
             await this.loadProperties();
             await this.loadDashboardData();
         });
+    }
+
+    get visibleQuickLinks() {
+        return this.quickLinks.filter(l => !l.ownershipOnly || this.state.ownershipInstalled);
     }
 
     async loadProperties() {
@@ -48,11 +74,16 @@ export class ResoExecutiveDashboard extends Component {
     }
 
     async loadDashboardData() {
-        const propDomain = this.state.selectedPropertyId !== "all" 
-            ? [["property_id", "=", parseInt(this.state.selectedPropertyId)]] 
+        const propDomain = this.state.selectedPropertyId !== "all"
+            ? [["property_id", "=", parseInt(this.state.selectedPropertyId)]]
             : [];
 
         try {
+            // All KPIs in a single backend call (real ADR/RevPAR math, 30-day window)
+            const stats = await this.orm.call(
+                "reso.booking", "get_dashboard_stats",
+                [this.state.selectedPropertyId !== "all" ? parseInt(this.state.selectedPropertyId) : null]);
+
             // Load Rooms
             const roomFields = ["id", "name", "property_id", "room_type_id", "status", "housekeeping_status", "housekeeper_id"];
             const rooms = await this.orm.searchRead("reso.room", propDomain, roomFields, { limit: 20 });
@@ -65,16 +96,6 @@ export class ResoExecutiveDashboard extends Component {
                 housekeeping_status: r.housekeeping_status,
                 housekeeper: r.housekeeper_id ? r.housekeeper_id[1] : "Unassigned",
             }));
-
-            // Load KPI Aggregates
-            const allRoomsCount = await this.orm.searchCount("reso.room", [["active", "=", true], ...propDomain]);
-            const occupiedRoomsCount = await this.orm.searchCount("reso.room", [["status", "=", "occupied"], ...propDomain]);
-            const dirtyRoomsCount = await this.orm.searchCount("reso.room", [["housekeeping_status", "=", "dirty"], ...propDomain]);
-            const maintenanceRoomsCount = await this.orm.searchCount("reso.room", [["status", "=", "maintenance"], ...propDomain]);
-
-            const todayStr = new Date().toISOString().split("T")[0];
-            const checkinsToday = await this.orm.searchCount("reso.booking", [["checkin_date", "=", todayStr], ...propDomain]);
-            const checkoutsToday = await this.orm.searchCount("reso.booking", [["checkout_date", "=", todayStr], ...propDomain]);
 
             // Load Recent Bookings
             const bookingFields = ["id", "name", "partner_id", "property_id", "room_type_id", "room_id", "checkin_date", "checkout_date", "state", "amount_total", "currency_id"];
@@ -89,38 +110,55 @@ export class ResoExecutiveDashboard extends Component {
                 checkin_date: b.checkin_date,
                 checkout_date: b.checkout_date,
                 state: b.state,
-                amount_total: b.amount_total,
+                amount_total: Number(b.amount_total || 0).toLocaleString("en-US"),
                 currency: b.currency_id ? b.currency_id[1] : "BDT",
             }));
 
-            // Revenue Stats
-            const totalRevenue = bookings.reduce((sum, b) => sum + (b.amount_total || 0), 0);
-            const occupancyRate = allRoomsCount > 0 ? ((occupiedRoomsCount / allRoomsCount) * 100).toFixed(1) : 0;
-            const adr = bookings.length > 0 ? (totalRevenue / bookings.length).toFixed(0) : 0;
-            const revpar = allRoomsCount > 0 ? (totalRevenue / allRoomsCount).toFixed(0) : 0;
+            // Recent Maintenance Tickets
+            const tickets = await this.orm.searchRead("reso.maintenance.ticket",
+                [["state", "in", ["new", "in_progress"]]],
+                ["id", "name", "title", "priority", "state", "room_id"],
+                { limit: 5, order: "priority desc, request_date desc" });
+            this.state.tickets = tickets.map(t => ({
+                id: t.id,
+                name: t.name,
+                title: t.title,
+                priority: t.priority,
+                state: t.state,
+                room: t.room_id ? t.room_id[1] : "",
+            }));
 
-            // Fractional Owners Count
-            let ownersCount = 0;
-            try {
-                ownersCount = await this.orm.searchCount("reso.owner.registry", propDomain);
-            } catch (e) {
-                ownersCount = 0;
-            }
+            // Recent WhatsApp Messages
+            const messages = await this.orm.searchRead("reso.whatsapp.message",
+                [], ["id", "partner_id", "body", "message_type", "state"],
+                { limit: 5, order: "create_date desc" });
+            this.state.messages = messages.map(m => ({
+                id: m.id,
+                partner: m.partner_id ? m.partner_id[1] : "",
+                body: m.body,
+                message_type: m.message_type,
+                state: m.state,
+            }));
 
+            this.state.ownershipInstalled = stats.ownership_installed;
             this.state.kpis = {
-                totalRooms: allRoomsCount,
-                occupiedRooms: occupiedRoomsCount,
-                dirtyRooms: dirtyRoomsCount,
-                maintenanceRooms: maintenanceRoomsCount,
-                occupancyRate: occupancyRate,
-                checkinsToday: checkinsToday,
-                checkoutsToday: checkoutsToday,
-                totalRevenue: totalRevenue,
-                adr: adr,
-                revpar: revpar,
-                currencySymbol: "BDT",
-                fractionalOwners: ownersCount,
-                fractionalUnits: ownersCount * 4,
+                totalRooms: stats.rooms_total,
+                occupiedRooms: stats.rooms_occupied,
+                dirtyRooms: stats.rooms_dirty,
+                maintenanceRooms: stats.rooms_maintenance,
+                occupancyRate: stats.occupancy_rate,
+                checkinsToday: stats.arrivals_today,
+                checkoutsToday: stats.departures_today,
+                lateCheckouts: stats.late_checkouts,
+                inProgressBookings: stats.in_house,
+                totalRevenue: Number(stats.revenue_30d || 0).toLocaleString("en-US"),
+                adr: Number(stats.adr || 0).toLocaleString("en-US"),
+                revpar: Number(stats.revpar || 0).toLocaleString("en-US"),
+                currencySymbol: stats.currency_symbol || stats.currency || "",
+                fractionalOwners: stats.fractional_owners,
+                openTickets: stats.open_tickets,
+                lowStockItems: stats.low_stock,
+                openLeads: stats.open_leads,
             };
         } catch (e) {
             console.error("Error loading dashboard data:", e);
@@ -152,6 +190,16 @@ export class ResoExecutiveDashboard extends Component {
         return parts.length > 1
             ? (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
             : parts[0].slice(0, 2).toUpperCase();
+    }
+
+    openQuickLink(model, label) {
+        this.action.doAction({
+            type: "ir.actions.act_window",
+            name: label,
+            res_model: model,
+            views: [[false, "list"], [false, "form"]],
+            target: "current",
+        });
     }
 
     openRoom(roomId) {
@@ -188,7 +236,17 @@ export class ResoExecutiveDashboard extends Component {
             type: "ir.actions.act_window",
             name: "Rooms Board",
             res_model: "reso.room",
-            views: [[false, "list"], [false, "form"]],
+            views: [[false, "kanban"], [false, "list"], [false, "form"]],
+            target: "current",
+        });
+    }
+
+    openTicket(ticketId) {
+        this.action.doAction({
+            type: "ir.actions.act_window",
+            res_model: "reso.maintenance.ticket",
+            res_id: ticketId,
+            views: [[false, "form"]],
             target: "current",
         });
     }

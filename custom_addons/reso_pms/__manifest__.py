@@ -32,6 +32,7 @@ and bookings.
         'views/reso_operations_views.xml',
         'views/reso_dashboard_action.xml',
         'views/reso_menus.xml',
+        'views/website_templates.xml',
     ],
     'assets': {
         'web.assets_backend': [
@@ -40,6 +41,10 @@ and bookings.
             'reso_pms/static/src/xml/reso_dashboard.xml',
             'reso_pms/static/src/js/reso_reports.js',
             'reso_pms/static/src/xml/reso_reports.xml',
+        ],
+        'reso_pms.assets_website': [
+            'reso_pms/static/src/scss/reso_website.scss',
+            'reso_pms/static/src/js/reso_website.js',
         ],
     },
     'demo': [

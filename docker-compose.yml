@@ -1,0 +1,68 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    container_name: resoerp_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER:-odoo}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-odoo}
+      POSTGRES_DB: postgres
+    volumes:
+      - resoerp_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-odoo}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: resoerp_web
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      HOST: db
+      PORT: 5432
+      USER: ${DB_USER:-odoo}
+      PASSWORD: ${DB_PASSWORD:-odoo}
+      DB_NAME: ${DB_NAME:-resoSolution}
+      INIT_MODULES: ${INIT_MODULES:-reso_pms,reso_ownership}
+      UPDATE_MODULES: ${UPDATE_MODULES:-}
+      ODOO_ADMIN_PASSWD: ${ODOO_ADMIN_PASSWD:-admin}
+      DEMO: ${DEMO:-true}
+    ports:
+      - "${HTTP_PORT:-8069}:8069"
+      - "${LONGPOLLING_PORT:-8072}:8072"
+    volumes:
+      - resoerp_filestore:/var/lib/odoo
+      - resoerp_logs:/var/log/odoo
+      - ./custom_addons:/opt/resoerp/custom_addons
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8069/web/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+
+  website:
+    build:
+      context: ./website
+      dockerfile: Dockerfile
+    container_name: resoerp_website
+    restart: unless-stopped
+    depends_on:
+      web:
+        condition: service_healthy
+    ports:
+      - "${WEBSITE_PORT:-8080}:80"
+
+volumes:
+  resoerp_db_data:
+  resoerp_filestore:
+  resoerp_logs:

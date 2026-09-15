@@ -178,6 +178,13 @@
                         domain="[('checkin_date', '=', context_today())]"/>
                 <filter string="Check-out Today" name="checkout_today"
                         domain="[('checkout_date', '=', context_today())]"/>
+                <separator/>
+                <filter string="Arrivals Today" name="arrivals_today"
+                        domain="[('checkin_date', '=', context_today()), ('state', 'in', ('hold', 'confirmed'))]"/>
+                <filter string="Departures Today" name="departures_today"
+                        domain="[('checkout_date', '=', context_today()), ('state', '=', 'checked_in')]"/>
+                <filter string="In-House Guests" name="in_house"
+                        domain="[('state', '=', 'checked_in')]"/>
                 <group>
                     <filter string="Property" name="group_property" context="{'group_by': 'property_id'}"/>
                     <filter string="State" name="group_state" context="{'group_by': 'state'}"/>
@@ -197,6 +204,36 @@
             <p class="o_view_nocontent_smiling_face">
                 Create your first booking.
             </p>
+        </field>
+    </record>
+
+    <record id="action_reso_booking_arrivals" model="ir.actions.act_window">
+        <field name="name">Arrivals Today</field>
+        <field name="res_model">reso.booking</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="context">{'search_default_arrivals_today': 1}</field>
+    </record>
+
+    <record id="action_reso_booking_departures" model="ir.actions.act_window">
+        <field name="name">Departures Today</field>
+        <field name="res_model">reso.booking</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="context">{'search_default_departures_today': 1}</field>
+    </record>
+
+    <record id="action_reso_booking_inhouse" model="ir.actions.act_window">
+        <field name="name">In-House Guests</field>
+        <field name="res_model">reso.booking</field>
+        <field name="view_mode">list,form,calendar</field>
+        <field name="context">{'search_default_in_house': 1}</field>
+    </record>
+
+    <record id="action_reso_guests" model="ir.actions.act_window">
+        <field name="name">Guests</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Register a guest profile.</p>
         </field>
     </record>
 </odoo>

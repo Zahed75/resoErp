@@ -16,6 +16,26 @@ class ResoWebsiteBookingController(http.Controller):
         ]
         return request.make_response(json.dumps(data, default=str), headers=headers, status=status)
 
+    def _parse_dates(self, checkin_str, checkout_str):
+        """Returns (checkin, checkout, error_message)."""
+        try:
+            checkin = datetime.strptime(checkin_str, '%Y-%m-%d').date()
+            checkout = datetime.strptime(checkout_str, '%Y-%m-%d').date()
+        except (TypeError, ValueError):
+            return None, None, 'Invalid dates — expected YYYY-MM-DD.'
+        if checkout <= checkin:
+            return None, None, 'Check-out date must be after check-in date.'
+        return checkin, checkout, None
+
+    @http.route([
+        '/api/v1/website/properties',
+        '/api/v1/website/availability',
+        '/api/v1/website/booking/create',
+        '/api/v1/payment/process',
+    ], type='http', auth='public', methods=['OPTIONS'], csrf=False)
+    def api_cors_options(self, **kwargs):
+        return self._json_response({'status': 'ok'})
+
     @http.route('/api/v1/website/properties', type='http', auth='public', methods=['GET'], csrf=False)
     def list_properties(self, **kwargs):
         properties = request.env['reso.property'].sudo().search([('active', '=', True)])
@@ -34,7 +54,7 @@ class ResoWebsiteBookingController(http.Controller):
                     'max_guests': rt.max_guests,
                     'bed_type': rt.bed_type,
                     'base_price': rate_plan.base_price if rate_plan else 0.0,
-                    'currency': rate_plan.currency_id.name if rate_plan and rate_plan.currency_id else 'BDT',
+                    'currency': rate_plan.currency_id.name if rate_plan and rate_plan.currency_id else request.env.company.currency_id.name,
                     'amenities': [a.name for a in rt.amenity_ids],
                 })
 
@@ -64,20 +84,25 @@ class ResoWebsiteBookingController(http.Controller):
         if not property_id or not checkin_str or not checkout_str:
             return self._json_response({'status': 'error', 'message': 'Missing property_id, checkin_date, or checkout_date'}, status=400)
 
-        checkin = datetime.strptime(checkin_str, '%Y-%m-%d').date()
-        checkout = datetime.strptime(checkout_str, '%Y-%m-%d').date()
+        checkin, checkout, error = self._parse_dates(checkin_str, checkout_str)
+        if error:
+            return self._json_response({'status': 'error', 'message': error}, status=400)
 
-        room_types = request.env['reso.room.type'].sudo().search([
+        room_type_domain = [
             ('property_id', '=', int(property_id)),
-            ('max_guests', '>=', guests)
-        ])
+            ('max_guests', '>=', guests),
+        ]
+        requested_type = body.get('room_type_id')
+        if requested_type:
+            room_type_domain.append(('id', '=', int(requested_type)))
+        room_types = request.env['reso.room.type'].sudo().search(room_type_domain)
 
         available_types = []
         for rt in room_types:
             all_rooms = request.env['reso.room'].sudo().search([
                 ('property_id', '=', int(property_id)),
                 ('room_type_id', '=', rt.id),
-                ('status', '!=', 'out_of_order'),
+                ('status', 'not in', ('maintenance', 'out_of_order')),
             ])
 
             # Check how many rooms are NOT booked during this window
@@ -106,7 +131,7 @@ class ResoWebsiteBookingController(http.Controller):
                     'available_count': len(free_rooms),
                     'price_per_night': rate_plan.base_price if rate_plan else 0.0,
                     'total_price': total_price,
-                    'currency': rate_plan.currency_id.name if rate_plan and rate_plan.currency_id else 'BDT',
+                    'currency': rate_plan.currency_id.name if rate_plan and rate_plan.currency_id else request.env.company.currency_id.name,
                 })
 
         return self._json_response({'status': 'success', 'data': available_types})
@@ -128,6 +153,10 @@ class ResoWebsiteBookingController(http.Controller):
         if not (name and phone and property_id and room_type_id and checkin_str and checkout_str):
             return self._json_response({'status': 'error', 'message': 'Missing required booking fields'}, status=400)
 
+        checkin, checkout, error = self._parse_dates(checkin_str, checkout_str)
+        if error:
+            return self._json_response({'status': 'error', 'message': error}, status=400)
+
         # Partner lookup or creation
         partner = request.env['res.partner'].sudo().search([('phone', '=', phone)], limit=1)
         if not partner:
@@ -144,6 +173,7 @@ class ResoWebsiteBookingController(http.Controller):
             'room_type_id': int(room_type_id),
             'checkin_date': checkin_str,
             'checkout_date': checkout_str,
+            'adults': max(int(body.get('guests', 1) or 1), 1),
             'source': 'website',
             'state': 'hold',
             'note': f"Direct Website Booking via {payment_method.upper()}",
@@ -158,7 +188,7 @@ class ResoWebsiteBookingController(http.Controller):
                 'booking_reference': booking.name,
                 'guest_name': partner.name,
                 'amount_total': booking.amount_total,
-                'currency': booking.currency_id.name if booking.currency_id else 'BDT',
+                'currency': booking.currency_id.name if booking.currency_id else request.env.company.currency_id.name,
                 'state': booking.state,
                 'payment_gateway_url': f"/api/v1/payment/process?ref={booking.name}&method={payment_method}",
             }
@@ -166,10 +196,24 @@ class ResoWebsiteBookingController(http.Controller):
 
     @http.route('/api/v1/payment/process', type='http', auth='public', methods=['GET', 'POST'], csrf=False)
     def process_payment_callback(self, ref=None, method='bkash', **kwargs):
-        """Simulates local & international gateway payment capture (bKash/Nagad/SSLCommerz/Stripe)."""
+        """Simulates local & international gateway payment capture (bKash/Nagad/SSLCommerz/Stripe).
+
+        Idempotent: an already-confirmed booking returns success with its
+        current state instead of re-firing notifications.
+        """
         booking = request.env['reso.booking'].sudo().search([('name', '=', ref)], limit=1)
         if not booking:
             return self._json_response({'status': 'error', 'message': 'Invalid booking reference'}, status=404)
+        if booking.state == 'cancelled':
+            return self._json_response({'status': 'error', 'message': f'Booking {booking.name} is cancelled.'}, status=409)
+        if booking.state in ('confirmed', 'checked_in', 'checked_out', 'invoiced'):
+            return self._json_response({
+                'status': 'success',
+                'message': f'Booking {booking.name} is already confirmed.',
+                'booking_reference': booking.name,
+                'payment_status': 'PAID',
+                'state': booking.state,
+            })
 
         booking.action_confirm()
         booking.send_whatsapp_notification('booking_confirmed')

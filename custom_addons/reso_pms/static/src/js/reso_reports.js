@@ -1,47 +1,115 @@
 /** @odoo-module **/
 
-import { Component, useState } from "@odoo/owl";
+import { Component, useState, onWillStart } from "@odoo/owl";
 import { registry } from "@web/core/registry";
-import { useService } from "@web/core/utils/hooks";
 
 export class ResoAnalyticsDashboard extends Component {
     static template = "reso_pms.ResoReportsTemplate";
 
     setup() {
-        this.orm = useService("orm");
         this.state = useState({
             activeTab: "occupancy",
-            occupancyData: [
-                { month: "Jan 2026", occupancy: 65.4, adr: 12000, revpar: 7848, status: "Normal" },
-                { month: "Feb 2026", occupancy: 72.1, adr: 12500, revpar: 9012, status: "Normal" },
-                { month: "Mar 2026", occupancy: 80.5, adr: 13000, revpar: 10465, status: "High Season" },
-                { month: "Apr 2026", occupancy: 78.2, adr: 13500, revpar: 10557, status: "Normal" },
-                { month: "May 2026", occupancy: 85.0, adr: 14000, revpar: 11900, status: "High Season" },
-                { month: "Jun 2026", occupancy: 88.4, adr: 15000, revpar: 13260, status: "High Season" },
-                { month: "Jul 2026", occupancy: 92.1, adr: 16500, revpar: 15196, status: "High Season" },
-                { month: "Aug 2026", occupancy: 89.5, adr: 15500, revpar: 13872, status: "High Season" },
-                { month: "Sep 2026", occupancy: 84.0, adr: 14500, revpar: 12180, status: "High Season" },
-            ],
-            revenueOutlets: [
-                { category: "Room Accommodation & Villas", gross: "12,500,000", vat: "1,875,000", net: "10,625,000", percent: "68.5%" },
-                { category: "Food & Beverage / Restaurant POS", gross: "3,800,000", vat: "570,000", net: "3,230,000", percent: "20.8%" },
-                { category: "Spa & Wellness Center", gross: "1,200,000", vat: "180,000", net: "1,020,000", percent: "6.6%" },
-                { category: "Excursions, Tours & Water Sports", gross: "750,000", vat: "112,500", net: "637,500", percent: "4.1%" },
-            ],
-            ownershipYields: [
-                { name: "Prospire Investments Group", property: "Baliyari Resort Cox Beach", shares: 20, percent: "20.0%", dividend: "3,000,000", status: "Processed" },
-                { name: "Kazi Zainul Abedin", property: "Baliyari Resort Cox Beach", shares: 5, percent: "5.0%", dividend: "750,000", status: "Processed" },
-                { name: "Mahbubur Rahman", property: "Baliyari Hill Resort Sreemangal", shares: 10, percent: "10.0%", dividend: "1,500,000", status: "Processed" },
-            ]
+            loading: true,
+            currency: "BDT",
+            occupancyData: [],
+            revenueOutlets: [],
+            ownershipYields: [],
         });
+
+        onWillStart(async () => {
+            await this.loadReport();
+        });
+    }
+
+    async loadReport() {
+        this.state.loading = true;
+        try {
+            const res = await fetch("/api/v1/pms/reports/occupancy", {
+                headers: { "Accept": "application/json" },
+            });
+            const payload = await res.json();
+            if (payload.status !== "success") {
+                throw new Error(payload.message || "Report request failed.");
+            }
+            const data = payload.data || {};
+            this.state.currency = data.currency || "BDT";
+            const labels = data.labels || [];
+            const occupancy = data.occupancy_rates || [];
+            const adr = data.adr_values || [];
+            const revpar = data.revpar_values || [];
+
+            this.state.occupancyData = labels.map((label, i) => ({
+                month: label,
+                occupancy: occupancy[i] ?? 0,
+                adr: adr[i] ?? 0,
+                revpar: revpar[i] ?? 0,
+                status: (occupancy[i] ?? 0) >= 80 ? "High Season" : "Normal",
+            }));
+            this.state.revenueOutlets = (data.revenue_by_outlet || []).map(o => ({
+                category: o.category,
+                gross: this._fmt(o.gross),
+                percent: `${o.percent}%`,
+            }));
+            this.state.ownershipYields = (data.ownership_yields || []).map(y => ({
+                name: y.name,
+                property: y.property,
+                shares: y.shares,
+                percent: y.percent,
+                dividend: this._fmt(y.dividend),
+                status: y.status,
+            }));
+        } catch (e) {
+            console.error("Error loading analytics report:", e);
+        } finally {
+            this.state.loading = false;
+        }
     }
 
     setTab(tab) {
         this.state.activeTab = tab;
     }
 
+    _fmt(value) {
+        return (value ?? 0).toLocaleString("en-US", { maximumFractionDigits: 0 });
+    }
+
+    _downloadCsv(filename, headers, rows) {
+        const escape = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+        const csv = [
+            headers.map(escape).join(","),
+            ...rows.map((r) => r.map(escape).join(",")),
+        ].join("\n");
+        const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }
+
     exportReport(reportName) {
-        alert(`Exporting ${reportName} from resoERP...`);
+        if (reportName.startsWith("Occupancy")) {
+            this._downloadCsv(
+                "reso_occupancy_report.csv",
+                ["Month", "Occupancy Rate (%)", "ADR", "RevPAR", "Performance Index"],
+                this.state.occupancyData.map((r) => [r.month, r.occupancy, r.adr, r.revpar, r.status]),
+            );
+        } else if (reportName.startsWith("Revenue")) {
+            this._downloadCsv(
+                "reso_revenue_report.csv",
+                ["Outlet / Category", "Gross Revenue", "Contribution (%)"],
+                this.state.revenueOutlets.map((r) => [r.category, r.gross, r.percent]),
+            );
+        } else {
+            this._downloadCsv(
+                "reso_ownership_yield_report.csv",
+                ["Shareholder", "Property", "Ownership (%)", "Dividend", "Status"],
+                this.state.ownershipYields.map((r) => [r.name, r.property, r.percent, r.dividend, r.status]),
+            );
+        }
     }
 }
 

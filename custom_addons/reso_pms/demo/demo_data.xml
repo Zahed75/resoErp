@@ -1,23 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- ================= Properties ================= -->
     <record id="demo_property_beach" model="reso.property">
-        <field name="name">Reso Beach Resort</field>
+        <field name="name">Baliyari Resort Cox Beach</field>
         <field name="code">BBR</field>
         <field name="company_id" ref="base.main_company"/>
         <field name="phone">+880 1712 345 678</field>
-        <field name="email">reservations@reso.example.com</field>
+        <field name="email">reservations@baliyari-coxbeach.example.com</field>
         <field name="city">Cox's Bazar</field>
         <field name="country_id" ref="base.bd"/>
         <field name="checkin_time">14.0</field>
         <field name="checkout_time">12.0</field>
     </record>
 
+    <record id="demo_property_hill" model="reso.property">
+        <field name="name">Baliyari Hill Resort Sreemangal</field>
+        <field name="code">BHS</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="phone">+880 1812 456 789</field>
+        <field name="email">reservations@baliyari-sreemangal.example.com</field>
+        <field name="city">Sreemangal</field>
+        <field name="country_id" ref="base.bd"/>
+        <field name="checkin_time">14.0</field>
+        <field name="checkout_time">12.0</field>
+    </record>
+
+    <record id="demo_property_island" model="reso.property">
+        <field name="name">Baliyari Island Resort Saint Martin</field>
+        <field name="code">BIS</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="phone">+880 1912 567 890</field>
+        <field name="email">reservations@baliyari-saintmartin.example.com</field>
+        <field name="city">Saint Martin</field>
+        <field name="country_id" ref="base.bd"/>
+        <field name="checkin_time">14.0</field>
+        <field name="checkout_time">12.0</field>
+    </record>
+
+    <!-- ================= Amenities ================= -->
+    <record id="demo_amenity_wifi" model="reso.room.amenity">
+        <field name="name">Free Wi-Fi</field>
+    </record>
+    <record id="demo_amenity_ac" model="reso.room.amenity">
+        <field name="name">Air Conditioning</field>
+    </record>
+    <record id="demo_amenity_seaview" model="reso.room.amenity">
+        <field name="name">Sea View</field>
+    </record>
+    <record id="demo_amenity_balcony" model="reso.room.amenity">
+        <field name="name">Private Balcony</field>
+    </record>
+    <record id="demo_amenity_breakfast" model="reso.room.amenity">
+        <field name="name">Breakfast Included</field>
+    </record>
+    <record id="demo_amenity_pool" model="reso.room.amenity">
+        <field name="name">Private Pool Access</field>
+    </record>
+
+    <!-- ================= Room Types ================= -->
     <record id="demo_room_type_deluxe" model="reso.room.type">
         <field name="name">Deluxe King</field>
         <field name="property_id" ref="demo_property_beach"/>
         <field name="code">DK</field>
         <field name="max_guests">2</field>
         <field name="bed_type">king</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi'), ref('demo_amenity_ac'), ref('demo_amenity_seaview')])]"/>
     </record>
 
     <record id="demo_room_type_villa" model="reso.room.type">
@@ -26,13 +73,53 @@
         <field name="code">FV</field>
         <field name="max_guests">4</field>
         <field name="bed_type">queen</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi'), ref('demo_amenity_balcony'), ref('demo_amenity_breakfast')])]"/>
     </record>
 
+    <record id="demo_room_type_suite" model="reso.room.type">
+        <field name="name">Presidential Suite</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="code">PS</field>
+        <field name="max_guests">4</field>
+        <field name="bed_type">king</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi'), ref('demo_amenity_ac'), ref('demo_amenity_pool'), ref('demo_amenity_seaview')])]"/>
+    </record>
+
+    <record id="demo_room_type_cottage" model="reso.room.type">
+        <field name="name">Deluxe Cottage</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="code">DC</field>
+        <field name="max_guests">2</field>
+        <field name="bed_type">double</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi'), ref('demo_amenity_balcony')])]"/>
+    </record>
+
+    <record id="demo_room_type_treehouse" model="reso.room.type">
+        <field name="name">Tea Garden Treehouse</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="code">TGT</field>
+        <field name="max_guests">2</field>
+        <field name="bed_type">queen</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi')])]"/>
+    </record>
+
+    <record id="demo_room_type_beach_hut" model="reso.room.type">
+        <field name="name">Beachfront Hut</field>
+        <field name="property_id" ref="demo_property_island"/>
+        <field name="code">BFH</field>
+        <field name="max_guests">2</field>
+        <field name="bed_type">double</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi'), ref('demo_amenity_seaview')])]"/>
+    </record>
+
+    <!-- ================= Rooms ================= -->
     <record id="demo_room_101" model="reso.room">
         <field name="name">101</field>
         <field name="property_id" ref="demo_property_beach"/>
         <field name="room_type_id" ref="demo_room_type_deluxe"/>
         <field name="floor">1</field>
+        <field name="status">available</field>
+        <field name="housekeeping_status">clean</field>
     </record>
 
     <record id="demo_room_102" model="reso.room">
@@ -40,6 +127,17 @@
         <field name="property_id" ref="demo_property_beach"/>
         <field name="room_type_id" ref="demo_room_type_deluxe"/>
         <field name="floor">1</field>
+        <field name="status">occupied</field>
+        <field name="housekeeping_status">clean</field>
+    </record>
+
+    <record id="demo_room_103" model="reso.room">
+        <field name="name">103</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_deluxe"/>
+        <field name="floor">1</field>
+        <field name="status">cleaning</field>
+        <field name="housekeeping_status">dirty</field>
     </record>
 
     <record id="demo_room_201" model="reso.room">
@@ -47,6 +145,8 @@
         <field name="property_id" ref="demo_property_beach"/>
         <field name="room_type_id" ref="demo_room_type_villa"/>
         <field name="floor">2</field>
+        <field name="status">available</field>
+        <field name="housekeeping_status">clean</field>
     </record>
 
     <record id="demo_room_202" model="reso.room">
@@ -54,8 +154,65 @@
         <field name="property_id" ref="demo_property_beach"/>
         <field name="room_type_id" ref="demo_room_type_villa"/>
         <field name="floor">2</field>
+        <field name="status">cleaning</field>
+        <field name="housekeeping_status">dirty</field>
     </record>
 
+    <record id="demo_room_301" model="reso.room">
+        <field name="name">301</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_suite"/>
+        <field name="floor">3</field>
+        <field name="status">maintenance</field>
+        <field name="housekeeping_status">dirty</field>
+    </record>
+
+    <record id="demo_room_hill_c01" model="reso.room">
+        <field name="name">C-01</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="room_type_id" ref="demo_room_type_cottage"/>
+        <field name="floor">Ground</field>
+        <field name="status">available</field>
+        <field name="housekeeping_status">clean</field>
+    </record>
+
+    <record id="demo_room_hill_c02" model="reso.room">
+        <field name="name">C-02</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="room_type_id" ref="demo_room_type_cottage"/>
+        <field name="floor">Ground</field>
+        <field name="status">occupied</field>
+        <field name="housekeeping_status">clean</field>
+    </record>
+
+    <record id="demo_room_hill_t01" model="reso.room">
+        <field name="name">T-01</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="room_type_id" ref="demo_room_type_treehouse"/>
+        <field name="floor">Elevated</field>
+        <field name="status">available</field>
+        <field name="housekeeping_status">clean</field>
+    </record>
+
+    <record id="demo_room_island_b01" model="reso.room">
+        <field name="name">B-01</field>
+        <field name="property_id" ref="demo_property_island"/>
+        <field name="room_type_id" ref="demo_room_type_beach_hut"/>
+        <field name="floor">Ground</field>
+        <field name="status">available</field>
+        <field name="housekeeping_status">clean</field>
+    </record>
+
+    <record id="demo_room_island_b02" model="reso.room">
+        <field name="name">B-02</field>
+        <field name="property_id" ref="demo_property_island"/>
+        <field name="room_type_id" ref="demo_room_type_beach_hut"/>
+        <field name="floor">Ground</field>
+        <field name="status">occupied</field>
+        <field name="housekeeping_status">clean</field>
+    </record>
+
+    <!-- ================= Rate Plans ================= -->
     <record id="demo_rate_plan_deluxe_bb" model="reso.rate.plan">
         <field name="name">Deluxe King - Bed &amp; Breakfast</field>
         <field name="property_id" ref="demo_property_beach"/>
@@ -78,27 +235,302 @@
         <field name="deposit_percent">30.0</field>
     </record>
 
+    <record id="demo_rate_plan_suite" model="reso.rate.plan">
+        <field name="name">Presidential Suite - All Inclusive</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_suite"/>
+        <field name="base_price">32000.0</field>
+        <field name="min_stay">2</field>
+        <field name="meal_plan">all_inclusive</field>
+        <field name="cancellation_policy">strict</field>
+        <field name="deposit_required">1</field>
+        <field name="deposit_percent">50.0</field>
+    </record>
+
+    <record id="demo_rate_plan_cottage" model="reso.rate.plan">
+        <field name="name">Deluxe Cottage - Room Only</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="room_type_id" ref="demo_room_type_cottage"/>
+        <field name="base_price">6500.0</field>
+        <field name="min_stay">1</field>
+        <field name="meal_plan">none</field>
+        <field name="cancellation_policy">flexible</field>
+    </record>
+
+    <record id="demo_rate_plan_treehouse" model="reso.rate.plan">
+        <field name="name">Tea Garden Treehouse - Breakfast</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="room_type_id" ref="demo_room_type_treehouse"/>
+        <field name="base_price">7500.0</field>
+        <field name="min_stay">1</field>
+        <field name="meal_plan">breakfast</field>
+        <field name="cancellation_policy">flexible</field>
+    </record>
+
+    <record id="demo_rate_plan_beach_hut" model="reso.rate.plan">
+        <field name="name">Beachfront Hut - Half Board</field>
+        <field name="property_id" ref="demo_property_island"/>
+        <field name="room_type_id" ref="demo_room_type_beach_hut"/>
+        <field name="base_price">9500.0</field>
+        <field name="min_stay">2</field>
+        <field name="meal_plan">half_board</field>
+        <field name="cancellation_policy">moderate</field>
+    </record>
+
+    <!-- Seasonal pricing example -->
+    <record id="demo_rate_plan_deluxe_season_winter" model="reso.rate.plan.season">
+        <field name="rate_plan_id" ref="demo_rate_plan_deluxe_bb"/>
+        <field name="date_from" eval="DateTime.today().date().replace(month=12, day=1)"/>
+        <field name="date_to" eval="DateTime.today().date().replace(month=12, day=31)"/>
+        <field name="price">12000.0</field>
+    </record>
+
+    <!-- ================= Guest Partners ================= -->
+    <record id="demo_partner_guest_1" model="res.partner">
+        <field name="name">Tanvir Ahmed</field>
+        <field name="phone">+8801711223344</field>
+        <field name="email">tanvir.ahmed@example.com</field>
+    </record>
+    <record id="demo_partner_guest_2" model="res.partner">
+        <field name="name">Nusrat Jahan</field>
+        <field name="phone">+8801819887766</field>
+        <field name="email">nusrat.jahan@example.com</field>
+    </record>
+    <record id="demo_partner_guest_3" model="res.partner">
+        <field name="name">David Smith</field>
+        <field name="phone">+14155552671</field>
+        <field name="email">david.smith@example.com</field>
+    </record>
+    <record id="demo_partner_guest_4" model="res.partner">
+        <field name="name">Rafiqul Islam</field>
+        <field name="phone">+8801912345678</field>
+        <field name="email">rafiqul.islam@example.com</field>
+    </record>
+
+    <!-- ================= Bookings (various states) ================= -->
     <record id="demo_booking_confirmed" model="reso.booking">
         <field name="property_id" ref="demo_property_beach"/>
-        <field name="partner_id" ref="base.res_partner_2"/>
-        <field name="room_type_id" ref="demo_room_type_deluxe"/>
-        <field name="room_id" ref="demo_room_101"/>
-        <field name="checkin_date" eval="DateTime.today().date() + timedelta(days=7)"/>
-        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=10)"/>
+        <field name="partner_id" ref="demo_partner_guest_2"/>
+        <field name="room_type_id" ref="demo_room_type_suite"/>
+        <field name="checkin_date" eval="DateTime.today().date() + timedelta(days=3)"/>
+        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=7)"/>
         <field name="adults">2</field>
-        <field name="source">direct</field>
+        <field name="source">website</field>
         <field name="state">confirmed</field>
     </record>
 
     <record id="demo_booking_hold" model="reso.booking">
-        <field name="property_id" ref="demo_property_beach"/>
-        <field name="partner_id" ref="base.res_partner_12"/>
-        <field name="room_type_id" ref="demo_room_type_villa"/>
-        <field name="checkin_date" eval="DateTime.today().date() + timedelta(days=14)"/>
-        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=18)"/>
-        <field name="adults">2</field>
-        <field name="children">2</field>
-        <field name="source">website</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="partner_id" ref="demo_partner_guest_3"/>
+        <field name="room_type_id" ref="demo_room_type_cottage"/>
+        <field name="checkin_date" eval="DateTime.today().date() + timedelta(days=1)"/>
+        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=6)"/>
+        <field name="adults">1</field>
+        <field name="source">ota</field>
         <field name="state">hold</field>
     </record>
+
+    <record id="demo_booking_checked_in" model="reso.booking">
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="partner_id" ref="demo_partner_guest_1"/>
+        <field name="room_type_id" ref="demo_room_type_deluxe"/>
+        <field name="room_id" ref="demo_room_102"/>
+        <field name="checkin_date" eval="DateTime.today().date() - timedelta(days=1)"/>
+        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=2)"/>
+        <field name="adults">2</field>
+        <field name="children">1</field>
+        <field name="source">direct</field>
+        <field name="state">checked_in</field>
+    </record>
+
+    <record id="demo_booking_checked_out" model="reso.booking">
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="partner_id" ref="demo_partner_guest_4"/>
+        <field name="room_type_id" ref="demo_room_type_villa"/>
+        <field name="checkin_date" eval="DateTime.today().date() - timedelta(days=4)"/>
+        <field name="checkout_date" eval="DateTime.today().date() - timedelta(days=1)"/>
+        <field name="adults">3</field>
+        <field name="source">walk_in</field>
+        <field name="state">checked_out</field>
+    </record>
+
+    <record id="demo_booking_island" model="reso.booking">
+        <field name="property_id" ref="demo_property_island"/>
+        <field name="partner_id" ref="demo_partner_guest_2"/>
+        <field name="room_type_id" ref="demo_room_type_beach_hut"/>
+        <field name="room_id" ref="demo_room_island_b02"/>
+        <field name="checkin_date" eval="DateTime.today().date()"/>
+        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=3)"/>
+        <field name="adults">2</field>
+        <field name="source">agent</field>
+        <field name="state">checked_in</field>
+    </record>
+
+    <record id="demo_partner_guest_5" model="res.partner">
+        <field name="name">Sadia Rahman</field>
+        <field name="phone">+8801555667788</field>
+        <field name="email">sadia.rahman@example.com</field>
+    </record>
+
+    <record id="demo_booking_arriving_today" model="reso.booking">
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="partner_id" ref="demo_partner_guest_5"/>
+        <field name="room_type_id" ref="demo_room_type_deluxe"/>
+        <field name="checkin_date" eval="DateTime.today().date()"/>
+        <field name="checkout_date" eval="DateTime.today().date() + timedelta(days=2)"/>
+        <field name="adults">2</field>
+        <field name="source">website</field>
+        <field name="state">confirmed</field>
+    </record>
+
+    <record id="demo_booking_departing_today" model="reso.booking">
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="partner_id" ref="demo_partner_guest_1"/>
+        <field name="room_type_id" ref="demo_room_type_cottage"/>
+        <field name="room_id" ref="demo_room_hill_c02"/>
+        <field name="checkin_date" eval="DateTime.today().date() - timedelta(days=2)"/>
+        <field name="checkout_date" eval="DateTime.today().date()"/>
+        <field name="adults">2</field>
+        <field name="source">phone</field>
+        <field name="state">checked_in</field>
+    </record>
+
+    <!-- ================= Folio Outlet Charges (in-house guest) ================= -->
+    <record id="demo_folio_restaurant" model="reso.booking.folio.line">
+        <field name="booking_id" ref="demo_booking_checked_in"/>
+        <field name="name">Dinner — Seaside Grill (2 pax)</field>
+        <field name="outlet_type">restaurant</field>
+        <field name="quantity">1</field>
+        <field name="price_unit">2400</field>
+    </record>
+    <record id="demo_folio_bar" model="reso.booking.folio.line">
+        <field name="booking_id" ref="demo_booking_checked_in"/>
+        <field name="name">Sunset lounge — mocktails</field>
+        <field name="outlet_type">bar</field>
+        <field name="quantity">2</field>
+        <field name="price_unit">575</field>
+    </record>
+    <record id="demo_folio_spa" model="reso.booking.folio.line">
+        <field name="booking_id" ref="demo_booking_checked_in"/>
+        <field name="name">Aromatherapy massage (60 min)</field>
+        <field name="outlet_type">spa</field>
+        <field name="quantity">1</field>
+        <field name="price_unit">3000</field>
+    </record>
+    <record id="demo_folio_island_excursion" model="reso.booking.folio.line">
+        <field name="booking_id" ref="demo_booking_island"/>
+        <field name="name">Coral island snorkelling trip</field>
+        <field name="outlet_type">excursion</field>
+        <field name="quantity">2</field>
+        <field name="price_unit">1500</field>
+    </record>
+
+    <!-- ================= Maintenance Tickets ================= -->
+    <record id="demo_ticket_ac_repair" model="reso.maintenance.ticket">
+        <field name="title">AC not cooling</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_id" ref="demo_room_301"/>
+        <field name="priority">3</field>
+        <field name="state">in_progress</field>
+        <field name="description">Guest reported AC unit blowing warm air. Technician dispatched.</field>
+    </record>
+
+    <record id="demo_ticket_leaky_faucet" model="reso.maintenance.ticket">
+        <field name="title">Bathroom faucet leaking</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_id" ref="demo_room_202"/>
+        <field name="priority">1</field>
+        <field name="state">new</field>
+    </record>
+
+    <!-- ================= Stock & Supplies ================= -->
+    <record id="demo_stock_shampoo" model="reso.stock.supply">
+        <field name="name">Shampoo Bottles 50ml</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="category">housekeeping</field>
+        <field name="quantity_on_hand">18.0</field>
+        <field name="min_quantity">25.0</field>
+        <field name="max_quantity">150.0</field>
+        <field name="unit_cost">35.0</field>
+    </record>
+
+    <record id="demo_stock_towels" model="reso.stock.supply">
+        <field name="name">Bath Towels</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="category">linen</field>
+        <field name="quantity_on_hand">120.0</field>
+        <field name="min_quantity">50.0</field>
+        <field name="max_quantity">300.0</field>
+        <field name="unit_cost">250.0</field>
+    </record>
+
+    <record id="demo_stock_coffee" model="reso.stock.supply">
+        <field name="name">Coffee Sachets</field>
+        <field name="property_id" ref="demo_property_hill"/>
+        <field name="category">fb</field>
+        <field name="quantity_on_hand">40.0</field>
+        <field name="min_quantity">100.0</field>
+        <field name="max_quantity">500.0</field>
+        <field name="unit_cost">12.0</field>
+    </record>
+
+    <!-- ================= CAPEX Project ================= -->
+    <record id="demo_capex_pool_reno" model="reso.capex.project">
+        <field name="name">Infinity Pool Renovation</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="project_type">renovation</field>
+        <field name="budget">2500000.0</field>
+        <field name="actual_cost">850000.0</field>
+        <field name="progress_percent">35.0</field>
+        <field name="state">in_progress</field>
+        <field name="description">Full renovation of the rooftop infinity pool with new tiling and filtration system.</field>
+    </record>
+
+    <!-- ================= WhatsApp Chatbot Rules ================= -->
+    <record id="demo_chatbot_checkin" model="reso.whatsapp.chatbot.rule">
+        <field name="name">Check-in Time FAQ</field>
+        <field name="trigger_keywords">checkin, check-in, check in, arrival time</field>
+        <field name="response_template">Our standard check-in time is 2:00 PM. Early check-in is subject to availability — just let us know your arrival time!</field>
+        <field name="category">booking</field>
+    </record>
+
+    <record id="demo_chatbot_amenities" model="reso.whatsapp.chatbot.rule">
+        <field name="name">Amenities FAQ</field>
+        <field name="trigger_keywords">amenities, facilities, pool, spa, wifi</field>
+        <field name="response_template">Our resort offers a swimming pool, spa, free Wi-Fi throughout, and an on-site restaurant. Let us know if you'd like to book any add-on experiences!</field>
+        <field name="category">amenities</field>
+    </record>
+
+    <!-- ================= CRM Leads ================= -->
+    <record id="demo_lead_guest_inquiry" model="crm.lead">
+        <field name="name">Family stay inquiry — Family Villa</field>
+        <field name="partner_id" ref="demo_partner_guest_3"/>
+        <field name="lead_type">guest</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="room_type_id" ref="demo_room_type_villa"/>
+        <field name="preferred_checkin" eval="DateTime.today().date() + timedelta(days=20)"/>
+        <field name="preferred_checkout" eval="DateTime.today().date() + timedelta(days=24)"/>
+        <field name="guests_count">4</field>
+    </record>
+
+    <record id="demo_lead_investor" model="crm.lead">
+        <field name="name">Fractional ownership inquiry — Beach Resort</field>
+        <field name="lead_type">investor</field>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="investor_budget">5000000.0</field>
+        <field name="investor_units_interested">2</field>
+    </record>
+
+    <!-- ================= Documents ================= -->
+    <record id="demo_document_kyc" model="reso.document">
+        <field name="name">Guest NID — Tanvir Ahmed</field>
+        <field name="document_type">passport</field>
+        <field name="partner_id" ref="demo_partner_guest_1"/>
+        <field name="property_id" ref="demo_property_beach"/>
+        <field name="is_verified">1</field>
+    </record>
+
+    <!-- Bulk demo volume: 24 guests, 120 bookings, folio charges, messages -->
+    <function model="reso.demo.loader" name="load_bulk_demo_data"/>
 </odoo>
+

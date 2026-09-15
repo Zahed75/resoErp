@@ -1,0 +1,547 @@
+/* resoERP Public Website — "Liquid Glass" Modern Theme (light + dark) */
+
+.reso-site {
+    --reso-w-bg: #f7f5ff;
+    --reso-w-surface: rgba(255, 255, 255, 0.55);
+    --reso-w-surface-solid: #ffffff;
+    --reso-w-text: #16172b;
+    --reso-w-text-muted: #5b5d78;
+    --reso-w-border: rgba(22, 23, 43, 0.08);
+    --reso-w-primary: #6d5bff;
+    --reso-w-primary-2: #9b5bff;
+    --reso-w-accent: #ff7ab8;
+    --reso-w-glass-blur: 18px;
+    --reso-w-shadow: 0 20px 60px -20px rgba(90, 60, 200, 0.25);
+    --reso-w-radius: 22px;
+
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--reso-w-bg);
+    color: var(--reso-w-text);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    transition: background-color .4s ease, color .4s ease;
+
+    &.reso-dark {
+        --reso-w-bg: #0b0b16;
+        --reso-w-surface: rgba(30, 30, 48, 0.55);
+        --reso-w-surface-solid: #16172b;
+        --reso-w-text: #f3f2ff;
+        --reso-w-text-muted: #a3a2c2;
+        --reso-w-border: rgba(255, 255, 255, 0.08);
+        --reso-w-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+    }
+
+    * { box-sizing: border-box; }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', 'Plus Jakarta Sans', serif; letter-spacing: -0.01em; }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ============ Liquid Blobs Background ============ */
+    .reso-blob {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.35;
+        z-index: 0;
+        pointer-events: none;
+        animation: reso-blob-float 18s ease-in-out infinite;
+    }
+    .reso-blob-1 { width: 480px; height: 480px; top: -120px; left: -120px; background: radial-gradient(circle, var(--reso-w-primary), transparent 70%); }
+    .reso-blob-2 { width: 420px; height: 420px; top: 40%; right: -160px; background: radial-gradient(circle, var(--reso-w-accent), transparent 70%); animation-delay: -6s; }
+    .reso-blob-3 { width: 360px; height: 360px; bottom: -140px; left: 20%; background: radial-gradient(circle, var(--reso-w-primary-2), transparent 70%); animation-delay: -12s; }
+
+    @keyframes reso-blob-float {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(30px, -40px) scale(1.08); }
+        66% { transform: translate(-25px, 25px) scale(0.95); }
+    }
+
+    /* ============ Reveal-on-scroll ============ */
+    [data-reso-reveal] {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1);
+    }
+    [data-reso-reveal="fade-down"] { transform: translateY(-16px); }
+    [data-reso-reveal].reso-visible { opacity: 1; transform: translateY(0); }
+
+    /* ============ Glassmorphism Card ============ */
+    .reso-glass-card {
+        position: relative;
+        z-index: 1;
+        background: var(--reso-w-surface);
+        backdrop-filter: blur(var(--reso-w-glass-blur)) saturate(140%);
+        -webkit-backdrop-filter: blur(var(--reso-w-glass-blur)) saturate(140%);
+        border: 1px solid var(--reso-w-border);
+        border-radius: var(--reso-w-radius);
+        box-shadow: var(--reso-w-shadow);
+    }
+
+    /* ============ Navbar ============ */
+    .reso-navbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        padding: 16px 6vw;
+        background: var(--reso-w-surface);
+        backdrop-filter: blur(var(--reso-w-glass-blur));
+        -webkit-backdrop-filter: blur(var(--reso-w-glass-blur));
+        border-bottom: 1px solid var(--reso-w-border);
+
+        .reso-navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .reso-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.15rem;
+
+            .reso-brand-icon {
+                width: 36px;
+                height: 36px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, var(--reso-w-primary), var(--reso-w-primary-2));
+                color: #fff;
+            }
+        }
+
+        .reso-nav-links {
+            display: flex;
+            gap: 28px;
+            font-weight: 600;
+            font-size: 0.92rem;
+
+            a { color: var(--reso-w-text-muted); transition: color .2s ease; }
+            a:hover { color: var(--reso-w-primary); }
+
+            @media (max-width: 900px) { display: none; }
+        }
+
+        .reso-nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .reso-theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--reso-w-border);
+            background: var(--reso-w-surface-solid);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--reso-w-text);
+            transition: transform .2s ease;
+
+            &:hover { transform: rotate(20deg); }
+            .reso-icon-light { display: none; }
+        }
+    }
+
+    &.reso-dark .reso-theme-toggle {
+        .reso-icon-dark { display: none; }
+        .reso-icon-light { display: inline; }
+    }
+
+    /* ============ Buttons ============ */
+    .reso-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 11px 22px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border: none;
+        cursor: pointer;
+        transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .reso-btn-primary {
+        background: linear-gradient(135deg, var(--reso-w-primary), var(--reso-w-primary-2));
+        color: #fff;
+        box-shadow: 0 10px 24px -8px rgba(109, 91, 255, 0.55);
+
+        &:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -8px rgba(109, 91, 255, 0.65); }
+    }
+    .reso-btn-ghost {
+        background: transparent;
+        border: 1.5px solid var(--reso-w-border);
+        color: var(--reso-w-text);
+
+        &:hover { background: var(--reso-w-surface-solid); }
+    }
+    .reso-btn-lg { padding: 15px 30px; font-size: 1rem; }
+    .reso-btn-block { width: 100%; }
+
+    /* ============ Hero ============ */
+    .reso-hero {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 40px;
+        align-items: center;
+        padding: 90px 6vw 60px;
+        max-width: 1280px;
+        margin: 0 auto;
+
+        @media (max-width: 960px) { grid-template-columns: 1fr; padding-top: 50px; }
+
+        .reso-eyebrow {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: var(--reso-w-surface-solid);
+            border: 1px solid var(--reso-w-border);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--reso-w-primary);
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            font-weight: 700;
+            line-height: 1.12;
+            margin-bottom: 20px;
+        }
+
+        p { color: var(--reso-w-text-muted); font-size: 1.05rem; max-width: 480px; margin-bottom: 30px; }
+
+        .reso-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+
+        .reso-hero-stats {
+            display: flex;
+            gap: 36px;
+
+            strong { display: block; font-size: 1.5rem; font-weight: 800; }
+            span { font-size: 0.78rem; color: var(--reso-w-text-muted); text-transform: uppercase; letter-spacing: .04em; }
+        }
+
+        .reso-hero-visual {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-end;
+
+            @media (max-width: 960px) { align-items: stretch; }
+
+            .reso-glass-card {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                padding: 18px 22px;
+                width: 300px;
+                max-width: 100%;
+
+                i { font-size: 1.5rem; color: var(--reso-w-primary); }
+                strong { display: block; font-size: 0.92rem; }
+                span { font-size: 0.78rem; color: var(--reso-w-text-muted); }
+            }
+        }
+    }
+
+    .reso-float { animation: reso-float-kf 4.5s ease-in-out infinite; }
+    .reso-float-delay { animation-delay: 1.2s; }
+    @keyframes reso-float-kf {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    /* ============ Sections ============ */
+    .reso-section {
+        position: relative;
+        z-index: 1;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 50px 6vw;
+    }
+    .reso-section-alt { background: var(--reso-w-surface-solid); border-radius: 40px; }
+
+    .reso-section-title {
+        font-size: clamp(1.6rem, 3vw, 2.1rem);
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .reso-page-hero {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 80px 6vw 30px;
+        text-align: center;
+
+        .reso-eyebrow {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: var(--reso-w-surface-solid);
+            border: 1px solid var(--reso-w-border);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--reso-w-primary);
+            margin-bottom: 16px;
+        }
+        h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 12px; }
+        p { color: var(--reso-w-text-muted); font-size: 1.02rem; }
+    }
+
+    /* ============ Property / Room Grids ============ */
+    .reso-property-grid, .reso-room-grid, .reso-room-grid-lg, .reso-contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+    }
+
+    .reso-property-card {
+        overflow: hidden;
+        transition: transform .2s ease;
+        &:hover { transform: translateY(-6px); }
+
+        .reso-property-media {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+            color: var(--reso-w-primary);
+            background: linear-gradient(135deg, rgba(109,91,255,.15), rgba(255,122,184,.15));
+        }
+        .reso-property-body { padding: 20px; }
+        h3 { font-size: 1.15rem; margin-bottom: 6px; }
+        p { color: var(--reso-w-text-muted); font-size: 0.85rem; margin-bottom: 10px; }
+        .reso-link { color: var(--reso-w-primary); font-weight: 700; font-size: 0.85rem; }
+    }
+
+    .reso-room-card {
+        padding: 22px;
+        text-align: center;
+        transition: transform .2s ease;
+        &:hover { transform: translateY(-6px); }
+
+        .reso-room-media { font-size: 1.8rem; color: var(--reso-w-primary); margin-bottom: 10px; }
+        h4 { font-size: 1.05rem; margin-bottom: 6px; }
+        p { color: var(--reso-w-text-muted); font-size: 0.82rem; }
+    }
+
+    .reso-room-card-lg {
+        overflow: hidden;
+        transition: transform .2s ease;
+        &:hover { transform: translateY(-6px); }
+
+        .reso-room-media {
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--reso-w-primary);
+            background: linear-gradient(135deg, rgba(109,91,255,.15), rgba(255,122,184,.15));
+        }
+        .reso-room-card-body { padding: 20px; }
+
+        .reso-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--reso-w-primary);
+            margin-bottom: 8px;
+        }
+        h3 { font-size: 1.15rem; margin-bottom: 6px; }
+        p { color: var(--reso-w-text-muted); font-size: 0.82rem; margin-bottom: 12px; }
+
+        .reso-amenity-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+        .reso-amenity-chip {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--reso-w-surface-solid);
+            border: 1px solid var(--reso-w-border);
+            color: var(--reso-w-text-muted);
+        }
+
+        .reso-room-footer { display: flex; align-items: center; justify-content: space-between; }
+        .reso-price {
+            strong { font-size: 1.2rem; color: var(--reso-w-primary); }
+            span { font-size: 0.75rem; color: var(--reso-w-text-muted); }
+        }
+    }
+
+    .reso-contact-card {
+        padding: 24px;
+        h3 { font-size: 1.1rem; margin-bottom: 12px; }
+        p { color: var(--reso-w-text-muted); font-size: 0.88rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .reso-btn { margin-top: 12px; }
+    }
+
+    /* ============ CTA Section ============ */
+    .reso-cta {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 20px auto 60px;
+        padding: 60px 6vw;
+        text-align: center;
+        border-radius: 32px;
+        background: linear-gradient(135deg, var(--reso-w-primary), var(--reso-w-primary-2));
+        color: #fff;
+
+        h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 10px; }
+        p { opacity: 0.9; margin-bottom: 26px; }
+        .reso-btn-primary { background: #fff; color: var(--reso-w-primary); box-shadow: none; }
+    }
+
+    /* ============ Booking Form ============ */
+    .reso-booking-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: start;
+
+        @media (max-width: 900px) { grid-template-columns: 1fr; }
+    }
+
+    .reso-booking-form, .reso-booking-summary { padding: 28px; }
+
+    .reso-form-row {
+        margin-bottom: 16px;
+        label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; color: var(--reso-w-text-muted); }
+    }
+    .reso-form-row-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .reso-input {
+        width: 100%;
+        padding: 11px 14px;
+        border-radius: 12px;
+        border: 1px solid var(--reso-w-border);
+        background: var(--reso-w-surface-solid);
+        color: var(--reso-w-text);
+        font-size: 0.9rem;
+        outline: none;
+        transition: border-color .15s ease;
+
+        &:focus { border-color: var(--reso-w-primary); }
+    }
+
+    .reso-availability-results { margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+    .reso-availability-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        border-radius: 14px;
+        border: 1px solid var(--reso-w-border);
+        background: var(--reso-w-surface-solid);
+        cursor: pointer;
+        transition: border-color .15s ease;
+
+        &:hover { border-color: var(--reso-w-primary); }
+        &.reso-selected { border-color: var(--reso-w-primary); background: rgba(109, 91, 255, 0.08); }
+
+        strong { display: block; font-size: 0.92rem; }
+        span { font-size: 0.76rem; color: var(--reso-w-text-muted); }
+    }
+
+    .reso-summary-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+        margin: 10px 0 18px;
+        border-top: 1px solid var(--reso-w-border);
+        border-bottom: 1px solid var(--reso-w-border);
+
+        span { color: var(--reso-w-text-muted); font-size: 0.85rem; }
+        strong { font-size: 1.3rem; color: var(--reso-w-primary); }
+    }
+
+    /* ============ Confirmation ============ */
+    .reso-confirmation {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        padding: 100px 6vw;
+    }
+    .reso-confirmation-card {
+        padding: 50px;
+        text-align: center;
+        max-width: 460px;
+
+        .reso-confirmation-icon { font-size: 3.4rem; color: #22c55e; margin-bottom: 16px; }
+        h1 { font-size: 1.8rem; margin-bottom: 16px; }
+        p { color: var(--reso-w-text-muted); margin-bottom: 6px; }
+        .reso-btn { margin-top: 20px; }
+    }
+
+    /* ============ Footer ============ */
+    .reso-footer {
+        position: relative;
+        z-index: 1;
+        border-top: 1px solid var(--reso-w-border);
+        padding: 50px 6vw 24px;
+        margin-top: 40px;
+
+        .reso-footer-inner {
+            max-width: 1280px;
+            margin: 0 auto 30px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+
+            @media (max-width: 760px) { grid-template-columns: 1fr; }
+        }
+
+        .reso-footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .reso-brand-icon {
+                width: 32px; height: 32px; border-radius: 8px;
+                display: flex; align-items: center; justify-content: center;
+                background: linear-gradient(135deg, var(--reso-w-primary), var(--reso-w-primary-2));
+                color: #fff;
+            }
+            p { color: var(--reso-w-text-muted); font-size: 0.85rem; max-width: 320px; }
+        }
+
+        .reso-footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            h4 { font-size: 0.85rem; margin-bottom: 6px; }
+            a { color: var(--reso-w-text-muted); font-size: 0.85rem; }
+            a:hover { color: var(--reso-w-primary); }
+        }
+
+        .reso-footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--reso-w-border);
+            font-size: 0.78rem;
+            color: var(--reso-w-text-muted);
+        }
+    }
+}

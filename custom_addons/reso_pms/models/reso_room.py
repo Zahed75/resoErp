@@ -33,16 +33,32 @@ class ResoRoom(models.Model):
     ], string='Housekeeping Status', default='clean', tracking=True)
     housekeeper_id = fields.Many2one('res.users', string='Assigned Housekeeper', tracking=True)
     last_cleaned = fields.Datetime(string='Last Cleaned')
+    current_guest_name = fields.Char(
+        string='Current Guest', compute='_compute_current_guest')
     notes = fields.Text(string='Notes / Instructions')
     active = fields.Boolean(string='Active', default=True)
     company_id = fields.Many2one(
         related='property_id.company_id', store=True, index=True,
         string='Company')
 
-    _sql_constraints = [
-        ('property_room_uniq', 'unique(property_id, name)',
-         'A room with this number already exists for this property.'),
-    ]
+    _property_room_uniq = models.Constraint(
+        'unique(property_id, name)',
+        'A room with this number already exists for this property.',
+    )
+
+    @api.depends('status')
+    def _compute_current_guest(self):
+        Booking = self.env['reso.booking']
+        for room in self:
+            room.current_guest_name = ''
+            if room.status != 'occupied':
+                continue
+            booking = Booking.search([
+                ('room_id', '=', room.id),
+                ('state', '=', 'checked_in'),
+            ], limit=1)
+            if booking:
+                room.current_guest_name = booking.partner_id.name
 
     @api.constrains('property_id', 'room_type_id')
     def _check_room_type_property(self):

@@ -1,0 +1,10 @@
+env/
+.git/
+.gitignore
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+odoo.egg-info/
+*.log
+.vscode/
+.DS_Store

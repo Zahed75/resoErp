@@ -51,12 +51,11 @@ class ResoOwnerRegistry(models.Model):
         'reso.distribution.line', 'registry_id',
         string='Distribution Lines', readonly=True)
 
-    _sql_constraints = [
-        ('owner_share_class_uniq',
-         'unique(property_id, partner_id, share_class)',
-         'An owner can hold only one registry per share class '
-         'on a property.'),
-    ]
+    _owner_share_class_uniq = models.Constraint(
+        'unique(property_id, partner_id, share_class)',
+        'An owner can hold only one registry per share class '
+        'on a property.',
+    )
 
     @api.model_create_multi
     def create(self, vals_list):

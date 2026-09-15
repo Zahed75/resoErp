@@ -8,14 +8,14 @@
                     <h1 class="page-title">resoERP Analytics &amp; Reports Center</h1>
                     <p class="subtitle">Comprehensive performance, yield, occupancy, and revenue reporting for management and investors.</p>
                 </div>
-                <div class="header-actions">
-                    <button t-attf-class="btn-reso-secondary {{state.activeTab == 'occupancy' ? 'active' : ''}}" t-on-click="() => this.setTab('occupancy')">
+                <div class="header-actions d-flex gap-2 flex-wrap">
+                    <button t-attf-class="btn {{state.activeTab == 'occupancy' ? 'btn-primary' : 'btn-outline-primary'}} btn-sm" t-on-click="() => this.setTab('occupancy')">
                         <i class="fa fa-line-chart me-1"/> Occupancy &amp; RevPAR
                     </button>
-                    <button t-attf-class="btn-reso-secondary {{state.activeTab == 'revenue' ? 'active' : ''}}" t-on-click="() => this.setTab('revenue')">
+                    <button t-attf-class="btn {{state.activeTab == 'revenue' ? 'btn-primary' : 'btn-outline-primary'}} btn-sm" t-on-click="() => this.setTab('revenue')">
                         <i class="fa fa-file-text-o me-1"/> Revenue Breakdown
                     </button>
-                    <button t-attf-class="btn-reso-secondary {{state.activeTab == 'ownership' ? 'active' : ''}}" t-on-click="() => this.setTab('ownership')">
+                    <button t-attf-class="btn {{state.activeTab == 'ownership' ? 'btn-primary' : 'btn-outline-primary'}} btn-sm" t-on-click="() => this.setTab('ownership')">
                         <i class="fa fa-pie-chart me-1"/> Fractional Owner Yield
                     </button>
                 </div>
@@ -24,10 +24,13 @@
             <!-- Occupancy Report Tab -->
             <div t-if="state.activeTab == 'occupancy'" class="card">
                 <div class="card-header">
-                    <h3>Occupancy Rate vs RevPAR Monthly Trend (2026)</h3>
-                    <button class="btn-reso-secondary" t-on-click="() => this.exportReport('Occupancy_Report.csv')">
+                    <h3>Occupancy Rate vs RevPAR Monthly Trend (trailing 12 months, live data)</h3>
+                    <button class="btn btn-outline-primary btn-sm" t-on-click="() => this.exportReport('Occupancy_Report.csv')">
                         <i class="fa fa-download me-1"/> Export CSV
                     </button>
+                </div>
+                <div class="card-body" t-if="state.loading">
+                    <p class="subtitle">Loading live report data…</p>
                 </div>
                 <div class="card-body">
                     <table class="data-table">
@@ -35,8 +38,8 @@
                             <tr>
                                 <th>Month</th>
                                 <th>Occupancy Rate (%)</th>
-                                <th>ADR (BDT)</th>
-                                <th>RevPAR (BDT)</th>
+                                <th>ADR (<t t-esc="state.currency"/>)</th>
+                                <th>RevPAR (<t t-esc="state.currency"/>)</th>
                                 <th>Performance Index</th>
                             </tr>
                         </thead>
@@ -45,8 +48,8 @@
                                 <tr>
                                     <td><strong><t t-esc="row.month"/></strong></td>
                                     <td><strong><t t-esc="row.occupancy"/>%</strong></td>
-                                    <td>৳<t t-esc="row.adr"/></td>
-                                    <td><strong>৳<t t-esc="row.revpar"/></strong></td>
+                                    <td><t t-esc="state.currency"/><t t-esc="row.adr"/></td>
+                                    <td><strong><t t-esc="state.currency"/><t t-esc="row.revpar"/></strong></td>
                                     <td>
                                         <span t-attf-class="badge {{row.occupancy >= 80 ? 'badge-success' : 'badge-warning'}}">
                                             <t t-esc="row.status"/>
@@ -63,7 +66,7 @@
             <div t-if="state.activeTab == 'revenue'" class="card">
                 <div class="card-header">
                     <h3>Revenue &amp; Folio Billing Outlet Analysis</h3>
-                    <button class="btn-reso-secondary" t-on-click="() => this.exportReport('Revenue_Report.csv')">
+                    <button class="btn btn-outline-primary btn-sm" t-on-click="() => this.exportReport('Revenue_Report.csv')">
                         <i class="fa fa-download me-1"/> Export Report
                     </button>
                 </div>
@@ -72,9 +75,7 @@
                         <thead>
                             <tr>
                                 <th>Outlet / Service Category</th>
-                                <th>Gross Revenue (BDT)</th>
-                                <th>Tax &amp; VAT (15%)</th>
-                                <th>Net Revenue (BDT)</th>
+                                <th>Gross Revenue (<t t-esc="state.currency"/>)</th>
                                 <th>Contribution %</th>
                             </tr>
                         </thead>
@@ -82,9 +83,7 @@
                             <t t-foreach="state.revenueOutlets" t-as="item" t-key="item.category">
                                 <tr>
                                     <td><strong><t t-esc="item.category"/></strong></td>
-                                    <td>৳<t t-esc="item.gross"/></td>
-                                    <td>৳<t t-esc="item.vat"/></td>
-                                    <td><strong>৳<t t-esc="item.net"/></strong></td>
+                                    <td><t t-esc="state.currency"/><t t-esc="item.gross"/></td>
                                     <td><t t-esc="item.percent"/></td>
                                 </tr>
                             </t>
@@ -97,31 +96,35 @@
             <div t-if="state.activeTab == 'ownership'" class="card">
                 <div class="card-header">
                     <h3>Fractional Owner Dividend &amp; Yield Statements</h3>
-                    <button class="btn-reso-secondary" t-on-click="() => this.exportReport('Ownership_Yield_Report.csv')">
+                    <button class="btn btn-outline-primary btn-sm" t-on-click="() => this.exportReport('Ownership_Yield_Report.csv')">
                         <i class="fa fa-download me-1"/> Export
                     </button>
                 </div>
-                <div class="card-body">
+                <div class="card-body" t-if="!state.ownershipYields.length">
+                    <p class="subtitle">
+                        No fractional ownership data yet — owner distributions appear here once the
+                        reso_ownership module is installed and a distribution run is calculated.
+                    </p>
+                </div>
+                <div class="card-body" t-if="state.ownershipYields.length">
                     <table class="data-table">
                         <thead>
                             <tr>
                                 <th>Shareholder Name</th>
                                 <th>Property</th>
-                                <th>Shares Held</th>
                                 <th>Ownership %</th>
-                                <th>Quarterly Dividend (BDT)</th>
+                                <th>Dividend (<t t-esc="state.currency"/>)</th>
                                 <th>Distribution Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <t t-foreach="state.ownershipYields" t-as="sh" t-key="sh.name">
+                            <t t-foreach="state.ownershipYields" t-as="sh" t-key="sh.name + sh.property">
                                 <tr>
                                     <td><strong><t t-esc="sh.name"/></strong></td>
                                     <td><t t-esc="sh.property"/></td>
-                                    <td><t t-esc="sh.shares"/> Shares</td>
                                     <td><t t-esc="sh.percent"/></td>
-                                    <td><strong>৳<t t-esc="sh.dividend"/></strong></td>
-                                    <td><span class="badge badge-success"><t t-esc="sh.status"/></span></td>
+                                    <td><strong><t t-esc="state.currency"/><t t-esc="sh.dividend"/></strong></td>
+                                    <td><span t-attf-class="badge {{sh.status == 'Paid' ? 'badge-success' : 'badge-warning'}}"><t t-esc="sh.status"/></span></td>
                                 </tr>
                             </t>
                         </tbody>

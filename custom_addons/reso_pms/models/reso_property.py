@@ -35,6 +35,7 @@ class ResoProperty(models.Model):
     booking_ids = fields.One2many('reso.booking', 'property_id',
                                   string='Bookings')
 
-    _sql_constraints = [
-        ('code_uniq', 'unique(code)', 'The property code must be unique.'),
-    ]
+    _code_uniq = models.Constraint(
+        'unique(code)',
+        'The property code must be unique.',
+    )

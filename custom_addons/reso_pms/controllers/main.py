@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 from odoo import http
 from odoo.http import request
 
@@ -68,7 +68,7 @@ class ResoPmsController(http.Controller):
             'total_revenue': total_revenue,
             'adr': adr,
             'revpar': revpar,
-            'currency': properties[0].currency_id.name if properties and properties[0].currency_id else 'BDT',
+            'currency': properties[0].currency_id.name if properties and properties[0].currency_id else request.env.company.currency_id.name,
             'fractional_owners': total_shares,
             'fractional_units': total_fractional_units,
         }
@@ -97,7 +97,7 @@ class ResoPmsController(http.Controller):
                 'source': b.source,
                 'state': b.state,
                 'amount_total': b.amount_total,
-                'currency': b.currency_id.name if b.currency_id else 'BDT',
+                'currency': b.currency_id.name if b.currency_id else request.env.company.currency_id.name,
             })
         return self._json_response({'status': 'success', 'data': result})
 
@@ -146,15 +146,96 @@ class ResoPmsController(http.Controller):
             }
         })
 
-    @http.route('/api/v1/pms/reports/occupancy', type='http', auth='public', methods=['GET'], csrf=False)
+    @http.route('/api/v1/pms/reports/occupancy', type='http', auth='public', methods=['GET', 'POST'], csrf=False)
     def get_occupancy_report(self, **kwargs):
-        """Monthly & Quarterly Occupancy and ADR trends"""
-        months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+        """Real monthly occupancy / ADR / RevPAR trend (trailing 12 months),
+        folio revenue by outlet, and fractional owner distributions."""
+        from calendar import monthrange
+
+        Booking = request.env['reso.booking'].sudo()
+        FolioLine = request.env['reso.booking.folio.line'].sudo()
+        rooms_total = request.env['reso.room'].sudo().search_count(
+            [('active', '=', True)]) or 1
+
+        today = date.today()
+        # Build the list of the last 12 month-start dates, oldest first.
+        months = []
+        cursor = today.replace(day=1)
+        for _ in range(12):
+            months.append(cursor)
+            cursor = (cursor - timedelta(days=1)).replace(day=1)
+        months.reverse()
+
+        labels, occupancy_rates, adr_values, revpar_values = [], [], [], []
+        for month_start in months:
+            next_month = (month_start + timedelta(days=32)).replace(day=1)
+            days_in_month = monthrange(month_start.year, month_start.month)[1]
+
+            bookings = Booking.search([
+                ('checkout_date', '>', month_start),
+                ('checkout_date', '<=', next_month),
+                ('state', 'in', ('confirmed', 'checked_in', 'checked_out', 'invoiced')),
+            ])
+            revenue = sum(b.amount_total for b in bookings)
+            room_nights = sum(
+                max((b.checkout_date - b.checkin_date).days, 0) for b in bookings)
+            available = rooms_total * days_in_month
+
+            labels.append(month_start.strftime('%b %Y'))
+            occupancy_rates.append(
+                round(room_nights / available * 100, 1) if available else 0.0)
+            adr_values.append(round(revenue / room_nights, 0) if room_nights else 0.0)
+            revpar_values.append(round(revenue / available, 0) if available else 0.0)
+
+        # Revenue by outlet: accommodation totals minus folio outlet charges,
+        # then each folio outlet category on top.
+        folio_by_outlet = {
+            row['outlet_type']: row['amount']
+            for row in FolioLine.read_group([], ['amount'], ['outlet_type'])
+        }
+        folio_room = folio_by_outlet.pop('room', 0.0) or 0.0
+        all_bookings = Booking.search([('state', '!=', 'cancelled')])
+        accommodation = sum(b.amount_total for b in all_bookings) \
+            - sum(folio_by_outlet.values()) - folio_room
+        outlet_names = dict(
+            FolioLine._fields['outlet_type'].selection)
+        gross_total = accommodation + sum(folio_by_outlet.values()) or 1.0
+        revenue_by_outlet = [{
+            'category': 'Room Accommodation & Villas',
+            'gross': round(accommodation, 2),
+            'percent': round(accommodation / gross_total * 100, 1),
+        }]
+        for outlet, amount in sorted(
+                folio_by_outlet.items(), key=lambda kv: kv[1], reverse=True):
+            revenue_by_outlet.append({
+                'category': outlet_names.get(outlet, outlet),
+                'gross': round(amount, 2),
+                'percent': round(amount / gross_total * 100, 1),
+            })
+
+        # Fractional owner distribution statements (only when installed).
+        ownership_yields = []
+        if 'reso.distribution.line' in request.env:
+            lines = request.env['reso.distribution.line'].sudo().search(
+                [], order='amount desc', limit=50)
+            for line in lines:
+                ownership_yields.append({
+                    'name': line.partner_id.name or '',
+                    'property': line.registry_id.property_id.name or '',
+                    'shares': line.fraction_percent,
+                    'percent': '%.2f%%' % line.fraction_percent,
+                    'dividend': round(line.amount, 2),
+                    'status': 'Paid' if line.paid else 'Pending',
+                })
+
         data = {
-            'labels': months,
-            'occupancy_rates': [65.4, 72.1, 80.5, 78.2, 85.0, 88.4, 92.1, 89.5, 84.0],
-            'adr_values': [12000, 12500, 13000, 13500, 14000, 15000, 16500, 15500, 14500],
-            'revpar_values': [7848, 9012, 10465, 10557, 11900, 13260, 15196, 13872, 12180],
+            'labels': labels,
+            'occupancy_rates': occupancy_rates,
+            'adr_values': adr_values,
+            'revpar_values': revpar_values,
+            'revenue_by_outlet': revenue_by_outlet,
+            'ownership_yields': ownership_yields,
+            'currency': request.env.company.currency_id.name,
         }
         return self._json_response({'status': 'success', 'data': data})
 

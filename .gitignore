@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtualenv
+env/
+
+# Local env & secrets
+.env
+
+# Tooling artifacts
+.playwright-mcp/
+*.log
+backups/
+
+# Local dev screenshots / misc
+/*.png
+.DS_Store
+
+# Node (website has its own .gitignore, belt & braces)
+website/node_modules/
+website/dist/

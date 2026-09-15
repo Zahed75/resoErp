@@ -160,7 +160,7 @@ class ResoBooking(models.Model):
             all_rooms = self.env['reso.room'].search([
                 ('property_id', '=', booking.property_id.id),
                 ('room_type_id', '=', booking.room_type_id.id),
-                ('status', '!=', 'out_of_order'),
+                ('status', 'not in', ('maintenance', 'out_of_order')),
             ])
             for room in all_rooms:
                 overlapping = self.search([
@@ -229,10 +229,102 @@ class ResoBooking(models.Model):
             if rec.state in ('hold', 'confirmed'):
                 rec.state = 'cancelled'
 
+    @api.model
+    def get_dashboard_stats(self, property_id=None):
+        """Single-call KPI payload for the executive dashboard.
+
+        Revenue metrics cover the trailing 30 days (bookings that checked out
+        in that window). ADR = revenue / room-nights sold; RevPAR = revenue /
+        available room-nights (rooms x 30). Ownership figures are included
+        only when reso_ownership is installed.
+        """
+        today = fields.Date.today()
+        room_domain = [('active', '=', True)]
+        booking_domain = []
+        if property_id:
+            room_domain.append(('property_id', '=', property_id))
+            booking_domain.append(('property_id', '=', property_id))
+
+        Room = self.env['reso.room']
+        rooms_total = Room.search_count(room_domain)
+        rooms_occupied = Room.search_count(
+            room_domain + [('status', '=', 'occupied')])
+        rooms_dirty = Room.search_count(
+            room_domain + [('housekeeping_status', '=', 'dirty')])
+        rooms_maintenance = Room.search_count(
+            room_domain + [('status', 'in', ('maintenance', 'out_of_order'))])
+        rooms_available = Room.search_count(
+            room_domain + [('status', '=', 'available')])
+
+        arrivals_today = self.search_count(booking_domain + [
+            ('checkin_date', '=', today),
+            ('state', 'in', ('hold', 'confirmed')),
+        ])
+        departures_today = self.search_count(booking_domain + [
+            ('checkout_date', '=', today),
+            ('state', '=', 'checked_in'),
+        ])
+        late_checkouts = self.search_count(booking_domain + [
+            ('checkout_date', '<', today),
+            ('state', '=', 'checked_in'),
+        ])
+        in_house = self.search_count(
+            booking_domain + [('state', '=', 'checked_in')])
+
+        date_from = today - timedelta(days=30)
+        recent = self.search(booking_domain + [
+            ('checkout_date', '>', date_from),
+            ('checkout_date', '<=', today),
+            ('state', 'in', ('confirmed', 'checked_in', 'checked_out', 'invoiced')),
+        ])
+        revenue = sum(b.amount_total for b in recent)
+        room_nights = sum(
+            max((b.checkout_date - b.checkin_date).days, 0) for b in recent)
+
+        currency = self.env.company.currency_id.name
+        if property_id:
+            prop = self.env['reso.property'].browse(property_id)
+            if prop.company_id.currency_id:
+                currency = prop.company_id.currency_id.name
+
+        stats = {
+            'rooms_total': rooms_total,
+            'rooms_available': rooms_available,
+            'rooms_occupied': rooms_occupied,
+            'rooms_dirty': rooms_dirty,
+            'rooms_maintenance': rooms_maintenance,
+            'occupancy_rate': round(
+                rooms_occupied / rooms_total * 100, 1) if rooms_total else 0.0,
+            'arrivals_today': arrivals_today,
+            'departures_today': departures_today,
+            'late_checkouts': late_checkouts,
+            'in_house': in_house,
+            'revenue_30d': revenue,
+            'room_nights_30d': room_nights,
+            'adr': round(revenue / room_nights, 0) if room_nights else 0.0,
+            'revpar': round(revenue / 30.0 / rooms_total, 0) if rooms_total else 0.0,
+            'currency': currency or self.env.company.currency_id.name,
+            'currency_symbol': self.env.company.currency_id.symbol,
+            'open_tickets': self.env['reso.maintenance.ticket'].search_count(
+                [('state', 'in', ('new', 'in_progress'))]),
+            'low_stock': self.env['reso.stock.supply'].search_count(
+                [('reorder_needed', '=', True)]),
+            'open_leads': self.env['crm.lead'].search_count(
+                [('lead_type', 'in', ('guest', 'investor')), ('active', '=', True)]),
+            'ownership_installed': False,
+            'fractional_owners': None,
+        }
+        if 'reso.owner.registry' in self.env:
+            stats['ownership_installed'] = True
+            stats['fractional_owners'] = self.env['reso.owner.registry'].search_count(
+                [('status', '=', 'active')]
+                + ([('property_id', '=', property_id)] if property_id else []))
+        return stats
+
     def send_whatsapp_notification(self, template_key):
         """Logs automated WhatsApp communication against guest record."""
         for rec in self:
-            phone = rec.partner_id.phone or rec.partner_id.mobile
+            phone = rec.partner_id.phone
             if not phone:
                 continue
             msg = ""

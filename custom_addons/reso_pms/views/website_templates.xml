@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============ Shared Navbar Fragment ============ -->
+    <template id="website_navbar" name="Reso Website Navbar">
+        <nav class="reso-navbar" data-reso-reveal="fade-down">
+            <div class="reso-navbar-inner">
+                <a href="/resort" class="reso-brand">
+                    <span class="reso-brand-icon"><i class="fa fa-hotel"/></span>
+                    <span class="reso-brand-text">resoERP</span>
+                </a>
+                <div class="reso-nav-links">
+                    <a href="/resort">Home</a>
+                    <a href="/resort/rooms">Rooms &amp; Villas</a>
+                    <a href="/resort/book">Book Now</a>
+                    <a href="/resort/contact">Contact</a>
+                </div>
+                <div class="reso-nav-actions">
+                    <button class="reso-theme-toggle" id="resoThemeToggle" aria-label="Toggle theme">
+                        <i class="fa fa-moon-o reso-icon-dark"/>
+                        <i class="fa fa-sun-o reso-icon-light"/>
+                    </button>
+                    <a href="/resort/book" class="reso-btn reso-btn-primary">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </template>
+
+    <!-- ============ Shared Footer Fragment ============ -->
+    <template id="website_footer" name="Reso Website Footer">
+        <footer class="reso-footer" data-reso-reveal="fade-up">
+            <div class="reso-footer-inner">
+                <div class="reso-footer-brand">
+                    <span class="reso-brand-icon"><i class="fa fa-hotel"/></span>
+                    <span class="reso-brand-text">resoERP</span>
+                    <p>Multi-property resort &amp; hotel management, powered end-to-end by Odoo 19.</p>
+                </div>
+                <div class="reso-footer-links">
+                    <h4>Explore</h4>
+                    <a href="/resort">Home</a>
+                    <a href="/resort/rooms">Rooms &amp; Villas</a>
+                    <a href="/resort/book">Book Now</a>
+                    <a href="/resort/contact">Contact</a>
+                </div>
+                <div class="reso-footer-links">
+                    <h4>Guest Care</h4>
+                    <a href="/resort/contact">WhatsApp Concierge</a>
+                    <a href="/resort/contact">Cancellation Policy</a>
+                    <a href="/resort/contact">FAQ</a>
+                </div>
+            </div>
+            <div class="reso-footer-bottom">
+                <span>© <t t-esc="2026"/> resoERP — All rights reserved.</span>
+            </div>
+        </footer>
+    </template>
+
+    <!-- ============ Home Page ============ -->
+    <template id="website_home" name="Reso Website Home">
+        <t t-call="web.frontend_layout">
+            <t t-set="title">resoERP — Modern Resort &amp; Hotel Booking</t>
+            <t t-set="no_header" t-value="1"/>
+            <t t-set="no_footer" t-value="1"/>
+            <t t-set="no_livechat" t-value="1"/>
+            <t t-set="head">
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+                <t t-call-assets="reso_pms.assets_website" t-css="true" t-js="true"/>
+            </t>
+            <div class="reso-site" id="resoSite">
+                <div class="reso-blob reso-blob-1"/>
+                <div class="reso-blob reso-blob-2"/>
+                <div class="reso-blob reso-blob-3"/>
+
+                <t t-call="reso_pms.website_navbar"/>
+
+                <section class="reso-hero" data-reso-reveal="fade-up">
+                    <div class="reso-hero-content">
+                        <span class="reso-eyebrow">Multi-Property Resort Platform</span>
+                        <h1>Effortless stays.<br/>Liquid-smooth booking.</h1>
+                        <p>Real-time availability, transparent pricing, and instant confirmation across every resort in our portfolio — book directly, commission-free.</p>
+                        <div class="reso-hero-actions">
+                            <a href="/resort/book" class="reso-btn reso-btn-primary reso-btn-lg">Check Availability</a>
+                            <a href="/resort/rooms" class="reso-btn reso-btn-ghost reso-btn-lg">Explore Rooms</a>
+                        </div>
+                        <div class="reso-hero-stats">
+                            <div><strong t-esc="len(properties)"/><span>Properties</span></div>
+                            <div><strong>24/7</strong><span>Concierge</span></div>
+                            <div><strong>0%</strong><span>Booking Fees</span></div>
+                        </div>
+                    </div>
+                    <div class="reso-hero-visual">
+                        <div class="reso-glass-card reso-float">
+                            <i class="fa fa-calendar-check-o"/>
+                            <div>
+                                <strong>Instant Confirmation</strong>
+                                <span>Booked in under 60 seconds</span>
+                            </div>
+                        </div>
+                        <div class="reso-glass-card reso-float reso-float-delay">
+                            <i class="fa fa-whatsapp"/>
+                            <div>
+                                <strong>WhatsApp Updates</strong>
+                                <span>Automated guest journey</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="reso-section" data-reso-reveal="fade-up">
+                    <h2 class="reso-section-title">Featured Properties</h2>
+                    <div class="reso-property-grid">
+                        <t t-foreach="properties" t-as="prop" t-key="prop.id">
+                            <div class="reso-glass-card reso-property-card">
+                                <div class="reso-property-media">
+                                    <i class="fa fa-image"/>
+                                </div>
+                                <div class="reso-property-body">
+                                    <h3><t t-esc="prop.name"/></h3>
+                                    <p><i class="fa fa-map-marker"/> <t t-esc="prop.city or 'Bangladesh'"/></p>
+                                    <a t-attf-href="/resort/rooms?property_id=#{prop.id}" class="reso-link">View rooms →</a>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </section>
+
+                <section class="reso-section reso-section-alt" data-reso-reveal="fade-up">
+                    <h2 class="reso-section-title">Room Types You'll Love</h2>
+                    <div class="reso-room-grid">
+                        <t t-foreach="room_types" t-as="rt" t-key="rt.id">
+                            <div class="reso-glass-card reso-room-card">
+                                <div class="reso-room-media"><i class="fa fa-bed"/></div>
+                                <h4><t t-esc="rt.name"/></h4>
+                                <p><i class="fa fa-user"/> Up to <t t-esc="rt.max_guests"/> guests</p>
+                            </div>
+                        </t>
+                    </div>
+                </section>
+
+                <section class="reso-cta" data-reso-reveal="fade-up">
+                    <h2>Ready for your next stay?</h2>
+                    <p>Real-time rates, zero commission, instant WhatsApp confirmation.</p>
+                    <a href="/resort/book" class="reso-btn reso-btn-primary reso-btn-lg">Book Your Stay</a>
+                </section>
+
+                <t t-call="reso_pms.website_footer"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============ Rooms Listing Page ============ -->
+    <template id="website_rooms" name="Reso Website Rooms">
+        <t t-call="web.frontend_layout">
+            <t t-set="title">Rooms &amp; Villas — resoERP</t>
+            <t t-set="no_header" t-value="1"/>
+            <t t-set="no_footer" t-value="1"/>
+            <t t-set="no_livechat" t-value="1"/>
+            <t t-set="head">
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+                <t t-call-assets="reso_pms.assets_website" t-css="true" t-js="true"/>
+            </t>
+            <div class="reso-site" id="resoSite">
+                <div class="reso-blob reso-blob-1"/>
+                <div class="reso-blob reso-blob-2"/>
+                <t t-call="reso_pms.website_navbar"/>
+
+                <section class="reso-page-hero" data-reso-reveal="fade-up">
+                    <span class="reso-eyebrow">Inventory</span>
+                    <h1>Rooms &amp; Villas</h1>
+                    <p>Browse every room type across our properties with live indicative pricing.</p>
+                </section>
+
+                <section class="reso-section" data-reso-reveal="fade-up">
+                    <div class="reso-room-grid reso-room-grid-lg">
+                        <t t-foreach="rooms_data" t-as="room" t-key="room['id']">
+                            <div class="reso-glass-card reso-room-card-lg">
+                                <div class="reso-room-media"><i class="fa fa-bed"/></div>
+                                <div class="reso-room-card-body">
+                                    <span class="reso-tag"><t t-esc="room['property_name']"/></span>
+                                    <h3><t t-esc="room['name']"/></h3>
+                                    <p><i class="fa fa-user"/> Up to <t t-esc="room['max_guests']"/> guests &#8226; <t t-esc="room['bed_type']"/> bed</p>
+                                    <div class="reso-amenity-tags">
+                                        <t t-foreach="room['amenities']" t-as="am" t-key="am">
+                                            <span class="reso-amenity-chip"><t t-esc="am"/></span>
+                                        </t>
+                                    </div>
+                                    <div class="reso-room-footer">
+                                        <div class="reso-price">
+                                            <strong><t t-esc="room['currency']"/><t t-esc="int(room['price'])"/></strong>
+                                            <span>/ night</span>
+                                        </div>
+                                        <a t-attf-href="/resort/book?room_type_id=#{room['id']}&amp;property_id=#{room['property_id']}" class="reso-btn reso-btn-primary">Book</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </section>
+
+                <t t-call="reso_pms.website_footer"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============ Booking Page ============ -->
+    <template id="website_book" name="Reso Website Book">
+        <t t-call="web.frontend_layout">
+            <t t-set="title">Book Your Stay — resoERP</t>
+            <t t-set="no_header" t-value="1"/>
+            <t t-set="no_footer" t-value="1"/>
+            <t t-set="no_livechat" t-value="1"/>
+            <t t-set="head">
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+                <t t-call-assets="reso_pms.assets_website" t-css="true" t-js="true"/>
+            </t>
+            <div class="reso-site" id="resoSite">
+                <div class="reso-blob reso-blob-1"/>
+                <div class="reso-blob reso-blob-3"/>
+                <t t-call="reso_pms.website_navbar"/>
+
+                <section class="reso-page-hero" data-reso-reveal="fade-up">
+                    <span class="reso-eyebrow">Reservation</span>
+                    <h1>Check Availability &amp; Book</h1>
+                    <p>Pick your property, dates, and guest count — we'll confirm instantly.</p>
+                </section>
+
+                <section class="reso-section" data-reso-reveal="fade-up">
+                    <div class="reso-booking-layout">
+                        <div class="reso-glass-card reso-booking-form">
+                            <div class="reso-form-row">
+                                <label>Property</label>
+                                <select id="resoPropertySelect" class="reso-input">
+                                    <t t-foreach="properties" t-as="prop" t-key="prop.id">
+                                        <option t-att-value="prop.id"><t t-esc="prop.name"/></option>
+                                    </t>
+                                </select>
+                            </div>
+                            <div class="reso-form-row reso-form-row-split">
+                                <div>
+                                    <label>Check-in</label>
+                                    <input type="date" id="resoCheckin" class="reso-input"/>
+                                </div>
+                                <div>
+                                    <label>Check-out</label>
+                                    <input type="date" id="resoCheckout" class="reso-input"/>
+                                </div>
+                            </div>
+                            <div class="reso-form-row">
+                                <label>Guests</label>
+                                <input type="number" id="resoGuests" class="reso-input" value="2" min="1"/>
+                            </div>
+                            <button id="resoCheckAvailability" class="reso-btn reso-btn-primary reso-btn-block">
+                                <i class="fa fa-search"/> Check Availability
+                            </button>
+
+                            <div id="resoAvailabilityResults" class="reso-availability-results"/>
+                        </div>
+
+                        <div class="reso-glass-card reso-booking-summary" id="resoBookingSummary" style="display:none;">
+                            <h3>Guest Details</h3>
+                            <div class="reso-form-row">
+                                <label>Full Name</label>
+                                <input type="text" id="resoGuestName" class="reso-input" placeholder="Jane Doe"/>
+                            </div>
+                            <div class="reso-form-row">
+                                <label>Phone (WhatsApp)</label>
+                                <input type="text" id="resoGuestPhone" class="reso-input" placeholder="+8801XXXXXXXXX"/>
+                            </div>
+                            <div class="reso-form-row">
+                                <label>Email</label>
+                                <input type="email" id="resoGuestEmail" class="reso-input" placeholder="jane@example.com"/>
+                            </div>
+                            <div class="reso-form-row">
+                                <label>Payment Method</label>
+                                <select id="resoPaymentMethod" class="reso-input">
+                                    <option value="bkash">bKash</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="sslcommerz">SSLCommerz</option>
+                                    <option value="stripe">Stripe (International)</option>
+                                </select>
+                            </div>
+                            <div class="reso-summary-total">
+                                <span>Total</span>
+                                <strong id="resoTotalAmount">৳0</strong>
+                            </div>
+                            <button id="resoConfirmBooking" class="reso-btn reso-btn-primary reso-btn-block">
+                                Confirm &amp; Pay
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <t t-call="reso_pms.website_footer"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============ Contact Page ============ -->
+    <template id="website_contact" name="Reso Website Contact">
+        <t t-call="web.frontend_layout">
+            <t t-set="title">Contact — resoERP</t>
+            <t t-set="no_header" t-value="1"/>
+            <t t-set="no_footer" t-value="1"/>
+            <t t-set="no_livechat" t-value="1"/>
+            <t t-set="head">
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+                <t t-call-assets="reso_pms.assets_website" t-css="true" t-js="true"/>
+            </t>
+            <div class="reso-site" id="resoSite">
+                <div class="reso-blob reso-blob-2"/>
+                <t t-call="reso_pms.website_navbar"/>
+
+                <section class="reso-page-hero" data-reso-reveal="fade-up">
+                    <span class="reso-eyebrow">We're here to help</span>
+                    <h1>Contact &amp; Concierge</h1>
+                    <p>Reach our front desk teams directly — or message us on WhatsApp for instant support.</p>
+                </section>
+
+                <section class="reso-section" data-reso-reveal="fade-up">
+                    <div class="reso-contact-grid">
+                        <t t-foreach="properties" t-as="prop" t-key="prop.id">
+                            <div class="reso-glass-card reso-contact-card">
+                                <h3><t t-esc="prop.name"/></h3>
+                                <p t-if="prop.phone"><i class="fa fa-phone"/> <t t-esc="prop.phone"/></p>
+                                <p t-if="prop.email"><i class="fa fa-envelope"/> <t t-esc="prop.email"/></p>
+                                <p t-if="prop.city"><i class="fa fa-map-marker"/> <t t-esc="prop.city"/></p>
+                                <a t-attf-href="https://wa.me/#{(prop.phone or '').replace(' ', '').replace('+', '')}" class="reso-btn reso-btn-primary">
+                                    <i class="fa fa-whatsapp"/> Message on WhatsApp
+                                </a>
+                            </div>
+                        </t>
+                    </div>
+                </section>
+
+                <t t-call="reso_pms.website_footer"/>
+            </div>
+        </t>
+    </template>
+
+    <!-- ============ Booking Confirmation Page ============ -->
+    <template id="website_confirmation" name="Reso Website Booking Confirmation">
+        <t t-call="web.frontend_layout">
+            <t t-set="title">Booking Confirmed — resoERP</t>
+            <t t-set="no_header" t-value="1"/>
+            <t t-set="no_footer" t-value="1"/>
+            <t t-set="no_livechat" t-value="1"/>
+            <t t-set="head">
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+                <t t-call-assets="reso_pms.assets_website" t-css="true" t-js="true"/>
+            </t>
+            <div class="reso-site" id="resoSite">
+                <div class="reso-blob reso-blob-1"/>
+                <t t-call="reso_pms.website_navbar"/>
+                <section class="reso-confirmation" data-reso-reveal="fade-up">
+                    <div class="reso-glass-card reso-confirmation-card">
+                        <i class="fa fa-check-circle reso-confirmation-icon"/>
+                        <h1>Booking Confirmed!</h1>
+                        <t t-if="booking">
+                            <p>Reference: <strong t-esc="booking.name"/></p>
+                            <p>Guest: <strong t-esc="booking.partner_id.name"/></p>
+                            <p>Total: <strong><t t-esc="booking.currency_id.symbol"/><t t-esc="booking.amount_total"/></strong></p>
+                        </t>
+                        <a href="/resort" class="reso-btn reso-btn-primary reso-btn-lg">Back to Home</a>
+                    </div>
+                </section>
+                <t t-call="reso_pms.website_footer"/>
+            </div>
+        </t>
+    </template>
+
+</odoo>

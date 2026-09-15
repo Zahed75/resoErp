@@ -207,3 +207,67 @@ class TestResoBooking(TransactionCase):
         proj.action_complete()
         self.assertEqual(proj.state, 'completed')
         self.assertEqual(proj.progress_percent, 100.0)
+
+    def test_17_dashboard_stats(self):
+        Booking = self.env['reso.booking']
+        stats = Booking.get_dashboard_stats()
+        self.assertGreaterEqual(stats['rooms_total'], 1)
+        self.assertIn('occupancy_rate', stats)
+        self.assertIn('adr', stats)
+        self.assertIn('revpar', stats)
+
+        # A stay checked out within the 30-day window drives revenue metrics.
+        booking = self._create_booking(
+            checkin_date='2026-09-01',
+            checkout_date='2026-09-03',
+            state='checked_out',
+        )
+        stats = Booking.get_dashboard_stats(self.property.id)
+        self.assertEqual(stats['rooms_total'], 1)
+        # 2 nights x 1000 base price
+        self.assertEqual(stats['room_nights_30d'], 2)
+        self.assertEqual(stats['revenue_30d'], booking.amount_total)
+        self.assertEqual(stats['adr'], booking.amount_total / 2)
+        self.assertEqual(stats['revpar'], round(booking.amount_total / 30.0, 0))
+        # reso_ownership is installed in this test DB, so ownership figures
+        # must be reported (not None).
+        self.assertTrue(stats['ownership_installed'])
+        self.assertIsNotNone(stats['fractional_owners'])
+
+    def test_18_maintenance_room_not_auto_assigned(self):
+        """Rooms under maintenance or out of order must not be auto-assigned."""
+        self.room.status = 'maintenance'
+        spare = self.env['reso.room'].create({
+            'name': '302',
+            'property_id': self.property.id,
+            'room_type_id': self.room_type.id,
+        })
+        booking = self._create_booking()
+        booking.action_assign_room()
+        self.assertEqual(booking.room_id, spare,
+                         "Auto-assign must skip the maintenance room")
+        spare.status = 'out_of_order'
+        booking2 = self._create_booking(
+            checkin_date='2026-10-10',
+            checkout_date='2026-10-12',
+        )
+        booking2.action_assign_room()
+        self.assertFalse(booking2.room_id,
+                         "Auto-assign must not pick out-of-order rooms")
+
+    def test_19_payment_state_guards(self):
+        """Model-level behaviour mirrored by /api/v1/payment/process guards:
+        a cancelled booking must never be confirmable, and confirming an
+        already-confirmed booking must be a safe no-op (idempotency)."""
+        booking = self._create_booking()
+        booking.action_cancel()
+        booking.action_confirm()
+        self.assertEqual(booking.state, 'cancelled',
+                         "Cancelled booking must not be confirmable")
+
+        booking2 = self._create_booking(checkin_date='2026-10-20',
+                                        checkout_date='2026-10-22')
+        booking2.action_confirm()
+        booking2.action_confirm()
+        self.assertEqual(booking2.state, 'confirmed',
+                         "Re-confirming must stay idempotent")
