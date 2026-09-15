@@ -47,6 +47,8 @@
         border-radius: var(--reso-radius-lg);
         padding: 24px 30px;
         margin-bottom: 24px;
+        position: relative;
+        z-index: 20;
         box-shadow: var(--reso-shadow);
         color: #ffffff;
 
@@ -68,7 +70,15 @@
             display: flex;
             gap: 10px;
             align-items: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            position: relative;
+            z-index: 30;
+
+            /* Keep the dropdown floating above dashboard content */
+            .dropdown-menu {
+                z-index: 1050;
+                margin-top: 6px;
+            }
 
             .property-select {
                 background: rgba(255, 255, 255, 0.18);
@@ -457,14 +467,13 @@
 
     /* ================= Counter Strip ================= */
     .counter-strip {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 12px;
-        flex-wrap: wrap;
         margin-bottom: 20px;
 
         .counter-pill {
-            flex: 1;
-            min-width: 130px;
+            min-width: 0;
             background: var(--reso-surface);
             border: 1px solid var(--reso-border);
             border-left: 3px solid var(--reso-primary);
@@ -488,12 +497,13 @@
 
             .counter-label {
                 display: block;
-                font-size: 0.7rem;
+                font-size: 0.66rem;
                 font-weight: 600;
                 text-transform: uppercase;
                 letter-spacing: 0.03em;
+                line-height: 1.3;
                 color: var(--reso-text-muted);
-                margin-top: 2px;
+                margin-top: 3px;
             }
         }
     }
