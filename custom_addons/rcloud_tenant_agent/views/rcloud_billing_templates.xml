@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="billing_page" name="Resort Cloud Billing Status">
+        <html><head><title>Resort Cloud — Billing Status</title>
+        <style>
+            body { font-family: -apple-system, 'Segoe UI', sans-serif;
+                   background: linear-gradient(135deg, #0f2027, #203a43,
+                   #2c5364); color: #fff; display: flex; align-items:
+                   center; justify-content: center; min-height: 100vh;
+                   margin: 0; }
+            .card { background: rgba(255,255,255,.08); border: 1px solid
+                    rgba(255,255,255,.2); border-radius: 12px;
+                    padding: 40px 48px; max-width: 560px; width: 100%; }
+            .state { font-size: 1.4em; font-weight: 700; color: #f0a500; }
+            dt { opacity: .7; margin-top: 12px; }
+            dd { margin: 2px 0 0 0; }
+            button { margin-top: 20px; padding: 10px 24px; background:
+                     #f0a500; color: #203a43; border: 0; border-radius: 6px;
+                     font-weight: 600; cursor: pointer; }
+        </style></head>
+        <body>
+            <div class="card">
+                <h1>Resort Cloud Billing</h1>
+                <p class="state">Subscription status: <t t-esc="state"/></p>
+                <dl>
+                    <dt>Grace period until</dt>
+                    <dd><t t-esc="grace_until or '—'"/></dd>
+                    <dt>Tenant</dt>
+                    <dd><t t-esc="tenant_id or '—'"/></dd>
+                    <dt>Entitlement signature</dt>
+                    <dd><t t-esc="'valid' if entitlement_valid else 'invalid'"/></dd>
+                    <dt>Your account manager</dt>
+                    <dd>
+                        <t t-esc="account_manager_name"/>
+                        <t t-if="account_manager_email"> —
+                            <t t-esc="account_manager_email"/></t>
+                        <t t-if="account_manager_phone"> —
+                            <t t-esc="account_manager_phone"/></t>
+                    </dd>
+                </dl>
+                <button onclick="retry()">Retry entitlement check</button>
+                <p id="result"></p>
+            </div>
+            <script>
+                function retry() {
+                    fetch('/rcloud/billing/retry', {method: 'POST'})
+                        .then(function (r) { return r.json(); })
+                        .then(function (d) {
+                            document.getElementById('result').textContent =
+                                d.status === 'ok'
+                                ? 'Entitlement refreshed — reload the app.'
+                                : 'Control plane unreachable, please retry.';
+                        });
+                }
+            </script>
+        </body></html>
+    </template>
+</odoo>

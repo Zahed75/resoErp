@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tenant_agent_system,rcloud.tenant_agent.agent.system,model_rcloud_tenant_agent_agent,base.group_system,1,1,1,1

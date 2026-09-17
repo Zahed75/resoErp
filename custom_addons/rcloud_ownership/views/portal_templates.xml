@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_ownership" name="My Ownership">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">My Ownership</t>
+            </t>
+            <t t-if="not holdings">
+                <div class="alert alert-info">
+                    No share holdings are linked to your portal user yet.
+                </div>
+            </t>
+            <t t-if="holdings">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Certificate</th>
+                                <th>Property</th>
+                                <th>Share Class</th>
+                                <th class="text-end">Units</th>
+                                <th>Acquired</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="holdings" t-as="h">
+                                <tr>
+                                    <td><span t-field="h.certificate_number"/></td>
+                                    <td><span t-field="h.share_class_id.property_id.name"/></td>
+                                    <td><span t-field="h.share_class_id.name"/></td>
+                                    <td class="text-end"><span t-field="h.units_held"/></td>
+                                    <td><span t-field="h.acquired_date"/></td>
+                                    <td><span t-field="h.state"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+            <div class="mt-3">
+                <a href="/my/ownership/distributions" class="btn btn-primary">
+                    My Distributions
+                </a>
+                <a href="/my/ownership/reports" class="btn btn-secondary">
+                    My Reports
+                </a>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_distributions" name="My Distributions">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">My Distributions</t>
+            </t>
+            <t t-if="not runs">
+                <div class="alert alert-info">
+                    No distributions have been posted for your holdings yet.
+                </div>
+            </t>
+            <t t-foreach="runs" t-as="run">
+                <h4>
+                    <span t-field="run.name"/> —
+                    <span t-field="run.property_id.name"/>
+                    (<span t-field="run.period_start"/> —
+                    <span t-field="run.period_end"/>)
+                </h4>
+                <div class="table-responsive">
+                    <table class="table table-striped mb-4">
+                        <thead>
+                            <tr>
+                                <th>Share Class</th>
+                                <th class="text-end">Weighted Units</th>
+                                <th class="text-end">Gross</th>
+                                <th class="text-end">Deductions</th>
+                                <th class="text-end">Net Payable</th>
+                                <th>Status</th>
+                                <th/>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="run.line_ids" t-as="line">
+                                <tr>
+                                    <td><span t-field="line.share_class_id.name"/></td>
+                                    <td class="text-end"><span t-field="line.units_held"/></td>
+                                    <td class="text-end"><span t-field="line.gross_allocated"/></td>
+                                    <td class="text-end"><span t-field="line.deductions"/></td>
+                                    <td class="text-end"><strong><span t-field="line.net_payable"/></strong></td>
+                                    <td><span t-field="line.state"/></td>
+                                    <td>
+                                        <a t-attf-href="/report/pdf/rcloud_ownership.report_owner_statement/{{ line.id }}">
+                                            <i class="fa fa-download"/> Statement
+                                        </a>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_reports" name="My Reports">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">My Reports</t>
+            </t>
+            <t t-if="not templates">
+                <div class="alert alert-info">
+                    No report templates are shared with owners yet.
+                </div>
+            </t>
+            <t t-if="templates">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Grouping</th>
+                                <th/>
+                                <th/>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="templates" t-as="tpl">
+                                <tr>
+                                    <td><span t-field="tpl.name"/></td>
+                                    <td><span t-field="tpl.date_from"/></td>
+                                    <td><span t-field="tpl.date_to"/></td>
+                                    <td><span t-field="tpl.grouping"/></td>
+                                    <td>
+                                        <a t-attf-href="/report/pdf/rcloud_ownership.report_owner_custom/{{ tpl.id }}">
+                                            <i class="fa fa-file-pdf-o"/> PDF
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a t-attf-href="/my/ownership/reports/{{ tpl.id }}/csv">
+                                            <i class="fa fa-table"/> CSV
+                                        </a>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

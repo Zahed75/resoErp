@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_move_hotel_user,account.move.hotel.user,account.model_account_move,rcloud_base.group_hotel_user,1,0,0,0
+access_account_move_hotel_manager,account.move.hotel.manager,account.model_account_move,rcloud_base.group_hotel_manager,1,1,0,0
+access_account_move_line_hotel_user,account.move.line.hotel.user,account.model_account_move_line,rcloud_base.group_hotel_user,1,0,0,0
+access_account_move_line_hotel_manager,account.move.line.hotel.manager,account.model_account_move_line,rcloud_base.group_hotel_manager,1,1,0,0

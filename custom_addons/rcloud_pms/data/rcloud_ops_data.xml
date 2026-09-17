@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="seq_rcloud_maintenance_ticket" model="ir.sequence">
+        <field name="name">Maintenance Ticket</field>
+        <field name="code">rcloud.maintenance.ticket</field>
+        <field name="prefix">MNT/</field>
+        <field name="padding">6</field>
+    </record>
+
+    <!-- Housekeeping task generation: every day at 05:00 -->
+    <record id="ir_cron_housekeeping_tasks" model="ir.cron">
+        <field name="name">Housekeeping: generate daily tasks</field>
+        <field name="model_id" ref="model_rcloud_housekeeping_task"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_generate_tasks()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="nextcall"
+            eval="(DateTime.now().replace(hour=5, minute=0, second=0)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <!-- Night audit: every night at 23:55 -->
+    <record id="ir_cron_night_audit" model="ir.cron">
+        <field name="name">PMS: night audit (post room charges)</field>
+        <field name="model_id" ref="model_rcloud_night_audit_run"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_run()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="nextcall"
+            eval="(DateTime.now().replace(hour=23, minute=55, second=0)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+</odoo>

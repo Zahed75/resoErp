@@ -19,3 +19,9 @@ access_folio_user,rcloud.folio.user,model_rcloud_folio,rcloud_base.group_hotel_u
 access_folio_manager,rcloud.folio.manager,model_rcloud_folio,rcloud_base.group_hotel_manager,1,1,1,1
 access_folio_line_user,rcloud.folio.line.user,model_rcloud_folio_line,rcloud_base.group_hotel_user,1,1,1,0
 access_folio_line_manager,rcloud.folio.line.manager,model_rcloud_folio_line,rcloud_base.group_hotel_manager,1,1,1,1
+access_housekeeping_task_user,rcloud.housekeeping.task.user,model_rcloud_housekeeping_task,rcloud_base.group_hotel_user,1,1,1,0
+access_housekeeping_task_manager,rcloud.housekeeping.task.manager,model_rcloud_housekeeping_task,rcloud_base.group_hotel_manager,1,1,1,1
+access_maintenance_ticket_user,rcloud.maintenance.ticket.user,model_rcloud_maintenance_ticket,rcloud_base.group_hotel_user,1,1,1,0
+access_maintenance_ticket_manager,rcloud.maintenance.ticket.manager,model_rcloud_maintenance_ticket,rcloud_base.group_hotel_manager,1,1,1,1
+access_night_audit_run_user,rcloud.night.audit.run.user,model_rcloud_night_audit_run,rcloud_base.group_hotel_user,1,1,1,0
+access_night_audit_run_manager,rcloud.night.audit.run.manager,model_rcloud_night_audit_run,rcloud_base.group_hotel_manager,1,1,1,1

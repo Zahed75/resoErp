@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_ownership_root" name="Ownership"
+        web_icon="rcloud_ownership,static/description/icon.png"
+        groups="rcloud_base.group_hotel_user" sequence="10"/>
+
+    <menuitem id="menu_ownership_owners" name="Owners"
+        parent="menu_ownership_root" action="action_rcloud_owner"
+        sequence="10"/>
+    <menuitem id="menu_ownership_classes" name="Share Classes"
+        parent="menu_ownership_root" action="action_rcloud_share_class"
+        sequence="20"/>
+    <menuitem id="menu_ownership_holdings" name="Holdings"
+        parent="menu_ownership_root" action="action_rcloud_share_holding"
+        sequence="30"/>
+    <menuitem id="menu_ownership_transfers" name="Transfers"
+        parent="menu_ownership_root" action="action_rcloud_share_transfer"
+        sequence="40"/>
+    <menuitem id="menu_ownership_distributions" name="Distributions"
+        parent="menu_ownership_root" sequence="50"/>
+    <menuitem id="menu_ownership_runs" name="Distribution Runs"
+        parent="menu_ownership_distributions" action="action_rcloud_distribution_run"
+        sequence="10"/>
+    <menuitem id="menu_ownership_lines" name="Distribution Lines"
+        parent="menu_ownership_distributions" action="action_rcloud_distribution_line"
+        sequence="20"/>
+    <menuitem id="menu_ownership_reports" name="Owner Reports"
+        parent="menu_ownership_root" action="action_rcloud_owner_report_template"
+        sequence="60"/>
+</odoo>

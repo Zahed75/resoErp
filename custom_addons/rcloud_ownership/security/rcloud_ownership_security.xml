@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Multi-company partitioning for property-scoped records. -->
+    <record id="rule_rcloud_owner_multi_company" model="ir.rule">
+        <field name="name">rcloud.owner: multi-company</field>
+        <field name="model_id" ref="model_rcloud_owner"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_rcloud_share_class_multi_company" model="ir.rule">
+        <field name="name">rcloud.share.class: multi-company</field>
+        <field name="model_id" ref="model_rcloud_share_class"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_rcloud_share_holding_multi_company" model="ir.rule">
+        <field name="name">rcloud.share.holding: multi-company</field>
+        <field name="model_id" ref="model_rcloud_share_holding"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_rcloud_share_transfer_multi_company" model="ir.rule">
+        <field name="name">rcloud.share.transfer: multi-company</field>
+        <field name="model_id" ref="model_rcloud_share_transfer"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_rcloud_distribution_run_multi_company" model="ir.rule">
+        <field name="name">rcloud.distribution.run: multi-company</field>
+        <field name="model_id" ref="model_rcloud_distribution_run"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_rcloud_distribution_line_multi_company" model="ir.rule">
+        <field name="name">rcloud.distribution.line: multi-company</field>
+        <field name="model_id" ref="model_rcloud_distribution_line"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <!-- Portal isolation: a portal user sees ONLY their own records.
+         Non-global rules scoped to the portal group. -->
+    <record id="rule_rcloud_owner_portal" model="ir.rule">
+        <field name="name">rcloud.owner: portal sees own record only</field>
+        <field name="model_id" ref="model_rcloud_owner"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">[('portal_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_rcloud_share_holding_portal" model="ir.rule">
+        <field name="name">rcloud.share.holding: portal sees own holdings only</field>
+        <field name="model_id" ref="model_rcloud_share_holding"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">[('owner_id.portal_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_rcloud_distribution_line_portal" model="ir.rule">
+        <field name="name">rcloud.distribution.line: portal sees own lines only</field>
+        <field name="model_id" ref="model_rcloud_distribution_line"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">[('owner_id.portal_user_id', '=', user.id)]</field>
+    </record>
+    <record id="rule_rcloud_owner_report_template_portal" model="ir.rule">
+        <field name="name">rcloud.owner.report.template: portal sees shared templates only</field>
+        <field name="model_id" ref="model_rcloud_owner_report_template"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
+        <field name="domain_force">[('owner_id', '=', False)]</field>
+    </record>
+</odoo>

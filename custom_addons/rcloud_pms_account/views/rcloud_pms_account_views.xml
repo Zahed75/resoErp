@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================= Folio form extension ================= -->
+    <record id="folio_view_form_inherit_account" model="ir.ui.view">
+        <field name="name">rcloud.folio.form.inherit.account</field>
+        <field name="model">rcloud.folio</field>
+        <field name="inherit_id" ref="rcloud_pms.folio_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet" position="before">
+                <header>
+                    <button name="action_post_invoice" string="Post Invoice"
+                        type="object" invisible="state != 'open'"
+                        groups="rcloud_base.group_hotel_manager" class="btn-primary"/>
+                    <button name="%(rcloud_pms_account.action_report_folio)d"
+                        string="Print Folio" type="action"/>
+                    <button name="action_print_tax_invoice" string="Print Invoice"
+                        type="object"/>
+                </header>
+            </xpath>
+            <xpath expr="/form/sheet/group[last()]" position="after">
+                <group string="Invoices">
+                    <field name="invoice_ids" nolabel="1">
+                        <list>
+                            <field name="name"/>
+                            <field name="invoice_date"/>
+                            <field name="amount_total"/>
+                            <field name="amount_residual"/>
+                            <field name="payment_state"/>
+                            <field name="state"/>
+                        </list>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ================= Reservation form extension ================= -->
+    <record id="reservation_view_form_inherit_account" model="ir.ui.view">
+        <field name="name">rcloud.reservation.form.inherit.account</field>
+        <field name="model">rcloud.reservation</field>
+        <field name="inherit_id" ref="rcloud_pms.reservation_view_form"/>
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button name="action_invoice_stay" string="Invoice Stay"
+                    type="object" invisible="state not in ('checked_in', 'checked_out')"
+                    groups="rcloud_base.group_hotel_manager"/>
+                <button name="action_print_folio" string="Print Folio"
+                    type="object" invisible="not folio_id"/>
+            </header>
+        </field>
+    </record>
+
+    <!-- Property form: fallback income account -->
+    <record id="property_view_form_inherit_account" model="ir.ui.view">
+        <field name="name">rcloud.property.form.inherit.account</field>
+        <field name="model">rcloud.property</field>
+        <field name="inherit_id" ref="rcloud_base.rcloud_property_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/group[last()]" position="inside">
+                <field name="income_account_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

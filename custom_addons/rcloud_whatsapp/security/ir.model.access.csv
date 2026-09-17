@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_whatsapp_template_user,rcloud.whatsapp.template.user,model_rcloud_whatsapp_template,rcloud_base.group_hotel_user,1,0,0,0
+access_whatsapp_template_manager,rcloud.whatsapp.template.manager,model_rcloud_whatsapp_template,rcloud_base.group_hotel_manager,1,1,1,1
+access_whatsapp_message_user,rcloud.whatsapp.message.user,model_rcloud_whatsapp_message,rcloud_base.group_hotel_user,1,0,0,0
+access_whatsapp_message_manager,rcloud.whatsapp.message.manager,model_rcloud_whatsapp_message,rcloud_base.group_hotel_manager,1,1,1,1
+access_whatsapp_chatbot_rule_user,rcloud.whatsapp.chatbot.rule.user,model_rcloud_whatsapp_chatbot_rule,rcloud_base.group_hotel_user,1,0,0,0
+access_whatsapp_chatbot_rule_manager,rcloud.whatsapp.chatbot.rule.manager,model_rcloud_whatsapp_chatbot_rule,rcloud_base.group_hotel_manager,1,1,1,1
+access_whatsapp_provider_log_user,rcloud.whatsapp.provider.log.user,model_rcloud_whatsapp_provider_log,rcloud_base.group_hotel_user,1,0,0,0
+access_whatsapp_provider_log_manager,rcloud.whatsapp.provider.log.manager,model_rcloud_whatsapp_provider_log,rcloud_base.group_hotel_manager,1,1,1,1

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================= Templates ================= -->
+    <record id="whatsapp_template_view_list" model="ir.ui.view">
+        <field name="name">rcloud.whatsapp.template.list</field>
+        <field name="model">rcloud.whatsapp.template</field>
+        <field name="arch" type="xml">
+            <list string="WhatsApp Templates">
+                <field name="name"/>
+                <field name="key"/>
+                <field name="language"/>
+            </list>
+        </field>
+    </record>
+    <record id="whatsapp_template_view_form" model="ir.ui.view">
+        <field name="name">rcloud.whatsapp.template.form</field>
+        <field name="model">rcloud.whatsapp.template</field>
+        <field name="arch" type="xml">
+            <form string="WhatsApp Template">
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <field name="key"/>
+                        <field name="language"/>
+                    </group>
+                    <group string="Body">
+                        <field name="body" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_whatsapp_template" model="ir.actions.act_window">
+        <field name="name">WhatsApp Templates</field>
+        <field name="res_model">rcloud.whatsapp.template</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Messages ================= -->
+    <record id="whatsapp_message_view_list" model="ir.ui.view">
+        <field name="name">rcloud.whatsapp.message.list</field>
+        <field name="model">rcloud.whatsapp.message</field>
+        <field name="arch" type="xml">
+            <list string="WhatsApp Messages"
+                  decoration-success="state == 'delivered'"
+                  decoration-danger="state == 'failed'">
+                <field name="create_date" string="Date"/>
+                <field name="partner_id"/>
+                <field name="phone"/>
+                <field name="direction"/>
+                <field name="template_id"/>
+                <field name="state"/>
+                <field name="body"/>
+            </list>
+        </field>
+    </record>
+    <record id="whatsapp_message_view_form" model="ir.ui.view">
+        <field name="name">rcloud.whatsapp.message.form</field>
+        <field name="model">rcloud.whatsapp.message</field>
+        <field name="arch" type="xml">
+            <form string="WhatsApp Message">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="phone"/>
+                            <field name="direction"/>
+                        </group>
+                        <group>
+                            <field name="template_id"/>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                    <group string="Body">
+                        <field name="body" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_whatsapp_message" model="ir.actions.act_window">
+        <field name="name">WhatsApp Messages</field>
+        <field name="res_model">rcloud.whatsapp.message</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Chatbot Rules ================= -->
+    <record id="whatsapp_chatbot_rule_view_list" model="ir.ui.view">
+        <field name="name">rcloud.whatsapp.chatbot.rule.list</field>
+        <field name="model">rcloud.whatsapp.chatbot.rule</field>
+        <field name="arch" type="xml">
+            <list string="Chatbot Rules">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="trigger_keywords"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+    <record id="whatsapp_chatbot_rule_view_form" model="ir.ui.view">
+        <field name="name">rcloud.whatsapp.chatbot.rule.form</field>
+        <field name="model">rcloud.whatsapp.chatbot.rule</field>
+        <field name="arch" type="xml">
+            <form string="Chatbot Rule">
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <field name="sequence"/>
+                        <field name="trigger_keywords"/>
+                        <field name="active"/>
+                    </group>
+                    <group string="Response">
+                        <field name="response_template" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_whatsapp_chatbot_rule" model="ir.actions.act_window">
+        <field name="name">Chatbot Rules</field>
+        <field name="res_model">rcloud.whatsapp.chatbot.rule</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Partner: consent fields ================= -->
+    <record id="res_partner_view_form_inherit_whatsapp" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.whatsapp</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="WhatsApp" name="whatsapp_consent"
+                        groups="rcloud_base.group_hotel_user">
+                    <group>
+                        <field name="whatsapp_number"/>
+                        <field name="whatsapp_opt_in"/>
+                        <field name="whatsapp_consent_date"/>
+                        <field name="whatsapp_opt_out"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ================= Menus ================= -->
+    <menuitem id="menu_rcloud_whatsapp" name="WhatsApp"
+        parent="rcloud_base.menu_rcloud_root" sequence="50"/>
+    <menuitem id="menu_rcloud_whatsapp_templates" name="Templates"
+        parent="menu_rcloud_whatsapp" action="action_whatsapp_template"
+        sequence="10"/>
+    <menuitem id="menu_rcloud_whatsapp_messages" name="Messages"
+        parent="menu_rcloud_whatsapp" action="action_whatsapp_message"
+        sequence="20"/>
+    <menuitem id="menu_rcloud_whatsapp_chatbot" name="Chatbot Rules"
+        parent="menu_rcloud_whatsapp" action="action_whatsapp_chatbot_rule"
+        sequence="30"/>
+</odoo>

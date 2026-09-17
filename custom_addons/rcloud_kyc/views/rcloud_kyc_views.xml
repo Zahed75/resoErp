@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================= KYC Records ================= -->
+    <record id="kyc_record_view_list" model="ir.ui.view">
+        <field name="name">rcloud.kyc.record.list</field>
+        <field name="model">rcloud.kyc.record</field>
+        <field name="arch" type="xml">
+            <list string="KYC Records"
+                  decoration-success="state == 'verified'"
+                  decoration-danger="state == 'rejected'">
+                <field name="partner_id"/>
+                <field name="property_id"/>
+                <field name="doc_type"/>
+                <field name="doc_number_display"/>
+                <field name="issuing_country"/>
+                <field name="expiry_date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="kyc_record_view_form" model="ir.ui.view">
+        <field name="name">rcloud.kyc.record.form</field>
+        <field name="model">rcloud.kyc.record</field>
+        <field name="arch" type="xml">
+            <form string="KYC Record">
+                <header>
+                    <button name="action_submit" string="Submit" type="object"
+                        invisible="state != 'pending'" class="btn-primary"/>
+                    <button name="action_verify" string="Verify" type="object"
+                        invisible="state != 'submitted'" class="btn-primary"
+                        groups="rcloud_kyc.group_kyc_officer"/>
+                    <button name="action_reject" string="Reject" type="object"
+                        invisible="state != 'submitted'"
+                        groups="rcloud_kyc.group_kyc_officer"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="pending,submitted,verified,rejected"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="doc_type"/></h1></div>
+                    <group>
+                        <group string="Guest">
+                            <field name="partner_id"/>
+                            <field name="property_id"/>
+                        </group>
+                        <group string="Document">
+                            <!-- Raw number: KYC officers and hotel managers
+                                 only; everyone else sees the masked value. -->
+                            <field name="doc_number"
+                                groups="rcloud_kyc.group_kyc_officer,rcloud_base.group_hotel_manager"/>
+                            <field name="doc_number_display"
+                                groups="!rcloud_kyc.group_kyc_officer"/>
+                            <field name="issuing_country"/>
+                            <field name="issue_date"/>
+                            <field name="expiry_date"/>
+                        </group>
+                    </group>
+                    <group string="Verification">
+                        <field name="verified_by"/>
+                        <field name="verified_on"/>
+                        <field name="rejection_reason"/>
+                    </group>
+                    <group string="Attachments">
+                        <field name="attachment_ids" widget="many2many_binary"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="action_kyc_record" model="ir.actions.act_window">
+        <field name="name">KYC Records</field>
+        <field name="res_model">rcloud.kyc.record</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Property: KYC flag ================= -->
+    <record id="rcloud_property_view_form_inherit_kyc" model="ir.ui.view">
+        <field name="name">rcloud.property.form.inherit.kyc</field>
+        <field name="model">rcloud.property</field>
+        <field name="inherit_id" ref="rcloud_base.rcloud_property_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[field[@name='code']]" position="inside">
+                <field name="kyc_required"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ================= Partner: GDPR actions + KYC ================= -->
+    <record id="res_partner_view_form_inherit_kyc" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.kyc</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="action_gdpr_export" string="GDPR Export"
+                        type="object" groups="rcloud_kyc.group_kyc_officer"/>
+                    <button name="action_gdpr_erase" string="GDPR Erase"
+                        type="object" groups="rcloud_base.group_hotel_manager"/>
+                </header>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="KYC" groups="rcloud_kyc.group_kyc_officer">
+                    <field name="kyc_record_ids">
+                        <list>
+                            <field name="doc_type"/>
+                            <field name="doc_number_display"/>
+                            <field name="state"/>
+                            <field name="expiry_date"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- ================= Menu ================= -->
+    <menuitem id="menu_rcloud_kyc" name="KYC Records"
+        parent="rcloud_base.menu_rcloud_root" action="action_kyc_record"
+        groups="rcloud_kyc.group_kyc_officer" sequence="40"/>
+</odoo>

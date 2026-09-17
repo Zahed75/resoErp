@@ -6,3 +6,5 @@ from . import rate_calendar
 from . import availability
 from . import folio
 from . import reservation
+from . import housekeeping
+from . import night_audit

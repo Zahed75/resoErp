@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_owner_custom" model="ir.actions.report">
+        <field name="name">Owner Custom Report</field>
+        <field name="model">rcloud.owner.report.template</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rcloud_ownership.report_owner_custom</field>
+        <field name="report_file">rcloud_ownership.report_owner_custom</field>
+        <field name="print_report_name">'%s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_rcloud_owner_report_template"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_owner_custom">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2><span t-field="doc.name"/></h2>
+                        <p>
+                            Period:
+                            <span t-field="doc.date_from"/> —
+                            <span t-field="doc.date_to"/>
+                            <t t-if="doc.owner_id">
+                                — Owner: <span t-field="doc.owner_id.partner_id"/>
+                            </t>
+                            <t t-if="not doc.owner_id">
+                                — All owners
+                            </t>
+                        </p>
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Group</th>
+                                    <th class="text-end">Gross</th>
+                                    <th class="text-end">Deductions</th>
+                                    <th class="text-end">Net Payable</th>
+                                    <th class="text-end">Lines</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.sudo().get_report_rows()" t-as="row">
+                                    <tr>
+                                        <td><span t-esc="row['group']"/></td>
+                                        <td class="text-end">
+                                            <span t-esc="row['gross']" t-options="{'widget': 'float', 'precision': 2}"/>
+                                        </td>
+                                        <td class="text-end">
+                                            <span t-esc="row['deductions']" t-options="{'widget': 'float', 'precision': 2}"/>
+                                        </td>
+                                        <td class="text-end">
+                                            <strong t-esc="row['net']" t-options="{'widget': 'float', 'precision': 2}"/>
+                                        </td>
+                                        <td class="text-end">
+                                            <span t-esc="row['line_count']"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Per-line owner statement, downloadable from the portal. -->
+    <record id="action_report_owner_statement" model="ir.actions.report">
+        <field name="name">Owner Statement</field>
+        <field name="model">rcloud.distribution.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">rcloud_ownership.report_owner_statement</field>
+        <field name="report_file">rcloud_ownership.report_owner_statement</field>
+        <field name="print_report_name">'%s - %s' % (object.run_id.name, object.owner_id.partner_id.name or '')</field>
+        <field name="binding_model_id" ref="model_rcloud_distribution_line"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="report_owner_statement">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="line">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Owner Distribution Statement</h2>
+                        <p>
+                            Run: <span t-field="line.run_id.name"/> —
+                            Period: <span t-field="line.run_id.period_start"/>
+                            to <span t-field="line.run_id.period_end"/>
+                        </p>
+                        <p>Owner: <span t-field="line.owner_id.partner_id"/></p>
+                        <p>Property: <span t-field="line.run_id.property_id"/></p>
+                        <table class="table table-sm">
+                            <tbody>
+                                <tr>
+                                    <td>Share Class</td>
+                                    <td class="text-end"><span t-field="line.share_class_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Weighted Units</td>
+                                    <td class="text-end"><span t-field="line.units_held"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Share %</td>
+                                    <td class="text-end"><span t-field="line.share_pct" t-options="{'widget': 'float', 'precision': 2}"/> %</td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Allocated</td>
+                                    <td class="text-end"><span t-field="line.gross_allocated"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Deductions</td>
+                                    <td class="text-end"><span t-field="line.deductions"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Net Payable</th>
+                                    <th class="text-end"><span t-field="line.net_payable"/></th>
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td class="text-end"><span t-field="line.state"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kyc_record_officer,rcloud.kyc.record.officer,model_rcloud_kyc_record,rcloud_kyc.group_kyc_officer,1,1,1,0
+access_kyc_record_manager,rcloud.kyc.record.manager,model_rcloud_kyc_record,rcloud_base.group_hotel_manager,1,1,1,1

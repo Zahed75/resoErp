@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_kyc_officer" model="res.groups">
+        <field name="name">KYC Officer</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Handles identity documents: submit, verify, reject KYC records.</field>
+    </record>
+
+    <!-- Hotel managers inherit the KYC officer role. res.groups has no
+         category_id in 19.0; implied_ids on an existing group record is
+         additive, so we extend the manager group in place. -->
+    <record id="rcloud_base.group_hotel_manager" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_kyc_officer'))]"/>
+    </record>
+
+    <!-- Defense in depth: even if a regular staff user somehow gained read
+         access to the model, no KYC record is visible outside the officer
+         and manager groups. -->
+    <record id="rule_kyc_officer_only" model="ir.rule">
+        <field name="name">rcloud.kyc.record: officers and managers only</field>
+        <field name="model_id" ref="model_rcloud_kyc_record"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">[('id', '=', False)]</field>
+    </record>
+    <record id="rule_kyc_officer_access" model="ir.rule">
+        <field name="name">rcloud.kyc.record: officer full visibility</field>
+        <field name="model_id" ref="model_rcloud_kyc_record"/>
+        <field name="groups" eval="[(4, ref('group_kyc_officer'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+</odoo>

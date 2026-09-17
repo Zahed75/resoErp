@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="template_booking_confirmed" model="rcloud.whatsapp.template">
+        <field name="name">Booking Confirmed</field>
+        <field name="key">booking_confirmed</field>
+        <field name="body">Dear {{guest}}, your booking {{ref}} is confirmed. Total: {{amount}}. We look forward to welcoming you!</field>
+    </record>
+    <record id="template_pre_arrival" model="rcloud.whatsapp.template">
+        <field name="name">Pre-Arrival</field>
+        <field name="key">pre_arrival</field>
+        <field name="body">Dear {{guest}}, your stay {{ref}} is coming up. Reply STOP to opt out of messages.</field>
+    </record>
+    <record id="template_check_in_ready" model="rcloud.whatsapp.template">
+        <field name="name">Check-In Ready</field>
+        <field name="key">check_in_ready</field>
+        <field name="body">Dear {{guest}}, your room for {{ref}} is ready. Please proceed to the front desk.</field>
+    </record>
+    <record id="template_checkout_summary" model="rcloud.whatsapp.template">
+        <field name="name">Checkout Summary</field>
+        <field name="key">checkout_summary</field>
+        <field name="body">Dear {{guest}}, thank you for staying with us. Folio {{ref}} total: {{amount}}.</field>
+    </record>
+    <record id="template_feedback" model="rcloud.whatsapp.template">
+        <field name="name">Feedback</field>
+        <field name="key">feedback</field>
+        <field name="body">Dear {{guest}}, we hope you enjoyed your stay ({{ref}}). Please share your feedback.</field>
+    </record>
+    <record id="template_distribution_statement" model="rcloud.whatsapp.template">
+        <field name="name">Distribution Statement</field>
+        <field name="key">distribution_statement</field>
+        <field name="body">Dear {{guest}}, your distribution statement {{ref}} of {{amount}} is available.</field>
+    </record>
+    <record id="template_announcement" model="rcloud.whatsapp.template">
+        <field name="name">Announcement</field>
+        <field name="key">announcement</field>
+        <field name="body">Dear {{guest}}, {{ref}}: please note the update from our resort.</field>
+    </record>
+</odoo>

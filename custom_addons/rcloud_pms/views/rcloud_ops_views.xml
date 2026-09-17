@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================= Housekeeping Tasks ================= -->
+    <record id="housekeeping_task_view_list" model="ir.ui.view">
+        <field name="name">rcloud.housekeeping.task.list</field>
+        <field name="model">rcloud.housekeeping.task</field>
+        <field name="arch" type="xml">
+            <list string="Housekeeping Tasks"
+                  decoration-warning="state == 'pending'"
+                  decoration-info="state == 'in_progress'"
+                  decoration-success="state == 'done'"
+                  decoration-muted="state == 'verified'">
+                <field name="date"/>
+                <field name="room_id"/>
+                <field name="property_id"/>
+                <field name="type"/>
+                <field name="assignee_id"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+    <record id="housekeeping_task_view_form" model="ir.ui.view">
+        <field name="name">rcloud.housekeeping.task.form</field>
+        <field name="model">rcloud.housekeeping.task</field>
+        <field name="arch" type="xml">
+            <form string="Housekeeping Task">
+                <header>
+                    <button name="action_start" string="Start" type="object"
+                        invisible="state != 'pending'" class="btn-primary"/>
+                    <button name="action_done" string="Done" type="object"
+                        invisible="state != 'in_progress'" class="btn-primary"/>
+                    <button name="action_verify" string="Verify" type="object"
+                        invisible="state != 'done'"
+                        groups="rcloud_base.group_hotel_manager"/>
+                    <button name="action_report_fault" string="Report Fault"
+                        type="object" invisible="state == 'verified'"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="pending,in_progress,done,verified"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="room_id"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="property_id"/>
+                            <field name="date"/>
+                            <field name="type"/>
+                        </group>
+                        <group>
+                            <field name="assignee_id"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="housekeeping_task_view_search" model="ir.ui.view">
+        <field name="name">rcloud.housekeeping.task.search</field>
+        <field name="model">rcloud.housekeeping.task</field>
+        <field name="arch" type="xml">
+            <search string="Housekeeping Tasks">
+                <field name="room_id"/>
+                <field name="assignee_id"/>
+                <filter string="Today" name="today"
+                    domain="[('date', '=', context_today())]"/>
+                <filter string="My Tasks" name="my"
+                    domain="[('assignee_id', '=', uid)]"/>
+                <filter string="Pending" name="pending"
+                    domain="[('state', '=', 'pending')]"/>
+                <group>
+                    <filter string="Property" name="group_property"
+                        context="{'group_by': 'property_id'}"/>
+                    <filter string="Type" name="group_type"
+                        context="{'group_by': 'type'}"/>
+                    <filter string="State" name="group_state"
+                        context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_housekeeping_task" model="ir.actions.act_window">
+        <field name="name">Housekeeping Tasks</field>
+        <field name="res_model">rcloud.housekeeping.task</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_today': 1}</field>
+    </record>
+
+    <!-- ================= Maintenance Tickets ================= -->
+    <record id="maintenance_ticket_view_list" model="ir.ui.view">
+        <field name="name">rcloud.maintenance.ticket.list</field>
+        <field name="model">rcloud.maintenance.ticket</field>
+        <field name="arch" type="xml">
+            <list string="Maintenance Tickets"
+                  decoration-danger="priority == 'urgent'"
+                  decoration-warning="state == 'new'"
+                  decoration-muted="state == 'done'">
+                <field name="name"/>
+                <field name="title"/>
+                <field name="property_id"/>
+                <field name="room_id"/>
+                <field name="priority"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+    <record id="maintenance_ticket_view_form" model="ir.ui.view">
+        <field name="name">rcloud.maintenance.ticket.form</field>
+        <field name="model">rcloud.maintenance.ticket</field>
+        <field name="arch" type="xml">
+            <form string="Maintenance Ticket">
+                <header>
+                    <button name="action_start" string="Start" type="object"
+                        invisible="state != 'new'" class="btn-primary"/>
+                    <button name="action_done" string="Resolve" type="object"
+                        invisible="state != 'in_progress'" class="btn-primary"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="new,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="property_id"/>
+                            <field name="room_id"/>
+                            <field name="priority"/>
+                        </group>
+                        <group>
+                            <field name="title"/>
+                        </group>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="action_maintenance_ticket" model="ir.actions.act_window">
+        <field name="name">Maintenance</field>
+        <field name="res_model">rcloud.maintenance.ticket</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Night Audit ================= -->
+    <record id="night_audit_run_view_form" model="ir.ui.view">
+        <field name="name">rcloud.night.audit.run.form</field>
+        <field name="model">rcloud.night.audit.run</field>
+        <field name="arch" type="xml">
+            <form string="Night Audit">
+                <group>
+                    <field name="date"/>
+                </group>
+                <footer>
+                    <button name="action_run" string="Run Night Audit"
+                        type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary"
+                        special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_night_audit_run" model="ir.actions.act_window">
+        <field name="name">Night Audit</field>
+        <field name="res_model">rcloud.night.audit.run</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <!-- ================= Menus ================= -->
+    <menuitem id="menu_rcloud_housekeeping" name="Housekeeping"
+        parent="rcloud_base.menu_rcloud_root" sequence="40"/>
+    <menuitem id="menu_rcloud_housekeeping_tasks" name="Tasks"
+        parent="menu_rcloud_housekeeping" action="action_housekeeping_task"
+        sequence="10"/>
+    <menuitem id="menu_rcloud_maintenance" name="Maintenance"
+        parent="menu_rcloud_housekeeping" action="action_maintenance_ticket"
+        sequence="20"/>
+    <menuitem id="menu_rcloud_night_audit" name="Night Audit"
+        parent="menu_rcloud_billing" action="action_night_audit_run"
+        sequence="20" groups="rcloud_base.group_hotel_manager"/>
+</odoo>

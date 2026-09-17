@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ================= Plans ================= -->
+    <record id="rcloud_plan_view_list" model="ir.ui.view">
+        <field name="name">rcloud.plan.list</field>
+        <field name="model">rcloud.plan</field>
+        <field name="arch" type="xml">
+            <list string="Plans">
+                <field name="name"/>
+                <field name="monthly_price"/>
+                <field name="billing_period"/>
+                <field name="max_properties"/>
+                <field name="max_rooms"/>
+                <field name="max_users"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+    <record id="rcloud_plan_view_form" model="ir.ui.view">
+        <field name="name">rcloud.plan.form</field>
+        <field name="model">rcloud.plan</field>
+        <field name="arch" type="xml">
+            <form string="Plan">
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="monthly_price"/>
+                            <field name="currency_id"/>
+                            <field name="billing_period"/>
+                        </group>
+                        <group string="Limits">
+                            <field name="max_properties"/>
+                            <field name="max_rooms"/>
+                            <field name="max_users"/>
+                        </group>
+                    </group>
+                    <group string="Included Modules">
+                        <field name="included_modules" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_rcloud_plan" model="ir.actions.act_window">
+        <field name="name">Plans</field>
+        <field name="res_model">rcloud.plan</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Tenants ================= -->
+    <record id="rcloud_tenant_view_list" model="ir.ui.view">
+        <field name="name">rcloud.tenant.list</field>
+        <field name="model">rcloud.tenant</field>
+        <field name="arch" type="xml">
+            <list string="Tenants"
+                  decoration-success="state == 'active'"
+                  decoration-warning="state in ('trial', 'past_due')"
+                  decoration-danger="state == 'suspended'"
+                  decoration-muted="state == 'terminated'">
+                <field name="name"/>
+                <field name="subdomain"/>
+                <field name="plan_id"/>
+                <field name="state"/>
+                <field name="trial_ends"/>
+                <field name="region"/>
+            </list>
+        </field>
+    </record>
+    <record id="rcloud_tenant_view_form" model="ir.ui.view">
+        <field name="name">rcloud.tenant.form</field>
+        <field name="model">rcloud.tenant</field>
+        <field name="arch" type="xml">
+            <form string="Tenant">
+                <header>
+                    <button name="action_provision" string="Provision"
+                        type="object" invisible="state != 'provisioning'"
+                        class="btn-primary"/>
+                    <button name="action_suspend" string="Suspend"
+                        type="object"
+                        invisible="state not in ('trial', 'active', 'past_due')"/>
+                    <button name="action_resume" string="Resume"
+                        type="object" invisible="state != 'suspended'"/>
+                    <button name="action_extend_trial" string="Extend Trial"
+                        type="object" invisible="state != 'trial'"/>
+                    <button name="action_impersonate" string="Impersonate"
+                        type="object" invisible="state == 'terminated'"/>
+                    <field name="state" widget="statusbar" statusbar_visible=
+                        "provisioning,trial,active,past_due,suspended,terminated"/>
+                </header>
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group string="Tenant">
+                            <field name="subdomain"/>
+                            <field name="db_name"/>
+                            <field name="company_id"/>
+                            <field name="region"/>
+                            <field name="odoo_version"/>
+                        </group>
+                        <group string="Plan &amp; Limits">
+                            <field name="plan_id"/>
+                            <field name="trial_ends"/>
+                            <field name="property_count"/>
+                            <field name="room_count"/>
+                            <field name="user_count"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Subscriptions">
+                            <field name="subscription_ids">
+                                <list>
+                                    <field name="plan_id"/>
+                                    <field name="date_start"/>
+                                    <field name="next_invoice_date"/>
+                                    <field name="mrr"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Provision Jobs">
+                            <field name="job_ids">
+                                <list>
+                                    <field name="create_date"/>
+                                    <field name="state"/>
+                                    <field name="step"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Usage">
+                            <field name="usage_ids">
+                                <list>
+                                    <field name="date"/>
+                                    <field name="rooms"/>
+                                    <field name="users"/>
+                                    <field name="reservations"/>
+                                    <field name="storage_mb"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_rcloud_tenant" model="ir.actions.act_window">
+        <field name="name">Tenants</field>
+        <field name="res_model">rcloud.tenant</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Subscriptions + MRR graph ================= -->
+    <record id="rcloud_subscription_view_list" model="ir.ui.view">
+        <field name="name">rcloud.tenant.subscription.list</field>
+        <field name="model">rcloud.tenant.subscription</field>
+        <field name="arch" type="xml">
+            <list string="Subscriptions">
+                <field name="tenant_id"/>
+                <field name="plan_id"/>
+                <field name="date_start"/>
+                <field name="next_invoice_date"/>
+                <field name="mrr"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+    <record id="rcloud_subscription_view_graph" model="ir.ui.view">
+        <field name="name">rcloud.tenant.subscription.graph</field>
+        <field name="model">rcloud.tenant.subscription</field>
+        <field name="arch" type="xml">
+            <graph string="Monthly Recurring Revenue" type="bar">
+                <field name="plan_id" type="row"/>
+                <field name="mrr" type="measure"/>
+            </graph>
+        </field>
+    </record>
+    <record id="action_rcloud_subscription" model="ir.actions.act_window">
+        <field name="name">Subscriptions &amp; MRR</field>
+        <field name="res_model">rcloud.tenant.subscription</field>
+        <field name="view_mode">graph,list</field>
+    </record>
+
+    <!-- ================= Provision jobs ================= -->
+    <record id="rcloud_provision_job_view_list" model="ir.ui.view">
+        <field name="name">rcloud.provision.job.list</field>
+        <field name="model">rcloud.provision.job</field>
+        <field name="arch" type="xml">
+            <list string="Provision Jobs">
+                <field name="create_date"/>
+                <field name="tenant_id"/>
+                <field name="state"/>
+                <field name="step"/>
+            </list>
+        </field>
+    </record>
+    <record id="rcloud_provision_job_view_form" model="ir.ui.view">
+        <field name="name">rcloud.provision.job.form</field>
+        <field name="model">rcloud.provision.job</field>
+        <field name="arch" type="xml">
+            <form string="Provision Job">
+                <header>
+                    <button name="action_run" string="Run" type="object"
+                        invisible="state not in ('pending', 'failed')"
+                        class="btn-primary"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="tenant_id"/>
+                        <field name="step"/>
+                    </group>
+                    <group string="Log">
+                        <field name="log" nolabel="1"/>
+                    </group>
+                    <group string="Steps">
+                        <field name="step_ids" nolabel="1">
+                            <list editable="bottom">
+                                <field name="name"/>
+                                <field name="state"/>
+                                <field name="log"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="action_rcloud_provision_job" model="ir.actions.act_window">
+        <field name="name">Provision Jobs</field>
+        <field name="res_model">rcloud.provision.job</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================= Impersonation audit ================= -->
+    <record id="rcloud_impersonation_log_view_list" model="ir.ui.view">
+        <field name="name">rcloud.impersonation.log.list</field>
+        <field name="model">rcloud.impersonation.log</field>
+        <field name="arch" type="xml">
+            <list string="Impersonation Log" create="false" delete="false">
+                <field name="create_date"/>
+                <field name="admin_user_id"/>
+                <field name="tenant_id"/>
+                <field name="started_on"/>
+                <field name="ended_on"/>
+                <field name="note"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_rcloud_impersonation_log" model="ir.actions.act_window">
+        <field name="name">Impersonation Log</field>
+        <field name="res_model">rcloud.impersonation.log</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- ================= Menus ================= -->
+    <menuitem id="menu_rcloud_control_root" name="Control Plane"
+        groups="base.group_system" sequence="90"/>
+    <menuitem id="menu_rcloud_control_tenants" name="Tenants"
+        parent="menu_rcloud_control_root" action="action_rcloud_tenant"
+        sequence="10"/>
+    <menuitem id="menu_rcloud_control_plans" name="Plans"
+        parent="menu_rcloud_control_root" action="action_rcloud_plan"
+        sequence="20"/>
+    <menuitem id="menu_rcloud_control_subscriptions" name="MRR"
+        parent="menu_rcloud_control_root" action="action_rcloud_subscription"
+        sequence="30"/>
+    <menuitem id="menu_rcloud_control_jobs" name="Provision Jobs"
+        parent="menu_rcloud_control_root" action="action_rcloud_provision_job"
+        sequence="40"/>
+    <menuitem id="menu_rcloud_control_impersonation" name="Impersonation Log"
+        parent="menu_rcloud_control_root" action="action_rcloud_impersonation_log"
+        sequence="50"/>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_order_form_rcloud" model="ir.ui.view">
+        <field name="name">pos.order.form.rcloud</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="rcloud_folio_id"/>
+                <button name="action_charge_to_room" string="Charge to Room"
+                    type="object" class="btn-primary"
+                    invisible="rcloud_folio_id or state in ('invoiced', 'done')"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

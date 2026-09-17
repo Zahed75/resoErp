@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ===================================================== rcloud.owner -->
+    <record id="rcloud_owner_view_list" model="ir.ui.view">
+        <field name="name">rcloud.owner.list</field>
+        <field name="model">rcloud.owner</field>
+        <field name="arch" type="xml">
+            <list string="Owners">
+                <field name="partner_id"/>
+                <field name="kyc_state" decoration-muted="kyc_state == 'draft'"
+                    decoration-success="kyc_state == 'verified'"
+                    decoration-danger="kyc_state == 'rejected'"
+                    widget="badge"/>
+                <field name="payout_preference"/>
+                <field name="portal_user_id"/>
+                <field name="company_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_owner_view_form" model="ir.ui.view">
+        <field name="name">rcloud.owner.form</field>
+        <field name="model">rcloud.owner</field>
+        <field name="arch" type="xml">
+            <form string="Owner">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="partner_id" placeholder="Partner"/></h1>
+                    </div>
+                    <group>
+                        <group string="Identity">
+                            <field name="kyc_state" widget="statusbar"
+                                statusbar_visible="draft,verified,rejected"/>
+                            <field name="tax_id"/>
+                            <field name="company_id"/>
+                        </group>
+                        <group string="Payout">
+                            <field name="payout_preference"/>
+                            <field name="bank_details"/>
+                        </group>
+                        <group string="Portal">
+                            <field name="portal_user_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Holdings" name="holdings">
+                            <field name="holding_ids">
+                                <list>
+                                    <field name="certificate_number"/>
+                                    <field name="share_class_id"/>
+                                    <field name="units_held"/>
+                                    <field name="acquired_date"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Distributions" name="distributions">
+                            <field name="distribution_line_ids">
+                                <list>
+                                    <field name="run_id"/>
+                                    <field name="share_class_id"/>
+                                    <field name="gross_allocated"/>
+                                    <field name="deductions"/>
+                                    <field name="net_payable"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="rcloud_owner_view_search" model="ir.ui.view">
+        <field name="name">rcloud.owner.search</field>
+        <field name="model">rcloud.owner</field>
+        <field name="arch" type="xml">
+            <search string="Owners">
+                <field name="partner_id"/>
+                <filter name="verified" string="Verified"
+                    domain="[('kyc_state', '=', 'verified')]"/>
+                <filter name="pending_kyc" string="Pending KYC"
+                    domain="[('kyc_state', '=', 'draft')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rcloud_owner" model="ir.actions.act_window">
+        <field name="name">Owners</field>
+        <field name="res_model">rcloud.owner</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ================================================ rcloud.share.class -->
+    <record id="rcloud_share_class_view_list" model="ir.ui.view">
+        <field name="name">rcloud.share.class.list</field>
+        <field name="model">rcloud.share.class</field>
+        <field name="arch" type="xml">
+            <list string="Share Classes">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="total_units"/>
+                <field name="unit_nominal_value"/>
+                <field name="distribution_rule"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_share_class_view_form" model="ir.ui.view">
+        <field name="name">rcloud.share.class.form</field>
+        <field name="model">rcloud.share.class</field>
+        <field name="arch" type="xml">
+            <form string="Share Class">
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Class name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Structure">
+                            <field name="property_id"/>
+                            <field name="total_units"/>
+                            <field name="unit_nominal_value"/>
+                        </group>
+                        <group string="Distribution">
+                            <field name="distribution_rule"/>
+                            <field name="management_fee_pct" widget="percentage"/>
+                            <field name="reserve_pct" widget="percentage"/>
+                            <field name="withholding_pct" widget="percentage"/>
+                            <field name="room_type_ids"
+                                invisible="distribution_rule != 'room_subset'"
+                                widget="many2many_tags"/>
+                            <field name="expense_account_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Holdings" name="holdings">
+                            <field name="holding_ids">
+                                <list>
+                                    <field name="certificate_number"/>
+                                    <field name="owner_id"/>
+                                    <field name="units_held"/>
+                                    <field name="acquired_date"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="rcloud_share_class_view_search" model="ir.ui.view">
+        <field name="name">rcloud.share.class.search</field>
+        <field name="model">rcloud.share.class</field>
+        <field name="arch" type="xml">
+            <search string="Share Classes">
+                <field name="name"/>
+                <field name="property_id"/>
+                <filter name="gross" string="Gross Room Revenue"
+                    domain="[('distribution_rule', '=', 'gross_room_revenue')]"/>
+                <filter name="noi" string="NOI"
+                    domain="[('distribution_rule', '=', 'noi')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rcloud_share_class" model="ir.actions.act_window">
+        <field name="name">Share Classes</field>
+        <field name="res_model">rcloud.share.class</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- =============================================== rcloud.share.holding -->
+    <record id="rcloud_share_holding_view_list" model="ir.ui.view">
+        <field name="name">rcloud.share.holding.list</field>
+        <field name="model">rcloud.share.holding</field>
+        <field name="arch" type="xml">
+            <list string="Holdings">
+                <field name="certificate_number"/>
+                <field name="owner_id"/>
+                <field name="share_class_id"/>
+                <field name="units_held"/>
+                <field name="acquired_date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_share_holding_view_form" model="ir.ui.view">
+        <field name="name">rcloud.share.holding.form</field>
+        <field name="model">rcloud.share.holding</field>
+        <field name="arch" type="xml">
+            <form string="Holding">
+                <sheet>
+                    <group>
+                        <group string="Holding">
+                            <field name="certificate_number"/>
+                            <field name="owner_id"/>
+                            <field name="share_class_id"/>
+                            <field name="units_held"/>
+                            <field name="acquired_date"/>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="rcloud_share_holding_view_search" model="ir.ui.view">
+        <field name="name">rcloud.share.holding.search</field>
+        <field name="model">rcloud.share.holding</field>
+        <field name="arch" type="xml">
+            <search string="Holdings">
+                <field name="certificate_number"/>
+                <field name="owner_id"/>
+                <field name="share_class_id"/>
+                <filter name="active" string="Active"
+                    domain="[('state', '=', 'active')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rcloud_share_holding" model="ir.actions.act_window">
+        <field name="name">Holdings</field>
+        <field name="res_model">rcloud.share.holding</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ============================================== rcloud.share.transfer -->
+    <record id="rcloud_share_transfer_view_list" model="ir.ui.view">
+        <field name="name">rcloud.share.transfer.list</field>
+        <field name="model">rcloud.share.transfer</field>
+        <field name="arch" type="xml">
+            <list string="Transfers">
+                <field name="name"/>
+                <field name="from_owner_id"/>
+                <field name="to_owner_id"/>
+                <field name="share_class_id"/>
+                <field name="units"/>
+                <field name="transfer_date"/>
+                <field name="state" decoration-muted="state in ('draft', 'rejected')"
+                    decoration-success="state == 'completed'"
+                    decoration-warning="state in ('submitted', 'approved')"
+                    widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_share_transfer_view_form" model="ir.ui.view">
+        <field name="name">rcloud.share.transfer.form</field>
+        <field name="model">rcloud.share.transfer</field>
+        <field name="arch" type="xml">
+            <form string="Share Transfer">
+                <header>
+                    <button name="action_submit" type="object" string="Submit"
+                        invisible="state != 'draft'"/>
+                    <button name="action_approve" type="object" string="Approve"
+                        invisible="state != 'submitted'" class="btn-primary"
+                        groups="rcloud_base.group_hotel_manager"/>
+                    <button name="action_reject" type="object" string="Reject"
+                        invisible="state not in ('submitted', 'approved')"
+                        groups="rcloud_base.group_hotel_manager"/>
+                    <button name="action_complete" type="object" string="Complete"
+                        invisible="state != 'approved'" class="btn-primary"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,submitted,approved,completed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Parties">
+                            <field name="from_owner_id"/>
+                            <field name="to_owner_id"/>
+                            <field name="share_class_id"/>
+                        </group>
+                        <group string="Terms">
+                            <field name="units"/>
+                            <field name="transfer_date"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="rcloud_share_transfer_view_search" model="ir.ui.view">
+        <field name="name">rcloud.share.transfer.search</field>
+        <field name="model">rcloud.share.transfer</field>
+        <field name="arch" type="xml">
+            <search string="Transfers">
+                <field name="name"/>
+                <field name="from_owner_id"/>
+                <field name="to_owner_id"/>
+                <filter name="completed" string="Completed"
+                    domain="[('state', '=', 'completed')]"/>
+                <filter name="pending" string="Pending"
+                    domain="[('state', 'in', ('draft', 'submitted', 'approved'))]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rcloud_share_transfer" model="ir.actions.act_window">
+        <field name="name">Transfers</field>
+        <field name="res_model">rcloud.share.transfer</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ========================================== rcloud.distribution.run -->
+    <record id="rcloud_distribution_line_view_list" model="ir.ui.view">
+        <field name="name">rcloud.distribution.line.list</field>
+        <field name="model">rcloud.distribution.line</field>
+        <field name="arch" type="xml">
+            <list string="Distribution Lines">
+                <field name="run_id"/>
+                <field name="owner_id"/>
+                <field name="share_class_id"/>
+                <field name="units_held"/>
+                <field name="share_pct"/>
+                <field name="gross_allocated" sum="Total"/>
+                <field name="deductions" sum="Total"/>
+                <field name="net_payable" sum="Total"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_distribution_run_view_list" model="ir.ui.view">
+        <field name="name">rcloud.distribution.run.list</field>
+        <field name="model">rcloud.distribution.run</field>
+        <field name="arch" type="xml">
+            <list string="Distribution Runs">
+                <field name="name"/>
+                <field name="property_id"/>
+                <field name="period_start"/>
+                <field name="period_end"/>
+                <field name="total_amount"/>
+                <field name="distributable_amount"/>
+                <field name="state" decoration-muted="state == 'draft'"
+                    decoration-info="state == 'computed'"
+                    decoration-warning="state == 'approved'"
+                    decoration-success="state in ('posted', 'paid')"
+                    widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_distribution_run_view_form" model="ir.ui.view">
+        <field name="name">rcloud.distribution.run.form</field>
+        <field name="model">rcloud.distribution.run</field>
+        <field name="arch" type="xml">
+            <form string="Distribution Run">
+                <header>
+                    <button name="action_calculate" type="object" string="Calculate"
+                        invisible="state not in ('draft', 'computed')"
+                        class="btn-primary"/>
+                    <button name="action_approve" type="object" string="Approve"
+                        invisible="state != 'computed'"
+                        groups="rcloud_base.group_hotel_manager"/>
+                    <button name="action_post" type="object" string="Post Entries"
+                        invisible="state != 'approved'" class="btn-primary"
+                        groups="rcloud_base.group_hotel_manager"/>
+                    <button name="action_mark_paid" type="object" string="Mark Paid"
+                        invisible="state != 'posted'"
+                        groups="rcloud_base.group_hotel_manager"/>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,computed,approved,posted,paid"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Period">
+                            <field name="property_id"/>
+                            <field name="period_start"/>
+                            <field name="period_end"/>
+                            <field name="revenue_basis"/>
+                        </group>
+                        <group string="Amounts">
+                            <field name="basis_amount"/>
+                            <field name="total_amount"/>
+                            <field name="deduction_amount"/>
+                            <field name="distributable_amount"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lines" name="lines">
+                            <field name="line_ids">
+                                <list editable="bottom">
+                                    <field name="owner_id"/>
+                                    <field name="share_class_id"/>
+                                    <field name="units_held"/>
+                                    <field name="share_pct"/>
+                                    <field name="gross_allocated" sum="Total"/>
+                                    <field name="deductions" sum="Total"/>
+                                    <field name="net_payable" sum="Total"/>
+                                    <field name="state"/>
+                                    <field name="move_id"/>
+                                    <field name="payment_id"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="rcloud_distribution_run_view_search" model="ir.ui.view">
+        <field name="name">rcloud.distribution.run.search</field>
+        <field name="model">rcloud.distribution.run</field>
+        <field name="arch" type="xml">
+            <search string="Distribution Runs">
+                <field name="name"/>
+                <field name="property_id"/>
+                <filter name="draft" string="Draft"
+                    domain="[('state', '=', 'draft')]"/>
+                <filter name="computed" string="Computed"
+                    domain="[('state', '=', 'computed')]"/>
+                <filter name="posted" string="Posted"
+                    domain="[('state', 'in', ('posted', 'paid'))]"/>
+                <group>
+                    <separator string="Group By"/>
+                    <filter name="group_property" string="Property"
+                        context="{'group_by': 'property_id'}"/>
+                    <filter name="group_state" string="State"
+                        context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rcloud_distribution_run" model="ir.actions.act_window">
+        <field name="name">Distribution Runs</field>
+        <field name="res_model">rcloud.distribution.run</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="action_rcloud_distribution_line" model="ir.actions.act_window">
+        <field name="name">Distribution Lines</field>
+        <field name="res_model">rcloud.distribution.line</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <!-- ====================================== rcloud.owner.report.template -->
+    <record id="rcloud_owner_report_template_view_list" model="ir.ui.view">
+        <field name="name">rcloud.owner.report.template.list</field>
+        <field name="model">rcloud.owner.report.template</field>
+        <field name="arch" type="xml">
+            <list string="Report Templates">
+                <field name="name"/>
+                <field name="owner_id"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="grouping"/>
+                <field name="metrics"/>
+                <field name="email_monthly"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_owner_report_template_view_form" model="ir.ui.view">
+        <field name="name">rcloud.owner.report.template.form</field>
+        <field name="model">rcloud.owner.report.template</field>
+        <field name="arch" type="xml">
+            <form string="Owner Report Template">
+                <header>
+                    <button name="action_run" type="object" string="Run (PDF)"
+                        class="btn-primary"/>
+                    <button name="action_email" type="object" string="Email PDF"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Template name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Scope">
+                            <field name="owner_id"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="property_ids" widget="many2many_tags"/>
+                        </group>
+                        <group string="Output">
+                            <field name="grouping"/>
+                            <field name="metrics"/>
+                            <field name="email_monthly"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="rcloud_owner_report_template_view_search" model="ir.ui.view">
+        <field name="name">rcloud.owner.report.template.search</field>
+        <field name="model">rcloud.owner.report.template</field>
+        <field name="arch" type="xml">
+            <search string="Report Templates">
+                <field name="name"/>
+                <field name="owner_id"/>
+                <filter name="monthly" string="Emailed Monthly"
+                    domain="[('email_monthly', '=', True)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rcloud_owner_report_template" model="ir.actions.act_window">
+        <field name="name">Owner Reports</field>
+        <field name="res_model">rcloud.owner.report.template</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

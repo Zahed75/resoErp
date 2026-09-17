@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rcloud_plan_system,rcloud.plan.system,model_rcloud_plan,base.group_system,1,1,1,1
+access_rcloud_tenant_system,rcloud.tenant.system,model_rcloud_tenant,base.group_system,1,1,1,1
+access_rcloud_tenant_subscription_system,rcloud.tenant.subscription.system,model_rcloud_tenant_subscription,base.group_system,1,1,1,1
+access_rcloud_provision_job_system,rcloud.provision.job.system,model_rcloud_provision_job,base.group_system,1,1,1,1
+access_rcloud_provision_step_system,rcloud.provision.step.system,model_rcloud_provision_step,base.group_system,1,1,1,1
+access_rcloud_tenant_usage_system,rcloud.tenant.usage.system,model_rcloud_tenant_usage,base.group_system,1,1,1,1
+access_rcloud_impersonation_log_system,rcloud.impersonation.log.system,model_rcloud_impersonation_log,base.group_system,1,1,1,0

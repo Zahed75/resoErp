@@ -46,7 +46,8 @@ class RcloudReservation(models.Model):
     currency_id = fields.Many2one(
         related='property_id.currency_id', store=True)
     amount_total = fields.Monetary(
-        compute='_compute_amount_total', currency_field='currency_id')
+        compute='_compute_amount_total', currency_field='currency_id',
+        store=True)
 
     _reservation_dates = models.Constraint(
         'check(departure > arrival)',

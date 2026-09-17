@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="seq_rcloud_distribution_run" model="ir.sequence">
+        <field name="name">Distribution Run</field>
+        <field name="code">rcloud.distribution.run</field>
+        <field name="prefix">DIST/%(year)s/</field>
+        <field name="padding">4</field>
+    </record>
+    <record id="seq_rcloud_share_transfer" model="ir.sequence">
+        <field name="name">Share Transfer</field>
+        <field name="code">rcloud.share.transfer</field>
+        <field name="prefix">TRF/%(year)s/</field>
+        <field name="padding">4</field>
+    </record>
+    <record id="seq_rcloud_share_certificate" model="ir.sequence">
+        <field name="name">Share Certificate</field>
+        <field name="code">rcloud.share.certificate</field>
+        <field name="prefix">CERT/</field>
+        <field name="padding">6</field>
+    </record>
+
+    <record id="ir_cron_owner_report_email" model="ir.cron">
+        <field name="name">Ownership: email monthly owner reports</field>
+        <field name="model_id" ref="model_rcloud_owner_report_template"/>
+        <field name="state">code</field>
+        <field name="code">model.action_cron_email_monthly()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">months</field>
+        <field name="active" eval="True"/>
+    </record>
+</odoo>
