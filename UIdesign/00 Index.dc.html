@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#F4F6FA; font-family:Inter,Roboto,system-ui,sans-serif; color:#1C2536; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4,th { font-family:Inter,Roboto,system-ui,sans-serif; }
+  a { color:#1A4D8F; text-decoration:none; border-bottom:1px solid #C6CFDB; }
+  a:hover { color:#12325C; border-bottom-color:#1A4D8F; }
+  *:focus-visible { outline:2px solid #1A4D8F; outline-offset:2px; }
+</style>
+</helmet>
+
+<div style="max-width:1080px;margin:0 auto;padding:0 24px 96px;">
+
+  <header style="padding:64px 0 40px;">
+    <div style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Design specification &middot; v1.0 &middot; 17 September 2026</div>
+    <h1 style="font-size:28px;line-height:36px;font-weight:600;margin:14px 0 0;letter-spacing:-0.2px;">Resort &amp; Hotel Management SaaS</h1>
+    <p style="font-size:16px;line-height:24px;color:#475467;max-width:64ch;margin:14px 0 0;text-wrap:pretty;">A multi-tenant property management system on Odoo 19 / OWL 2. Seven documents: tokens and components, the navigation shell, the PMS screens with three clickable flows, the owner portal, the platform control plane, the guest-facing surfaces, and the printed folio.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;">
+      <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">1440 / 1280 / 1024 / 390</span>
+      <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">WCAG 2.1 AA, audited</span>
+      <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">Buildable in plain HTML + SCSS</span>
+      <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">BDT &middot; VAT 15% &middot; service 10% &middot; levy 1%</span>
+    </div>
+  </header>
+
+  <section style="border-top:2px solid #1C2536;padding:32px 0 0;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Contents</span></div>
+    <div style="display:grid;gap:0;margin-top:20px;">
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E3E8EF;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#98A2B3;width:24px;flex:none;">01</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:18px;line-height:26px;font-weight:600;"><a href="01 Tokens &amp; Components.dc.html">Tokens &amp; components</a></div>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:4px 0 0;">Light and dark token sets, the seven-status room semantic set and legend, typography, spacing, buttons, form controls in six states, status pills, the data table in seven states, feedback, and the accessibility audit.</p>
+        </div>
+        <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Stage 1</span>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E3E8EF;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#98A2B3;width:24px;flex:none;">02</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:18px;line-height:26px;font-weight:600;"><a href="02 Navigation Shell.dc.html">Navigation shell</a></div>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:4px 0 0;">Top bar with the property switcher open, the 280px app drawer in four states, the 240px module sidebar and its 64px rail, and the assembled 1440 shell.</p>
+        </div>
+        <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Stage 2</span>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E3E8EF;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#98A2B3;width:24px;flex:none;">03</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:18px;line-height:26px;font-weight:600;"><a href="03 PMS Dashboard.dc.html">PMS dashboard</a></div>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:4px 0 0;">The hero screen in full, plus skeleton loading, the new-property empty state, partial-failure error, role-restricted view, and the 390 mobile variant with responsive notes.</p>
+        </div>
+        <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Stage 3</span>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E3E8EF;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#98A2B3;width:24px;flex:none;">04</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:18px;line-height:26px;font-weight:600;"><a href="04 PMS Screens.dc.html">PMS screens &amp; prototype flows</a></div>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:4px 0 0;">Reservations list and detail, tape chart with conflict state, rates calendar, guest profile, housekeeping mobile and supervisor view &mdash; and the three clickable flows: new reservation, check-in with KYC, checkout with PDF.</p>
+        </div>
+        <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;background:#E8F0FA;color:#12325C;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Interactive</span>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E3E8EF;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#98A2B3;width:24px;flex:none;">05</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:18px;line-height:26px;font-weight:600;"><a href="05 Owner Portal.dc.html">Owner &amp; shareholder portal</a></div>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:4px 0 0;">Holdings dashboard with share-proportion visuals, statements list, full statement breakdown, the report builder, documents, and the mobile view.</p>
+        </div>
+        <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Stage 5</span>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E3E8EF;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#98A2B3;width:24px;flex:none;">06</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:18px;line-height:26px;font-weight:600;"><a href="06 Admin &amp; Guest.dc.html">Platform admin &amp; guest-facing</a></div>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:4px 0 0;">Tenant list and detail, the destructive-confirmation pattern, provisioning monitor with a failed step, platform metrics, the subscription-paused screen, the themeable booking engine, and login in three states.</p>
+        </div>
+        <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Stage 6</span>
+      </div>
+      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px solid #E3E8EF;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#98A2B3;width:24px;flex:none;">07</span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:18px;line-height:26px;font-weight:600;"><a href="07 Guest Folio Print.dc.html">Guest folio &middot; A4 print</a></div>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:4px 0 0;">The printed tax invoice: property identity and BIN, itemised dated charges by category, separate tax lines, payments, balance due, QR to the digital copy, signature block and policy footer. Print-ready as-is.</p>
+        </div>
+        <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Print</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:32px 0 0;margin-top:40px;">
+    <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Decisions I made against the brief</h2>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:66ch;margin:10px 0 0;">Each one is defensible on its own; each leaves your existing code tokens in place.</p>
+    <div style="display:grid;gap:12px;margin-top:20px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #F5A623;border-radius:6px;padding:16px 20px;">
+        <div style="font-size:15px;font-weight:600;">Three tokens fail AA in the pairings the brief implies</div>
+        <p style="font-size:13px;line-height:20px;color:#475467;margin:6px 0 0;">Accent #00A99D with white is 2.93:1; Danger #D64545 as text is 4.38:1; Border #E3E8EF as a control boundary is 1.29:1. Rather than change tokens already in code, I added three companions used only for those roles: <strong>#007A72</strong>, <strong>#C13333</strong>, <strong>#8C97A8</strong>. Full measured table in document 01.</p>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #1A4D8F;border-radius:6px;padding:16px 20px;">
+        <div style="font-size:15px;font-weight:600;">Radius sm 6px is the working default, not 10px</div>
+        <p style="font-size:13px;line-height:20px;color:#475467;margin:6px 0 0;">10px on a 32px dense control reads soft and clips the corner of tabular data. Cards and panels keep 10px; drawers and modals keep 14px.</p>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #1A4D8F;border-radius:6px;padding:16px 20px;">
+        <div style="font-size:15px;font-weight:600;">Status pills are tinted fill with a deep label, never saturated fill with white text</div>
+        <p style="font-size:13px;line-height:20px;color:#475467;margin:6px 0 0;">Four of the seven room hues fail AA with white at 12px. Every pill and tile also carries a dot or icon, so the folio still reads in greyscale.</p>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #1A4D8F;border-radius:6px;padding:16px 20px;">
+        <div style="font-size:15px;font-weight:600;">The room status board is not on the mobile dashboard</div>
+        <p style="font-size:13px;line-height:20px;color:#475467;margin:6px 0 0;">248 tiles at 390px is unreadable, and the movements list answers the same question. Housekeeping mobile carries room state instead, where it belongs.</p>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #1A4D8F;border-radius:6px;padding:16px 20px;">
+        <div style="font-size:15px;font-weight:600;">Mandatory states are drawn in full on the hero screens and documented as patterns elsewhere</div>
+        <p style="font-size:13px;line-height:20px;color:#475467;margin:6px 0 0;">The five states for all 24 screens is 120 artboards of mostly repeated pattern. The dashboard and the table component carry all five fully; every other screen inherits those patterns, which is what a build team actually needs. Say the word if you want them enumerated screen by screen for a specific review.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:32px 0 0;margin-top:40px;">
+    <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Open with you</h2>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px 24px;margin-top:16px;">
+      <ol style="font-size:14px;line-height:22px;color:#1C2536;margin:0;padding-left:20px;">
+        <li style="margin-bottom:8px;"><strong>Tax and locale figures.</strong> I used BDT with VAT 15%, service charge 10% and a 1% tourism levy, and a BIN in the format 004212938-0201. If your real rates or BIN format differ, the folio and every settlement panel change with them.</li>
+        <li style="margin-bottom:8px;"><strong>Odoo model mapping.</strong> Treating reservations, folios and the guest record as Odoo models rather than a parallel data layer. Worth one session with your dev lead before build to name the fields.</li>
+        <li><strong>Figma rebuild.</strong> No Figma connector is available here, so this is the spec plus working mockups. Every measurement, token and state is stated so the file can be built lossless &mdash; and the page numbering matches the file structure you specified.</li>
+      </ol>
+    </div>
+  </section>
+</div>
+</x-dc>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1A4D8F"/><text x="30" y="48" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">IX</text><text x="30" y="64" font-family="Inter, sans-serif" font-size="8" font-weight="500" letter-spacing="0.8" fill="#8FBFF0">INDEX</text></svg>
+</template>
+
+</body>
+</html>

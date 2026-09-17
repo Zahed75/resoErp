@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#F4F6FA; font-family:Inter,Roboto,system-ui,sans-serif; color:#1C2536; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4,th,button,input,select,textarea { font-family:Inter,Roboto,system-ui,sans-serif; }
+  a { color:#1A4D8F; text-decoration:none; border-bottom:1px solid #C6CFDB; }
+  a:hover { color:#12325C; border-bottom-color:#1A4D8F; }
+  *:focus-visible { outline:2px solid #1A4D8F; outline-offset:2px; }
+</style>
+</helmet>
+
+<div style="max-width:1560px;margin:0 auto;padding:0 24px 96px;">
+
+  <header style="padding:48px 0 32px;">
+    <div style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Stage 6 of 6 &middot; Pages 06 &amp; 07</div>
+    <h1 style="font-size:28px;line-height:36px;font-weight:600;margin:12px 0 0;letter-spacing:-0.2px;">Platform admin &amp; guest-facing</h1>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;text-wrap:pretty;">The control plane your staff use to run all tenants, and the two surfaces a customer&rsquo;s own guests see. Same tokens throughout; the guest-facing screens are themeable, so every colour there resolves from a tenant brand variable.</p>
+  </header>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:32px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">01</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Tenant list</h2></div>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:16px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div><h3 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Tenants</h3><div style="font-size:13px;color:#667085;margin-top:2px;font-variant-numeric:tabular-nums;">184 instances &middot; 6 need attention</div></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;"><button style="height:36px;padding:0 14px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Export</button><button style="height:36px;padding:0 14px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Provision tenant</button></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;padding:12px 20px;border-bottom:1px solid #E3E8EF;flex-wrap:wrap;">
+        <span style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:999px;font-size:13px;font-weight:600;">Past due &middot; 4<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></span>
+        <span style="display:inline-flex;align-items:center;height:28px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:999px;font-size:13px;font-weight:500;">Trial ending &lt; 7d</span>
+        <span style="display:inline-flex;align-items:center;height:28px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:999px;font-size:13px;font-weight:500;">Over plan limit</span>
+        <span style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:13px;color:#98A2B3;min-width:180px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>Name or subdomain</span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;min-width:1100px;">
+          <thead><tr style="background:#F4F6FA;">
+            <th style="width:40px;padding:10px 20px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Tenant</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Plan</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">State</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">MRR</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Rooms</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Users</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Last activity</th>
+            <th style="text-align:left;padding:10px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Health</th>
+          </tr></thead>
+          <tbody>
+            <sc-for list="{{ tenants }}" as="t" hint-placeholder-count="6">
+              <tr style="height:44px;">
+                <td style="padding:0 20px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;"><div style="font-size:13px;font-weight:600;">{{ t.name }}</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;">{{ t.sub }}</div></td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">{{ t.plan }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:600;background:{{ t.pillBg }};color:{{ t.pillFg }};"><span style="width:6px;height:6px;border-radius:999px;background:{{ t.dot }};"></span>{{ t.state }}</span></td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;">{{ t.mrr }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">{{ t.rooms }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">{{ t.users }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">{{ t.last }}</td>
+                <td style="padding:0 20px;border-bottom:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:999px;background:{{ t.healthDot }};"></span><span style="font-size:13px;color:{{ t.healthFg }};font-weight:500;">{{ t.health }}</span></span></td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      <div style="padding:12px 20px;border-top:1px solid #E3E8EF;background:#F4F6FA;font-size:12px;color:#667085;">Bulk actions on selection: change plan, extend trial, send notice, suspend. Suspend and terminate always route through the confirmation modal below.</div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">02</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Tenant detail &amp; destructive confirmation</h2></div>
+    <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;margin-top:20px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="padding:16px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+          <div><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h3 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Sea Pearl Resort</h3><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#00A99D;"></span>Active</span></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;margin-top:3px;">seapearl.pms.app &middot; Enterprise &middot; since Mar 2024</div></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Impersonate</button>
+            <button style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Backup now</button>
+            <button style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Change plan</button>
+            <button style="height:32px;padding:0 12px;background:#FFFFFF;color:#A32828;border:1px solid #D64545;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Suspend</button>
+          </div>
+        </div>
+        <div style="padding:20px;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Usage vs plan limits</div>
+          <div style="display:grid;gap:16px;margin-top:14px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;"><span>Rooms</span><span style="color:#667085;font-variant-numeric:tabular-nums;">248 of 300</span></div>
+              <div style="height:8px;border-radius:999px;background:#E3E8EF;margin-top:6px;overflow:hidden;"><span style="display:block;width:83%;height:8px;background:#1A4D8F;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;"><span>Users</span><span style="color:#667085;font-variant-numeric:tabular-nums;">42 of 50</span></div>
+              <div style="height:8px;border-radius:999px;background:#E3E8EF;margin-top:6px;overflow:hidden;"><span style="display:block;width:84%;height:8px;background:#1A4D8F;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;"><span>Storage</span><span style="color:#8A5A0B;font-weight:600;font-variant-numeric:tabular-nums;">94 GB of 100 GB</span></div>
+              <div style="height:8px;border-radius:999px;background:#E3E8EF;margin-top:6px;overflow:hidden;"><span style="display:block;width:94%;height:8px;background:#F5A623;"></span></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-size:13px;"><span>API calls, 30 days</span><span style="color:#667085;font-variant-numeric:tabular-nums;">1.8M of 5M</span></div>
+              <div style="height:8px;border-radius:999px;background:#E3E8EF;margin-top:6px;overflow:hidden;"><span style="display:block;width:36%;height:8px;background:#1A4D8F;"></span></div>
+            </div>
+          </div>
+          <div style="border-top:1px solid #E3E8EF;margin-top:20px;padding-top:16px;">
+            <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Billing history</div>
+            <div style="display:grid;gap:0;margin-top:10px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #E3E8EF;font-size:13px;"><span style="font-variant-numeric:tabular-nums;">01 Sep 2026</span><span style="color:#667085;">Enterprise &middot; monthly</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 48,000</span><span style="display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:11px;font-weight:600;">Paid</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #E3E8EF;font-size:13px;"><span style="font-variant-numeric:tabular-nums;">01 Aug 2026</span><span style="color:#667085;">Enterprise &middot; monthly</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 48,000</span><span style="display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:11px;font-weight:600;">Paid</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;font-size:13px;"><span style="font-variant-numeric:tabular-nums;">01 Jul 2026</span><span style="color:#667085;">Enterprise &middot; monthly</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 48,000</span><span style="display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:11px;font-weight:600;">Paid</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:rgba(16,24,40,.40);border-radius:10px;padding:24px;display:flex;align-items:flex-start;justify-content:center;">
+        <div style="background:#FFFFFF;border-radius:14px;box-shadow:0 12px 24px rgba(16,24,40,.10);width:100%;max-width:400px;overflow:hidden;">
+          <div style="padding:20px 24px 0;display:flex;gap:14px;align-items:flex-start;">
+            <span style="width:40px;height:40px;border-radius:999px;background:#FBE9E9;display:inline-flex;align-items:center;justify-content:center;flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg></span>
+            <div><div style="font-size:18px;line-height:26px;font-weight:600;">Suspend Sea Pearl Resort?</div><div style="font-size:14px;line-height:22px;color:#667085;margin-top:6px;">All 42 users lose access immediately and the booking engine stops accepting reservations. Data is retained for 90 days.</div></div>
+          </div>
+          <div style="margin:18px 24px 0;padding:12px 14px;background:#F4F6FA;border:1px solid #E3E8EF;border-radius:6px;">
+            <div style="font-size:13px;line-height:20px;color:#1C2536;">In-house guests: <strong>214 rooms occupied.</strong> Suspension will interrupt an operating hotel.</div>
+          </div>
+          <div style="margin:12px 24px 0;">
+            <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Type the subdomain to confirm</label>
+            <input type="text" placeholder="seapearl" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px 'JetBrains Mono',ui-monospace,monospace;">
+          </div>
+          <div style="display:flex;justify-content:flex-end;gap:8px;padding:20px 24px 24px;">
+            <button style="height:36px;padding:0 16px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Cancel</button>
+            <button style="height:36px;padding:0 16px;background:#E3E8EF;color:#98A2B3;border:none;border-radius:6px;font:600 14px Inter,sans-serif;">Suspend tenant</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">03</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Provisioning monitor &amp; platform metrics</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:20px;margin-top:20px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="padding:16px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+          <div><h3 style="font-size:18px;line-height:26px;font-weight:600;margin:0;">Provisioning &middot; Hotel Sarina</h3><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:2px;">job 4c81f0 &middot; started 14:28:04</div></div>
+          <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg>Failed at step 4</span>
+        </div>
+        <div style="padding:6px 0;">
+          <sc-for list="{{ provSteps }}" as="p" hint-placeholder-count="6">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 20px;border-bottom:1px solid #E3E8EF;">
+              <span style="width:24px;height:24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;flex:none;background:{{ p.bg }};">{{ p.glyph }}</span>
+              <div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:{{ p.weight }};color:{{ p.fg }};">{{ p.name }}</div><div style="font-size:12px;color:#667085;font-family:'JetBrains Mono',ui-monospace,monospace;">{{ p.detail }}</div></div>
+              <span style="font-size:12px;color:#667085;font-variant-numeric:tabular-nums;flex:none;">{{ p.dur }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="padding:14px 20px;background:#1C2536;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;line-height:18px;color:#C6CFDB;">
+          <div>14:28:04 validate: subdomain sarina available</div>
+          <div>14:28:09 template: copied db pms_template_19 (4.2 GB)</div>
+          <div>14:29:41 filestore: 18,402 files copied</div>
+          <div style="color:#E8645F;">14:30:12 seed: ERROR chart_of_accounts.bd_hotel missing for country BD</div>
+          <div style="color:#E8645F;">14:30:12 job halted, rollback not required</div>
+        </div>
+        <div style="padding:14px 20px;border-top:1px solid #E3E8EF;background:#F4F6FA;display:flex;gap:8px;flex-wrap:wrap;">
+          <button style="height:36px;padding:0 14px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Retry step 4</button>
+          <button style="height:36px;padding:0 14px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Download log</button>
+          <button style="height:36px;padding:0 14px;background:#FFFFFF;color:#A32828;border:1px solid #D64545;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Abandon job</button>
+        </div>
+      </div>
+
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="padding:16px 20px;border-bottom:1px solid #E3E8EF;"><h3 style="font-size:18px;line-height:26px;font-weight:600;margin:0;">Platform metrics</h3><div style="font-size:13px;color:#667085;margin-top:2px;">September 2026</div></div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#E3E8EF;">
+          <div style="background:#FFFFFF;padding:16px 20px;"><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">MRR</div><div style="font-size:32px;line-height:38px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.5px;margin-top:6px;">৳ 5.42M</div><div style="display:flex;align-items:center;gap:6px;margin-top:4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#007A72" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path></svg><span style="font-size:13px;font-weight:600;color:#007A72;font-variant-numeric:tabular-nums;">6.4%</span></div></div>
+          <div style="background:#FFFFFF;padding:16px 20px;"><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Tenants</div><div style="font-size:32px;line-height:38px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.5px;margin-top:6px;">184</div><div style="font-size:13px;color:#667085;margin-top:4px;">+9 this month</div></div>
+          <div style="background:#FFFFFF;padding:16px 20px;"><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Net revenue churn</div><div style="font-size:32px;line-height:38px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.5px;margin-top:6px;">1.8%</div><div style="display:flex;align-items:center;gap:6px;margin-top:4px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#007A72" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg><span style="font-size:13px;font-weight:600;color:#007A72;font-variant-numeric:tabular-nums;">0.6 pts</span></div></div>
+          <div style="background:#FFFFFF;padding:16px 20px;"><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Trials open</div><div style="font-size:32px;line-height:38px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.5px;margin-top:6px;">23</div><div style="font-size:13px;color:#8A5A0B;font-weight:500;margin-top:4px;">6 end within 7 days</div></div>
+        </div>
+        <div style="padding:16px 20px;border-top:1px solid #E3E8EF;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">MRR, 12 months</div>
+          <svg viewBox="0 0 520 120" style="width:100%;height:auto;margin-top:10px;display:block;" aria-hidden="true">
+            <line x1="10" y1="100" x2="510" y2="100" stroke="#E3E8EF"></line>
+            <polyline points="20,88 60,84 100,80 140,74 180,70 220,64 260,58 300,52 340,46 380,38 420,32 460,24 500,18" fill="none" stroke="#1A4D8F" stroke-width="2.5"></polyline>
+          </svg>
+        </div>
+        <div style="padding:16px 20px;border-top:1px solid #E3E8EF;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Approaching plan limits</div>
+          <div style="display:grid;gap:0;margin-top:10px;">
+            <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #E3E8EF;"><span style="width:8px;height:8px;border-radius:999px;background:#F5A623;flex:none;"></span><span style="font-size:13px;font-weight:500;flex:1;">Sea Pearl Resort</span><span style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">Storage 94%</span><span style="font-size:13px;font-weight:600;color:#1A4D8F;">Upsell</span></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #E3E8EF;"><span style="width:8px;height:8px;border-radius:999px;background:#F5A623;flex:none;"></span><span style="font-size:13px;font-weight:500;flex:1;">Cox Bay Grand</span><span style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">Rooms 97%</span><span style="font-size:13px;font-weight:600;color:#1A4D8F;">Upsell</span></div>
+            <div style="display:flex;align-items:center;gap:12px;padding:10px 0;"><span style="width:8px;height:8px;border-radius:999px;background:#D64545;flex:none;"></span><span style="font-size:13px;font-weight:500;flex:1;">Sylhet Tea Lodge</span><span style="font-size:13px;color:#C13333;font-weight:600;font-variant-numeric:tabular-nums;">Users 100%</span><span style="font-size:13px;font-weight:600;color:#1A4D8F;">Contact</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">04</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Subscription paused &middot; tenant-facing</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">A paying customer having a bad day. No red, no lock icon, no &ldquo;access denied&rdquo;. It states the situation, names a person, and gives two ways out &mdash; and it explicitly protects their data so the first fear is answered before they ask.</p>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="background:#F4F6FA;padding:48px 24px;display:flex;justify-content:center;">
+        <div style="width:100%;max-width:560px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;padding:32px;">
+          <div style="width:44px;height:44px;border-radius:6px;background:#1A4D8F;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">SP</div>
+          <h3 style="font-size:22px;line-height:30px;font-weight:600;margin:20px 0 0;">Your subscription is on hold</h3>
+          <p style="font-size:15px;line-height:24px;color:#475467;margin:10px 0 0;">The September invoice has been outstanding since 14 September, so access is paused while it is settled. <strong>Nothing has been deleted.</strong> Your reservations, folios and guest records are exactly as you left them and come back the moment payment clears.</p>
+          <div style="background:#F4F6FA;border:1px solid #E3E8EF;border-radius:10px;padding:16px;margin-top:20px;">
+            <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="color:#667085;">Invoice</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">INV-2026-09-0184</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:14px;margin-top:8px;"><span style="color:#667085;">Amount due</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 48,000.00</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:14px;margin-top:8px;"><span style="color:#667085;">Due date</span><span style="font-variant-numeric:tabular-nums;">14 Sep 2026</span></div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;">
+            <button style="height:44px;padding:0 20px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;">Pay now and restore access</button>
+            <button style="height:44px;padding:0 16px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 15px Inter,sans-serif;cursor:pointer;">Download invoice</button>
+          </div>
+          <div style="border-top:1px solid #E3E8EF;margin-top:24px;padding-top:20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+            <span style="width:44px;height:44px;border-radius:999px;background:#E8F0FA;color:#12325C;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;flex:none;">SR</span>
+            <div style="flex:1;min-width:180px;"><div style="font-size:15px;font-weight:600;">Sadia Rahman</div><div style="font-size:14px;color:#667085;">Your account manager &middot; +880 1755 400 118</div></div>
+            <button style="height:40px;padding:0 16px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Talk to Sadia</button>
+          </div>
+          <p style="font-size:13px;line-height:20px;color:#667085;margin:20px 0 0;">Need more time? Sadia can arrange a short extension. If the invoice is wrong, say so and we will hold the account while we check.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">05</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Booking engine &middot; mobile first, themeable</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">Every tenant rebrands this, so it is built on three brand variables &mdash; brand colour, brand ink, logo &mdash; and nothing else changes. Shown here in the platform default; the third frame shows a tenant theme to prove the layout survives it.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:20px;align-items:flex-start;">
+      <div style="width:390px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="height:56px;background:#FFFFFF;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;gap:10px;padding:0 16px;"><span style="width:28px;height:28px;border-radius:4px;background:#1A4D8F;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;">SP</span><span style="font-size:15px;font-weight:700;">Sea Pearl Resort</span></div>
+        <div style="padding:16px;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Search</div>
+          <div style="display:grid;gap:10px;margin-top:10px;">
+            <div style="display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:15px;font-variant-numeric:tabular-nums;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" style="flex:none;" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M8 2v4M16 2v4M3 10h18"></path></svg>24 &ndash; 27 Sep &middot; 3 nights</div>
+            <div style="display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:15px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" style="flex:none;" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg>2 adults, 1 child</div>
+            <button style="height:48px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 16px Inter,sans-serif;cursor:pointer;">Search rooms</button>
+          </div>
+        </div>
+        <div style="padding:0 16px 16px;">
+          <div style="border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+            <div style="height:132px;background:#E3E8EF;display:flex;align-items:center;justify-content:center;color:#98A2B3;font-size:12px;">Room photograph</div>
+            <div style="padding:14px;">
+              <div style="font-size:17px;font-weight:600;">Deluxe King</div>
+              <div style="font-size:14px;color:#667085;margin-top:2px;">Sea view &middot; 32 m&sup2; &middot; sleeps 3</div>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;"><span style="height:24px;padding:0 8px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;display:inline-flex;align-items:center;">Breakfast</span><span style="height:24px;padding:0 8px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;display:inline-flex;align-items:center;">Free cancellation</span><span style="height:24px;padding:0 8px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;display:inline-flex;align-items:center;">Wi-Fi</span></div>
+              <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:14px;">
+                <div><div style="font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 9,800</div><div style="font-size:12px;color:#667085;">per night, incl. taxes</div></div>
+                <button style="height:44px;padding:0 18px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;">Select</button>
+              </div>
+            </div>
+          </div>
+          <div style="border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;margin-top:12px;">
+            <div style="height:100px;background:#E3E8EF;display:flex;align-items:center;justify-content:center;color:#98A2B3;font-size:12px;">Room photograph</div>
+            <div style="padding:14px;">
+              <div style="font-size:17px;font-weight:600;">Twin Standard</div>
+              <div style="font-size:14px;color:#667085;margin-top:2px;">Garden view &middot; 26 m&sup2; &middot; sleeps 2</div>
+              <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:14px;">
+                <div><div style="font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 6,400</div><div style="font-size:12px;color:#667085;">per night, incl. taxes</div></div>
+                <button style="height:44px;padding:0 18px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="width:390px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="height:56px;background:#FFFFFF;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;gap:10px;padding:0 16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C2536" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg><span style="font-size:15px;font-weight:700;">Guest details</span></div>
+        <div style="padding:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#F4F6FA;border-radius:6px;">
+            <div><div style="font-size:14px;font-weight:600;">Deluxe King &middot; 3 nights</div><div style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">24 &ndash; 27 Sep &middot; 2 adults, 1 child</div></div>
+            <div style="font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 29,400</div>
+          </div>
+          <div style="display:grid;gap:12px;margin-top:16px;">
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Full name</label><input type="text" value="Kamrul Hossain" style="width:100%;box-sizing:border-box;height:48px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 15px Inter,sans-serif;"></div>
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Mobile</label><input type="text" value="+880 1711 204 118" style="width:100%;box-sizing:border-box;height:48px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 15px Inter,sans-serif;font-variant-numeric:tabular-nums;"></div>
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Email</label><input type="text" value="kamrul@example.com" style="width:100%;box-sizing:border-box;height:48px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 15px Inter,sans-serif;"></div>
+          </div>
+          <div style="border-top:1px solid #E3E8EF;margin-top:16px;padding-top:14px;">
+            <div style="display:flex;justify-content:space-between;font-size:14px;"><span style="color:#667085;">Room total</span><span style="font-variant-numeric:tabular-nums;">৳ 29,400.00</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:14px;margin-top:6px;"><span style="color:#667085;">VAT 15% &middot; service 10%</span><span style="font-variant-numeric:tabular-nums;">৳ 7,350.00</span></div>
+            <div style="display:flex;justify-content:space-between;font-size:16px;font-weight:600;margin-top:10px;padding-top:10px;border-top:1px solid #E3E8EF;"><span>Total</span><span style="font-variant-numeric:tabular-nums;">৳ 36,750.00</span></div>
+            <div style="font-size:13px;color:#667085;margin-top:6px;">Pay ৳ 18,375.00 now, balance at the hotel.</div>
+          </div>
+          <button style="width:100%;height:52px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 16px Inter,sans-serif;margin-top:16px;cursor:pointer;">Pay and confirm</button>
+          <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;font-size:12px;color:#667085;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Secure payment &middot; bKash, card, Nagad</div>
+        </div>
+      </div>
+
+      <div style="width:390px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="padding:10px 16px;background:#F4F6FA;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Same layout, tenant theme</div>
+        <div style="height:56px;background:#123B2E;display:flex;align-items:center;gap:10px;padding:0 16px;"><span style="width:28px;height:28px;border-radius:999px;background:#C8A24A;color:#123B2E;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;">GH</span><span style="font-size:15px;font-weight:700;color:#FFFFFF;">Green Hill Retreat</span></div>
+        <div style="padding:16px;">
+          <div style="display:grid;gap:10px;">
+            <div style="display:flex;align-items:center;gap:8px;height:48px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:15px;font-variant-numeric:tabular-nums;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" style="flex:none;" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M8 2v4M16 2v4M3 10h18"></path></svg>02 &ndash; 05 Oct &middot; 3 nights</div>
+            <button style="height:48px;background:#123B2E;color:#FFFFFF;border:none;border-radius:6px;font:600 16px Inter,sans-serif;cursor:pointer;">Search rooms</button>
+          </div>
+          <div style="border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;margin-top:16px;">
+            <div style="height:120px;background:#E3E8EF;display:flex;align-items:center;justify-content:center;color:#98A2B3;font-size:12px;">Room photograph</div>
+            <div style="padding:14px;">
+              <div style="font-size:17px;font-weight:600;">Garden Villa</div>
+              <div style="font-size:14px;color:#667085;margin-top:2px;">Tea garden view &middot; 48 m&sup2;</div>
+              <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:14px;">
+                <div><div style="font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 14,200</div><div style="font-size:12px;color:#667085;">per night, incl. taxes</div></div>
+                <button style="height:44px;padding:0 18px;background:#123B2E;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;">Select</button>
+              </div>
+            </div>
+          </div>
+          <div style="font-size:12px;line-height:18px;color:#667085;margin-top:14px;">Only brand colour, brand ink and logo change. Status colours, form geometry and the tax breakdown stay platform-owned so they cannot be themed into illegibility.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">06</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Login &middot; three states</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-top:20px;">
+      <div style="background:#F4F6FA;border:1px solid #E3E8EF;border-radius:10px;padding:24px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Sign in</div>
+        <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;padding:28px;margin-top:12px;">
+          <div style="width:44px;height:44px;border-radius:6px;background:#1A4D8F;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">SP</div>
+          <h3 style="font-size:22px;line-height:30px;font-weight:600;margin:18px 0 0;">Sea Pearl Resort</h3>
+          <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;margin-top:2px;">seapearl.pms.app</div>
+          <div style="display:grid;gap:12px;margin-top:20px;">
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Email</label><input type="text" value="fkarim@seapearl.com" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;"></div>
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Password</label><input type="password" value="············" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;"></div>
+            <button style="height:44px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;">Sign in</button>
+            <div style="text-align:center;font-size:13px;color:#1A4D8F;font-weight:600;">Forgot password</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:#F4F6FA;border:1px solid #E3E8EF;border-radius:10px;padding:24px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Two-factor</div>
+        <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;padding:28px;margin-top:12px;">
+          <div style="width:44px;height:44px;border-radius:6px;background:#1A4D8F;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">SP</div>
+          <h3 style="font-size:22px;line-height:30px;font-weight:600;margin:18px 0 0;">Enter your code</h3>
+          <p style="font-size:14px;line-height:22px;color:#667085;margin:8px 0 0;">Six digits from your authenticator app, or the SMS sent to &middot;&middot;&middot;&middot; 4210.</p>
+          <div style="display:flex;gap:8px;margin-top:20px;">
+            <span style="flex:1;height:52px;border:1px solid #8C97A8;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;">4</span>
+            <span style="flex:1;height:52px;border:1px solid #8C97A8;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;">1</span>
+            <span style="flex:1;height:52px;border:1px solid #8C97A8;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;">8</span>
+            <span style="flex:1;height:52px;border:1px solid #1A4D8F;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;outline:2px solid #1A4D8F;outline-offset:2px;"></span>
+            <span style="flex:1;height:52px;border:1px solid #8C97A8;border-radius:6px;"></span>
+            <span style="flex:1;height:52px;border:1px solid #8C97A8;border-radius:6px;"></span>
+          </div>
+          <button style="width:100%;height:44px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;margin-top:20px;cursor:pointer;">Verify</button>
+          <div style="text-align:center;font-size:13px;color:#667085;margin-top:12px;">Resend code in <span style="font-variant-numeric:tabular-nums;">0:24</span></div>
+        </div>
+      </div>
+      <div style="background:#F4F6FA;border:1px solid #E3E8EF;border-radius:10px;padding:24px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#C13333;">Error &middot; wrong credentials</div>
+        <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;padding:28px;margin-top:12px;">
+          <div style="width:44px;height:44px;border-radius:6px;background:#1A4D8F;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">SP</div>
+          <h3 style="font-size:22px;line-height:30px;font-weight:600;margin:18px 0 0;">Sea Pearl Resort</h3>
+          <div style="display:flex;gap:10px;align-items:flex-start;margin-top:16px;padding:12px 14px;background:#FBE9E9;border-radius:6px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2.5" stroke-linecap="round" style="flex:none;margin-top:1px;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg><div style="font-size:13px;line-height:20px;color:#1C2536;">Email or password is incorrect. Two attempts remain before a 15-minute lock.</div></div>
+          <div style="display:grid;gap:12px;margin-top:16px;">
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Email</label><input type="text" value="fkarim@seapearl.com" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;"></div>
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Password</label><input type="password" value="······" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #D64545;border-radius:6px;font:400 14px Inter,sans-serif;box-shadow:0 0 0 3px rgba(214,69,69,.12);"></div>
+            <button style="height:44px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;">Sign in</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:32px 0 0;margin-top:40px;">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;">
+      <div style="max-width:60ch;"><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Last piece</div><h3 style="font-size:18px;line-height:26px;font-weight:600;margin:8px 0 0;">Page 07 &mdash; the printed folio</h3><p style="font-size:14px;line-height:22px;color:#667085;margin:8px 0 0;">A4 portrait, print-ready, handed to the guest at the desk.</p></div>
+      <div style="font-size:13px;line-height:20px;color:#667085;"><div><a href="04 PMS Screens.dc.html">04 &middot; PMS screens</a></div><div><a href="05 Owner Portal.dc.html">05 &middot; Owner portal</a></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#1C2536;">06 &middot; Admin &amp; guest</div><div><a href="07 Guest Folio Print.dc.html">07 &middot; Print documents</a></div></div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1A4D8F"/><text x="30" y="48" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">06</text><text x="30" y="64" font-family="Inter, sans-serif" font-size="8" font-weight="500" letter-spacing="0.8" fill="#8FBFF0">ADMIN</text></svg>
+</template>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const tenants = [
+      { name: 'Sea Pearl Resort', sub: 'seapearl', plan: 'Enterprise', state: 'Active', pillBg: '#E0F5F3', pillFg: '#00635C', dot: '#00A99D', mrr: '\u09f3 48,000', rooms: 248, users: 42, last: '2 min ago', health: 'Storage 94%', healthDot: '#F5A623', healthFg: '#8A5A0B' },
+      { name: 'Dhaka Regency Suites', sub: 'dhakaregency', plan: 'Growth', state: 'Active', pillBg: '#E0F5F3', pillFg: '#00635C', dot: '#00A99D', mrr: '\u09f3 26,000', rooms: 132, users: 24, last: '14 min ago', health: 'Healthy', healthDot: '#00A99D', healthFg: '#1C2536' },
+      { name: 'Hotel Sarina', sub: 'sarina', plan: 'Growth', state: 'Provisioning', pillBg: '#E5EFFE', pillFg: '#1D5DC0', dot: '#3B82F6', mrr: '\u2014', rooms: 0, users: 1, last: '4 min ago', health: 'Job failed', healthDot: '#D64545', healthFg: '#C13333' },
+      { name: 'Sylhet Tea Lodge', sub: 'tealodge', plan: 'Starter', state: 'Past Due', pillBg: '#FBE9E9', pillFg: '#A32828', dot: '#D64545', mrr: '\u09f3 9,000', rooms: 38, users: 10, last: '3 days ago', health: 'Users 100%', healthDot: '#D64545', healthFg: '#C13333' },
+      { name: 'Cox Bay Grand', sub: 'coxbaygrand', plan: 'Growth', state: 'Trial \u00b7 6d left', pillBg: '#FEF4E5', pillFg: '#8A5A0B', dot: '#F5A623', mrr: '\u2014', rooms: 88, users: 8, last: '1 hour ago', health: 'Rooms 97%', healthDot: '#F5A623', healthFg: '#8A5A0B' },
+      { name: 'Kuakata Bay Hotel', sub: 'kuakatabay', plan: 'Starter', state: 'Suspended', pillBg: '#F1F3F7', pillFg: '#475467', dot: '#667085', mrr: '\u09f3 0', rooms: 42, users: 0, last: '22 days ago', health: 'Dormant', healthDot: '#C6CFDB', healthFg: '#667085' }
+    ];
+
+    const mk = (name, detail, dur, status) => {
+      const done = status === 'done', fail = status === 'fail';
+      return {
+        name, detail, dur,
+        glyph: done ? '\u2713' : fail ? '!' : '',
+        bg: done ? '#00A99D' : fail ? '#D64545' : '#E3E8EF',
+        fg: fail ? '#C13333' : '#1C2536',
+        weight: fail ? '600' : '500'
+      };
+    };
+
+    return {
+      tenants,
+      provSteps: [
+        mk('Validate', 'subdomain, plan, country', '5s', 'done'),
+        mk('Copy template database', 'pms_template_19 \u00b7 4.2 GB', '1m 32s', 'done'),
+        mk('Copy filestore', '18,402 files', '31s', 'done'),
+        mk('Seed data', 'chart_of_accounts.bd_hotel missing', 'failed', 'fail'),
+        mk('Verify', 'waiting', '\u2014', 'pending'),
+        mk('Notify customer', 'waiting', '\u2014', 'pending')
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

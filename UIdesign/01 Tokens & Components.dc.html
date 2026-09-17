@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#F4F6FA; font-family:Inter,Roboto,system-ui,sans-serif; color:#1C2536; -webkit-font-smoothing:antialiased; }
+  h1, h2, h3, h4, th, button, input, select, textarea { font-family:Inter,Roboto,system-ui,sans-serif; }
+  a { color:#1A4D8F; text-decoration:none; border-bottom:1px solid #C6CFDB; }
+  a:hover { color:#12325C; border-bottom-color:#1A4D8F; }
+  *:focus-visible { outline:2px solid #1A4D8F; outline-offset:2px; }
+  .num { font-variant-numeric:tabular-nums; }
+</style>
+</helmet>
+
+<div style="max-width:1440px;margin:0 auto;padding:0 24px 96px;">
+
+  <header style="padding:48px 0 32px;">
+    <div style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Stage 1 of 6 &middot; Foundation</div>
+    <h1 style="font-size:28px;line-height:36px;font-weight:600;margin:12px 0 0;letter-spacing:-0.2px;">Design tokens &amp; component library</h1>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;text-wrap:pretty;">Resort &amp; Hotel Management SaaS &middot; Odoo 19 / OWL 2 &middot; every component below is plain HTML + SCSS with no framework-specific internals. Light and dark token sets, core, data, feedback and domain components, plus the accessibility audit.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;">
+      <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">1440 / 1280 / 1024 / 390</span>
+      <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">WCAG 2.1 AA</span>
+      <span style="display:inline-flex;align-items:center;height:24px;padding:0 10px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">Inter &middot; JetBrains Mono</span>
+    </div>
+  </header>
+
+  <sc-if value="{{ showAnnotations }}" hint-placeholder-val="{{ true }}">
+    <div style="border-left:3px solid #1A4D8F;background:#E8F0FA;padding:16px 20px;margin-bottom:8px;">
+      <div style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#12325C;">Reasoning &middot; where I differ from the brief</div>
+      <ul style="font-size:13px;line-height:20px;color:#1C2536;margin:10px 0 0;padding-left:18px;">
+        <li style="margin-bottom:6px;">Three of your tokens fail AA in the pairings the brief implies: <strong>Accent #00A99D</strong> (2.93:1, cannot carry white text), <strong>Danger #D64545</strong> (4.38:1 on white, just short), and <strong>Border #E3E8EF</strong> (1.29:1, fails the 3:1 boundary rule for inputs). I kept your tokens and added three derived companions rather than changing what is already in code. Full audit at the bottom.</li>
+        <li style="margin-bottom:6px;">Radius: I use <strong>sm 6px</strong> as the working default for controls and tiles, and reserve 10px for cards. Your default of 10px on a 32px-tall dense control reads soft and eats the corner of tabular data.</li>
+        <li>Status is never color alone anywhere in this library: every status pill and room tile carries an icon <em>and</em> a label, so the colorblind and the poor-lighting cases are the same case.</li>
+      </ul>
+    </div>
+  </sc-if>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">01</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Color &mdash; light</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-top:24px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#1A4D8F;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Primary</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#1A4D8F</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Primary actions, active nav</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#12325C;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Primary Dark</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#12325C</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Hover / pressed</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#E8F0FA;border-bottom:1px solid #E3E8EF;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Primary Light</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#E8F0FA</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Selected row, subtle fill</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#00A99D;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Accent</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#00A99D</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Fills &amp; charts only &mdash; not text</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#007A72;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Accent Text <span style="font-size:11px;font-weight:500;color:#1A4D8F;">&nbsp;added</span></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#007A72</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Positive figures, 5.2:1</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#F5A623;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Warning</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#F5A623</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Pending, vacant dirty &mdash; dark text on it</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#D64545;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Danger</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#D64545</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Fills, borders, icons</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#C13333;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Danger Text <span style="font-size:11px;font-weight:500;color:#1A4D8F;">&nbsp;added</span></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#C13333</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Overdue amounts, 5.5:1</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#3B82F6;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Info</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#3B82F6</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Informational, arrival due</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#FFFFFF;border-bottom:1px solid #E3E8EF;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Surface</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#FFFFFF</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Cards, panels</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#F4F6FA;border-bottom:1px solid #E3E8EF;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Background</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#F4F6FA</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">App canvas</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#E3E8EF;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Border</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#E3E8EF</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Dividers only &mdash; not input borders</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#8C97A8;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Border Strong <span style="font-size:11px;font-weight:500;color:#1A4D8F;">&nbsp;added</span></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#8C97A8</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Input borders, 3:1 boundary</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#1C2536;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Text</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#1C2536</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Primary text, 15.3:1</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#667085;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Text Muted</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#667085</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Labels, 4.96:1</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;">
+        <div style="height:72px;background:#98A2B3;"></div>
+        <div style="padding:12px 14px 14px;"><div style="font-size:13px;line-height:20px;font-weight:600;">Text Disabled</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">#98A2B3</div><div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:6px;">Disabled only, exempt</div></div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showDarkTokens }}" hint-placeholder-val="{{ true }}">
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">02</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Color &mdash; dark</h2>
+    </div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;">Derived for night audit and housekeeping in low light. Surfaces lift rather than darken, and every hue is lightened to hold contrast on a dark ground &mdash; the light-mode primary at #1A4D8F is unreadable there.</p>
+    <div style="background:#0F1420;border-radius:10px;padding:24px;margin-top:24px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;">
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#0F1420;border-bottom:1px solid #2A3346;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Background</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#0F1420</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#171D2B;border-bottom:1px solid #2A3346;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Surface</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#171D2B</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#1F2637;border-bottom:1px solid #2A3346;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Surface Raised</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#1F2637</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#2A3346;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Border</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#2A3346</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#4D8FD6;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Primary</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#4D8FD6</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#1B2B45;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Primary Light</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#1B2B45</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#2BC4B8;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Accent</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#2BC4B8</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#F7B955;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Warning</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#F7B955</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#E8645F;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Danger</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#E8645F</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#60A5FA;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Info</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#60A5FA</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#E6EAF2;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Text</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#E6EAF2</div></div>
+        </div>
+        <div style="background:#171D2B;border:1px solid #2A3346;border-radius:10px;overflow:hidden;">
+          <div style="height:64px;background:#94A0B8;"></div>
+          <div style="padding:12px 14px;"><div style="font-size:13px;font-weight:600;color:#E6EAF2;">Text Muted</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#94A0B8;">#94A0B8</div></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid #2A3346;">
+        <div style="display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 16px;background:#4D8FD6;color:#0F1420;border-radius:6px;font-size:14px;font-weight:600;">New Reservation</div>
+        <div style="display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 16px;background:#1F2637;color:#E6EAF2;border:1px solid #2A3346;border-radius:6px;font-size:14px;font-weight:500;">Check In</div>
+        <div style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#1B2B45;color:#8FBFF0;border-radius:999px;font-size:12px;font-weight:600;">Occupied &middot; 214</div>
+        <div style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#3A2A18;color:#F7B955;border-radius:999px;font-size:12px;font-weight:600;">Vacant Dirty &middot; 38</div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">03</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Room status &mdash; semantic set &amp; legend</h2>
+    </div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;">A fixed set of seven. Color is the fast channel, the icon is the redundant channel, the label is the authoritative one. The legend component ships on every screen that shows tiles.</p>
+
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;margin-top:24px;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Status legend &middot; component</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:4px;background:#00A99D;display:inline-block;"></span><span style="font-size:13px;line-height:20px;">Vacant Clean</span><span style="font-size:13px;line-height:20px;color:#667085;font-variant-numeric:tabular-nums;">82</span></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:4px;background:#F5A623;display:inline-block;"></span><span style="font-size:13px;line-height:20px;">Vacant Dirty</span><span style="font-size:13px;line-height:20px;color:#667085;font-variant-numeric:tabular-nums;">38</span></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:4px;background:#1A4D8F;display:inline-block;"></span><span style="font-size:13px;line-height:20px;">Occupied</span><span style="font-size:13px;line-height:20px;color:#667085;font-variant-numeric:tabular-nums;">214</span></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:4px;background:#3B82F6;display:inline-block;"></span><span style="font-size:13px;line-height:20px;">Arrival Due</span><span style="font-size:13px;line-height:20px;color:#667085;font-variant-numeric:tabular-nums;">26</span></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:4px;background:#8B5CF6;display:inline-block;"></span><span style="font-size:13px;line-height:20px;">Departure Due</span><span style="font-size:13px;line-height:20px;color:#667085;font-variant-numeric:tabular-nums;">19</span></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:4px;background:#D64545;display:inline-block;"></span><span style="font-size:13px;line-height:20px;">Out of Order</span><span style="font-size:13px;line-height:20px;color:#667085;font-variant-numeric:tabular-nums;">4</span></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:4px;background:#667085;display:inline-block;"></span><span style="font-size:13px;line-height:20px;">Blocked</span><span style="font-size:13px;line-height:20px;color:#667085;font-variant-numeric:tabular-nums;">7</span></div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:20px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-top:3px solid #00A99D;border-radius:6px;padding:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;">201</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#007A72" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#007A72;margin-top:6px;">Vacant Clean</div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;">Deluxe King</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-top:3px solid #F5A623;border-radius:6px;padding:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;">202</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A5A0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02Z"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#8A5A0B;margin-top:6px;">Vacant Dirty</div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;">Deluxe King</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-top:3px solid #1A4D8F;border-radius:6px;padding:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;">203</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A4D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#1A4D8F;margin-top:6px;">Occupied</div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;">R. Chowdhury</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-top:3px solid #3B82F6;border-radius:6px;padding:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;">204</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1D5DC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v14"></path><path d="m6 11 6 6 6-6"></path><path d="M19 21H5"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#1D5DC0;margin-top:6px;">Arrival Due</div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;">14:00 &middot; A. Rahman</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-top:3px solid #8B5CF6;border-radius:6px;padding:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;">205</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6D31DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V7"></path><path d="m6 13 6-6 6 6"></path><path d="M19 3H5"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#6D31DB;margin-top:6px;">Departure Due</div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;">12:00 &middot; ৳ 4,250</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-top:3px solid #D64545;border-radius:6px;padding:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;">206</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#C13333;margin-top:6px;">Out of Order</div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;">AC unit &middot; 3 days</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-top:3px solid #667085;border-radius:6px;padding:12px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;color:#667085;">207</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.9 4.9 14.2 14.2"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#667085;margin-top:6px;">Blocked</div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;">Owner use</div>
+      </div>
+      <div style="background:#E8F0FA;border:1px solid #1A4D8F;border-top:3px solid #1A4D8F;border-radius:6px;padding:12px;box-shadow:0 4px 8px rgba(16,24,40,.06),0 2px 4px rgba(16,24,40,.08);">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <span style="font-size:15px;line-height:22px;font-weight:600;font-variant-numeric:tabular-nums;">208</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A4D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg>
+        </div>
+        <div style="font-size:12px;line-height:16px;font-weight:500;color:#12325C;margin-top:6px;">Selected / hover</div>
+        <div style="font-size:12px;line-height:16px;color:#667085;">S. Islam &middot; ৳ 12,800</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;max-width:320px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;box-shadow:0 12px 24px rgba(16,24,40,.10);overflow:hidden;">
+      <div style="padding:14px 16px;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;justify-content:space-between;">
+        <div><div style="font-size:15px;line-height:22px;font-weight:600;">Room 203</div><div style="font-size:12px;line-height:16px;color:#667085;">Deluxe King &middot; Floor 2</div></div>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E8F0FA;color:#12325C;border-radius:999px;font-size:12px;font-weight:600;">Occupied</span>
+      </div>
+      <div style="padding:14px 16px;display:grid;gap:10px;">
+        <div style="display:flex;justify-content:space-between;font-size:13px;line-height:20px;"><span style="color:#667085;">Guest</span><span style="font-weight:500;">Rashida Chowdhury</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;line-height:20px;"><span style="color:#667085;">Stay</span><span style="font-variant-numeric:tabular-nums;">14 Sep &ndash; 19 Sep &middot; 5N</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;line-height:20px;"><span style="color:#667085;">Folio balance</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 42,750.00</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;line-height:20px;"><span style="color:#667085;">Housekeeping</span><span style="color:#8A5A0B;font-weight:500;">Due &middot; assigned to Mitu</span></div>
+      </div>
+      <div style="padding:12px 16px;border-top:1px solid #E3E8EF;display:flex;gap:8px;background:#F4F6FA;">
+        <button style="height:32px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Open folio</button>
+        <button style="height:32px;padding:0 12px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Move room</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">04</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Typography</h2>
+    </div>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:24px;">
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:14px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;"><span>Token</span><span>Specimen</span><span>Spec</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">Display</span><span style="font-size:28px;line-height:36px;font-weight:600;letter-spacing:-0.2px;">Front Desk</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">28/36/600</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">H1</span><span style="font-size:22px;line-height:30px;font-weight:600;">Today&rsquo;s movements</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">22/30/600</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">H2</span><span style="font-size:18px;line-height:26px;font-weight:600;">Room status board</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">18/26/600</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">H3</span><span style="font-size:15px;line-height:22px;font-weight:600;">Tax breakdown</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">15/22/600</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">Body</span><span style="font-size:14px;line-height:22px;">Room 203 is due for departure at 12:00. The folio carries an unsettled balance.</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">14/22/400</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">Body Small</span><span style="font-size:13px;line-height:20px;">Deluxe King &middot; 2 adults &middot; breakfast included</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">13/20/400</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">Caption</span><span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Arrival &middot; Departure &middot; Nights</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">12/16/500 &middot; 0.4px</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;border-bottom:1px solid #E3E8EF;align-items:center;"><span style="font-size:13px;font-weight:600;">Metric</span><span style="font-size:32px;line-height:38px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-0.5px;">78.4%</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">32/38/600 tabular</span></div>
+      <div style="display:grid;grid-template-columns:120px 1fr 160px;gap:24px;padding:16px 20px;align-items:center;"><span style="font-size:13px;font-weight:600;">Mono</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;">RSV-2026-0918-0447 &middot; BIN 004212938-0201</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;color:#667085;">13px JetBrains</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px 20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Tabular numerals &mdash; on</div>
+        <div style="font-variant-numeric:tabular-nums;text-align:right;font-size:14px;line-height:24px;margin-top:8px;"><div>৳ 1,250.00</div><div>৳ 18,900.00</div><div>৳ 111,475.50</div></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px 20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#C13333;">Proportional &mdash; never for figures</div>
+        <div style="text-align:right;font-size:14px;line-height:24px;margin-top:8px;"><div>৳ 1,250.00</div><div>৳ 18,900.00</div><div>৳ 111,475.50</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">05</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Spacing, radius, elevation, motion</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:24px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Spacing &middot; 4px base</div>
+        <div style="display:grid;gap:8px;margin-top:14px;">
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">4</span><span style="height:12px;width:4px;background:#1A4D8F;"></span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">8</span><span style="height:12px;width:8px;background:#1A4D8F;"></span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">12</span><span style="height:12px;width:12px;background:#1A4D8F;"></span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">16</span><span style="height:12px;width:16px;background:#1A4D8F;"></span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">24</span><span style="height:12px;width:24px;background:#1A4D8F;"></span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">32</span><span style="height:12px;width:32px;background:#1A4D8F;"></span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">48</span><span style="height:12px;width:48px;background:#1A4D8F;"></span></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;width:28px;">64</span><span style="height:12px;width:64px;background:#1A4D8F;"></span></div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Radius</div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;">
+          <div><div style="width:64px;height:48px;background:#E8F0FA;border:1px solid #1A4D8F;border-radius:6px;"></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:6px;">sm 6</div></div>
+          <div><div style="width:64px;height:48px;background:#E8F0FA;border:1px solid #1A4D8F;border-radius:10px;"></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:6px;">md 10</div></div>
+          <div><div style="width:64px;height:48px;background:#E8F0FA;border:1px solid #1A4D8F;border-radius:14px;"></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:6px;">lg 14</div></div>
+          <div><div style="width:64px;height:48px;background:#E8F0FA;border:1px solid #1A4D8F;border-radius:999px;"></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:6px;">pill</div></div>
+        </div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:14px;">Controls and room tiles use sm. Cards and panels use md. lg for drawers and the modal. Pill for status only.</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Elevation</div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:18px;">
+          <div><div style="width:78px;height:56px;background:#FFFFFF;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);"></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:8px;">1 &middot; cards</div></div>
+          <div><div style="width:78px;height:56px;background:#FFFFFF;border-radius:10px;box-shadow:0 4px 8px rgba(16,24,40,.06),0 2px 4px rgba(16,24,40,.08);"></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:8px;">2 &middot; dropdown</div></div>
+          <div><div style="width:78px;height:56px;background:#FFFFFF;border-radius:10px;box-shadow:0 12px 24px rgba(16,24,40,.10);"></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;margin-top:8px;">3 &middot; modal</div></div>
+        </div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:14px;">Scrim behind level 3: rgba(16,24,40,.40)</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Motion</div>
+        <div style="display:grid;gap:10px;margin-top:14px;font-size:13px;line-height:20px;">
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="color:#667085;">Micro &mdash; hover, pill, checkbox</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">150ms ease-out</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="color:#667085;">Drawer, sidebar collapse</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">200ms ease-out</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Modal</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">250ms ease-out</span></div>
+        </div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:14px;">No entrance animation on data. Tables, tiles and KPI values appear instantly &mdash; a front desk agent should never wait on a transition.</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Grid &amp; breakpoints</div>
+        <div style="display:grid;gap:10px;margin-top:14px;font-size:13px;line-height:20px;">
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="color:#667085;">Desktop reference</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">1440 &middot; 12col &middot; 24 gutter</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="color:#667085;">Back office</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">1280 &middot; 12col &middot; 20 gutter</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="color:#667085;">Tablet</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">1024 &middot; 8col &middot; sidebar rail</span></div>
+          <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Mobile</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">390 &middot; 1col &middot; 16 padding</span></div>
+        </div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:14px;">At 1024 the module sidebar auto-collapses to the 64px rail; the app drawer goes full-width below 768.</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">06</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Buttons</h2>
+    </div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;">Five variants &times; five states &times; three sizes. Heights 28 / 36 / 44. The 44px large size is the front desk default because it is also the minimum touch target &mdash; the same button serves the desktop and the tablet at the counter.</p>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:24px;overflow-x:auto;">
+      <div style="display:grid;grid-template-columns:110px repeat(5,minmax(132px,1fr));gap:16px;padding:14px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;min-width:840px;"><span></span><span>Default</span><span>Hover</span><span>Pressed</span><span>Disabled</span><span>Loading</span></div>
+
+      <div style="display:grid;grid-template-columns:110px repeat(5,minmax(132px,1fr));gap:16px;padding:18px 20px;border-bottom:1px solid #E3E8EF;align-items:center;min-width:840px;">
+        <span style="font-size:13px;font-weight:600;">Primary</span>
+        <button style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Check In</button>
+        <button style="height:36px;padding:0 16px;background:#12325C;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Check In</button>
+        <button style="height:36px;padding:0 16px;background:#0D2545;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;box-shadow:inset 0 2px 4px rgba(0,0,0,.2);">Check In</button>
+        <button disabled="disabled" style="height:36px;padding:0 16px;background:#E3E8EF;color:#98A2B3;border:none;border-radius:6px;font:600 14px Inter,sans-serif;">Check In</button>
+        <button style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#FFFFFF;border-radius:999px;display:inline-block;"></span>Checking in</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:110px repeat(5,minmax(132px,1fr));gap:16px;padding:18px 20px;border-bottom:1px solid #E3E8EF;align-items:center;min-width:840px;">
+        <span style="font-size:13px;font-weight:600;">Secondary</span>
+        <button style="height:36px;padding:0 16px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Assign Room</button>
+        <button style="height:36px;padding:0 16px;background:#F4F6FA;color:#12325C;border:1px solid #1A4D8F;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Assign Room</button>
+        <button style="height:36px;padding:0 16px;background:#E8F0FA;color:#12325C;border:1px solid #12325C;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Assign Room</button>
+        <button disabled="disabled" style="height:36px;padding:0 16px;background:#FFFFFF;color:#98A2B3;border:1px solid #E3E8EF;border-radius:6px;font:500 14px Inter,sans-serif;">Assign Room</button>
+        <button style="height:36px;padding:0 16px;background:#FFFFFF;color:#667085;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border:2px solid #E3E8EF;border-top-color:#667085;border-radius:999px;display:inline-block;"></span>Assigning</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:110px repeat(5,minmax(132px,1fr));gap:16px;padding:18px 20px;border-bottom:1px solid #E3E8EF;align-items:center;min-width:840px;">
+        <span style="font-size:13px;font-weight:600;">Tertiary</span>
+        <button style="height:36px;padding:0 12px;background:transparent;color:#1A4D8F;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Add charge</button>
+        <button style="height:36px;padding:0 12px;background:#E8F0FA;color:#12325C;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Add charge</button>
+        <button style="height:36px;padding:0 12px;background:#D6E3F5;color:#12325C;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Add charge</button>
+        <button disabled="disabled" style="height:36px;padding:0 12px;background:transparent;color:#98A2B3;border:none;border-radius:6px;font:600 14px Inter,sans-serif;">Add charge</button>
+        <button style="height:36px;padding:0 12px;background:transparent;color:#667085;border:none;border-radius:6px;font:600 14px Inter,sans-serif;display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border:2px solid #E3E8EF;border-top-color:#667085;border-radius:999px;display:inline-block;"></span>Adding</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:110px repeat(5,minmax(132px,1fr));gap:16px;padding:18px 20px;border-bottom:1px solid #E3E8EF;align-items:center;min-width:840px;">
+        <span style="font-size:13px;font-weight:600;">Danger</span>
+        <button style="height:36px;padding:0 16px;background:#D64545;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Cancel booking</button>
+        <button style="height:36px;padding:0 16px;background:#C13333;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Cancel booking</button>
+        <button style="height:36px;padding:0 16px;background:#A32828;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;box-shadow:inset 0 2px 4px rgba(0,0,0,.2);">Cancel booking</button>
+        <button disabled="disabled" style="height:36px;padding:0 16px;background:#E3E8EF;color:#98A2B3;border:none;border-radius:6px;font:600 14px Inter,sans-serif;">Cancel booking</button>
+        <button style="height:36px;padding:0 16px;background:#D64545;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;display:inline-flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border:2px solid rgba(255,255,255,.4);border-top-color:#FFFFFF;border-radius:999px;display:inline-block;"></span>Cancelling</button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:110px repeat(5,minmax(132px,1fr));gap:16px;padding:18px 20px;align-items:center;min-width:840px;">
+        <span style="font-size:13px;font-weight:600;">Ghost / icon</span>
+        <button style="width:36px;height:36px;background:transparent;color:#667085;border:1px solid transparent;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+        <button style="width:36px;height:36px;background:#F4F6FA;color:#1C2536;border:1px solid #E3E8EF;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+        <button style="width:36px;height:36px;background:#E8F0FA;color:#12325C;border:1px solid #1A4D8F;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+        <button disabled="disabled" style="width:36px;height:36px;background:transparent;color:#98A2B3;border:1px solid transparent;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></button>
+        <button style="height:36px;padding:0 12px;background:transparent;color:#1A4D8F;border:none;border-radius:6px;font:600 14px Inter,sans-serif;outline:2px solid #1A4D8F;outline-offset:2px;">Focus ring</button>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px;margin-top:16px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+      <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:8px;">sm 28</div><button style="height:28px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Post</button></div>
+      <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:8px;">md 36</div><button style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">New Reservation</button></div>
+      <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:8px;">lg 44 &middot; front desk</div><button style="height:44px;padding:0 20px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><path d="m10 17 5-5-5-5"></path><path d="M15 12H3"></path></svg>Check In</button></div>
+      <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:8px;">block &middot; mobile</div><button style="height:48px;width:220px;padding:0 20px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 15px Inter,sans-serif;cursor:pointer;">Mark Clean</button></div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">07</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Form controls &amp; the six form states</h2>
+    </div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;">Inputs are 36px in dense contexts and 44px in the reservation wizard and check-in. Borders use the added <strong>Border Strong #8C97A8</strong> so the field boundary clears 3:1 &mdash; #E3E8EF at 1.29:1 would fail as a control boundary.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Pristine</div>
+        <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Guest name</label>
+        <input type="text" placeholder="Family name, given name" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;color:#1C2536;background:#FFFFFF;">
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Focused</div>
+        <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Guest name</label>
+        <input type="text" placeholder="Family name, given name" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #1A4D8F;border-radius:6px;font:400 14px Inter,sans-serif;color:#1C2536;background:#FFFFFF;outline:2px solid #1A4D8F;outline-offset:2px;">
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Filled</div>
+        <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Guest name</label>
+        <input type="text" value="Chowdhury, Rashida" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;color:#1C2536;background:#FFFFFF;">
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#C13333;">Validation error</div>
+        <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Passport number</label>
+        <input type="text" value="BX-11" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #D64545;border-radius:6px;font:400 14px Inter,sans-serif;color:#1C2536;background:#FFFFFF;box-shadow:0 0 0 3px rgba(214,69,69,.12);">
+        <div style="display:flex;gap:6px;align-items:flex-start;margin-top:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2" stroke-linecap="round" style="flex:none;margin-top:2px;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg>
+          <span style="font-size:13px;line-height:20px;color:#C13333;">Must be 9 characters. Check the document.</span>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Submitting</div>
+        <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Guest name</label>
+        <div style="display:flex;align-items:center;gap:10px;height:44px;padding:0 12px;border:1px solid #E3E8EF;border-radius:6px;background:#F4F6FA;color:#667085;font-size:14px;"><span style="width:14px;height:14px;border:2px solid #E3E8EF;border-top-color:#667085;border-radius:999px;display:inline-block;"></span>Saving&hellip;</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#007A72;">Success</div>
+        <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Guest name</label>
+        <div style="display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 12px;border:1px solid #00A99D;border-radius:6px;background:#FFFFFF;font-size:14px;">Chowdhury, Rashida<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#007A72" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div>
+        <div style="font-size:13px;line-height:20px;color:#007A72;margin-top:8px;">Saved to guest profile G-00418.</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:14px;">Select &middot; search &middot; date range</div>
+        <div style="display:grid;gap:12px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;height:36px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:14px;">Deluxe King<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div>
+          <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:14px;color:#98A2B3;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>Search guest, reference, room&hellip;<span style="margin-left:auto;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;border:1px solid #E3E8EF;border-radius:4px;padding:1px 5px;">/</span></div>
+          <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:14px;font-variant-numeric:tabular-nums;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M8 2v4M16 2v4M3 10h18"></path></svg>14 Sep 2026 &ndash; 19 Sep 2026</div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:14px;">Choices</div>
+        <div style="display:grid;gap:14px;">
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer;"><span style="width:18px;height:18px;border-radius:4px;background:#1A4D8F;display:inline-flex;align-items:center;justify-content:center;flex:none;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>Breakfast included</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;flex:none;"></span>Airport pickup</label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:14px;cursor:pointer;"><span style="width:18px;height:18px;border-radius:999px;border:5px solid #1A4D8F;display:inline-block;flex:none;box-sizing:border-box;"></span>Corporate rate</label>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;"><span style="width:38px;height:22px;border-radius:999px;background:#1A4D8F;position:relative;display:inline-block;flex:none;"><span style="position:absolute;top:3px;left:19px;width:16px;height:16px;border-radius:999px;background:#FFFFFF;"></span></span>Auto-post room charge at night audit</div>
+          <div style="display:inline-flex;border:1px solid #8C97A8;border-radius:6px;overflow:hidden;width:fit-content;">
+            <span style="padding:7px 14px;font-size:13px;font-weight:600;background:#1A4D8F;color:#FFFFFF;">Day</span>
+            <span style="padding:7px 14px;font-size:13px;font-weight:500;border-left:1px solid #8C97A8;">Week</span>
+            <span style="padding:7px 14px;font-size:13px;font-weight:500;border-left:1px solid #8C97A8;">Month</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:14px;">Dropzone &middot; KYC upload</div>
+        <div style="border:1px dashed #8C97A8;border-radius:6px;padding:20px;text-align:center;background:#F4F6FA;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M17 8l-5-5-5 5"></path><path d="M12 3v12"></path></svg>
+          <div style="font-size:14px;font-weight:500;margin-top:8px;">Drop passport or NID scan</div>
+          <div style="font-size:12px;line-height:16px;color:#667085;margin-top:4px;">JPG, PNG or PDF &middot; up to 10 MB &middot; or use camera</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:12px;padding:10px 12px;border:1px solid #E3E8EF;border-radius:6px;">
+          <span style="width:36px;height:44px;background:#E8F0FA;border-radius:4px;flex:none;"></span>
+          <div style="min-width:0;"><div style="font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">passport-BX1148832.jpg</div><div style="font-size:12px;color:#667085;">1.4 MB</div></div>
+          <span style="margin-left:auto;display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:600;flex:none;">Pending review</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">08</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Status pills</h2>
+    </div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;">Tinted fill with a deep-ramp label, never a saturated fill with white text &mdash; at 12px that would fail AA for four of the seven hues. Every pill carries a dot or icon so the state survives a greyscale print of the folio.</p>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;margin-top:24px;">
+      <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Reservation states</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#667085;"></span>Enquiry</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#F5A623;"></span>Tentative</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E8F0FA;color:#12325C;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#1A4D8F;"></span>Confirmed</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E5EFFE;color:#1D5DC0;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#3B82F6;"></span>Arrival Due</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#00A99D;"></span>In House</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#F0E9FE;color:#5B27C0;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#8B5CF6;"></span>Departure Due</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#98A2B3;"></span>Checked Out</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#D64545;"></span>No Show</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#D64545;"></span>Cancelled</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg>Overdue &middot; ৳ 8,400</span>
+      </div>
+      <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-top:24px;">Tenant states &middot; platform admin</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E5EFFE;color:#1D5DC0;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#3B82F6;"></span>Provisioning</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#F5A623;"></span>Trial &middot; 6d left</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#00A99D;"></span>Active</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#D64545;"></span>Past Due</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#667085;"></span>Suspended</span>
+      </div>
+      <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-top:24px;">Counts, money &amp; guest tags</div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:14px;">
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 6px;background:#D64545;color:#FFFFFF;border-radius:999px;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;">12</span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 6px;background:#E3E8EF;color:#1C2536;border-radius:999px;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;">248</span>
+        <span style="font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;color:#007A72;">+ ৳ 18,400.00</span>
+        <span style="font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;color:#C13333;">&minus; ৳ 4,250.00</span>
+        <span style="font-size:14px;font-weight:600;font-variant-numeric:tabular-nums;color:#98A2B3;">৳ 0.00</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;">
+          <span style="width:28px;height:28px;border-radius:999px;background:#E8F0FA;color:#12325C;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;">RC</span>
+          <span style="font-size:14px;font-weight:500;">Rashida Chowdhury</span>
+          <span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;background:#1A4D8F;color:#FFFFFF;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.4px;">VIP</span>
+          <span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.4px;">GOLD</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">09</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Data table &mdash; all seven states</h2>
+    </div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;">44px rows. Money right-aligned and tabular; references in mono. Row actions are always visible, never hover-revealed &mdash; a hidden action is a lost second at the counter. Hover tints the row, selection fills it Primary Light and shows a 3px left bar.</p>
+
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:24px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid #E3E8EF;">
+        <span style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:999px;font-size:13px;font-weight:600;">Arrivals today<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></span>
+        <span style="display:inline-flex;align-items:center;height:28px;padding:0 12px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:999px;font-size:13px;font-weight:500;">Unassigned</span>
+        <span style="display:inline-flex;align-items:center;height:28px;padding:0 12px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:999px;font-size:13px;font-weight:500;">Balance &gt; 0</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#FFFFFF;color:#1A4D8F;border:1px dashed #8C97A8;border-radius:999px;font-size:13px;font-weight:600;">+ Filter</span>
+        <span style="margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#F4F6FA;border:1px solid #E3E8EF;border-radius:6px;font-size:13px;font-weight:500;">Saved view: Front desk &middot; AM<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 16px;background:#E8F0FA;border-bottom:1px solid #E3E8EF;">
+        <span style="font-size:13px;font-weight:600;color:#12325C;font-variant-numeric:tabular-nums;">3 selected</span>
+        <button style="height:28px;padding:0 12px;background:#FFFFFF;color:#12325C;border:1px solid #1A4D8F;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Assign rooms</button>
+        <button style="height:28px;padding:0 12px;background:#FFFFFF;color:#12325C;border:1px solid #1A4D8F;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Send pre-arrival SMS</button>
+        <button style="height:28px;padding:0 12px;background:#FFFFFF;color:#A32828;border:1px solid #D64545;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Mark no-show</button>
+      </div>
+      <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;min-width:960px;">
+        <thead>
+          <tr style="background:#F4F6FA;">
+            <th style="width:40px;padding:10px 16px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Reference</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Guest</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Room type</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#1C2536;"><span style="display:inline-flex;align-items:center;gap:4px;">Arrival<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="m18 15-6-6-6 6"></path></svg></span></th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Nights</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Source</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Status</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Balance</th>
+            <th style="text-align:right;padding:10px 16px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="height:44px;">
+            <td style="padding:0 16px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;">RSV-260917-0412</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-weight:500;">Aminul Rahman</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Deluxe King</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;">17 Sep &middot; 14:00</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">3</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Direct</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E5EFFE;color:#1D5DC0;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#3B82F6;"></span>Arrival Due</span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;">৳ 18,900.00</td>
+            <td style="padding:0 16px;border-bottom:1px solid #E3E8EF;text-align:right;"><button style="height:28px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Check In</button></td>
+          </tr>
+          <tr style="height:44px;background:#F7F9FC;">
+            <td style="padding:0 16px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;">RSV-260917-0413</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-weight:500;">Nusrat Jahan <span style="display:inline-flex;align-items:center;height:18px;padding:0 6px;background:#1A4D8F;color:#FFFFFF;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:0.4px;vertical-align:middle;">VIP</span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Executive Suite</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;">17 Sep &middot; 15:30</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">5</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Corporate</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E8F0FA;color:#12325C;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#1A4D8F;"></span>Confirmed</span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;">৳ 0.00</td>
+            <td style="padding:0 16px;border-bottom:1px solid #E3E8EF;text-align:right;"><button style="height:28px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Check In</button></td>
+          </tr>
+          <tr style="height:44px;background:#E8F0FA;box-shadow:inset 3px 0 0 #1A4D8F;">
+            <td style="padding:0 16px;border-bottom:1px solid #D6E3F5;"><span style="width:18px;height:18px;border-radius:4px;background:#1A4D8F;display:inline-flex;align-items:center;justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;">RSV-260917-0418</td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;font-size:13px;font-weight:600;">Rashida Chowdhury</td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;font-size:13px;color:#475467;">Deluxe King</td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;font-size:13px;font-variant-numeric:tabular-nums;">17 Sep &middot; 16:00</td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">2</td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;font-size:13px;color:#475467;">Booking.com</td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FFFFFF;color:#1D5DC0;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#3B82F6;"></span>Arrival Due</span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #D6E3F5;font-size:13px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;color:#C13333;">৳ 12,400.00</td>
+            <td style="padding:0 16px;border-bottom:1px solid #D6E3F5;text-align:right;"><button style="height:28px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Check In</button></td>
+          </tr>
+          <tr style="height:44px;">
+            <td style="padding:0 16px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;">RSV-260916-0388</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-weight:500;">Tanvir Hasan</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Twin Standard</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;">16 Sep &middot; 13:00</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">1</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Walk-in</td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg>No Show</span></td>
+            <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;color:#C13333;">৳ 6,200.00</td>
+            <td style="padding:0 16px;border-bottom:1px solid #E3E8EF;text-align:right;"><button style="height:28px;padding:0 12px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Charge</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:12px 16px;border-top:1px solid #E3E8EF;background:#F4F6FA;">
+        <span style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">1&ndash;4 of 248</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;margin-left:auto;">
+          <span style="width:28px;height:28px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;color:#98A2B3;">&lsaquo;</span>
+          <span style="width:28px;height:28px;background:#1A4D8F;color:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;">1</span>
+          <span style="width:28px;height:28px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">2</span>
+          <span style="width:28px;height:28px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">3</span>
+          <span style="width:28px;height:28px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">&rsaquo;</span>
+        </span>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px 20px 20px;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Loading &mdash; skeleton</div>
+        <div style="display:grid;gap:14px;margin-top:16px;">
+          <div style="display:flex;gap:12px;align-items:center;"><span style="height:12px;width:96px;background:#E3E8EF;border-radius:4px;"></span><span style="height:12px;width:120px;background:#E3E8EF;border-radius:4px;"></span><span style="height:12px;flex:1;background:#EDF0F5;border-radius:4px;"></span></div>
+          <div style="display:flex;gap:12px;align-items:center;"><span style="height:12px;width:80px;background:#EDF0F5;border-radius:4px;"></span><span style="height:12px;width:140px;background:#EDF0F5;border-radius:4px;"></span><span style="height:12px;flex:1;background:#F1F3F7;border-radius:4px;"></span></div>
+          <div style="display:flex;gap:12px;align-items:center;"><span style="height:12px;width:104px;background:#EDF0F5;border-radius:4px;"></span><span style="height:12px;width:100px;background:#F1F3F7;border-radius:4px;"></span><span style="height:12px;flex:1;background:#F1F3F7;border-radius:4px;"></span></div>
+        </div>
+        <div style="font-size:12px;line-height:16px;color:#98A2B3;margin-top:16px;">Skeleton keeps the row rhythm so the layout does not jump when data lands. Never a spinner over a table.</div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px 20px 24px;text-align:center;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;text-align:left;">Empty</div>
+        <div style="width:48px;height:48px;border-radius:999px;background:#F4F6FA;display:inline-flex;align-items:center;justify-content:center;margin:20px 0 12px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M8 2v4M16 2v4M3 10h18"></path></svg></div>
+        <div style="font-size:15px;font-weight:600;">No arrivals for 17 September</div>
+        <div style="font-size:13px;line-height:20px;color:#667085;margin:6px auto 14px;max-width:34ch;">Nothing is due in today. Widen the date range or take a walk-in.</div>
+        <button style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">New walk-in reservation</button>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px 20px 24px;text-align:center;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;text-align:left;">Error</div>
+        <div style="width:48px;height:48px;border-radius:999px;background:#FBE9E9;display:inline-flex;align-items:center;justify-content:center;margin:20px 0 12px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg></div>
+        <div style="font-size:15px;font-weight:600;">Could not load reservations</div>
+        <div style="font-size:13px;line-height:20px;color:#667085;margin:6px auto 14px;max-width:34ch;">The property server did not respond. Your unsaved work is kept.</div>
+        <div style="display:flex;gap:8px;justify-content:center;"><button style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Retry</button><button style="height:36px;padding:0 16px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Copy error ref</button></div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px 20px 24px;text-align:center;">
+        <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;text-align:left;">No permission</div>
+        <div style="width:48px;height:48px;border-radius:999px;background:#F4F6FA;display:inline-flex;align-items:center;justify-content:center;margin:20px 0 12px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+        <div style="font-size:15px;font-weight:600;">Not available on your role</div>
+        <div style="font-size:13px;line-height:20px;color:#667085;margin:6px auto 14px;max-width:34ch;">Reservations are restricted to Front Desk and Manager. Ask your property admin for access.</div>
+        <button style="height:36px;padding:0 16px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Request access</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">10</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Feedback &mdash; toast, inline alert, modal, progress</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:24px;">
+      <div style="display:grid;gap:12px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #00A99D;border-radius:6px;padding:12px 14px;box-shadow:0 4px 8px rgba(16,24,40,.06),0 2px 4px rgba(16,24,40,.08);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#007A72" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <div><div style="font-size:14px;font-weight:600;">Checked in &mdash; Room 203</div><div style="font-size:13px;line-height:20px;color:#667085;">Key encoded. Folio opened.</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #D64545;border-radius:6px;padding:12px 14px;box-shadow:0 4px 8px rgba(16,24,40,.06),0 2px 4px rgba(16,24,40,.08);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2.5" stroke-linecap="round" style="flex:none;margin-top:1px;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg>
+          <div><div style="font-size:14px;font-weight:600;">Payment declined</div><div style="font-size:13px;line-height:20px;color:#667085;">Gateway ref 8842-C. Try another method.</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;background:#FFFFFF;border:1px solid #E3E8EF;border-left:3px solid #F5A623;border-radius:6px;padding:12px 14px;box-shadow:0 4px 8px rgba(16,24,40,.06),0 2px 4px rgba(16,24,40,.08);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A0B" stroke-width="2.5" stroke-linecap="round" style="flex:none;margin-top:1px;" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg>
+          <div><div style="font-size:14px;font-weight:600;">Rate plan expires in 3 days</div><div style="font-size:13px;line-height:20px;color:#667085;">Corporate &mdash; BRAC Bank. Extend or archive.</div></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;background:#E8F0FA;border-left:3px solid #1A4D8F;border-radius:6px;padding:12px 14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12325C" stroke-width="2.5" stroke-linecap="round" style="flex:none;margin-top:1px;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg>
+          <div><div style="font-size:14px;font-weight:600;color:#12325C;">Night audit runs at 03:00</div><div style="font-size:13px;line-height:20px;color:#12325C;">Post all pending charges before then.</div></div>
+        </div>
+        <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px 20px;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;line-height:20px;"><span style="font-weight:500;">Housekeeping progress</span><span style="color:#667085;font-variant-numeric:tabular-nums;">186 / 248 rooms</span></div>
+          <div style="height:8px;border-radius:999px;background:#E3E8EF;margin-top:10px;overflow:hidden;display:flex;">
+            <span style="width:56%;background:#00A99D;"></span><span style="width:19%;background:#F5A623;"></span>
+          </div>
+          <div style="display:flex;gap:16px;margin-top:10px;font-size:12px;color:#667085;"><span>Inspected 56%</span><span>Cleaned 19%</span><span>Pending 25%</span></div>
+        </div>
+      </div>
+
+      <div style="background:rgba(16,24,40,.40);border-radius:10px;padding:32px 24px;display:flex;align-items:center;justify-content:center;">
+        <div style="background:#FFFFFF;border-radius:14px;box-shadow:0 12px 24px rgba(16,24,40,.10);max-width:420px;width:100%;overflow:hidden;">
+          <div style="padding:20px 24px 0;display:flex;gap:14px;align-items:flex-start;">
+            <span style="width:40px;height:40px;border-radius:999px;background:#FBE9E9;display:inline-flex;align-items:center;justify-content:center;flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg></span>
+            <div><div style="font-size:18px;line-height:26px;font-weight:600;">Suspend Sea Pearl Resort?</div><div style="font-size:14px;line-height:22px;color:#667085;margin-top:6px;">All 42 users lose access immediately and the booking engine stops taking reservations. Existing data is retained.</div></div>
+          </div>
+          <div style="margin:20px 24px 0;padding:12px 14px;background:#F4F6FA;border:1px solid #E3E8EF;border-radius:6px;">
+            <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Type the subdomain to confirm</label>
+            <input type="text" placeholder="seapearl" style="width:100%;box-sizing:border-box;height:36px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;">
+          </div>
+          <div style="display:flex;justify-content:flex-end;gap:8px;padding:20px 24px 24px;">
+            <button style="height:36px;padding:0 16px;background:#FFFFFF;color:#1C2536;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Cancel</button>
+            <button style="height:36px;padding:0 16px;background:#E3E8EF;color:#98A2B3;border:none;border-radius:6px;font:600 14px Inter,sans-serif;">Suspend tenant</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 8px;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;">
+      <span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">11</span>
+      <h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Accessibility audit</h2>
+    </div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:68ch;margin:12px 0 0;">Every token pairing the system actually uses, measured. Three fail; all three have a fix that leaves your existing tokens in place.</p>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:24px;overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;min-width:760px;">
+        <thead><tr style="background:#F4F6FA;">
+          <th style="text-align:left;padding:10px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Pairing</th>
+          <th style="text-align:right;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Ratio</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Verdict</th>
+          <th style="text-align:left;padding:10px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Action</th>
+        </tr></thead>
+        <tbody>
+          <tr><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;">Text #1C2536 on Surface</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">15.3 : 1</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#007A72;font-weight:600;">Pass AAA</td><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">&mdash;</td></tr>
+          <tr><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;">Text Muted #667085 on Surface</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">4.96 : 1</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#007A72;font-weight:600;">Pass AA</td><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Drops to 4.75:1 on Background &mdash; still passes</td></tr>
+          <tr><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;">White on Primary #1A4D8F</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">7.52 : 1</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#007A72;font-weight:600;">Pass AAA</td><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">&mdash;</td></tr>
+          <tr style="background:#FEF4E5;"><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;font-weight:600;">White on Accent #00A99D</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600;">2.93 : 1</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;color:#A32828;font-weight:600;">Fail</td><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;">Accent is a fill and chart color only. For positive figures and text use <strong>#007A72</strong> (5.2:1).</td></tr>
+          <tr style="background:#FEF4E5;"><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;font-weight:600;">White on Warning #F5A623</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600;">1.98 : 1</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;color:#A32828;font-weight:600;">Fail</td><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;">Never white on amber. Use <strong>#1C2536</strong> on amber (9.1:1), or amber tint + <strong>#8A5A0B</strong> label.</td></tr>
+          <tr style="background:#FEF4E5;"><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;font-weight:600;">Danger #D64545 text on Surface</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600;">4.38 : 1</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;color:#A32828;font-weight:600;">Fail (marginal)</td><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;">Keep #D64545 for fills, borders and icons. Overdue <em>amounts</em> use <strong>#C13333</strong> (5.5:1).</td></tr>
+          <tr style="background:#FEF4E5;"><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;font-weight:600;">Border #E3E8EF as input boundary</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600;">1.29 : 1</td><td style="padding:12px;border-bottom:1px solid #F0DDBD;font-size:13px;color:#A32828;font-weight:600;">Fail (3:1 rule)</td><td style="padding:12px 20px;border-bottom:1px solid #F0DDBD;font-size:13px;">Fine as a divider. Input and control borders use <strong>#8C97A8</strong> (3.02:1).</td></tr>
+          <tr><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;">Info #3B82F6 text on Surface</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">3.68 : 1</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#8A5A0B;font-weight:600;">Large text only</td><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;">Pill labels use <strong>#1D5DC0</strong> (5.9:1).</td></tr>
+          <tr><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;">Departure purple #8B5CF6 text</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">3.62 : 1</td><td style="padding:12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#8A5A0B;font-weight:600;">Large text only</td><td style="padding:12px 20px;border-bottom:1px solid #E3E8EF;font-size:13px;">Tile and pill labels use <strong>#6D31DB</strong> (5.4:1).</td></tr>
+          <tr><td style="padding:12px 20px;font-size:13px;">Text Disabled #98A2B3</td><td style="padding:12px;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">2.54 : 1</td><td style="padding:12px;font-size:13px;color:#667085;font-weight:600;">Exempt</td><td style="padding:12px 20px;font-size:13px;color:#667085;">Disabled controls are exempt under 1.4.3. Never used for live content.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px;">
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:15px;line-height:22px;font-weight:600;">Touch targets</div>
+        <ul style="font-size:13px;line-height:20px;color:#1C2536;margin:10px 0 0;padding-left:18px;">
+          <li style="margin-bottom:4px;">Desktop minimum 36&times;36 with 44&times;44 hit area via padding.</li>
+          <li style="margin-bottom:4px;">Tablet and front desk primary actions 44&times;44.</li>
+          <li>Housekeeping mobile 48&times;48 minimum, 12px between targets, gloves assumed.</li>
+        </ul>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:15px;line-height:22px;font-weight:600;">Front desk keyboard scheme</div>
+        <div style="display:grid;gap:8px;margin-top:12px;font-size:13px;line-height:20px;">
+          <div style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#667085;">Global search</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">/</span></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#667085;">New reservation</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">N</span></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#667085;">Check in / check out</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">I / O</span></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#667085;">Room chart</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">G then C</span></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#667085;">Property switcher</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">P</span></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#667085;">Save &middot; save and post</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">Ctrl+S &middot; Ctrl+Enter</span></div>
+          <div style="display:flex;justify-content:space-between;gap:12px;"><span style="color:#667085;">Close drawer or modal</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">Esc</span></div>
+        </div>
+      </div>
+      <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:20px;">
+        <div style="font-size:15px;line-height:22px;font-weight:600;">Redundant encoding</div>
+        <p style="font-size:13px;line-height:20px;color:#667085;margin:10px 0 0;">Every status in this library carries colour plus a label plus a dot or icon. Test: printed greyscale, the folio and the room board are still readable.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;filter:grayscale(1);">
+          <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#00A99D;"></span>In House</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg>No Show</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:32px 0 0;margin-top:40px;">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;justify-content:space-between;">
+      <div style="max-width:60ch;">
+        <div style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Next stage</div>
+        <h3 style="font-size:18px;line-height:26px;font-weight:600;margin:8px 0 0;">Stage 2 &mdash; navigation shell</h3>
+        <p style="font-size:14px;line-height:22px;color:#667085;margin:8px 0 0;">App drawer (closed, open, search-filtered, mobile), the 240px PMS sidebar plus its 64px rail, and the 56px top bar with the property switcher open. Everything else waits on your sign-off here.</p>
+      </div>
+      <div style="font-size:13px;line-height:20px;color:#667085;">
+        <div style="font-family:'JetBrains Mono',ui-monospace,monospace;">01 &middot; Tokens &amp; components</div>
+        <div style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#98A2B3;">02 &middot; Navigation shell</div>
+        <div style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#98A2B3;">03 &middot; PMS dashboard</div>
+        <div style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#98A2B3;">04 &middot; PMS screens</div>
+        <div style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#98A2B3;">05 &middot; Owner portal</div>
+        <div style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#98A2B3;">06 &middot; Admin, guest-facing, print</div>
+      </div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1A4D8F"/><text x="30" y="48" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">01</text><text x="30" y="64" font-family="Inter, sans-serif" font-size="8" font-weight="500" letter-spacing="0.8" fill="#8FBFF0">TOKENS</text></svg>
+</template>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnnotations&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Review&quot;},&quot;showDarkTokens&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Review&quot;}}"></script>
+</body>
+</html>

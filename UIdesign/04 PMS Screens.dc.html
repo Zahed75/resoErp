@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#F4F6FA; font-family:Inter,Roboto,system-ui,sans-serif; color:#1C2536; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4,th,button,input,select,textarea { font-family:Inter,Roboto,system-ui,sans-serif; }
+  a { color:#1A4D8F; text-decoration:none; border-bottom:1px solid #C6CFDB; }
+  a:hover { color:#12325C; border-bottom-color:#1A4D8F; }
+  *:focus-visible { outline:2px solid #1A4D8F; outline-offset:2px; }
+</style>
+</helmet>
+
+<div style="max-width:1560px;margin:0 auto;padding:0 24px 96px;">
+
+  <header style="padding:48px 0 32px;">
+    <div style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Stage 4 of 6 &middot; Pages 05 &amp; 10</div>
+    <h1 style="font-size:28px;line-height:36px;font-weight:600;margin:12px 0 0;letter-spacing:-0.2px;">PMS screens &amp; the three prototype flows</h1>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;text-wrap:pretty;">Reservations, the tape chart, rates, guest profile and housekeeping mobile, plus the three flows you asked to be clickable &mdash; new reservation, check-in with KYC, and checkout with PDF. The flows below are live: click the buttons and the steppers advance.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;">
+      <span style="display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>3 clickable flows</span>
+      <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:999px;font-size:12px;font-weight:500;color:#667085;">Shell from page 03 omitted for space</span>
+    </div>
+  </header>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:32px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">01</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Reservations list</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">Dense table, saved views, filter chips, bulk selection. The full component with hover, selected, loading, empty, error and no-permission states is on page 01 &mdash; here it is populated at working density.</p>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:16px 20px;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid #E3E8EF;">
+        <div><h3 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Reservations</h3><div style="font-size:13px;color:#667085;margin-top:2px;font-variant-numeric:tabular-nums;">248 records &middot; Sea Pearl Resort</div></div>
+        <div style="display:flex;gap:8px;"><button style="height:36px;padding:0 14px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Columns</button><button style="height:36px;padding:0 14px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">New Reservation</button></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 20px;border-bottom:1px solid #E3E8EF;">
+        <span style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:999px;font-size:13px;font-weight:600;">Next 7 days<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg></span>
+        <span style="display:inline-flex;align-items:center;height:28px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:999px;font-size:13px;font-weight:500;">Confirmed</span>
+        <span style="display:inline-flex;align-items:center;height:28px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:999px;font-size:13px;font-weight:500;">Source: OTA</span>
+        <span style="display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#FFFFFF;color:#1A4D8F;border:1px dashed #8C97A8;border-radius:999px;font-size:13px;font-weight:600;">+ Filter</span>
+        <span style="margin-left:auto;display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:#F4F6FA;border:1px solid #E3E8EF;border-radius:6px;font-size:13px;font-weight:500;">Saved view: Arrivals this week<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;min-width:1080px;">
+          <thead><tr style="background:#F4F6FA;">
+            <th style="width:40px;padding:10px 20px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Reference</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Guest</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Room type</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#1C2536;">Arrival &darr;</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Departure</th>
+            <th style="text-align:right;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Nts</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Source</th>
+            <th style="text-align:left;padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Status</th>
+            <th style="text-align:right;padding:10px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Balance</th>
+          </tr></thead>
+          <tbody>
+            <sc-for list="{{ reservations }}" as="r" hint-placeholder-count="6">
+              <tr style="height:44px;">
+                <td style="padding:0 20px;border-bottom:1px solid #E3E8EF;"><span style="width:18px;height:18px;border-radius:4px;border:1px solid #8C97A8;display:inline-block;"></span></td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;">{{ r.ref }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-weight:500;">{{ r.guest }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">{{ r.type }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;">{{ r.arr }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;">{{ r.dep }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">{{ r.nts }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">{{ r.src }}</td>
+                <td style="padding:0 12px;border-bottom:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:600;background:{{ r.pillBg }};color:{{ r.pillFg }};"><span style="width:6px;height:6px;border-radius:999px;background:{{ r.dot }};"></span>{{ r.status }}</span></td>
+                <td style="padding:0 20px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;color:{{ r.balFg }};">{{ r.bal }}</td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:12px 20px;border-top:1px solid #E3E8EF;background:#F4F6FA;">
+        <span style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">1&ndash;6 of 248</span>
+        <span style="margin-left:auto;display:inline-flex;gap:4px;align-items:center;"><span style="width:28px;height:28px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;color:#98A2B3;">&lsaquo;</span><span style="width:28px;height:28px;background:#1A4D8F;color:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;">1</span><span style="width:28px;height:28px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">2</span><span style="width:28px;height:28px;border:1px solid #E3E8EF;background:#FFFFFF;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">&rsaquo;</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">02</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Reservation detail</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">Header carries identity and the primary action; the right rail carries money and never scrolls out of reach. Tabs are clickable.</p>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:16px 20px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div style="display:flex;gap:14px;align-items:center;">
+          <span style="width:44px;height:44px;border-radius:999px;background:#E8F0FA;color:#12325C;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex:none;">RC</span>
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h3 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Rashida Chowdhury</h3><span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;background:#1A4D8F;color:#FFFFFF;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.4px;">VIP</span><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#E5EFFE;color:#1D5DC0;border-radius:999px;font-size:12px;font-weight:600;"><span style="width:6px;height:6px;border-radius:999px;background:#3B82F6;"></span>Arrival Due</span></div>
+            <div style="font-size:13px;color:#667085;margin-top:3px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">RSV-260917-0418</span> &middot; Booking.com &middot; created 02 Sep 2026</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button style="height:36px;padding:0 14px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Amend stay</button>
+          <button style="height:36px;padding:0 14px;background:#FFFFFF;color:#A32828;border:1px solid #D64545;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Cancel</button>
+          <button style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Check In</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:22px;padding:0 20px;border-bottom:1px solid #E3E8EF;overflow-x:auto;">
+        <sc-for list="{{ detailTabs }}" as="t" hint-placeholder-count="6">
+          <button onClick="{{ t.onClick }}" style="background:none;border:none;padding:0 0 10px;cursor:pointer;font-size:13px;white-space:nowrap;font-weight:{{ t.weight }};color:{{ t.color }};border-bottom:2px solid {{ t.bar }};">{{ t.label }}</button>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0;">
+        <div style="padding:20px;">
+          <sc-if value="{{ isStay }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;">
+              <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Arrival</div><div style="font-size:15px;font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums;">17 Sep 2026 &middot; 16:00</div></div>
+              <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Departure</div><div style="font-size:15px;font-weight:600;margin-top:4px;font-variant-numeric:tabular-nums;">19 Sep 2026 &middot; 12:00</div></div>
+              <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Occupancy</div><div style="font-size:15px;font-weight:600;margin-top:4px;">2 adults, 1 child</div></div>
+              <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Room</div><div style="font-size:15px;font-weight:600;margin-top:4px;color:#8A5A0B;">Unassigned</div></div>
+            </div>
+            <div style="border-top:1px solid #E3E8EF;margin-top:20px;padding-top:16px;">
+              <div style="font-size:15px;font-weight:600;">Rooms &amp; rates</div>
+              <div style="overflow-x:auto;margin-top:12px;">
+                <table style="width:100%;border-collapse:collapse;min-width:520px;">
+                  <thead><tr style="background:#F4F6FA;"><th style="text-align:left;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Date</th><th style="text-align:left;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Room type</th><th style="text-align:left;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Rate plan</th><th style="text-align:right;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Rate</th></tr></thead>
+                  <tbody>
+                    <tr><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;">17 Sep</td><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;">Deluxe King</td><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">OTA Flexible</td><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">৳ 9,800.00</td></tr>
+                    <tr><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;">18 Sep</td><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;">Deluxe King</td><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">OTA Flexible</td><td style="padding:10px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">৳ 9,800.00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div style="border-top:1px solid #E3E8EF;margin-top:20px;padding-top:16px;">
+              <div style="font-size:15px;font-weight:600;">Notes</div>
+              <div style="display:flex;gap:10px;margin-top:10px;padding:12px 14px;background:#FEF4E5;border-radius:6px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A5A0B" stroke-width="2.5" stroke-linecap="round" style="flex:none;margin-top:1px;" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg><div style="font-size:13px;line-height:20px;">Late arrival, flight BG-148 lands 15:10. Requests high floor away from the lift. Child cot needed.</div></div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isKyc }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+              <div style="font-size:15px;font-weight:600;">Identity documents</div>
+              <span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:600;">1 pending review</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px;">
+              <div style="border:1px solid #E3E8EF;border-radius:6px;padding:12px;">
+                <div style="display:flex;gap:12px;align-items:center;"><span style="width:44px;height:56px;background:#E8F0FA;border-radius:4px;flex:none;"></span><div style="min-width:0;"><div style="font-size:13px;font-weight:600;">Passport</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;">BX1148832</div><div style="font-size:12px;color:#667085;">Expires 04 Mar 2031</div></div></div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:11px;font-weight:600;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Verified</span><span style="font-size:12px;color:#667085;">by F. Karim</span></div>
+              </div>
+              <div style="border:1px solid #E3E8EF;border-radius:6px;padding:12px;">
+                <div style="display:flex;gap:12px;align-items:center;"><span style="width:44px;height:56px;background:#FEF4E5;border-radius:4px;flex:none;"></span><div style="min-width:0;"><div style="font-size:13px;font-weight:600;">Visa</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#667085;">V-772140</div><div style="font-size:12px;color:#C13333;font-weight:500;">Expires 22 Sep 2026</div></div></div>
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid #E3E8EF;"><span style="display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:11px;font-weight:600;">Pending review</span><span style="font-size:12px;color:#1A4D8F;font-weight:600;">Verify</span></div>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isOther }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:40px 20px;text-align:center;">
+              <div style="width:44px;height:44px;border-radius:999px;background:#F4F6FA;display:inline-flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#98A2B3" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="M8 9h8M8 13h5"></path></svg></div>
+              <div style="font-size:15px;font-weight:600;margin-top:10px;">{{ tabName }}</div>
+              <div style="font-size:13px;line-height:20px;color:#667085;margin-top:4px;">Layout follows the same two-column pattern: content left, money rail right. Detailed in the handoff spec.</div>
+            </div>
+          </sc-if>
+        </div>
+        <div style="border-left:1px solid #E3E8EF;background:#F4F6FA;padding:20px;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Stay summary</div>
+          <div style="display:grid;gap:10px;margin-top:12px;font-size:13px;">
+            <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Nights</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">2</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Room charges</span><span style="font-variant-numeric:tabular-nums;">৳ 19,600.00</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">VAT 15%</span><span style="font-variant-numeric:tabular-nums;">৳ 2,940.00</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Service charge 10%</span><span style="font-variant-numeric:tabular-nums;">৳ 1,960.00</span></div>
+            <div style="display:flex;justify-content:space-between;border-top:1px solid #E3E8EF;padding-top:10px;"><span style="font-weight:600;">Total</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 24,500.00</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Paid</span><span style="font-variant-numeric:tabular-nums;color:#007A72;">৳ 12,100.00</span></div>
+          </div>
+          <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:6px;padding:12px;margin-top:14px;">
+            <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Balance due</div>
+            <div style="font-size:24px;line-height:30px;font-weight:600;font-variant-numeric:tabular-nums;color:#C13333;margin-top:4px;">৳ 12,400.00</div>
+            <div style="font-size:12px;color:#667085;margin-top:4px;">Deposit policy: 50% at booking</div>
+          </div>
+          <button style="width:100%;height:40px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:600 13px Inter,sans-serif;margin-top:12px;cursor:pointer;">Take payment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">03 &middot; Flow 1</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">New reservation wizard</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">Four steps. Clickable &mdash; Continue advances, Back returns, and step 2 shows a sold-out room type with its reason rather than a silent disable.</p>
+
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:16px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <h3 style="font-size:18px;line-height:26px;font-weight:600;margin:0;">New reservation</h3>
+        <span style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">Step {{ wStepLabel }} of 4</span>
+      </div>
+      <div style="display:flex;gap:0;padding:16px 20px;border-bottom:1px solid #E3E8EF;overflow-x:auto;">
+        <sc-for list="{{ wizardSteps }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:150px;">
+            <span style="width:26px;height:26px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none;background:{{ s.bg }};color:{{ s.fg }};border:1px solid {{ s.bd }};">{{ s.num }}</span>
+            <span style="font-size:13px;white-space:nowrap;font-weight:{{ s.weight }};color:{{ s.color }};">{{ s.label }}</span>
+            <span style="flex:1;height:2px;background:{{ s.line }};min-width:12px;"></span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="padding:20px;min-height:320px;">
+        <sc-if value="{{ w1 }}" hint-placeholder-val="{{ true }}">
+          <div style="max-width:680px;">
+            <h4 style="font-size:15px;font-weight:600;margin:0;">Dates &amp; occupancy</h4>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:16px;">
+              <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Arrival</label><input type="text" value="24 Sep 2026" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;font-variant-numeric:tabular-nums;"></div>
+              <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Departure</label><input type="text" value="27 Sep 2026" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;font-variant-numeric:tabular-nums;"></div>
+              <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Adults</label><input type="text" value="2" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;font-variant-numeric:tabular-nums;"></div>
+              <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Children</label><input type="text" value="1" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;font-variant-numeric:tabular-nums;"></div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;margin-top:16px;padding:12px 14px;background:#E8F0FA;border-radius:6px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12325C" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4M12 8h.01"></path></svg><span style="font-size:13px;line-height:20px;color:#12325C;">3 nights &middot; 18 of 248 rooms available across 4 room types for these dates.</span></div>
+            <div style="margin-top:16px;"><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Booking source</label><div style="display:inline-flex;border:1px solid #8C97A8;border-radius:6px;overflow:hidden;"><span style="padding:10px 16px;font-size:13px;font-weight:600;background:#1A4D8F;color:#FFFFFF;">Direct</span><span style="padding:10px 16px;font-size:13px;border-left:1px solid #8C97A8;">Corporate</span><span style="padding:10px 16px;font-size:13px;border-left:1px solid #8C97A8;">Walk-in</span><span style="padding:10px 16px;font-size:13px;border-left:1px solid #8C97A8;">Agent</span></div></div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ w2 }}" hint-placeholder-val="{{ false }}">
+          <h4 style="font-size:15px;font-weight:600;margin:0;">Room &amp; rate selection</h4>
+          <div style="display:grid;gap:12px;margin-top:16px;">
+            <div style="border:1px solid #1A4D8F;background:#E8F0FA;border-radius:6px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+              <div style="flex:1;min-width:200px;"><div style="font-size:15px;font-weight:600;">Deluxe King</div><div style="font-size:13px;color:#475467;margin-top:2px;">Breakfast included &middot; free cancellation to 22 Sep &middot; 9 available</div></div>
+              <div style="text-align:right;"><div style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 9,800</div><div style="font-size:12px;color:#475467;">per night</div></div>
+              <span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:6px;font-size:13px;font-weight:600;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Selected</span>
+            </div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+              <div style="flex:1;min-width:200px;"><div style="font-size:15px;font-weight:600;">Twin Standard</div><div style="font-size:13px;color:#667085;margin-top:2px;">Room only &middot; non-refundable &middot; 6 available</div></div>
+              <div style="text-align:right;"><div style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 6,400</div><div style="font-size:12px;color:#667085;">per night</div></div>
+              <button style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Select</button>
+            </div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:#F4F6FA;">
+              <div style="flex:1;min-width:200px;"><div style="font-size:15px;font-weight:600;color:#667085;">Executive Suite</div><div style="display:flex;align-items:center;gap:6px;font-size:13px;color:#8A5A0B;margin-top:2px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg>Sold out on 25 Sep &mdash; a 3-night stay cannot be built from this type</div></div>
+              <div style="text-align:right;"><div style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;color:#98A2B3;">৳ 18,200</div><div style="font-size:12px;color:#98A2B3;">per night</div></div>
+              <button disabled="disabled" style="height:32px;padding:0 12px;background:#E3E8EF;color:#98A2B3;border:none;border-radius:6px;font:500 13px Inter,sans-serif;">Unavailable</button>
+            </div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:#F4F6FA;">
+              <div style="flex:1;min-width:200px;"><div style="font-size:15px;font-weight:600;color:#667085;">Garden Villa</div><div style="display:flex;align-items:center;gap:6px;font-size:13px;color:#667085;margin-top:2px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m4.9 4.9 14.2 14.2"></path></svg>Closed to arrival on 24 Sep &mdash; rate plan restriction</div></div>
+              <div style="text-align:right;"><div style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;color:#98A2B3;">৳ 24,000</div><div style="font-size:12px;color:#98A2B3;">per night</div></div>
+              <button disabled="disabled" style="height:32px;padding:0 12px;background:#E3E8EF;color:#98A2B3;border:none;border-radius:6px;font:500 13px Inter,sans-serif;">Restricted</button>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ w3 }}" hint-placeholder-val="{{ false }}">
+          <h4 style="font-size:15px;font-weight:600;margin:0;">Guest details</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px;max-width:760px;">
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Family name</label><input type="text" value="Hossain" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;"></div>
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Given name</label><input type="text" value="Kamrul" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;"></div>
+            <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Mobile</label><input type="text" value="+880 1711 204 118" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;font-variant-numeric:tabular-nums;"></div>
+            <div>
+              <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Email</label>
+              <input type="text" value="kamrul.hossain@" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #D64545;border-radius:6px;font:400 14px Inter,sans-serif;box-shadow:0 0 0 3px rgba(214,69,69,.12);">
+              <div style="display:flex;gap:6px;align-items:flex-start;margin-top:8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C13333" stroke-width="2" stroke-linecap="round" style="flex:none;margin-top:2px;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg><span style="font-size:13px;line-height:20px;color:#C13333;">Incomplete address. The confirmation email cannot be sent without it.</span></div>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;margin-top:20px;padding:12px 14px;background:#E0F5F3;border-radius:6px;max-width:760px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00635C" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg><span style="font-size:13px;line-height:20px;color:#00635C;">Matches existing guest <strong>G-00284 &middot; Kamrul Hossain</strong>, 4 previous stays. Linking will carry preferences and KYC forward.</span></div>
+        </sc-if>
+        <sc-if value="{{ w4 }}" hint-placeholder-val="{{ false }}">
+          <h4 style="font-size:15px;font-weight:600;margin:0;">Confirm &amp; deposit</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px;">
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:16px;">
+              <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Summary</div>
+              <div style="display:grid;gap:8px;margin-top:12px;font-size:13px;">
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Guest</span><span style="font-weight:500;">Kamrul Hossain</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Stay</span><span style="font-variant-numeric:tabular-nums;">24&ndash;27 Sep &middot; 3N</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Room type</span><span>Deluxe King</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Room charges</span><span style="font-variant-numeric:tabular-nums;">৳ 29,400.00</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">VAT 15%</span><span style="font-variant-numeric:tabular-nums;">৳ 4,410.00</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Service charge 10%</span><span style="font-variant-numeric:tabular-nums;">৳ 2,940.00</span></div>
+                <div style="display:flex;justify-content:space-between;border-top:1px solid #E3E8EF;padding-top:8px;"><span style="font-weight:600;">Total</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 36,750.00</span></div>
+              </div>
+            </div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:16px;">
+              <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Deposit</div>
+              <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+                <span style="height:32px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:6px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;">50% &middot; ৳ 18,375</span>
+                <span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">Full</span>
+                <span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">None</span>
+              </div>
+              <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:16px 0 6px;">Method</label>
+              <div style="display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:14px;">bKash<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div>
+              <div style="display:flex;align-items:center;gap:10px;margin-top:14px;font-size:13px;"><span style="width:18px;height:18px;border-radius:4px;background:#1A4D8F;display:inline-flex;align-items:center;justify-content:center;flex:none;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>Send confirmation by email and WhatsApp</div>
+            </div>
+          </div>
+          <sc-if value="{{ wDone }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;gap:12px;align-items:flex-start;margin-top:16px;padding:14px 16px;background:#E0F5F3;border-radius:6px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00635C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><div><div style="font-size:14px;font-weight:600;color:#00635C;">Reservation RSV-260924-0503 created</div><div style="font-size:13px;line-height:20px;color:#00635C;">Deposit ৳ 18,375.00 received by bKash. Confirmation sent. Folio opened.</div></div></div>
+          </sc-if>
+        </sc-if>
+      </div>
+
+      <div style="padding:16px 20px;border-top:1px solid #E3E8EF;background:#F4F6FA;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <button onClick="{{ wReset }}" style="height:36px;padding:0 14px;background:transparent;border:none;color:#667085;font:500 13px Inter,sans-serif;cursor:pointer;">Discard</button>
+        <span style="margin-left:auto;display:flex;gap:8px;">
+          <button onClick="{{ wBack }}" style="height:36px;padding:0 16px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Back</button>
+          <button onClick="{{ wNext }}" style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">{{ wNextLabel }}</button>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">04 &middot; Flow 2</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Check-in with KYC</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">Assign room, capture documents, take deposit, confirm. The KYC block is the component that also appears in reservation detail and the guest profile.</p>
+
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:16px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div><h3 style="font-size:18px;line-height:26px;font-weight:600;margin:0;">Check in &mdash; Rashida Chowdhury</h3><div style="font-size:13px;color:#667085;margin-top:2px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">RSV-260917-0418</span> &middot; Deluxe King &middot; 2 nights</div></div>
+        <span style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">Step {{ cStepLabel }} of 4</span>
+      </div>
+      <div style="display:flex;padding:16px 20px;border-bottom:1px solid #E3E8EF;overflow-x:auto;">
+        <sc-for list="{{ checkinSteps }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:140px;">
+            <span style="width:26px;height:26px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none;background:{{ s.bg }};color:{{ s.fg }};border:1px solid {{ s.bd }};">{{ s.num }}</span>
+            <span style="font-size:13px;white-space:nowrap;font-weight:{{ s.weight }};color:{{ s.color }};">{{ s.label }}</span>
+            <span style="flex:1;height:2px;background:{{ s.line }};min-width:12px;"></span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="padding:20px;min-height:300px;">
+        <sc-if value="{{ c1 }}" hint-placeholder-val="{{ true }}">
+          <h4 style="font-size:15px;font-weight:600;margin:0;">Assign room</h4>
+          <div style="font-size:13px;color:#667085;margin-top:4px;">9 vacant clean Deluxe King rooms match this booking. Guest requested a high floor away from the lift.</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:16px;">
+            <div style="border:1px solid #1A4D8F;background:#E8F0FA;border-radius:6px;padding:12px;"><div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;">412</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A4D8F" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div style="font-size:12px;color:#12325C;margin-top:4px;font-weight:500;">Floor 4 &middot; sea view</div><div style="font-size:12px;color:#475467;">Far from lift</div></div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:12px;"><div style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;">201</div><div style="font-size:12px;color:#667085;margin-top:4px;">Floor 2 &middot; garden view</div><div style="font-size:12px;color:#667085;">Next to lift</div></div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:12px;"><div style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;">308</div><div style="font-size:12px;color:#667085;margin-top:4px;">Floor 3 &middot; sea view</div><div style="font-size:12px;color:#667085;">Mid corridor</div></div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:12px;background:#F4F6FA;"><div style="font-size:18px;font-weight:600;font-variant-numeric:tabular-nums;color:#667085;">404</div><div style="font-size:12px;color:#8A5A0B;margin-top:4px;font-weight:500;">Vacant dirty</div><div style="font-size:12px;color:#667085;">HK assigned, 25 min</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13px;"><span style="width:18px;height:18px;border-radius:4px;background:#1A4D8F;display:inline-flex;align-items:center;justify-content:center;flex:none;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>Encode key card on confirm</div>
+        </sc-if>
+        <sc-if value="{{ c2 }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;"><h4 style="font-size:15px;font-weight:600;margin:0;">Identity documents</h4><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;background:#FBE9E9;color:#A32828;border-radius:999px;font-size:12px;font-weight:600;">Required before key issue</span></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px;">
+            <div>
+              <div style="display:grid;gap:12px;">
+                <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Document type</label><div style="display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:14px;">Passport<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+                <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Document number</label><input type="text" value="BX1148832" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px 'JetBrains Mono',ui-monospace,monospace;"></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                  <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Issuing country</label><div style="display:flex;align-items:center;justify-content:space-between;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font-size:14px;">Bangladesh<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+                  <div><label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Expiry</label><input type="text" value="04 Mar 2031" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;font-variant-numeric:tabular-nums;"></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Scan or photo</label>
+              <div style="border:1px dashed #8C97A8;border-radius:6px;padding:20px;text-align:center;background:#F4F6FA;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M17 8l-5-5-5 5"></path><path d="M12 3v12"></path></svg>
+                <div style="font-size:14px;font-weight:500;margin-top:8px;">Drop file, or use the counter camera</div>
+                <div style="font-size:12px;color:#667085;margin-top:4px;">JPG, PNG, PDF &middot; up to 10 MB</div>
+                <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;"><button style="height:36px;padding:0 14px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Take photo</button><button style="height:36px;padding:0 14px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Browse</button></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:12px;margin-top:12px;padding:10px 12px;border:1px solid #E3E8EF;border-radius:6px;">
+                <span style="width:40px;height:50px;background:#E8F0FA;border-radius:4px;flex:none;"></span>
+                <div style="min-width:0;flex:1;"><div style="font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">passport-BX1148832.jpg</div><div style="font-size:12px;color:#667085;">1.4 MB &middot; captured 16:04</div></div>
+                <span style="display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 10px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:12px;font-weight:600;flex:none;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Verified</span>
+              </div>
+              <div style="font-size:12px;line-height:18px;color:#667085;margin-top:10px;">Stored encrypted, retained 5 years per BTRC guidance, and never exposed to the booking engine.</div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ c3 }}" hint-placeholder-val="{{ false }}">
+          <h4 style="font-size:15px;font-weight:600;margin:0;">Deposit &amp; incidentals</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px;">
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:16px;">
+              <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Outstanding</div>
+              <div style="font-size:32px;line-height:38px;font-weight:600;font-variant-numeric:tabular-nums;color:#C13333;margin-top:6px;">৳ 12,400.00</div>
+              <div style="font-size:13px;color:#667085;margin-top:4px;">Total ৳ 24,500.00 &middot; paid ৳ 12,100.00</div>
+            </div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:16px;">
+              <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin-bottom:6px;">Collect now</label>
+              <input type="text" value="12,400.00" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:600 16px Inter,sans-serif;font-variant-numeric:tabular-nums;text-align:right;">
+              <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;"><span style="height:32px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:6px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;">Card</span><span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">bKash</span><span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">Cash</span><span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">City ledger</span></div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ c4 }}" hint-placeholder-val="{{ false }}">
+          <div style="max-width:520px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:#E0F5F3;border-radius:6px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00635C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><div><div style="font-size:16px;font-weight:600;color:#00635C;">Checked in to Room 412</div><div style="font-size:13px;line-height:20px;color:#00635C;margin-top:2px;">Key encoded &middot; folio F-04180 opened &middot; ৳ 12,400.00 collected by card &middot; housekeeping notified</div></div></div>
+            <div style="display:grid;gap:8px;margin-top:16px;">
+              <button style="height:44px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Open folio F-04180</button>
+              <button style="height:44px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Print registration card</button>
+              <button onClick="{{ cReset }}" style="height:44px;background:transparent;border:none;color:#1A4D8F;font:600 14px Inter,sans-serif;cursor:pointer;">Check in next arrival</button>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      <div style="padding:16px 20px;border-top:1px solid #E3E8EF;background:#F4F6FA;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+        <span style="font-size:12px;color:#667085;">Room 412 &middot; Deluxe King &middot; 17&ndash;19 Sep</span>
+        <span style="margin-left:auto;display:flex;gap:8px;">
+          <button onClick="{{ cBack }}" style="height:36px;padding:0 16px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Back</button>
+          <button onClick="{{ cNext }}" style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">{{ cNextLabel }}</button>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">05 &middot; Flow 3</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Checkout, folio &amp; PDF</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">Folio review, settlement with split payment, then the PDF panel with print and WhatsApp. Step 1 doubles as the standalone folio screen.</p>
+
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:16px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+        <div><h3 style="font-size:18px;line-height:26px;font-weight:600;margin:0;">Check out &mdash; Room 203 &middot; Rashida Chowdhury</h3><div style="font-size:13px;color:#667085;margin-top:2px;">Folio <span style="font-family:'JetBrains Mono',ui-monospace,monospace;">F-04180</span> &middot; 14&ndash;19 Sep 2026 &middot; 5 nights</div></div>
+        <div style="display:flex;gap:8px;">
+          <button onClick="{{ oSplitToggle }}" style="height:32px;padding:0 12px;background:{{ splitBg }};color:{{ splitFg }};border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Split bill</button>
+        </div>
+      </div>
+      <div style="display:flex;padding:16px 20px;border-bottom:1px solid #E3E8EF;overflow-x:auto;">
+        <sc-for list="{{ checkoutSteps }}" as="s" hint-placeholder-count="3">
+          <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:160px;">
+            <span style="width:26px;height:26px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex:none;background:{{ s.bg }};color:{{ s.fg }};border:1px solid {{ s.bd }};">{{ s.num }}</span>
+            <span style="font-size:13px;white-space:nowrap;font-weight:{{ s.weight }};color:{{ s.color }};">{{ s.label }}</span>
+            <span style="flex:1;height:2px;background:{{ s.line }};min-width:12px;"></span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="padding:20px;min-height:340px;">
+        <sc-if value="{{ o1 }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;">
+            <div>
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;"><h4 style="font-size:15px;font-weight:600;margin:0;">Charges</h4><div style="display:flex;gap:8px;"><button style="height:30px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Add charge</button><button style="height:30px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Transfer charge</button></div></div>
+              <div style="overflow-x:auto;margin-top:12px;">
+                <table style="width:100%;border-collapse:collapse;min-width:520px;">
+                  <thead><tr style="background:#F4F6FA;"><th style="text-align:left;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Date</th><th style="text-align:left;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Description</th><th style="text-align:right;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Qty</th><th style="text-align:right;padding:8px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Amount</th></tr></thead>
+                  <tbody>
+                    <sc-for list="{{ folioGroups }}" as="g" hint-placeholder-count="4">
+                      <tr><td colspan="4" style="padding:10px 12px 6px;font-size:11px;font-weight:600;letter-spacing:0.4px;text-transform:uppercase;color:#98A2B3;background:#F7F9FC;border-bottom:1px solid #E3E8EF;">{{ g.name }} &middot; {{ g.total }}</td></tr>
+                      <sc-for list="{{ g.lines }}" as="l" hint-placeholder-count="2">
+                        <tr><td style="padding:9px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;font-variant-numeric:tabular-nums;color:#667085;">{{ l.date }}</td><td style="padding:9px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;">{{ l.desc }}</td><td style="padding:9px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">{{ l.qty }}</td><td style="padding:9px 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">{{ l.amt }}</td></tr>
+                      </sc-for>
+                    </sc-for>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div style="background:#F4F6FA;border:1px solid #E3E8EF;border-radius:6px;padding:16px;align-self:start;">
+              <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Settlement</div>
+              <div style="display:grid;gap:8px;margin-top:12px;font-size:13px;">
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Subtotal</span><span style="font-variant-numeric:tabular-nums;">৳ 52,180.00</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">VAT 15%</span><span style="font-variant-numeric:tabular-nums;">৳ 7,827.00</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Service charge 10%</span><span style="font-variant-numeric:tabular-nums;">৳ 5,218.00</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Tourism levy 1%</span><span style="font-variant-numeric:tabular-nums;">৳ 521.80</span></div>
+                <div style="display:flex;justify-content:space-between;border-top:1px solid #E3E8EF;padding-top:8px;"><span style="font-weight:600;">Total</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 65,746.80</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Payments applied</span><span style="font-variant-numeric:tabular-nums;color:#007A72;">&minus; ৳ 22,996.80</span></div>
+              </div>
+              <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:6px;padding:12px;margin-top:12px;">
+                <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Balance due</div>
+                <div style="font-size:26px;line-height:32px;font-weight:600;font-variant-numeric:tabular-nums;color:#C13333;margin-top:4px;">৳ 42,750.00</div>
+              </div>
+              <sc-if value="{{ splitOn }}" hint-placeholder-val="{{ false }}">
+                <div style="border-top:1px solid #E3E8EF;margin-top:14px;padding-top:12px;">
+                  <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Split</div>
+                  <div style="display:grid;gap:8px;margin-top:10px;font-size:13px;">
+                    <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Company &middot; BRAC Bank</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 30,850.00</span></div>
+                    <div style="font-size:12px;color:#667085;">Room &amp; taxes to city ledger</div>
+                    <div style="display:flex;justify-content:space-between;border-top:1px solid #E3E8EF;padding-top:8px;"><span style="color:#667085;">Guest</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">৳ 11,900.00</span></div>
+                    <div style="font-size:12px;color:#667085;">F&amp;B, spa, minibar</div>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ o2 }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:900px;">
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:16px;">
+              <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Payment 1</div>
+              <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;"><span style="height:32px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:6px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;">Card</span><span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">bKash</span><span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">Cash</span></div>
+              <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Amount</label>
+              <input type="text" value="30,850.00" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:600 16px Inter,sans-serif;font-variant-numeric:tabular-nums;text-align:right;">
+            </div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:16px;">
+              <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Payment 2</div>
+              <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;"><span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">Card</span><span style="height:32px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border-radius:6px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;">bKash</span><span style="height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;display:inline-flex;align-items:center;">Cash</span></div>
+              <label style="display:block;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;margin:14px 0 6px;">Amount</label>
+              <input type="text" value="11,900.00" style="width:100%;box-sizing:border-box;height:44px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:600 16px Inter,sans-serif;font-variant-numeric:tabular-nums;text-align:right;">
+            </div>
+            <div style="border:1px solid #E3E8EF;border-radius:6px;padding:16px;background:#F4F6FA;">
+              <div style="display:grid;gap:8px;font-size:13px;">
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Balance due</span><span style="font-variant-numeric:tabular-nums;">৳ 42,750.00</span></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Allocated</span><span style="font-variant-numeric:tabular-nums;">৳ 42,750.00</span></div>
+                <div style="display:flex;justify-content:space-between;border-top:1px solid #E3E8EF;padding-top:8px;"><span style="font-weight:600;">Remaining</span><span style="font-weight:600;font-variant-numeric:tabular-nums;color:#007A72;">৳ 0.00</span></div>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:14px;padding:10px 12px;background:#E0F5F3;border-radius:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00635C" stroke-width="3" stroke-linecap="round" style="flex:none;" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span style="font-size:12px;line-height:18px;color:#00635C;">Fully allocated. Invoice will post on confirm.</span></div>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ o3 }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:20px;">
+            <div style="background:#F4F6FA;border:1px solid #E3E8EF;border-radius:6px;padding:20px;display:flex;justify-content:center;">
+              <div style="width:100%;max-width:420px;background:#FFFFFF;box-shadow:0 12px 24px rgba(16,24,40,.10);padding:24px;">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #1C2536;padding-bottom:12px;">
+                  <div><div style="font-size:15px;font-weight:700;letter-spacing:-0.2px;">SEA PEARL RESORT</div><div style="font-size:10px;line-height:14px;color:#667085;">Inani Beach Road, Cox&rsquo;s Bazar 4700<br>BIN 004212938-0201 &middot; +880 341 52200</div></div>
+                  <div style="text-align:right;"><div style="font-size:11px;font-weight:600;letter-spacing:0.4px;text-transform:uppercase;">Tax Invoice</div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;color:#667085;">INV-2026-09-0418</div></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;gap:16px;margin-top:12px;font-size:10px;line-height:15px;">
+                  <div><div style="font-weight:600;">Rashida Chowdhury</div><div style="color:#667085;">Room 203 &middot; Deluxe King<br>14 Sep &ndash; 19 Sep 2026 &middot; 5 nights</div></div>
+                  <div style="text-align:right;color:#667085;">Issued 19 Sep 2026<br>Cashier F. Karim</div>
+                </div>
+                <div style="margin-top:12px;border-top:1px solid #E3E8EF;">
+                  <div style="display:flex;justify-content:space-between;font-size:10px;padding:5px 0;border-bottom:1px solid #F1F3F7;"><span>Room charge &times; 5</span><span style="font-variant-numeric:tabular-nums;">42,000.00</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;padding:5px 0;border-bottom:1px solid #F1F3F7;"><span>Restaurant</span><span style="font-variant-numeric:tabular-nums;">6,480.00</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;padding:5px 0;border-bottom:1px solid #F1F3F7;"><span>Spa</span><span style="font-variant-numeric:tabular-nums;">3,200.00</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;padding:5px 0;border-bottom:1px solid #F1F3F7;"><span>Minibar &middot; laundry</span><span style="font-variant-numeric:tabular-nums;">500.00</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:10px;padding:5px 0;"><span style="color:#667085;">VAT 15% &middot; service 10% &middot; levy 1%</span><span style="font-variant-numeric:tabular-nums;">13,566.80</span></div>
+                  <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;padding:8px 0;border-top:2px solid #1C2536;"><span>Balance due</span><span style="font-variant-numeric:tabular-nums;">৳ 0.00</span></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:12px;padding-top:10px;border-top:1px solid #E3E8EF;">
+                  <div style="font-size:9px;line-height:13px;color:#667085;max-width:60%;">Settled in full by card and bKash. Checkout 12:00. Thank you for staying with us.</div>
+                  <div style="width:44px;height:44px;background:#1C2536;flex:none;"></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Deliver</div>
+              <div style="display:grid;gap:8px;margin-top:12px;">
+                <button style="height:44px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5h20v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"></path></svg>Print</button>
+                <button style="height:44px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Email to guest</button>
+                <button style="height:44px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Send by WhatsApp</button>
+                <button style="height:44px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Download PDF</button>
+              </div>
+              <div style="border-top:1px solid #E3E8EF;margin-top:16px;padding-top:12px;font-size:12px;line-height:18px;color:#667085;">Room 203 set to vacant dirty and queued for housekeeping. Full A4 document on page 07.</div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      <div style="padding:16px 20px;border-top:1px solid #E3E8EF;background:#F4F6FA;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+        <span style="font-size:12px;color:#667085;">Balance ৳ {{ oBalance }}</span>
+        <span style="margin-left:auto;display:flex;gap:8px;">
+          <button onClick="{{ oBack }}" style="height:36px;padding:0 16px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 13px Inter,sans-serif;cursor:pointer;">Back</button>
+          <button onClick="{{ oNext }}" style="height:36px;padding:0 16px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">{{ oNextLabel }}</button>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">06</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Room chart &middot; tape chart</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">The densest screen in the product. Rooms as rows, dates as columns, reservations as bars. Room number and type stay pinned while dates scroll; the bar carries the guest name and, when wide enough, the balance.</p>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:14px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <div style="display:inline-flex;border:1px solid #8C97A8;border-radius:6px;overflow:hidden;"><span style="padding:7px 14px;font-size:13px;">Day</span><span style="padding:7px 14px;font-size:13px;font-weight:600;background:#1A4D8F;color:#FFFFFF;border-left:1px solid #8C97A8;">Week</span><span style="padding:7px 14px;font-size:13px;border-left:1px solid #8C97A8;">Month</span></div>
+        <span style="display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;font-variant-numeric:tabular-nums;">17 &ndash; 23 Sep 2026</span>
+        <span style="display:inline-flex;align-items:center;height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;">Group by room type</span>
+        <span style="margin-left:auto;display:flex;gap:10px;flex-wrap:wrap;"><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;"><span style="width:10px;height:10px;border-radius:3px;background:#1A4D8F;"></span>Occupied</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;"><span style="width:10px;height:10px;border-radius:3px;background:#3B82F6;"></span>Arrival</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;"><span style="width:10px;height:10px;border-radius:3px;background:#8B5CF6;"></span>Departure</span><span style="display:inline-flex;align-items:center;gap:5px;font-size:12px;"><span style="width:10px;height:10px;border-radius:3px;background:#D64545;"></span>OOO</span></span>
+      </div>
+      <div style="overflow-x:auto;">
+        <div style="min-width:900px;">
+          <div style="display:grid;grid-template-columns:160px repeat(7,minmax(0,1fr));background:#F4F6FA;border-bottom:1px solid #E3E8EF;">
+            <div style="padding:8px 12px;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Room</div>
+            <div style="padding:8px 8px;font-size:12px;font-weight:500;color:#1C2536;border-left:1px solid #E3E8EF;font-variant-numeric:tabular-nums;">Wed 17</div>
+            <div style="padding:8px 8px;font-size:12px;font-weight:500;color:#667085;border-left:1px solid #E3E8EF;font-variant-numeric:tabular-nums;">Thu 18</div>
+            <div style="padding:8px 8px;font-size:12px;font-weight:500;color:#667085;border-left:1px solid #E3E8EF;font-variant-numeric:tabular-nums;">Fri 19</div>
+            <div style="padding:8px 8px;font-size:12px;font-weight:500;color:#667085;border-left:1px solid #E3E8EF;font-variant-numeric:tabular-nums;">Sat 20</div>
+            <div style="padding:8px 8px;font-size:12px;font-weight:500;color:#667085;border-left:1px solid #E3E8EF;font-variant-numeric:tabular-nums;">Sun 21</div>
+            <div style="padding:8px 8px;font-size:12px;font-weight:500;color:#667085;border-left:1px solid #E3E8EF;font-variant-numeric:tabular-nums;">Mon 22</div>
+            <div style="padding:8px 8px;font-size:12px;font-weight:500;color:#667085;border-left:1px solid #E3E8EF;font-variant-numeric:tabular-nums;">Tue 23</div>
+          </div>
+          <div style="padding:6px 12px;font-size:11px;font-weight:600;letter-spacing:0.4px;text-transform:uppercase;color:#98A2B3;background:#F7F9FC;border-bottom:1px solid #E3E8EF;">Deluxe King &middot; 12 rooms</div>
+
+          <div style="display:grid;grid-template-columns:160px repeat(7,minmax(0,1fr));border-bottom:1px solid #E3E8EF;height:40px;align-items:center;">
+            <div style="padding:0 12px;font-size:13px;"><span style="font-weight:600;font-variant-numeric:tabular-nums;">201</span> <span style="color:#98A2B3;font-size:12px;">Dlx King</span></div>
+            <div style="grid-column:2 / span 3;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#1A4D8F;border-radius:4px;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;">T. Ahmed &middot; ৳ 8,200</div></div>
+            <div style="border-left:1px solid #E3E8EF;"></div>
+            <div style="grid-column:6 / span 2;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#3B82F6;border-radius:4px;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;">M. Begum</div></div>
+            <div style="border-left:1px solid #E3E8EF;"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:160px repeat(7,minmax(0,1fr));border-bottom:1px solid #E3E8EF;height:40px;align-items:center;">
+            <div style="padding:0 12px;font-size:13px;"><span style="font-weight:600;font-variant-numeric:tabular-nums;">203</span> <span style="color:#98A2B3;font-size:12px;">Dlx King</span></div>
+            <div style="grid-column:2 / span 2;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#8B5CF6;border-radius:4px;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;">R. Chowdhury &middot; out 19th</div></div>
+            <div style="border-left:1px solid #E3E8EF;"></div>
+            <div style="grid-column:5 / span 3;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#FFFFFF;border:2px dashed #1A4D8F;border-radius:4px;color:#12325C;font-size:12px;font-weight:600;display:flex;align-items:center;padding:0 6px;overflow:hidden;white-space:nowrap;">Dragging &middot; K. Hossain &middot; 3N</div></div>
+            <div style="border-left:1px solid #E3E8EF;"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:160px repeat(7,minmax(0,1fr));border-bottom:1px solid #E3E8EF;height:40px;align-items:center;background:#FBE9E9;">
+            <div style="padding:0 12px;font-size:13px;"><span style="font-weight:600;font-variant-numeric:tabular-nums;">204</span> <span style="color:#98A2B3;font-size:12px;">Dlx King</span></div>
+            <div style="grid-column:2 / span 4;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#1A4D8F;border-radius:4px;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;">A. Rahman &middot; 4N</div></div>
+            <div style="grid-column:6 / span 2;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#FBE9E9;border:2px solid #D64545;border-radius:4px;color:#A32828;font-size:12px;font-weight:600;display:flex;align-items:center;gap:5px;padding:0 6px;overflow:hidden;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="flex:none;" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4M12 16h.01"></path></svg>Conflict &mdash; overlaps A. Rahman</div></div>
+            <div style="border-left:1px solid #E3E8EF;"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:160px repeat(7,minmax(0,1fr));border-bottom:1px solid #E3E8EF;height:40px;align-items:center;">
+            <div style="padding:0 12px;font-size:13px;"><span style="font-weight:600;font-variant-numeric:tabular-nums;">206</span> <span style="color:#98A2B3;font-size:12px;">Dlx King</span></div>
+            <div style="grid-column:2 / span 4;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#D64545;border-radius:4px;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;gap:5px;padding:0 8px;overflow:hidden;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"></path></svg>Out of order &middot; AC replacement</div></div>
+            <div style="border-left:1px solid #E3E8EF;"></div><div style="border-left:1px solid #E3E8EF;"></div><div style="border-left:1px solid #E3E8EF;"></div>
+          </div>
+          <div style="padding:6px 12px;font-size:11px;font-weight:600;letter-spacing:0.4px;text-transform:uppercase;color:#98A2B3;background:#F7F9FC;border-bottom:1px solid #E3E8EF;">Executive Suite &middot; 6 rooms</div>
+          <div style="display:grid;grid-template-columns:160px repeat(7,minmax(0,1fr));border-bottom:1px solid #E3E8EF;height:40px;align-items:center;">
+            <div style="padding:0 12px;font-size:13px;"><span style="font-weight:600;font-variant-numeric:tabular-nums;">Suite 3</span></div>
+            <div style="grid-column:2 / span 7;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#1A4D8F;border-radius:4px;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;">N. Jahan &middot; VIP &middot; 9N &middot; ৳ 164,000</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:160px repeat(7,minmax(0,1fr));height:40px;align-items:center;">
+            <div style="padding:0 12px;font-size:13px;"><span style="font-weight:600;font-variant-numeric:tabular-nums;">Suite 8</span></div>
+            <div style="border-left:1px solid #E3E8EF;"></div>
+            <div style="grid-column:3 / span 2;padding:0 3px;border-left:1px solid #E3E8EF;"><div style="height:26px;background:#667085;border-radius:4px;color:#FFFFFF;font-size:12px;font-weight:500;display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;">Blocked &middot; owner use</div></div>
+            <div style="border-left:1px solid #E3E8EF;"></div><div style="border-left:1px solid #E3E8EF;"></div><div style="border-left:1px solid #E3E8EF;"></div><div style="border-left:1px solid #E3E8EF;"></div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:12px 20px;border-top:1px solid #E3E8EF;background:#F4F6FA;font-size:12px;line-height:18px;color:#667085;">Drop rules: a valid target highlights the row in Primary Light; an invalid one turns the row Danger-tinted and the bar keeps a red outline until released. Release on an invalid target snaps back with a toast explaining why &mdash; never a silent revert.</div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">07</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Rates &amp; availability calendar</h2></div>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:14px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <span style="display:inline-flex;align-items:center;height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;font-weight:500;">Deluxe King</span>
+        <span style="display:inline-flex;align-items:center;height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;">Rate plan: BAR</span>
+        <span style="display:inline-flex;align-items:center;height:32px;padding:0 12px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font-size:13px;font-variant-numeric:tabular-nums;">September 2026</span>
+        <button style="margin-left:auto;height:32px;padding:0 12px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 13px Inter,sans-serif;cursor:pointer;">Bulk update</button>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) 300px;">
+        <div style="padding:16px 20px;overflow-x:auto;">
+          <div style="min-width:560px;">
+            <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;font-size:11px;font-weight:600;letter-spacing:0.4px;text-transform:uppercase;color:#98A2B3;">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:8px;">
+              <sc-for list="{{ rateDays }}" as="d" hint-placeholder-count="21">
+                <div style="border:1px solid {{ d.bd }};background:{{ d.bg }};border-radius:6px;padding:8px;min-height:74px;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12px;font-weight:600;font-variant-numeric:tabular-nums;color:{{ d.numFg }};">{{ d.day }}</span><span style="font-size:10px;font-weight:600;color:{{ d.flagFg }};">{{ d.flag }}</span></div>
+                  <div style="font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;margin-top:6px;color:{{ d.rateFg }};">{{ d.rate }}</div>
+                  <div style="font-size:11px;font-variant-numeric:tabular-nums;color:{{ d.availFg }};">{{ d.avail }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="border-left:1px solid #E3E8EF;background:#F4F6FA;padding:16px 20px;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Bulk update &middot; 18&ndash;21 Sep</div>
+          <div style="display:grid;gap:12px;margin-top:12px;">
+            <div><label style="display:block;font-size:12px;font-weight:500;color:#667085;margin-bottom:6px;">Rate</label><input type="text" value="11,200.00" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:600 14px Inter,sans-serif;font-variant-numeric:tabular-nums;text-align:right;background:#FFFFFF;"></div>
+            <div><label style="display:block;font-size:12px;font-weight:500;color:#667085;margin-bottom:6px;">Min stay</label><input type="text" value="2" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #8C97A8;border-radius:6px;font:400 14px Inter,sans-serif;font-variant-numeric:tabular-nums;background:#FFFFFF;"></div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;"><span style="width:38px;height:22px;border-radius:999px;background:#1A4D8F;position:relative;display:inline-block;flex:none;"><span style="position:absolute;top:3px;left:19px;width:16px;height:16px;border-radius:999px;background:#FFFFFF;"></span></span>Closed to arrival</div>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;"><span style="width:38px;height:22px;border-radius:999px;background:#C6CFDB;position:relative;display:inline-block;flex:none;"><span style="position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:999px;background:#FFFFFF;"></span></span>Stop sell</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#FEF4E5;border-radius:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A5A0B" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"></path><path d="M12 9v4M12 17h.01"></path></svg><span style="font-size:12px;line-height:18px;color:#8A5A0B;">4 dates affected. 18 existing reservations keep their booked rate.</span></div>
+            <button style="height:40px;background:#1A4D8F;color:#FFFFFF;border:none;border-radius:6px;font:600 14px Inter,sans-serif;cursor:pointer;">Apply to 4 dates</button>
+            <button style="height:40px;background:#FFFFFF;border:1px solid #8C97A8;border-radius:6px;font:500 14px Inter,sans-serif;cursor:pointer;">Push to channels</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">08</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Housekeeping &mdash; mobile first, plus supervisor</h2></div>
+    <p style="font-size:14px;line-height:22px;color:#667085;max-width:70ch;margin:12px 0 0;">Designed for a phone held one-handed with gloves in a dim corridor: 56px rows, two-word labels, status as a full-width colour band rather than a small pill, and no free-text entry anywhere in the happy path.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;margin-top:20px;align-items:flex-start;">
+      <div style="width:390px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="height:52px;background:#1A4D8F;color:#FFFFFF;display:flex;align-items:center;gap:12px;padding:0 16px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg><span style="font-size:16px;font-weight:600;">My rooms</span><span style="margin-left:auto;font-size:13px;font-variant-numeric:tabular-nums;">8 left</span></div>
+        <div style="display:flex;border-bottom:1px solid #E3E8EF;">
+          <span style="flex:1;height:48px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:#12325C;border-bottom:3px solid #1A4D8F;">To do 8</span>
+          <span style="flex:1;height:48px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;color:#667085;">Done 6</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;height:64px;padding:0 16px;border-bottom:1px solid #E3E8EF;">
+          <span style="width:6px;height:40px;border-radius:3px;background:#F5A623;flex:none;"></span>
+          <div style="flex:1;min-width:0;"><div style="font-size:18px;font-weight:700;font-variant-numeric:tabular-nums;">412</div><div style="font-size:13px;color:#667085;">Departure clean &middot; Floor 4</div></div>
+          <span style="display:inline-flex;align-items:center;height:28px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:700;flex:none;">DIRTY</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;height:64px;padding:0 16px;border-bottom:1px solid #E3E8EF;">
+          <span style="width:6px;height:40px;border-radius:3px;background:#F5A623;flex:none;"></span>
+          <div style="flex:1;min-width:0;"><div style="font-size:18px;font-weight:700;font-variant-numeric:tabular-nums;">414</div><div style="font-size:13px;color:#667085;">Stayover &middot; Floor 4</div></div>
+          <span style="display:inline-flex;align-items:center;height:28px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:700;flex:none;">DIRTY</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;height:64px;padding:0 16px;border-bottom:1px solid #E3E8EF;background:#FBE9E9;">
+          <span style="width:6px;height:40px;border-radius:3px;background:#D64545;flex:none;"></span>
+          <div style="flex:1;min-width:0;"><div style="font-size:18px;font-weight:700;font-variant-numeric:tabular-nums;">418</div><div style="font-size:13px;color:#A32828;font-weight:500;">Fault reported &middot; shower</div></div>
+          <span style="display:inline-flex;align-items:center;height:28px;padding:0 10px;background:#FFFFFF;color:#A32828;border-radius:999px;font-size:12px;font-weight:700;flex:none;">FAULT</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A32828" stroke-width="2.5" stroke-linecap="round" style="flex:none;" aria-hidden="true"><path d="m9 6 6 6-6 6"></path></svg>
+        </div>
+        <div style="padding:16px;background:#F4F6FA;border-top:1px solid #E3E8EF;">
+          <div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Room detail &middot; 412</div>
+          <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;padding:16px;margin-top:10px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;"><span style="font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;">412</span><span style="display:inline-flex;align-items:center;height:28px;padding:0 10px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:12px;font-weight:700;">VACANT DIRTY</span></div>
+            <div style="font-size:14px;color:#667085;margin-top:6px;">Deluxe King &middot; departure 12:04 &middot; next arrival 16:00</div>
+            <div style="display:grid;gap:10px;margin-top:16px;">
+              <button style="height:56px;background:#00A99D;color:#FFFFFF;border:none;border-radius:6px;font:700 17px Inter,sans-serif;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Mark clean</button>
+              <button style="height:56px;background:#FFFFFF;color:#1C2536;border:2px solid #1A4D8F;border-radius:6px;font:700 17px Inter,sans-serif;cursor:pointer;">Mark inspected</button>
+              <button style="height:56px;background:#FFFFFF;color:#A32828;border:2px solid #D64545;border-radius:6px;font:700 17px Inter,sans-serif;cursor:pointer;">Report fault</button>
+            </div>
+            <div style="font-size:13px;line-height:20px;color:#667085;margin-top:14px;padding-top:12px;border-top:1px solid #E3E8EF;">Works offline. Actions queue and sync when signal returns &mdash; the badge shows &ldquo;2 queued&rdquo; rather than failing.</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:300px;background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+        <div style="padding:14px 20px;border-bottom:1px solid #E3E8EF;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;"><h4 style="font-size:18px;line-height:26px;font-weight:600;margin:0;">Supervisor view</h4><span style="font-size:13px;color:#667085;font-variant-numeric:tabular-nums;">14 staff &middot; 186 / 248 done</span></div>
+        <div style="padding:14px 20px;border-bottom:1px solid #E3E8EF;">
+          <div style="height:10px;border-radius:999px;background:#E3E8EF;overflow:hidden;display:flex;"><span style="width:56%;background:#00A99D;"></span><span style="width:19%;background:#F5A623;"></span></div>
+          <div style="display:flex;gap:16px;margin-top:8px;font-size:12px;color:#667085;"><span>Inspected 139</span><span>Cleaned 47</span><span>Pending 62</span></div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;min-width:520px;">
+            <thead><tr style="background:#F4F6FA;"><th style="text-align:left;padding:9px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Attendant</th><th style="text-align:left;padding:9px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Zone</th><th style="text-align:right;padding:9px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Assigned</th><th style="text-align:right;padding:9px 12px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Done</th><th style="text-align:left;padding:9px 20px;border-bottom:1px solid #E3E8EF;font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Progress</th></tr></thead>
+            <tbody>
+              <tr style="height:44px;"><td style="padding:0 20px;border-bottom:1px solid #E3E8EF;font-size:13px;font-weight:500;">Mitu Akter</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Floor 2</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">18</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">16</td><td style="padding:0 20px;border-bottom:1px solid #E3E8EF;"><span style="display:block;height:6px;border-radius:999px;background:#E3E8EF;overflow:hidden;"><span style="display:block;width:89%;height:6px;background:#00A99D;"></span></span></td></tr>
+              <tr style="height:44px;"><td style="padding:0 20px;border-bottom:1px solid #E3E8EF;font-size:13px;font-weight:500;">Shahin Alam</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#667085;">Floor 3</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">18</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">11</td><td style="padding:0 20px;border-bottom:1px solid #E3E8EF;"><span style="display:block;height:6px;border-radius:999px;background:#E3E8EF;overflow:hidden;"><span style="display:block;width:61%;height:6px;background:#00A99D;"></span></span></td></tr>
+              <tr style="height:44px;"><td style="padding:0 20px;border-bottom:1px solid #E3E8EF;font-size:13px;font-weight:500;">Rehana Parvin</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;color:#8A5A0B;font-weight:500;">Unassigned</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">0</td><td style="padding:0 12px;border-bottom:1px solid #E3E8EF;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">0</td><td style="padding:0 20px;border-bottom:1px solid #E3E8EF;"><span style="font-size:12px;font-weight:600;color:#1A4D8F;">Assign 12 rooms</span></td></tr>
+              <tr style="height:44px;"><td style="padding:0 20px;font-size:13px;font-weight:500;">Jahangir Khan</td><td style="padding:0 12px;font-size:13px;color:#667085;">Floors 4&ndash;5</td><td style="padding:0 12px;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">22</td><td style="padding:0 12px;font-size:13px;text-align:right;font-variant-numeric:tabular-nums;">22</td><td style="padding:0 20px;"><span style="display:block;height:6px;border-radius:999px;background:#E3E8EF;overflow:hidden;"><span style="display:block;width:100%;height:6px;background:#00A99D;"></span></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:40px 0 0;margin-top:40px;">
+    <div style="display:flex;align-items:baseline;gap:16px;"><span style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">09</span><h2 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Guest profile</h2></div>
+    <div style="background:#FFFFFF;border:1px solid #E3E8EF;border-radius:10px;margin-top:20px;overflow:hidden;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.10);">
+      <div style="padding:20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #E3E8EF;">
+        <span style="width:56px;height:56px;border-radius:999px;background:#E8F0FA;color:#12325C;display:inline-flex;align-items:center;justify-content:center;font-size:18px;font-weight:600;flex:none;">RC</span>
+        <div style="flex:1;min-width:200px;">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><h3 style="font-size:22px;line-height:30px;font-weight:600;margin:0;">Rashida Chowdhury</h3><span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;background:#1A4D8F;color:#FFFFFF;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.4px;">VIP</span><span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;background:#FEF4E5;color:#8A5A0B;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:0.4px;">GOLD</span></div>
+          <div style="font-size:13px;color:#667085;margin-top:3px;"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">G-00418</span> &middot; Dhaka, Bangladesh &middot; +880 1711 884 210</div>
+        </div>
+        <div style="display:flex;gap:24px;flex-wrap:wrap;">
+          <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Stays</div><div style="font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;">11</div></div>
+          <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Lifetime value</div><div style="font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 482,600</div></div>
+          <div><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Avg. nightly</div><div style="font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;">৳ 10,240</div></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;">
+        <div style="padding:20px;border-right:1px solid #E3E8EF;">
+          <div style="font-size:15px;font-weight:600;">Stay history</div>
+          <div style="display:grid;gap:10px;margin-top:12px;font-size:13px;">
+            <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="font-variant-numeric:tabular-nums;">14&ndash;19 Sep 2026</span><span style="color:#667085;">Room 203 &middot; 5N</span></div>
+            <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="font-variant-numeric:tabular-nums;">02&ndash;05 Mar 2026</span><span style="color:#667085;">Suite 3 &middot; 3N</span></div>
+            <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E3E8EF;padding-bottom:8px;"><span style="font-variant-numeric:tabular-nums;">18&ndash;22 Dec 2025</span><span style="color:#667085;">Room 412 &middot; 4N</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="font-variant-numeric:tabular-nums;">09&ndash;11 Aug 2025</span><span style="color:#667085;">Room 208 &middot; 2N</span></div>
+          </div>
+        </div>
+        <div style="padding:20px;border-right:1px solid #E3E8EF;">
+          <div style="font-size:15px;font-weight:600;">Preferences &amp; tags</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;">High floor</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;">Away from lift</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;">Sea view</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;">No feather pillow</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 10px;background:#F1F3F7;color:#475467;border-radius:999px;font-size:12px;font-weight:500;">Late checkout</span>
+          </div>
+          <div style="font-size:15px;font-weight:600;margin-top:20px;">KYC</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding:10px 12px;border:1px solid #E3E8EF;border-radius:6px;"><div><div style="font-size:13px;font-weight:500;">Passport BX1148832</div><div style="font-size:12px;color:#667085;">Expires 04 Mar 2031</div></div><span style="display:inline-flex;align-items:center;gap:5px;height:22px;padding:0 8px;background:#E0F5F3;color:#00635C;border-radius:999px;font-size:11px;font-weight:600;flex:none;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Verified</span></div>
+        </div>
+        <div style="padding:20px;">
+          <div style="font-size:15px;font-weight:600;">Communication log</div>
+          <div style="display:grid;gap:12px;margin-top:12px;">
+            <div style="display:flex;gap:10px;"><span style="width:8px;height:8px;border-radius:999px;background:#00A99D;flex:none;margin-top:6px;"></span><div><div style="font-size:13px;font-weight:500;">Pre-arrival WhatsApp sent</div><div style="font-size:12px;color:#667085;">16 Sep 18:00 &middot; delivered</div></div></div>
+            <div style="display:flex;gap:10px;"><span style="width:8px;height:8px;border-radius:999px;background:#3B82F6;flex:none;margin-top:6px;"></span><div><div style="font-size:13px;font-weight:500;">Booking confirmation email</div><div style="font-size:12px;color:#667085;">02 Sep 11:24 &middot; opened</div></div></div>
+            <div style="display:flex;gap:10px;"><span style="width:8px;height:8px;border-radius:999px;background:#E3E8EF;flex:none;margin-top:6px;"></span><div><div style="font-size:13px;font-weight:500;">Post-stay survey</div><div style="font-size:12px;color:#667085;">Scheduled 20 Sep</div></div></div>
+          </div>
+          <div style="font-size:15px;font-weight:600;margin-top:20px;">Notes</div>
+          <div style="font-size:13px;line-height:20px;color:#667085;margin-top:8px;padding:10px 12px;background:#F4F6FA;border-radius:6px;">Travels with one child. Prefers early breakfast. Company account with BRAC Bank for room only.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:2px solid #1C2536;padding:32px 0 0;margin-top:40px;">
+    <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;">
+      <div style="max-width:60ch;"><div style="font-size:12px;font-weight:500;letter-spacing:0.4px;text-transform:uppercase;color:#667085;">Next</div><h3 style="font-size:18px;line-height:26px;font-weight:600;margin:8px 0 0;">Stage 5 &mdash; owner portal</h3><p style="font-size:14px;line-height:22px;color:#667085;margin:8px 0 0;">Calmer, more spacious, private-banking register: holdings, distributions, statement detail, report builder and documents.</p></div>
+      <div style="font-size:13px;line-height:20px;color:#667085;"><div><a href="01 Tokens &amp; Components.dc.html">01 &middot; Tokens</a></div><div><a href="02 Navigation Shell.dc.html">02 &middot; Shell</a></div><div><a href="03 PMS Dashboard.dc.html">03 &middot; Dashboard</a></div><div style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#1C2536;">04 &middot; PMS screens</div><div><a href="05 Owner Portal.dc.html">05 &middot; Owner portal</a></div></div>
+    </div>
+  </section>
+</div>
+</x-dc>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1A4D8F"/><text x="30" y="48" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">04</text><text x="30" y="64" font-family="Inter, sans-serif" font-size="8" font-weight="500" letter-spacing="0.8" fill="#8FBFF0">PMS</text></svg>
+</template>
+
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { wStep: 1, cStep: 1, oStep: 1, tab: 0, split: false };
+
+  stepper(labels, current) {
+    return labels.map((label, i) => {
+      const n = i + 1;
+      const done = n < current, active = n === current;
+      return {
+        num: done ? '\u2713' : String(n),
+        label,
+        bg: done ? '#00A99D' : active ? '#1A4D8F' : '#FFFFFF',
+        fg: done || active ? '#FFFFFF' : '#667085',
+        bd: done ? '#00A99D' : active ? '#1A4D8F' : '#C6CFDB',
+        color: active ? '#12325C' : done ? '#1C2536' : '#667085',
+        weight: active ? '600' : '400',
+        line: n < labels.length ? (done ? '#00A99D' : '#E3E8EF') : 'transparent'
+      };
+    });
+  }
+
+  renderVals() {
+    const w = this.state.wStep, c = this.state.cStep, o = this.state.oStep, tab = this.state.tab;
+    const tabLabels = ['Stay Details', 'Rooms & Rates', 'Folio', 'Guest & KYC', 'Communications', 'History'];
+
+    const reservations = [
+      { ref: 'RSV-260917-0412', guest: 'Aminul Rahman', type: 'Deluxe King', arr: '17 Sep', dep: '20 Sep', nts: 3, src: 'Direct', status: 'Arrival Due', pillBg: '#E5EFFE', pillFg: '#1D5DC0', dot: '#3B82F6', bal: '\u09f3 18,900.00', balFg: '#1C2536' },
+      { ref: 'RSV-260917-0413', guest: 'Nusrat Jahan', type: 'Executive Suite', arr: '17 Sep', dep: '22 Sep', nts: 5, src: 'Corporate', status: 'Confirmed', pillBg: '#E8F0FA', pillFg: '#12325C', dot: '#1A4D8F', bal: '\u09f3 0.00', balFg: '#98A2B3' },
+      { ref: 'RSV-260917-0418', guest: 'Rashida Chowdhury', type: 'Deluxe King', arr: '17 Sep', dep: '19 Sep', nts: 2, src: 'Booking.com', status: 'Arrival Due', pillBg: '#E5EFFE', pillFg: '#1D5DC0', dot: '#3B82F6', bal: '\u09f3 12,400.00', balFg: '#C13333' },
+      { ref: 'RSV-260918-0431', guest: 'Kamrul Hossain', type: 'Twin Standard', arr: '18 Sep', dep: '21 Sep', nts: 3, src: 'Agoda', status: 'Confirmed', pillBg: '#E8F0FA', pillFg: '#12325C', dot: '#1A4D8F', bal: '\u09f3 9,600.00', balFg: '#1C2536' },
+      { ref: 'RSV-260916-0388', guest: 'Tanvir Hasan', type: 'Twin Standard', arr: '16 Sep', dep: '17 Sep', nts: 1, src: 'Walk-in', status: 'No Show', pillBg: '#FBE9E9', pillFg: '#A32828', dot: '#D64545', bal: '\u09f3 6,200.00', balFg: '#C13333' },
+      { ref: 'RSV-260914-0355', guest: 'Farhana Akter', type: 'Garden Villa', arr: '14 Sep', dep: '19 Sep', nts: 5, src: 'Direct', status: 'In House', pillBg: '#E0F5F3', pillFg: '#00635C', dot: '#00A99D', bal: '\u09f3 31,250.00', balFg: '#1C2536' }
+    ];
+
+    const folioGroups = [
+      { name: 'Room', total: '\u09f3 42,000.00', lines: [
+        { date: '14 Sep', desc: 'Deluxe King \u00b7 room charge', qty: 1, amt: '8,400.00' },
+        { date: '15 Sep', desc: 'Deluxe King \u00b7 room charge', qty: 1, amt: '8,400.00' },
+        { date: '16 Sep', desc: 'Deluxe King \u00b7 room charge', qty: 1, amt: '8,400.00' },
+        { date: '17 Sep', desc: 'Deluxe King \u00b7 room charge', qty: 1, amt: '8,400.00' },
+        { date: '18 Sep', desc: 'Deluxe King \u00b7 room charge', qty: 1, amt: '8,400.00' }
+      ] },
+      { name: 'Food & beverage', total: '\u09f3 6,480.00', lines: [
+        { date: '15 Sep', desc: 'Sea Breeze Restaurant \u00b7 dinner', qty: 2, amt: '3,280.00' },
+        { date: '17 Sep', desc: 'Room service \u00b7 breakfast', qty: 3, amt: '3,200.00' }
+      ] },
+      { name: 'Spa', total: '\u09f3 3,200.00', lines: [
+        { date: '16 Sep', desc: 'Aroma massage \u00b7 60 min', qty: 1, amt: '3,200.00' }
+      ] },
+      { name: 'Minibar & laundry', total: '\u09f3 500.00', lines: [
+        { date: '16 Sep', desc: 'Minibar \u00b7 water, juice', qty: 3, amt: '260.00' },
+        { date: '18 Sep', desc: 'Laundry \u00b7 2 shirts', qty: 2, amt: '240.00' }
+      ] }
+    ];
+
+    const rateDays = [];
+    for (let i = 1; i <= 21; i++) {
+      const weekend = i % 7 === 5 || i % 7 === 6;
+      const cta = i === 18 || i === 19;
+      const sold = i === 20;
+      rateDays.push({
+        day: String(i),
+        rate: sold ? '\u2014' : (weekend ? '\u09f3 11,200' : '\u09f3 9,800'),
+        avail: sold ? 'Sold out' : (weekend ? (i % 3) + 2 + ' left' : (i % 5) + 6 + ' left'),
+        flag: cta ? 'CTA' : (sold ? 'STOP' : ''),
+        bg: sold ? '#FBE9E9' : cta ? '#FEF4E5' : '#FFFFFF',
+        bd: sold ? '#D64545' : cta ? '#F5A623' : '#E3E8EF',
+        numFg: sold ? '#A32828' : '#1C2536',
+        flagFg: cta ? '#8A5A0B' : '#A32828',
+        rateFg: sold ? '#98A2B3' : '#1C2536',
+        availFg: sold ? '#A32828' : '#667085'
+      });
+    }
+
+    return {
+      reservations, folioGroups, rateDays,
+
+      detailTabs: tabLabels.map((label, i) => ({
+        label,
+        weight: i === tab ? '600' : '400',
+        color: i === tab ? '#12325C' : '#667085',
+        bar: i === tab ? '#1A4D8F' : 'transparent',
+        onClick: () => this.setState({ tab: i })
+      })),
+      isStay: tab === 0,
+      isKyc: tab === 3,
+      isOther: tab !== 0 && tab !== 3,
+      tabName: tabLabels[tab],
+
+      wizardSteps: this.stepper(['Dates & occupancy', 'Room & rate', 'Guest details', 'Confirm & deposit'], w),
+      wStepLabel: String(w),
+      w1: w === 1, w2: w === 2, w3: w === 3, w4: w === 4,
+      wDone: w === 4 && this.state.wDone === true,
+      wNextLabel: w < 4 ? 'Continue' : 'Create reservation',
+      wNext: () => w < 4 ? this.setState({ wStep: w + 1 }) : this.setState({ wDone: true }),
+      wBack: () => this.setState({ wStep: Math.max(1, w - 1), wDone: false }),
+      wReset: () => this.setState({ wStep: 1, wDone: false }),
+
+      checkinSteps: this.stepper(['Assign room', 'KYC documents', 'Deposit', 'Confirm'], c),
+      cStepLabel: String(c),
+      c1: c === 1, c2: c === 2, c3: c === 3, c4: c === 4,
+      cNextLabel: c === 3 ? 'Complete check-in' : c === 4 ? 'Done' : 'Continue',
+      cNext: () => this.setState({ cStep: Math.min(4, c + 1) }),
+      cBack: () => this.setState({ cStep: Math.max(1, c - 1) }),
+      cReset: () => this.setState({ cStep: 1 }),
+
+      checkoutSteps: this.stepper(['Folio review', 'Settle balance', 'Invoice & PDF'], o),
+      o1: o === 1, o2: o === 2, o3: o === 3,
+      oBalance: o === 3 ? '0.00' : '42,750.00',
+      oNextLabel: o === 1 ? 'Settle balance' : o === 2 ? 'Post invoice' : 'Close folio',
+      oNext: () => this.setState({ oStep: Math.min(3, o + 1) }),
+      oBack: () => this.setState({ oStep: Math.max(1, o - 1) }),
+      splitOn: this.state.split,
+      splitBg: this.state.split ? '#1A4D8F' : '#FFFFFF',
+      splitFg: this.state.split ? '#FFFFFF' : '#1C2536',
+      oSplitToggle: () => this.setState({ split: !this.state.split })
+    };
+  }
+}
+</script>
+</body>
+</html>

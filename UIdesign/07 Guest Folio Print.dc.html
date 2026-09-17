@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="./doc-page.js"></script>
+<style>
+  body { margin:0; font-family:Inter,Roboto,system-ui,sans-serif; color:#1C2536; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4,th { font-family:Inter,Roboto,system-ui,sans-serif; }
+  a { color:#1A4D8F; text-decoration:none; }
+  a:hover { color:#12325C; }
+  doc-page:not(:defined) { visibility:hidden; }
+</style>
+</helmet>
+
+<doc-page size="a4" margin="14mm">
+
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12mm;border-bottom:2px solid #1C2536;padding-bottom:4mm;">
+    <div style="display:flex;gap:4mm;align-items:flex-start;">
+      <div style="width:14mm;height:14mm;background:#1A4D8F;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:13pt;font-weight:700;letter-spacing:-0.5px;flex:none;">SP</div>
+      <div>
+        <div style="font-size:14pt;font-weight:700;letter-spacing:-0.3px;line-height:1.1;">SEA PEARL RESORT</div>
+        <div style="font-size:8pt;line-height:1.45;color:#475467;margin-top:1.2mm;">Inani Beach Road, Cox&rsquo;s Bazar 4700, Bangladesh<br>+880 341 52200 &middot; folio@seapearl.com</div>
+        <div style="font-size:8pt;line-height:1.45;color:#1C2536;margin-top:1.2mm;font-family:'JetBrains Mono',ui-monospace,monospace;">BIN 004212938-0201 &middot; TIN 481 992 337 118</div>
+      </div>
+    </div>
+    <div style="text-align:right;flex:none;">
+      <div style="font-size:9pt;font-weight:600;letter-spacing:1px;text-transform:uppercase;">Tax Invoice &amp; Guest Folio</div>
+      <div style="font-size:8pt;color:#475467;margin-top:1.2mm;line-height:1.55;">
+        <span style="font-family:'JetBrains Mono',ui-monospace,monospace;color:#1C2536;font-size:9pt;">INV-2026-09-0418</span><br>
+        Folio <span style="font-family:'JetBrains Mono',ui-monospace,monospace;">F-04180</span><br>
+        Issued 19 September 2026, 11:42
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7mm;padding:4mm 0;border-bottom:1px solid #E3E8EF;">
+    <div>
+      <div style="font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;">Guest</div>
+      <div style="font-size:10.5pt;font-weight:600;margin-top:1.2mm;">Rashida Chowdhury</div>
+      <div style="font-size:8.5pt;line-height:1.45;color:#475467;margin-top:1mm;">House 14, Road 7, Dhanmondi<br>Dhaka 1205, Bangladesh &middot; +880 1711 884 210</div>
+    </div>
+    <div>
+      <div style="font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;">Stay</div>
+      <div style="display:grid;gap:0.8mm;margin-top:1.2mm;font-size:8.5pt;">
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Room</span><span style="font-weight:600;font-variant-numeric:tabular-nums;">203 &middot; Deluxe King</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Arrival</span><span style="font-variant-numeric:tabular-nums;">14 Sep 2026, 16:12</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Departure</span><span style="font-variant-numeric:tabular-nums;">19 Sep 2026, 11:40</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Nights &middot; guests</span><span style="font-variant-numeric:tabular-nums;">5 &middot; 2 adults, 1 child</span></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;">Booking</div>
+      <div style="display:grid;gap:0.8mm;margin-top:1.2mm;font-size:8.5pt;">
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Reference</span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">RSV-260917-0418</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Source</span><span>Booking.com</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Rate plan</span><span>OTA Flexible</span></div>
+        <div style="display:flex;justify-content:space-between;"><span style="color:#667085;">Guest ID &middot; cashier</span><span><span style="font-family:'JetBrains Mono',ui-monospace,monospace;">G-00418</span> &middot; F. Karim</span></div>
+      </div>
+    </div>
+  </div>
+
+  <table style="width:100%;border-collapse:collapse;margin-top:4mm;">
+    <thead>
+      <tr>
+        <th style="text-align:left;padding:1.6mm 0;border-bottom:1.5px solid #1C2536;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;width:22mm;">Date</th>
+        <th style="text-align:left;padding:1.6mm 0;border-bottom:1.5px solid #1C2536;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">Description</th>
+        <th style="text-align:right;padding:1.6mm 0;border-bottom:1.5px solid #1C2536;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;width:13mm;">Qty</th>
+        <th style="text-align:right;padding:1.6mm 0;border-bottom:1.5px solid #1C2536;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;width:23mm;">Unit</th>
+        <th style="text-align:right;padding:1.6mm 0;border-bottom:1.5px solid #1C2536;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;width:27mm;">Amount BDT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td colspan="5" style="padding:2.4mm 0 1mm;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;">Accommodation</td></tr>
+      <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">14&ndash;18 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Deluxe King &middot; room charge, 5 nights</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">5</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">8,400.00</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">42,000.00</td></tr>
+
+      <tr><td colspan="5" style="padding:2.4mm 0 1mm;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;">Food &amp; beverage</td></tr>
+      <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">15 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Sea Breeze Restaurant &middot; dinner</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">2</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">1,640.00</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">3,280.00</td></tr>
+      <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">17 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Room service &middot; breakfast</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">3</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">1,066.67</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">3,200.00</td></tr>
+
+      <tr><td colspan="5" style="padding:2.4mm 0 1mm;font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;">Spa, minibar &amp; laundry</td></tr>
+      <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">16 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Aroma massage &middot; 60 minutes</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">1</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">3,200.00</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">3,200.00</td></tr>
+      <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">16&ndash;18 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Minibar and laundry</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">5</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">100.00</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">500.00</td></tr>
+    </tbody>
+  </table>
+
+  <div style="display:grid;grid-template-columns:1fr 76mm;gap:8mm;margin-top:4mm;">
+    <div>
+      <div style="font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;">Tax breakdown</div>
+      <table style="width:100%;border-collapse:collapse;margin-top:1.5mm;">
+        <tbody>
+          <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Value added tax</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;color:#475467;">15% of 52,180.00</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">7,827.00</td></tr>
+          <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Service charge</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;color:#475467;">10% of 52,180.00</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">5,218.00</td></tr>
+          <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Tourism development levy</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;color:#475467;">1% of 52,180.00</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">521.80</td></tr>
+        </tbody>
+      </table>
+
+      <div style="font-size:7.5pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:#667085;margin-top:4mm;">Payments received</div>
+      <table style="width:100%;border-collapse:collapse;margin-top:1.5mm;">
+        <tbody>
+          <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;width:22mm;">02 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Deposit &middot; card &middot; ref 8811-A</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">12,100.00</td></tr>
+          <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">14 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Check-in balance &middot; card &middot; ref 9142-C</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">10,896.80</td></tr>
+          <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">19 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Company portion &middot; city ledger</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">30,850.00</td></tr>
+          <tr><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;font-variant-numeric:tabular-nums;color:#475467;">19 Sep</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;">Guest portion &middot; bKash &middot; ref BK-40118</td><td style="padding:1.2mm 0;border-bottom:1px solid #F1F3F7;font-size:8.5pt;text-align:right;font-variant-numeric:tabular-nums;">11,900.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <div style="border:1.5px solid #1C2536;padding:3.5mm;">
+        <div style="display:flex;justify-content:space-between;font-size:8.5pt;padding-bottom:1.2mm;"><span style="color:#475467;">Subtotal</span><span style="font-variant-numeric:tabular-nums;">52,180.00</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:8.5pt;padding-bottom:1.2mm;"><span style="color:#475467;">VAT 15%</span><span style="font-variant-numeric:tabular-nums;">7,827.00</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:8.5pt;padding-bottom:1.2mm;"><span style="color:#475467;">Service charge 10%</span><span style="font-variant-numeric:tabular-nums;">5,218.00</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:8.5pt;padding-bottom:1.5mm;border-bottom:1px solid #E3E8EF;"><span style="color:#475467;">Tourism levy 1%</span><span style="font-variant-numeric:tabular-nums;">521.80</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:10pt;font-weight:600;padding:1.5mm 0;"><span>Total</span><span style="font-variant-numeric:tabular-nums;">65,746.80</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:8.5pt;padding-bottom:1.5mm;border-bottom:1.5px solid #1C2536;"><span style="color:#475467;">Payments applied</span><span style="font-variant-numeric:tabular-nums;">&minus; 65,746.80</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding-top:2.5mm;"><span style="font-size:9pt;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;">Balance due</span><span style="font-size:14pt;font-weight:700;font-variant-numeric:tabular-nums;">BDT 0.00</span></div>
+        <div style="font-size:7.5pt;color:#475467;margin-top:1.5mm;">Settled in full. No further amount is payable.</div>
+      </div>
+      <div style="display:flex;gap:3.5mm;align-items:flex-start;margin-top:3.5mm;">
+        <div style="width:18mm;height:18mm;background:#1C2536;flex:none;"></div>
+        <div style="font-size:7.5pt;line-height:1.5;color:#475467;">Scan for the digital copy, valid 24 months. Quote the invoice number for a reissue.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:5mm;padding-top:3.5mm;border-top:1px solid #E3E8EF;display:grid;grid-template-columns:1fr 1fr 1fr;gap:7mm;">
+    <div style="font-size:7pt;line-height:1.5;color:#667085;">
+      <div style="font-weight:600;color:#1C2536;margin-bottom:1mm;">Policy</div>
+      Check-out 12:00. Late departure to 18:00 is charged at 50% of the daily rate. All charges are in Bangladeshi Taka and include the taxes itemised above. Disputes must be raised within 30 days of issue.
+    </div>
+    <div style="font-size:7pt;line-height:1.5;color:#667085;">
+      <div style="font-weight:600;color:#1C2536;margin-bottom:1mm;">Guest signature</div>
+      <div style="height:9mm;border-bottom:1px solid #98A2B3;"></div>
+      <div style="margin-top:1.2mm;">I confirm the charges above are correct.</div>
+    </div>
+    <div style="font-size:7pt;line-height:1.5;color:#667085;text-align:right;">
+      <div style="font-weight:600;color:#1C2536;margin-bottom:1mm;">Thank you for staying with us</div>
+      Sea Pearl Resort, Cox&rsquo;s Bazar<br>
+      <span style="font-family:'JetBrains Mono',ui-monospace,monospace;">INV-2026-09-0418</span><br>
+      This is a computer-generated tax invoice.
+    </div>
+  </div>
+</doc-page>
+</x-dc>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1A4D8F"/><text x="30" y="48" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">07</text><text x="30" y="64" font-family="Inter, sans-serif" font-size="8" font-weight="500" letter-spacing="0.8" fill="#8FBFF0">FOLIO</text></svg>
+</template>
+
+</body>
+</html>
