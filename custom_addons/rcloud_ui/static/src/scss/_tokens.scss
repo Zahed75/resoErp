@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Resort Cloud design tokens (spec 2.2). No hard-coded hex values in
+   components — always go through these variables.
+   ========================================================================== */
+
+:root {
+    --rc-primary: #1A4D8F;
+    --rc-primary-dark: #12325C;
+    --rc-accent: #00A99D;
+    --rc-warn: #F5A623;
+    --rc-danger: #D64545;
+    --rc-surface: #FFFFFF;
+    --rc-surface-2: #F8FAFD;
+    --rc-bg: #F4F6FA;
+    --rc-border: #E3E8EF;
+    --rc-text: #1C2536;
+    --rc-text-muted: #667085;
+    --rc-shadow-1: 0 1px 2px rgba(16, 24, 40, .06), 0 1px 3px rgba(16, 24, 40, .10);
+    --rc-shadow-2: 0 4px 8px rgba(16, 24, 40, .06), 0 2px 4px rgba(16, 24, 40, .08);
+    --rc-space-1: 4px;  --rc-space-2: 8px;  --rc-space-3: 12px;
+    --rc-space-4: 16px; --rc-space-6: 24px; --rc-space-8: 32px;
+    --rc-radius: 10px;
+    --rc-radius-sm: 6px;
+    --rc-font: 'Inter', 'Roboto', -apple-system, 'Segoe UI', sans-serif;
+    --rc-ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+[data-rc-theme="dark"] {
+    --rc-surface: #1C2536;
+    --rc-surface-2: #232F44;
+    --rc-bg: #121826;
+    --rc-border: #33405A;
+    --rc-text: #E7ECF3;
+    --rc-text-muted: #94A3B8;
+    --rc-primary: #4C86D8;
+    --rc-primary-dark: #7FA9E4;
+    --rc-shadow-1: 0 1px 2px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .4);
+    --rc-shadow-2: 0 4px 8px rgba(0, 0, 0, .35), 0 2px 4px rgba(0, 0, 0, .4);
+}

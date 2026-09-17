@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_rcloud_dashboard" model="ir.actions.client">
+        <field name="name">PMS Dashboard</field>
+        <field name="tag">rcloud_pms_dashboard</field>
+    </record>
+
+    <!-- Default landing: PMS dashboard (spec 2.4) -->
+    <record id="base.user_admin" model="res.users">
+        <field name="action_id" ref="action_rcloud_dashboard"/>
+    </record>
+
+    <record id="ir_cron_rcloud_daily_stats" model="ir.cron">
+        <field name="name">Resort Cloud: compute daily stats</field>
+        <field name="model_id" ref="model_rcloud_pms_daily_stat"/>
+        <field name="state">code</field>
+        <field name="code">model.cron_nightly()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="nextcall" eval="DateTime.now().replace(hour=1, minute=0, second=0) + timedelta(days=1)"/>
+        <field name="active" eval="True"/>
+    </record>
+
+    <menuitem id="menu_rcloud_dashboard" name="Dashboard"
+        parent="rcloud_base.menu_rcloud_root"
+        action="action_rcloud_dashboard" sequence="1"/>
+</odoo>

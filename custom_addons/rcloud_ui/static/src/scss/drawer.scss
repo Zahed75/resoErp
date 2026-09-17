@@ -1,0 +1,94 @@
+/* Hamburger app drawer (spec 2.3-A) */
+.rc-drawer-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: var(--rc-radius-sm);
+    border: 1px solid transparent;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+
+    &:hover { background: var(--rc-surface-2, rgba(0, 0, 0, .05)); }
+}
+
+.rc-drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(16, 24, 40, .45);
+    z-index: 1040;
+}
+
+.rc-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    background: var(--rc-surface, #fff);
+    color: var(--rc-text, #1C2536);
+    box-shadow: var(--rc-shadow-2, 0 8px 24px rgba(0,0,0,.18));
+    z-index: 1045;
+    display: flex;
+    flex-direction: column;
+    animation: rc-slide-in .2s var(--rc-ease, ease-out);
+    font-family: var(--rc-font, sans-serif);
+
+    .rc-drawer-search {
+        padding: 12px;
+        border-bottom: 1px solid var(--rc-border, #E3E8EF);
+
+        input {
+            width: 100%;
+            border: 1px solid var(--rc-border, #E3E8EF);
+            border-radius: var(--rc-radius-sm, 6px);
+            background: var(--rc-surface-2, #F8FAFD);
+            color: inherit;
+            padding: 8px 10px;
+            font-size: .85rem;
+        }
+    }
+
+    .rc-drawer-body { flex: 1; overflow-y: auto; padding: 8px 0; }
+
+    .rc-drawer-group {
+        padding: 8px 16px 4px;
+        font-size: .68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        color: var(--rc-text-muted, #667085);
+    }
+
+    .rc-drawer-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 9px 16px;
+        border: none;
+        background: transparent;
+        color: inherit;
+        font-size: .86rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: left;
+
+        img { width: 22px; height: 22px; border-radius: 5px; }
+        &:hover { background: var(--rc-surface-2, #F4F6FA); }
+    }
+
+    .rc-drawer-foot {
+        padding: 10px 16px;
+        border-top: 1px solid var(--rc-border, #E3E8EF);
+        font-size: .72rem;
+        color: var(--rc-text-muted, #667085);
+    }
+}
+
+@keyframes rc-slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
