@@ -81,7 +81,12 @@ export class RcloudDrawerToggle extends Component {
     setup() {
         this.menu = useService("menu");
         this.action = useService("action");
-        this.state = useState({ open: false, filter: "" });
+        this.state = useState({
+            open: false,
+            filter: "",
+            expanded: null,   // app id currently expanded
+            activeMenu: parseInt(localStorage.getItem("rcloud.drawer.menu") || "0"),
+        });
         useExternalListener(document, "keydown", (ev) => {
             if (ev.key === "Escape") { this.state.open = false; }
         });
@@ -110,17 +115,43 @@ export class RcloudDrawerToggle extends Component {
     }
 
     get grouped() {
-        const apps = this.apps;
-        const groups = GROUPS.map((g) => ({
-            label: g.label,
-            apps: apps.filter((a) => g.match.test(a.name)),
-        })).filter((g) => g.apps.length);
-        const used = new Set(groups.flatMap((g) => g.apps.map((a) => a.name)));
-        const rest = apps.filter((a) => !used.has(a.name));
-        if (rest.length) {
-            groups.push({ label: "More", apps: rest });
-        }
-        return groups;
+        return []; // superseded by per-app expandable rows
+    }
+
+    hasChildren(app) {
+        const tree = this.menu.getMenuAsTree(app.id);
+        return !!(tree.childrenTree && tree.childrenTree.length);
+    }
+
+    isExpanded(app) {
+        return this.state.expanded === app.id;
+    }
+
+    toggleExpand(app) {
+        this.state.expanded = this.isExpanded(app) ? null : app.id;
+    }
+
+    menuTree(app) {
+        const tree = this.menu.getMenuAsTree(app.id);
+        return (tree.childrenTree || []).map((group) => ({
+            id: group.id,
+            label: group.name,
+            items: (group.childrenTree || []).map((m) => ({
+                id: m.id, name: m.name,
+            })),
+        })).filter((g) => g.items.length);
+    }
+
+    isActive(item) {
+        return item.id === this.state.activeMenu;
+    }
+
+    async openMenu(item, app) {
+        this.state.activeMenu = item.id;
+        localStorage.setItem("rcloud.drawer.menu", String(item.id));
+        const full = this.menu.getMenu(item.id);
+        this.state.open = false;
+        await this.menu.selectMenu(full);
     }
 
     toggle() {

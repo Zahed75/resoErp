@@ -1,36 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <!-- Slot the persistent PMS sidebar next to the action manager -->
-    <t t-name="rcloud_ui.WebClientExtension" t-inherit="web.WebClient" t-inherit-mode="extension">
-        <xpath expr="//ActionContainer" position="replace">
-            <div class="rc-body">
-                <RcloudSidebar t-if="!state.fullscreen"/>
-                <ActionContainer/>
-            </div>
-        </xpath>
-    </t>
-
-    <t t-name="rcloud_ui.Sidebar">
-        <div t-attf-class="rc-sidebar {{isPms ? '' : 'rc-sidebar--hidden'}} {{state.collapsed ? 'rc-sidebar--rail' : ''}}" t-if="isPms">
-            <button class="rc-sidebar-toggle" t-on-click="toggle" t-att-aria-label="state.collapsed ? 'Expand sidebar' : 'Collapse sidebar'">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path t-if="!state.collapsed" d="M15 6l-6 6 6 6"/>
-                    <path t-if="state.collapsed" d="M9 6l6 6-6 6"/>
-                </svg>
-            </button>
-            <div class="rc-sidebar-groups">
-                <t t-foreach="groups" t-as="g" t-key="g.id">
-                    <div class="rc-sidebar-group" t-if="!state.collapsed" t-esc="g.label"/>
-                    <t t-foreach="g.items" t-as="item" t-key="item.id">
-                        <button t-attf-class="rc-sidebar-item {{item.active ? 'active' : ''}}"
-                                t-att-title="state.collapsed ? item.name : ''"
-                                t-on-click="() => this.openMenu(item)">
-                            <span class="rc-sidebar-dot" t-if="state.collapsed"/>
-                            <t t-esc="item.name" t-if="!state.collapsed"/>
-                        </button>
-                    </t>
-                </t>
-            </div>
-        </div>
-    </t>
+    <!-- Persistent sidebar retired: navigation merged into the single
+         global app drawer (expandable app rows). -->
+    <t t-name="rcloud_ui.SidebarRetired"><t t-if="false"/></t>
 </templates>

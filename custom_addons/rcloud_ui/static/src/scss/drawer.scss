@@ -141,3 +141,49 @@
 
 /* Our hamburger replaces the enterprise app-grid glyph — hide it */
 .o_menu_toggle_icon { display: none !important; }
+
+/* Expandable app rows — main menu with dropdown submenus */
+.rc-drawer .rc-drawer-row { display: flex; align-items: center; gap: 2px; }
+.rc-drawer .rc-drawer-row .rc-drawer-item { flex: 1; }
+.rc-drawer .rc-drawer-row.expanded .rc-drawer-item {
+    background: var(--rc-primary-light, #E8F0FA);
+    color: var(--rc-primary-dark, #12325C);
+    font-weight: 600;
+}
+.rc-drawer .rc-drawer-expander {
+    width: 28px; height: 28px; flex-shrink: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    border: none; border-radius: var(--rc-radius-sm, 6px);
+    background: transparent; color: var(--rc-text-muted, #667085);
+    cursor: pointer;
+    &:hover { background: var(--rc-bg, #F4F6FA); color: var(--rc-text, #1C2536); }
+}
+.rc-drawer .rc-drawer-label { flex: 1; text-align: left; }
+.rc-drawer .rc-drawer-item { justify-content: flex-start; gap: 10px; }
+.rc-drawer .rc-drawer-submenu {
+    margin: 2px 0 6px 34px;
+    padding-left: 10px;
+    border-left: 2px solid var(--rc-border, #E3E8EF);
+    animation: rc-submenu-in .2s var(--rc-ease, ease-out);
+}
+@keyframes rc-submenu-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.rc-drawer .rc-drawer-subitem {
+    display: block; width: 100%;
+    padding: 7px 10px;
+    border: none; background: transparent;
+    color: var(--rc-text-secondary, #475467);
+    font-family: var(--rc-font, sans-serif);
+    font-size: 13px; font-weight: 500;
+    border-radius: var(--rc-radius-sm, 6px);
+    cursor: pointer; text-align: left;
+    &:hover { background: var(--rc-hover-row, #F7F9FC); color: var(--rc-text, #1C2536); }
+    &.active {
+        background: var(--rc-primary-light, #E8F0FA);
+        box-shadow: inset 3px 0 0 var(--rc-primary, #1A4D8F);
+        color: var(--rc-primary-dark, #12325C);
+        font-weight: 600;
+    }
+}
