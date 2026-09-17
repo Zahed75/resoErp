@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Reso backend re-theme — applies the UIdesign token system across the
+   whole Odoo web client (forms, lists, buttons, statusbars). No core
+   modification: pure CSS variable overrides + scoped rules.
+   ========================================================================== */
+
+.o_web_client {
+    /* palette takeover */
+    --primary: #1A4D8F;
+    --primary-btn: #1A4D8F;
+    --primary-btn-hover: #12325C;
+    --primary-btn-active: #0D2545;
+    --primary-light: #E8F0FA;
+    --primary-dark: #12325C;
+    --primary-border: #D6E3F5;
+    --success: #00A99D;
+    --warning: #F5A623;
+    --danger: #D64545;
+    --info: #3B82F6;
+    --o-enterprise-color: #1A4D8F;
+
+    font-family: var(--rc-font, 'Inter', -apple-system, 'Segoe UI', sans-serif);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Buttons — every primary/create/save action uses the design system */
+.o_web_client .btn-primary,
+.o_web_client .btn-primary:active,
+.o_web_client .btn-primary:focus {
+    background: var(--rc-primary, #1A4D8F) !important;
+    border-color: var(--rc-primary, #1A4D8F) !important;
+    color: #fff !important;
+    border-radius: var(--rc-radius-sm, 6px);
+    font-weight: 600;
+}
+.o_web_client .btn-primary:hover {
+    background: var(--rc-primary-dark, #12325C) !important;
+    border-color: var(--rc-primary-dark, #12325C) !important;
+    color: #fff !important;
+}
+.o_web_client .btn-outline-primary {
+    color: var(--rc-primary, #1A4D8F) !important;
+    border-color: var(--rc-primary, #1A4D8F) !important;
+    border-radius: var(--rc-radius-sm, 6px);
+    font-weight: 600;
+}
+.o_web_client .btn-outline-primary:hover,
+.o_web_client .btn-outline-primary:active {
+    background: var(--rc-primary, #1A4D8F) !important;
+    border-color: var(--rc-primary, #1A4D8F) !important;
+    color: #fff !important;
+}
+.o_web_client .btn-secondary {
+    border-radius: var(--rc-radius-sm, 6px);
+}
+
+/* Statusbar — same navy accent */
+.o_web_client .o_statusbar_status .o_arrow_button.text-primary,
+.o_web_client .o_statusbar_status .o_arrow_button.text-primary:hover {
+    color: var(--rc-primary, #1A4D8F) !important;
+}
+.o_web_client .o_statusbar_status > .o_statusbar_buttons .btn {
+    border-radius: var(--rc-radius-sm, 6px);
+}
+
+/* Form sheets — design card */
+.o_web_client .o_form_sheet {
+    border: 1px solid var(--rc-border, #E3E8EF);
+    border-radius: var(--rc-radius, 10px);
+    box-shadow: var(--rc-shadow-1, 0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.10));
+}
+
+/* Lists — uppercase caption headers, hover tint, 44px rows */
+.o_web_client .o_list_view thead th {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    text-transform: uppercase;
+    color: var(--rc-text-muted, #667085);
+    background: var(--rc-bg, #F4F6FA);
+    border-bottom: 1px solid var(--rc-border, #E3E8EF);
+}
+.o_web_client .o_list_view tbody tr:hover td {
+    background: var(--rc-hover-row, #F7F9FC);
+}
+.o_web_client .o_list_view td {
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Control panel buttons + search */
+.o_web_client .o_control_panel .btn {
+    border-radius: var(--rc-radius-sm, 6px);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Links and accents */
+.o_web_client a,
+.o_web_client .o_field_widget.o_field_many2one .o_external_button {
+    color: var(--rc-primary, #1A4D8F);
+}
+.o_web_client .text-primary { color: var(--rc-primary, #1A4D8F) !important; }
+
+/* Focus ring per design */
+.o_web_client *:focus-visible {
+    outline: 2px solid var(--rc-primary, #1A4D8F);
+    outline-offset: 2px;
+}

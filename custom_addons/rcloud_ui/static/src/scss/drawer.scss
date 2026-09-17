@@ -187,3 +187,7 @@
         font-weight: 600;
     }
 }
+
+/* Layout chain: dashboard must scroll inside the action area */
+.rc-body { height: 100%; min-height: 0; }
+.rc-body > .o_action_manager { height: 100%; min-height: 0; overflow: hidden; display: flex; flex-direction: column; }

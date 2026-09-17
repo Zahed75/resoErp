@@ -27,9 +27,11 @@ OWL-based PMS experience layer for Resort Cloud (spec Part 2 & 6):
     ],
     'assets': {
         'web.assets_backend': [
+            ('before', 'web/static/src/scss/primary_variables.scss', 'rcloud_ui/static/src/scss/primary_variables.scss'),
             'rcloud_ui/static/src/scss/_tokens.scss',
             'rcloud_ui/static/src/scss/dashboard.scss',
             'rcloud_ui/static/src/scss/drawer.scss',
+            'rcloud_ui/static/src/scss/backend_theme.scss',
             'rcloud_ui/static/src/js/dashboard.js',
             'rcloud_ui/static/src/js/drawer.js',
             'rcloud_ui/static/src/js/quick_actions.js',

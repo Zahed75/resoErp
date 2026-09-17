@@ -14,7 +14,6 @@
                             <option t-att-value="p.id" t-att-selected="state.propertyId == p.id"><t t-esc="p.name"/></option>
                         </t>
                     </select>
-                    <button class="rc-btn-primary" t-on-click="() => this.newReservation()">＋ New Reservation</button>
                     <button t-on-click="() => this.loadStats()" aria-label="Refresh">⟳</button>
                     <button t-on-click="toggleTheme" t-att-aria-label="state.dark ? 'Switch to light mode' : 'Switch to dark mode'">
                         <t t-esc="state.dark ? '☀' : '☾'"/>

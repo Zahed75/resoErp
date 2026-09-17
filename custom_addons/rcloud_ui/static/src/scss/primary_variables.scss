@@ -1,0 +1,4 @@
+/* Reso brand — injected BEFORE Odoo's primary_variables so the !default
+   assignments in core pick up the design system's primary (#1A4D8F). */
+$o-enterprise-color: #1A4D8F;
+$o-brand-primary: #1A4D8F;

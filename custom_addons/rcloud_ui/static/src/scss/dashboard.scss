@@ -4,7 +4,8 @@
     color: var(--rc-text);
     font-family: var(--rc-font);
     -webkit-font-smoothing: antialiased;
-    min-height: 100%;
+    height: 100%;
+    box-sizing: border-box;
     padding: var(--rc-space-6);
     overflow-y: auto;
 
