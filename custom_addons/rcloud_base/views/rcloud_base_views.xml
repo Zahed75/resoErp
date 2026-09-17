@@ -76,7 +76,7 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="menu_rcloud_root" name="Resort PMS"
+    <menuitem id="menu_rcloud_root" name="Reso PMS"
         web_icon="rcloud_base,static/description/icon.png"
         groups="rcloud_base.group_hotel_user"
         sequence="1"/>

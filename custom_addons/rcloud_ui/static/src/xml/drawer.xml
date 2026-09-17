@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <!-- Hamburger lives at the FAR LEFT of the top bar (nav shell spec) -->
+    <!-- Hamburger lives at the FAR LEFT of the top bar (nav shell spec) —
+         it REPLACES the enterprise app-grid toggle, which is hidden. The
+         brand click opens the PMS dashboard instead of the app grid. -->
     <t t-name="rcloud_ui.NavBarExtension" t-inherit="web_enterprise.EnterpriseNavBar" t-inherit-mode="extension">
         <xpath expr="//a[hasclass('o_menu_toggle')][1]" position="before">
             <RcloudDrawerToggle/>
+        </xpath>
+        <xpath expr="//a[hasclass('o_menu_toggle')][1]" position="attributes">
+            <attribute name="t-on-click.prevent">() => this.openAppHome()</attribute>
         </xpath>
     </t>
 

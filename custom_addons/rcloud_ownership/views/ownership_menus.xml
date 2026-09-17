@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="menu_ownership_root" name="Ownership"
+    <menuitem id="menu_ownership_root" name="Reso Ownership"
         web_icon="rcloud_ownership,static/description/icon.png"
         groups="rcloud_base.group_hotel_user" sequence="10"/>
 

@@ -130,3 +130,14 @@
         &:hover { background: var(--rc-bg, #F4F6FA); color: var(--rc-primary-dark, #12325C); border-color: var(--rc-primary, #1A4D8F); } }
 }
 @media (max-width: 1100px) { .rc-quick-actions .rc-qa-secondary { display: none; } }
+
+/* Staggered item entrance — modern, fast, purposeful */
+.rc-drawer .rc-drawer-item { animation: rc-item-in .22s var(--rc-ease, ease-out) both; }
+@keyframes rc-item-in {
+    from { opacity: 0; transform: translateX(-8px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+.rc-drawer .rc-sidebar-item { animation: rc-item-in .18s ease-out both; }
+
+/* Our hamburger replaces the enterprise app-grid glyph — hide it */
+.o_menu_toggle_icon { display: none !important; }

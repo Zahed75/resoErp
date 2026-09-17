@@ -1,8 +1,27 @@
 /** @odoo-module **/
 
 import { Component, useState, useExternalListener } from "@odoo/owl";
+import { patch } from "@web/core/utils/patch";
 import { useService } from "@web/core/utils/hooks";
 import { EnterpriseNavBar } from "@web_enterprise/webclient/navbar/navbar";
+
+/* Brand click: PMS apps land on the dashboard; other apps open the app grid. */
+patch(EnterpriseNavBar.prototype, {
+    async openAppHome() {
+        const app = (this.menuService && this.menuService.getCurrentApp)
+            ? this.menuService.getCurrentApp() : this.currentApp;
+        const pmsRoots = [
+            "rcloud_base.menu_rcloud_root",
+            "reso_pms.menu_reso_pms_root",
+        ];
+        if (app && pmsRoots.includes(app.xmlid)) {
+            const actionSvc = this.action || this.env.services.action;
+            await actionSvc.doAction("rcloud_ui.action_rcloud_dashboard");
+            return;
+        }
+        this.hm.toggle();
+    },
+});
 
 /* Material Design Icons (Apache-2.0, pictogrammers.github.io/mdi) */
 const MDI = {
