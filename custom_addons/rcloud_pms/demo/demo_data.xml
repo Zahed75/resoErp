@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============ Resort Cloud demo dataset (Sea Pearl Resort) ============ -->
+    <record id="demo_prop" model="rcloud.property">
+        <field name="name">Sea Pearl Resort</field>
+        <field name="code">SPR</field>
+        <field name="city">Cox's Bazar</field>
+        <field name="phone">+880 341 52200</field>
+        <field name="email">folio@seapearl.example.com</field>
+    </record>
+
+    <record id="demo_amenity_wifi" model="rcloud.room.amenity">
+        <field name="name">Free WiFi</field>
+    </record>
+    <record id="demo_amenity_breakfast" model="rcloud.room.amenity">
+        <field name="name">Breakfast included</field>
+    </record>
+
+    <record id="demo_rt_deluxe" model="rcloud.room.type">
+        <field name="name">Deluxe King</field>
+        <field name="property_id" ref="demo_prop"/>
+        <field name="code">DK</field>
+        <field name="base_occupancy">2</field>
+        <field name="max_occupancy">3</field>
+        <field name="default_rate">9500</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi'), ref('demo_amenity_breakfast')])]"/>
+    </record>
+    <record id="demo_rt_suite" model="rcloud.room.type">
+        <field name="name">Executive Suite</field>
+        <field name="property_id" ref="demo_prop"/>
+        <field name="code">ES</field>
+        <field name="base_occupancy">2</field>
+        <field name="max_occupancy">4</field>
+        <field name="default_rate">15200</field>
+        <field name="amenity_ids" eval="[(6, 0, [ref('demo_amenity_wifi')])]"/>
+    </record>
+
+    <record id="demo_room_201" model="rcloud.room">
+        <field name="name">201</field><field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_deluxe"/><field name="floor">2</field>
+    </record>
+    <record id="demo_room_202" model="rcloud.room">
+        <field name="name">202</field><field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_deluxe"/><field name="floor">2</field>
+        <field name="status">occupied</field>
+    </record>
+    <record id="demo_room_203" model="rcloud.room">
+        <field name="name">203</field><field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_deluxe"/><field name="floor">2</field>
+        <field name="housekeeping_state">dirty</field><field name="status">vacant_dirty</field>
+    </record>
+    <record id="demo_room_301" model="rcloud.room">
+        <field name="name">301</field><field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_suite"/><field name="floor">3</field>
+    </record>
+    <record id="demo_room_302" model="rcloud.room">
+        <field name="name">302</field><field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_suite"/><field name="floor">3</field>
+    </record>
+    <record id="demo_room_303" model="rcloud.room">
+        <field name="name">303</field><field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_suite"/><field name="floor">3</field>
+        <field name="is_ooo">1</field><field name="status">out_of_order</field>
+    </record>
+
+    <record id="demo_plan_bar" model="rcloud.rate.plan">
+        <field name="name">BAR</field>
+        <field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_deluxe"/>
+        <field name="channel">direct</field>
+    </record>
+    <record id="demo_plan_bar_d2" model="rcloud.rate.calendar">
+        <field name="rate_plan_id" ref="demo_plan_bar"/>
+        <field name="date" eval="DateTime.today().date() + timedelta(days=2)"/>
+        <field name="rate">11200</field>
+        <field name="min_stay">2</field>
+    </record>
+    <record id="demo_plan_bar_d3" model="rcloud.rate.calendar">
+        <field name="rate_plan_id" ref="demo_plan_bar"/>
+        <field name="date" eval="DateTime.today().date() + timedelta(days=3)"/>
+        <field name="rate">11200</field>
+    </record>
+
+    <record id="demo_guest_1" model="res.partner">
+        <field name="name">Aminul Rahman</field>
+        <field name="phone">+8801711002200</field>
+    </record>
+    <record id="demo_guest_2" model="res.partner">
+        <field name="name">Nusrat Jahan</field>
+        <field name="phone">+8801811003300</field>
+    </record>
+    <record id="demo_guest_3" model="res.partner">
+        <field name="name">Rashida Chowdhury</field>
+        <field name="phone">+8801911004400</field>
+    </record>
+
+    <!-- Pre-open inventory for the next 120 days -->
+    <function model="rcloud.availability" name="buckets_for"
+              eval="[ref('demo_prop'), ref('demo_rt_deluxe'), DateTime.today().date(), DateTime.today().date() + timedelta(days=120)]"/>
+    <function model="rcloud.availability" name="buckets_for"
+              eval="[ref('demo_prop'), ref('demo_rt_suite'), DateTime.today().date(), DateTime.today().date() + timedelta(days=120)]"/>
+
+    <!-- In-house guest (arrived yesterday, leaves tomorrow) -->
+    <record id="demo_res_inhouse" model="rcloud.reservation">
+        <field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_deluxe"/>
+        <field name="room_id" ref="demo_room_202"/>
+        <field name="guest_id" ref="demo_guest_1"/>
+        <field name="arrival" eval="DateTime.today().date() - timedelta(days=1)"/>
+        <field name="departure" eval="DateTime.today().date() + timedelta(days=1)"/>
+        <field name="adults">2</field>
+        <field name="state">checked_in</field>
+    </record>
+    <!-- Arriving today -->
+    <record id="demo_res_arrival" model="rcloud.reservation">
+        <field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_suite"/>
+        <field name="guest_id" ref="demo_guest_2"/>
+        <field name="arrival" eval="DateTime.today().date()"/>
+        <field name="departure" eval="DateTime.today().date() + timedelta(days=3)"/>
+        <field name="adults">2</field><field name="children">1</field>
+        <field name="state">confirmed</field>
+    </record>
+    <!-- Upcoming -->
+    <record id="demo_res_future" model="rcloud.reservation">
+        <field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_deluxe"/>
+        <field name="guest_id" ref="demo_guest_3"/>
+        <field name="arrival" eval="DateTime.today().date() + timedelta(days=4)"/>
+        <field name="departure" eval="DateTime.today().date() + timedelta(days=6)"/>
+        <field name="adults">1</field>
+        <field name="state">confirmed</field>
+    </record>
+    <!-- Departed yesterday -->
+    <record id="demo_res_departed" model="rcloud.reservation">
+        <field name="property_id" ref="demo_prop"/>
+        <field name="room_type_id" ref="demo_rt_suite"/>
+        <field name="guest_id" ref="demo_guest_1"/>
+        <field name="arrival" eval="DateTime.today().date() - timedelta(days=3)"/>
+        <field name="departure" eval="DateTime.today().date() - timedelta(days=1)"/>
+        <field name="adults">2</field>
+        <field name="state">checked_out</field>
+    </record>
+
+    <!-- Folio + outlet charges for the in-house guest -->
+    <record id="demo_folio" model="rcloud.folio">
+        <field name="reservation_id" ref="demo_res_inhouse"/>
+        <field name="partner_id" ref="demo_guest_1"/>
+    </record>
+    <record id="demo_folio_dinner" model="rcloud.folio.line">
+        <field name="folio_id" ref="demo_folio"/>
+        <field name="description">Dinner — Seaside Grill (2 pax)</field>
+        <field name="source">pos</field>
+        <field name="qty">1</field>
+        <field name="unit_price">2600</field>
+    </record>
+    <record id="demo_folio_spa" model="rcloud.folio.line">
+        <field name="folio_id" ref="demo_folio"/>
+        <field name="description">Aromatherapy massage (60 min)</field>
+        <field name="source">spa</field>
+        <field name="qty">1</field>
+        <field name="unit_price">3400</field>
+    </record>
+</odoo>

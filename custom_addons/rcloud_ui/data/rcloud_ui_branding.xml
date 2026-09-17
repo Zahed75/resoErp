@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Rebrand: product is Reso, powered by Syscomatic LLC -->
+    <template id="rcloud_login_layout" inherit_id="web.login_layout">
+        <xpath expr="//a[@href='https://www.odoo.com?utm_source=db&amp;utm_medium=auth']" position="replace">
+            <a href="#" onclick="return false">Powered by <strong>Syscomatic LLC</strong> · Reso</a>
+        </xpath>
+    </template>
+
+    <!-- Admin must always reach the PMS: grant the hotel manager group -->
+    <record id="base.user_admin" model="res.users">
+        <field name="group_ids" eval="[(4, ref('rcloud_base.group_hotel_manager'))]"/>
+    </record>
+</odoo>

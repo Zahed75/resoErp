@@ -1,0 +1,65 @@
+/* Persistent PMS module sidebar (UIdesign 02: 240px, collapses to 64px rail) */
+.rc-body { display: flex; align-items: stretch; min-height: 0; flex: 1; }
+
+.rc-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: var(--rc-surface, #fff);
+    border-right: 1px solid var(--rc-border, #E3E8EF);
+    display: flex;
+    flex-direction: column;
+    padding: var(--rc-space-2, 8px);
+    overflow-y: auto;
+    transition: width var(--rc-motion-drawer, 200ms ease-out);
+
+    &.rc-sidebar--hidden { display: none; }
+    &.rc-sidebar--rail { width: 64px; }
+
+    .rc-sidebar-toggle {
+        align-self: flex-end;
+        width: 28px; height: 28px;
+        display: inline-flex; align-items: center; justify-content: center;
+        border: 1px solid transparent; border-radius: var(--rc-radius-sm, 6px);
+        background: transparent; color: var(--rc-text-muted, #667085);
+        cursor: pointer; margin-bottom: 4px;
+        &:hover { background: var(--rc-bg, #F4F6FA); color: var(--rc-text, #1C2536); }
+    }
+
+    .rc-sidebar-group {
+        padding: 10px 10px 4px;
+        font-size: 11px; font-weight: 600;
+        text-transform: uppercase; letter-spacing: .4px;
+        color: var(--rc-text-disabled, #98A2B3);
+    }
+
+    .rc-sidebar-item {
+        display: flex; align-items: center; gap: 8px;
+        width: 100%;
+        min-height: 36px;
+        padding: 0 10px;
+        border: none; background: transparent;
+        color: var(--rc-text-secondary, #475467);
+        font-family: var(--rc-font, sans-serif);
+        font-size: 14px; font-weight: 500;
+        border-radius: var(--rc-radius-sm, 6px);
+        cursor: pointer; text-align: left;
+        transition: background var(--rc-motion-micro, 150ms ease-out);
+
+        &:hover { background: var(--rc-hover-row, #F7F9FC); color: var(--rc-text, #1C2536); }
+
+        &.active {
+            background: var(--rc-primary-light, #E8F0FA);
+            box-shadow: inset 3px 0 0 var(--rc-primary, #1A4D8F);
+            color: var(--rc-primary-dark, #12325C);
+            font-weight: 600;
+        }
+        .rc-sidebar-dot { width: 8px; height: 8px; border-radius: 999px; background: var(--rc-primary, #1A4D8F); margin: 0 auto; }
+    }
+
+    &.rc-sidebar--rail {
+        .rc-sidebar-toggle { align-self: center; }
+        .rc-sidebar-item { justify-content: center; padding: 0; min-height: 44px; }
+    }
+}
+
+.rc-body .o_action_manager { flex: 1; min-width: 0; }

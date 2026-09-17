@@ -1,8 +1,8 @@
 /** @odoo-module **/
 
 import { Component, useState, useExternalListener } from "@odoo/owl";
-import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
+import { EnterpriseNavBar } from "@web_enterprise/webclient/navbar/navbar";
 
 /* Material Design Icons (Apache-2.0, pictogrammers.github.io/mdi) */
 const MDI = {
@@ -79,7 +79,12 @@ export class RcloudDrawerToggle extends Component {
     get apps() {
         // Keep the RAW menu objects: the menu service relies on their
         // identity/proxy internals — plain copies break selectMenu.
-        const roots = this.menu.getApps() || [];
+        let roots = this.menu.getApps() || [];
+        if (!roots.length) {
+            // Menus not loaded yet (fresh session) — trigger a reload.
+            this.menu.reload();
+            roots = this.menu.getApps() || [];
+        }
         if (!this.state.filter) { return roots; }
         const f = this.state.filter.toLowerCase();
         return roots.filter((a) => (a.name || '').toLowerCase().includes(f));
@@ -131,5 +136,8 @@ export class RcloudDrawerToggle extends Component {
     }
 }
 
-registry.category("systray").add(
-    "rcloud_ui.drawer_toggle", { Component: RcloudDrawerToggle }, { sequence: 5 });
+/* Mounted inside the navbar at the far LEFT (nav shell spec) — not systray. */
+EnterpriseNavBar.components = {
+    ...EnterpriseNavBar.components,
+    RcloudDrawerToggle,
+};

@@ -28,6 +28,9 @@ Core PMS for the Resort Cloud SaaS product.
         'views/rcloud_pms_menus.xml',
         'views/rcloud_ops_views.xml',
     ],
+    'demo': [
+        'demo/demo_data.xml',
+    ],
     'installable': True,
     'application': True,
     'auto_install': False,

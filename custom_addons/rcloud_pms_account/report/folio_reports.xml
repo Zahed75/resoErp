@@ -19,32 +19,41 @@
                     <div class="page">
                         <t t-set="prop" t-value="o.property_id"/>
                         <t t-set="res" t-value="o.reservation_id"/>
-                        <div class="text-center">
-                            <h3 t-if="prop" t-field="prop.name"/>
-                            <div t-if="prop">
-                                <span t-field="prop.street"/>
-                                <span t-if="prop.street2">, <span t-field="prop.street2"/></span>
-                                <span t-if="prop.city">, <span t-field="prop.city"/></span><br/>
-                                <span t-if="prop.phone">Tel: <span t-field="prop.phone"/></span>
+                        <!-- A4 header (UIdesign 07): 2px ink rule, brand left, doc identity right -->
+                        <div style="display:flex;justify-content:space-between;border-bottom:2px solid #1C2536;padding-bottom:4mm;margin-bottom:5mm;">
+                            <div>
+                                <div t-if="prop" t-field="prop.name" style="font-size:14pt;font-weight:700;color:#1C2536;"/>
+                                <div t-if="prop" style="font-size:8pt;color:#667085;">
+                                    <span t-field="prop.street"/>
+                                    <span t-if="prop.street2">, <span t-field="prop.street2"/></span>
+                                    <span t-if="prop.city">, <span t-field="prop.city"/></span>
+                                    <span t-if="prop.phone"> · <span t-field="prop.phone"/></span>
+                                    <span t-if="prop.email"> · <span t-field="prop.email"/></span>
+                                </div>
+                                <div style="font-family:'JetBrains Mono',monospace;font-size:7.5pt;color:#667085;">
+                                    <t t-if="prop and prop.company_id.vat">VAT/BIN <span t-field="prop.company_id.vat"/></t>
+                                </div>
                             </div>
-                            <h4 class="mt-3">Guest Folio Statement</h4>
-                            <div>Folio: <span t-field="o.name"/></div>
+                            <div style="text-align:right;">
+                                <div style="font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#1C2536;">Guest Folio Statement</div>
+                                <div style="font-family:'JetBrains Mono',monospace;font-size:8pt;color:#1C2536;" t-field="o.name"/>
+                                <div style="font-size:7.5pt;color:#667085;">Issued <span t-esc="(o.write_date or o.create_date).date()"/></div>
+                            </div>
                         </div>
-                        <div class="row mt-4">
-                            <div class="col-6">
-                                <strong>Guest:</strong> <span t-field="o.partner_id"/><br/>
-                                <strong>Room:</strong>
-                                <span t-if="res and res.room_id" t-field="res.room_id"/>
-                                <span t-if="not (res and res.room_id)">—</span>
+                        <!-- Info band: Guest / Stay / Booking -->
+                        <div style="display:flex;gap:8mm;margin-bottom:5mm;font-size:8.5pt;color:#1C2536;">
+                            <div style="flex:1;">
+                                <div style="font-size:7.5pt;text-transform:uppercase;color:#667085;letter-spacing:.5px;">Guest</div>
+                                <strong t-field="o.partner_id"/>
                             </div>
-                            <div class="col-6 text-end">
-                                <strong>Arrival:</strong>
-                                <span t-if="res" t-field="res.arrival"/>
-                                <span t-if="not res">—</span><br/>
-                                <strong>Departure:</strong>
-                                <span t-if="res" t-field="res.departure"/>
-                                <span t-if="not res">—</span><br/>
-                                <strong>Nights:</strong>
+                            <div style="flex:1;">
+                                <div style="font-size:7.5pt;text-transform:uppercase;color:#667085;letter-spacing:.5px;">Stay</div>
+                                <span t-if="res" t-field="res.arrival"/> → <span t-if="res" t-field="res.departure"/><br/>
+                                <span t-if="res and res.room_id">Room <span t-field="res.room_id"/></span>
+                                <span t-if="res" style="font-family:'JetBrains Mono',monospace;font-size:7.5pt;color:#667085;"> · <span t-field="res.name"/></span>
+                            </div>
+                            <div style="flex:1;">
+                                <div style="font-size:7.5pt;text-transform:uppercase;color:#667085;letter-spacing:.5px;">Nights</div>
                                 <span t-if="res" t-esc="(res.departure - res.arrival).days"/>
                                 <span t-if="not res">—</span>
                             </div>
@@ -111,13 +120,22 @@
                                 </table>
                             </div>
                             <div class="col-6">
-                                <table class="table table-sm">
-                                    <tr><td>Subtotal</td><td class="text-end"><span t-esc="subtotal"/></td></tr>
-                                    <tr><td>Taxes</td><td class="text-end"><span t-esc="tax_total"/></td></tr>
-                                    <tr class="fw-bold"><td>Total</td><td class="text-end"><span t-esc="subtotal + tax_total"/></td></tr>
-                                    <tr><td>Payments Applied</td><td class="text-end"><span t-esc="payments"/></td></tr>
-                                    <tr class="fw-bold"><td>Balance Due</td><td class="text-end"><span t-esc="subtotal + tax_total - payments"/></td></tr>
+                                <!-- Boxed totals panel (UIdesign 07) -->
+                                <table class="table table-sm" style="border:1.5px solid #1C2536;">
+                                    <tr><td style="font-size:8.5pt;">Subtotal</td><td class="text-end" style="font-variant-numeric:tabular-nums;"><span t-esc="subtotal"/></td></tr>
+                                    <tr><td style="font-size:8.5pt;">Taxes</td><td class="text-end" style="font-variant-numeric:tabular-nums;"><span t-esc="tax_total"/></td></tr>
+                                    <tr style="font-weight:700;"><td>Total</td><td class="text-end" style="font-variant-numeric:tabular-nums;"><span t-esc="subtotal + tax_total"/></td></tr>
+                                    <tr><td style="font-size:8.5pt;">Payments Applied</td><td class="text-end" style="color:#00635C;font-variant-numeric:tabular-nums;">− <span t-esc="payments"/></td></tr>
+                                    <tr style="font-weight:700;">
+                                        <td style="font-size:9pt;text-transform:uppercase;letter-spacing:.5px;">Balance Due</td>
+                                        <td class="text-end" t-attf-style="font-size:12pt;font-weight:700;font-variant-numeric:tabular-nums;color:{{' #C13333' if (subtotal + tax_total - payments) > 0 else '#00635C'}};"><span t-esc="subtotal + tax_total - payments"/></td>
+                                    </tr>
                                 </table>
+                                <div style="font-size:7.5pt;color:#667085;margin-top:2mm;">
+                                    Settled in full — no further amount is payable —
+                                    <span t-if="(subtotal + tax_total - payments) > 0">balance due on departure.</span>
+                                    <span t-if="not (subtotal + tax_total - payments) > 0">thank you for staying with us.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
