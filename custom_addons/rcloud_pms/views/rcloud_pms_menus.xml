@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_rcloud_dashboard" name="Dashboard"
+        parent="rcloud_base.menu_rcloud_root" sequence="1"/>
+    <menuitem id="menu_rcloud_front_office" name="Front Office"
+        parent="rcloud_base.menu_rcloud_root" sequence="10"/>
+    <menuitem id="menu_rcloud_reservations" name="Reservations"
+        parent="menu_rcloud_front_office" action="action_reservation" sequence="10"/>
+    <menuitem id="menu_rcloud_arrivals" name="Arrivals Today"
+        parent="menu_rcloud_front_office" action="action_arrivals" sequence="20"/>
+    <menuitem id="menu_rcloud_inhouse" name="In-House Guests"
+        parent="menu_rcloud_front_office" action="action_inhouse" sequence="30"/>
+
+    <menuitem id="menu_rcloud_setup" name="Rooms &amp; Rates"
+        parent="rcloud_base.menu_rcloud_root" sequence="20"/>
+    <menuitem id="menu_rcloud_room_types" name="Room Types"
+        parent="menu_rcloud_setup" action="action_room_type" sequence="10"/>
+    <menuitem id="menu_rcloud_rooms" name="Rooms"
+        parent="menu_rcloud_setup" action="action_room" sequence="20"/>
+    <menuitem id="menu_rcloud_rate_plans" name="Rate Plans"
+        parent="menu_rcloud_setup" action="action_rate_plan" sequence="30"/>
+    <menuitem id="menu_rcloud_availability" name="Availability"
+        parent="menu_rcloud_setup" action="action_availability" sequence="40"/>
+
+    <menuitem id="menu_rcloud_billing" name="Billing"
+        parent="rcloud_base.menu_rcloud_root" sequence="30"/>
+    <menuitem id="menu_rcloud_folios" name="Folios"
+        parent="menu_rcloud_billing" action="action_folio" sequence="10"/>
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="rcloud_property_view_list" model="ir.ui.view">
+        <field name="name">rcloud.property.list</field>
+        <field name="model">rcloud.property</field>
+        <field name="arch" type="xml">
+            <list string="Properties">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="city"/>
+                <field name="company_id"/>
+                <field name="currency_id"/>
+                <field name="total_rooms"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="rcloud_property_view_form" model="ir.ui.view">
+        <field name="name">rcloud.property.form</field>
+        <field name="model">rcloud.property</field>
+        <field name="arch" type="xml">
+            <form string="Property">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_rooms" type="object"
+                            class="oe_stat_button" icon="fa-bed">
+                            <field name="total_rooms" widget="statinfo"
+                                string="Rooms"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Property name"/></h1>
+                    </div>
+                    <group>
+                        <group string="General">
+                            <field name="code"/>
+                            <field name="company_id"/>
+                            <field name="currency_id"/>
+                            <field name="timezone"/>
+                        </group>
+                        <group string="Address">
+                            <field name="street"/>
+                            <field name="street2"/>
+                            <field name="city"/>
+                            <field name="country_id"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
+                        <group string="Operations">
+                            <field name="checkin_time" widget="float_time"/>
+                            <field name="checkout_time" widget="float_time"/>
+                            <field name="tax_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="rcloud_property_view_search" model="ir.ui.view">
+        <field name="name">rcloud.property.search</field>
+        <field name="model">rcloud.property</field>
+        <field name="arch" type="xml">
+            <search string="Properties">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="city"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_rcloud_property" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">rcloud.property</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_rcloud_root" name="Resort PMS"
+        web_icon="rcloud_base,static/description/icon.png"
+        groups="rcloud_base.group_hotel_user"
+        sequence="1"/>
+    <menuitem id="menu_rcloud_property" name="Properties"
+        parent="menu_rcloud_root" action="action_rcloud_property"
+        sequence="90"/>
+</odoo>

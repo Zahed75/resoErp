@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The "Property" analytic plan is created lazily by
+         rcloud.property._ensure_analytic_accounts(); this record is a
+         fallback so references resolve even before the first property. -->
+</odoo>

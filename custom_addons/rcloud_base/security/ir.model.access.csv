@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rcloud_property_user,rcloud.property.user,model_rcloud_property,group_hotel_user,1,0,0,0
+access_rcloud_property_manager,rcloud.property.manager,model_rcloud_property,group_hotel_manager,1,1,1,1
+access_rcloud_property_base,rcloud.property.base,model_rcloud_property,base.group_user,1,0,0,0

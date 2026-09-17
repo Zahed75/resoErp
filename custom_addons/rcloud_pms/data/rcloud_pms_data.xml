@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="seq_rcloud_reservation" model="ir.sequence">
+        <field name="name">Reservation</field>
+        <field name="code">rcloud.reservation</field>
+        <field name="prefix">RSV/</field>
+        <field name="padding">6</field>
+    </record>
+    <record id="seq_rcloud_folio" model="ir.sequence">
+        <field name="name">Folio</field>
+        <field name="code">rcloud.folio</field>
+        <field name="prefix">FOL/</field>
+        <field name="padding">6</field>
+    </record>
+</odoo>
