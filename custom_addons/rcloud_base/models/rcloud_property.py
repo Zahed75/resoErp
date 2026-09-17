@@ -23,8 +23,8 @@ class RcloudProperty(models.Model):
     phone = fields.Char()
     email = fields.Char()
     timezone = fields.Selection(
-        lambda s: [(tz, tz) for tz in s.env['res.partner']._tz_get()],
-        default=lambda s: s.env.context.get('tz') or 'UTC')
+        selection=lambda self: self.env['res.partner']._fields['tz'].selection,
+        default='UTC')
     currency_id = fields.Many2one(
         'res.currency', required=True,
         default=lambda s: s.env.company.currency_id)

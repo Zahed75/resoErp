@@ -13,133 +13,139 @@
     <template id="report_folio">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
-                <t t-set="company"
-                   t-value="o.property_id.company_id or o.partner_id.company_id or o.env.company"/>
-                <t t-call="web.external_layout">
-                    <div class="page">
-                        <t t-set="prop" t-value="o.property_id"/>
-                        <t t-set="res" t-value="o.reservation_id"/>
-                        <!-- A4 header (UIdesign 07): 2px ink rule, brand left, doc identity right -->
-                        <div style="display:flex;justify-content:space-between;border-bottom:2px solid #1C2536;padding-bottom:4mm;margin-bottom:5mm;">
-                            <div>
-                                <div t-if="prop" t-field="prop.name" style="font-size:14pt;font-weight:700;color:#1C2536;"/>
-                                <div t-if="prop" style="font-size:8pt;color:#667085;">
-                                    <span t-field="prop.street"/>
-                                    <span t-if="prop.street2">, <span t-field="prop.street2"/></span>
-                                    <span t-if="prop.city">, <span t-field="prop.city"/></span>
-                                    <span t-if="prop.phone"> · <span t-field="prop.phone"/></span>
-                                    <span t-if="prop.email"> · <span t-field="prop.email"/></span>
-                                </div>
-                                <div style="font-family:'JetBrains Mono',monospace;font-size:7.5pt;color:#667085;">
-                                    <t t-if="prop and prop.company_id.vat">VAT/BIN <span t-field="prop.company_id.vat"/></t>
-                                </div>
-                            </div>
-                            <div style="text-align:right;">
-                                <div style="font-size:9pt;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#1C2536;">Guest Folio Statement</div>
-                                <div style="font-family:'JetBrains Mono',monospace;font-size:8pt;color:#1C2536;" t-field="o.name"/>
-                                <div style="font-size:7.5pt;color:#667085;">Issued <span t-esc="(o.write_date or o.create_date).date()"/></div>
-                            </div>
-                        </div>
-                        <!-- Info band: Guest / Stay / Booking -->
-                        <div style="display:flex;gap:8mm;margin-bottom:5mm;font-size:8.5pt;color:#1C2536;">
-                            <div style="flex:1;">
-                                <div style="font-size:7.5pt;text-transform:uppercase;color:#667085;letter-spacing:.5px;">Guest</div>
-                                <strong t-field="o.partner_id"/>
-                            </div>
-                            <div style="flex:1;">
-                                <div style="font-size:7.5pt;text-transform:uppercase;color:#667085;letter-spacing:.5px;">Stay</div>
-                                <span t-if="res" t-field="res.arrival"/> → <span t-if="res" t-field="res.departure"/><br/>
-                                <span t-if="res and res.room_id">Room <span t-field="res.room_id"/></span>
-                                <span t-if="res" style="font-family:'JetBrains Mono',monospace;font-size:7.5pt;color:#667085;"> · <span t-field="res.name"/></span>
-                            </div>
-                            <div style="flex:1;">
-                                <div style="font-size:7.5pt;text-transform:uppercase;color:#667085;letter-spacing:.5px;">Nights</div>
-                                <span t-if="res" t-esc="(res.departure - res.arrival).days"/>
-                                <span t-if="not res">—</span>
-                            </div>
-                        </div>
-                        <t t-set="charges" t-value="o.line_ids.sorted('date').sorted('source')"/>
-                        <table class="table table-sm table-striped mt-3">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Description</th>
-                                    <th class="text-end">Qty</th>
-                                    <th class="text-end">Unit Price</th>
-                                    <th class="text-end">Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t t-set="last_source" t-value="False"/>
-                                <t t-foreach="charges" t-as="line">
-                                    <t t-if="line.source != last_source">
-                                        <t t-set="last_source" t-value="line.source"/>
-                                        <tr>
-                                            <td colspan="5" class="fw-bold">
-                                                <span t-field="line.source"/>
-                                            </td>
-                                        </tr>
-                                    </t>
-                                    <tr>
-                                        <td><span t-field="line.date"/></td>
-                                        <td><span t-field="line.description"/></td>
-                                        <td class="text-end"><span t-field="line.qty"/></td>
-                                        <td class="text-end"><span t-field="line.unit_price"/></td>
-                                        <td class="text-end"><span t-field="line.amount"/></td>
-                                    </tr>
-                                </t>
-                            </tbody>
-                        </table>
-                        <t t-set="subtotal" t-value="sum(charges.mapped('amount'))"/>
-                        <t t-set="tax_total" t-value="0"/>
+                <t t-set="prop" t-value="o.property_id"/>
+                <t t-set="res" t-value="o.reservation_id"/>
+                <t t-set="company" t-value="prop.company_id if prop and prop.company_id else o.env.company"/>
+                <t t-set="charges" t-value="o.line_ids.sorted(lambda l: (l.source, l.date))"/>
+                <t t-set="subtotal" t-value="sum(charges.mapped('amount'))"/>
+                <t t-set="tax_total" t-value="sum(l.amount * sum(l.tax_ids.mapped('amount')) / 100 for l in charges)"/>
+                <t t-set="payments" t-value="sum(o.invoice_ids.mapped('amount_total')) - sum(o.invoice_ids.mapped('amount_residual'))"/>
+                <t t-set="balance" t-value="subtotal + tax_total - payments"/>
+                <div class="page" style="font-family:'Inter','DejaVu Sans',sans-serif;color:#1C2536;font-size:9pt;">
+                    <style>
+                        @page { size: A4; margin: 12mm 14mm; }
+                        body { margin: 0; }
+                        table.rc { border-collapse: collapse; width: 100%; }
+                        table.rc td { vertical-align: top; }
+                        .lbl { font-size: 7pt; text-transform: uppercase; color: #667085; letter-spacing: .5px; }
+                        .num { font-variant-numeric: tabular-nums; }
+                    </style>
+                    <!-- Header -->
+                    <table class="rc" style="border-bottom:2px solid #1C2536; margin-bottom:6mm;">
+                        <tr>
+                            <td style="width:18mm;"><div style="width:14mm;height:14mm;background:#1A4D8F;color:#fff;text-align:center;line-height:14mm;font-size:15pt;font-weight:700;border-radius:1.5mm;"><t t-esc="''.join([w[0] for w in (prop.name or 'R').split()[:2]]).upper() if prop else 'R'"/></div></td>
+                            <td>
+                                <div style="font-size:14pt;font-weight:700;letter-spacing:.5px;" t-esc="prop.name if prop else company.name"/>
+                                <div style="font-size:8pt;color:#667085;"><span t-if="prop and prop.street" t-field="prop.street"/><t t-if="prop and prop.street and prop.city">, </t><span t-if="prop and prop.city" t-field="prop.city"/><t t-if="prop and prop.country_id">, <span t-field="prop.country_id"/></t><br/><span t-if="prop and prop.phone" t-field="prop.phone"/> | <span t-if="prop and prop.email" t-field="prop.email"/></div>
+                                <div style="font-family:'DejaVu Sans Mono',monospace;font-size:7pt;color:#667085;"><t t-if="company.vat">BIN <span t-field="company.vat"/></t></div>
+                            </td>
+                            <td style="text-align:right; width:60mm;">
+                                <div style="font-size:9.5pt;font-weight:700;letter-spacing:1px;">TAX INVOICE &amp; GUEST FOLIO</div>
+                                <div style="font-family:'DejaVu Sans Mono',monospace;font-size:8.5pt;" t-esc="o.invoice_ids[:1].name if o.invoice_ids else o.name"/>
+                                <div style="font-size:8pt;color:#667085;">Folio <span t-field="o.name"/></div>
+                                <div style="font-size:8pt;color:#667085;">Issued <span t-esc="(o.write_date or o.create_date).strftime('%d %B %Y, %H:%M')"/></div>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Info band -->
+                    <table class="rc" style="margin-bottom:6mm; border-bottom:1px solid #E3E8EF;">
+                        <tr>
+                            <td style="width:33%; padding:1mm 0 4mm 0;">
+                                <div class="lbl">Guest</div>
+                                <div style="font-size:11pt;font-weight:700;" t-field="o.partner_id"/>
+                            </td>
+                            <td style="width:34%; padding:1mm 0 4mm 0;">
+                                <table class="rc"><tr><td class="lbl" style="width:22mm;">Room</td><td style="font-weight:700;"><t t-if="res and res.room_id"><span t-field="res.room_id"/></t><t t-if="res"> | <span t-field="res.room_type_id"/></t><span t-if="not res">-</span></td></tr>
+                                <tr><td class="lbl">Arrival</td><td class="num"><span t-if="res" t-field="res.arrival"/><span t-if="not res">-</span></td></tr>
+                                <tr><td class="lbl">Departure</td><td class="num"><span t-if="res" t-field="res.departure"/><span t-if="not res">-</span></td></tr>
+                                <tr><td class="lbl">Nights | guests</td><td style="font-size:8pt;color:#667085;"><t t-if="res"><t t-esc="(res.departure - res.arrival).days"/> | <t t-esc="res.adults"/> adult<t t-if="res.adults > 1">s</t><t t-if="res.children">, <t t-esc="res.children"/> child</t></t><span t-if="not res">-</span></td></tr></table>
+                            </td>
+                            <td style="width:33%; padding:1mm 0 4mm 0;">
+                                <table class="rc"><tr><td class="lbl" style="width:26mm;">Reference</td><td class="num" style="font-family:'DejaVu Sans Mono',monospace;"><span t-if="res" t-field="res.name"/><span t-if="not res">-</span></td></tr>
+                                <tr><td class="lbl">Source</td><td class="num"><t t-if="res" t-esc="dict(res._fields['source'].selection).get(res.source)"/><span t-if="not res">-</span></td></tr>
+                                <tr><td class="lbl">Rate plan</td><td class="num"><span t-if="res and res.rate_plan_id" t-field="res.rate_plan_id"/><t t-if="not (res and res.rate_plan_id)">-</t></td></tr></table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Charges -->
+                    <table class="rc" style="margin-bottom:6mm;">
+                        <tr style="border-bottom:1.5px solid #1C2536;">
+                            <td class="lbl" style="width:22mm; padding:2mm 2mm 1.5mm 0;">Date</td>
+                            <td class="lbl" style="padding:2mm 2mm 1.5mm 0;">Description</td>
+                            <td class="lbl num" style="width:13mm; text-align:right; padding:2mm 0 1.5mm 2mm;">Qty</td>
+                            <td class="lbl num" style="width:23mm; text-align:right; padding:2mm 0 1.5mm 2mm;">Unit</td>
+                            <td class="lbl num" style="width:27mm; text-align:right; padding:2mm 0 1.5mm 2mm;">Amount BDT</td>
+                        </tr>
+                        <t t-set="last_source" t-value="False"/>
                         <t t-foreach="charges" t-as="line">
-                            <t t-set="tax_total"
-                               t-value="tax_total + line.amount * sum(line.tax_ids.mapped('amount')) / 100"/>
+                            <t t-if="line.source != last_source">
+                                <t t-set="last_source" t-value="line.source"/>
+                                <tr><td colspan="5" style="font-size:7.5pt;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:#667085;padding:2.4mm 0 1mm 0;" t-esc="dict(line._fields['source'].selection).get(line.source)"></td></tr>
+                            </t>
+                            <tr style="border-bottom:1px solid #F1F3F7; font-size:8.5pt;">
+                                <td style="padding:1.6mm 2mm 1.6mm 0; color:#475467;" class="num"><t t-esc="line.date.strftime('%d %b')"/></td>
+                                <td style="padding:1.6mm 2mm;"><span t-field="line.description"/></td>
+                                <td style="text-align:right; padding:1.6mm 0 1.6mm 2mm;" class="num"><span t-field="line.qty"/></td>
+                                <td style="text-align:right; padding:1.6mm 0 1.6mm 2mm;" class="num"><t t-esc="'{:,.2f}'.format(line.unit_price)"/></td>
+                                <td style="text-align:right; padding:1.6mm 0 1.6mm 2mm;" class="num"><t t-esc="'{:,.2f}'.format(line.amount)"/></td>
+                            </tr>
                         </t>
-                        <t t-set="payments" t-value="sum(o.invoice_ids.mapped('amount_total')) - sum(o.invoice_ids.mapped('amount_residual'))"/>
-                        <div class="row">
-                            <div class="col-6">
-                                <table class="table table-sm" t-if="charges.mapped('tax_ids')">
-                                    <thead><tr><th>Tax</th><th class="text-end">Rate</th>
-                                        <th class="text-end">Base</th><th class="text-end">Amount</th></tr></thead>
-                                    <tbody>
-                                        <t t-set="seen_taxes" t-value="[]"/>
-                                        <t t-foreach="charges.mapped('tax_ids')" t-as="tax">
-                                            <t t-if="tax.id not in [t.id for t in seen_taxes]">
-                                                <t t-set="seen_taxes" t-value="seen_taxes + [tax]"/>
-                                                <t t-set="base" t-value="sum(l.amount for l in charges if tax in l.tax_ids)"/>
-                                                <tr>
-                                                    <td><span t-field="tax.name"/></td>
-                                                    <td class="text-end"><span t-field="tax.amount"/>%</td>
-                                                    <td class="text-end"><span t-esc="base"/></td>
-                                                    <td class="text-end"><span t-esc="base * tax.amount / 100"/></td>
-                                                </tr>
-                                            </t>
+                    </table>
+                    <!-- Bottom grid -->
+                    <table class="rc">
+                        <tr>
+                            <td style="width:60%; padding-right:8mm;">
+                                <table class="rc" style="font-size:8.5pt; margin-bottom:4mm;" t-if="charges.mapped('tax_ids')">
+                                    <tr><td colspan="3" class="lbl" style="padding-bottom:1.5mm;">Tax breakdown</td></tr>
+                                    <t t-set="seen" t-value="[]"/>
+                                    <t t-foreach="charges.mapped('tax_ids')" t-as="tax">
+                                        <t t-if="tax.id not in [t.id for t in seen]">
+                                            <t t-set="seen" t-value="seen + [tax]"/>
+                                            <t t-set="base" t-value="sum(l.amount for l in charges if tax in l.tax_ids)"/>
+                                            <tr style="border-bottom:1px solid #F1F3F7;"><td style="padding:1.5mm 0;"><span t-field="tax.name"/></td><td style="text-align:right; color:#667085;" class="num"><t t-esc="tax.amount"/>% of <t t-esc="'{:,.2f}'.format(base)"/></td><td style="text-align:right; width:20mm;" class="num"><t t-esc="'{:,.2f}'.format(base * tax.amount / 100)"/></td></tr>
                                         </t>
-                                    </tbody>
+                                    </t>
                                 </table>
-                            </div>
-                            <div class="col-6">
-                                <!-- Boxed totals panel (UIdesign 07) -->
-                                <table class="table table-sm" style="border:1.5px solid #1C2536;">
-                                    <tr><td style="font-size:8.5pt;">Subtotal</td><td class="text-end" style="font-variant-numeric:tabular-nums;"><span t-esc="subtotal"/></td></tr>
-                                    <tr><td style="font-size:8.5pt;">Taxes</td><td class="text-end" style="font-variant-numeric:tabular-nums;"><span t-esc="tax_total"/></td></tr>
-                                    <tr style="font-weight:700;"><td>Total</td><td class="text-end" style="font-variant-numeric:tabular-nums;"><span t-esc="subtotal + tax_total"/></td></tr>
-                                    <tr><td style="font-size:8.5pt;">Payments Applied</td><td class="text-end" style="color:#00635C;font-variant-numeric:tabular-nums;">− <span t-esc="payments"/></td></tr>
-                                    <tr style="font-weight:700;">
-                                        <td style="font-size:9pt;text-transform:uppercase;letter-spacing:.5px;">Balance Due</td>
-                                        <td class="text-end" t-attf-style="font-size:12pt;font-weight:700;font-variant-numeric:tabular-nums;color:{{' #C13333' if (subtotal + tax_total - payments) > 0 else '#00635C'}};"><span t-esc="subtotal + tax_total - payments"/></td>
-                                    </tr>
+                                <table class="rc" style="font-size:8.5pt;">
+                                    <tr><td colspan="2" class="lbl" style="padding-bottom:1.5mm;">Payments received</td></tr>
+                                    <tr t-foreach="o.invoice_ids.mapped('payment_ids')" t-as="pay" style="border-bottom:1px solid #F1F3F7;"><td style="padding:1.5mm 0;"><t t-esc="pay.date.strftime('%d %b')"/> | <span t-esc="pay.journal_id.name"/></td><td style="text-align:right;" class="num"><span t-field="pay.amount"/></td></tr>
+                                    <tr t-if="not o.invoice_ids.mapped('payment_ids')"><td style="color:#98A2B3; padding:1.5mm 0;">No payments recorded.</td></tr>
                                 </table>
-                                <div style="font-size:7.5pt;color:#667085;margin-top:2mm;">
-                                    Settled in full — no further amount is payable —
-                                    <span t-if="(subtotal + tax_total - payments) > 0">balance due on departure.</span>
-                                    <span t-if="not (subtotal + tax_total - payments) > 0">thank you for staying with us.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </t>
+                            </td>
+                            <td style="width:40%;">
+                                <table class="rc" style="border:1.5px solid #1C2536; font-size:8.5pt;">
+                                    <tr><td style="padding:2mm 0 1mm 3mm;">Subtotal</td><td style="text-align:right; font-weight:700; padding:2mm 3mm 1mm 0;" class="num"><t t-esc="'{:,.2f}'.format(subtotal)"/></td></tr>
+                                    <t t-set="seen2" t-value="[]"/>
+                                    <t t-foreach="charges.mapped('tax_ids')" t-as="tax">
+                                        <t t-if="tax.id not in [t.id for t in seen2]">
+                                            <t t-set="seen2" t-value="seen2 + [tax]"/>
+                                            <t t-set="base2" t-value="sum(l.amount for l in charges if tax in l.tax_ids)"/>
+                                            <tr><td style="padding:1mm 0 1mm 3mm; color:#475467;"><span t-field="tax.name"/> <t t-esc="tax.amount"/>%</td><td style="text-align:right; padding:1mm 3mm 1mm 0; color:#475467;" class="num"><t t-esc="'{:,.2f}'.format(base2 * tax.amount / 100)"/></td></tr>
+                                        </t>
+                                    </t>
+                                    <tr><td colspan="2" style="border-top:1px solid #1C2536; padding:1.5mm 0 1mm 3mm; font-weight:700;">Total</td></tr>
+                                    <tr><td colspan="2" style="text-align:right; font-weight:700; font-size:10.5pt; padding:0 3mm 1.5mm 0;" class="num"><t t-esc="'{:,.2f}'.format(subtotal + tax_total)"/></td></tr>
+                                    <tr><td style="padding:1mm 0 1mm 3mm; color:#00635C;">Payments applied</td><td style="text-align:right; color:#00635C; padding:1mm 3mm 1mm 0;" class="num">- <t t-esc="'{:,.2f}'.format(payments)"/></td></tr>
+                                    <tr><td colspan="2" style="border-top:1px solid #1C2536; padding:2mm 0 0 3mm; font-size:8pt; font-weight:700; letter-spacing:.5px;">BALANCE DUE</td></tr>
+                                    <tr><td colspan="2" t-attf-style="text-align:right; font-size:12pt; font-weight:700; padding:0 3mm 2mm 0; color:{{'#C13333' if balance > 0 else '#00635C'}};" class="num">BDT <t t-esc="'{:,.2f}'.format(balance)"/></td></tr>
+                                    <tr><td colspan="2" style="font-size:6.5pt; color:#667085; padding:0 3mm 2.5mm 3mm;">Settled in full. No further amount is payable.</td></tr>
+                                </table>
+                                <table class="rc" style="margin-top:4mm;"><tr>
+                                    <td style="width:18mm;"><img t-att-src="'/report/barcode/?type=QR&amp;value=%s&amp;width=160&amp;height=160' % o.name" style="width:16mm;height:16mm;"/></td>
+                                    <td style="font-size:6.5pt; color:#667085; padding-top:2mm;">Scan for the digital copy, valid 24 months.<br/>Quote the invoice number for a reissue.</td>
+                                </tr></table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- Footer -->
+                    <table class="rc" style="margin-top:10mm; border-top:1px solid #E3E8EF; padding-top:4mm; font-size:7pt; color:#667085;">
+                        <tr>
+                            <td style="width:33%;"><strong style="color:#1C2536;">Policy</strong><br/>Check-out 12:00. Late departure until 18:00 is charged at 50% of the daily rate. All charges are in Bangladeshi Taka and include the taxes itemised above. Disputes must be raised within 30 days of issue.</td>
+                            <td style="width:34%;"><strong style="color:#1C2536;">Guest signature</strong><br/><div style="border-bottom:1px solid #1C2536; height:9mm; margin:2mm 2mm 1mm 0;"></div>I confirm the charges above are correct.</td>
+                            <td style="width:33%; text-align:right;"><strong style="color:#1C2536;">Thank you for staying with us</strong><br/><span t-esc="prop.name if prop else company.name"/><br/><span style="font-family:'DejaVu Sans Mono',monospace;" t-esc="o.invoice_ids[:1].name if o.invoice_ids else o.name"/><br/>This is a computer-generated tax invoice.</td>
+                        </tr>
+                    </table>
+                </div>
             </t>
         </t>
     </template>
