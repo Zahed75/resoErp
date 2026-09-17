@@ -3,20 +3,21 @@
     <t t-name="rcloud_ui.Dashboard">
         <div class="o_rcloud_dashboard" t-ref="root">
             <div class="rc-header">
-                <div class="rc-title">PMS Dashboard</div>
+                <div>
+                    <div class="rc-display">Front Desk</div>
+                    <div class="rc-caption" t-esc="state.stats ? state.stats.today : ''"/>
+                </div>
                 <div class="rc-controls">
-                    <select t-on-change="onPropertyChange" aria-label="Property">
+                    <select t-on-change="onPropertyChange" aria-label="Property" class="tnum">
                         <option value="all" t-att-selected="state.propertyId === 'all'">All Properties</option>
                         <t t-foreach="state.properties" t-as="p" t-key="p.id">
-                            <option t-att-value="p.id" t-att-selected="state.propertyId == p.id">
-                                <t t-esc="p.name"/>
-                            </option>
+                            <option t-att-value="p.id" t-att-selected="state.propertyId == p.id"><t t-esc="p.name"/></option>
                         </t>
                     </select>
-                    <button class="rc-primary" t-on-click="newReservation" aria-label="New reservation">＋ New Reservation</button>
-                    <button t-on-click="() => this.loadStats()" aria-label="Refresh">⟳ Refresh</button>
-                    <button t-on-click="toggleTheme" aria-label="Toggle dark mode">
-                        <t t-esc="state.dark ? '☀ Light' : '☾ Dark'"/>
+                    <button class="rc-btn-primary" t-on-click="() => this.newReservation()">＋ New Reservation</button>
+                    <button t-on-click="() => this.loadStats()" aria-label="Refresh">⟳</button>
+                    <button t-on-click="toggleTheme" t-att-aria-label="state.dark ? 'Switch to light mode' : 'Switch to dark mode'">
+                        <t t-esc="state.dark ? '☀' : '☾'"/>
                     </button>
                 </div>
             </div>
@@ -24,47 +25,68 @@
             <t t-if="state.loading and !state.stats">
                 <div class="rc-kpi-grid">
                     <t t-foreach="[1,2,3,4,5,6]" t-as="i" t-key="i">
-                        <div class="rc-kpi"><div class="rc-skeleton" style="height:1.2rem;margin-bottom:8px;"/>
-                            <div class="rc-skeleton" style="height:1.8rem;"/></div>
+                        <div class="rc-kpi">
+                            <div class="rc-skeleton" style="width:60%;height:12px;"/>
+                            <div class="rc-skeleton" style="width:45%;height:32px;margin-top:8px;"/>
+                            <div class="rc-skeleton" style="width:70%;height:12px;margin-top:6px;"/>
+                        </div>
                     </t>
                 </div>
             </t>
 
             <t t-if="state.stats">
                 <t t-set="k" t-value="state.stats.kpis"/>
-                <!-- Row 1: KPI cards -->
+                <!-- Row 1: KPI strip -->
                 <div class="rc-kpi-grid">
                     <div class="rc-kpi">
-                        <div class="rc-kpi-title">Occupancy</div>
-                        <div class="rc-kpi-value"><t t-esc="k.occupancy"/>%</div>
-                        <div class="rc-kpi-delta"><t t-esc="k.occupied"/> / <t t-esc="k.rooms_total"/> rooms</div>
+                        <div class="rc-kpi-label">Occupancy</div>
+                        <div class="rc-kpi-value tnum"><t t-esc="k.occupancy"/><span class="rc-unit">%</span></div>
+                        <div class="rc-kpi-delta"><span class="rc-hint"><t t-esc="k.occupied"/> / <t t-esc="k.rooms_total"/> rooms</span></div>
+                        <svg class="rc-kpi-spark" viewBox="0 0 120 28" preserveAspectRatio="none" t-if="state.stats.trend.length > 1">
+                            <polyline t-att-points="spark('occupancy')" fill="none" stroke="var(--rc-accent)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                        </svg>
                     </div>
                     <div class="rc-kpi">
-                        <div class="rc-kpi-title">ADR</div>
-                        <div class="rc-kpi-value" t-esc="fmtMoney(k.adr)"/>
-                        <div class="rc-kpi-delta">30-day average</div>
+                        <div class="rc-kpi-label">ADR</div>
+                        <div class="rc-kpi-value tnum"><t t-esc="fmtMoney(k.adr)"/></div>
+                        <div class="rc-kpi-delta"><span class="rc-hint">30-day average</span></div>
+                        <svg class="rc-kpi-spark" viewBox="0 0 120 28" preserveAspectRatio="none" t-if="state.stats.trend.length > 1">
+                            <polyline t-att-points="spark('adr')" fill="none" stroke="var(--rc-accent)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                        </svg>
                     </div>
                     <div class="rc-kpi">
-                        <div class="rc-kpi-title">RevPAR</div>
-                        <div class="rc-kpi-value" t-esc="fmtMoney(k.revpar)"/>
-                        <div class="rc-kpi-delta">30-day</div>
-                    </div>
-                    <div class="rc-kpi">
-                        <div class="rc-kpi-title">Arrivals Today</div>
-                        <div class="rc-kpi-value" t-esc="k.arrivals_today"/>
-                        <div class="rc-kpi-delta">expected check-ins</div>
-                    </div>
-                    <div class="rc-kpi">
-                        <div class="rc-kpi-title">Departures Today</div>
-                        <div class="rc-kpi-value" t-esc="k.departures_today"/>
-                        <div class="rc-kpi-delta">expected check-outs</div>
-                    </div>
-                    <div class="rc-kpi">
-                        <div class="rc-kpi-title">In-House Guests</div>
-                        <div class="rc-kpi-value" t-esc="k.in_house"/>
-                        <div class="rc-kpi-delta up" t-if="revenueDelta() !== null">
-                            Revenue <t t-esc="revenueDelta()"/>% vs prior 30d
+                        <div class="rc-kpi-label">RevPAR</div>
+                        <div class="rc-kpi-value tnum"><t t-esc="fmtMoney(k.revpar)"/></div>
+                        <div class="rc-kpi-delta" t-att-class="revenueDelta() !== null and revenueDelta() &lt; 0 ? 'down' : 'up'" t-if="revenueDelta() !== null">
+                            <t t-esc="revenueDelta()"/>% <span class="rc-hint">revenue vs prior 30d</span>
                         </div>
+                        <svg class="rc-kpi-spark" viewBox="0 0 120 28" preserveAspectRatio="none" t-if="state.stats.trend.length > 1">
+                            <polyline t-att-points="spark('revenue')" fill="none" stroke="var(--rc-primary)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                        </svg>
+                    </div>
+                    <div class="rc-kpi">
+                        <div class="rc-kpi-label">Arrivals Today</div>
+                        <div class="rc-kpi-value tnum" t-esc="k.arrivals_today"/>
+                        <div class="rc-kpi-delta up"><t t-esc="state.stats.arrivals.length"/> listed</div>
+                        <svg class="rc-kpi-spark" viewBox="0 0 120 28" preserveAspectRatio="none" t-if="state.stats.trend.length > 1">
+                            <polyline t-att-points="spark('arrivals')" fill="none" stroke="var(--rc-info)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                        </svg>
+                    </div>
+                    <div class="rc-kpi">
+                        <div class="rc-kpi-label">Departures Today</div>
+                        <div class="rc-kpi-value tnum" t-esc="k.departures_today"/>
+                        <div class="rc-kpi-delta up"><t t-esc="state.stats.departures.length"/> listed</div>
+                        <svg class="rc-kpi-spark" viewBox="0 0 120 28" preserveAspectRatio="none" t-if="state.stats.trend.length > 1">
+                            <polyline t-att-points="spark('departures')" fill="none" stroke="var(--rc-purple)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                        </svg>
+                    </div>
+                    <div class="rc-kpi">
+                        <div class="rc-kpi-label">In-House</div>
+                        <div class="rc-kpi-value tnum" t-esc="k.in_house"/>
+                        <div class="rc-kpi-delta"><span class="rc-hint">current guests</span></div>
+                        <svg class="rc-kpi-spark" viewBox="0 0 120 28" preserveAspectRatio="none" t-if="state.stats.trend.length > 1">
+                            <polyline t-att-points="spark('in_house')" fill="none" stroke="var(--rc-primary)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                        </svg>
                     </div>
                 </div>
 
@@ -73,150 +95,136 @@
                     <div class="rc-panel">
                         <div class="rc-panel-title">Today's Movements</div>
                         <div class="rc-tabs" role="tablist">
-                            <button t-att-class="{active: state.tab === 'arrivals'}" t-on-click="() => this.setTab('arrivals')">Arrivals</button>
-                            <button t-att-class="{active: state.tab === 'departures'}" t-on-click="() => this.setTab('departures')">Departures</button>
-                            <button t-att-class="{active: state.tab === 'inhouse'}" t-on-click="() => this.setTab('inhouse')">In-House</button>
+                            <button t-att-class="{active: state.tab === 'arrivals'}" t-on-click="() => this.setTab('arrivals')">Arrivals <span class="rc-count" t-esc="k.arrivals_today"/></button>
+                            <button t-att-class="{active: state.tab === 'departures'}" t-on-click="() => this.setTab('departures')">Departures <span class="rc-count" t-esc="k.departures_today"/></button>
+                            <button t-att-class="{active: state.tab === 'inhouse'}" t-on-click="() => this.setTab('inhouse')">In-House <span class="rc-count" t-esc="k.in_house"/></button>
                         </div>
-                        <t t-if="state.tab === 'arrivals'">
-                            <t t-foreach="state.stats.arrivals" t-as="r" t-key="r.id">
-                                <div class="rc-move-row" t-on-click="() => this.openReservation(r)">
-                                    <span><span class="rc-guest" t-esc="r.guest_id[1]"/><br/>
-                                        <span class="rc-meta"><t t-esc="r.name"/> · <t t-esc="r.room_type_id[1]"/></span></span>
-                                    <button t-on-click="(ev) => this.checkIn(r.id, ev)">Check In</button>
-                                </div>
-                            </t>
-                            <div class="rc-empty" t-if="!state.stats.arrivals.length">No arrivals expected. Enjoy the calm.</div>
-                        </t>
-                        <t t-if="state.tab === 'departures'">
-                            <t t-foreach="state.stats.departures" t-as="r" t-key="r.id">
-                                <div class="rc-move-row" t-on-click="() => this.openReservation(r)">
-                                    <span><span class="rc-guest" t-esc="r.guest_id[1]"/><br/>
-                                        <span class="rc-meta"><t t-esc="r.name"/> · Room <t t-esc="r.room_id[1]"/></span></span>
-                                    <button t-on-click="(ev) => this.checkOut(r.id, ev)">Check Out</button>
-                                </div>
-                            </t>
-                            <div class="rc-empty" t-if="!state.stats.departures.length">No departures scheduled today.</div>
-                        </t>
-                        <t t-if="state.tab === 'inhouse'">
-                            <t t-foreach="state.stats.inhouse" t-as="r" t-key="r.id">
-                                <div class="rc-move-row" t-on-click="() => this.openReservation(r)">
-                                    <span><span class="rc-guest" t-esc="r.guest_id[1]"/><br/>
-                                        <span class="rc-meta"><t t-esc="r.name"/> · Room <t t-esc="r.room_id[1]"/> · out <t t-esc="r.departure"/></span></span>
-                                </div>
-                            </t>
-                            <div class="rc-empty" t-if="!state.stats.inhouse.length">No guests in house.</div>
-                        </t>
+                        <table class="rc-table" t-if="movementRows().length">
+                            <thead><tr>
+                                <th>Guest</th><th>Room / Type</th><th>Dates</th><th class="rc-money">Balance</th><th>Action</th>
+                            </tr></thead>
+                            <tbody>
+                                <tr t-foreach="movementRows()" t-as="r" t-key="r.id" t-on-click="() => this.openReservation(r)">
+                                    <td t-esc="r.guest_id[1]"/>
+                                    <td><t t-esc="r.room_id ? r.room_id[1] : (r.room_type_id ? r.room_type_id[1] : '—')"/></td>
+                                    <td class="tnum"><t t-esc="r.arrival or ''"/> <t t-esc="r.departure or ''"/></td>
+                                    <td class="rc-money"><t t-esc="fmtMoney(r.amount_total or 0)"/></td>
+                                    <td>
+                                        <button class="rc-btn-primary" style="height:28px;font-size:12px;" t-if="state.tab === 'arrivals'" t-on-click="() => this.checkIn(r.id)">Check In</button>
+                                        <button class="rc-btn-primary" style="height:28px;font-size:12px;" t-if="state.tab === 'departures'" t-on-click="() => this.checkOut(r.id)">Check Out</button>
+                                        <span t-att-class="'rc-pill ' + statusPillClass(r.state)" t-if="state.tab === 'inhouse'"><span class="rc-dot"/><t t-esc="r.state"/></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="rc-empty" t-if="!movementRows().length">Nothing here right now.</div>
                     </div>
 
                     <!-- Room status board -->
                     <div class="rc-panel">
                         <div class="rc-panel-title">Room Status Board</div>
+                        <div class="rc-legend">
+                            <span class="rc-legend-item" t-foreach="roomLegend()" t-as="l" t-key="l.key">
+                                <span class="rc-sq" t-attf-style="background: {{l.color}}"/> <t t-esc="l.label"/> <strong class="tnum" t-esc="l.count"/>
+                            </span>
+                        </div>
                         <div class="rc-room-grid">
                             <t t-foreach="state.stats.rooms" t-as="room" t-key="room.id">
                                 <div t-attf-class="rc-room {{room.is_ooo ? 'out_of_order' : room.status}}"
                                      t-on-click="() => this.openRoom(room)"
-                                     role="button" t-att-aria-label="'Room ' + room.name">
-                                    <t t-esc="room.name"/>
-                                    <div class="rc-room-sub" t-esc="room.housekeeping_state"/>
-                                </div>
+                                     role="button" t-att-aria-label="'Room ' + room.name" t-esc="room.name"/>
                             </t>
                         </div>
                         <div class="rc-empty" t-if="!state.stats.rooms.length">No rooms configured yet — add rooms under Rooms &amp; Setup.</div>
                     </div>
                 </div>
 
-                <div class="rc-grid-2">
-                    <!-- Trend + source -->
+                <div class="rc-grid-3">
+                    <!-- Trend -->
                     <div class="rc-panel">
-                        <div class="rc-panel-title">Occupancy &amp; Revenue Trend (30 days)</div>
-                        <div class="rc-chart" t-if="state.stats.trend.length">
+                        <div class="rc-panel-title">Occupancy &amp; Revenue · 30 days</div>
+                        <div class="rc-chart" t-if="state.stats.trend.length > 1">
                             <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <polyline t-att-points="trendPoints('occupancy')" fill="none"
-                                    stroke="var(--rc-primary)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-                                <polyline t-att-points="trendPoints('revenue')" fill="none"
-                                    stroke="var(--rc-accent)" stroke-width="1.5" stroke-dasharray="4 2" vector-effect="non-scaling-stroke"/>
+                                <polyline t-att-points="trendPoints('occupancy')" fill="none" stroke="var(--rc-primary)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+                                <polyline t-att-points="trendPoints('revenue')" fill="none" stroke="var(--rc-accent)" stroke-width="1.5" stroke-dasharray="4 2" vector-effect="non-scaling-stroke"/>
                             </svg>
-                            <div class="rc-room-sub">— occupancy · - - revenue (nightly cron fills stats)</div>
+                            <div class="rc-caption" style="text-transform:none;">— occupancy · - - revenue (nightly cron fills stats)</div>
                         </div>
                         <div class="rc-empty" t-else="">Trend data appears after the first nightly stats run.</div>
                     </div>
 
+                    <!-- Revenue by source -->
                     <div class="rc-panel">
-                        <div class="rc-panel-title">Revenue by Source (30 days)</div>
-                        <div class="rc-bars" t-if="state.stats.revenue_by_source.length">
-                            <t t-foreach="state.stats.revenue_by_source" t-as="s" t-key="s.source">
-                                <div class="rc-bar-wrap">
-                                    <div class="rc-bar" t-attf-style="height: {{Math.round(s.amount / maxSource() * 100)}}%"/>
-                                    <div class="rc-bar-label"><t t-esc="s.source"/></div>
-                                </div>
-                            </t>
+                        <div class="rc-panel-title">Revenue by Source · 30 days</div>
+                        <div class="rc-donut-legend" t-if="state.stats.revenue_by_source.length">
+                            <span class="rc-legend-item" t-foreach="state.stats.revenue_by_source" t-as="s" t-key="s.source">
+                                <span><span class="rc-sq" t-attf-style="background: var(--rc-primary)"/> <t t-esc="s.source"/></span>
+                                <strong class="tnum" t-esc="fmtMoney(s.amount)"/>
+                            </span>
                         </div>
                         <div class="rc-empty" t-else="">No revenue recorded in the last 30 days.</div>
                     </div>
+
+                    <!-- Housekeeping -->
+                    <div class="rc-panel">
+                        <div class="rc-panel-title">Housekeeping</div>
+                        <div class="tnum" style="font-size:13px;font-weight:600;margin-bottom:6px;">
+                            <t t-esc="k.clean"/> / <t t-esc="k.rooms_total"/> rooms ready
+                        </div>
+                        <div class="rc-progress" role="progressbar" t-att-aria-valuenow="hkPercent()">
+                            <div class="rc-progress-fill" t-attf-style="width: {{hkPercent()}}%"/>
+                            <div class="rc-progress-fill warn" t-attf-style="width: {{dirtyPercent()}}%"/>
+                        </div>
+                        <div style="margin-top:10px;font-size:13px;color:var(--rc-text-muted);">
+                            Clean <strong class="tnum" t-esc="k.clean"/> · Dirty <strong class="tnum" t-esc="k.dirty"/> ·
+                            Occupied <strong class="tnum" t-esc="k.occupied"/> · OOO <strong class="tnum" t-esc="k.ooo"/>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Housekeeping progress -->
+                <!-- Needs attention (full width) -->
+                <t t-set="a" t-value="state.stats.attention"/>
+                <div class="rc-panel" t-if="a.ticket_count or a.hk_pending or a.folio_count">
+                    <div class="rc-panel-title">Needs Attention</div>
+                    <div class="rc-attn-row" t-if="a.folio_count">
+                        <span class="rc-sev red"/>
+                        <span class="rc-attn-title"><t t-esc="a.folio_count"/> folios with open balance</span>
+                        <span class="rc-attn-detail">settle before departure where possible</span>
+                        <span class="rc-attn-action">Review folios</span>
+                    </div>
+                    <div class="rc-attn-row" t-if="a.hk_pending">
+                        <span class="rc-sev amber"/>
+                        <span class="rc-attn-title"><t t-esc="a.hk_pending"/> housekeeping tasks pending</span>
+                        <span class="rc-attn-detail">auto-generated each morning from occupancy</span>
+                        <span class="rc-attn-action">Assign</span>
+                    </div>
+                    <div class="rc-attn-row" t-if="a.ticket_count">
+                        <span class="rc-sev amber"/>
+                        <span class="rc-attn-title"><t t-esc="a.ticket_count"/> maintenance tickets open</span>
+                        <span class="rc-attn-detail" t-esc="a.tickets.length ? a.tickets[0].title : ''"/>
+                        <span class="rc-attn-action">Open tickets</span>
+                    </div>
+                </div>
+
+                <!-- Recent reservations -->
                 <div class="rc-panel">
-                    <div class="rc-panel-title">Housekeeping Progress</div>
-                    <div class="rc-progress" role="progressbar" t-att-aria-valuenow="hkPercent()">
-                        <div class="rc-progress-fill" t-attf-style="width: {{hkPercent()}}%"/>
-                    </div>
-                    <div class="rc-room-sub" style="margin-top:6px;">
-                        <t t-esc="k.clean"/> clean · <t t-esc="k.dirty"/> dirty ·
-                        <t t-esc="k.occupied"/> occupied · <t t-esc="k.ooo"/> out of order
-                    </div>
-                </div>
-
-                <div class="rc-grid-2">
-                    <!-- Recent reservations -->
-                    <div class="rc-panel">
-                        <div class="rc-panel-title">Recent Reservations</div>
-                        <t t-foreach="state.stats.recent" t-as="r" t-key="r.id">
-                            <div class="rc-move-row" t-on-click="() => this.openReservation(r)">
-                                <span><span class="rc-guest" t-esc="r.guest_id[1]"/><br/>
-                                    <span class="rc-meta"><t t-esc="r.name"/> · <t t-esc="r.arrival"/> → <t t-esc="r.departure"/></span></span>
-                                <span>
-                                    <span class="rc-meta" t-esc="r.state"/><br/>
-                                    <strong t-esc="fmtMoney(r.amount_total)"/>
-                                </span>
-                            </div>
-                        </t>
-                        <div class="rc-empty" t-if="!state.stats.recent.length">No reservations yet — create the first one.</div>
-                    </div>
-
-                    <!-- Attention queue -->
-                    <div class="rc-panel">
-                        <div class="rc-panel-title">Needs Attention</div>
-                        <t t-set="a" t-value="state.stats.attention"/>
-                        <div class="rc-move-row" t-if="a.ticket_count">
-                            <span><span class="rc-guest">Open maintenance tickets</span><br/>
-                                <span class="rc-meta">highest priority first</span></span>
-                            <strong t-esc="a.ticket_count"/>
-                        </div>
-                        <t t-foreach="a.tickets" t-as="t" t-key="t.id">
-                            <div class="rc-move-row">
-                                <span><span class="rc-guest" t-esc="t.title"/><br/>
-                                    <span class="rc-meta"><t t-esc="t.name"/> · priority <t t-esc="t.priority"/></span></span>
-                                <span class="rc-meta" t-esc="t.state"/>
-                            </div>
-                        </t>
-                        <div class="rc-move-row" t-if="a.hk_pending">
-                            <span><span class="rc-guest">Housekeeping tasks pending</span></span>
-                            <strong t-esc="a.hk_pending"/>
-                        </div>
-                        <div class="rc-move-row" t-if="a.folio_count">
-                            <span><span class="rc-guest">Folios with open balance</span></span>
-                            <strong t-esc="a.folio_count"/>
-                        </div>
-                        <t t-foreach="a.folios" t-as="f" t-key="f.id">
-                            <div class="rc-move-row">
-                                <span><span class="rc-guest" t-esc="f.partner_id[1]"/><br/>
-                                    <span class="rc-meta" t-esc="f.name"/></span>
-                                <strong t-esc="fmtMoney(f.balance)"/>
-                            </div>
-                        </t>
-                        <div class="rc-empty" t-if="!a.ticket_count and !a.hk_pending and !a.folio_count">All clear — nothing needs attention.</div>
-                    </div>
+                    <div class="rc-panel-title">Recent Reservations</div>
+                    <table class="rc-table" t-if="state.stats.recent.length">
+                        <thead><tr>
+                            <th>Reference</th><th>Guest</th><th>Arrival</th><th>Departure</th><th>Status</th><th class="rc-money">Total</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr t-foreach="state.stats.recent" t-as="r" t-key="r.id" t-on-click="() => this.openReservation(r)">
+                                <td class="mono" t-esc="r.name"/>
+                                <td t-esc="r.guest_id[1]"/>
+                                <td class="tnum" t-esc="r.arrival"/>
+                                <td class="tnum" t-esc="r.departure"/>
+                                <td><span t-att-class="'rc-pill ' + statusPillClass(r.state)"><span class="rc-dot"/><t t-esc="r.state"/></span></td>
+                                <td class="rc-money" t-esc="fmtMoney(r.amount_total)"/>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="rc-empty" t-if="!state.stats.recent.length">No reservations yet — create the first one.</div>
                 </div>
             </t>
         </div>

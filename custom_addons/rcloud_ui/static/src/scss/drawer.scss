@@ -81,10 +81,35 @@
     }
 
     .rc-drawer-foot {
-        padding: 10px 16px;
+        padding: 10px 12px;
         border-top: 1px solid var(--rc-border, #E3E8EF);
         font-size: .72rem;
         color: var(--rc-text-muted, #667085);
+
+        .rc-drawer-actions {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+
+            button {
+                flex: 1;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                font-family: inherit;
+                font-size: .76rem;
+                font-weight: 600;
+                padding: 7px 8px;
+                border-radius: var(--rc-radius-sm, 6px);
+                border: 1px solid var(--rc-border, #E3E8EF);
+                background: var(--rc-surface-2, #F8FAFD);
+                color: var(--rc-text, #1C2536);
+                cursor: pointer;
+
+                &:hover { border-color: var(--rc-primary, #1A4D8F); color: var(--rc-primary, #1A4D8F); }
+            }
+        }
     }
 }
 
@@ -92,3 +117,15 @@
     from { transform: translateX(-100%); }
     to { transform: translateX(0); }
 }
+
+/* Top-bar quick actions (UIdesign 02) */
+.rc-quick-actions { display: inline-flex; gap: 8px; align-items: center;
+    button { font-family: var(--rc-font, 'Inter', sans-serif); font-size: 13px; font-weight: 600;
+        height: 36px; padding: 0 14px; border-radius: var(--rc-radius-sm, 6px); cursor: pointer;
+        transition: background 150ms ease-out; }
+    .rc-qa-primary { background: var(--rc-primary, #1A4D8F); color: #fff; border: 1px solid var(--rc-primary, #1A4D8F);
+        &:hover { background: var(--rc-primary-dark, #12325C); } }
+    .rc-qa-secondary { background: var(--rc-surface, #fff); color: var(--rc-text, #1C2536); border: 1px solid var(--rc-border-strong, #8C97A8);
+        &:hover { background: var(--rc-bg, #F4F6FA); color: var(--rc-primary-dark, #12325C); border-color: var(--rc-primary, #1A4D8F); } }
+}
+@media (max-width: 1100px) { .rc-quick-actions .rc-qa-secondary { display: none; } }

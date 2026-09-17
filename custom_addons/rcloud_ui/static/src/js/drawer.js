@@ -61,6 +61,7 @@ export class RcloudDrawerToggle extends Component {
 
     setup() {
         this.menu = useService("menu");
+        this.action = useService("action");
         this.state = useState({ open: false, filter: "" });
         useExternalListener(document, "keydown", (ev) => {
             if (ev.key === "Escape") { this.state.open = false; }
@@ -115,6 +116,18 @@ export class RcloudDrawerToggle extends Component {
 
     onSearch(ev) {
         this.state.filter = ev.target.value;
+    }
+
+    openAppsManager() {
+        this.state.open = false;
+        // Odoo's module kanban: admins can install/update apps here;
+        // access rights keep it admin-only automatically.
+        this.action.doAction("base.open_module_tree");
+    }
+
+    openSettings() {
+        this.state.open = false;
+        this.action.doAction("base_setup.action_general_configuration");
     }
 }
 

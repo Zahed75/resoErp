@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="rcloud_ui.QuickActions">
+        <div class="rc-quick-actions">
+            <button class="rc-qa-primary" t-on-click="() => this.newReservation()">＋ New Reservation</button>
+            <button class="rc-qa-secondary" t-on-click="() => this.openArrivals()">Check In</button>
+            <button class="rc-qa-secondary" t-on-click="() => this.openDepartures()">Check Out</button>
+        </div>
+    </t>
+</templates>

@@ -26,7 +26,19 @@
                     </t>
                     <div class="rc-empty" style="padding:16px;" t-if="!apps.length">No apps match your search.</div>
                 </div>
-                <div class="rc-drawer-foot">Resort Cloud · one guest record, one folio, everywhere</div>
+                <div class="rc-drawer-foot">
+                    <div class="rc-drawer-actions">
+                        <button t-on-click="() => this.openAppsManager()">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M10.59,9.17L5.41,4L4,5.41L9.17,10.58L10.59,9.17M14.5,4L16.54,6.04L4,18.59L5.41,20L17.96,7.46L20,9.5V4M14.83,13.41L13.42,14.82L16.55,17.95L14.5,20H20V14.5L17.96,16.54L14.83,13.41Z"/></svg>
+                            Install Apps
+                        </button>
+                        <button t-on-click="() => this.openSettings()">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.4,13C19.5,12.7 19.5,12.4 19.5,12C19.5,11.6 19.5,11.3 19.4,11L21.5,9.4L19.5,6.6L17,7.5C16.4,7 15.7,6.6 15,6.3L14.7,3.8H11.3L11,6.3C10.3,6.6 9.6,7 9,7.5L6.5,6.6L4.5,9.4L6.6,11C6.5,11.3 6.5,11.6 6.5,12C6.5,12.4 6.5,12.7 6.6,13L4.5,14.6L6.5,17.4L9,16.5C9.6,17 10.3,17.4 11,17.7L11.3,20.2H14.7L15,17.7C15.7,17.4 16.4,17 17,16.5L19.5,17.4L21.5,14.6L19.4,13Z"/></svg>
+                            Settings
+                        </button>
+                    </div>
+                    <div>Resort Cloud · one guest record, one folio, everywhere</div>
+                </div>
             </div>
         </t>
     </t>

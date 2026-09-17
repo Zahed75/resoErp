@@ -1,39 +1,94 @@
 /* ==========================================================================
-   Resort Cloud design tokens (spec 2.2). No hard-coded hex values in
-   components — always go through these variables.
+   Resort Cloud design tokens — extracted from UIdesign/*.dc.html (Figma)
+   Light + dark. Components must use these variables, never literals.
    ========================================================================== */
 
 :root {
+    /* color */
     --rc-primary: #1A4D8F;
     --rc-primary-dark: #12325C;
+    --rc-primary-deep: #0D2545;
+    --rc-primary-light: #E8F0FA;
+    --rc-primary-border: #D6E3F5;
     --rc-accent: #00A99D;
-    --rc-warn: #F5A623;
+    --rc-accent-text: #007A72;
+    --rc-warning: #F5A623;
+    --rc-warning-text: #8A5A0B;
+    --rc-warning-tint: #FEF4E5;
     --rc-danger: #D64545;
+    --rc-danger-text: #C13333;
+    --rc-danger-deep: #A32828;
+    --rc-danger-tint: #FBE9E9;
+    --rc-info: #3B82F6;
+    --rc-info-text: #1D5DC0;
+    --rc-info-tint: #E5EFFE;
+    --rc-purple: #8B5CF6;
+    --rc-purple-text: #6D31DB;
+    --rc-purple-tint: #F0E9FE;
+    --rc-success-tint: #E0F5F3;
+    --rc-success-text: #00635C;
+    --rc-neutral-tint: #F1F3F7;
+    --rc-hover-row: #F7F9FC;
     --rc-surface: #FFFFFF;
     --rc-surface-2: #F8FAFD;
     --rc-bg: #F4F6FA;
     --rc-border: #E3E8EF;
+    --rc-border-strong: #8C97A8;
+    --rc-link-underline: #C6CFDB;
     --rc-text: #1C2536;
+    --rc-text-secondary: #475467;
     --rc-text-muted: #667085;
+    --rc-text-disabled: #98A2B3;
+    --rc-scrim: rgba(16, 24, 40, .40);
+
+    /* elevation */
     --rc-shadow-1: 0 1px 2px rgba(16, 24, 40, .06), 0 1px 3px rgba(16, 24, 40, .10);
     --rc-shadow-2: 0 4px 8px rgba(16, 24, 40, .06), 0 2px 4px rgba(16, 24, 40, .08);
+    --rc-shadow-3: 0 12px 24px rgba(16, 24, 40, .10);
+
+    /* shape & space (4px grid) */
+    --rc-radius-sm: 6px;
+    --rc-radius: 10px;
+    --rc-radius-lg: 14px;
     --rc-space-1: 4px;  --rc-space-2: 8px;  --rc-space-3: 12px;
     --rc-space-4: 16px; --rc-space-6: 24px; --rc-space-8: 32px;
-    --rc-radius: 10px;
-    --rc-radius-sm: 6px;
-    --rc-font: 'Inter', 'Roboto', -apple-system, 'Segoe UI', sans-serif;
+
+    /* type */
+    --rc-font: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --rc-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    /* motion */
     --rc-ease: cubic-bezier(.4, 0, .2, 1);
+    --rc-motion-micro: 150ms ease-out;
+    --rc-motion-drawer: 200ms ease-out;
 }
 
 [data-rc-theme="dark"] {
-    --rc-surface: #1C2536;
-    --rc-surface-2: #232F44;
-    --rc-bg: #121826;
-    --rc-border: #33405A;
-    --rc-text: #E7ECF3;
-    --rc-text-muted: #94A3B8;
-    --rc-primary: #4C86D8;
-    --rc-primary-dark: #7FA9E4;
-    --rc-shadow-1: 0 1px 2px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .4);
-    --rc-shadow-2: 0 4px 8px rgba(0, 0, 0, .35), 0 2px 4px rgba(0, 0, 0, .4);
+    --rc-bg: #0F1420;
+    --rc-surface: #171D2B;
+    --rc-surface-2: #1F2637;
+    --rc-border: #2A3346;
+    --rc-border-strong: #4A5568;
+    --rc-primary: #4D8FD6;
+    --rc-primary-dark: #8FBFF0;
+    --rc-primary-light: #1B2B45;
+    --rc-primary-border: #2A3E5E;
+    --rc-accent: #2BC4B8;
+    --rc-accent-text: #2BC4B8;
+    --rc-warning: #F7B955;
+    --rc-warning-text: #F7B955;
+    --rc-warning-tint: #3A2A18;
+    --rc-danger: #E8645F;
+    --rc-danger-text: #E8645F;
+    --rc-danger-tint: #3A2222;
+    --rc-info: #60A5FA;
+    --rc-info-text: #60A5FA;
+    --rc-info-tint: #1B2B45;
+    --rc-success-tint: #123331;
+    --rc-success-text: #2BC4B8;
+    --rc-neutral-tint: #232C3F;
+    --rc-text: #E6EAF2;
+    --rc-text-secondary: #B7C0D0;
+    --rc-text-muted: #94A0B8;
+    --rc-text-disabled: #5B6779;
 }
