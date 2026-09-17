@@ -37,4 +37,5 @@ OWL-based PMS experience layer for Resort Cloud (spec Part 2 & 6):
     'installable': True,
     'application': False,
     'auto_install': False,
+    'post_init_hook': 'post_init_hook',
 }

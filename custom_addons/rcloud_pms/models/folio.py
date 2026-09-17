@@ -27,7 +27,8 @@ class RcloudFolio(models.Model):
         ('closed', 'Closed'),
     ], default='open', required=True, tracking=True)
     balance = fields.Monetary(
-        compute='_compute_balance', currency_field='currency_id')
+        compute='_compute_balance', currency_field='currency_id',
+        store=True)
 
     @api.model_create_multi
     def create(self, vals_list):

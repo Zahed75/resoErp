@@ -110,6 +110,40 @@ class RcloudReservation(models.Model):
             ['id', 'name', 'status', 'housekeeping_state', 'is_ooo'],
             limit=400, order='name')
 
+        # Attention queue (spec 2.5 row 4) + recent activity
+        attention = {'tickets': [], 'ticket_count': 0,
+                     'hk_pending': 0, 'folios': [], 'folio_count': 0}
+        if 'rcloud.maintenance.ticket' in self.env:
+            Ticket = self.env['rcloud.maintenance.ticket'].sudo()
+            t_domain = [('state', 'in', ('new', 'in_progress'))]
+            if property_id:
+                t_domain.append(('property_id', '=', property_id))
+            attention['ticket_count'] = Ticket.search_count(t_domain)
+            attention['tickets'] = Ticket.search_read(
+                t_domain, ['id', 'name', 'title', 'priority', 'state'],
+                limit=5, order='priority desc')
+        if 'rcloud.housekeeping.task' in self.env:
+            Task = self.env['rcloud.housekeeping.task'].sudo()
+            h_domain = [('state', 'in', ('pending', 'in_progress'))]
+            if property_id:
+                h_domain.append(('property_id', '=', property_id))
+            attention['hk_pending'] = Task.search_count(h_domain)
+        if 'rcloud.folio' in self.env:
+            Folio = self.env['rcloud.folio'].sudo()
+            f_domain = [('state', '=', 'open'), ('balance', '>', 0)]
+            if property_id:
+                f_domain.append(('property_id', '=', property_id))
+            attention['folio_count'] = Folio.search_count(f_domain)
+            attention['folios'] = Folio.search_read(
+                f_domain, ['id', 'name', 'partner_id', 'balance'],
+                limit=5, order='balance desc')
+
+        recent = Reservation.search_read(
+            domain,
+            ['id', 'name', 'guest_id', 'arrival', 'departure', 'state',
+             'amount_total'],
+            limit=10, order='arrival desc')
+
         return {
             'today': str(today),
             'kpis': {
@@ -126,6 +160,9 @@ class RcloudReservation(models.Model):
                 'dirty': dirty,
                 'ooo': ooo,
                 'clean': clean,
+                'open_tickets': attention['ticket_count'],
+                'hk_pending': attention['hk_pending'],
+                'open_folios': attention['folio_count'],
             },
             'trend': trend,
             'revenue_by_source': by_source,
@@ -133,4 +170,6 @@ class RcloudReservation(models.Model):
             'departures': departures,
             'inhouse': inhouse,
             'rooms': rooms,
+            'attention': attention,
+            'recent': recent,
         }

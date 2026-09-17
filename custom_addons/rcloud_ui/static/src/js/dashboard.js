@@ -96,6 +96,14 @@ export class RcloudDashboard extends Component {
         });
     }
 
+    newReservation() {
+        this.action.doAction({
+            type: "ir.actions.act_window",
+            res_model: "rcloud.reservation",
+            views: [[false, "form"]],
+        });
+    }
+
     fmtMoney(v) {
         return (v || 0).toLocaleString("en-US",
             { maximumFractionDigits: 0 });
