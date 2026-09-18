@@ -228,12 +228,24 @@
             <kanban default_group_by="state" records_draggable="false">
                 <field name="name"/><field name="guest_id"/><field name="arrival"/>
                 <field name="departure"/><field name="state"/><field name="room_id"/>
+                <field name="room_type_id"/><field name="source"/><field name="amount_total"/>
+                <field name="property_id"/><field name="adults"/><field name="children"/>
                 <templates><t t-name="card">
                     <div class="p-2">
-                        <strong class="o_kanban_record_title"><field name="name"/></strong>
+                        <div class="d-flex justify-content-between">
+                            <strong class="o_kanban_record_title"><field name="name"/></strong>
+                            <span class="badge text-bg-light"><field name="state"/></span>
+                        </div>
                         <div class="text-muted"><field name="guest_id"/></div>
-                        <div class="small"><field name="arrival"/> - <field name="departure"/></div>
-                        <div class="small text-muted">Room <field name="room_id"/></div>
+                        <div class="small"><field name="arrival"/> - <field name="departure"/>
+                            <span class="text-muted"> | <field name="room_type_id"/></span></div>
+                        <div class="small text-muted">Room <field name="room_id"/>
+                            | <field name="adults"/> adult<t t-if="adults > 1">s</t><t t-if="children"> +<field name="children"/></t>
+                            | <field name="source"/></div>
+                        <div class="d-flex justify-content-between small mt-1">
+                            <span class="text-muted"><field name="property_id"/></span>
+                            <strong><field name="amount_total" widget="monetary"/></strong>
+                        </div>
                     </div>
                 </t></templates>
             </kanban>
@@ -252,6 +264,9 @@
                 <field name="guest_id"/>
                 <field name="property_id"/>
                 <field name="room_id"/>
+                <field name="room_type_id" optional="show"/>
+                <field name="adults" optional="show"/>
+                <field name="source" optional="show"/>
                 <field name="arrival"/>
                 <field name="departure"/>
                 <field name="state" widget="badge"/>
