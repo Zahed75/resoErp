@@ -304,6 +304,8 @@
                     <button name="action_no_show" string="No Show" type="object"
                         invisible="state != 'confirmed'"
                         groups="rcloud_base.group_hotel_manager"/>
+                    <button name="action_print_folio" string="Print Folio" type="object"
+                        invisible="not folio_id"/>
                     <field name="state" widget="statusbar"
                         statusbar_visible="draft,hold,confirmed,checked_in,checked_out,invoiced"/>
                 </header>
@@ -330,7 +332,7 @@
                             <field name="amount_total"/>
                         </group>
                     </group>
-                    <group string="Nightly Lines" style="width:100%;">
+                    <group string="Nightly Lines" col="1" style="width:100%;">
                         <field name="line_ids" nolabel="1">
                             <list>
                                 <field name="date"/>

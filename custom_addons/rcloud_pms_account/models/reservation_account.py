@@ -23,11 +23,3 @@ class RcloudReservation(models.Model):
             res.message_post(body=_(
                 'Stay invoiced: %s.') % invoice.name)
         return True
-
-    def action_print_folio(self):
-        self.ensure_one()
-        if not self.folio_id:
-            raise UserError(_('The reservation has no folio yet.'))
-        return self.env.ref(
-            'rcloud_pms_account.action_report_folio'
-        ).report_action(self.folio_id)

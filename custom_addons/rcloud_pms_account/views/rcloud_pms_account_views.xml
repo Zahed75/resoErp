@@ -44,8 +44,6 @@
                 <button name="action_invoice_stay" string="Invoice Stay"
                     type="object" invisible="state not in ('checked_in', 'checked_out')"
                     groups="rcloud_base.group_hotel_manager"/>
-                <button name="action_print_folio" string="Print Folio"
-                    type="object" invisible="not folio_id"/>
             </header>
         </field>
     </record>

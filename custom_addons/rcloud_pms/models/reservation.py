@@ -64,6 +64,17 @@ class RcloudReservation(models.Model):
                 raise ValidationError(
                     _('The rate plan must belong to the reservation property.'))
 
+    def action_print_folio(self):
+        self.ensure_one()
+        if not self.folio_id:
+            raise UserError(_('The reservation has no folio yet.'))
+        report = self.env.ref(
+            'rcloud_pms_account.action_report_folio',
+            raise_if_not_found=False)
+        if not report:
+            raise UserError(_('The folio report is not available.'))
+        return report.report_action(self.folio_id)
+
     @api.depends('line_ids.rate')
     def _compute_amount_total(self):
         for res in self:
