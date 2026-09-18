@@ -26,7 +26,13 @@ export class ThemeService {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored === 'light' || stored === 'dark') {
-        return stored; false;
+        return stored;
+      }
+    } catch {
+      /* private mode */
+    }
+    // White theme by default; dark only when the user explicitly chose it.
+    return 'light';
   }
 
   private apply(theme: Theme): void {
