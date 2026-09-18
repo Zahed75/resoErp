@@ -1,0 +1,99 @@
+.reso-band {
+    padding: 16px 4px;
+    border-bottom: 1px solid #E3E8EF;
+    margin-bottom: 16px;
+}
+
+.reso-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #E8F0FA;
+    color: #12325C;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    flex: none;
+}
+
+.reso-rail {
+    background: #F4F6FA;
+    border-left: 1px solid #E3E8EF;
+    padding: 16px;
+    width: 300px;
+    flex: none;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    border-radius: 0 6px 6px 0;
+}
+
+.reso-rail-heading {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #667085;
+}
+
+.reso-rail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 13px;
+    margin-top: 8px;
+
+    > span:first-child {
+        color: #667085;
+    }
+}
+
+.reso-rail-total {
+    border-top: 1px solid #E3E8EF;
+    padding-top: 8px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.reso-balance-card {
+    background: #FFFFFF;
+    border: 1px solid #E3E8EF;
+    border-radius: 6px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.reso-balance-amount {
+    font-size: 20px;
+    font-weight: 600;
+    color: #C13333;
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+}
+
+.reso-fact-card {
+    background: #FFFFFF;
+    border: 1px solid #E3E8EF;
+    border-radius: 6px;
+    padding: 10px 12px;
+    flex: 1 1 0;
+    min-width: 150px;
+}
+
+.reso-fact-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #667085;
+}
+
+.reso-fact-value {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+}

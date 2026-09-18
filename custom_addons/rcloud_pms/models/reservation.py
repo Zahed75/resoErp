@@ -48,6 +48,14 @@ class RcloudReservation(models.Model):
     amount_total = fields.Monetary(
         compute='_compute_amount_total', currency_field='currency_id',
         store=True)
+    nights = fields.Integer(compute='_compute_nights')
+    guest_initials = fields.Char(compute='_compute_guest_initials')
+    folio_balance = fields.Monetary(
+        related='folio_id.balance', readonly=True,
+        currency_field='currency_id')
+    internal_notes = fields.Text(string='Internal Notes')
+    occupancy_display = fields.Char(
+        compute='_compute_occupancy_display')
 
     _reservation_dates = models.Constraint(
         'check(departure > arrival)',
@@ -79,6 +87,31 @@ class RcloudReservation(models.Model):
     def _compute_amount_total(self):
         for res in self:
             res.amount_total = sum(line.rate for line in res.line_ids)
+
+    @api.depends('arrival', 'departure')
+    def _compute_nights(self):
+        for res in self:
+            res.nights = (res.departure - res.arrival).days \
+                if res.arrival and res.departure else 0
+
+    @api.depends('adults', 'children')
+    def _compute_occupancy_display(self):
+        for res in self:
+            res.occupancy_display = '%d %s, %d %s' % (
+                res.adults, _('Adult') if res.adults == 1 else _('Adults'),
+                res.children,
+                _('Child') if res.children == 1 else _('Children'))
+
+    @api.depends('guest_id')
+    def _compute_guest_initials(self):
+        for res in self:
+            words = (res.guest_id.name or '').split()
+            if not words:
+                res.guest_initials = '?'
+            elif len(words) == 1:
+                res.guest_initials = words[0][:1].upper()
+            else:
+                res.guest_initials = (words[0][:1] + words[-1][:1]).upper()
 
     @api.model_create_multi
     def create(self, vals_list):

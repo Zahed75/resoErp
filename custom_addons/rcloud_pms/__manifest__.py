@@ -19,6 +19,11 @@ Core PMS for the Resort Cloud SaaS product.
     'author': 'Syscomatic LLC / ProspireNext',
     'license': 'LGPL-3',
     'depends': ['rcloud_base', 'mail', 'product'],
+    'assets': {
+        'web.assets_backend': [
+            'rcloud_pms/static/src/scss/reso_pms.scss',
+        ],
+    },
     'data': [
         'security/rcloud_pms_security.xml',
         'security/ir.model.access.csv',
