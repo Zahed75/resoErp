@@ -26,15 +26,7 @@ export class ThemeService {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored === 'light' || stored === 'dark') {
-        return stored;
-      }
-    } catch {
-      /* ignore */
-    }
-    return typeof window !== 'undefined' &&
-      window.matchMedia?.('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+        return stored; false;
   }
 
   private apply(theme: Theme): void {
