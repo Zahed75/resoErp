@@ -1,6 +1,12 @@
+/* ==========================================================================
+   Reso reservation form components — all colors via --rc-* tokens so Odoo
+   dark mode (web.assets_web_dark flipping the tokens) applies automatically.
+   Light fallbacks equal the previous literals: light mode is unchanged.
+   ========================================================================== */
+
 .reso-band {
     padding: 16px 4px;
-    border-bottom: 1px solid #E3E8EF;
+    border-bottom: 1px solid var(--rc-border, #E3E8EF);
     margin-bottom: 16px;
 }
 
@@ -8,8 +14,8 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #E8F0FA;
-    color: #12325C;
+    background: var(--rc-primary-light, #E8F0FA);
+    color: var(--rc-primary-dark, #12325C);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -19,8 +25,8 @@
 }
 
 .reso-rail {
-    background: #F4F6FA;
-    border-left: 1px solid #E3E8EF;
+    background: var(--rc-bg, #F4F6FA);
+    border-left: 1px solid var(--rc-border, #E3E8EF);
     padding: 16px;
     width: 300px;
     flex: none;
@@ -35,7 +41,7 @@
     font-weight: 500;
     letter-spacing: 0.4px;
     text-transform: uppercase;
-    color: #667085;
+    color: var(--rc-text-muted, #667085);
 }
 
 .reso-rail-row {
@@ -47,20 +53,20 @@
     margin-top: 8px;
 
     > span:first-child {
-        color: #667085;
+        color: var(--rc-text-muted, #667085);
     }
 }
 
 .reso-rail-total {
-    border-top: 1px solid #E3E8EF;
+    border-top: 1px solid var(--rc-border, #E3E8EF);
     padding-top: 8px;
     margin-top: 10px;
     font-weight: 600;
 }
 
 .reso-balance-card {
-    background: #FFFFFF;
-    border: 1px solid #E3E8EF;
+    background: var(--rc-surface, #FFFFFF);
+    border: 1px solid var(--rc-border, #E3E8EF);
     border-radius: 6px;
     padding: 12px;
     margin-top: 12px;
@@ -69,14 +75,14 @@
 .reso-balance-amount {
     font-size: 20px;
     font-weight: 600;
-    color: #C13333;
+    color: var(--rc-danger-text, #C13333);
     margin-top: 4px;
     font-variant-numeric: tabular-nums;
 }
 
 .reso-fact-card {
-    background: #FFFFFF;
-    border: 1px solid #E3E8EF;
+    background: var(--rc-surface, #FFFFFF);
+    border: 1px solid var(--rc-border, #E3E8EF);
     border-radius: 6px;
     padding: 10px 12px;
     flex: 1 1 0;
@@ -88,12 +94,22 @@
     font-weight: 500;
     letter-spacing: 0.4px;
     text-transform: uppercase;
-    color: #667085;
+    color: var(--rc-text-muted, #667085);
 }
 
 .reso-fact-value {
     font-size: 15px;
     font-weight: 600;
+    color: var(--rc-text, #1C2536);
     margin-top: 4px;
     font-variant-numeric: tabular-nums;
+}
+
+/* Nightly Lines — embedded list header band must follow the tokens too
+   (Odoo's own thead uses --ListRenderer-thead-bg-color from $o-webclient-
+   background-color, which stays light-grey in dark mode). */
+.o_form_view .o_field_widget[name="line_ids"] .o_list_table thead th {
+    background-color: var(--rc-bg, #F4F6FA);
+    color: var(--rc-text-muted, #667085);
+    border-bottom-color: var(--rc-border, #E3E8EF);
 }

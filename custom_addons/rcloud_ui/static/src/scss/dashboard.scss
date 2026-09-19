@@ -186,7 +186,7 @@
     }
 
     /* Skeletons & empty states */
-    .rc-skeleton { border-radius: 4px; background: linear-gradient(90deg, #EDF0F5 25%, var(--rc-border) 50%, #EDF0F5 75%); background-size: 200% 100%; animation: rc-shimmer 1.4s infinite; min-height: 12px; }
+    .rc-skeleton { border-radius: 4px; background: linear-gradient(90deg, var(--rc-bg, #EDF0F5) 25%, var(--rc-border) 50%, var(--rc-bg, #EDF0F5) 75%); background-size: 200% 100%; animation: rc-shimmer 1.4s infinite; min-height: 12px; }
     @keyframes rc-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
     .rc-empty { padding: var(--rc-space-6); text-align: center; color: var(--rc-text-muted); font-size: 13px; }
 }

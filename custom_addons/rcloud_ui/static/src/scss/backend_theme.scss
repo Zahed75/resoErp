@@ -107,3 +107,15 @@
     outline: 2px solid var(--rc-primary, #1A4D8F);
     outline-offset: 2px;
 }
+
+/* Chatter reactions — self-reacted + hover in brand color instead of the
+   default purple ($o-action / text-primary). Selectors from
+   mail/static/src/core/common/message_reactions(.scss) + message_reaction_list.xml. */
+.o_web_client .o-mail-MessageReaction.o-selfReacted {
+    color: var(--rc-primary, #1A4D8F) !important;
+    border-color: var(--rc-primary, #1A4D8F) !important;
+    background: var(--rc-primary-light, #E8F0FA);
+}
+.o_web_client .o-mail-MessageReaction:not(.o-selfReacted):hover {
+    border-color: var(--rc-primary, #1A4D8F) !important;
+}

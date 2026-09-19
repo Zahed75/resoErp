@@ -2,8 +2,62 @@
 <odoo>
     <!-- Rebrand: product is Reso, powered by Syscomatic LLC -->
     <template id="rcloud_login_layout" inherit_id="web.login_layout">
+        <!-- Applied FIRST (xpaths run in document order): swap the Odoo
+             promotion for our own before the container is restructured. -->
         <xpath expr="//a[@href='https://www.odoo.com?utm_source=db&amp;utm_medium=auth']" position="replace">
             <a href="#" onclick="return false">Powered by <strong>Syscomatic LLC</strong> · Reso</a>
+        </xpath>
+
+        <!-- Browser tab title -->
+        <xpath expr="//t[@t-set='html_data']" position="before">
+            <t t-set="title">Reso PMS</t>
+        </xpath>
+
+        <!-- Two-column login: brand panel left, form panel right. The card
+             markup (logo, t-out form, footer) is preserved inside the right
+             panel so web.login's form and the footer xpath above stay intact. -->
+        <xpath expr="//div[hasclass('container')]" position="replace">
+            <div class="rc-login">
+                <aside class="rc-login-brand">
+                    <div class="rc-login-brand-text">
+                        <div class="rc-login-brand-name">Reso PMS</div>
+                        <div class="rc-login-brand-tagline">Reso · one guest record, one folio, everywhere</div>
+                    </div>
+                </aside>
+                <div class="rc-login-panel">
+                    <div class="container py-5">
+                        <div t-attf-class="card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list" style="max-width: 300px;">
+                            <div class="card-body">
+                                <div class="text-center pb-3 border-bottom mb-4">
+                                    <img src="/rcloud_pms/static/description/icon.png" alt="Reso PMS" style="max-height:64px; max-width: 100%; width:auto"/>
+                                    <div class="rc-login-product">Reso PMS</div>
+                                </div>
+                                <t t-out="0"/>
+                                <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
+                                    <t t-if="not disable_database_manager">
+                                        <a class="border-end pe-2 me-1" href="/web/database/manager">Manage Databases</a>
+                                    </t>
+                                    <a href="#" onclick="return false">Powered by <strong>Syscomatic LLC</strong> · Reso</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Favicon: web.layout's shortcut icon (used by webclient + login) -->
+    <template id="rcloud_favicon" inherit_id="web.layout">
+        <xpath expr="//link[@rel='shortcut icon']" position="replace">
+            <link type="image/x-icon" rel="shortcut icon" href="/rcloud_ui/static/src/img/favicon.ico"/>
+        </xpath>
+    </template>
+
+    <!-- iOS home-screen icon in the webclient -->
+    <template id="rcloud_apple_touch_icon" inherit_id="web.webclient_bootstrap">
+        <xpath expr="//link[@rel='apple-touch-icon']" position="replace">
+            <link rel="apple-touch-icon" href="/rcloud_pms/static/description/icon.png"/>
         </xpath>
     </template>
 

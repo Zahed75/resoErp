@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Reso dark tokens — loaded ONLY in web.assets_web_dark (Odoo 19 dark mode,
+   activated server-side from the color_scheme cookie/preference; there is no
+   .o_dark_theme selector in 19). Values mirror the [data-rc-theme="dark"]
+   block in _tokens.scss, which serves the dashboard's own toggle.
+   ========================================================================== */
+
+:root {
+    --rc-bg: #0F1420;
+    --rc-surface: #171D2B;
+    --rc-surface-2: #1F2637;
+    --rc-border: #2A3346;
+    --rc-border-strong: #4A5568;
+    --rc-primary: #4D8FD6;
+    --rc-primary-dark: #8FBFF0;
+    --rc-primary-light: #1B2B45;
+    --rc-primary-border: #2A3E5E;
+    --rc-accent: #2BC4B8;
+    --rc-accent-text: #2BC4B8;
+    --rc-warning: #F7B955;
+    --rc-warning-text: #F7B955;
+    --rc-warning-tint: #3A2A18;
+    --rc-danger: #E8645F;
+    --rc-danger-text: #E8645F;
+    --rc-danger-tint: #3A2222;
+    --rc-info: #60A5FA;
+    --rc-info-text: #60A5FA;
+    --rc-info-tint: #1B2B45;
+    --rc-success-tint: #123331;
+    --rc-success-text: #2BC4B8;
+    --rc-neutral-tint: #232C3F;
+    --rc-text: #E6EAF2;
+    --rc-text-secondary: #B7C0D0;
+    --rc-text-muted: #94A0B8;
+    --rc-text-disabled: #5B6779;
+}

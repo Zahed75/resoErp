@@ -40,6 +40,15 @@ OWL-based PMS experience layer for Resort Cloud (spec Part 2 & 6):
             'rcloud_ui/static/src/xml/drawer.xml',
             'rcloud_ui/static/src/xml/quick_actions.xml',
         ],
+        # Odoo 19 dark mode: separate CSS bundle (color_scheme cookie), no
+        # .o_dark_theme selector — *.dark.scss files flip the --rc-* tokens.
+        'web.assets_web_dark': [
+            'rcloud_ui/static/src/scss/_tokens.dark.scss',
+        ],
+        # Login page renders web.assets_frontend only (web.frontend_layout)
+        'web.assets_frontend': [
+            'rcloud_ui/static/src/scss/login.scss',
+        ],
     },
     'installable': True,
     'application': False,

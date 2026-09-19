@@ -1,0 +1,171 @@
+/* ==========================================================================
+   Reso PMS login — two-column layout (brand panel | login card).
+   Served via web.assets_frontend (the only CSS bundle web.login_layout
+   loads). Self-contained tokens with a prefers-color-scheme dark variant,
+   since the backend dark bundle never reaches the login page.
+   ========================================================================== */
+
+.rc-login {
+    --rc-login-bg: #FFFFFF;
+    --rc-login-text: #1C2536;
+    --rc-login-muted: #667085;
+    --rc-login-border: #E3E8EF;
+    --rc-login-card-shadow: 0 12px 32px rgba(16, 24, 40, .12), 0 4px 8px rgba(16, 24, 40, .06);
+    --rc-login-input-bg: #FFFFFF;
+    --rc-login-input-border: #C6CFDB;
+
+    display: flex;
+    min-height: 100vh;
+    background: var(--rc-login-bg);
+    color: var(--rc-login-text);
+    font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    .rc-login {
+        --rc-login-bg: #0F1420;
+        --rc-login-text: #E6EAF2;
+        --rc-login-muted: #94A0B8;
+        --rc-login-border: #2A3346;
+        --rc-login-card-shadow: 0 12px 32px rgba(0, 0, 0, .5);
+        --rc-login-input-bg: #171D2B;
+        --rc-login-input-border: #2A3346;
+    }
+}
+
+/* LEFT — brand panel */
+.rc-login-brand {
+    flex: 1 1 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px;
+    background: url(/rcloud_ui/static/src/img/login-bg.jpg) center / cover no-repeat #12325C;
+    color: #FFFFFF;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(200deg, rgba(13, 37, 69, .15) 0%, rgba(13, 37, 69, .72) 78%);
+    }
+
+    .rc-login-brand-text {
+        position: relative;
+        z-index: 1;
+    }
+
+    .rc-login-brand-name {
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        margin-bottom: 8px;
+    }
+
+    .rc-login-brand-tagline {
+        font-size: 15px;
+        color: rgba(255, 255, 255, .82);
+        max-width: 380px;
+    }
+}
+
+/* RIGHT — form panel */
+.rc-login-panel {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+
+    .container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Odoo's card becomes our login card */
+    .o_database_list {
+        max-width: 380px !important;
+        width: 100%;
+        background: var(--rc-login-bg) !important;
+        border: 1px solid var(--rc-login-border) !important;
+        border-radius: 12px !important;
+        box-shadow: var(--rc-login-card-shadow);
+        padding: 8px;
+
+        .card-body {
+            padding: 28px;
+        }
+    }
+
+    label {
+        color: var(--rc-login-text);
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    .form-control {
+        background: var(--rc-login-input-bg);
+        border-color: var(--rc-login-input-border);
+        color: var(--rc-login-text);
+        border-radius: 8px;
+        height: 44px;
+        font-size: 14px;
+
+        &::placeholder {
+            color: var(--rc-login-muted);
+        }
+
+        &:focus {
+            border-color: #1A4D8F;
+            box-shadow: 0 0 0 3px rgba(26, 77, 143, .18);
+        }
+    }
+
+    .input-group .btn {
+        border-color: var(--rc-login-input-border);
+        color: var(--rc-login-muted);
+    }
+
+    .btn-primary {
+        background: #1A4D8F;
+        border-color: #1A4D8F;
+        color: #FFFFFF;
+        border-radius: 8px;
+        font-weight: 600;
+        height: 44px;
+        letter-spacing: .2px;
+
+        &:hover, &:focus {
+            background: #12325C;
+            border-color: #12325C;
+            color: #FFFFFF;
+        }
+    }
+
+    .border-bottom, .border-top {
+        border-color: var(--rc-login-border) !important;
+    }
+
+    .text-muted, .oe_login_buttons + div a {
+        color: var(--rc-login-muted) !important;
+    }
+}
+
+/* Mobile — drop the brand panel, card goes full width */
+@media (max-width: 767.98px) {
+    .rc-login-brand { display: none; }
+    .rc-login-panel {
+        flex-basis: 100%;
+        .o_database_list { max-width: 100% !important; }
+    }
+}
+
+.rc-login-product {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    color: var(--rc-login-brand, #12325C);
+}
