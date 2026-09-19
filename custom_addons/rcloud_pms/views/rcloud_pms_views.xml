@@ -8,12 +8,46 @@
             <list string="Room Types">
                 <field name="name"/>
                 <field name="property_id"/>
-                <field name="code"/>
-                <field name="base_occupancy"/>
-                <field name="max_occupancy"/>
+                <field name="code" optional="show"/>
+                <field name="base_occupancy" string="Base"/>
+                <field name="max_occupancy" string="Max"/>
                 <field name="default_rate"/>
-                <field name="room_count"/>
+                <field name="room_count" string="Rooms"/>
             </list>
+        </field>
+    </record>
+    <record id="room_type_view_kanban" model="ir.ui.view">
+        <field name="name">rcloud.room.type.kanban</field>
+        <field name="model">rcloud.room.type</field>
+        <field name="arch" type="xml">
+            <kanban records_draggable="false">
+                <field name="name"/><field name="property_id"/><field name="code"/>
+                <field name="base_occupancy"/><field name="max_occupancy"/>
+                <field name="default_rate"/><field name="currency_id"/>
+                <field name="room_count"/>
+                <templates><t t-name="card">
+                    <div class="p-2">
+                        <div class="d-flex justify-content-between">
+                            <strong class="o_kanban_record_title"><field name="name"/></strong>
+                            <span class="badge text-bg-light"><field name="code"/></span>
+                        </div>
+                        <div class="text-muted small"><field name="property_id"/></div>
+                        <div class="small mt-1">
+                            <t t-if="record.base_occupancy.raw_value == record.max_occupancy.raw_value">
+                                Sleeps <field name="max_occupancy"/>
+                            </t>
+                            <t t-else="">
+                                Sleeps <field name="base_occupancy"/> - <field name="max_occupancy"/>
+                            </t>
+                            · <field name="room_count"/> rooms
+                        </div>
+                        <div class="d-flex justify-content-between small mt-1">
+                            <span class="text-muted"><field name="currency_id"/></span>
+                            <strong><field name="default_rate" widget="monetary"/></strong>
+                        </div>
+                    </div>
+                </t></templates>
+            </kanban>
         </field>
     </record>
     <record id="room_type_view_form" model="ir.ui.view">
@@ -45,7 +79,7 @@
     <record id="action_room_type" model="ir.actions.act_window">
         <field name="name">Room Types</field>
         <field name="res_model">rcloud.room.type</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">list,kanban,form</field>
     </record>
 
     <!-- ================= Rooms ================= -->
@@ -148,8 +182,33 @@
                 <field name="property_id"/>
                 <field name="room_type_id"/>
                 <field name="channel"/>
-                <field name="cancellation_policy"/>
+                <field name="cancellation_policy" optional="hide"/>
             </list>
+        </field>
+    </record>
+    <record id="rate_plan_view_kanban" model="ir.ui.view">
+        <field name="name">rcloud.rate.plan.kanban</field>
+        <field name="model">rcloud.rate.plan</field>
+        <field name="arch" type="xml">
+            <kanban records_draggable="false">
+                <field name="name"/><field name="property_id"/>
+                <field name="room_type_id"/><field name="channel"/>
+                <field name="cancellation_policy"/>
+                <templates><t t-name="card">
+                    <div class="p-2">
+                        <div class="d-flex justify-content-between">
+                            <strong class="o_kanban_record_title"><field name="name"/></strong>
+                            <span class="badge"
+                                t-att-class="record.channel.raw_value == 'direct' ? 'text-bg-success' : record.channel.raw_value == 'ota' ? 'text-bg-info' : record.channel.raw_value == 'corporate' ? 'text-bg-primary' : record.channel.raw_value == 'agent' ? 'text-bg-primary' : 'text-bg-light'"><field name="channel"/></span>
+                        </div>
+                        <div class="text-muted small"><field name="property_id"/></div>
+                        <div class="small mt-1"><field name="room_type_id"/></div>
+                        <div class="small text-muted mt-1">
+                            Cancellation: <field name="cancellation_policy"/>
+                        </div>
+                    </div>
+                </t></templates>
+            </kanban>
         </field>
     </record>
     <record id="rate_plan_view_form" model="ir.ui.view">
@@ -186,7 +245,7 @@
     <record id="action_rate_plan" model="ir.actions.act_window">
         <field name="name">Rate Plans</field>
         <field name="res_model">rcloud.rate.plan</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">list,kanban,form</field>
     </record>
 
     <!-- ================= Availability ================= -->
@@ -370,10 +429,10 @@
                                     <group string="Nightly Lines" col="1" style="width:100%;">
                                         <field name="line_ids" nolabel="1">
                                             <list>
-                                                <field name="date"/>
-                                                <field name="room_type_id"/>
-                                                <field name="rate_plan_id"/>
-                                                <field name="rate"/>
+                                                <field name="date" width="110px"/>
+                                                <field name="room_type_id" width="140px"/>
+                                                <field name="rate_plan_id" width="140px"/>
+                                                <field name="rate" sum="Total"/>
                                             </list>
                                         </field>
                                     </group>
@@ -496,6 +555,35 @@
             </list>
         </field>
     </record>
+    <record id="folio_view_kanban" model="ir.ui.view">
+        <field name="name">rcloud.folio.kanban</field>
+        <field name="model">rcloud.folio</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" records_draggable="false">
+                <field name="name"/><field name="partner_id"/>
+                <field name="property_id"/><field name="reservation_id"/>
+                <field name="state"/><field name="balance"/>
+                <field name="currency_id"/>
+                <templates><t t-name="card">
+                    <div class="p-2">
+                        <div class="d-flex justify-content-between">
+                            <strong class="o_kanban_record_title"><field name="name"/></strong>
+                            <span class="badge"
+                                t-att-class="record.state.raw_value == 'open' ? 'text-bg-warning' : 'text-bg-secondary'"><field name="state"/></span>
+                        </div>
+                        <strong><field name="partner_id"/></strong>
+                        <div class="small text-muted" t-if="record.reservation_id.raw_value">
+                            Reservation <field name="reservation_id"/>
+                        </div>
+                        <div class="d-flex justify-content-between small mt-1">
+                            <span class="text-muted"><field name="property_id"/></span>
+                            <strong><field name="balance" widget="monetary"/></strong>
+                        </div>
+                    </div>
+                </t></templates>
+            </kanban>
+        </field>
+    </record>
     <record id="folio_view_form" model="ir.ui.view">
         <field name="name">rcloud.folio.form</field>
         <field name="model">rcloud.folio</field>
@@ -534,6 +622,6 @@
     <record id="action_folio" model="ir.actions.act_window">
         <field name="name">Folios</field>
         <field name="res_model">rcloud.folio</field>
-        <field name="view_mode">list,form</field>
+        <field name="view_mode">kanban,list,form</field>
     </record>
 </odoo>

@@ -118,6 +118,8 @@
             font-size: 12px; font-weight: 500; letter-spacing: .4px; text-transform: uppercase; color: var(--rc-text-muted);
             background: var(--rc-bg); }
         td { padding: 0 12px; border-bottom: 1px solid var(--rc-border); font-size: 13px; height: 44px; }
+        /* All rc-table rows navigate to a record on click. */
+        tbody tr { cursor: pointer; }
         tr:hover td { background: var(--rc-hover-row); }
         td.rc-money, th.rc-money { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
         .rc-negative { color: var(--rc-danger-text); }

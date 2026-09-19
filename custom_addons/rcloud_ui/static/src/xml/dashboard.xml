@@ -109,8 +109,8 @@
                                     <td class="tnum"><t t-esc="r.arrival or ''"/> <t t-esc="r.departure or ''"/></td>
                                     <td class="rc-money"><t t-esc="fmtMoney(r.amount_total or 0)"/></td>
                                     <td>
-                                        <button class="rc-btn-primary" style="height:28px;font-size:12px;" t-if="state.tab === 'arrivals'" t-on-click="() => this.checkIn(r.id)">Check In</button>
-                                        <button class="rc-btn-primary" style="height:28px;font-size:12px;" t-if="state.tab === 'departures'" t-on-click="() => this.checkOut(r.id)">Check Out</button>
+                                        <button class="rc-btn-primary" style="height:28px;font-size:12px;" t-if="state.tab === 'arrivals'" t-on-click.stop="() => this.checkIn(r.id)">Check In</button>
+                                        <button class="rc-btn-primary" style="height:28px;font-size:12px;" t-if="state.tab === 'departures'" t-on-click.stop="() => this.checkOut(r.id)">Check Out</button>
                                         <span t-att-class="'rc-pill ' + statusPillClass(r.state)" t-if="state.tab === 'inhouse'"><span class="rc-dot"/><t t-esc="r.state"/></span>
                                     </td>
                                 </tr>
