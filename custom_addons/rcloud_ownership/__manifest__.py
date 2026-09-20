@@ -32,6 +32,7 @@ Ownership / shared-equity layer for the Resort Cloud product.
         'views/owner_report_templates.xml',
         'views/portal_templates.xml',
         'views/ownership_menus.xml',
+        'views/demo_seed.xml',
     ],
     'installable': True,
     'application': True,

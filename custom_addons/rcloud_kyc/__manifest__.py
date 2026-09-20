@@ -18,10 +18,11 @@ Know-your-customer compliance for the Resort Cloud SaaS product.
     """,
     'author': 'Syscomatic LLC / ProspireNext',
     'license': 'LGPL-3',
-    'depends': ['rcloud_base', 'rcloud_pms', 'mail'],
+    'depends': ['rcloud_base', 'rcloud_pms', 'mail', 'documents'],
     'data': [
         'security/rcloud_kyc_security.xml',
         'security/ir.model.access.csv',
+        'data/rcloud_kyc_documents.xml',
         'views/rcloud_kyc_views.xml',
     ],
     'installable': True,

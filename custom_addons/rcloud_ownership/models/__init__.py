@@ -5,3 +5,4 @@ from . import holding
 from . import transfer
 from . import distribution
 from . import report_template
+from . import demo_seed

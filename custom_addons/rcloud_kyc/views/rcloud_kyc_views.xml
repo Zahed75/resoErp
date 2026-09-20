@@ -148,4 +148,15 @@
     <menuitem id="menu_rcloud_kyc" name="KYC Records"
         parent="rcloud_base.menu_rcloud_root" action="action_kyc_record"
         groups="rcloud_kyc.group_kyc_officer" sequence="40"/>
+
+    <!-- Backfill: mirror existing KYC attachments into the Documents app -->
+    <record id="action_kyc_sync_documents" model="ir.actions.server">
+        <field name="name">Sync Documents Folder</field>
+        <field name="model_id" ref="model_rcloud_kyc_record"/>
+        <field name="state">code</field>
+        <field name="code">model.action_sync_documents()</field>
+    </record>
+    <menuitem id="menu_kyc_sync_documents" name="Sync to Documents App"
+        parent="menu_rcloud_kyc" action="action_kyc_sync_documents"
+        groups="rcloud_kyc.group_kyc_officer" sequence="10"/>
 </odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data noupdate="1">
+    <!-- Dedicated Documents app folder for KYC evidence. In Odoo 19 a folder
+         is a documents.document of type 'folder'; access_internal='view'
+         gives every internal user read access (the equivalent of sharing
+         with base.group_user), mirroring the documents app own data. -->
+    <record id="kyc_documents_folder" model="documents.document">
+        <field name="type">folder</field>
+        <field name="name">KYC Records</field>
+        <field name="access_internal">view</field>
+        <field name="sequence">60</field>
+    </record>
+</data></odoo>

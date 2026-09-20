@@ -22,6 +22,7 @@ Control plane for the Resort Cloud SaaS product (operator-side).
     'data': [
         'security/ir.model.access.csv',
         'views/rcloud_control_views.xml',
+        'views/demo_seed.xml',
     ],
     'installable': True,
     'application': True,

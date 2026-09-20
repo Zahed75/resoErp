@@ -5,3 +5,4 @@ from . import tenant_subscription
 from . import provision_job
 from . import tenant_usage
 from . import impersonation_log
+from . import demo_seed

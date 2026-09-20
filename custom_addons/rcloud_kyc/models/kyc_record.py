@@ -50,6 +50,31 @@ class RcloudKycRecord(models.Model):
     # enforced by _check_single_open_record (a Python constraint, so the
     # friendly ValidationError fires instead of a raw IntegrityError).
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super().create(vals_list)
+        records.attachment_ids._sync_kyc_documents()
+        return records
+
+    def write(self, vals):
+        res = super().write(vals)
+        if 'attachment_ids' in vals:
+            self.attachment_ids._sync_kyc_documents()
+        return res
+
+    @api.model
+    def action_sync_documents(self):
+        """Backfill entry point: mirror every attachment linked to a KYC
+        record (via res_model/res_id or the attachment_ids relation) into the
+        Documents app. Safe to run repeatedly."""
+        Attachment = self.env['ir.attachment'].sudo()
+        self.env.cr.execute(
+            'SELECT attachment_id FROM rcloud_kyc_record_attachment_rel')
+        rel_ids = [row[0] for row in self.env.cr.fetchall()]
+        attachments = Attachment.search([
+            ('res_model', '=', 'rcloud.kyc.record')]) | Attachment.browse(rel_ids)
+        return attachments._sync_kyc_documents()
+
     @api.constrains('partner_id', 'doc_type', 'state')
     def _check_single_open_record(self):
         """Friendly guard mirroring the partial unique index: at most one

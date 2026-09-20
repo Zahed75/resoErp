@@ -1,8 +1,7 @@
 /** @odoo-module **/
 
 import { patch } from "@web/core/utils/patch";
-import { registry } from "@web/core/registry";
-import { HomeMenu } from "@web_enterprise/webclient/home_menu/home_menu";
+import { useService } from "@web/core/utils/hooks";
 import { WebClient } from "@web/webclient/webclient";
 
 const PMS_ROOT_XMLIDS = [
@@ -10,55 +9,49 @@ const PMS_ROOT_XMLIDS = [
     "reso_pms.menu_reso_pms_root",    // legacy Reso deployment
 ];
 
-function redirectToPmsDashboard(menus) {
-    const app = menus.getApps().find((a) =>
+function pmsApp(menus) {
+    return menus.getApps().find((a) =>
         PMS_ROOT_XMLIDS.includes(a.xmlid)
         || /resort pms|reso pms/i.test(a.name || ''));
-    /* Root apps carry the action of their first child (server-side
-       load_web_menus), so selecting the root opens the dashboard. */
-    if (app && app.actionID) {
-        menus.selectMenu(app);
-    }
 }
 
-/* The home_menu service only registers the "menu" action component when it
-   STARTS, so it cannot be patched at module-load time. WebClient.setup runs
-   once, after services are up — patch the action class there. */
+/* Default screen is the PMS dashboard: whenever the browser address is the
+   bare home route (/odoo, no action behind it) we select the Reso PMS app,
+   whose root carries the dashboard action (server-side load_web_menus).
+
+   This is URL-driven rather than mount-driven on purpose: going Back from a
+   scoped app route (e.g. /odoo/contacts) restores the home controller from
+   the action cache without remounting it, so mount hooks never fire there.
+   The waffle app drawer does not touch the address bar, and the home overlay
+   never sets a bare /odoo URL, so this never hijacks app switching. */
 patch(WebClient.prototype, {
     setup() {
         super.setup(...arguments);
-        const HomeMenuAction = registry.category("actions").get("menu", null);
-        if (HomeMenuAction && !HomeMenuAction.prototype._rcRedirectPatched) {
-            HomeMenuAction.prototype._rcRedirectPatched = true;
-            patch(HomeMenuAction.prototype, {
-                async onMounted() {
-                    await super.onMounted(...arguments);
-                    /* Full-page home has no action behind it; the
-                       waffle-toggled overlay always keeps breadcrumbs. */
-                    if (this.env.config.breadcrumbs.length === 0) {
-                        redirectToPmsDashboard(this.menus);
-                    }
-                },
-            });
-        }
-    },
-});
-
-/* Fallback: same redirect from the HomeMenu component itself, for any
-   edge where the action wrapper is bypassed. */
-patch(HomeMenu.prototype, {
-    setup() {
-        super.setup(...arguments);
-        this._rcRedirected = false;
-        const tryRedirect = () => {
-            if (this._rcRedirected || !this.homeMenuService.hasHomeMenu
-                || this.homeMenuService.hasBackgroundAction) {
+        const menus = useService("menu");
+        let coolDownUntil = 0;
+        setInterval(() => {
+            if (location.pathname !== "/odoo") {
+                coolDownUntil = 0;
                 return;
             }
-            this._rcRedirected = true;
-            redirectToPmsDashboard(this.menus);
-        };
-        const id = setInterval(tryRedirect, 300);
-        setTimeout(() => clearInterval(id), 5000);
+            const now = Date.now();
+            if (now < coolDownUntil) {
+                return;
+            }
+            const app = pmsApp(menus);
+            if (!app || !app.actionID) {
+                return;
+            }
+            coolDownUntil = now + 3000;
+            setTimeout(() => {
+                /* Re-check both conditions at fire time: selectMenu resolves
+                   asynchronously and a late push would otherwise hijack a
+                   screen the user opened in between. When a real app is
+                   current (dashboard, documents, any action), never redirect. */
+                if (location.pathname === "/odoo" && !menus.getCurrentApp()) {
+                    menus.selectMenu(app);
+                }
+            }, 400);
+        }, 500);
     },
 });
