@@ -53,11 +53,12 @@ export class RcloudDashboard extends Component {
         this.state.stats = await this.orm.call(
             "rcloud.reservation", "get_dashboard_stats", [pid]);
         this.state.loading = false;
-        // The product home reads as /dashboard. Deferred: the router pushes
-        // the action URL after mount, so rewrite once it has settled.
+        // The product home reads as /dashboard (a real server route that
+        // redirects back here). Deferred: the router pushes the action URL
+        // after mount, so rewrite once it has settled.
         setTimeout(() => {
             try {
-                if (location.pathname.startsWith("/odoo/action-")) {
+                if (location.pathname !== "/dashboard") {
                     window.history.replaceState({}, "", "/dashboard");
                 }
             } catch (e) { /* restricted contexts */ }
