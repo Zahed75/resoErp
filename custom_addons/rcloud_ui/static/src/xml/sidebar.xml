@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <!-- Persistent sidebar retired: navigation merged into the single
-         global app drawer (expandable app rows). -->
-    <t t-name="rcloud_ui.SidebarRetired"><t t-if="false"/></t>
+    <!-- Persistent PMS module sidebar (UIdesign 02: 240px, collapses to 64px rail).
+         Groups and items are driven by the active app's Odoo menu tree. -->
+    <t t-name="rcloud_ui.Sidebar">
+        <div class="rc-sidebar" t-att-class="{'rc-sidebar--rail': state.collapsed, 'rc-sidebar--hidden': !isPms}">
+            <button class="rc-sidebar-toggle" t-att-title="state.collapsed ? 'Expand menu' : 'Collapse menu'"
+                    t-on-click="toggle">
+                <i t-att-class="state.collapsed ? 'fa fa-angle-double-right' : 'fa fa-angle-double-left'"/>
+            </button>
+            <t t-foreach="groups" t-as="group" t-key="group.id">
+                <div class="rc-sidebar-group" t-if="!state.collapsed" t-esc="group.label"/>
+                <button class="rc-sidebar-item" t-att-class="{active: item.active}"
+                        t-foreach="group.items" t-as="item" t-key="item.id"
+                        t-att-title="state.collapsed ? item.name : ''"
+                        t-on-click="() => this.openMenu(item)">
+                    <t t-if="state.collapsed"><span class="rc-sidebar-dot"/></t>
+                    <t t-else=""><span class="rc-sidebar-label" t-esc="item.name"/></t>
+                </button>
+            </t>
+        </div>
+    </t>
 </templates>

@@ -164,6 +164,16 @@ export class RcloudDrawerToggle extends Component {
 
     async openApp(app) {
         this.state.open = false;
+        /* PMS roots land on the product home — the rcloud dashboard —
+           never on a legacy module's first menu action. */
+        const pmsRoots = [
+            "rcloud_base.menu_rcloud_root",
+            "reso_pms.menu_reso_pms_root",
+        ];
+        if (app && (pmsRoots.includes(app.xmlid) || /resort pms|reso pms/i.test(app.name || ''))) {
+            await this.action.doAction("rcloud_ui.action_rcloud_dashboard");
+            return;
+        }
         // Odoo 19 menu service API: selectMenu(menu object). The raw app
         // object must be passed — copies break the service internals.
         await this.menu.selectMenu(app);

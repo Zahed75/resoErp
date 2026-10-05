@@ -32,7 +32,7 @@ services:
       USER: ${DB_USER:-odoo}
       PASSWORD: ${DB_PASSWORD:-odoo}
       DB_NAME: ${DB_NAME:-resoSolution}
-      INIT_MODULES: ${INIT_MODULES:-reso_pms,reso_ownership}
+      INIT_MODULES: ${INIT_MODULES:-rcloud_base,rcloud_pms,rcloud_pms_account,rcloud_ownership,rcloud_portal_api,rcloud_pos_bridge,rcloud_ui,rcloud_whatsapp,rcloud_tenant_agent,rcloud_control,rcloud_kyc}
       UPDATE_MODULES: ${UPDATE_MODULES:-}
       ODOO_ADMIN_PASSWD: ${ODOO_ADMIN_PASSWD:-admin}
       DEMO: ${DEMO:-true}

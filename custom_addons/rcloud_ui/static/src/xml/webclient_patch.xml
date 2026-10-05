@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- Wrap the action manager next to the persistent PMS sidebar
+         (UIdesign 02 shell: drawer = which app, sidebar = where in PMS). -->
+    <t t-inherit="web.WebClient" t-inherit-mode="extension">
+        <xpath expr="//ActionContainer" position="replace">
+            <div class="rc-body">
+                <RcloudSidebar/>
+                <ActionContainer/>
+            </div>
+        </xpath>
+    </t>
+</templates>

@@ -26,12 +26,18 @@ export class RcloudSidebar extends Component {
         useBus(this.env.bus, "MENUS:APP-CHANGED", () => { this.state.tick++; });
     }
 
+    get pmsRoot() {
+        const roots = this.menu.getApps() || [];
+        return roots.find((a) => PMS_ROOT_XMLIDS.includes(a.xmlid))
+            || roots.find((a) => /resort pms|reso pms/i.test(a.name || ''));
+    }
+
     get isPms() {
         void this.state.tick;
         const app = this.menu.getCurrentApp();
         /* Landing via the per-user home action leaves no current app —
            treat that as PMS context (the product's home IS the PMS). */
-        if (!app) { return true; }
+        if (!app) { return !!this.pmsRoot; }
         return PMS_ROOT_XMLIDS.includes(app.xmlid)
             || /resort pms|reso pms/i.test(app.name || '');
     }
@@ -42,11 +48,16 @@ export class RcloudSidebar extends Component {
 
     get groups() {
         void this.state.tick;
+        if (!this.isPms) { return []; }
+        /* Always resolve the PMS root from the app list: the sidebar must
+           stay populated even when the current app is unset (home action,
+           direct URL) or the selection came from a menu copy. */
         const app = this.menu.getCurrentApp();
-        const pms = !app || PMS_ROOT_XMLIDS.includes(app.xmlid)
-            || /resort pms|reso pms/i.test(app.name || '');
-        if (!pms || !app) { return []; }
-        const tree = this.menu.getMenuAsTree(app.id);
+        const currentIsPms = app && (PMS_ROOT_XMLIDS.includes(app.xmlid)
+            || /resort pms|reso pms/i.test(app.name || ''));
+        const root = currentIsPms ? app : this.pmsRoot;
+        if (!root) { return []; }
+        const tree = this.menu.getMenuAsTree(root.id);
         return (tree.childrenTree || []).map((group) => ({
             id: group.id,
             label: group.name,
@@ -64,7 +75,11 @@ export class RcloudSidebar extends Component {
 
     async openMenu(item) {
         localStorage.setItem("rcloud.sidebar.active", String(item.id));
-        await this.menu.selectMenu(item);
+        /* Pass the RAW menu object — plain copies miss menu.appID, and
+           selectMenu's setCurrentMenu would then clear the current app,
+           emptying this sidebar (and the navbar sections). */
+        const full = this.menu.getMenu(item.id);
+        await this.menu.selectMenu(full);
         this.state.tick++;
     }
 }
